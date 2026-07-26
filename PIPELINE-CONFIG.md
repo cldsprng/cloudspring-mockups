@@ -12,7 +12,7 @@ One niche per WEEK. Pick the niche whose date range contains today
 
 Niche calendar (the human owns this list — edit freely):
 - 2026 Jul 27 – Aug 01: Dental clinics
-- 2026 Aug 03 – Aug 08: Plumbers / handyman services
+- 2026 Aug 03 – Aug 08: Pediatric / medical clinics
 - 2026 Aug 10 – Aug 15: Salons / barbershops / spas
 - 2026 Aug 17 – Aug 22: Auto repair / vulcanizing shops
 - 2026 Aug 24 – Aug 29: Pet grooming / veterinary clinics
