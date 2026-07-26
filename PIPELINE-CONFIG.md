@@ -33,7 +33,14 @@ Niche calendar (the human owns this list — edit freely):
 
 Board: CLOUDSPRING_MAINBOARD — https://trello.com/b/TIAlGfU8/cloudspringmainboard
 Lists: INCOMING LEADS → STRATEGY READY → MOCKUP READY → READY TO SEND →
-CHANGES REQUESTED → APPROVED → CONTACTED → REPLIED (HITS) → CLIENTS, + REJECTED
+CHANGES REQUESTED → APPROVED → SYNCED TO GHL (SEND MANUALLY) → CONTACTED →
+REPLIED (HITS) → CLIENTS, + REJECTED
+
+APPROVED flow: agent syncs every approved card to GHL (contact + opportunity
++ note, "✅ Synced to GHL" marker). Email leads auto-send via GHL → CONTACTED.
+Manual-channel leads (FB/SMS) → SYNCED TO GHL (SEND MANUALLY); the human
+sends the draft and drags the card to CONTACTED, which is the "sent" signal.
+No processed card ever sits in plain APPROVED.
 
 Human touchpoints: READY TO SEND → APPROVED authorizes sending · revisions
 via CHANGES REQUESTED with "## CHANGES" in the card DESCRIPTION (comments are
@@ -119,3 +126,4 @@ sound human + runs the sales QA checklist; only cards marked
   Jul 27 - Aug 01. Either the calendar or the Lead Hunter niche selection
   needs correcting — human decision.
 - 2026-07-27: Added Agent #3.5 sales-qa-humanizer — first batch of drafts read as one template (identical opener/pivot/closer). Batch variation rule: no two drafts in a day may share opener, closer, or skeleton.
+- 2026-07-27: Added SYNCED TO GHL (SEND MANUALLY) list so GHL sync state is visible on the board.
