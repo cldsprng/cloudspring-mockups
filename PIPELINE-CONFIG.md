@@ -8,15 +8,16 @@ project doc; Code Routines use their bound-repo/connector access.
 ## This week's niche — WEEKLY FOCUS RULE
 
 One niche per WEEK. Pick the niche whose date range contains today
-(Asia/Manila). All leads Mon–Sat that week come from that single niche.
+(Asia/Manila). All leads that week come from that single niche. The
+pipeline runs EVERY DAY including weekends.
 
 Niche calendar (the human owns this list — edit freely):
-- 2026 Jul 27 – Aug 01: Dental clinics
-- 2026 Aug 03 – Aug 08: Pediatric / medical clinics
-- 2026 Aug 10 – Aug 15: Salons / barbershops / spas
-- 2026 Aug 17 – Aug 22: Auto repair / vulcanizing shops
-- 2026 Aug 24 – Aug 29: Pet grooming / veterinary clinics
-- 2026 Aug 31 – Sep 05: Catering / home bakers
+- 2026 Jul 27 – Aug 02: Dental clinics
+- 2026 Aug 03 – Aug 09: Pediatric / medical clinics
+- 2026 Aug 10 – Aug 16: Dermatology / skin clinics
+- 2026 Aug 17 – Aug 23: Auto repair / vulcanizing shops
+- 2026 Aug 24 – Aug 30: Pet grooming / veterinary clinics
+- 2026 Aug 31 – Sep 06: Catering / home bakers
 - After the last entry: cycle back to the top, unless updated (prefer
   niches that produced replies — see Learnings log).
 
@@ -127,3 +128,5 @@ sound human + runs the sales QA checklist; only cards marked
   needs correcting — human decision.
 - 2026-07-27: Added Agent #3.5 sales-qa-humanizer — first batch of drafts read as one template (identical opener/pivot/closer). Batch variation rule: no two drafts in a day may share opener, closer, or skeleton.
 - 2026-07-27: Added SYNCED TO GHL (SEND MANUALLY) list so GHL sync state is visible on the board.
+- 2026-07-27: Strategy note from Dei — medical niches (dental, pedia, derma, vets) have the strongest automation upsell: appointment booking, reminders, no-show reduction, patient follow-ups. Weight the calendar toward clinics; strategist should push the booking/automation stack for these.
+- 2026-07-27: Pipeline now runs 7 days/week (weekend off-days removed).
