@@ -39,6 +39,11 @@ Human touchpoints: READY TO SEND → APPROVED authorizes sending · revisions
 via CHANGES REQUESTED with "## CHANGES" in the card DESCRIPTION (comments are
 invisible to agents) · REPLIED (HITS) is human territory.
 
+Agent order: lead-gen (or 6AM Lead Hunter routine) → solution-strategist →
+mockup-builder → outreach → sales-qa-humanizer (rewrites every draft to
+sound human + runs the sales QA checklist; only cards marked
+"✅ QA'd & humanized" should be approved by the human).
+
 ## GHL (customer-facing CRM)
 
 - Pipeline: CLOUDSPRING WEB LEADS (id 7yd9fhvPcfz1vqbF3kxN); stages New Lead →
@@ -113,3 +118,4 @@ invisible to agents) · REPLIED (HITS) is human territory.
   but the niche calendar above puts plumbers at Aug 03-08 and dental at
   Jul 27 - Aug 01. Either the calendar or the Lead Hunter niche selection
   needs correcting — human decision.
+- 2026-07-27: Added Agent #3.5 sales-qa-humanizer — first batch of drafts read as one template (identical opener/pivot/closer). Batch variation rule: no two drafts in a day may share opener, closer, or skeleton.
