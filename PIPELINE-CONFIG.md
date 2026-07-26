@@ -27,7 +27,8 @@ Niche calendar (the human owns this list — edit freely):
   If INCOMING LEADS already has today's quota (e.g. the 6AM Lead Hunter
   routine filled it), later runs only top up, never duplicate.
 - City rotation within the week: Mon Quezon City · Tue Makati · Wed Pasig ·
-  Thu Taguig · Fri Cebu · Sat Davao
+  Thu Taguig · Fri Cebu · Sat Davao · Sun agent's choice among cities with
+  thin coverage so far this week
 - International (1/day, same niche): US suburbs, Canada, Australia, UK — rotate.
 
 ## Trello board
