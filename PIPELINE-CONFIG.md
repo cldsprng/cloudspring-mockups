@@ -131,3 +131,37 @@ sound human + runs the sales QA checklist; only cards marked
 - 2026-07-27: Added SYNCED TO GHL (SEND MANUALLY) list so GHL sync state is visible on the board.
 - 2026-07-27: Strategy note from Dei — medical niches (dental, pedia, derma, vets) have the strongest automation upsell: appointment booking, reminders, no-show reduction, patient follow-ups. Weight the calendar toward clinics; strategist should push the booking/automation stack for these.
 - 2026-07-27: Pipeline now runs 7 days/week (weekend off-days removed).
+- 2026-07-27 (dental W1, run 1): NICHE ANGLE — for PH clinics the winning
+  pain is DIRECTORY CAPTURE, not plain invisibility. Every dental search we
+  ran (QC Visayas Ave, Mabolo Cebu, Quirino Hwy) returns aggregator pages —
+  dentalclinics.care, cebudentalimplants.com, smilejet.app,
+  dentalphilippines.org, WhatClinic, Yelp — while only one or two clinics
+  rank on their own domain (EMM Dental, Dentspec). Those aggregator pages
+  show RIVAL clinics beside the lead. "Their page, not yours, with your
+  competitors listed next to you" is concrete, checkable in one click, and
+  much stronger than "you have no website". Reuse for pedia/derma/vet weeks.
+- 2026-07-27: NEW ANGLE — "empty corridor / first mover". When a whole
+  street or barangay is Facebook-only (Quirino Hwy: Nova Dental,
+  Smilemakers, DGT One, Blissful Smile, Plaza Dental — all FB pages), do
+  NOT shame the lead. Frame it as the opening: whoever puts up a site first
+  owns the search. Good fit for low-review leads where competitor-beating
+  proof isn't available.
+- 2026-07-27 (lead quality, 2nd run in a row): 0/4 dental leads had an
+  email address; all four are FB/IG-only, so the ENTIRE batch is
+  manual-send. Combined with the 2026-07-26 plumbing run that is 0/8 emails
+  across two days. GHL auto-send is effectively unused for PH SMB leads.
+  Either Lead Hunter must weight harder toward email-bearing businesses, or
+  accept manual FB send as the default PH channel and stop treating it as
+  the exception.
+- 2026-07-27 (mockup honesty pattern): when hours or pricing are unknown,
+  ship a clearly LABELLED placeholder ("₱ ___", "Clinic hours — to be
+  confirmed", "Sample layout — your actual rates go here") instead of
+  omitting the section. It avoids fabrication, and it gives the owner an
+  obvious "I'd just fill this in" hook that invites a reply.
+- 2026-07-27 (env gotcha, cost 1 failed push): in Cowork runs HOME=/root, so
+  `git clone` lands in /root/cloudspring-mockups, but subagents default to
+  /home/claude. Always pass subagents the ABSOLUTE repo path, and never
+  `cd` in a Bash call (cwd resets between calls) — use `git -C <abs path>`.
+- 2026-07-27 (calendar drift RESOLVED): Lead Hunter delivered dental leads
+  on Jul 27, matching the calendar. The Jul 26 plumbing mismatch was a
+  one-off; no calendar edit needed.
