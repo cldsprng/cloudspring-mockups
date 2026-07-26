@@ -63,6 +63,14 @@ sound human + runs the sales QA checklist; only cards marked
   opportunity (12-mo value) + note (angle, mockup URL, offer, Trello link)
 - Nurture workflow: (not built yet — add name/ID here when created)
 
+## Brand assets convention
+
+- Per-lead asset folders in this repo: `<business-slug>/brand/` (logo, brand screenshots) and `<business-slug>/photos/` (real photos of the business — the Lead Hunter downloads Google Place photos here via the Places API).
+- The mockup builder reads these with vision to derive the REAL brand palette and uses the real photos as site imagery.
+- No assets available → builder ships a neutral-premium design FLAGGED "⚠️ GENERIC BRANDING" on the card; QA enforces the flag; the human decides (send anyway / drop assets in and request changes / polish in a Claude Code session).
+- Human/Claude Code edits to a mockup folder are authoritative — pipeline agents git pull first and never rebuild over non-pipeline commits.
+- Facebook cannot be scraped from any headless run (robots-blocked) — never rely on FB for assets; use Place photos, repo drops, or the human.
+
 ## Deployment
 
 - git push to THIS repo (main) → Cloudflare Pages auto-deploys
@@ -165,3 +173,4 @@ sound human + runs the sales QA checklist; only cards marked
 - 2026-07-27 (calendar drift RESOLVED): Lead Hunter delivered dental leads
   on Jul 27, matching the calendar. The Jul 26 plumbing mismatch was a
   one-off; no calendar edit needed.
+- 2026-07-27: Dental Hive mockup shipped with generic palette (no brand asset access) and QA missed it. Fixes: brand-assets convention above, GENERIC BRANDING flag, QA branding check, Lead Hunter to download Place photos per lead.
