@@ -69,7 +69,8 @@ sound human + runs the sales QA checklist; only cards marked
 - The mockup builder reads these with vision to derive the REAL brand palette and uses the real photos as site imagery.
 - No assets available → builder ships a neutral-premium design FLAGGED "⚠️ GENERIC BRANDING" on the card; QA enforces the flag; the human decides (send anyway / drop assets in and request changes / polish in a Claude Code session).
 - Human/Claude Code edits to a mockup folder are authoritative — pipeline agents git pull first and never rebuild over non-pipeline commits.
-- Facebook cannot be scraped from any headless run (robots-blocked) — never rely on FB for assets; use Place photos, repo drops, or the human.
+- Facebook cannot be scraped from any headless run (robots-blocked). FB photos/logos are captured by the HUMAN via Claude in Chrome (browses as the logged-in user) and committed to `<slug>/brand/` and `<slug>/photos/`.
+- Auto-rebrand: every run, the builder rechecks GENERIC BRANDING-flagged cards; if asset folders now have files, it rebuilds with the real branding on the same URL and clears the flag.
 
 ## Deployment
 
