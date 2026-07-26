@@ -81,3 +81,35 @@ invisible to agents) · REPLIED (HITS) is human territory.
   https://preview.cloudspringitsolutions.com/custom-cakes-by-bam/
 - 2026-07-26: GHL wired (pipeline + pilot contact/opportunity); floating
   discovery-call CTA live; switched to WEEKLY niche focus (W1 = dental)
+- 2026-07-26 (plumbing run): invisibility is the strongest angle for PH trades
+  — every city search ("plumber <city>") is dominated by SEO-built operators
+  (Tubero Experts, the malabananservices.ph / mrmalabanan.com franchise-style
+  network) with real sites; small local shops appear nowhere. Name the actual
+  competitors; it is checkable and it lands.
+- 2026-07-26: NEW ANGLE — "name collision". For generic/franchise-style PH
+  trade names (Malabanan, Tubero, etc.), the pain is not just invisibility:
+  searches send the lead's own customers to four other companies using the
+  same name. The mockup becomes an identity-proof page (exact address +
+  number + rating in the hero). Reusable for any generic-named niche.
+- 2026-07-26: sharper trust-gap variant — reviews trapped in a DIRECTORY, not
+  just on FB. A & D (56 reviews) ranks only inside a Yelp listing page, so
+  Yelp owns the traffic and the ad space. "Your 56 reviews are working for
+  someone else" outperforms plain "you have no website".
+- 2026-07-26 (deploy gotcha): on the FIRST deploy of a new folder, the branded
+  domain preview.cloudspringitsolutions.com can lag ~1-2 min behind and serve
+  the root placeholder page instead of the new folder. Do NOT treat that as a
+  failed deploy — verify via cloudspring-mockups.pages.dev/<slug>/ first, then
+  re-check the branded URL (add /index.html to bypass a cached 15-min fetch).
+- 2026-07-26 (Trello gotcha): card descriptions are capped at 2048 chars and
+  the whole pipeline writes into one description. Budget it: Strategist output
+  ~1,250 chars max, then condense the Sales Angle (drop Stack/Mockup directive
+  once the build is done) to leave ~800 chars for the outreach draft.
+- 2026-07-26 (lead quality): 4/4 plumbing leads had NO email; 2/4 had no FB
+  either, leaving phone as the only channel. Phone-only leads cannot be
+  emailed or auto-sent — outreach becomes an SMS/call script the human runs.
+  Lead Hunter should prefer leads with at least one messageable channel
+  (email or FB) and flag phone-only ones explicitly.
+- 2026-07-26 (calendar drift): Lead Hunter delivered PLUMBING leads on Jul 26,
+  but the niche calendar above puts plumbers at Aug 03-08 and dental at
+  Jul 27 - Aug 01. Either the calendar or the Lead Hunter niche selection
+  needs correcting — human decision.
