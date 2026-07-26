@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dental Hive — Visayas Avenue | Orthodontics, Cosmetic &amp; General Dentistry in Quezon City</title>
+<meta name="description" content="Dental Hive — Visayas Avenue is a dental clinic in Diliman, Quezon City offering general dentistry, orthodontics (braces) and cosmetic dentistry. Rated 4.9 stars from 265 Google reviews. Open Monday to Saturday, 10AM–6PM.">
+<meta name="theme-color" content="#073B37">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap">
+<style>
+/* ==========================================================================
+   Dental Hive — Visayas Avenue
+   Single-file mockup. All CSS + JS inline. All imagery hand-authored SVG/CSS.
+   ========================================================================== */
+
+:root{
+  /* Brand — teal hue family (~176°) */
+  --teal-500:#0E8F86;   /* lead teal */
+  --teal-600:#0A7A72;
+  --teal-700:#0A6F68;   /* text-safe teal, 6.0:1 on white */
+  --teal-800:#075049;
+  --ink:#073B37;        /* deep anchor, re-hued into the teal family */
+  --ink-900:#052A27;
+
+  /* Warm accent — used sparingly (stars, preview pill, small flourishes) */
+  --amber:#E8A33D;
+  --amber-600:#C9821C;
+
+  /* Neutral scale */
+  --white:#FFFFFF;
+  --n-50:#F6F9F9;
+  --n-100:#EDF3F2;
+  --n-200:#DDE8E7;
+  --n-300:#C4D4D2;
+  --n-600:#5A6B6A;      /* muted body, 5.6:1 on white */
+  --n-800:#3A4B4A;      /* body, 9.2:1 on white */
+
+  /* Shadows — always tinted with the deepest brand colour, never pure black */
+  --sh-sm:0 1px 2px rgba(5,42,39,.06), 0 2px 6px rgba(5,42,39,.06);
+  --sh-md:0 2px 4px rgba(5,42,39,.05), 0 10px 24px rgba(5,42,39,.09);
+  --sh-lg:0 4px 8px rgba(5,42,39,.06), 0 24px 48px rgba(5,42,39,.13);
+  --sh-inset:inset 0 0 0 1px rgba(7,59,55,.08);
+
+  /* Type */
+  --font-display:"Outfit","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
+  --font-body:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+
+  /* Spacing — 4 / 8 scale */
+  --s1:4px; --s2:8px; --s3:12px; --s4:16px; --s5:24px; --s6:32px;
+  --s7:40px; --s8:48px; --s9:64px; --s10:80px; --s11:96px;
+
+  --r-sm:8px; --r-md:14px; --r-lg:20px; --r-xl:28px; --r-pill:999px;
+
+  --bar-space:172px; /* room reserved for the fixed preview bar */
+  --wrap:1120px;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+
+html{-webkit-text-size-adjust:100%}
+
+body{
+  margin:0;
+  padding-bottom:var(--bar-space);
+  font-family:var(--font-body);
+  font-size:16px;
+  line-height:1.65;
+  color:var(--n-800);
+  background:var(--white);
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+
+h1,h2,h3,h4{
+  font-family:var(--font-display);
+  color:var(--ink);
+  line-height:1.15;
+  letter-spacing:-.02em;
+  margin:0;
+  text-shadow:none; /* no drop shadows on text, anywhere */
+}
+p{margin:0}
+img,svg{display:block;max-width:100%}
+a{color:var(--teal-700);text-decoration:none}
+
+.wrap{width:100%;max-width:var(--wrap);margin:0 auto;padding:0 var(--s5)}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+
+/* ---------- Focus: visible on every interactive element ---------- */
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,
+textarea:focus-visible,summary:focus-visible{
+  outline:3px solid var(--teal-500);
+  outline-offset:3px;
+  border-radius:var(--r-sm);
+}
+
+/* ==========================  HEADER  ========================== */
+.site-header{
+  position:sticky;top:0;z-index:60;
+  background:rgba(255,255,255,.94);
+  backdrop-filter:saturate(160%) blur(10px);
+  -webkit-backdrop-filter:saturate(160%) blur(10px);
+  border-bottom:1px solid var(--n-200);
+}
+.header-in{
+  display:flex;align-items:center;gap:var(--s3);
+  min-height:64px;padding-top:var(--s2);padding-bottom:var(--s2);
+}
+.brand{display:flex;align-items:center;gap:10px;min-width:0;margin-right:auto}
+.brand-mark{
+  width:38px;height:38px;flex:0 0 38px;border-radius:11px;
+  background:linear-gradient(160deg,var(--teal-500),var(--teal-800));
+  display:grid;place-items:center;box-shadow:var(--sh-sm);
+}
+.brand-mark svg{width:22px;height:22px;color:#fff}
+.brand-text{display:flex;flex-direction:column;min-width:0}
+.brand-name{
+  font-family:var(--font-display);font-weight:700;font-size:17px;
+  color:var(--ink);letter-spacing:-.02em;line-height:1.1;white-space:nowrap;
+}
+.brand-sub{
+  font-size:11px;font-weight:600;color:var(--teal-700);
+  letter-spacing:.09em;text-transform:uppercase;line-height:1.4;white-space:nowrap;
+}
+.nav{display:none;gap:var(--s5);margin-right:var(--s5)}
+.nav a{
+  font-size:14.5px;font-weight:500;color:var(--n-800);
+  padding:6px 2px;border-bottom:2px solid transparent;transition:color .18s,border-color .18s;
+}
+.nav a:hover{color:var(--teal-700);border-bottom-color:var(--teal-500)}
+.nav a:focus-visible{border-bottom-color:transparent}
+
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  font-family:var(--font-body);font-weight:600;font-size:15px;line-height:1;
+  padding:14px 22px;border-radius:var(--r-pill);border:1px solid transparent;
+  cursor:pointer;text-align:center;
+  transition:transform .16s ease,box-shadow .18s ease,background-color .18s ease,color .18s ease,border-color .18s ease;
+}
+.btn svg{width:18px;height:18px;flex:0 0 18px}
+.btn-primary{background:var(--teal-700);color:#fff;box-shadow:var(--sh-md)}
+.btn-primary:hover{background:var(--teal-800);transform:translateY(-2px);box-shadow:var(--sh-lg)}
+.btn-primary:active{transform:translateY(0)}
+.btn-ghost{background:#fff;color:var(--ink);border-color:var(--n-300);box-shadow:var(--sh-sm)}
+.btn-ghost:hover{border-color:var(--teal-500);color:var(--teal-700);background:var(--n-50);transform:translateY(-2px)}
+.btn-call-sm{padding:11px 16px;font-size:14px}
+.btn-call-sm .btn-call-label{display:none}
+.btn-block{display:flex;width:100%}
+
+/* ==========================  HERO  ========================== */
+.hero{
+  position:relative;overflow:hidden;
+  background:
+    radial-gradient(120% 90% at 12% 0%, #EAF6F4 0%, rgba(234,246,244,0) 62%),
+    linear-gradient(180deg,var(--n-50) 0%,#fff 100%);
+  padding:var(--s7) 0 var(--s8);
+}
+.hero::after{
+  content:"";position:absolute;right:-90px;top:-70px;width:320px;height:320px;
+  background:radial-gradient(circle at 50% 50%, rgba(14,143,134,.12), rgba(14,143,134,0) 68%);
+  border-radius:50%;pointer-events:none;
+}
+.hero-in{position:relative;z-index:1}
+
+.rating-badge{
+  display:inline-flex;align-items:center;gap:10px;
+  background:#fff;border:1px solid var(--n-200);border-radius:var(--r-pill);
+  padding:8px 16px 8px 10px;box-shadow:var(--sh-md);margin-bottom:var(--s5);
+}
+.rating-score{
+  font-family:var(--font-display);font-weight:700;font-size:20px;color:var(--ink);
+  line-height:1;padding-right:10px;border-right:1px solid var(--n-200);
+}
+.stars{display:flex;gap:2px}
+.stars svg{width:15px;height:15px;color:var(--amber)}
+.rating-meta{font-size:12.5px;font-weight:500;color:var(--n-600);line-height:1.3}
+.rating-meta strong{color:var(--n-800);font-weight:600}
+
+h1{font-size:clamp(31px,8.2vw,42px);font-weight:700;margin-bottom:var(--s4)}
+h1 .hl{
+  color:var(--teal-700);
+  background:linear-gradient(180deg,rgba(14,143,134,0) 62%,rgba(14,143,134,.16) 62%);
+}
+.hero-lede{font-size:17px;color:var(--n-600);max-width:56ch;margin-bottom:var(--s6)}
+.hero-cta{display:flex;flex-direction:column;gap:var(--s3);margin-bottom:var(--s6)}
+.hero-note{
+  display:flex;align-items:center;gap:8px;
+  font-size:13.5px;color:var(--n-600);margin-top:calc(var(--s3) * -1);margin-bottom:var(--s6);
+}
+.hero-note svg{width:16px;height:16px;color:var(--teal-600);flex:0 0 16px}
+
+.hero-art{
+  position:relative;border-radius:var(--r-xl);overflow:hidden;
+  background:linear-gradient(155deg,var(--ink) 0%,var(--teal-800) 55%,var(--teal-600) 100%);
+  box-shadow:var(--sh-lg);padding:var(--s5);
+}
+.hero-art svg.art{width:100%;height:auto}
+.hero-chip{
+  position:absolute;left:var(--s5);bottom:var(--s5);
+  display:flex;align-items:center;gap:10px;
+  background:rgba(255,255,255,.96);border-radius:var(--r-md);
+  padding:10px 14px;box-shadow:var(--sh-md);
+}
+.hero-chip .dot{width:8px;height:8px;border-radius:50%;background:var(--amber);flex:0 0 8px}
+.hero-chip span{font-size:12.5px;font-weight:600;color:var(--ink);line-height:1.35}
+.hero-chip small{display:block;font-weight:500;color:var(--n-600);font-size:11.5px}
+
+/* ==========================  TRUST STRIP  ========================== */
+.trust{background:var(--ink);color:#DCEBE9;padding:var(--s6) 0}
+.trust-grid{display:grid;gap:var(--s5)}
+.trust-item{display:flex;gap:var(--s3);align-items:flex-start}
+.trust-ico{
+  width:40px;height:40px;flex:0 0 40px;border-radius:12px;
+  background:rgba(255,255,255,.08);display:grid;place-items:center;
+  border:1px solid rgba(255,255,255,.14);
+}
+.trust-ico svg{width:20px;height:20px;color:#7FD8CF}
+.trust-item h3{color:#fff;font-size:16.5px;margin-bottom:3px}
+.trust-item p{font-size:14px;color:#B9D4D1;line-height:1.55}
+
+/* ==========================  SECTION SHELL  ========================== */
+section{scroll-margin-top:84px}
+.sec{padding:var(--s9) 0}
+.sec-alt{background:var(--n-50);border-top:1px solid var(--n-200);border-bottom:1px solid var(--n-200)}
+.eyebrow{
+  display:inline-block;font-size:12px;font-weight:600;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--teal-700);margin-bottom:var(--s3);
+}
+.sec-head{max-width:62ch;margin-bottom:var(--s7)}
+.sec-head h2{font-size:clamp(25px,6.4vw,34px);margin-bottom:var(--s3)}
+.sec-head p{color:var(--n-600);font-size:16.5px}
+
+/* ==========================  SERVICES  ========================== */
+.svc-grid{display:grid;gap:var(--s4)}
+.svc{
+  background:#fff;border:1px solid var(--n-200);border-radius:var(--r-lg);
+  padding:var(--s5);box-shadow:var(--sh-sm);
+  transition:transform .18s ease,box-shadow .2s ease,border-color .2s ease;
+}
+.svc:hover{transform:translateY(-3px);box-shadow:var(--sh-md);border-color:var(--teal-500)}
+.svc-ico{
+  width:46px;height:46px;border-radius:14px;display:grid;place-items:center;
+  background:var(--n-100);border:1px solid var(--n-200);margin-bottom:var(--s4);
+}
+.svc-ico svg{width:24px;height:24px;color:var(--teal-700)}
+.svc.feat{border-color:rgba(14,143,134,.38);background:linear-gradient(180deg,#F2FBFA 0%,#fff 58%)}
+.svc.feat .svc-ico{background:var(--teal-700);border-color:var(--teal-700)}
+.svc.feat .svc-ico svg{color:#fff}
+.svc h3{font-size:19px;margin-bottom:var(--s2);display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.tag{
+  font-family:var(--font-body);font-size:10.5px;font-weight:700;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--amber-600);background:#FDF3E2;
+  border:1px solid #F3DDB4;border-radius:var(--r-pill);padding:3px 9px;line-height:1.4;
+}
+.svc p{font-size:14.8px;color:var(--n-600)}
+.svc ul{margin:var(--s3) 0 0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:6px}
+.svc ul li{
+  font-size:12.5px;font-weight:500;color:var(--teal-800);background:var(--n-100);
+  border-radius:var(--r-pill);padding:4px 11px;
+}
+.rates-note{
+  display:flex;gap:var(--s3);align-items:flex-start;
+  margin-top:var(--s6);padding:var(--s4) var(--s5);
+  background:#fff;border:1px dashed var(--n-300);border-radius:var(--r-md);
+}
+.rates-note svg{width:20px;height:20px;color:var(--teal-700);flex:0 0 20px;margin-top:2px}
+.rates-note p{font-size:14.5px;color:var(--n-600)}
+.rates-note strong{color:var(--ink);font-weight:600}
+
+/* ==========================  ABOUT  ========================== */
+.about-grid{display:grid;gap:var(--s6)}
+.about-copy p + p{margin-top:var(--s4)}
+.about-copy p{font-size:16.5px;color:var(--n-800)}
+.about-facts{
+  background:#fff;border:1px solid var(--n-200);border-radius:var(--r-lg);
+  padding:var(--s5);box-shadow:var(--sh-sm);
+}
+.about-facts h3{font-size:16px;margin-bottom:var(--s4)}
+.fact{display:flex;gap:var(--s3);padding:var(--s3) 0;border-top:1px solid var(--n-100)}
+.fact:first-of-type{border-top:0;padding-top:0}
+.fact svg{width:19px;height:19px;color:var(--teal-700);flex:0 0 19px;margin-top:3px}
+.fact div{font-size:14.5px;color:var(--n-600)}
+.fact strong{display:block;color:var(--ink);font-weight:600;font-size:14.8px}
+
+/* ==========================  CONTACT  ========================== */
+.contact-grid{display:grid;gap:var(--s6)}
+.card{
+  background:#fff;border:1px solid var(--n-200);border-radius:var(--r-lg);
+  box-shadow:var(--sh-md);overflow:hidden;
+}
+.card-pad{padding:var(--s5)}
+.card h3{font-size:19px;margin-bottom:var(--s4)}
+
+.info-row{display:flex;gap:var(--s3);padding:var(--s4) 0;border-top:1px solid var(--n-100)}
+.info-row:first-of-type{border-top:0;padding-top:0}
+.info-ico{
+  width:38px;height:38px;flex:0 0 38px;border-radius:11px;background:var(--n-100);
+  display:grid;place-items:center;border:1px solid var(--n-200);
+}
+.info-ico svg{width:19px;height:19px;color:var(--teal-700)}
+.info-row .lbl{
+  font-size:11.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--n-600);margin-bottom:2px;
+}
+.info-row .val{font-size:15.5px;color:var(--n-800);font-weight:500;line-height:1.5}
+.info-row a.val{color:var(--teal-700);border-bottom:1px solid transparent;transition:border-color .16s,color .16s}
+.info-row a.val:hover{color:var(--teal-800);border-bottom-color:var(--teal-500)}
+
+.socials{display:flex;gap:var(--s2);flex-wrap:wrap;margin-top:var(--s2)}
+.social{
+  display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:500;
+  color:var(--ink);background:#fff;border:1px solid var(--n-200);
+  border-radius:var(--r-pill);padding:9px 15px;box-shadow:var(--sh-sm);
+  transition:transform .16s ease,border-color .18s,color .18s,box-shadow .18s;
+}
+.social svg{width:17px;height:17px;color:var(--teal-700);flex:0 0 17px;transition:color .18s}
+.social:hover{transform:translateY(-2px);border-color:var(--teal-500);color:var(--teal-800);box-shadow:var(--sh-md)}
+
+/* Hours */
+.hours{width:100%;border-collapse:collapse;font-size:14.8px}
+.hours caption{
+  caption-side:top;text-align:left;font-size:11.5px;font-weight:600;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--n-600);padding-bottom:var(--s3);
+}
+.hours th,.hours td{padding:9px 0;text-align:left;border-top:1px solid var(--n-100)}
+.hours tr:first-child th,.hours tr:first-child td{border-top:0}
+.hours th{font-weight:500;color:var(--n-800)}
+.hours td{text-align:right;color:var(--n-600);font-variant-numeric:tabular-nums}
+.hours tr.closed th,.hours tr.closed td{color:var(--n-600)}
+.hours tr.today th{font-weight:700;color:var(--ink)}
+.hours tr.today td{color:var(--ink);font-weight:600}
+.open-pill{
+  display:inline-flex;align-items:center;gap:7px;margin-bottom:var(--s4);
+  font-size:12.5px;font-weight:600;border-radius:var(--r-pill);padding:6px 13px;
+  background:var(--n-100);color:var(--teal-800);border:1px solid var(--n-200);
+}
+.open-pill .live{width:8px;height:8px;border-radius:50%;background:var(--n-600);flex:0 0 8px}
+.open-pill.is-open{background:#E7F6F1;border-color:#B9E3D8;color:#0A5B45}
+.open-pill.is-open .live{background:#12996F}
+
+/* Map placeholder — pure CSS */
+.map{
+  position:relative;height:224px;background:#E8F1EF;overflow:hidden;
+  border-bottom:1px solid var(--n-200);
+}
+.map .grid-a,.map .grid-b{position:absolute;inset:-30%}
+.map .grid-a{
+  background:
+    repeating-linear-gradient(90deg,transparent 0 46px,#DCE9E7 46px 52px),
+    repeating-linear-gradient(0deg,transparent 0 54px,#DCE9E7 54px 60px);
+}
+.map .grid-b{
+  background:repeating-linear-gradient(28deg,transparent 0 90px,#D2E4E1 90px 100px);
+  opacity:.75;
+}
+.map .avenue{
+  position:absolute;left:-16%;top:56%;width:132%;height:26px;
+  background:linear-gradient(180deg,#fff,#F3F8F7);
+  border-top:2px solid #CBDEDB;border-bottom:2px solid #CBDEDB;
+  transform:rotate(-14deg);
+  box-shadow:0 6px 18px rgba(5,42,39,.07);
+}
+.map .avenue::after{
+  content:"";position:absolute;left:0;right:0;top:50%;height:2px;transform:translateY(-1px);
+  background:repeating-linear-gradient(90deg,#D9AB55 0 14px,transparent 14px 30px);
+}
+.map .park{
+  position:absolute;right:9%;top:9%;width:98px;height:66px;border-radius:16px;
+  background:#D6EBDF;border:1px solid #BFDDCD;
+}
+.map .block{position:absolute;border-radius:6px;background:#DFEAE8;border:1px solid #CFE0DD}
+.map .b1{left:8%;top:12%;width:76px;height:52px}
+.map .b2{left:36%;top:20%;width:58px;height:40px}
+.map .b3{left:14%;bottom:9%;width:64px;height:44px}
+.map .pin{position:absolute;left:50%;top:47%;transform:translate(-50%,-100%);text-align:center}
+.map .pin svg{width:34px;height:34px;color:var(--teal-700);margin:0 auto;filter:drop-shadow(0 4px 6px rgba(5,42,39,.28))}
+.map .pin b{
+  display:inline-block;margin-top:5px;background:var(--ink);color:#fff;
+  font-size:11.5px;font-weight:600;letter-spacing:.02em;border-radius:var(--r-pill);
+  padding:4px 11px;white-space:nowrap;box-shadow:var(--sh-sm);
+}
+.map-label{
+  position:absolute;left:var(--s3);top:var(--s3);
+  background:rgba(255,255,255,.95);border:1px solid var(--n-200);border-radius:var(--r-pill);
+  font-size:11.5px;font-weight:600;color:var(--n-600);letter-spacing:.04em;
+  padding:5px 12px;box-shadow:var(--sh-sm);
+}
+
+/* Form */
+.form-grid{display:grid;gap:var(--s4)}
+.field{display:flex;flex-direction:column;gap:6px}
+.field label{font-size:13px;font-weight:600;color:var(--ink)}
+.field .hint{font-size:12px;font-weight:500;color:var(--n-600)}
+.field input,.field select,.field textarea{
+  font-family:var(--font-body);font-size:16px;color:var(--n-800);
+  background:#fff;border:1px solid var(--n-300);border-radius:var(--r-md);
+  padding:13px 14px;width:100%;transition:border-color .18s,box-shadow .18s,background-color .18s;
+}
+.field textarea{min-height:104px;resize:vertical}
+.field select{
+  appearance:none;-webkit-appearance:none;padding-right:42px;cursor:pointer;
+  background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230A6F68' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 14px center;background-size:17px 17px;
+}
+.field input:hover,.field select:hover,.field textarea:hover{border-color:var(--teal-500)}
+.field input:focus,.field select:focus,.field textarea:focus{
+  border-color:var(--teal-600);box-shadow:0 0 0 4px rgba(14,143,134,.16);outline:none;
+}
+.field input:focus-visible,.field select:focus-visible,.field textarea:focus-visible{outline:none}
+.form-foot{font-size:12.8px;color:var(--n-600);margin-top:var(--s2)}
+.form-status{
+  display:none;gap:9px;align-items:flex-start;margin-top:var(--s3);
+  background:#E7F6F1;border:1px solid #B9E3D8;border-radius:var(--r-md);
+  padding:12px 14px;font-size:13.8px;color:#0A5B45;
+}
+.form-status.show{display:flex}
+.form-status svg{width:18px;height:18px;flex:0 0 18px;margin-top:1px}
+
+/* ==========================  FOOTER  ========================== */
+.site-footer{background:var(--ink-900);color:#AFCDC9;padding:var(--s8) 0 var(--s7)}
+.foot-grid{display:grid;gap:var(--s6)}
+.foot-brand{display:flex;align-items:center;gap:10px;margin-bottom:var(--s3)}
+.foot-brand .brand-mark{box-shadow:none}
+.foot-brand .brand-name{color:#fff}
+.foot-brand .brand-sub{color:#7FD8CF}
+.site-footer p{font-size:14px;line-height:1.65;color:#9DBFBB}
+.foot-links{display:flex;flex-direction:column;gap:10px}
+.foot-links a{
+  color:#CFE4E1;font-size:14.5px;width:fit-content;
+  border-bottom:1px solid transparent;transition:color .16s,border-color .16s;
+}
+.foot-links a:hover{color:#fff;border-bottom-color:var(--teal-500)}
+.foot-h{
+  font-family:var(--font-display);font-size:13px;font-weight:600;color:#fff;
+  letter-spacing:.1em;text-transform:uppercase;margin-bottom:var(--s4);
+}
+.foot-bar{
+  margin-top:var(--s7);padding-top:var(--s5);border-top:1px solid rgba(255,255,255,.1);
+  display:flex;flex-direction:column;gap:var(--s2);font-size:13px;color:#8FB3AF;
+}
+.foot-bar a{color:#CFE4E1;font-weight:600}
+.foot-bar a:hover{color:#fff}
+
+/* ==========================  PREVIEW BAR (for the owner)  ========================== */
+.preview-bar{
+  position:fixed;left:0;right:0;bottom:0;z-index:90;
+  background:rgba(5,42,39,.94);
+  backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+  border-top:1px solid rgba(127,216,207,.24);
+  box-shadow:0 -8px 32px rgba(5,42,39,.28);
+  padding:var(--s4) var(--s5);
+  padding-bottom:calc(var(--s4) + env(safe-area-inset-bottom,0px));
+}
+.preview-in{
+  max-width:var(--wrap);margin:0 auto;
+  display:flex;flex-direction:column;align-items:center;text-align:center;gap:var(--s3);
+}
+.preview-eyebrow{
+  font-size:10.5px;font-weight:700;letter-spacing:.12em;
+  color:#7FD8CF;margin-bottom:4px;
+}
+.preview-line{
+  font-family:var(--font-display);font-weight:600;font-size:15.5px;line-height:1.35;
+  color:#fff;letter-spacing:-.01em;max-width:44ch;
+}
+.preview-btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  background:var(--amber);color:#12211F;
+  font-family:var(--font-body);font-weight:700;font-size:14.5px;line-height:1;
+  padding:14px 22px;border-radius:var(--r-pill);white-space:nowrap;flex:0 0 auto;
+  box-shadow:0 6px 20px rgba(5,42,39,.42);
+  transition:transform .16s ease,background-color .18s ease,box-shadow .18s ease;
+}
+.preview-btn:hover{background:#F2B457;transform:translateY(-2px);box-shadow:0 10px 26px rgba(5,42,39,.5)}
+.preview-btn:active{transform:translateY(0)}
+.preview-btn:focus-visible{outline:3px solid #7FD8CF;outline-offset:3px}
+
+@media (prefers-reduced-motion: no-preference){
+  @keyframes cs-pulse{
+    0%,100%{box-shadow:0 6px 20px rgba(5,42,39,.42),0 0 0 0 rgba(232,163,61,.5)}
+    55%{box-shadow:0 6px 20px rgba(5,42,39,.42),0 0 0 12px rgba(232,163,61,0)}
+  }
+  .preview-btn{animation:cs-pulse 2.8s ease-out infinite}
+  .preview-btn:hover{animation-play-state:paused}
+  html{scroll-behavior:smooth}
+}
+
+/* ==========================  RESPONSIVE  ========================== */
+@media (min-width:480px){
+  .hero-cta{flex-direction:row;flex-wrap:wrap}
+  .btn-block{display:inline-flex;width:auto}
+  .btn-call-sm .btn-call-label{display:inline}
+  .foot-bar{flex-direction:row;justify-content:space-between;align-items:center}
+}
+@media (min-width:640px){
+  :root{--bar-space:108px}
+  .preview-in{flex-direction:row;text-align:left;justify-content:space-between;gap:var(--s5)}
+  .preview-line{max-width:none}
+  .svc-grid{grid-template-columns:repeat(2,1fr)}
+  .trust-grid{grid-template-columns:repeat(3,1fr)}
+  .form-grid.two{grid-template-columns:repeat(2,1fr)}
+  .map{height:264px}
+}
+@media (min-width:900px){
+  .wrap{padding:0 var(--s6)}
+  .nav{display:flex}
+  .hero{padding:var(--s10) 0 var(--s11)}
+  .hero-in{display:grid;grid-template-columns:1.08fr .92fr;gap:var(--s8);align-items:center}
+  h1{font-size:clamp(38px,3.9vw,50px)}
+  .svc-grid{grid-template-columns:repeat(3,1fr)}
+  .about-grid{grid-template-columns:1.25fr .75fr;align-items:start;gap:var(--s8)}
+  .contact-grid{grid-template-columns:1fr 1fr;gap:var(--s6);align-items:start}
+  .foot-grid{grid-template-columns:1.6fr 1fr 1fr}
+  .card-pad{padding:var(--s6)}
+  .sec{padding:var(--s11) 0}
+  .preview-line{font-size:16.5px}
+}
+</style>
+</head>
+<body>
+
+<!-- ===== Inline SVG icon sprite (hand-authored, no external assets) ===== -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <path id="p-tooth" d="M100 18C86 8 62 6 48 16 32 27 28 50 33 74c4 18 9 32 12 50 3 18 7 38 19 38 10 0 13-14 16-30 3-14 7-22 20-22s17 8 20 22c3 16 6 30 16 30 12 0 16-20 19-38 3-18 8-32 12-50 5-24 1-47-15-58-14-10-38-8-52-2Z"/>
+    <path id="p-hex" d="M28 0 14-24.2h-28L-28 0l14 24.2h28Z"/>
+  </defs>
+
+  <symbol id="i-tooth" viewBox="0 0 200 180">
+    <use href="#p-tooth" fill="none" stroke="currentColor" stroke-width="13" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="i-tooth-solid" viewBox="0 0 200 180">
+    <use href="#p-tooth" fill="currentColor"/>
+  </symbol>
+  <symbol id="i-star" viewBox="0 0 24 24">
+    <path fill="currentColor" d="M12 2.4l2.86 5.8 6.4.93-4.63 4.5 1.09 6.37L12 16.99l-5.72 3.01 1.09-6.37L2.74 9.13l6.4-.93L12 2.4Z"/>
+  </symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M6.3 3h3l1.5 4-2 1.4a12.6 12.6 0 0 0 6.8 6.8l1.4-2 4 1.5v3a2 2 0 0 1-2.2 2A17.8 17.8 0 0 1 4.3 5.2 2 2 0 0 1 6.3 3Z"/>
+  </symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4M8 14h3M8 17.5h6"/>
+  </symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 21.5s7-6.2 7-11.5a7 7 0 1 0-14 0c0 5.3 7 11.5 7 11.5Z"/><circle cx="12" cy="10" r="2.6"/>
+  </symbol>
+  <symbol id="i-pin-solid" viewBox="0 0 24 24">
+    <path fill="currentColor" d="M12 22s7.5-6.6 7.5-12A7.5 7.5 0 0 0 4.5 10c0 5.4 7.5 12 7.5 12Z"/>
+    <circle cx="12" cy="10" r="2.8" fill="#fff"/>
+  </symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="9"/><path d="M12 7v5.2l3.4 2"/>
+  </symbol>
+  <symbol id="i-braces" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M2.5 12h19"/>
+    <rect x="4" y="8.4" width="4" height="7.2" rx="1.4"/>
+    <rect x="10" y="8.4" width="4" height="7.2" rx="1.4"/>
+    <rect x="16" y="8.4" width="4" height="7.2" rx="1.4"/>
+  </symbol>
+  <symbol id="i-sparkle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 3.2l1.9 4.9 4.9 1.9-4.9 1.9L12 16.8l-1.9-4.9L5.2 10l4.9-1.9L12 3.2Z"/>
+    <path d="M18.6 15.4l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8.8-2Z"/>
+  </symbol>
+  <symbol id="i-shine" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="11" cy="11" r="5.4"/><path d="M11 2.6v1.8M11 17.6v1.8M2.6 11h1.8M17.6 11h1.8M5 5l1.3 1.3M15.7 15.7 17 17M17 5l-1.3 1.3M6.3 15.7 5 17"/>
+  </symbol>
+  <symbol id="i-brush" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 20.5h9a2.5 2.5 0 0 0 2.5-2.5v-3H6.5A2.5 2.5 0 0 0 4 17.5v3Z"/>
+    <path d="M15.5 15V6.4a2.4 2.4 0 0 1 4.8 0V15"/><path d="M8 15V11M11.5 15V11"/>
+  </symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 2.8 4.6 5.6v6c0 4.5 3.1 8.2 7.4 9.6 4.3-1.4 7.4-5.1 7.4-9.6v-6L12 2.8Z"/>
+    <path d="M9 12.1l2.1 2.1L15.3 10"/>
+  </symbol>
+  <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="9"/><path d="M8.2 12.3l2.6 2.6 5-5.2"/>
+  </symbol>
+  <symbol id="i-info" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="9"/><path d="M12 11v5.2"/><circle cx="12" cy="7.9" r="1.1" fill="currentColor" stroke="none"/>
+  </symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4.5 12h15M13.5 6l6 6-6 6"/>
+  </symbol>
+  <symbol id="i-facebook" viewBox="0 0 24 24">
+    <path fill="currentColor" d="M13.9 21.9v-8.2h2.8l.42-3.2h-3.2V8.4c0-.93.26-1.56 1.6-1.56h1.7V3.98a23 23 0 0 0-2.5-.13c-2.46 0-4.15 1.5-4.15 4.26v2.38H7.7v3.2h2.87v8.2Z"/>
+  </symbol>
+  <symbol id="i-instagram" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5.2"/><circle cx="12" cy="12" r="4"/>
+    <circle cx="17.1" cy="6.9" r="1.15" fill="currentColor" stroke="none"/>
+  </symbol>
+  <symbol id="i-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="9" cy="8" r="3.4"/><path d="M2.8 20c0-3.3 2.8-5.6 6.2-5.6s6.2 2.3 6.2 5.6"/>
+    <path d="M16.3 5.1a3.4 3.4 0 0 1 0 6.5M17.6 14.9c2.2.6 3.6 2.4 3.6 5.1"/>
+  </symbol>
+</svg>
+
+<!-- =====================  HEADER  ===================== -->
+<header class="site-header">
+  <div class="wrap header-in">
+    <a class="brand" href="#top" aria-label="Dental Hive — Visayas Avenue, back to top">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 60 60" role="presentation">
+          <path d="M30 4 52 17v26L30 56 8 43V17Z" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round" opacity=".55"/>
+          <g transform="translate(30 31) scale(.115) translate(-100 -90)">
+            <use href="#p-tooth" fill="currentColor"/>
+          </g>
+        </svg>
+      </span>
+      <span class="brand-text">
+        <span class="brand-name">Dental Hive</span>
+        <span class="brand-sub">Visayas Avenue</span>
+      </span>
+    </a>
+
+    <nav class="nav" aria-label="Primary">
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <a class="btn btn-primary btn-call-sm" href="tel:+639660039279">
+      <svg aria-hidden="true"><use href="#i-phone"/></svg>
+      <span class="btn-call-label">0966 003 9279</span>
+      <span class="sr-only">Call Dental Hive Visayas Avenue at 0966 003 9279</span>
+    </a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- =====================  HERO  ===================== -->
+  <section class="hero">
+    <div class="wrap hero-in">
+      <div>
+        <div class="rating-badge">
+          <span class="rating-score">4.9</span>
+          <span>
+            <span class="stars" role="img" aria-label="Rated 4.9 out of 5 stars">
+              <svg aria-hidden="true"><use href="#i-star"/></svg>
+              <svg aria-hidden="true"><use href="#i-star"/></svg>
+              <svg aria-hidden="true"><use href="#i-star"/></svg>
+              <svg aria-hidden="true"><use href="#i-star"/></svg>
+              <svg aria-hidden="true"><use href="#i-star"/></svg>
+            </span>
+            <span class="rating-meta"><strong>265</strong> Google reviews</span>
+          </span>
+        </div>
+
+        <h1>Orthodontics, cosmetic and general dentistry on <span class="hl">Visayas Avenue, Quezon City</span></h1>
+
+        <p class="hero-lede">Dental Hive — Visayas Avenue is a dental clinic in Diliman. Braces, whitening and everyday check-ups, all in one place, six days a week.</p>
+
+        <div class="hero-cta">
+          <a class="btn btn-primary btn-block" href="#appointment">
+            <svg aria-hidden="true"><use href="#i-calendar"/></svg>
+            Request an appointment
+          </a>
+          <a class="btn btn-ghost btn-block" href="tel:+639660039279">
+            <svg aria-hidden="true"><use href="#i-phone"/></svg>
+            Call 0966 003 9279
+          </a>
+        </div>
+
+        <p class="hero-note">
+          <svg aria-hidden="true"><use href="#i-clock"/></svg>
+          Open Monday to Saturday, 10AM–6PM · Closed Sunday
+        </p>
+      </div>
+
+      <div class="hero-art" aria-hidden="true">
+        <svg class="art" viewBox="0 0 400 300" role="presentation">
+          <defs>
+            <linearGradient id="g-tooth" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#CFEDE9"/>
+            </linearGradient>
+          </defs>
+          <!-- honeycomb field -->
+          <g stroke="#7FD8CF" fill="none" stroke-width="2" opacity=".38">
+            <use href="#p-hex" transform="translate(58 54)"/>
+            <use href="#p-hex" transform="translate(100 78)"/>
+            <use href="#p-hex" transform="translate(58 102)"/>
+            <use href="#p-hex" transform="translate(342 198)"/>
+            <use href="#p-hex" transform="translate(300 222)"/>
+            <use href="#p-hex" transform="translate(342 246)"/>
+            <use href="#p-hex" transform="translate(342 150)"/>
+          </g>
+          <g stroke="#7FD8CF" fill="rgba(127,216,207,.14)" stroke-width="2" opacity=".6">
+            <use href="#p-hex" transform="translate(58 150)"/>
+            <use href="#p-hex" transform="translate(300 126)"/>
+          </g>
+          <!-- tooth -->
+          <g transform="translate(200 148) scale(.86) translate(-100 -90)">
+            <use href="#p-tooth" fill="url(#g-tooth)"/>
+            <use href="#p-tooth" fill="none" stroke="#0A6F68" stroke-width="6" opacity=".22"/>
+          </g>
+          <!-- shine marks -->
+          <g stroke="#E8A33D" stroke-width="3.4" stroke-linecap="round">
+            <path d="M252 84h20M262 74v20"/>
+            <path d="M140 214h14M147 207v14" opacity=".8"/>
+          </g>
+        </svg>
+        <div class="hero-chip">
+          <span class="dot"></span>
+          <span>Braces &amp; cosmetic care<small>Diliman, Quezon City</small></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================  WHY US STRIP  ===================== -->
+  <section class="trust" aria-label="Why patients choose Dental Hive">
+    <div class="wrap trust-grid">
+      <div class="trust-item">
+        <span class="trust-ico" aria-hidden="true"><svg><use href="#i-star"/></svg></span>
+        <div>
+          <h3>4.9★ from 265 reviews</h3>
+          <p>Verified Google rating — one of the most-reviewed dental clinics in the Visayas Avenue area.</p>
+        </div>
+      </div>
+      <div class="trust-item">
+        <span class="trust-ico" aria-hidden="true"><svg><use href="#i-clock"/></svg></span>
+        <div>
+          <h3>Open six days a week</h3>
+          <p>Monday to Saturday, 10AM to 6PM. Book after work or on a Saturday. Closed Sunday.</p>
+        </div>
+      </div>
+      <div class="trust-item">
+        <span class="trust-ico" aria-hidden="true"><svg><use href="#i-pin"/></svg></span>
+        <div>
+          <h3>Right on Visayas Avenue</h3>
+          <p>15 Visayas Ave, Diliman, Quezon City — easy to reach from anywhere along the avenue.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================  SERVICES  ===================== -->
+  <section class="sec" id="services">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Our services</span>
+        <h2>Straighter, healthier, better-looking teeth — under one roof</h2>
+        <p>Three areas of care: orthodontics, cosmetic dentistry and everyday general dentistry for the whole family.</p>
+      </div>
+
+      <div class="svc-grid">
+        <article class="svc feat">
+          <span class="svc-ico" aria-hidden="true"><svg><use href="#i-braces"/></svg></span>
+          <h3>Orthodontics <span class="tag">Braces</span></h3>
+          <p>Braces treatment to correct crowded, gapped or misaligned teeth, with regular adjustment visits as your smile moves into place.</p>
+          <ul><li>Braces</li><li>Adjustments</li><li>Bite alignment</li></ul>
+        </article>
+
+        <article class="svc feat">
+          <span class="svc-ico" aria-hidden="true"><svg><use href="#i-sparkle"/></svg></span>
+          <h3>Cosmetic dentistry</h3>
+          <p>Treatments focused on how your smile looks — brightening discoloured teeth and improving the shape and appearance of your front teeth.</p>
+          <ul><li>Teeth whitening</li><li>Smile makeover</li></ul>
+        </article>
+
+        <article class="svc">
+          <span class="svc-ico" aria-hidden="true"><svg><use href="#i-tooth"/></svg></span>
+          <h3>General dentistry</h3>
+          <p>Routine check-ups and the everyday care that keeps problems small — for adults and children alike.</p>
+          <ul><li>Check-ups</li><li>Consultation</li></ul>
+        </article>
+
+        <article class="svc">
+          <span class="svc-ico" aria-hidden="true"><svg><use href="#i-brush"/></svg></span>
+          <h3>Cleaning</h3>
+          <p>Professional cleaning to remove plaque and tartar build-up, followed by advice on keeping your teeth and gums healthy at home.</p>
+        </article>
+
+        <article class="svc">
+          <span class="svc-ico" aria-hidden="true"><svg><use href="#i-shield"/></svg></span>
+          <h3>Fillings</h3>
+          <p>Restoring teeth affected by decay so you can eat and smile comfortably again, with a finish that blends in naturally.</p>
+        </article>
+
+        <article class="svc">
+          <span class="svc-ico" aria-hidden="true"><svg><use href="#i-shine"/></svg></span>
+          <h3>Extractions</h3>
+          <p>Careful removal of a tooth that can no longer be saved, with clear aftercare guidance for a smooth recovery.</p>
+        </article>
+      </div>
+
+      <div class="rates-note">
+        <svg aria-hidden="true"><use href="#i-info"/></svg>
+        <p><strong>Ask about our current rates.</strong> Treatment plans differ from patient to patient, so message or call the clinic and our team will walk you through what your case needs.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================  ABOUT  ===================== -->
+  <section class="sec sec-alt" id="about">
+    <div class="wrap about-grid">
+      <div class="about-copy">
+        <span class="eyebrow">About the clinic</span>
+        <h2 style="font-size:clamp(25px,6.4vw,34px);margin-bottom:var(--s5)">A neighbourhood dental clinic on Visayas Avenue</h2>
+        <p>Dental Hive — Visayas Avenue is a dental clinic in Diliman, Quezon City. We look after general dentistry, orthodontics and cosmetic dentistry, which means most of what a family needs — from a routine cleaning to a full course of braces — can be handled in the same place, by the same team.</p>
+        <p>Over the years, patients from around Visayas Avenue and the wider Quezon City area have left us <strong>265 Google reviews at an average of 4.9 stars</strong>. That rating is the honest summary of how we work: take the time to explain the treatment, keep the visit comfortable, and only recommend what you actually need.</p>
+        <p>We are open Monday to Saturday, 10AM to 6PM. If you would like to come in, call us or send an appointment request and we will get back to you with a schedule.</p>
+      </div>
+
+      <aside class="about-facts">
+        <h3>At a glance</h3>
+        <div class="fact">
+          <svg aria-hidden="true"><use href="#i-pin"/></svg>
+          <div><strong>Location</strong>15 Visayas Ave, Diliman, Quezon City 1128, Metro Manila</div>
+        </div>
+        <div class="fact">
+          <svg aria-hidden="true"><use href="#i-clock"/></svg>
+          <div><strong>Clinic hours</strong>Monday to Saturday, 10AM–6PM · Closed Sunday</div>
+        </div>
+        <div class="fact">
+          <svg aria-hidden="true"><use href="#i-users"/></svg>
+          <div><strong>Patient feedback</strong>4.9★ average from 265 Google reviews</div>
+        </div>
+        <div class="fact">
+          <svg aria-hidden="true"><use href="#i-braces"/></svg>
+          <div><strong>Areas of care</strong>General dentistry · Orthodontics (braces) · Cosmetic dentistry</div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- =====================  CONTACT  ===================== -->
+  <section class="sec" id="contact">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Visit us</span>
+        <h2>Book a visit to Dental Hive — Visayas Avenue</h2>
+        <p>Call the clinic, message us on Facebook or Instagram, or send an appointment request below.</p>
+      </div>
+
+      <div class="contact-grid">
+
+        <!-- Column 1: details + map + hours -->
+        <div>
+          <div class="card">
+            <div class="map" role="img" aria-label="Illustrative map placeholder showing the clinic location on Visayas Avenue, Diliman">
+              <span class="grid-a"></span>
+              <span class="grid-b"></span>
+              <span class="park"></span>
+              <span class="block b1"></span><span class="block b2"></span><span class="block b3"></span>
+              <span class="avenue"></span>
+              <span class="map-label">Map — Visayas Ave, Diliman</span>
+              <span class="pin">
+                <svg aria-hidden="true"><use href="#i-pin-solid"/></svg>
+                <b>Dental Hive — Visayas Avenue</b>
+              </span>
+            </div>
+
+            <div class="card-pad">
+              <div class="info-row">
+                <span class="info-ico" aria-hidden="true"><svg><use href="#i-pin"/></svg></span>
+                <div>
+                  <div class="lbl">Clinic address</div>
+                  <div class="val">15 Visayas Ave, Diliman,<br>Quezon City 1128, Metro Manila</div>
+                </div>
+              </div>
+
+              <div class="info-row">
+                <span class="info-ico" aria-hidden="true"><svg><use href="#i-phone"/></svg></span>
+                <div>
+                  <div class="lbl">Phone</div>
+                  <a class="val" href="tel:+639660039279">0966 003 9279</a>
+                </div>
+              </div>
+
+              <div class="info-row">
+                <span class="info-ico" aria-hidden="true"><svg><use href="#i-facebook"/></svg></span>
+                <div>
+                  <div class="lbl">Message us</div>
+                  <div class="socials">
+                    <a class="social" href="https://www.facebook.com/dentalhive.ph/" target="_blank" rel="noopener">
+                      <svg aria-hidden="true"><use href="#i-facebook"/></svg> Facebook
+                    </a>
+                    <a class="social" href="https://www.instagram.com/dentalhive.ph/" target="_blank" rel="noopener">
+                      <svg aria-hidden="true"><use href="#i-instagram"/></svg> @dentalhive.ph
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" style="margin-top:var(--s4)">
+            <div class="card-pad">
+              <p class="open-pill" id="openPill"><span class="live"></span><span id="openText">Clinic hours</span></p>
+              <table class="hours">
+                <caption>Opening hours</caption>
+                <tbody>
+                  <tr data-day="1"><th scope="row">Monday</th><td>10:00 AM – 6:00 PM</td></tr>
+                  <tr data-day="2"><th scope="row">Tuesday</th><td>10:00 AM – 6:00 PM</td></tr>
+                  <tr data-day="3"><th scope="row">Wednesday</th><td>10:00 AM – 6:00 PM</td></tr>
+                  <tr data-day="4"><th scope="row">Thursday</th><td>10:00 AM – 6:00 PM</td></tr>
+                  <tr data-day="5"><th scope="row">Friday</th><td>10:00 AM – 6:00 PM</td></tr>
+                  <tr data-day="6"><th scope="row">Saturday</th><td>10:00 AM – 6:00 PM</td></tr>
+                  <tr data-day="0" class="closed"><th scope="row">Sunday</th><td>Closed</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Column 2: appointment form -->
+        <div class="card" id="appointment">
+          <div class="card-pad">
+            <h3>Request an appointment</h3>
+            <p style="font-size:14.8px;color:var(--n-600);margin-bottom:var(--s5)">Tell us what you need and when you would like to come in. Sending opens our Facebook page so you can send the details straight to the clinic.</p>
+
+            <form id="apptForm" novalidate>
+              <div class="form-grid two">
+                <div class="field">
+                  <label for="f-name">Full name</label>
+                  <input id="f-name" name="name" type="text" autocomplete="name" placeholder="Juan Dela Cruz">
+                </div>
+                <div class="field">
+                  <label for="f-phone">Mobile number</label>
+                  <input id="f-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="09XX XXX XXXX">
+                </div>
+              </div>
+
+              <div class="form-grid" style="margin-top:var(--s4)">
+                <div class="field">
+                  <label for="f-service">What do you need?</label>
+                  <select id="f-service" name="service">
+                    <option>General dentistry / check-up</option>
+                    <option>Orthodontics (braces)</option>
+                    <option>Cosmetic dentistry</option>
+                    <option>Cleaning</option>
+                    <option>Fillings</option>
+                    <option>Extraction</option>
+                    <option>Not sure yet — please advise</option>
+                  </select>
+                </div>
+
+                <div class="field">
+                  <label for="f-when">Preferred day and time</label>
+                  <input id="f-when" name="when" type="text" placeholder="e.g. Saturday morning">
+                  <span class="hint">We are open Monday to Saturday, 10AM–6PM.</span>
+                </div>
+
+                <div class="field">
+                  <label for="f-msg">Anything we should know?</label>
+                  <textarea id="f-msg" name="message" placeholder="Optional — briefly describe your concern."></textarea>
+                </div>
+
+                <button class="btn btn-primary btn-block" type="submit" id="sendBtn">
+                  Send request
+                  <svg aria-hidden="true"><use href="#i-arrow"/></svg>
+                </button>
+              </div>
+
+              <p class="form-foot">This opens the Dental Hive Facebook page in a new tab. Prefer to talk? Call <a href="tel:+639660039279">0966 003 9279</a> during clinic hours.</p>
+
+              <p class="form-status" id="formStatus" role="status">
+                <svg aria-hidden="true"><use href="#i-check"/></svg>
+                <span>Our Facebook page is opening in a new tab — send your details there and the clinic will confirm your schedule.</span>
+              </p>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- =====================  FOOTER  ===================== -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 60 60" role="presentation">
+              <path d="M30 4 52 17v26L30 56 8 43V17Z" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round" opacity=".55"/>
+              <g transform="translate(30 31) scale(.115) translate(-100 -90)"><use href="#p-tooth" fill="currentColor"/></g>
+            </svg>
+          </span>
+          <span class="brand-text">
+            <span class="brand-name">Dental Hive</span>
+            <span class="brand-sub">Visayas Avenue</span>
+          </span>
+        </div>
+        <p>General dentistry, orthodontics and cosmetic dentistry in Diliman, Quezon City. Rated 4.9★ from 265 Google reviews.</p>
+      </div>
+
+      <div>
+        <div class="foot-h">Clinic</div>
+        <div class="foot-links">
+          <a href="#services">Services</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact &amp; hours</a>
+          <a href="#appointment">Request an appointment</a>
+        </div>
+      </div>
+
+      <div>
+        <div class="foot-h">Get in touch</div>
+        <div class="foot-links">
+          <a href="tel:+639660039279">0966 003 9279</a>
+          <a href="https://www.facebook.com/dentalhive.ph/" target="_blank" rel="noopener">Facebook</a>
+          <a href="https://www.instagram.com/dentalhive.ph/" target="_blank" rel="noopener">Instagram · @dentalhive.ph</a>
+        </div>
+        <p style="margin-top:var(--s4)">15 Visayas Ave, Diliman,<br>Quezon City 1128, Metro Manila<br>Mon–Sat, 10AM–6PM</p>
+      </div>
+    </div>
+
+    <div class="foot-bar">
+      <span>&copy; <span id="year">2026</span> Dental Hive — Visayas Avenue. All rights reserved.</span>
+      <a href="https://api.leadconnectorhq.com/widget/booking/QRPEnWRw2Kx9rBe0Mj6J" target="_blank" rel="noopener">Website by CloudSpring IT Solutions</a>
+    </div>
+  </div>
+</footer>
+
+<!-- =====================  PREVIEW BAR (addressed to the clinic owner)  ===================== -->
+<aside class="preview-bar" aria-label="Website preview notice from CloudSpring IT Solutions">
+  <div class="preview-in">
+    <div>
+      <div class="preview-eyebrow">PREVIEW · CloudSpring IT Solutions</div>
+      <p class="preview-line">Want this website + automatic appointment booking and reminders for your clinic?</p>
+    </div>
+    <a class="preview-btn" href="https://api.leadconnectorhq.com/widget/booking/QRPEnWRw2Kx9rBe0Mj6J" target="_blank" rel="noopener">
+      Book a FREE Discovery Call →
+    </a>
+  </div>
+</aside>
+
+<script>
+(function () {
+  "use strict";
+
+  var FB = "https://www.facebook.com/dentalhive.ph/";
+
+  /* Current year in footer */
+  var y = document.getElementById("year");
+  if (y) { y.textContent = String(new Date().getFullYear()); }
+
+  /* Appointment form: non-functional demo — opens the Facebook page in a new tab */
+  var form = document.getElementById("apptForm");
+  var status = document.getElementById("formStatus");
+  if (form) {
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      window.open(FB, "_blank", "noopener");
+      if (status) { status.classList.add("show"); }
+    });
+  }
+
+  /* Open / closed indicator, evaluated in Manila time. Mon–Sat 10:00–18:00. */
+  var pill = document.getElementById("openPill");
+  var text = document.getElementById("openText");
+
+  function manilaNow() {
+    try {
+      var parts = new Intl.DateTimeFormat("en-US", {
+        timeZone: "Asia/Manila",
+        weekday: "short", hour: "numeric", minute: "numeric", hour12: false
+      }).formatToParts(new Date());
+      var map = {};
+      parts.forEach(function (p) { map[p.type] = p.value; });
+      var days = { Sun: 0, Mon: 1, Tue: 2, Wed: 3, Thu: 4, Fri: 5, Sat: 6 };
+      var d = days[map.weekday];
+      if (typeof d !== "number") { return null; }
+      var h = parseInt(map.hour, 10) % 24;
+      var m = parseInt(map.minute, 10);
+      return { day: d, mins: h * 60 + m };
+    } catch (err) { return null; }
+  }
+
+  var now = manilaNow();
+  if (now && pill && text) {
+    var isOpen = now.day >= 1 && now.day <= 6 && now.mins >= 600 && now.mins < 1080;
+    if (isOpen) {
+      pill.classList.add("is-open");
+      text.textContent = "Open now · closes 6:00 PM";
+    } else {
+      text.textContent = (now.day === 0)
+        ? "Closed today · opens Monday 10:00 AM"
+        : "Closed right now · open Mon–Sat, 10AM–6PM";
+    }
+    /* Highlight today's row in the hours table */
+    var row = document.querySelector('.hours tr[data-day="' + now.day + '"]');
+    if (row) { row.classList.add("today"); }
+  } else if (text) {
+    text.textContent = "Open Mon–Sat, 10AM–6PM";
+  }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ZP Smiles Dental Clinic — General Dentistry on Quirino Highway, Novaliches, Quezon City</title>
+<meta name="description" content="ZP Smiles Dental Clinic is a general dentistry clinic at 109 Quirino Highway, Quezon City (Novaliches). Rated 4.9 stars from 36 Google reviews. Request an appointment or call 0926 689 1185.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   ZP Smiles Dental Clinic — single-file mockup
+   Palette: sky-blue lead -> deep navy anchor (same hue family),
+   warm apricot accent used sparingly, cool neutral scale.
+   ============================================================ */
+:root{
+  /* lead */
+  --sky-300:#8FCDF2;
+  --sky-400:#4FB0E8;
+  --sky-500:#2091D3;   /* lead colour, hue ~203 */
+  --sky-600:#1476B0;
+  /* deep anchor, re-hued into the same family (hue ~208) */
+  --navy-700:#0F4A72;
+  --navy-800:#0A3352;
+  --navy-900:#062338;
+  /* warm accent — used sparingly */
+  --warm-400:#F5B269;
+  --warm-500:#E8913A;
+  --warm-600:#C2711F;
+  /* neutrals */
+  --white:#FFFFFF;
+  --n-25:#F7FAFC;
+  --n-50:#EFF5F9;
+  --n-100:#E1EAF1;
+  --n-200:#CBD8E3;
+  --n-500:#5B7183;
+  --n-700:#33485A;
+  --n-900:#1B2C3A;
+
+  --ink:#1B2C3A;
+  --ink-soft:#455C6E;
+
+  /* shadows tinted with the deepest brand colour */
+  --sh-sm:0 1px 2px rgba(6,35,56,.08), 0 2px 6px rgba(6,35,56,.06);
+  --sh-md:0 4px 10px rgba(6,35,56,.08), 0 12px 28px rgba(6,35,56,.10);
+  --sh-lg:0 8px 20px rgba(6,35,56,.10), 0 24px 56px rgba(6,35,56,.14);
+
+  --r-sm:8px; --r-md:14px; --r-lg:20px; --r-xl:28px; --r-pill:999px;
+
+  --font-display:"Sora","Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",system-ui,-apple-system,sans-serif;
+  --font-body:"Inter","Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",system-ui,-apple-system,sans-serif;
+
+  --wrap:1140px;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:var(--font-body);
+  font-size:16px;
+  line-height:1.65;
+  color:var(--ink);
+  background:var(--white);
+  /* room for the fixed owner preview bar */
+  padding-bottom:184px;
+}
+@media (min-width:640px){ body{ padding-bottom:132px } }
+@media (min-width:1024px){ body{ padding-bottom:112px } }
+
+img,svg{display:block;max-width:100%}
+h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;line-height:1.18;letter-spacing:-.02em;color:var(--navy-900);margin:0}
+p{margin:0}
+a{color:var(--sky-600)}
+ul{margin:0;padding:0;list-style:none}
+
+.wrap{width:100%;max-width:var(--wrap);margin:0 auto;padding:0 20px}
+@media (min-width:768px){ .wrap{padding:0 32px} }
+
+.section{padding:56px 0}
+@media (min-width:768px){ .section{padding:80px 0} }
+@media (min-width:1024px){ .section{padding:96px 0} }
+
+.eyebrow{
+  font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--sky-600);margin:0 0 12px
+}
+.section-head{max-width:620px;margin-bottom:32px}
+.section-head h2{font-size:26px}
+@media (min-width:768px){ .section-head h2{font-size:34px} .section-head{margin-bottom:40px} }
+.section-head p{margin-top:12px;color:var(--ink-soft);font-size:16px}
+
+/* ---------- focus ---------- */
+:focus{outline:none}
+:focus-visible{
+  outline:3px solid var(--sky-500);
+  outline-offset:3px;
+  border-radius:6px;
+}
+.on-dark :focus-visible, .footer :focus-visible, .ownerbar :focus-visible{
+  outline-color:var(--sky-300);
+}
+
+/* ---------- buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  font-family:var(--font-body);font-weight:600;font-size:15px;line-height:1;
+  padding:14px 20px;border-radius:var(--r-pill);border:1px solid transparent;
+  text-decoration:none;cursor:pointer;
+  transition:transform .18s ease, box-shadow .18s ease, background-color .18s ease, color .18s ease, border-color .18s ease;
+}
+.btn svg{flex:0 0 auto}
+.btn-primary{background:var(--sky-600);color:var(--white);box-shadow:var(--sh-md)}
+.btn-primary:hover{background:var(--navy-700);transform:translateY(-2px);box-shadow:var(--sh-lg)}
+.btn-primary:focus-visible{background:var(--navy-700)}
+.btn-ghost{background:var(--white);color:var(--navy-800);border-color:var(--n-200);box-shadow:var(--sh-sm)}
+.btn-ghost:hover{border-color:var(--sky-400);color:var(--sky-600);transform:translateY(-2px);box-shadow:var(--sh-md)}
+.btn-outline-light{background:rgba(255,255,255,.06);color:var(--white);border-color:rgba(255,255,255,.34)}
+.btn-outline-light:hover{background:rgba(255,255,255,.16);border-color:var(--white);transform:translateY(-2px)}
+.btn-sm{padding:10px 14px;font-size:14px}
+.btn-block{width:100%}
+
+/* ---------- header ---------- */
+.header{
+  position:sticky;top:0;z-index:60;
+  background:rgba(255,255,255,.9);
+  -webkit-backdrop-filter:saturate(180%) blur(12px);
+  backdrop-filter:saturate(180%) blur(12px);
+  border-bottom:1px solid var(--n-100);
+}
+.header-in{display:flex;align-items:center;gap:12px;min-height:64px;padding-top:8px;padding-bottom:8px}
+@media (min-width:768px){ .header-in{min-height:76px} }
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;margin-right:auto;min-width:0}
+.brand-mark{
+  width:38px;height:38px;flex:0 0 auto;border-radius:11px;
+  background:linear-gradient(155deg,var(--sky-400),var(--navy-800));
+  display:flex;align-items:center;justify-content:center;box-shadow:var(--sh-sm);
+}
+.brand-mark svg{width:22px;height:22px}
+.brand-text{display:flex;flex-direction:column;min-width:0}
+.brand-name{font-family:var(--font-display);font-weight:700;font-size:15px;color:var(--navy-900);letter-spacing:-.02em;white-space:nowrap}
+@media (min-width:400px){ .brand-name{font-size:16.5px} }
+.brand-sub{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--n-500);font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.brand:hover .brand-name{color:var(--sky-600)}
+
+.nav{display:none}
+@media (min-width:1024px){
+  .nav{display:flex;align-items:center;gap:4px;margin-right:8px}
+  .nav a{
+    font-size:14.5px;font-weight:500;color:var(--n-700);text-decoration:none;
+    padding:8px 12px;border-radius:var(--r-sm);transition:color .16s ease,background-color .16s ease;
+  }
+  .nav a:hover{color:var(--navy-900);background:var(--n-50)}
+  .nav a:focus-visible{color:var(--navy-900);background:var(--n-50)}
+}
+.call-btn{white-space:nowrap}
+.call-btn .lbl{display:none}
+@media (min-width:520px){ .call-btn .lbl{display:inline} }
+
+/* ---------- hero ---------- */
+.hero{
+  position:relative;overflow:hidden;
+  background:
+    radial-gradient(900px 520px at 88% -10%, rgba(79,176,232,.28), transparent 60%),
+    radial-gradient(700px 480px at -10% 10%, rgba(143,205,242,.30), transparent 62%),
+    linear-gradient(180deg,var(--n-25) 0%, var(--white) 78%);
+  border-bottom:1px solid var(--n-100);
+}
+.hero-in{padding:40px 0 48px;display:grid;gap:36px}
+@media (min-width:768px){ .hero-in{padding:64px 0 72px} }
+@media (min-width:1024px){
+  .hero-in{grid-template-columns:1.08fr .92fr;align-items:center;gap:56px;padding:84px 0 96px}
+}
+.locpill{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--white);border:1px solid var(--n-100);
+  color:var(--navy-800);font-size:12.5px;font-weight:600;letter-spacing:.04em;
+  padding:7px 14px 7px 10px;border-radius:var(--r-pill);box-shadow:var(--sh-sm);
+}
+.locpill svg{width:15px;height:15px;color:var(--sky-600)}
+.hero h1{font-size:32px;margin:18px 0 0}
+@media (min-width:480px){ .hero h1{font-size:38px} }
+@media (min-width:768px){ .hero h1{font-size:48px} }
+@media (min-width:1024px){ .hero h1{font-size:52px} }
+.hero h1 .hl{
+  color:var(--sky-600);
+  background:linear-gradient(180deg,transparent 66%, rgba(143,205,242,.45) 66%);
+}
+.hero-lede{margin-top:18px;font-size:16.5px;color:var(--ink-soft);max-width:56ch}
+@media (min-width:768px){ .hero-lede{font-size:18px} }
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.hero-cta .btn{flex:1 1 auto;min-width:200px}
+@media (min-width:520px){ .hero-cta .btn{flex:0 0 auto} }
+
+/* rating block */
+.rating{
+  margin-top:28px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;
+  background:var(--white);border:1px solid var(--n-100);border-radius:var(--r-md);
+  padding:14px 16px;box-shadow:var(--sh-sm);max-width:440px;
+}
+.rating-score{font-family:var(--font-display);font-weight:700;font-size:26px;color:var(--navy-900);line-height:1}
+.stars{display:flex;gap:2px}
+.stars svg{width:17px;height:17px;color:var(--warm-500)}
+.rating-txt{font-size:13.5px;color:var(--ink-soft);line-height:1.4}
+.rating-txt strong{color:var(--navy-800);font-weight:600}
+
+/* hero art */
+.hero-art{position:relative}
+.art-card{
+  position:relative;background:var(--white);border:1px solid var(--n-100);
+  border-radius:var(--r-xl);box-shadow:var(--sh-lg);padding:22px;overflow:hidden;
+}
+.art-card::before{
+  content:"";position:absolute;inset:auto -40px -70px auto;width:220px;height:220px;border-radius:50%;
+  background:radial-gradient(circle at 30% 30%, rgba(143,205,242,.55), rgba(143,205,242,0) 70%);
+}
+.art-top{display:flex;align-items:center;gap:12px;position:relative}
+.art-tooth{
+  width:66px;height:66px;border-radius:20px;flex:0 0 auto;
+  background:linear-gradient(160deg,var(--sky-400),var(--navy-800));
+  display:flex;align-items:center;justify-content:center;box-shadow:var(--sh-md);
+}
+.art-tooth svg{width:34px;height:34px}
+.art-top h3{font-size:17px}
+.art-top p{font-size:13px;color:var(--n-500);margin-top:2px}
+.art-list{margin-top:20px;display:grid;gap:10px;position:relative}
+.art-row{
+  display:flex;align-items:center;gap:12px;background:var(--n-25);
+  border:1px solid var(--n-100);border-radius:var(--r-md);padding:12px 14px;
+}
+.art-row .tick{
+  width:24px;height:24px;border-radius:50%;flex:0 0 auto;background:var(--sky-600);
+  display:flex;align-items:center;justify-content:center;
+}
+.art-row .tick svg{width:13px;height:13px;color:#fff}
+.art-row span{font-size:14px;font-weight:500;color:var(--navy-800)}
+.art-foot{
+  margin-top:18px;border-top:1px dashed var(--n-200);padding-top:16px;
+  display:flex;align-items:center;justify-content:space-between;gap:12px;position:relative;flex-wrap:wrap;
+}
+.art-foot .lab{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--n-500);font-weight:600}
+.art-foot .val{font-family:var(--font-display);font-weight:700;color:var(--navy-900);font-size:16px}
+
+/* ---------- services ---------- */
+.grid-3{display:grid;gap:16px}
+@media (min-width:600px){ .grid-3{grid-template-columns:repeat(2,1fr);gap:20px} }
+@media (min-width:1024px){ .grid-3{grid-template-columns:repeat(3,1fr);gap:24px} }
+.svc{
+  background:var(--white);border:1px solid var(--n-100);border-radius:var(--r-lg);
+  padding:24px;box-shadow:var(--sh-sm);
+  transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+.svc:hover{transform:translateY(-4px);box-shadow:var(--sh-md);border-color:var(--sky-300)}
+.svc-ico{
+  width:46px;height:46px;border-radius:14px;background:var(--n-50);
+  display:flex;align-items:center;justify-content:center;margin-bottom:16px;
+  border:1px solid var(--n-100);
+}
+.svc-ico svg{width:23px;height:23px;color:var(--sky-600)}
+.svc h3{font-size:17.5px}
+.svc p{margin-top:8px;font-size:14.5px;color:var(--ink-soft)}
+.note{
+  margin-top:24px;font-size:13.5px;color:var(--n-500);
+  border-left:3px solid var(--n-200);padding-left:14px;max-width:70ch;
+}
+
+/* ---------- pricing ---------- */
+.pricing{background:var(--n-25);border-top:1px solid var(--n-100);border-bottom:1px solid var(--n-100)}
+.ph-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  background:#FDF3E6;border:1px solid var(--warm-400);color:var(--warm-600);
+  font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  padding:6px 12px;border-radius:var(--r-pill);margin-bottom:14px;
+}
+.ph-badge svg{width:14px;height:14px}
+.rate-card{
+  background:var(--white);border:1px solid var(--n-100);border-radius:var(--r-lg);
+  box-shadow:var(--sh-md);overflow:hidden;max-width:760px;
+}
+.rate-head{
+  padding:20px 20px 16px;border-bottom:1px solid var(--n-100);
+  background:linear-gradient(180deg,var(--n-25),var(--white));
+}
+.rate-head h3{font-size:19px}
+.rate-head p{font-size:13.5px;color:var(--n-500);margin-top:6px}
+.rate-row{
+  display:flex;align-items:center;justify-content:space-between;gap:16px;
+  padding:16px 20px;border-bottom:1px solid var(--n-50);
+}
+.rate-row:last-of-type{border-bottom:0}
+.rate-name{display:flex;align-items:center;gap:12px;min-width:0}
+.rate-name .dot{width:8px;height:8px;border-radius:50%;background:var(--sky-400);flex:0 0 auto}
+.rate-name strong{display:block;font-size:15px;font-weight:600;color:var(--navy-900)}
+.rate-name em{display:block;font-style:normal;font-size:12.5px;color:var(--n-500);margin-top:2px}
+.rate-amt{
+  font-family:var(--font-display);font-weight:700;font-size:16px;color:var(--n-500);
+  background:var(--n-50);border:1px dashed var(--n-200);border-radius:var(--r-sm);
+  padding:7px 14px;white-space:nowrap;letter-spacing:.04em;
+}
+.rate-foot{
+  background:#FDF7EF;border-top:1px solid var(--n-100);padding:16px 20px;
+  font-size:13.5px;color:var(--navy-800);
+}
+.rate-foot strong{font-weight:600}
+
+/* ---------- why us ---------- */
+.why{
+  background:
+    radial-gradient(700px 400px at 100% 0%, rgba(32,145,211,.34), transparent 60%),
+    linear-gradient(160deg,var(--navy-800),var(--navy-900));
+  color:#E8F2F9;
+}
+.why h2{color:#fff;font-size:26px}
+@media (min-width:768px){ .why h2{font-size:32px} }
+.why .section-head p{color:#B9D2E4}
+.why-grid{display:grid;gap:16px;margin-top:8px}
+@media (min-width:768px){ .why-grid{grid-template-columns:repeat(3,1fr);gap:20px} }
+.why-card{
+  background:rgba(255,255,255,.06);border:1px solid rgba(143,205,242,.22);
+  border-radius:var(--r-lg);padding:22px;
+}
+.why-ico{
+  width:42px;height:42px;border-radius:12px;background:rgba(143,205,242,.16);
+  display:flex;align-items:center;justify-content:center;margin-bottom:14px;
+}
+.why-ico svg{width:21px;height:21px;color:var(--sky-300)}
+.why-num{font-family:var(--font-display);font-weight:700;font-size:26px;color:#fff;line-height:1.1}
+.why-card h3{color:#fff;font-size:15px;margin-top:6px}
+.why-card p{margin-top:8px;font-size:14px;color:#B9D2E4}
+
+/* ---------- about ---------- */
+.about-grid{display:grid;gap:28px}
+@media (min-width:1024px){ .about-grid{grid-template-columns:1.05fr .95fr;gap:56px;align-items:center} }
+.about-body p+p{margin-top:14px}
+.about-body p{color:var(--ink-soft);font-size:16px}
+.about-panel{
+  background:var(--n-25);border:1px solid var(--n-100);border-radius:var(--r-lg);padding:24px;box-shadow:var(--sh-sm);
+}
+.fact{display:flex;gap:14px;padding:14px 0;border-bottom:1px solid var(--n-100)}
+.fact:last-child{border-bottom:0;padding-bottom:0}
+.fact:first-child{padding-top:0}
+.fact-ico{width:34px;height:34px;border-radius:10px;background:var(--white);border:1px solid var(--n-100);display:flex;align-items:center;justify-content:center;flex:0 0 auto}
+.fact-ico svg{width:17px;height:17px;color:var(--sky-600)}
+.fact .k{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--n-500);font-weight:600}
+.fact .v{font-size:15px;color:var(--navy-900);font-weight:500;margin-top:2px}
+.fact a{color:var(--sky-600);text-decoration:none;border-bottom:1px solid transparent}
+.fact a:hover{border-bottom-color:var(--sky-600)}
+.fact a:focus-visible{border-bottom-color:var(--sky-600)}
+
+/* ---------- contact ---------- */
+.contact{background:var(--n-25);border-top:1px solid var(--n-100)}
+.contact-grid{display:grid;gap:24px}
+@media (min-width:1024px){ .contact-grid{grid-template-columns:1fr 1fr;gap:32px;align-items:start} }
+.panel{
+  background:var(--white);border:1px solid var(--n-100);border-radius:var(--r-lg);
+  padding:24px;box-shadow:var(--sh-sm);
+}
+.panel h3{font-size:18px}
+.panel .sub{font-size:14px;color:var(--ink-soft);margin-top:6px}
+
+.hours-box{
+  margin-top:20px;background:#FDF7EF;border:1px dashed var(--warm-400);
+  border-radius:var(--r-md);padding:16px;
+}
+.hours-box .k{
+  font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--warm-600);
+  display:flex;align-items:center;gap:8px;
+}
+.hours-box .k svg{width:14px;height:14px}
+.hours-box p{font-size:14px;color:var(--navy-800);margin-top:8px}
+.hours-lines{margin-top:12px;display:grid;gap:8px}
+.hours-line{display:flex;justify-content:space-between;gap:12px;font-size:13.5px;color:var(--n-500)}
+.hours-line b{font-weight:600;color:var(--navy-800)}
+.hours-line span{border-bottom:1px dashed var(--n-200);flex:1 1 auto;margin:0 4px}
+
+.social{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+.social a{
+  display:inline-flex;align-items:center;gap:9px;text-decoration:none;
+  border:1px solid var(--n-200);border-radius:var(--r-pill);padding:9px 15px;
+  font-size:14px;font-weight:600;color:var(--navy-800);background:var(--white);
+  transition:transform .18s ease, border-color .18s ease, color .18s ease, box-shadow .18s ease;
+}
+.social a svg{width:17px;height:17px;color:var(--sky-600)}
+.social a:hover{transform:translateY(-2px);border-color:var(--sky-400);color:var(--sky-600);box-shadow:var(--sh-sm)}
+.social a small{display:block;font-weight:500;color:var(--n-500);font-size:12px}
+
+/* form */
+.field{margin-top:16px}
+.field label{display:block;font-size:13px;font-weight:600;color:var(--navy-800);margin-bottom:6px}
+.field input,.field select,.field textarea{
+  width:100%;font-family:var(--font-body);font-size:15px;color:var(--ink);
+  background:var(--n-25);border:1px solid var(--n-200);border-radius:var(--r-md);
+  padding:12px 14px;transition:border-color .16s ease, background-color .16s ease, box-shadow .16s ease;
+}
+.field textarea{min-height:96px;resize:vertical}
+.field select{appearance:none;background-image:linear-gradient(45deg,transparent 50%,var(--n-500) 50%),linear-gradient(135deg,var(--n-500) 50%,transparent 50%);background-position:calc(100% - 20px) 22px, calc(100% - 15px) 22px;background-size:5px 5px,5px 5px;background-repeat:no-repeat}
+.field input:hover,.field select:hover,.field textarea:hover{border-color:var(--sky-300);background:var(--white)}
+.field input:focus,.field select:focus,.field textarea:focus{
+  border-color:var(--sky-500);background:var(--white);box-shadow:0 0 0 4px rgba(32,145,211,.16);outline:none;
+}
+.form-note{margin-top:14px;font-size:12.5px;color:var(--n-500)}
+#formMsg{
+  margin-top:14px;font-size:13.5px;color:var(--navy-800);background:var(--n-50);
+  border:1px solid var(--n-100);border-radius:var(--r-md);padding:12px 14px;display:none;
+}
+#formMsg.show{display:block}
+
+/* map placeholder — drawn entirely in CSS */
+.map{
+  position:relative;margin-top:24px;border-radius:var(--r-lg);overflow:hidden;
+  border:1px solid var(--n-100);box-shadow:var(--sh-sm);
+  height:230px;background:#DCE9F1;
+}
+@media (min-width:768px){ .map{height:270px} }
+.map-blocks{
+  position:absolute;inset:0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.85) 2px, transparent 2px),
+    linear-gradient(90deg, rgba(255,255,255,.85) 2px, transparent 2px),
+    linear-gradient(rgba(198,220,232,.5) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(198,220,232,.5) 1px, transparent 1px);
+  background-size:88px 88px, 88px 88px, 22px 22px, 22px 22px;
+}
+.map-green{
+  position:absolute;left:8%;bottom:12%;width:104px;height:66px;border-radius:12px;
+  background:rgba(146,196,160,.42);
+}
+.map-green2{
+  position:absolute;right:10%;top:14%;width:74px;height:56px;border-radius:10px;
+  background:rgba(146,196,160,.34);
+}
+.map-road{
+  position:absolute;left:-14%;top:44%;width:130%;height:26px;
+  background:var(--white);transform:rotate(-9deg);
+  box-shadow:0 0 0 1px var(--n-200);
+}
+.map-road::after{
+  content:"";position:absolute;left:0;right:0;top:50%;height:2px;margin-top:-1px;
+  background:repeating-linear-gradient(90deg,var(--warm-400) 0 14px, transparent 14px 28px);
+}
+.map-roadlabel{
+  position:absolute;left:16px;top:44%;transform:rotate(-9deg) translateY(-30px);
+  font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--navy-800);
+  background:rgba(255,255,255,.9);padding:3px 8px;border-radius:var(--r-pill);
+}
+.map-pin{
+  position:absolute;left:50%;top:34%;transform:translate(-50%,-100%);
+  display:flex;flex-direction:column;align-items:center;gap:6px;
+}
+.map-pin svg{width:34px;height:34px;color:var(--sky-600);filter:drop-shadow(0 4px 8px rgba(6,35,56,.28))}
+.map-pin b{
+  font-size:12px;font-weight:700;color:var(--navy-900);background:var(--white);
+  padding:5px 10px;border-radius:var(--r-pill);box-shadow:var(--sh-sm);white-space:nowrap;
+}
+.map-cap{
+  position:absolute;left:12px;right:12px;bottom:12px;
+  background:rgba(6,35,56,.86);color:#fff;border-radius:var(--r-md);
+  padding:10px 14px;font-size:12.5px;line-height:1.45;
+  display:flex;align-items:center;gap:10px;
+}
+.map-cap svg{width:16px;height:16px;flex:0 0 auto;color:var(--sky-300)}
+.map-cap b{font-weight:600}
+.map-cap em{font-style:normal;color:#B9D2E4;display:block;font-size:11.5px}
+
+/* ---------- footer ---------- */
+.footer{background:var(--navy-900);color:#B9D2E4;padding:40px 0 32px}
+.footer-in{display:grid;gap:24px}
+@media (min-width:768px){ .footer-in{grid-template-columns:1.3fr 1fr;align-items:start;gap:40px} }
+.footer .brand-name{color:#fff}
+.footer .brand-sub{color:#8FB4CD}
+.footer p{font-size:13.5px;color:#9FBED4;margin-top:14px;max-width:52ch}
+.footer-links{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:8px}
+.footer-links a{color:#D7E8F4;text-decoration:none;font-size:14px;border-bottom:1px solid transparent}
+.footer-links a:hover{color:#fff;border-bottom-color:var(--sky-300)}
+.footer-links a:focus-visible{color:#fff}
+.footer-bar{
+  margin-top:28px;padding-top:20px;border-top:1px solid rgba(143,205,242,.18);
+  display:flex;flex-wrap:wrap;gap:8px 16px;justify-content:space-between;font-size:13px;color:#8FB4CD;
+}
+.footer-bar strong{color:#fff;font-weight:600}
+
+/* ---------- owner preview bar ---------- */
+.ownerbar{
+  position:fixed;left:0;right:0;bottom:0;z-index:90;
+  background:rgba(6,35,56,.94);
+  -webkit-backdrop-filter:saturate(180%) blur(14px);
+  backdrop-filter:saturate(180%) blur(14px);
+  border-top:1px solid rgba(143,205,242,.24);
+  box-shadow:0 -8px 30px rgba(6,35,56,.34);
+  padding:14px 16px calc(14px + env(safe-area-inset-bottom,0px));
+  color:#fff;
+}
+.ownerbar-in{
+  max-width:var(--wrap);margin:0 auto;
+  display:flex;flex-direction:column;align-items:center;text-align:center;gap:10px;
+}
+.ownerbar .ob-eyebrow{
+  font-size:10.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--sky-300);
+}
+.ownerbar .ob-line{
+  font-family:var(--font-display);font-weight:600;font-size:14.5px;line-height:1.35;color:#fff;letter-spacing:-.01em;
+}
+.ob-btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  background:var(--warm-500);color:#241203;font-weight:700;font-size:14.5px;
+  text-decoration:none;padding:13px 22px;border-radius:var(--r-pill);
+  border:1px solid rgba(255,255,255,.18);white-space:nowrap;
+  transition:transform .18s ease, background-color .18s ease, box-shadow .18s ease;
+}
+.ob-btn:hover{background:var(--warm-400);transform:translateY(-2px);box-shadow:0 10px 24px rgba(232,145,58,.34)}
+.ob-btn:focus-visible{background:var(--warm-400);outline:3px solid var(--sky-300);outline-offset:3px}
+@media (min-width:640px){
+  .ownerbar{padding:14px 24px calc(14px + env(safe-area-inset-bottom,0px))}
+  .ownerbar-in{flex-direction:row;text-align:left;justify-content:space-between;gap:20px}
+  .ob-text{display:flex;flex-direction:column;gap:3px}
+  .ownerbar .ob-line{font-size:15.5px}
+}
+@media (prefers-reduced-motion: no-preference){
+  @keyframes obPulse{
+    0%,100%{box-shadow:0 0 0 0 rgba(245,178,105,.55)}
+    50%{box-shadow:0 0 0 12px rgba(245,178,105,0)}
+  }
+  .ob-btn{animation:obPulse 2.6s ease-in-out infinite}
+  .ob-btn:hover{animation-play-state:paused}
+}
+
+.skip{
+  position:absolute;left:-9999px;top:0;background:var(--navy-900);color:#fff;
+  padding:10px 16px;border-radius:0 0 var(--r-sm) 0;z-index:100;font-size:14px;
+}
+.skip:focus{left:0}
+</style>
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- ===================== HEADER ===================== -->
+<header class="header">
+  <div class="wrap header-in">
+    <a class="brand" href="#top" aria-label="ZP Smiles Dental Clinic — home">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 4.2c-1.5-1.1-3.1-1.5-4.4-1.1C5.6 3.7 4.4 5.6 4.4 8.2c0 2 .5 3.6 1 5.4.4 1.4.6 2.9.8 4.4.2 1.3.7 2.2 1.6 2.2.9 0 1.3-.8 1.6-2.2l.5-2.6c.2-1 .6-1.6 2.1-1.6s1.9.6 2.1 1.6l.5 2.6c.3 1.4.7 2.2 1.6 2.2.9 0 1.4-.9 1.6-2.2.2-1.5.4-3 .8-4.4.5-1.8 1-3.4 1-5.4 0-2.6-1.2-4.5-3.2-5.1-1.3-.4-2.9 0-4.4 1.1Z" fill="#fff"/>
+          <path d="M9.1 7.3c.7-.5 1.7-.8 2.9-.8" stroke="#0A3352" stroke-width="1.3" stroke-linecap="round"/>
+        </svg>
+      </span>
+      <span class="brand-text">
+        <span class="brand-name">ZP Smiles Dental Clinic</span>
+        <span class="brand-sub">Quirino Highway · Quezon City</span>
+      </span>
+    </a>
+
+    <nav class="nav" aria-label="Main">
+      <a href="#services">Services</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <a class="btn btn-primary btn-sm call-btn" href="tel:+639266891185">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/>
+      </svg>
+      <span class="lbl">0926 689 1185</span>
+    </a>
+  </div>
+</header>
+
+<main id="main">
+<span id="top"></span>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero">
+  <div class="wrap hero-in">
+    <div>
+      <span class="locpill">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/>
+        </svg>
+        Quirino Highway · Novaliches, Quezon City
+      </span>
+
+      <h1>General dentistry on <span class="hl">Quirino Highway</span>, Novaliches — Quezon City</h1>
+
+      <p class="hero-lede">ZP Smiles Dental Clinic looks after the everyday dental needs of families along Quirino Highway: check-ups, cleaning, fillings and extractions, in a calm and careful clinic close to home.</p>
+
+      <div class="rating" role="group" aria-label="Google rating">
+        <span class="rating-score">4.9</span>
+        <span class="stars" role="img" aria-label="Rated 4.9 out of 5 stars">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1L12 2Z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1L12 2Z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1L12 2Z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1L12 2Z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1L12 2Z"/></svg>
+        </span>
+        <span class="rating-txt"><strong>4.9 stars</strong> from <strong>36 Google reviews</strong></span>
+      </div>
+
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#contact">
+          Request an appointment
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a class="btn btn-ghost" href="tel:+639266891185">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+          Call 0926 689 1185
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-art" aria-hidden="true">
+      <div class="art-card">
+        <div class="art-top">
+          <span class="art-tooth">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 4.2c-1.5-1.1-3.1-1.5-4.4-1.1C5.6 3.7 4.4 5.6 4.4 8.2c0 2 .5 3.6 1 5.4.4 1.4.6 2.9.8 4.4.2 1.3.7 2.2 1.6 2.2.9 0 1.3-.8 1.6-2.2l.5-2.6c.2-1 .6-1.6 2.1-1.6s1.9.6 2.1 1.6l.5 2.6c.3 1.4.7 2.2 1.6 2.2.9 0 1.4-.9 1.6-2.2.2-1.5.4-3 .8-4.4.5-1.8 1-3.4 1-5.4 0-2.6-1.2-4.5-3.2-5.1-1.3-.4-2.9 0-4.4 1.1Z" fill="#fff"/>
+            </svg>
+          </span>
+          <div>
+            <h3>Everyday dental care</h3>
+            <p>General dentistry, one clinic, close to home</p>
+          </div>
+        </div>
+        <div class="art-list">
+          <div class="art-row"><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg></span><span>Consultation &amp; check-up</span></div>
+          <div class="art-row"><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg></span><span>Cleaning (oral prophylaxis)</span></div>
+          <div class="art-row"><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg></span><span>Fillings &amp; extractions</span></div>
+        </div>
+        <div class="art-foot">
+          <div>
+            <div class="lab">Find us on</div>
+            <div class="val">109 Quirino Highway</div>
+          </div>
+          <div>
+            <div class="lab">Community</div>
+            <div class="val">1,575 Facebook likes</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SERVICES ===================== -->
+<section class="section" id="services">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Our services</p>
+      <h2>General dentistry for the whole family</h2>
+      <p>Straightforward, everyday dental treatment for patients in Novaliches and along Quirino Highway.</p>
+    </div>
+
+    <div class="grid-3">
+      <article class="svc">
+        <span class="svc-ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3H5a2 2 0 0 0-2 2v4M15 3h4a2 2 0 0 1 2 2v4M9 21H5a2 2 0 0 1-2-2v-4M15 21h4a2 2 0 0 0 2-2v-4"/><circle cx="12" cy="12" r="3"/></svg>
+        </span>
+        <h3>Dental consultation &amp; check-up</h3>
+        <p>A full look at your teeth and gums, an explanation of what we find, and a clear plan for what to do next.</p>
+      </article>
+
+      <article class="svc">
+        <span class="svc-ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c-1 0-1.6-1-1.9-2.4l-.5-2.4c-.2-1-.6-1.5-1.6-1.5S6.6 16.2 6.4 17l-.5 2.4"/><path d="M4 10.5c0-3 1.6-5.2 4-5.2 1.4 0 2.8.6 4 1.7 1.2-1.1 2.6-1.7 4-1.7 2.4 0 4 2.2 4 5.2 0 2-.5 3.6-1 5.2"/><path d="M12 2v2.5"/></svg>
+        </span>
+        <h3>Oral prophylaxis (cleaning)</h3>
+        <p>Professional cleaning to remove plaque and tartar build-up, keeping gums healthier and breath fresher.</p>
+      </article>
+
+      <article class="svc">
+        <span class="svc-ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20 16.5 7.5a2.1 2.1 0 0 1 3 3L7 23"/><path d="m14.5 5.5 4 4"/><path d="M3 21.5 6.5 20 4.5 18 3 21.5Z"/></svg>
+        </span>
+        <h3>Tooth fillings</h3>
+        <p>Restoring teeth affected by decay so you can bite and chew comfortably again, with a natural-looking finish.</p>
+      </article>
+
+      <article class="svc">
+        <span class="svc-ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h10l-1.2 12.4c-.2 2-1.8 3.6-3.8 3.6s-3.6-1.6-3.8-3.6L7 3Z"/><path d="M4 3h16"/><path d="M12 19v2"/></svg>
+        </span>
+        <h3>Tooth extraction</h3>
+        <p>Careful removal of a tooth that can no longer be saved, with clear aftercare advice before you leave.</p>
+      </article>
+
+      <article class="svc">
+        <span class="svc-ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.4-7-9.6A4.4 4.4 0 0 1 12 8a4.4 4.4 0 0 1 7 3.4C19 16.6 12 21 12 21Z"/><path d="M12 12h.01"/></svg>
+        </span>
+        <h3>Preventive care &amp; advice</h3>
+        <p>Practical guidance on brushing, flossing and diet so small problems are caught early instead of getting worse.</p>
+      </article>
+
+      <article class="svc">
+        <span class="svc-ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="16" rx="2.5"/><path d="M8 2.5v4M16 2.5v4M3 10h18"/><path d="m9.5 15 1.8 1.8 3.4-3.4"/></svg>
+        </span>
+        <h3>Follow-up &amp; recall visits</h3>
+        <p>Scheduled return visits so treatment is completed properly and your teeth are checked regularly.</p>
+      </article>
+    </div>
+
+    <p class="note">These are general dentistry services. If you need something that is not listed here, message or call the clinic first and we will let you know whether we can help or refer you.</p>
+  </div>
+</section>
+
+<!-- ===================== PRICING ===================== -->
+<section class="section pricing" id="pricing">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Treatment pricing</p>
+      <h2>Know the cost before you sit in the chair</h2>
+      <p>Patients along Quirino Highway almost always ask about price before they book. This is where those rates live, in plain view.</p>
+    </div>
+
+    <div class="rate-card">
+      <div class="rate-head">
+        <span class="ph-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M12 8v5M12 16.2h.01"/></svg>
+          Example layout — placeholder
+        </span>
+        <h3>Sample rate card</h3>
+        <p>The amounts below are intentionally blank. No prices have been published for this clinic, so nothing has been invented here.</p>
+      </div>
+
+      <div class="rate-row">
+        <div class="rate-name"><span class="dot" aria-hidden="true"></span><span><strong>Dental consultation</strong><em>Examination and treatment plan</em></span></div>
+        <span class="rate-amt">₱ ___</span>
+      </div>
+      <div class="rate-row">
+        <div class="rate-name"><span class="dot" aria-hidden="true"></span><span><strong>Oral prophylaxis (cleaning)</strong><em>Plaque and tartar removal</em></span></div>
+        <span class="rate-amt">₱ ___</span>
+      </div>
+      <div class="rate-row">
+        <div class="rate-name"><span class="dot" aria-hidden="true"></span><span><strong>Tooth filling</strong><em>Per tooth, depending on size</em></span></div>
+        <span class="rate-amt">₱ ___</span>
+      </div>
+      <div class="rate-row">
+        <div class="rate-name"><span class="dot" aria-hidden="true"></span><span><strong>Tooth extraction</strong><em>Simple extraction, per tooth</em></span></div>
+        <span class="rate-amt">₱ ___</span>
+      </div>
+
+      <div class="rate-foot">
+        <strong>Sample layout — your actual rates go here.</strong> Replace each placeholder with the clinic's real fee, or a starting-from figure, and this section becomes the question your front desk stops answering ten times a day.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== WHY US ===================== -->
+<section class="section why on-dark">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow" style="color:var(--sky-300)">Why patients choose us</p>
+      <h2>A well-reviewed neighbourhood clinic</h2>
+      <p>Everything below is verified — the rating, the community and the location.</p>
+    </div>
+
+    <div class="why-grid">
+      <div class="why-card">
+        <span class="why-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1L12 2Z"/></svg></span>
+        <div class="why-num">4.9 stars</div>
+        <h3>From 36 Google reviews</h3>
+        <p>An average of 4.9 out of 5 across 36 published Google reviews from patients who have been treated here.</p>
+      </div>
+
+      <div class="why-card">
+        <span class="why-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M17 20v-1.8a3.6 3.6 0 0 0-3.6-3.6H6.6A3.6 3.6 0 0 0 3 18.2V20"/><circle cx="10" cy="7.4" r="3.6"/><path d="M21 20v-1.8a3.6 3.6 0 0 0-2.7-3.5M15.4 4a3.6 3.6 0 0 1 0 6.9"/></svg></span>
+        <div class="why-num">1,575</div>
+        <h3>Facebook community</h3>
+        <p>1,575 people follow ZP Smiles Dental Clinic on Facebook — neighbours, families and returning patients.</p>
+      </div>
+
+      <div class="why-card">
+        <span class="why-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
+        <div class="why-num">Quirino Highway</div>
+        <h3>Novaliches, Quezon City</h3>
+        <p>Right on the highway at 109 Quirino Highway, easy to reach whether you are travelling by jeep or by car.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ABOUT ===================== -->
+<section class="section" id="about">
+  <div class="wrap about-grid">
+    <div class="about-body">
+      <p class="eyebrow">About the clinic</p>
+      <h2 style="font-size:28px">ZP Smiles Dental Clinic</h2>
+      <p style="margin-top:16px">ZP Smiles Dental Clinic is a general dentistry practice at 109 Quirino Highway in Quezon City, serving the Novaliches area and the communities along the highway.</p>
+      <p>The work here is everyday dentistry done properly: consultations and check-ups, professional cleaning, fillings and extractions. Patients are told what is happening, what it involves and what to expect afterwards.</p>
+      <p>The clinic has earned an average of 4.9 stars across 36 Google reviews, and 1,575 people follow the clinic on Facebook. If you are new to the clinic, the quickest way to get started is to request an appointment below or call us directly.</p>
+      <div class="hero-cta" style="margin-top:24px">
+        <a class="btn btn-primary" href="#contact">Request an appointment
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <aside class="about-panel">
+      <div class="fact">
+        <span class="fact-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
+        <div><div class="k">Clinic address</div><div class="v">109 Quirino Highway, Quezon City (Novaliches), Metro Manila</div></div>
+      </div>
+      <div class="fact">
+        <span class="fact-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg></span>
+        <div><div class="k">Phone</div><div class="v"><a href="tel:+639266891185">0926 689 1185</a></div></div>
+      </div>
+      <div class="fact">
+        <span class="fact-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1L12 2Z"/></svg></span>
+        <div><div class="k">Google rating</div><div class="v">4.9 stars from 36 reviews</div></div>
+      </div>
+      <div class="fact">
+        <span class="fact-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v9m0 0 3.5-3.5M12 12 8.5 8.5"/><path d="M4 15v3.5A2.5 2.5 0 0 0 6.5 21h11a2.5 2.5 0 0 0 2.5-2.5V15"/></svg></span>
+        <div><div class="k">Treatments</div><div class="v">General dentistry only</div></div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<!-- ===================== CONTACT ===================== -->
+<section class="section contact" id="contact">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Contact &amp; appointments</p>
+      <h2>Request an appointment</h2>
+      <p>Send your details and we will get back to you to confirm a slot, or simply call the clinic.</p>
+    </div>
+
+    <div class="contact-grid">
+
+      <!-- left: details -->
+      <div class="panel">
+        <h3>Visit or call the clinic</h3>
+        <p class="sub">109 Quirino Highway, Quezon City (Novaliches), Metro Manila</p>
+
+        <div class="social">
+          <a href="tel:+639266891185">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+            <span>0926 689 1185<small>Tap to call</small></span>
+          </a>
+          <a href="https://www.facebook.com/zpsmilesdental/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 9V7.2c0-.8.2-1.2 1.4-1.2H17V3.1C16.7 3 15.7 3 14.6 3c-2.4 0-4 1.5-4 4.1V9H8v3.2h2.6V21H14v-8.8h2.6l.4-3.2H14Z"/></svg>
+            <span>Facebook<small>1,575 likes</small></span>
+          </a>
+          <a href="https://www.instagram.com/zpsmilesdentalclinic/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="3.8"/><path d="M17.4 6.6h.01"/></svg>
+            <span>Instagram<small>@zpsmilesdentalclinic</small></span>
+          </a>
+        </div>
+
+        <div class="hours-box">
+          <div class="k">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9.2"/><path d="M12 7v5.2l3.2 2"/></svg>
+            Clinic hours — to be confirmed
+          </div>
+          <p>Opening hours have not been published yet. Please call or message the clinic to confirm before visiting.</p>
+          <div class="hours-lines" aria-hidden="true">
+            <div class="hours-line"><b>Monday – Friday</b><span></span>to be confirmed</div>
+            <div class="hours-line"><b>Saturday</b><span></span>to be confirmed</div>
+            <div class="hours-line"><b>Sunday</b><span></span>to be confirmed</div>
+          </div>
+        </div>
+
+        <div class="map" role="img" aria-label="Illustrative map placeholder showing the clinic on Quirino Highway, Quezon City">
+          <div class="map-blocks"></div>
+          <div class="map-green"></div>
+          <div class="map-green2"></div>
+          <div class="map-road"></div>
+          <div class="map-roadlabel">Quirino Highway</div>
+          <div class="map-pin">
+            <b>ZP Smiles Dental Clinic</b>
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a8 8 0 0 0-8 8c0 5.7 8 12 8 12s8-6.3 8-12a8 8 0 0 0-8-8Zm0 10.6A2.6 2.6 0 1 1 12 7.4a2.6 2.6 0 0 1 0 5.2Z"/></svg>
+          </div>
+          <div class="map-cap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span><b>Map — 109 Quirino Highway, Quezon City</b><em>Illustration only. A live, interactive map goes here on the finished website.</em></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- right: form -->
+      <div class="panel">
+        <h3>Appointment request</h3>
+        <p class="sub">Tell us what you need and when suits you. This preview sends you through to our Facebook page, where a real person replies.</p>
+
+        <form id="apptForm" novalidate>
+          <div class="field">
+            <label for="f-name">Full name</label>
+            <input id="f-name" name="name" type="text" autocomplete="name" placeholder="Juan Dela Cruz">
+          </div>
+          <div class="field">
+            <label for="f-phone">Mobile number</label>
+            <input id="f-phone" name="phone" type="tel" autocomplete="tel" placeholder="09XX XXX XXXX">
+          </div>
+          <div class="field">
+            <label for="f-service">What do you need?</label>
+            <select id="f-service" name="service">
+              <option>Consultation &amp; check-up</option>
+              <option>Oral prophylaxis (cleaning)</option>
+              <option>Tooth filling</option>
+              <option>Tooth extraction</option>
+              <option>Not sure — please advise</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="f-when">Preferred day and time</label>
+            <input id="f-when" name="when" type="text" placeholder="e.g. Saturday morning">
+          </div>
+          <div class="field">
+            <label for="f-msg">Anything we should know?</label>
+            <textarea id="f-msg" name="message" placeholder="Optional — pain, sensitivity, previous treatment..."></textarea>
+          </div>
+
+          <div style="margin-top:20px">
+            <button class="btn btn-primary btn-block" type="submit">
+              Send appointment request
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4 20-7Z"/></svg>
+            </button>
+          </div>
+          <p class="form-note">Demonstration form — this preview does not store your details. On the finished website this sends straight to the clinic.</p>
+          <div id="formMsg" role="status" aria-live="polite"></div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer">
+  <div class="wrap footer-in">
+    <div>
+      <div class="brand" style="margin:0">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 4.2c-1.5-1.1-3.1-1.5-4.4-1.1C5.6 3.7 4.4 5.6 4.4 8.2c0 2 .5 3.6 1 5.4.4 1.4.6 2.9.8 4.4.2 1.3.7 2.2 1.6 2.2.9 0 1.3-.8 1.6-2.2l.5-2.6c.2-1 .6-1.6 2.1-1.6s1.9.6 2.1 1.6l.5 2.6c.3 1.4.7 2.2 1.6 2.2.9 0 1.4-.9 1.6-2.2.2-1.5.4-3 .8-4.4.5-1.8 1-3.4 1-5.4 0-2.6-1.2-4.5-3.2-5.1-1.3-.4-2.9 0-4.4 1.1Z" fill="#fff"/>
+          </svg>
+        </span>
+        <span class="brand-text">
+          <span class="brand-name">ZP Smiles Dental Clinic</span>
+          <span class="brand-sub">General dentistry · Quezon City</span>
+        </span>
+      </div>
+      <p>109 Quirino Highway, Quezon City (Novaliches), Metro Manila. Rated 4.9 stars from 36 Google reviews. Clinic hours to be confirmed — please call before visiting.</p>
+    </div>
+
+    <div>
+      <div class="brand-sub" style="letter-spacing:.12em">Quick links</div>
+      <div class="footer-links">
+        <a href="#services">Services</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a href="tel:+639266891185">0926 689 1185</a>
+        <a href="https://www.facebook.com/zpsmilesdental/" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://www.instagram.com/zpsmilesdentalclinic/" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="footer-bar">
+      <span>© <span id="yr">2026</span> ZP Smiles Dental Clinic. All rights reserved.</span>
+      <span><strong>Website by CloudSpring IT Solutions</strong></span>
+    </div>
+  </div>
+</footer>
+
+<!-- ===================== OWNER PREVIEW BAR ===================== -->
+<aside class="ownerbar" aria-label="Website preview message for the clinic owner">
+  <div class="ownerbar-in">
+    <div class="ob-text">
+      <span class="ob-eyebrow">Preview · CloudSpring IT Solutions</span>
+      <span class="ob-line">Want this website + online appointment booking that turns your 1,575 followers into patients?</span>
+    </div>
+    <a class="ob-btn" href="https://api.leadconnectorhq.com/widget/booking/QRPEnWRw2Kx9rBe0Mj6J" target="_blank" rel="noopener">Book a FREE Discovery Call →</a>
+  </div>
+</aside>
+
+<script>
+(function(){
+  var y = document.getElementById('yr');
+  if (y) { y.textContent = new Date().getFullYear(); }
+
+  var form = document.getElementById('apptForm');
+  var msg  = document.getElementById('formMsg');
+  if (form) {
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      if (msg) {
+        msg.textContent = 'Opening the ZP Smiles Dental Clinic Facebook page in a new tab — please send your request there and we will reply to confirm your slot.';
+        msg.classList.add('show');
+      }
+      window.open('https://www.facebook.com/zpsmilesdental/', '_blank', 'noopener');
+    });
+  }
+})();
+</script>
+</body>
+</html>
