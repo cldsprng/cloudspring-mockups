@@ -175,3 +175,12 @@ sound human + runs the sales QA checklist; only cards marked
   on Jul 27, matching the calendar. The Jul 26 plumbing mismatch was a
   one-off; no calendar edit needed.
 - 2026-07-27: Dental Hive mockup shipped with generic palette (no brand asset access) and QA missed it. Fixes: brand-assets convention above, GENERIC BRANDING flag, QA branding check, Lead Hunter to download Place photos per lead.
+- 2026-07-30 (Lead Hunter, dental W1 run 3, Taguig + Americus GA): INCOMING LEADS
+  already held 4 unprocessed dental cards from 2026-07-28 (SmileHQ, Ivory Smile, SK
+  Dental — all Makati — + Lady Bay Australia) when this run started — Strategist
+  has not picked them up in 2 days. Proceeded anyway since those are a stale
+  batch, not today's, but INCOMING LEADS now carries 8 unactioned dental leads.
+  Human/Strategist should clear the backlog before more Lead Hunter runs pile up.
+  Added: Dra. Rona Ortho-Dental Clinic, Smile Solutions Dental, Family Smiles
+  Dental Care (all BGC/Taguig) + Drs. Beall & Beall General Dentistry (Americus,
+  GA, USA — has a real email, rare for this pipeline).
