@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Skin Cosmetic Clinic — Cosmetic Nurse, Renmark &amp; Adelaide</title>
+<meta name="description" content="Skin Cosmetic Clinic — Heidi, Cosmetic Nurse (RN) and owner. Wrinkle reduction, Rejuran, bio-remodelling, PDO threads, micro-needling, IPL, RF tightening and tattoo removal in Renmark SA and Parkside/Fullarton, Adelaide.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#2E2620;
+  --espresso:#3F332A;
+  --clay:#8A6A55;
+  --clay-600:#75594A;
+  --rose:#C9A38B;
+  --sand:#F2E9E1;
+  --ivory:#FBF7F3;
+  --ivory-2:#F7F1EA;
+  --line:#E6DAD0;
+  --muted:#6E6058;
+  --gold:#B08144;
+  --shadow-sm:0 1px 2px rgba(63,51,42,.07), 0 2px 6px rgba(63,51,42,.06);
+  --shadow-md:0 4px 12px rgba(63,51,42,.09), 0 12px 28px rgba(63,51,42,.08);
+  --shadow-lg:0 16px 48px rgba(63,51,42,.16);
+  --r-sm:8px; --r-md:12px; --r-lg:20px; --r-pill:999px;
+  --display:"Cormorant Garamond",ui-serif,Georgia,"Times New Roman",serif;
+  --body:"Jost",system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;font-family:var(--body);font-size:16px;line-height:1.65;color:var(--ink);background:var(--ivory);padding-bottom:172px;overflow-x:hidden}
+@media (min-width:640px){body{padding-bottom:120px}}
+img,svg{max-width:100%;display:block}
+h1,h2,h3{margin:0 0 12px;line-height:1.16}
+h1,h2{font-family:var(--display);font-weight:600;letter-spacing:.005em}
+h1{font-size:2.25rem}
+h2{font-size:1.85rem}
+h3{font-size:1.08rem;font-family:var(--body);font-weight:600;letter-spacing:.01em}
+p{margin:0 0 16px}
+a{color:var(--clay-600)}
+.wrap{width:100%;max-width:1080px;margin:0 auto;padding:0 20px}
+.eyebrow{font-size:.7rem;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--clay);margin:0 0 10px}
+.section{padding:60px 0}
+.section--tint{background:var(--ivory-2)}
+.section--sand{background:var(--sand)}
+.lead{font-size:1.04rem;color:var(--muted);max-width:60ch}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:6px}
+.skip{position:absolute;left:-9999px;top:0;background:var(--espresso);color:#fff;padding:12px 16px;z-index:200}
+.skip:focus{left:0}
+
+/* header */
+.hdr{position:sticky;top:0;z-index:90;background:rgba(251,247,243,.95);backdrop-filter:saturate(160%) blur(10px);border-bottom:1px solid var(--line)}
+.hdr__in{display:flex;align-items:center;gap:12px;min-height:66px;padding:8px 20px;max-width:1080px;margin:0 auto}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);flex:1 1 auto;min-width:0;min-height:44px}
+.brand__mark{flex:none;width:40px;height:40px}
+.brand__name{font-family:var(--display);font-weight:700;font-size:1.12rem;line-height:1.05;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.brand__sub{font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);display:block}
+.hdr__call{flex:none;display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:10px 16px;border-radius:var(--r-pill);background:var(--espresso);color:#fff;text-decoration:none;font-weight:600;font-size:.88rem;box-shadow:var(--shadow-sm);transition:background .18s ease,transform .18s ease,box-shadow .18s ease}
+.hdr__call:hover{background:var(--clay-600);transform:translateY(-1px);box-shadow:var(--shadow-md)}
+.hdr__call .lbl{display:none}
+@media (min-width:580px){.hdr__call .lbl{display:inline}}
+.nav{display:none}
+@media (min-width:940px){
+  .nav{display:flex;gap:4px;margin-left:auto;margin-right:8px}
+  .nav a{display:inline-flex;align-items:center;min-height:44px;padding:0 12px;border-radius:var(--r-sm);color:var(--muted);text-decoration:none;font-size:.9rem;font-weight:500;letter-spacing:.02em;transition:color .16s ease,background .16s ease}
+  .nav a:hover{color:var(--espresso);background:var(--sand)}
+}
+
+/* hero */
+.hero{background:linear-gradient(166deg,#FBF7F3 0%,#F3E9E1 54%,#EADDD2 100%);position:relative;overflow:hidden}
+.hero__in{position:relative;z-index:2;padding:46px 20px 54px;max-width:1080px;margin:0 auto}
+@media (min-width:940px){.hero__in{display:grid;grid-template-columns:1.04fr .96fr;gap:44px;align-items:center;padding:76px 20px 84px}}
+.hero h1{font-size:2.3rem;color:var(--espresso)}
+@media (min-width:480px){.hero h1{font-size:2.7rem}}
+@media (min-width:940px){.hero h1{font-size:3.4rem}}
+.hero__sub{font-size:1.05rem;color:#5A4B41;max-width:52ch}
+.stars{display:inline-flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--line);border-radius:var(--r-pill);padding:8px 16px;box-shadow:var(--shadow-sm);margin-bottom:18px}
+.stars__ico{display:flex;gap:2px}
+.stars__txt{font-size:.82rem;font-weight:600;color:var(--espresso)}
+.stars__src{font-size:.72rem;color:var(--muted);font-weight:400}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:48px;padding:13px 24px;border-radius:var(--r-pill);font-weight:600;font-size:.98rem;letter-spacing:.02em;text-decoration:none;cursor:pointer;border:1px solid transparent;transition:transform .18s ease,background .18s ease,box-shadow .18s ease,color .18s ease,border-color .18s ease}
+.btn--primary{background:var(--espresso);color:#fff;box-shadow:var(--shadow-md)}
+.btn--primary:hover{background:var(--clay-600);transform:translateY(-2px);box-shadow:var(--shadow-lg)}
+.btn--ghost{background:#fff;color:var(--espresso);border-color:var(--line);box-shadow:var(--shadow-sm)}
+.btn--ghost:hover{border-color:var(--clay);color:var(--clay-600);transform:translateY(-2px);box-shadow:var(--shadow-md)}
+.hero__facts{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:28px;padding-top:22px;border-top:1px solid rgba(63,51,42,.14)}
+.fact{display:flex;align-items:center;gap:8px;font-size:.86rem;color:#5A4B41;font-weight:500}
+.hero__art{margin-top:36px}
+@media (min-width:940px){.hero__art{margin-top:0}}
+.artcard{border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow-lg);background:#fff;border:1px solid rgba(255,255,255,.85)}
+
+/* stat strip */
+.stats{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow-sm)}
+@media (min-width:600px){.stats{grid-template-columns:repeat(3,1fr)}}
+.stat{background:#fff;padding:22px 20px;text-align:center}
+.stat__n{font-family:var(--display);font-size:2.1rem;font-weight:700;color:var(--espresso);line-height:1;display:block}
+.stat__l{font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:500;margin-top:8px;display:block}
+.stat__s{font-size:.72rem;color:#9A897E;display:block;margin-top:4px}
+
+/* treatments */
+.grid{display:grid;gap:16px}
+@media (min-width:600px){.grid--2{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:940px){.grid--4{grid-template-columns:repeat(4,1fr)}}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:22px;box-shadow:var(--shadow-sm);transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow-md);border-color:#DCC9BA}
+.card__ico{width:44px;height:44px;border-radius:12px;background:var(--sand);display:grid;place-items:center;margin-bottom:14px}
+.card h3{margin-bottom:6px;color:var(--espresso)}
+.card p{margin:0;color:var(--muted);font-size:.92rem}
+
+/* heidi / about */
+.about__grid{display:grid;gap:28px}
+@media (min-width:940px){.about__grid{grid-template-columns:.9fr 1.1fr;gap:48px;align-items:center}}
+.quoteline{border-left:3px solid var(--rose);padding:4px 0 4px 18px;font-family:var(--display);font-size:1.35rem;color:var(--espresso);line-height:1.35;margin:0 0 20px}
+
+/* why */
+.why{background:var(--espresso);color:#E3D6CB}
+.why h2{color:#fff}
+.why .lead{color:#CBB8A9}
+.why__grid{display:grid;gap:16px;margin-top:28px}
+@media (min-width:700px){.why__grid{grid-template-columns:repeat(2,1fr)}}
+.why__item{display:flex;gap:14px;align-items:flex-start;background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.12);border-radius:var(--r-md);padding:18px}
+.why__item h3{color:#fff;font-size:1rem;margin-bottom:4px}
+.why__item p{margin:0;font-size:.92rem;color:#CBB8A9}
+.why__ico{flex:none;width:40px;height:40px;border-radius:10px;background:rgba(255,255,255,.1);display:grid;place-items:center}
+
+/* locations */
+.loc__grid{display:grid;gap:20px}
+@media (min-width:820px){.loc__grid{grid-template-columns:repeat(2,1fr)}}
+.loc{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow-sm);display:flex;flex-direction:column;transition:transform .2s ease,box-shadow .2s ease}
+.loc:hover{transform:translateY(-3px);box-shadow:var(--shadow-md)}
+.loc__body{padding:22px;flex:1 1 auto}
+.loc__tag{display:inline-block;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600;color:var(--clay);background:var(--sand);border-radius:var(--r-pill);padding:4px 12px;margin-bottom:12px}
+.loc h3{font-family:var(--display);font-size:1.5rem;font-weight:600;color:var(--espresso);margin-bottom:6px}
+.loc p{color:var(--muted);font-size:.94rem;margin-bottom:14px}
+.loc__foot{padding:0 22px 22px}
+
+/* contact */
+.contact__grid{display:grid;gap:24px}
+@media (min-width:940px){.contact__grid{grid-template-columns:1fr 1fr;gap:40px}}
+.info{list-style:none;margin:0;padding:0}
+.info li{display:flex;gap:14px;padding:14px 0;border-bottom:1px solid var(--line)}
+.info li:last-child{border-bottom:0}
+.info__ico{flex:none;width:38px;height:38px;border-radius:10px;background:var(--sand);display:grid;place-items:center}
+.info__k{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600;display:block;margin-bottom:2px}
+.info__v{font-weight:600;color:var(--espresso);text-decoration:none;word-break:break-word}
+a.info__v:hover{color:var(--clay);text-decoration:underline}
+.info__note{display:block;font-size:.83rem;font-weight:400;color:var(--muted);margin-top:2px}
+.bookbox{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:24px;box-shadow:var(--shadow-md)}
+.bookbox h3{font-family:var(--display);font-size:1.6rem;font-weight:600;color:var(--espresso);margin-bottom:8px}
+.bookbox p{font-size:.94rem;color:var(--muted)}
+.bookbox .btn{width:100%;margin-bottom:10px}
+.bookbox__note{font-size:.78rem;color:#9A897E;text-align:center;margin:6px 0 0}
+.form{margin-top:20px;background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:22px;box-shadow:var(--shadow-sm)}
+.field{margin-bottom:14px}
+.field label{display:block;font-size:.72rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.field input,.field select,.field textarea{width:100%;min-height:48px;padding:12px 14px;border:1px solid var(--line);border-radius:var(--r-sm);font:inherit;font-size:16px;color:var(--ink);background:var(--ivory-2);transition:border-color .16s ease,background .16s ease,box-shadow .16s ease}
+.field textarea{min-height:106px;resize:vertical}
+.field input:hover,.field select:hover,.field textarea:hover{border-color:#DCC9BA}
+.field input:focus,.field select:focus,.field textarea:focus{background:#fff;border-color:var(--clay);box-shadow:0 0 0 3px rgba(138,106,85,.14);outline:none}
+.form .btn{width:100%}
+.form__note{font-size:.78rem;color:var(--muted);margin:12px 0 0;text-align:center}
+
+/* footer */
+.ftr{background:#2A211A;color:#B3A196;padding:42px 0 32px;font-size:.9rem}
+.ftr a{color:#DCC9BA;text-decoration:none}
+.ftr a:hover{color:#fff;text-decoration:underline}
+.ftr__top{display:grid;gap:22px}
+@media (min-width:700px){.ftr__top{grid-template-columns:1.4fr 1fr 1fr}}
+.ftr h4{font-family:var(--display);color:#fff;font-size:1.2rem;margin:0 0 10px}
+.ftr ul{list-style:none;margin:0;padding:0}
+.ftr li{margin-bottom:8px}
+.ftr__bar{margin-top:28px;padding-top:20px;border-top:1px solid rgba(255,255,255,.12);display:flex;flex-wrap:wrap;gap:8px 16px;justify-content:space-between;font-size:.82rem}
+.ftr__credit strong{color:#fff}
+
+/* CloudSpring bar */
+.cs-bar{position:fixed;left:0;right:0;bottom:0;z-index:120;background:rgba(42,33,26,.95);backdrop-filter:saturate(160%) blur(12px);border-top:1px solid rgba(255,255,255,.14);box-shadow:0 -8px 30px rgba(63,51,42,.34);padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px));color:#F2E9E1}
+.cs-bar__in{max-width:1080px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center}
+.cs-bar__eyebrow{font-size:.62rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#E0B37A;margin:0}
+.cs-bar__line{margin:0;font-size:.95rem;font-weight:600;line-height:1.35;color:#fff;max-width:58ch}
+.cs-bar__btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:46px;padding:12px 22px;border-radius:var(--r-pill);background:#D89F5E;color:#2A1D0E;font-weight:700;font-size:.94rem;text-decoration:none;white-space:nowrap;box-shadow:0 6px 18px rgba(216,159,94,.4);animation:csPulse 2.6s ease-in-out infinite;transition:background .18s ease,transform .18s ease,box-shadow .18s ease}
+.cs-bar__btn:hover{background:#E8B87D;transform:translateY(-2px);animation-play-state:paused;box-shadow:0 10px 26px rgba(216,159,94,.5)}
+.cs-bar__btn:focus-visible{outline:3px solid #FFF0C9;outline-offset:3px;animation-play-state:paused}
+@keyframes csPulse{
+  0%,100%{box-shadow:0 6px 18px rgba(216,159,94,.4),0 0 0 0 rgba(216,159,94,.5)}
+  55%{box-shadow:0 6px 18px rgba(216,159,94,.4),0 0 0 12px rgba(216,159,94,0)}
+}
+@media (min-width:640px){.cs-bar__in{flex-direction:row;justify-content:space-between;text-align:left;gap:20px}.cs-bar__txt{min-width:0}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition-duration:.01ms!important;scroll-behavior:auto!important}.cs-bar__btn{animation:none}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="hdr">
+  <div class="hdr__in">
+    <a class="brand" href="#top" aria-label="Skin Cosmetic Clinic home">
+      <svg class="brand__mark" viewBox="0 0 48 48" role="img" aria-hidden="true">
+        <rect width="48" height="48" rx="14" fill="#3F332A"/>
+        <path d="M24 12c7 4.6 10.4 9.2 10.4 14 0 5.9-4.6 10-10.4 10s-10.4-4.1-10.4-10c0-4.8 3.4-9.4 10.4-14Z" fill="none" stroke="#D8B79C" stroke-width="2"/>
+        <path d="M19.4 27.4c1.2-3.4 3.4-5.6 6.6-6.6" stroke="#C9A38B" stroke-width="2" stroke-linecap="round" fill="none"/>
+      </svg>
+      <span>
+        <span class="brand__name">Skin Cosmetic Clinic</span>
+        <span class="brand__sub">Renmark · Adelaide</span>
+      </span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="#treatments">Treatments</a>
+      <a href="#heidi">Meet Heidi</a>
+      <a href="#why">Why us</a>
+      <a href="#locations">Locations</a>
+      <a href="#book">Book</a>
+    </nav>
+    <a class="hdr__call" href="tel:+61484650989">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 3h3l1.5 4.2-2.1 1.5a12.6 12.6 0 0 0 6.3 6.3l1.5-2.1L21 14.4v3A2.6 2.6 0 0 1 18.4 20 15.4 15.4 0 0 1 4 5.6 2.6 2.6 0 0 1 6.6 3Z" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/></svg>
+      <span class="lbl">0484 650 989</span>
+    </a>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero" id="top">
+  <div class="hero__in">
+    <div>
+      <span class="stars">
+        <span class="stars__ico" aria-hidden="true">
+          <svg width="15" height="15" viewBox="0 0 24 24"><path d="M12 3l2.5 5.4 5.9.7-4.4 4 1.2 5.8L12 16.1 6.8 18.9 8 13.1 3.6 9.1l5.9-.7Z" fill="#C9A38B"/></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24"><path d="M12 3l2.5 5.4 5.9.7-4.4 4 1.2 5.8L12 16.1 6.8 18.9 8 13.1 3.6 9.1l5.9-.7Z" fill="#C9A38B"/></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24"><path d="M12 3l2.5 5.4 5.9.7-4.4 4 1.2 5.8L12 16.1 6.8 18.9 8 13.1 3.6 9.1l5.9-.7Z" fill="#C9A38B"/></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24"><path d="M12 3l2.5 5.4 5.9.7-4.4 4 1.2 5.8L12 16.1 6.8 18.9 8 13.1 3.6 9.1l5.9-.7Z" fill="#C9A38B"/></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24"><path d="M12 3l2.5 5.4 5.9.7-4.4 4 1.2 5.8L12 16.1 6.8 18.9 8 13.1 3.6 9.1l5.9-.7Z" fill="#C9A38B"/></svg>
+        </span>
+        <span class="stars__txt">5.0 from 24 reviews <span class="stars__src">· via Fresha</span></span>
+      </span>
+      <h1>Cosmetic Nurse, Renmark &amp; Adelaide</h1>
+      <p class="hero__sub">Skin Cosmetic Clinic is owned and run by Heidi, a Cosmetic Nurse (RN). Personalised injectable, skin and laser treatments at 129 Renmark Avenue and in Parkside/Fullarton, Adelaide.</p>
+      <div class="cta-row">
+        <a class="btn btn--primary" href="#book">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3.6" y="5" width="16.8" height="15" rx="3" stroke="currentColor" stroke-width="1.8"/><path d="M3.6 9.6h16.8M8.4 3.2v3.6M15.6 3.2v3.6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          Book now
+        </a>
+        <a class="btn btn--ghost" href="tel:+61484650989">Call 0484 650 989</a>
+      </div>
+      <div class="hero__facts">
+        <span class="fact"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 7.5 12 4l8 3.5v4.9c0 4.4-3.3 7.6-8 8.6-4.7-1-8-4.2-8-8.6V7.5Z" stroke="#8A6A55" stroke-width="1.8" stroke-linejoin="round"/></svg> Nurse-led treatments</span>
+        <span class="fact"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s7-5.4 7-11a7 7 0 1 0-14 0c0 5.6 7 11 7 11Z" stroke="#8A6A55" stroke-width="1.8"/><circle cx="12" cy="10" r="2.6" stroke="#8A6A55" stroke-width="1.8"/></svg> Two locations</span>
+        <span class="fact"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="8.6" stroke="#8A6A55" stroke-width="1.8"/><path d="m8.6 12 2.4 2.4 4.4-4.8" stroke="#8A6A55" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg> 104 services on the menu</span>
+      </div>
+    </div>
+    <div class="hero__art">
+      <div class="artcard">
+        <svg viewBox="0 0 520 420" role="img" aria-label="Illustration of a calm cosmetic treatment room with a treatment chair, skincare shelf and soft lighting">
+          <defs>
+            <linearGradient id="sc-wall" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F8F1EA"/><stop offset="1" stop-color="#EADCD0"/></linearGradient>
+            <linearGradient id="sc-chair" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#F0E4DA"/></linearGradient>
+            <linearGradient id="sc-glow" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F6E3C8" stop-opacity=".85"/><stop offset="1" stop-color="#F6E3C8" stop-opacity="0"/></linearGradient>
+          </defs>
+          <rect width="520" height="420" fill="url(#sc-wall)"/>
+          <rect x="0" y="298" width="520" height="122" fill="#F3E9E0"/>
+          <path d="M0 298h520" stroke="#E0CDBE" stroke-width="2"/>
+          <circle cx="404" cy="96" r="46" fill="#F1DFCE"/>
+          <circle cx="404" cy="96" r="28" fill="#EBD3BD"/>
+          <rect x="60" y="70" width="132" height="10" rx="5" fill="#DFCBBB"/>
+          <rect x="60" y="158" width="132" height="10" rx="5" fill="#DFCBBB"/>
+          <g>
+            <rect x="74" y="34" width="20" height="36" rx="6" fill="#FFFFFF" stroke="#DFCBBB" stroke-width="2"/>
+            <rect x="104" y="44" width="20" height="26" rx="6" fill="#E8D3C2" stroke="#DFCBBB" stroke-width="2"/>
+            <rect x="134" y="28" width="22" height="42" rx="7" fill="#FFFFFF" stroke="#DFCBBB" stroke-width="2"/>
+            <circle cx="176" cy="56" r="12" fill="#EBD3BD"/>
+          </g>
+          <g>
+            <rect x="80" y="124" width="24" height="34" rx="7" fill="#E8D3C2" stroke="#DFCBBB" stroke-width="2"/>
+            <rect x="116" y="132" width="20" height="26" rx="6" fill="#FFFFFF" stroke="#DFCBBB" stroke-width="2"/>
+            <rect x="148" y="120" width="22" height="38" rx="7" fill="#FFFFFF" stroke="#DFCBBB" stroke-width="2"/>
+          </g>
+          <path d="M258 254c0-46 20-72 52-72s52 26 52 72Z" fill="url(#sc-chair)" stroke="#E0CDBE" stroke-width="2"/>
+          <rect x="242" y="252" width="152" height="50" rx="20" fill="url(#sc-chair)" stroke="#E0CDBE" stroke-width="2"/>
+          <rect x="256" y="302" width="14" height="46" rx="6" fill="#DFCBBB"/>
+          <rect x="366" y="302" width="14" height="46" rx="6" fill="#DFCBBB"/>
+          <rect x="230" y="232" width="60" height="26" rx="13" fill="#FFFFFF" stroke="#E0CDBE" stroke-width="2"/>
+          <path d="M452 132v170" stroke="#DFCBBB" stroke-width="6" stroke-linecap="round"/>
+          <circle cx="452" cy="302" r="22" fill="#E0CDBE"/>
+          <path d="M424 122a28 28 0 0 1 56 0Z" fill="#3F332A"/>
+          <path d="M424 122h56l16 62h-88Z" fill="url(#sc-glow)"/>
+          <g>
+            <rect x="128" y="252" width="96" height="50" rx="10" fill="#FFFFFF" stroke="#E0CDBE" stroke-width="2"/>
+            <rect x="142" y="264" width="16" height="26" rx="5" fill="#F1DFCE" stroke="#DFCBBB" stroke-width="1.6"/>
+            <rect x="166" y="270" width="16" height="20" rx="5" fill="#E8D3C2" stroke="#DFCBBB" stroke-width="1.6"/>
+            <circle cx="202" cy="278" r="10" fill="#F1DFCE" stroke="#DFCBBB" stroke-width="1.6"/>
+          </g>
+          <g>
+            <path d="M46 348c-14-22-6-46 14-52 4 22 12 34 22 42Z" fill="#D8C4A8"/>
+            <path d="M60 348c0-18 10-30 26-34-4 18-10 28-18 34Z" fill="#C8B294"/>
+            <rect x="40" y="346" width="60" height="34" rx="8" fill="#E5D3C3" stroke="#DFCBBB" stroke-width="2"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:44px;padding-bottom:44px">
+  <div class="wrap">
+    <div class="stats">
+      <div class="stat"><span class="stat__n">5.0</span><span class="stat__l">Client rating</span><span class="stat__s">from 24 reviews on Fresha</span></div>
+      <div class="stat"><span class="stat__n">104</span><span class="stat__l">Services offered</span><span class="stat__s">across skin, injectables &amp; laser</span></div>
+      <div class="stat"><span class="stat__n">2</span><span class="stat__l">Locations</span><span class="stat__s">Renmark &amp; Adelaide</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--tint" id="treatments">
+  <div class="wrap">
+    <p class="eyebrow">Treatments</p>
+    <h2>Treatments tailored to your skin</h2>
+    <p class="lead">Every treatment begins with a consultation so Heidi can recommend what genuinely suits your skin and your goals.</p>
+    <div class="grid grid--2 grid--4" style="margin-top:30px">
+      <article class="card">
+        <div class="card__ico"><svg width="23" height="23" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M14.6 3.4 20.6 9.4 9.8 20.2H3.8v-6Z" stroke="#8A6A55" stroke-width="1.8" stroke-linejoin="round"/><path d="m12.6 5.4 6 6" stroke="#C9A38B" stroke-width="1.8"/></svg></div>
+        <h3>Wrinkle reduction</h3>
+        <p>Injectable treatment for expression lines, planned around how your face naturally moves.</p>
+      </article>
+      <article class="card">
+        <div class="card__ico"><svg width="23" height="23" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3.5c4.3 2.3 6.6 5.3 6.6 9 0 4.1-3 7-6.6 7s-6.6-2.9-6.6-7c0-3.7 2.3-6.7 6.6-9Z" stroke="#8A6A55" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 13.4c1-2 2.5-3.3 4.6-4" stroke="#C9A38B" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+        <h3>Rejuran</h3>
+        <p>Skin-conditioning injectable treatment aimed at overall skin quality and texture.</p>
+      </article>
+      <article class="card">
+        <div class="card__ico"><svg width="23" height="23" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="7.4" stroke="#8A6A55" stroke-width="1.8"/><path d="M8 13.4c1.6-3 3.8-4.6 6.8-5.2" stroke="#C9A38B" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+        <h3>Bio-remodelling</h3>
+        <p>Hydrating injectable treatment designed to support firmness and glow rather than add volume.</p>
+      </article>
+      <article class="card">
+        <div class="card__ico"><svg width="23" height="23" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4.4 18.6 18.6 4.4M8 20l4-4M4 16l4-4M12 20l6-6" stroke="#8A6A55" stroke-width="1.8" stroke-linecap="round"/><circle cx="18.6" cy="5.4" r="1.8" fill="#C9A38B"/></svg></div>
+        <h3>PDO threads</h3>
+        <p>Thread treatment used to support and lift specific areas, discussed in detail at consultation.</p>
+      </article>
+      <article class="card">
+        <div class="card__ico"><svg width="23" height="23" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="4" stroke="#8A6A55" stroke-width="1.8"/><circle cx="9" cy="9" r="1.2" fill="#C9A38B"/><circle cx="15" cy="9" r="1.2" fill="#C9A38B"/><circle cx="9" cy="15" r="1.2" fill="#C9A38B"/><circle cx="15" cy="15" r="1.2" fill="#C9A38B"/><circle cx="12" cy="12" r="1.2" fill="#C9A38B"/></svg></div>
+        <h3>Micro-needling</h3>
+        <p>Collagen-stimulating treatment for texture, scarring and general skin renewal.</p>
+      </article>
+      <article class="card">
+        <div class="card__ico"><svg width="23" height="23" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="4.4" stroke="#8A6A55" stroke-width="1.8"/><path d="M12 3.4V6M12 18v2.6M3.4 12H6M18 12h2.6M6.2 6.2 8 8M16 16l1.8 1.8M17.8 6.2 16 8M8 16l-1.8 1.8" stroke="#C9A38B" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+        <h3>IPL</h3>
+        <p>Intense pulsed light for pigmentation, redness and other light-responsive skin concerns.</p>
+      </article>
+      <article class="card">
+        <div class="card__ico"><svg width="23" height="23" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3.4 15c3-6 6-9 8.6-9s5.6 3 8.6 9" stroke="#8A6A55" stroke-width="1.8" stroke-linecap="round"/><path d="M6.6 19.4c2.4-3.4 4.4-5 5.4-5s3 1.6 5.4 5" stroke="#C9A38B" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+        <h3>RF tightening</h3>
+        <p>Radiofrequency treatment used to encourage firmer-looking skin over a course of sessions.</p>
+      </article>
+      <article class="card">
+        <div class="card__ico"><svg width="23" height="23" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8 3h8l-1.4 8.4a2 2 0 0 1-.9 1.3L12 14l-1.7-1.3a2 2 0 0 1-.9-1.3L8 3Z" stroke="#8A6A55" stroke-width="1.8" stroke-linejoin="round"/><path d="M12 14v7M9.6 20.4h4.8" stroke="#C9A38B" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+        <h3>Tattoo removal</h3>
+        <p>Laser tattoo removal, planned session by session according to the ink and the area.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="heidi">
+  <div class="wrap about__grid">
+    <div class="artcard">
+      <svg viewBox="0 0 460 460" role="img" aria-label="Portrait illustration of Heidi, Cosmetic Nurse and owner of Skin Cosmetic Clinic">
+        <defs>
+          <linearGradient id="sc-p" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F6EDE5"/><stop offset="1" stop-color="#E7D5C6"/></linearGradient>
+        </defs>
+        <rect width="460" height="460" fill="url(#sc-p)"/>
+        <circle cx="230" cy="196" r="128" fill="#EFE0D3"/>
+        <path d="M78 460c0-84 68-136 152-136s152 52 152 136Z" fill="#FFFFFF"/>
+        <path d="M172 330c18-12 58-12 76 0l-14 130h-48Z" fill="#3F332A"/>
+        <path d="M154 336c-30 16-50 46-56 68l38 8Z" fill="#F6F0EA"/>
+        <path d="M306 336c30 16 50 46 56 68l-38 8Z" fill="#F6F0EA"/>
+        <circle cx="230" cy="246" r="66" fill="#F3DECA"/>
+        <path d="M164 244c0-46 30-66 66-66s66 20 66 66c0-24-16-38-30-42-16 12-56 16-78 4-14 8-24 20-24 38Z" fill="#8A5F3C"/>
+        <path d="M164 240c-10 22-8 52 4 66-8-26-8-46-4-66Z" fill="#7A5233"/>
+        <path d="M296 240c10 22 8 52-4 66 8-26 8-46 4-66Z" fill="#7A5233"/>
+        <ellipse cx="206" cy="248" rx="6" ry="7" fill="#3F332A"/>
+        <ellipse cx="254" cy="248" rx="6" ry="7" fill="#3F332A"/>
+        <path d="M196 234c6-5 14-5 20-1M244 233c6-4 14-4 20 1" stroke="#6B4A31" stroke-width="4" stroke-linecap="round" fill="none"/>
+        <path d="M218 276c8 4 16 4 24 0" stroke="#C9967B" stroke-width="4" stroke-linecap="round" fill="none"/>
+        <path d="M216 288c9 7 19 7 28 0" stroke="#B9705E" stroke-width="5" stroke-linecap="round" fill="none"/>
+        <rect x="196" y="352" width="68" height="20" rx="10" fill="#FFFFFF" opacity=".22"/>
+      </svg>
+    </div>
+    <div>
+      <p class="eyebrow">Meet your clinician</p>
+      <h2>Heidi — Cosmetic Nurse (RN) &amp; owner</h2>
+      <p class="quoteline">Rediscover your confidence.</p>
+      <p>Skin Cosmetic Clinic is owned and operated by Heidi, a Cosmetic Nurse and Registered Nurse. Every consultation, treatment plan and follow-up is handled by her personally — you see the same clinician each visit, not a rotating roster.</p>
+      <p>The clinic offers a full menu of skin, injectable and laser treatments across two South Australian locations: the Renmark clinic on Renmark Avenue, and a second location in Parkside/Fullarton, Adelaide.</p>
+      <p style="margin-bottom:0">If you are not sure where to start, book a consultation and Heidi will talk you through what is realistic for your skin.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section why" id="why">
+  <div class="wrap">
+    <p class="eyebrow" style="color:#E0B37A">Why Skin Cosmetic Clinic</p>
+    <h2>Nurse-led care, in the Riverland and Adelaide</h2>
+    <p class="lead">The things clients tell us matter most when choosing a cosmetic clinic.</p>
+    <div class="why__grid">
+      <div class="why__item">
+        <span class="why__ico"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 7.5 12 4l8 3.5v4.9c0 4.4-3.3 7.6-8 8.6-4.7-1-8-4.2-8-8.6V7.5Z" stroke="#E0B37A" stroke-width="1.8" stroke-linejoin="round"/><path d="m9.2 12 2 2 3.6-3.8" stroke="#E0B37A" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <div><h3>Treated by a Registered Nurse</h3><p>Heidi is a Cosmetic Nurse (RN) and the clinic's owner — she performs the treatments herself.</p></div>
+      </div>
+      <div class="why__item">
+        <span class="why__ico"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3l2.5 5.4 5.9.7-4.4 4 1.2 5.8L12 16.1 6.8 18.9 8 13.1 3.6 9.1l5.9-.7Z" stroke="#E0B37A" stroke-width="1.8" stroke-linejoin="round"/></svg></span>
+        <div><h3>Rated 5.0 from 24 reviews</h3><p>Our current client rating on Fresha, where our bookings are taken.</p></div>
+      </div>
+      <div class="why__item">
+        <span class="why__ico"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3.6" y="4.6" width="16.8" height="15" rx="3" stroke="#E0B37A" stroke-width="1.8"/><path d="M8.2 9.4h7.6M8.2 13h5" stroke="#E0B37A" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+        <div><h3>104 services to choose from</h3><p>Injectables, skin treatments and laser — so your plan can be built around your concern, not a fixed package.</p></div>
+      </div>
+      <div class="why__item">
+        <span class="why__ico"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s7-5.4 7-11a7 7 0 1 0-14 0c0 5.6 7 11 7 11Z" stroke="#E0B37A" stroke-width="1.8"/><circle cx="12" cy="10" r="2.6" stroke="#E0B37A" stroke-width="1.8"/></svg></span>
+        <div><h3>Renmark and Adelaide</h3><p>Book locally in the Riverland at 129 Renmark Avenue, or with us in Parkside/Fullarton, Adelaide.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--sand" id="locations">
+  <div class="wrap">
+    <p class="eyebrow">Where to find us</p>
+    <h2>Two South Australian locations</h2>
+    <div class="loc__grid" style="margin-top:28px">
+      <div class="loc">
+        <svg viewBox="0 0 520 200" role="img" aria-label="Simplified map of the Renmark clinic on Renmark Avenue">
+          <rect width="520" height="200" fill="#EFE4D9"/>
+          <path d="M0 128h520" stroke="#E2D0BF" stroke-width="22"/>
+          <path d="M0 128h520" stroke="#FBF7F3" stroke-width="3" stroke-dasharray="14 12"/>
+          <path d="M188 0v200" stroke="#E2D0BF" stroke-width="14"/>
+          <path d="M0 44c60 12 120 6 180 20s180 4 340 22" stroke="#CFDCD5" stroke-width="16" fill="none"/>
+          <rect x="34" y="150" width="94" height="36" rx="6" fill="#E6D8C9"/>
+          <rect x="230" y="152" width="106" height="34" rx="6" fill="#E6D8C9"/>
+          <rect x="400" y="148" width="94" height="38" rx="6" fill="#E6D8C9"/>
+          <text x="16" y="112" font-family="Jost,sans-serif" font-size="13" fill="#8A7566">Renmark Avenue</text>
+          <g transform="translate(300 118)"><path d="M0-30c10 0 18 8 18 18 0 13-18 30-18 30S-18 1-18-12c0-10 8-18 18-18Z" fill="#3F332A"/><circle cx="0" cy="-12" r="6.6" fill="#FBF7F3"/></g>
+        </svg>
+        <div class="loc__body">
+          <span class="loc__tag">Riverland</span>
+          <h3>Renmark clinic</h3>
+          <p>129 Renmark Avenue<br>Renmark, South Australia 5341</p>
+          <p style="font-size:.88rem;color:#9A897E;margin:0">Opening hours vary by day — current availability is shown when you book.</p>
+        </div>
+        <div class="loc__foot">
+          <a class="btn btn--ghost" href="tel:+61484650989" style="width:100%">Call about Renmark</a>
+        </div>
+      </div>
+      <div class="loc">
+        <svg viewBox="0 0 520 200" role="img" aria-label="Simplified map of the Parkside and Fullarton location in Adelaide">
+          <rect width="520" height="200" fill="#EFE4D9"/>
+          <path d="M0 96h520" stroke="#E2D0BF" stroke-width="20"/>
+          <path d="M264 0v200" stroke="#E2D0BF" stroke-width="18"/>
+          <path d="M264 0v200" stroke="#FBF7F3" stroke-width="3" stroke-dasharray="14 12"/>
+          <rect x="40" y="20" width="180" height="56" rx="7" fill="#E6D8C9"/>
+          <rect x="40" y="120" width="180" height="60" rx="7" fill="#E6D8C9"/>
+          <rect x="310" y="20" width="170" height="56" rx="7" fill="#E6D8C9"/>
+          <rect x="310" y="120" width="170" height="60" rx="7" fill="#D9E3DB"/>
+          <text x="316" y="164" font-family="Jost,sans-serif" font-size="13" fill="#8A7566">Parkside · Fullarton</text>
+          <g transform="translate(264 92)"><path d="M0-30c10 0 18 8 18 18 0 13-18 30-18 30S-18 1-18-12c0-10 8-18 18-18Z" fill="#3F332A"/><circle cx="0" cy="-12" r="6.6" fill="#FBF7F3"/></g>
+        </svg>
+        <div class="loc__body">
+          <span class="loc__tag">Adelaide</span>
+          <h3>Parkside / Fullarton</h3>
+          <p>Parkside &amp; Fullarton area<br>Adelaide, South Australia</p>
+          <p style="font-size:.88rem;color:#9A897E;margin:0">Full street address and available dates are confirmed when you book or call.</p>
+        </div>
+        <div class="loc__foot">
+          <a class="btn btn--ghost" href="tel:+61484650989" style="width:100%">Call about Adelaide</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="book">
+  <div class="wrap">
+    <p class="eyebrow">Bookings</p>
+    <h2>Book your appointment</h2>
+    <p class="lead">Book online, call Heidi directly, or send an enquiry and we will come back to you.</p>
+    <div class="contact__grid" style="margin-top:28px">
+      <div>
+        <ul class="info">
+          <li>
+            <span class="info__ico"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 3h3l1.5 4.2-2.1 1.5a12.6 12.6 0 0 0 6.3 6.3l1.5-2.1L21 14.4v3A2.6 2.6 0 0 1 18.4 20 15.4 15.4 0 0 1 4 5.6 2.6 2.6 0 0 1 6.6 3Z" stroke="#8A6A55" stroke-width="1.9" stroke-linejoin="round"/></svg></span>
+            <span><span class="info__k">Phone</span><a class="info__v" href="tel:+61484650989">0484 650 989</a><span class="info__note">+61 484 650 989 from overseas.</span></span>
+          </li>
+          <li>
+            <span class="info__ico"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3.4" y="5.4" width="17.2" height="13.2" rx="3" stroke="#8A6A55" stroke-width="1.8"/><path d="m4 7 8 5.6L20 7" stroke="#8A6A55" stroke-width="1.8" stroke-linejoin="round"/></svg></span>
+            <span><span class="info__k">Email</span><a class="info__v" href="mailto:rediscoveryourconfidence@gmail.com">rediscoveryourconfidence@gmail.com</a></span>
+          </li>
+          <li>
+            <span class="info__ico"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M14 8.4h2.6V5.2h-2.8c-2.6 0-4 1.6-4 4v2.2H7.4v3.2h2.4v7.2h3.4v-7.2h2.6l.5-3.2h-3.1V9.8c0-1 .3-1.4.8-1.4Z" stroke="#8A6A55" stroke-width="1.7" stroke-linejoin="round"/></svg></span>
+            <span><span class="info__k">Facebook</span><a class="info__v" href="https://www.facebook.com/skincosmeticclinic" target="_blank" rel="noopener">facebook.com/skincosmeticclinic</a></span>
+          </li>
+          <li>
+            <span class="info__ico"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s7-5.4 7-11a7 7 0 1 0-14 0c0 5.6 7 11 7 11Z" stroke="#8A6A55" stroke-width="1.8"/><circle cx="12" cy="10" r="2.6" stroke="#8A6A55" stroke-width="1.8"/></svg></span>
+            <span><span class="info__k">Clinics</span><span class="info__v">129 Renmark Avenue, Renmark SA 5341<br>Parkside / Fullarton, Adelaide SA</span></span>
+          </li>
+        </ul>
+        <form class="form" id="bookForm" novalidate>
+          <h3 style="margin-bottom:14px;color:var(--espresso)">Send an enquiry</h3>
+          <div class="field">
+            <label for="f-name">Your name</label>
+            <input id="f-name" name="name" type="text" autocomplete="name" required placeholder="First and last name">
+          </div>
+          <div class="field">
+            <label for="f-phone">Mobile</label>
+            <input id="f-phone" name="phone" type="tel" autocomplete="tel" required placeholder="04XX XXX XXX">
+          </div>
+          <div class="field">
+            <label for="f-loc">Preferred location</label>
+            <select id="f-loc" name="location">
+              <option>Renmark — 129 Renmark Avenue</option>
+              <option>Adelaide — Parkside / Fullarton</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="f-treat">Treatment of interest</label>
+            <select id="f-treat" name="treatment">
+              <option>Consultation — not sure yet</option>
+              <option>Wrinkle reduction</option>
+              <option>Rejuran</option>
+              <option>Bio-remodelling</option>
+              <option>PDO threads</option>
+              <option>Micro-needling</option>
+              <option>IPL</option>
+              <option>RF tightening</option>
+              <option>Tattoo removal</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="f-msg">Message</label>
+            <textarea id="f-msg" name="message" placeholder="Tell Heidi a little about what you'd like to work on"></textarea>
+          </div>
+          <button class="btn btn--primary" type="submit">Send enquiry</button>
+          <p class="form__note" id="formNote">This opens your email app addressed to the clinic. On the live site this can drop straight into your inbox.</p>
+        </form>
+      </div>
+      <div>
+        <div class="bookbox">
+          <h3>Book online</h3>
+          <p>Appointments are currently taken through our Fresha booking page, where you can see live availability for both locations.</p>
+          <a class="btn btn--primary" href="https://www.fresha.com/lp/en/bt/aesthetics/in/au-renmark" target="_blank" rel="noopener">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3.6" y="5" width="16.8" height="15" rx="3" stroke="currentColor" stroke-width="1.8"/><path d="M3.6 9.6h16.8M8.4 3.2v3.6M15.6 3.2v3.6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+            Book on Fresha
+          </a>
+          <a class="btn btn--ghost" href="tel:+61484650989" style="width:100%">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 3h3l1.5 4.2-2.1 1.5a12.6 12.6 0 0 0 6.3 6.3l1.5-2.1L21 14.4v3A2.6 2.6 0 0 1 18.4 20 15.4 15.4 0 0 1 4 5.6 2.6 2.6 0 0 1 6.6 3Z" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/></svg>
+            Call 0484 650 989
+          </a>
+          <p class="bookbox__note">Opens our existing Fresha booking page in a new tab.</p>
+        </div>
+        <div class="loc" style="margin-top:20px">
+          <div class="loc__body">
+            <span class="loc__tag">Before you book</span>
+            <h3 style="font-size:1.2rem">Good to know</h3>
+            <ul style="list-style:none;margin:0;padding:0">
+              <li style="padding:8px 0;border-bottom:1px solid var(--line);font-size:.94rem;color:var(--muted)">Every new client starts with a consultation with Heidi.</li>
+              <li style="padding:8px 0;border-bottom:1px solid var(--line);font-size:.94rem;color:var(--muted)">Treatment plans and pricing are confirmed with you before anything is booked.</li>
+              <li style="padding:8px 0;font-size:.94rem;color:var(--muted)">Not sure which location suits you? Call and we will find a date at whichever clinic works.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="ftr">
+  <div class="wrap">
+    <div class="ftr__top">
+      <div>
+        <h4>Skin Cosmetic Clinic</h4>
+        <p style="margin:0">Cosmetic Nurse-led skin clinic<br>129 Renmark Avenue, Renmark SA 5341<br>Parkside / Fullarton, Adelaide SA</p>
+      </div>
+      <div>
+        <h4>Clinic</h4>
+        <ul>
+          <li><a href="#treatments">Treatments</a></li>
+          <li><a href="#heidi">Meet Heidi</a></li>
+          <li><a href="#locations">Locations</a></li>
+          <li><a href="#book">Book</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+61484650989">0484 650 989</a></li>
+          <li><a href="mailto:rediscoveryourconfidence@gmail.com">rediscoveryourconfidence@gmail.com</a></li>
+          <li><a href="https://www.facebook.com/skincosmeticclinic" target="_blank" rel="noopener">Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="ftr__bar">
+      <span>&copy; 2026 Skin Cosmetic Clinic, Renmark &amp; Adelaide, South Australia.</span>
+      <span class="ftr__credit">Website by <strong>CloudSpring IT Solutions</strong></span>
+    </div>
+  </div>
+</footer>
+
+<aside class="cs-bar" aria-label="Preview notice from CloudSpring IT Solutions">
+  <div class="cs-bar__in">
+    <div class="cs-bar__txt">
+      <p class="cs-bar__eyebrow">PREVIEW · CloudSpring IT Solutions</p>
+      <p class="cs-bar__line">Right now Fresha owns “medspa Renmark” and lists rival venues beside your 5.0 rating — want this site on your own skincosmeticclinic.com.au instead?</p>
+    </div>
+    <a class="cs-bar__btn" href="https://api.leadconnectorhq.com/widget/booking/QRPEnWRw2Kx9rBe0Mj6J" target="_blank" rel="noopener">Book a FREE Discovery Call →</a>
+  </div>
+</aside>
+
+<script>
+(function(){
+  var form=document.getElementById('bookForm');
+  var note=document.getElementById('formNote');
+  if(!form) return;
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var name=(document.getElementById('f-name').value||'').trim();
+    var phone=(document.getElementById('f-phone').value||'').trim();
+    if(!name||!phone){
+      note.textContent='Please add your name and mobile so Heidi can get back to you.';
+      note.style.color='#A4553B';
+      (!name?document.getElementById('f-name'):document.getElementById('f-phone')).focus();
+      return;
+    }
+    var loc=document.getElementById('f-loc').value;
+    var treat=document.getElementById('f-treat').value;
+    var msg=(document.getElementById('f-msg').value||'').trim();
+    var body='Name: '+name+'%0D%0AMobile: '+phone+'%0D%0ALocation: '+loc+'%0D%0ATreatment: '+treat+'%0D%0A%0D%0A'+encodeURIComponent(msg);
+    note.textContent='Opening your email app…';
+    note.style.color='';
+    window.location.href='mailto:rediscoveryourconfidence@gmail.com?subject='+encodeURIComponent('Booking enquiry — '+name)+'&body='+body;
+  });
+})();
+</script>
+</body>
+</html>

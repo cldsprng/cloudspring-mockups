@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kutis by Kei Dermatology and Skincare Clinic — Makati City</title>
+<meta name="description" content="Kutis by Kei Dermatology and Skincare Clinic — acne scars, melasma and laser dermatology in Legazpi Village, Makati City. Four branches nationwide. Led by Dr. Kei George Rebolledo.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0B1F2E;
+  --ink-2:#16344A;
+  --slate:#4A6274;
+  --line:#DCE6EC;
+  --paper:#FFFFFF;
+  --mist:#F3F7FA;
+  --sand:#F7F3ED;
+  --blue:#1668A8;
+  --blue-dk:#0E4C7D;
+  --beam:#37A6DE;
+  --gold:#B08650;
+  --shadow-1:0 1px 2px rgba(11,31,46,.06), 0 2px 8px rgba(11,31,46,.06);
+  --shadow-2:0 2px 6px rgba(11,31,46,.07), 0 12px 28px rgba(11,31,46,.10);
+  --shadow-3:0 -2px 10px rgba(11,31,46,.18), 0 -12px 40px rgba(11,31,46,.22);
+  --r-s:8px; --r-m:14px; --r-l:22px; --r-pill:999px;
+  --display:"Marcellus", "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Times New Roman", serif;
+  --body:"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  font-family:var(--body);
+  color:var(--ink);
+  background:var(--paper);
+  font-size:16px;
+  line-height:1.6;
+  padding-bottom:168px; /* space for the fixed CloudSpring bar */
+  overflow-x:hidden;
+}
+h1,h2,h3,h4{font-family:var(--display);font-weight:400;line-height:1.18;margin:0;letter-spacing:.1px}
+p{margin:0}
+a{color:var(--blue-dk)}
+img,svg{max-width:100%;display:block}
+.wrap{width:100%;max-width:1120px;margin:0 auto;padding:0 20px}
+.eyebrow{
+  font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;
+  color:var(--blue);margin:0 0 12px;
+}
+.sec{padding:56px 0}
+.sec-alt{background:var(--mist)}
+.sec-head{max-width:640px;margin:0 0 32px}
+.sec-head h2{font-size:30px}
+.sec-head p{margin-top:12px;color:var(--slate)}
+
+/* ---------- focus ---------- */
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible,[tabindex]:focus-visible{
+  outline:3px solid var(--beam);
+  outline-offset:3px;
+  border-radius:4px;
+}
+
+/* ---------- buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  min-height:48px;padding:12px 22px;border-radius:var(--r-pill);
+  font-family:var(--body);font-size:15px;font-weight:600;text-decoration:none;
+  border:1.5px solid transparent;cursor:pointer;
+  transition:transform .16s ease, background-color .16s ease, border-color .16s ease, box-shadow .16s ease, color .16s ease;
+}
+.btn-primary{background:var(--blue);color:#fff;box-shadow:var(--shadow-1)}
+.btn-primary:hover{background:var(--blue-dk);transform:translateY(-2px);box-shadow:var(--shadow-2)}
+.btn-ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+.btn-ghost:hover{border-color:var(--blue);color:var(--blue-dk);background:#fff;transform:translateY(-2px)}
+.btn-light{background:#fff;color:var(--ink-2);box-shadow:var(--shadow-1)}
+.btn-light:hover{background:var(--sand);transform:translateY(-2px)}
+.btn:active{transform:translateY(0)}
+
+/* ---------- header ---------- */
+.hdr{
+  position:sticky;top:0;z-index:60;background:rgba(255,255,255,.94);
+  backdrop-filter:saturate(180%) blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.hdr-in{display:flex;align-items:center;gap:12px;min-height:64px;padding:8px 20px;max-width:1120px;margin:0 auto}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);min-width:0;flex:1}
+.mark{flex:0 0 auto;width:38px;height:38px}
+.brand-txt{min-width:0}
+.brand-name{font-family:var(--display);font-size:17px;line-height:1.1;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.brand-sub{display:block;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--slate);margin-top:3px}
+.hdr-call{
+  flex:0 0 auto;display:inline-flex;align-items:center;gap:8px;
+  min-height:44px;padding:10px 16px;border-radius:var(--r-pill);
+  background:var(--blue);color:#fff;text-decoration:none;font-weight:600;font-size:14px;
+  transition:background-color .16s ease, transform .16s ease;
+}
+.hdr-call:hover{background:var(--blue-dk);transform:translateY(-1px)}
+.hdr-call .lbl{display:none}
+@media(min-width:520px){.hdr-call .lbl{display:inline}}
+.nav{display:none}
+@media(min-width:900px){
+  .nav{display:flex;gap:6px;margin-right:8px}
+  .nav a{
+    text-decoration:none;color:var(--slate);font-size:14px;font-weight:500;
+    padding:10px 12px;border-radius:var(--r-s);min-height:44px;display:inline-flex;align-items:center;
+    transition:color .16s ease,background-color .16s ease;
+  }
+  .nav a:hover{color:var(--ink);background:var(--mist)}
+}
+
+/* ---------- hero ---------- */
+.hero{position:relative;background:linear-gradient(165deg,#0B1F2E 0%,#123A56 55%,#0D2E46 100%);color:#fff;overflow:hidden}
+.hero::after{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(120% 70% at 78% 8%, rgba(55,166,222,.34) 0%, rgba(55,166,222,0) 62%);
+}
+.hero-in{position:relative;z-index:2;padding:40px 0 52px;display:grid;gap:32px}
+.hero .eyebrow{color:var(--beam)}
+.hero h1{font-size:34px;color:#fff}
+.hero h1 em{font-style:normal;color:var(--beam)}
+.hero-sub{margin-top:16px;color:#C9DCE9;font-size:16.5px;max-width:52ch}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.hero-facts{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px;padding:0;list-style:none}
+.hero-facts li{
+  font-size:13px;color:#DDEAF3;background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.16);border-radius:var(--r-pill);padding:8px 14px;
+}
+.hero-art{position:relative;border-radius:var(--r-l);overflow:hidden;box-shadow:var(--shadow-2)}
+@media(min-width:900px){
+  .hero-in{grid-template-columns:1.05fr .95fr;align-items:center;padding:64px 0 76px;gap:48px}
+  .hero h1{font-size:52px}
+}
+
+/* ---------- press ---------- */
+.press{background:var(--sand);border-top:1px solid #EADFD0;border-bottom:1px solid #EADFD0}
+.press-in{padding:26px 0;display:grid;gap:14px}
+.press-tag{font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;color:var(--gold)}
+.press p{font-family:var(--display);font-size:19px;line-height:1.4;color:var(--ink)}
+.press small{display:block;color:var(--slate);font-size:13px;margin-top:8px;font-family:var(--body)}
+@media(min-width:820px){.press p{font-size:22px}}
+
+/* ---------- cards ---------- */
+.grid{display:grid;gap:16px}
+@media(min-width:640px){.grid-2{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:900px){.grid-3{grid-template-columns:repeat(3,1fr)}.grid-4{grid-template-columns:repeat(4,1fr)}}
+.card{
+  background:#fff;border:1px solid var(--line);border-radius:var(--r-m);padding:22px;
+  box-shadow:var(--shadow-1);transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow-2);border-color:#C4D8E4}
+.card .ico{width:44px;height:44px;margin-bottom:14px}
+.card h3{font-size:19px;margin-bottom:8px}
+.card p{color:var(--slate);font-size:14.5px}
+.card .rate{margin-top:14px;padding-top:12px;border-top:1px dashed var(--line);font-size:13px;color:#8A6D45;background:transparent}
+
+/* ---------- branch switcher ---------- */
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+.tab{
+  min-height:44px;padding:10px 18px;border-radius:var(--r-pill);
+  border:1.5px solid var(--line);background:#fff;color:var(--slate);
+  font-family:var(--body);font-size:14.5px;font-weight:600;cursor:pointer;
+  transition:all .16s ease;
+}
+.tab:hover{border-color:var(--blue);color:var(--blue-dk)}
+.tab[aria-selected="true"]{background:var(--ink);border-color:var(--ink);color:#fff}
+.panel{
+  background:#fff;border:1px solid var(--line);border-radius:var(--r-m);padding:24px;box-shadow:var(--shadow-1);
+}
+.panel[hidden]{display:none}
+.panel h3{font-size:22px;margin-bottom:6px}
+.panel .pill{
+  display:inline-block;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;font-weight:600;
+  color:var(--blue-dk);background:#E7F1F8;border-radius:var(--r-pill);padding:5px 12px;margin-bottom:12px;
+}
+.panel dl{margin:14px 0 0;display:grid;gap:12px}
+.panel dt{font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--slate);font-weight:600}
+.panel dd{margin:4px 0 0;font-size:15.5px}
+.tbc{color:#8A6D45;font-style:italic}
+.panel .acts{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+
+/* ---------- why ---------- */
+.why{display:grid;gap:14px}
+.why-item{display:flex;gap:14px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:var(--r-m);padding:20px;box-shadow:var(--shadow-1)}
+.why-item .ico{flex:0 0 auto;width:36px;height:36px;margin:2px 0 0}
+.why-item h3{font-size:17px;margin-bottom:5px}
+.why-item p{color:var(--slate);font-size:14.5px}
+@media(min-width:820px){.why{grid-template-columns:repeat(2,1fr)}}
+
+/* ---------- about ---------- */
+.about{display:grid;gap:28px;align-items:center}
+.about-art{border-radius:var(--r-l);overflow:hidden;box-shadow:var(--shadow-2)}
+.about p+p{margin-top:14px}
+.about p{color:var(--slate);font-size:15.5px}
+.sig{margin-top:20px;font-family:var(--display);font-size:19px;color:var(--ink)}
+.sig span{display:block;font-family:var(--body);font-size:13px;color:var(--slate);letter-spacing:.06em;margin-top:4px}
+@media(min-width:900px){.about{grid-template-columns:.9fr 1.1fr;gap:44px}}
+
+/* ---------- contact ---------- */
+.contact{display:grid;gap:22px}
+@media(min-width:900px){.contact{grid-template-columns:1fr 1fr;gap:32px}}
+.info{background:#fff;border:1px solid var(--line);border-radius:var(--r-m);padding:24px;box-shadow:var(--shadow-1)}
+.info dl{margin:0;display:grid;gap:16px}
+.info dt{font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--slate);font-weight:600}
+.info dd{margin:5px 0 0;font-size:15.5px}
+.info a{color:var(--blue-dk);text-decoration:none;border-bottom:1px solid rgba(22,104,168,.3);transition:color .16s ease,border-color .16s ease}
+.info a:hover{color:var(--blue);border-color:var(--blue)}
+.mapbox{border-radius:var(--r-m);overflow:hidden;border:1px solid var(--line);margin-top:18px;position:relative}
+.mapbox .caption{position:absolute;left:12px;bottom:12px;background:rgba(255,255,255,.94);border-radius:var(--r-s);padding:8px 12px;font-size:12.5px;color:var(--slate);box-shadow:var(--shadow-1);max-width:calc(100% - 24px)}
+form{background:#fff;border:1px solid var(--line);border-radius:var(--r-m);padding:24px;box-shadow:var(--shadow-1)}
+.field{margin-bottom:16px}
+label{display:block;font-size:13px;font-weight:600;margin-bottom:6px;color:var(--ink-2)}
+input,textarea,select{
+  width:100%;min-height:48px;padding:12px 14px;border:1.5px solid var(--line);border-radius:var(--r-s);
+  font-family:var(--body);font-size:15px;color:var(--ink);background:#fff;
+  transition:border-color .16s ease, box-shadow .16s ease;
+}
+textarea{min-height:110px;resize:vertical}
+input:hover,textarea:hover,select:hover{border-color:#B9CEDC}
+input:focus,textarea:focus,select:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(22,104,168,.14);outline:none}
+.form-note{font-size:12.5px;color:var(--slate);margin-top:12px}
+
+/* ---------- footer ---------- */
+.ftr{background:var(--ink);color:#B9CEDC;padding:40px 0 34px;margin-top:8px}
+.ftr-in{display:grid;gap:22px}
+.ftr h4{color:#fff;font-size:19px;margin-bottom:8px}
+.ftr p,.ftr li{font-size:14px}
+.ftr ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.ftr a{color:#DCEAF4;text-decoration:none;border-bottom:1px solid rgba(220,234,244,.25)}
+.ftr a:hover{color:#fff;border-color:#fff}
+.ftr-btm{margin-top:26px;padding-top:20px;border-top:1px solid rgba(255,255,255,.14);font-size:13px;display:grid;gap:6px}
+.cs-credit{color:#EDF4F9}
+@media(min-width:760px){.ftr-in{grid-template-columns:1.4fr 1fr 1fr}}
+
+/* ---------- CloudSpring bar ---------- */
+.cs-bar{
+  position:fixed;left:0;right:0;bottom:0;z-index:200;
+  background:rgba(9,25,38,.94);
+  backdrop-filter:saturate(160%) blur(12px);
+  border-top:1px solid rgba(55,166,222,.35);
+  box-shadow:var(--shadow-3);
+  padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px));
+}
+.cs-in{
+  max-width:1120px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;
+  gap:10px 18px;justify-content:center;text-align:center;
+}
+.cs-txt{min-width:0}
+.cs-eyebrow{
+  font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;
+  color:#6FC5EE;margin:0 0 4px;
+}
+.cs-line{color:#fff;font-size:15px;font-weight:600;line-height:1.35;margin:0}
+.cs-btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  min-height:48px;padding:13px 24px;border-radius:var(--r-pill);
+  background:var(--beam);color:#06202F;font-weight:700;font-size:14.5px;text-decoration:none;white-space:nowrap;
+  box-shadow:0 0 0 0 rgba(55,166,222,.55);
+  animation:csPulse 2.4s ease-out infinite;
+  transition:background-color .16s ease, transform .16s ease;
+}
+.cs-btn:hover{background:#5EBDEA;transform:translateY(-2px);animation:none}
+@keyframes csPulse{
+  0%{box-shadow:0 0 0 0 rgba(55,166,222,.5)}
+  70%{box-shadow:0 0 0 14px rgba(55,166,222,0)}
+  100%{box-shadow:0 0 0 0 rgba(55,166,222,0)}
+}
+@media(min-width:640px){
+  .cs-in{flex-wrap:nowrap;justify-content:space-between;text-align:left}
+  .cs-line{font-size:16px}
+  body{padding-bottom:120px}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none !important;transition-duration:.01ms !important;scroll-behavior:auto !important}
+  .cs-btn{box-shadow:0 0 0 3px rgba(55,166,222,.45)}
+}
+html{scroll-behavior:smooth}
+.skip{position:absolute;left:-9999px;top:0;background:#fff;color:var(--ink);padding:12px 18px;z-index:300;border-radius:0 0 var(--r-s) 0}
+.skip:focus{left:0}
+</style>
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="hdr">
+  <div class="hdr-in">
+    <a class="brand" href="#top" aria-label="Kutis by Kei Dermatology and Skincare Clinic — home">
+      <svg class="mark" viewBox="0 0 48 48" role="img" aria-hidden="true" focusable="false">
+        <circle cx="24" cy="24" r="23" fill="#0B1F2E"/>
+        <path d="M24 10c7.7 0 14 6.3 14 14s-6.3 14-14 14" fill="none" stroke="#37A6DE" stroke-width="2.4" stroke-linecap="round"/>
+        <text x="24" y="30" text-anchor="middle" font-family="Marcellus, Georgia, serif" font-size="17" fill="#ffffff">K</text>
+      </svg>
+      <span class="brand-txt">
+        <span class="brand-name">Kutis by Kei</span>
+        <span class="brand-sub">Dermatology &amp; Skincare</span>
+      </span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#services">Treatments</a>
+      <a href="#branches">Branches</a>
+      <a href="#about">Dr. Kei</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="hdr-call" href="tel:+639383782582" aria-label="Call Kutis by Kei at 0938 378 2582">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .3 1.9.6 2.8a2 2 0 0 1-.5 2.1L8.1 9.7a16 16 0 0 0 6 6l1.1-1.1a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.8.6a2 2 0 0 1 1.7 2Z"/></svg>
+      <span class="lbl">0938 378 2582</span>
+    </a>
+  </div>
+</header>
+
+<main id="main">
+<a id="top"></a>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-in">
+    <div>
+      <p class="eyebrow">Legazpi Village · Makati City</p>
+      <h1>Newly redesigned Makati clinic, now with the <em>450nm Blue Laser</em></h1>
+      <p class="hero-sub">Kutis by Kei Dermatology and Skincare Clinic treats acne scars, melasma and pigmentation with medical-grade laser dermatology — under the care of Dr. Kei George Rebolledo.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="tel:+639383782582">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .3 1.9.6 2.8a2 2 0 0 1-.5 2.1L8.1 9.7a16 16 0 0 0 6 6l1.1-1.1a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.8.6a2 2 0 0 1 1.7 2Z"/></svg>
+          Call 0938 378 2582
+        </a>
+        <a class="btn btn-light" href="https://www.facebook.com/kutisbykei/" target="_blank" rel="noopener">Message us on Facebook</a>
+      </div>
+      <ul class="hero-facts">
+        <li>5.0★ from 377 Google reviews <span aria-hidden="true">·</span> Aug 2026</li>
+        <li>4 branches · Makati, Mandaluyong, QC, Parañaque</li>
+        <li>Vossman Blauman 450nm Blue Laser</li>
+      </ul>
+    </div>
+    <div class="hero-art">
+      <svg viewBox="0 0 560 420" role="img" aria-label="Illustration of a redesigned dermatology treatment room with a blue laser device">
+        <defs>
+          <linearGradient id="kRoom" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#F4F9FC"/><stop offset="100%" stop-color="#DCE9F2"/>
+          </linearGradient>
+          <linearGradient id="kWall" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#123A56"/><stop offset="100%" stop-color="#0B2033"/>
+          </linearGradient>
+          <linearGradient id="kBeam" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#37A6DE" stop-opacity=".85"/><stop offset="100%" stop-color="#37A6DE" stop-opacity="0"/>
+          </linearGradient>
+          <linearGradient id="kBed" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#FFFFFF"/><stop offset="100%" stop-color="#E4EEF5"/>
+          </linearGradient>
+        </defs>
+        <rect width="560" height="420" fill="url(#kWall)"/>
+        <rect x="34" y="30" width="492" height="292" rx="16" fill="url(#kRoom)"/>
+        <!-- window slats -->
+        <rect x="60" y="56" width="150" height="150" rx="8" fill="#CFE2EE"/>
+        <g stroke="#FFFFFF" stroke-width="5" opacity=".85">
+          <line x1="60" y1="86" x2="210" y2="86"/><line x1="60" y1="116" x2="210" y2="116"/>
+          <line x1="60" y1="146" x2="210" y2="146"/><line x1="60" y1="176" x2="210" y2="176"/>
+        </g>
+        <!-- treatment bed -->
+        <rect x="58" y="234" width="290" height="46" rx="18" fill="url(#kBed)"/>
+        <rect x="58" y="222" width="104" height="24" rx="12" fill="#FFFFFF"/>
+        <rect x="86" y="280" width="14" height="42" rx="6" fill="#B9CEDC"/>
+        <rect x="300" y="280" width="14" height="42" rx="6" fill="#B9CEDC"/>
+        <!-- laser device -->
+        <rect x="386" y="150" width="108" height="172" rx="14" fill="#123A56"/>
+        <rect x="400" y="168" width="80" height="52" rx="8" fill="#0B1F2E"/>
+        <circle cx="440" cy="194" r="15" fill="#37A6DE"/>
+        <circle cx="440" cy="194" r="7" fill="#BFE7F8"/>
+        <rect x="400" y="236" width="80" height="9" rx="4.5" fill="#2C5C7D"/>
+        <rect x="400" y="254" width="54" height="9" rx="4.5" fill="#2C5C7D"/>
+        <!-- articulated arm + beam -->
+        <path d="M386 196 L322 214 L268 244" stroke="#2C5C7D" stroke-width="9" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="322" cy="214" r="8" fill="#0B1F2E"/>
+        <path d="M268 244 L206 252 L196 268 L268 258 Z" fill="url(#kBeam)"/>
+        <circle cx="268" cy="244" r="9" fill="#37A6DE"/>
+        <!-- plant -->
+        <path d="M470 322 v-38" stroke="#5C7F6E" stroke-width="5" stroke-linecap="round"/>
+        <path d="M470 296 c-22 -4 -30 -22 -28 -34 14 -2 30 10 28 34 Z" fill="#6E9A85"/>
+        <path d="M470 302 c20 -6 26 -24 22 -35 -13 0 -27 13 -22 35 Z" fill="#87B49E"/>
+        <rect x="452" y="322" width="38" height="30" rx="6" fill="#B08650"/>
+        <!-- floor -->
+        <rect x="0" y="322" width="560" height="98" fill="#0B1F2E"/>
+        <rect x="34" y="322" width="492" height="14" fill="#0A2C42"/>
+        <ellipse cx="280" cy="372" rx="212" ry="26" fill="#123A56" opacity=".7"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- PRESS -->
+<section class="press">
+  <div class="wrap press-in">
+    <p class="press-tag">In the news</p>
+    <p>The Manila Times covered the redesign of our Makati clinic and the arrival of the Vossman Blauman 450nm Blue Laser.</p>
+    <small>The Manila Times, 8 August 2026. Reported as a renovation of the existing Makati branch, which opened in 2024.</small>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="sec" id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Treatments</p>
+      <h2>Dermatology and skincare, led by a doctor</h2>
+      <p>Focused care for the concerns Filipinos bring to us most often — acne scarring, melasma and pigmentation — supported by medical laser technology.</p>
+    </div>
+    <div class="grid grid-3">
+      <article class="card">
+        <svg class="ico" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+          <circle cx="24" cy="24" r="20" stroke="#1668A8" stroke-width="2.4"/>
+          <circle cx="18" cy="19" r="3" fill="#37A6DE"/><circle cx="30" cy="22" r="2.4" fill="#37A6DE"/>
+          <circle cx="22" cy="31" r="2.6" fill="#B08650"/>
+          <path d="M13 34c4-3 9-4 14-3" stroke="#1668A8" stroke-width="2.2" stroke-linecap="round"/>
+        </svg>
+        <h3>Acne &amp; acne scars</h3>
+        <p>Assessment and treatment of active acne and the textured scarring it leaves behind.</p>
+        <p class="rate">₱ ___ — your actual rates go here</p>
+      </article>
+      <article class="card">
+        <svg class="ico" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+          <path d="M8 32c6-14 12-20 20-22 8-2 12 4 11 11-1 9-9 15-19 15-6 0-10-2-12-4Z" stroke="#1668A8" stroke-width="2.4" stroke-linejoin="round"/>
+          <path d="M17 27c4-4 9-6 14-6" stroke="#37A6DE" stroke-width="2.2" stroke-linecap="round"/>
+          <circle cx="31" cy="17" r="2.6" fill="#B08650"/>
+        </svg>
+        <h3>Melasma &amp; pigmentation</h3>
+        <p>Managing melasma, dark spots and uneven tone with a doctor-led plan rather than one-off sessions.</p>
+        <p class="rate">₱ ___ — your actual rates go here</p>
+      </article>
+      <article class="card">
+        <svg class="ico" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+          <rect x="10" y="8" width="17" height="17" rx="4" stroke="#1668A8" stroke-width="2.4"/>
+          <path d="M27 17 L38 30 L34 34 L23 24" fill="#37A6DE" opacity=".35"/>
+          <path d="M18.5 25 L18.5 40" stroke="#37A6DE" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="18.5" cy="40" r="3.6" fill="#1668A8"/>
+        </svg>
+        <h3>Laser dermatology</h3>
+        <p>Including the Vossman Blauman 450nm Blue Laser now installed at our Makati clinic.</p>
+        <p class="rate">₱ ___ — your actual rates go here</p>
+      </article>
+      <article class="card">
+        <svg class="ico" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+          <path d="M24 8v32M8 24h32" stroke="#DCE6EC" stroke-width="2.4" stroke-linecap="round"/>
+          <circle cx="24" cy="24" r="15" stroke="#B08650" stroke-width="2.4" stroke-dasharray="5 5"/>
+        </svg>
+        <h3>Full treatment menu</h3>
+        <p><span class="tbc">Complete service list — to be confirmed.</span> The clinic's other procedures and packages would be listed here.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- BRANCHES -->
+<section class="sec sec-alt" id="branches">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Our clinics</p>
+      <h2>Four branches — pick the one nearest you</h2>
+      <p>One clinic, four locations across Metro Manila, with a fifth planned in Angeles City.</p>
+    </div>
+
+    <div class="tabs" role="tablist" aria-label="Branch selector">
+      <button class="tab" role="tab" id="tab-mkt" aria-controls="p-mkt" aria-selected="true">Makati</button>
+      <button class="tab" role="tab" id="tab-mnd" aria-controls="p-mnd" aria-selected="false" tabindex="-1">Mandaluyong</button>
+      <button class="tab" role="tab" id="tab-qc"  aria-controls="p-qc"  aria-selected="false" tabindex="-1">Quezon City</button>
+      <button class="tab" role="tab" id="tab-prq" aria-controls="p-prq" aria-selected="false" tabindex="-1">Parañaque</button>
+      <button class="tab" role="tab" id="tab-ang" aria-controls="p-ang" aria-selected="false" tabindex="-1">Angeles City</button>
+    </div>
+
+    <div class="panel" id="p-mkt" role="tabpanel" aria-labelledby="tab-mkt" tabindex="0">
+      <span class="pill">Newly redesigned · 2026</span>
+      <h3>Makati City</h3>
+      <dl>
+        <dt>Address</dt>
+        <dd>3rd Floor, Allianceland Tower, 101 Paseo de Roxas, Legazpi Village, Makati City</dd>
+        <dt>Phone</dt>
+        <dd><a href="tel:+639383782582">0938 378 2582</a></dd>
+        <dt>Clinic hours</dt>
+        <dd class="tbc">Clinic hours — to be confirmed</dd>
+        <dt>Notes</dt>
+        <dd>Opened 2024. Redesigned in 2026 and now home to the Vossman Blauman 450nm Blue Laser.</dd>
+      </dl>
+      <div class="acts">
+        <a class="btn btn-primary" href="tel:+639383782582">Call this branch</a>
+        <a class="btn btn-ghost" href="https://www.facebook.com/kutisbykei/" target="_blank" rel="noopener">Message on Facebook</a>
+      </div>
+    </div>
+
+    <div class="panel" id="p-mnd" role="tabpanel" aria-labelledby="tab-mnd" tabindex="0" hidden>
+      <h3>Mandaluyong City</h3>
+      <dl>
+        <dt>Address</dt><dd class="tbc">Branch address — to be confirmed</dd>
+        <dt>Phone</dt><dd><a href="tel:+639383782582">0938 378 2582</a> <span class="tbc">(main line)</span></dd>
+        <dt>Clinic hours</dt><dd class="tbc">Clinic hours — to be confirmed</dd>
+      </dl>
+      <div class="acts">
+        <a class="btn btn-primary" href="tel:+639383782582">Call the clinic</a>
+        <a class="btn btn-ghost" href="https://www.facebook.com/kutisbykei/" target="_blank" rel="noopener">Message on Facebook</a>
+      </div>
+    </div>
+
+    <div class="panel" id="p-qc" role="tabpanel" aria-labelledby="tab-qc" tabindex="0" hidden>
+      <h3>Quezon City</h3>
+      <dl>
+        <dt>Address</dt><dd class="tbc">Branch address — to be confirmed</dd>
+        <dt>Phone</dt><dd><a href="tel:+639383782582">0938 378 2582</a> <span class="tbc">(main line)</span></dd>
+        <dt>Clinic hours</dt><dd class="tbc">Clinic hours — to be confirmed</dd>
+      </dl>
+      <div class="acts">
+        <a class="btn btn-primary" href="tel:+639383782582">Call the clinic</a>
+        <a class="btn btn-ghost" href="https://www.facebook.com/kutisbykei/" target="_blank" rel="noopener">Message on Facebook</a>
+      </div>
+    </div>
+
+    <div class="panel" id="p-prq" role="tabpanel" aria-labelledby="tab-prq" tabindex="0" hidden>
+      <h3>Parañaque City</h3>
+      <dl>
+        <dt>Address</dt><dd class="tbc">Branch address — to be confirmed</dd>
+        <dt>Phone</dt><dd><a href="tel:+639383782582">0938 378 2582</a> <span class="tbc">(main line)</span></dd>
+        <dt>Clinic hours</dt><dd class="tbc">Clinic hours — to be confirmed</dd>
+      </dl>
+      <div class="acts">
+        <a class="btn btn-primary" href="tel:+639383782582">Call the clinic</a>
+        <a class="btn btn-ghost" href="https://www.facebook.com/kutisbykei/" target="_blank" rel="noopener">Message on Facebook</a>
+      </div>
+    </div>
+
+    <div class="panel" id="p-ang" role="tabpanel" aria-labelledby="tab-ang" tabindex="0" hidden>
+      <span class="pill">Planned</span>
+      <h3>Angeles City</h3>
+      <dl>
+        <dt>Status</dt><dd>A fifth branch is planned for Angeles City.</dd>
+        <dt>Address &amp; opening date</dt><dd class="tbc">To be confirmed</dd>
+      </dl>
+      <div class="acts">
+        <a class="btn btn-ghost" href="https://www.facebook.com/kutisbykei/" target="_blank" rel="noopener">Follow us for updates</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Why patients choose us</p>
+      <h2>Doctor-led care, four locations, one standard</h2>
+    </div>
+    <div class="why">
+      <div class="why-item">
+        <svg class="ico" viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M20 5l4.6 9.4 10.4 1.5-7.5 7.3 1.8 10.3L20 28.6l-9.3 4.9 1.8-10.3L5 15.9l10.4-1.5L20 5Z" stroke="#B08650" stroke-width="2.2" stroke-linejoin="round"/></svg>
+        <div><h3>5.0★ from 377 Google reviews</h3><p>As recorded on Google in August 2026 — patients rate the clinic 5.0 out of 5.</p></div>
+      </div>
+      <div class="why-item">
+        <svg class="ico" viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect x="6" y="14" width="28" height="20" rx="4" stroke="#1668A8" stroke-width="2.2"/><path d="M14 14V9a6 6 0 0 1 12 0v5" stroke="#37A6DE" stroke-width="2.2"/><circle cx="20" cy="24" r="3" fill="#1668A8"/></svg>
+        <div><h3>Led by Dr. Kei George Rebolledo</h3><p>Every branch operates under the clinic's founding dermatologist.</p></div>
+      </div>
+      <div class="why-item">
+        <svg class="ico" viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M20 35s12-8.6 12-16A12 12 0 0 0 8 19c0 7.4 12 16 12 16Z" stroke="#1668A8" stroke-width="2.2" stroke-linejoin="round"/><circle cx="20" cy="19" r="4.2" fill="#37A6DE"/></svg>
+        <div><h3>Four branches, one clinic</h3><p>Makati, Mandaluyong, Quezon City and Parañaque — with Angeles City planned.</p></div>
+      </div>
+      <div class="why-item">
+        <svg class="ico" viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect x="7" y="8" width="26" height="24" rx="4" stroke="#1668A8" stroke-width="2.2"/><path d="M13 16h14M13 22h10" stroke="#37A6DE" stroke-width="2.2" stroke-linecap="round"/></svg>
+        <div><h3>Covered by The Manila Times</h3><p>Our Makati redesign and new 450nm Blue Laser were reported on 8 August 2026.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="sec sec-alt" id="about">
+  <div class="wrap about">
+    <div class="about-art">
+      <svg viewBox="0 0 420 400" role="img" aria-label="Portrait illustration of a dermatologist in a clinic coat">
+        <defs>
+          <linearGradient id="kAbout" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#123A56"/><stop offset="100%" stop-color="#0B1F2E"/></linearGradient>
+        </defs>
+        <rect width="420" height="400" fill="url(#kAbout)"/>
+        <circle cx="210" cy="150" r="112" fill="#164661" opacity=".55"/>
+        <path d="M120 400c0-56 40-96 90-96s90 40 90 96Z" fill="#F4F9FC"/>
+        <path d="M172 316c0 40 76 40 76 0v-30h-76Z" fill="#E1CFBE"/>
+        <circle cx="210" cy="250" r="60" fill="#EEDCCB"/>
+        <path d="M150 246c0-42 28-62 60-62s60 20 60 62c0-26-24-34-60-34s-60 8-60 34Z" fill="#2A2320"/>
+        <circle cx="190" cy="248" r="4.4" fill="#2A2320"/><circle cx="230" cy="248" r="4.4" fill="#2A2320"/>
+        <path d="M198 276c8 6 16 6 24 0" stroke="#B8836A" stroke-width="3.4" stroke-linecap="round" fill="none"/>
+        <path d="M180 322 L210 356 L240 322 l38 20 v58 H142 v-58Z" fill="#FFFFFF"/>
+        <path d="M210 356 v44" stroke="#DCE6EC" stroke-width="3"/>
+        <rect x="252" y="352" width="26" height="8" rx="4" fill="#37A6DE"/>
+        <path d="M262 360 v26 a12 12 0 0 0 24 0 v-14" stroke="#37A6DE" stroke-width="3.4" fill="none" stroke-linecap="round"/>
+        <circle cx="286" cy="368" r="6" fill="#1668A8"/>
+      </svg>
+    </div>
+    <div>
+      <p class="eyebrow">About the clinic</p>
+      <h2>Kutis by Kei Dermatology and Skincare Clinic</h2>
+      <p style="margin-top:14px">Kutis by Kei is a dermatology and skincare clinic founded by Dr. Kei George Rebolledo, focused on acne scarring, melasma and pigmentation, and laser dermatology.</p>
+      <p>The clinic now runs four branches — Parañaque, Mandaluyong, Quezon City and Makati — with a fifth planned in Angeles City. The Makati clinic, in Legazpi Village, opened in 2024 and was redesigned in 2026, when it also took delivery of the Vossman Blauman 450nm Blue Laser.</p>
+      <p>As of August 2026, patients rate the clinic 5.0★ across 377 Google reviews.</p>
+      <p class="sig">Dr. Kei George Rebolledo<span>Founder, Kutis by Kei Dermatology and Skincare Clinic</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="sec" id="contact">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Visit or enquire</p>
+      <h2>Contact the Makati clinic</h2>
+      <p>Call us directly, message us on Facebook or Instagram, or send an enquiry below.</p>
+    </div>
+    <div class="contact">
+      <div class="info">
+        <dl>
+          <dt>Address</dt>
+          <dd>3rd Floor, Allianceland Tower<br>101 Paseo de Roxas, Legazpi Village<br>Makati City, Philippines</dd>
+          <dt>Phone</dt>
+          <dd><a href="tel:+639383782582">0938 378 2582</a></dd>
+          <dt>Facebook</dt>
+          <dd><a href="https://www.facebook.com/kutisbykei/" target="_blank" rel="noopener">facebook.com/kutisbykei</a></dd>
+          <dt>Instagram</dt>
+          <dd><a href="https://www.instagram.com/kutisbykeiclinic/" target="_blank" rel="noopener">@kutisbykeiclinic</a></dd>
+          <dt>Clinic hours</dt>
+          <dd class="tbc">Clinic hours — to be confirmed</dd>
+        </dl>
+        <div class="mapbox">
+          <svg viewBox="0 0 520 260" role="img" aria-label="Stylised map showing the clinic on Paseo de Roxas, Legazpi Village, Makati City">
+            <rect width="520" height="260" fill="#EEF4F8"/>
+            <g stroke="#DCE6EC" stroke-width="10">
+              <line x1="0" y1="66" x2="520" y2="66"/><line x1="0" y1="150" x2="520" y2="150"/>
+              <line x1="0" y1="222" x2="520" y2="222"/>
+              <line x1="112" y1="0" x2="112" y2="260"/><line x1="266" y1="0" x2="266" y2="260"/>
+              <line x1="404" y1="0" x2="404" y2="260"/>
+            </g>
+            <rect x="0" y="102" width="520" height="18" fill="#CFE2EE"/>
+            <g fill="#E2EBF1">
+              <rect x="130" y="80" width="120" height="56" rx="5"/><rect x="286" y="80" width="98" height="56" rx="5"/>
+              <rect x="130" y="166" width="86" height="44" rx="5"/><rect x="290" y="166" width="96" height="44" rx="5"/>
+              <rect x="424" y="80" width="76" height="56" rx="5"/>
+            </g>
+            <circle cx="266" cy="111" r="26" fill="rgba(22,104,168,.16)"/>
+            <path d="M266 89c-9.4 0-17 7.6-17 17 0 12.7 17 27 17 27s17-14.3 17-27c0-9.4-7.6-17-17-17Z" fill="#1668A8"/>
+            <circle cx="266" cy="106" r="6.2" fill="#fff"/>
+          </svg>
+          <span class="caption">Allianceland Tower, 101 Paseo de Roxas — illustrative map</span>
+        </div>
+      </div>
+
+      <form id="enquiry" novalidate>
+        <div class="field">
+          <label for="k-name">Your name</label>
+          <input id="k-name" name="name" type="text" autocomplete="name" placeholder="Juan dela Cruz">
+        </div>
+        <div class="field">
+          <label for="k-phone">Mobile number</label>
+          <input id="k-phone" name="phone" type="tel" autocomplete="tel" placeholder="09XX XXX XXXX">
+        </div>
+        <div class="field">
+          <label for="k-branch">Preferred branch</label>
+          <select id="k-branch" name="branch">
+            <option>Makati</option><option>Mandaluyong</option><option>Quezon City</option><option>Parañaque</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="k-msg">What would you like to ask about?</label>
+          <textarea id="k-msg" name="message" placeholder="e.g. acne scars, melasma, laser treatment"></textarea>
+        </div>
+        <button class="btn btn-primary" type="submit" style="width:100%">Send</button>
+        <p class="form-note">This preview form opens our Facebook page so you can send the message there. A live booking form can be connected later.</p>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="ftr">
+  <div class="wrap ftr-in">
+    <div>
+      <h4>Kutis by Kei</h4>
+      <p>Dermatology and Skincare Clinic<br>Legazpi Village, Makati City, Philippines</p>
+    </div>
+    <div>
+      <h4>Branches</h4>
+      <ul>
+        <li>Makati City</li><li>Mandaluyong City</li><li>Quezon City</li><li>Parañaque City</li>
+        <li>Angeles City <span style="opacity:.7">(planned)</span></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Reach us</h4>
+      <ul>
+        <li><a href="tel:+639383782582">0938 378 2582</a></li>
+        <li><a href="https://www.facebook.com/kutisbykei/" target="_blank" rel="noopener">Facebook</a></li>
+        <li><a href="https://www.instagram.com/kutisbykeiclinic/" target="_blank" rel="noopener">Instagram</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap ftr-btm">
+    <p>© 2026 Kutis by Kei Dermatology and Skincare Clinic, Makati City.</p>
+    <p class="cs-credit">Website by CloudSpring IT Solutions</p>
+  </div>
+</footer>
+
+<!-- CLOUDSPRING PREVIEW BAR -->
+<aside class="cs-bar" aria-label="CloudSpring IT Solutions preview">
+  <div class="cs-in">
+    <div class="cs-txt">
+      <p class="cs-eyebrow">PREVIEW · CloudSpring IT Solutions</p>
+      <p class="cs-line">Want this website + online booking, so your press coverage lands on you — not a directory?</p>
+    </div>
+    <a class="cs-btn" href="https://api.leadconnectorhq.com/widget/booking/QRPEnWRw2Kx9rBe0Mj6J" target="_blank" rel="noopener">Book a FREE Discovery Call →</a>
+  </div>
+</aside>
+
+<script>
+(function(){
+  // Branch tabs
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('.tab'));
+  function select(tab){
+    tabs.forEach(function(t){
+      var on = t === tab;
+      t.setAttribute('aria-selected', on ? 'true' : 'false');
+      t.tabIndex = on ? 0 : -1;
+      document.getElementById(t.getAttribute('aria-controls')).hidden = !on;
+    });
+  }
+  tabs.forEach(function(t, i){
+    t.addEventListener('click', function(){ select(t); });
+    t.addEventListener('keydown', function(e){
+      var d = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
+      if(!d) return;
+      e.preventDefault();
+      var n = tabs[(i + d + tabs.length) % tabs.length];
+      select(n); n.focus();
+    });
+  });
+
+  // Enquiry form -> Facebook page
+  var f = document.getElementById('enquiry');
+  if(f){
+    f.addEventListener('submit', function(e){
+      e.preventDefault();
+      window.open('https://www.facebook.com/kutisbykei/', '_blank', 'noopener');
+    });
+  }
+})();
+</script>
+</body>
+</html>

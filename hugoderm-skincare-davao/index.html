@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HugoDerm Skincare Clinic — Dermatology Clinic in Davao City</title>
+<meta name="description" content="HugoDerm Skincare Clinic, 2/F Davao Yakal Tire Supply Bldg, 99 Roxas Ave, Poblacion, Davao City. Facials, wart removal, sclerotherapy, fillers, peels and more. Open Tue–Sat, 10:00–20:00.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0e2436;
+  --ink-2:#2c4459;
+  --muted:#5f7789;
+  --navy-900:#0b2b42;
+  --navy-800:#0f3a58;
+  --blue-700:#12587f;
+  --aqua-500:#1a9bab;
+  --aqua-300:#7ed3dc;
+  --aqua-050:#edf7f9;
+  --mist:#f4f8fa;
+  --amber:#b5822c;
+  --line:#dbe6ec;
+  --white:#fff;
+  --shadow-sm:0 1px 2px rgba(11,43,66,.07), 0 2px 8px rgba(11,43,66,.06);
+  --shadow-md:0 4px 12px rgba(11,43,66,.10), 0 12px 30px rgba(11,43,66,.08);
+  --shadow-lg:0 10px 26px rgba(11,43,66,.13), 0 26px 60px rgba(11,43,66,.11);
+  --r-sm:8px; --r-md:16px; --r-lg:24px; --r-pill:999px;
+  --display:"Sora",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --body:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%; scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{
+  margin:0; background:var(--white); color:var(--ink);
+  font-family:var(--body); font-size:16px; line-height:1.6;
+  padding-bottom:184px; -webkit-font-smoothing:antialiased;
+}
+@media (min-width:640px){body{padding-bottom:132px}}
+img,svg{max-width:100%; display:block}
+h1,h2,h3{font-family:var(--display); font-weight:600; line-height:1.16; margin:0 0 12px; letter-spacing:-.02em}
+h1{font-size:32px}
+h2{font-size:26px}
+h3{font-size:17.5px; font-weight:600}
+p{margin:0 0 16px}
+a{color:var(--blue-700)}
+.wrap{width:100%; max-width:1080px; margin:0 auto; padding:0 20px}
+.eyebrow{font-size:12px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--aqua-500); margin:0 0 8px; font-family:var(--body)}
+.section{padding:56px 0}
+.section--tint{background:var(--aqua-050)}
+.section--mist{background:var(--mist)}
+:focus-visible{outline:3px solid var(--aqua-500); outline-offset:3px; border-radius:4px}
+
+/* Header */
+.site-header{position:sticky; top:0; z-index:60; background:rgba(255,255,255,.95); backdrop-filter:saturate(180%) blur(10px); border-bottom:1px solid var(--line)}
+.header-inner{display:flex; align-items:center; gap:12px; min-height:64px; padding:8px 20px; max-width:1080px; margin:0 auto}
+.brand{display:flex; align-items:center; gap:10px; text-decoration:none; color:var(--ink); min-height:44px}
+.brand-mark{width:38px; height:38px; flex:0 0 38px}
+.brand-name{font-family:var(--display); font-weight:700; font-size:17px; line-height:1.1; letter-spacing:-.02em}
+.brand-sub{display:block; font-family:var(--body); font-size:10.5px; font-weight:600; letter-spacing:.12em; text-transform:uppercase; color:var(--muted)}
+.header-cta{margin-left:auto; display:inline-flex; align-items:center; gap:8px; min-height:44px; padding:10px 16px; border-radius:var(--r-pill); background:var(--blue-700); color:#fff; text-decoration:none; font-weight:700; font-size:14px; white-space:nowrap; box-shadow:var(--shadow-sm); transition:background .18s ease, transform .18s ease, box-shadow .18s ease}
+.header-cta:hover{background:var(--navy-900); transform:translateY(-1px); box-shadow:var(--shadow-md)}
+.header-cta .label-long{display:none}
+@media (min-width:540px){.header-cta .label-long{display:inline} .header-cta .label-short{display:none}}
+
+/* Hero */
+.hero{position:relative; overflow:hidden; background:linear-gradient(165deg,#0b2b42 0%, #12587f 62%, #1a9bab 130%); color:#eaf6f8}
+.hero::after{content:""; position:absolute; inset:0; background:radial-gradient(90% 70% at 100% 0%, rgba(126,211,220,.24), rgba(126,211,220,0) 60%); pointer-events:none}
+.hero-inner{position:relative; z-index:2; padding:38px 20px 46px; max-width:1080px; margin:0 auto}
+.hero-grid{display:grid; gap:26px}
+@media (min-width:920px){.hero-inner{padding:64px 20px 74px} .hero-grid{grid-template-columns:1.08fr .92fr; align-items:center; gap:44px}}
+.hero h1{font-size:clamp(29px,6.8vw,46px); color:#fff; margin-bottom:14px}
+.hero h1 .accent{color:var(--aqua-300)}
+.hero-lede{font-size:17px; color:#cfe6ec; max-width:46ch}
+@media (min-width:920px){.hero-lede{font-size:18px}}
+.hero-tag{display:inline-flex; align-items:center; gap:8px; padding:7px 14px; border-radius:var(--r-pill); background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.24); font-size:12.5px; font-weight:600; color:#e6f6f8; margin-bottom:16px}
+.hero-tag svg{width:15px; height:15px}
+.hero-actions{display:flex; flex-wrap:wrap; gap:12px; margin:24px 0 0}
+.btn{display:inline-flex; align-items:center; justify-content:center; gap:9px; min-height:48px; padding:12px 22px; border-radius:var(--r-pill); font-family:var(--body); font-weight:700; font-size:15.5px; text-decoration:none; cursor:pointer; border:1.5px solid transparent; transition:background .18s ease, color .18s ease, transform .18s ease, box-shadow .18s ease, border-color .18s ease}
+.btn svg{width:18px; height:18px; flex:0 0 18px}
+.btn-primary{background:var(--aqua-500); color:#04222a; box-shadow:var(--shadow-md)}
+.btn-primary:hover{background:var(--aqua-300); transform:translateY(-2px); box-shadow:var(--shadow-lg)}
+.btn-primary:active{transform:translateY(0)}
+.btn-outline{background:transparent; color:#fff; border-color:rgba(255,255,255,.42)}
+.btn-outline:hover{background:rgba(255,255,255,.12); border-color:#fff; transform:translateY(-2px)}
+.btn-solid{background:var(--blue-700); color:#fff; box-shadow:var(--shadow-md)}
+.btn-solid:hover{background:var(--navy-900); transform:translateY(-2px); box-shadow:var(--shadow-lg)}
+
+/* Address card — the hero's proof piece */
+.addr-card{background:rgba(255,255,255,.97); color:var(--ink); border-radius:var(--r-lg); padding:22px 20px; box-shadow:var(--shadow-lg); border:1px solid rgba(255,255,255,.6)}
+@media (min-width:920px){.addr-card{padding:28px 26px}}
+.addr-card .k{font-size:11px; letter-spacing:.14em; text-transform:uppercase; font-weight:700; color:var(--aqua-500); margin-bottom:6px}
+.addr-line{font-family:var(--display); font-weight:600; font-size:19px; line-height:1.35; letter-spacing:-.01em; margin:0 0 4px}
+@media (min-width:920px){.addr-line{font-size:21px}}
+.addr-sub{font-size:14.5px; color:var(--muted); margin:0}
+.addr-div{height:1px; background:var(--line); margin:18px 0}
+.phone-row{display:grid; gap:10px}
+@media (min-width:480px){.phone-row{grid-template-columns:1fr 1fr}}
+.phone-btn{display:flex; align-items:center; gap:10px; min-height:52px; padding:11px 14px; border-radius:12px; border:1.5px solid var(--line); background:#fbfdfe; text-decoration:none; color:var(--ink); transition:border-color .18s ease, background .18s ease, transform .18s ease, box-shadow .18s ease}
+.phone-btn:hover{border-color:var(--aqua-500); background:#fff; transform:translateY(-2px); box-shadow:var(--shadow-sm)}
+.phone-btn svg{width:19px; height:19px; flex:0 0 19px; color:var(--blue-700)}
+.phone-btn .pk{display:block; font-size:10.5px; letter-spacing:.11em; text-transform:uppercase; font-weight:700; color:var(--muted)}
+.phone-btn .pv{display:block; font-size:15.5px; font-weight:700; letter-spacing:-.01em}
+.hours-strip{display:flex; align-items:center; gap:10px; margin-top:16px; padding:12px 14px; border-radius:12px; background:var(--aqua-050); border:1px solid #cfe8ec}
+.hours-strip svg{width:19px; height:19px; flex:0 0 19px; color:var(--blue-700)}
+.hours-strip b{font-weight:700}
+.hours-strip span{font-size:14.5px; color:var(--ink-2)}
+
+/* Hours table */
+.hours-table{width:100%; border-collapse:collapse; background:#fff; border:1px solid var(--line); border-radius:var(--r-md); overflow:hidden; box-shadow:var(--shadow-sm)}
+.hours-table th,.hours-table td{text-align:left; padding:13px 16px; font-size:15px; border-bottom:1px solid var(--line)}
+.hours-table tr:last-child th,.hours-table tr:last-child td{border-bottom:0}
+.hours-table th{font-weight:600; color:var(--ink-2); width:52%}
+.hours-table td{font-weight:600; color:var(--blue-700); text-align:right}
+.hours-table tr.closed th{color:var(--muted)}
+.hours-table tr.closed td{color:var(--muted); font-weight:500}
+
+/* Services */
+.section-head{max-width:660px; margin-bottom:32px}
+.section-head p{color:var(--muted); margin-bottom:0}
+.cards{display:grid; gap:16px}
+@media (min-width:600px){.cards{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:960px){.cards{grid-template-columns:repeat(3,1fr)}}
+.card{background:#fff; border:1px solid var(--line); border-radius:var(--r-md); padding:22px 20px; box-shadow:var(--shadow-sm); transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease}
+.card:hover{transform:translateY(-3px); box-shadow:var(--shadow-md); border-color:var(--aqua-300)}
+.card-icon{width:44px; height:44px; border-radius:12px; background:var(--aqua-050); display:flex; align-items:center; justify-content:center; margin-bottom:14px; color:var(--blue-700)}
+.card-icon svg{width:24px; height:24px}
+.card h3{margin-bottom:6px}
+.card p{font-size:14.5px; color:var(--muted); margin-bottom:0}
+.tag-row{display:flex; flex-wrap:wrap; gap:8px; margin-top:24px}
+.tag{display:inline-flex; align-items:center; min-height:36px; padding:8px 14px; border-radius:var(--r-pill); background:#fff; border:1px solid var(--line); font-size:13.5px; font-weight:600; color:var(--ink-2); box-shadow:var(--shadow-sm)}
+
+/* Why */
+.why{display:grid; gap:16px}
+@media (min-width:700px){.why{grid-template-columns:repeat(2,1fr)}}
+.why-item{display:flex; gap:14px; padding:20px; background:#fff; border-radius:var(--r-md); border:1px solid var(--line); box-shadow:var(--shadow-sm)}
+.why-item svg{width:22px; height:22px; flex:0 0 22px; color:var(--aqua-500); margin-top:3px}
+.why-item h3{font-size:16px; margin-bottom:4px}
+.why-item p{font-size:14.5px; color:var(--muted); margin:0}
+
+/* About */
+.about-grid{display:grid; gap:28px; align-items:center}
+@media (min-width:900px){.about-grid{grid-template-columns:1.1fr .9fr; gap:44px}}
+.art-frame{border-radius:var(--r-lg); overflow:hidden; box-shadow:var(--shadow-md); border:1px solid var(--line); background:#fff}
+
+/* Contact */
+.contact-grid{display:grid; gap:24px}
+@media (min-width:900px){.contact-grid{grid-template-columns:1fr 1fr; gap:40px}}
+.detail-list{list-style:none; padding:0; margin:0 0 24px; display:grid; gap:16px}
+.detail-list li{display:flex; gap:14px; align-items:flex-start}
+.detail-list .ico{width:40px; height:40px; flex:0 0 40px; border-radius:11px; background:#fff; border:1px solid var(--line); display:flex; align-items:center; justify-content:center; color:var(--blue-700); box-shadow:var(--shadow-sm)}
+.detail-list .ico svg{width:20px; height:20px}
+.detail-list .k{font-size:11.5px; letter-spacing:.12em; text-transform:uppercase; font-weight:700; color:var(--muted); margin-bottom:2px}
+.detail-list .v{font-size:15.5px; font-weight:500; color:var(--ink)}
+.detail-list a{color:var(--blue-700); text-decoration:none; border-bottom:1px solid var(--aqua-300); display:inline-block; min-height:24px}
+.detail-list a:hover{color:var(--navy-900); border-bottom-color:var(--blue-700)}
+.placeholder-note{display:block; font-size:13px; color:#8a6a2f; background:#fdf6e7; border:1px dashed #dcc08a; border-radius:var(--r-sm); padding:8px 12px; margin-top:6px; font-weight:500}
+.map-card{border-radius:var(--r-md); overflow:hidden; border:1px solid var(--line); box-shadow:var(--shadow-sm); background:#fff}
+.map-cap{padding:12px 16px; font-size:13px; color:var(--muted); border-top:1px solid var(--line)}
+form{background:#fff; border:1px solid var(--line); border-radius:var(--r-md); padding:22px 20px; box-shadow:var(--shadow-sm)}
+.field{margin-bottom:16px}
+label{display:block; font-size:13px; font-weight:600; color:var(--ink-2); margin-bottom:6px}
+input,textarea,select{width:100%; font-family:var(--body); font-size:16px; color:var(--ink); padding:12px 14px; min-height:48px; border:1.5px solid var(--line); border-radius:10px; background:#fbfdfe; transition:border-color .18s ease, box-shadow .18s ease}
+textarea{min-height:110px; resize:vertical}
+input:hover,textarea:hover,select:hover{border-color:var(--aqua-300)}
+input:focus,textarea:focus,select:focus{outline:none; border-color:var(--aqua-500); box-shadow:0 0 0 4px rgba(26,155,171,.16)}
+.form-note{font-size:12.5px; color:var(--muted); margin:12px 0 0}
+
+/* Footer */
+.site-footer{background:var(--navy-900); color:#c2dbe4; padding:40px 0 32px}
+.footer-grid{display:grid; gap:24px}
+@media (min-width:760px){.footer-grid{grid-template-columns:1.3fr 1fr 1fr}}
+.site-footer h4{font-family:var(--body); font-size:12px; letter-spacing:.13em; text-transform:uppercase; color:var(--aqua-300); margin:0 0 12px}
+.site-footer p{font-size:14.5px; margin:0 0 8px}
+.site-footer a{color:#e8f6f9; text-decoration:none; border-bottom:1px solid rgba(255,255,255,.28)}
+.site-footer a:hover{border-bottom-color:#fff; color:#fff}
+.footer-brand{font-family:var(--display); font-weight:700; font-size:20px; color:#fff; margin-bottom:8px}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.14); margin-top:28px; padding-top:20px; font-size:13.5px; display:flex; flex-wrap:wrap; gap:8px 18px; justify-content:space-between}
+
+/* CloudSpring bar */
+.cs-bar{position:fixed; left:0; right:0; bottom:0; z-index:100; background:rgba(7,26,40,.93); backdrop-filter:blur(12px) saturate(160%); border-top:1px solid rgba(126,211,220,.3); color:#eaf6f8; box-shadow:0 -8px 32px rgba(11,43,66,.3); padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px))}
+.cs-inner{max-width:1080px; margin:0 auto; display:flex; flex-direction:column; align-items:center; gap:10px; text-align:center}
+.cs-eyebrow{font-size:10.5px; font-weight:700; letter-spacing:.16em; text-transform:uppercase; color:#7ed3dc; margin:0 0 3px}
+.cs-line{font-size:14.5px; font-weight:700; line-height:1.35; margin:0; color:#fff}
+.cs-btn{display:inline-flex; align-items:center; justify-content:center; gap:8px; min-height:46px; padding:12px 22px; border-radius:var(--r-pill); background:#1fb4c4; color:#04222a; font-weight:800; font-size:14.5px; text-decoration:none; white-space:nowrap; border:2px solid transparent; box-shadow:0 4px 18px rgba(31,180,196,.42); animation:cs-pulse 2.4s ease-in-out infinite; transition:background .18s ease, transform .18s ease, box-shadow .18s ease}
+.cs-btn:hover{background:#8ae4ee; transform:translateY(-2px); box-shadow:0 8px 26px rgba(31,180,196,.55); animation-play-state:paused}
+.cs-btn:focus-visible{outline:3px solid #fff; outline-offset:3px; animation-play-state:paused}
+@keyframes cs-pulse{0%,100%{box-shadow:0 4px 18px rgba(31,180,196,.42)} 50%{box-shadow:0 4px 18px rgba(31,180,196,.42), 0 0 0 10px rgba(31,180,196,.14)}}
+@media (prefers-reduced-motion:reduce){.cs-btn{animation:none} .card,.btn,.header-cta,.phone-btn{transition:none}}
+@media (min-width:640px){.cs-inner{flex-direction:row; justify-content:space-between; text-align:left; gap:20px} .cs-line{font-size:15.5px}}
+.skip-link{position:absolute; left:-9999px; top:0; background:#fff; color:var(--navy-900); padding:12px 18px; z-index:200; border-radius:0 0 8px 0; font-weight:700}
+.skip-link:focus{left:0}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="#top" aria-label="HugoDerm Skincare Clinic home">
+      <svg class="brand-mark" viewBox="0 0 48 48" role="img" aria-hidden="true">
+        <defs><linearGradient id="hm1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1a9bab"/><stop offset="1" stop-color="#0b2b42"/></linearGradient></defs>
+        <rect width="48" height="48" rx="14" fill="url(#hm1)"/>
+        <path d="M16 34V14M32 34V14M16 24h16" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+        <circle cx="36" cy="15" r="4" fill="#7ed3dc"/>
+      </svg>
+      <span>
+        <span class="brand-name">HugoDerm</span>
+        <span class="brand-sub">Skincare Clinic</span>
+      </span>
+    </a>
+    <a class="header-cta" href="tel:+639554183246">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="17" height="17"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+      <span class="label-long">Call 0955 418 3246</span>
+      <span class="label-short">Call</span>
+    </a>
+  </div>
+</header>
+
+<main id="main">
+<a id="top"></a>
+
+<!-- HERO: full address + both numbers, front and centre -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-grid">
+      <div>
+        <span class="hero-tag">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#7ed3dc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Poblacion, Davao City
+        </span>
+        <h1>Skin care in Davao City — find us at <span class="accent">99 Roxas Avenue</span>, second floor.</h1>
+        <p class="hero-lede">HugoDerm Skincare Clinic offers facials, wart removal, sclerotherapy, IV glutathione, fillers, acne surgery, keloid treatment, chemical peels and psoriasis care. Walk in or call ahead — we are open Tuesday to Saturday.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="tel:+639554183246">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+            Call the clinic
+          </a>
+          <a class="btn btn-outline" href="https://facebook.com/hugodermskincareclinic" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7h-2.5V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.6V12h2.7l-.4 2.9h-2.3v7A10 10 0 0 0 22 12z"/></svg>
+            Message us on Facebook
+          </a>
+        </div>
+      </div>
+
+      <div class="addr-card">
+        <div class="k">The clinic — full address</div>
+        <p class="addr-line">2/F Davao Yakal Tire Supply Bldg,<br>99 Roxas Ave, Poblacion</p>
+        <p class="addr-sub">Davao City 8000, Philippines</p>
+        <div class="addr-div"></div>
+        <div class="k" style="margin-bottom:10px">Both clinic numbers</div>
+        <div class="phone-row">
+          <a class="phone-btn" href="tel:+639554183246">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2.5" width="12" height="19" rx="3"/><path d="M11 18.5h2"/></svg>
+            <span><span class="pk">Mobile</span><span class="pv">0955 418 3246</span></span>
+          </a>
+          <a class="phone-btn" href="tel:+63822842296">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+            <span><span class="pk">Landline</span><span class="pv">(082) 284-2296</span></span>
+          </a>
+        </div>
+        <div class="hours-strip">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          <span><b>Tuesday to Saturday, 10:00 &ndash; 20:00.</b> Closed Monday and Sunday.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section" id="services">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Treatments &amp; procedures</p>
+      <h2>What we do at HugoDerm</h2>
+      <p>Medical and aesthetic skin treatments offered at the clinic. Your treatment plan is confirmed during consultation.</p>
+    </div>
+    <div class="cards">
+      <article class="card">
+        <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c4.4 0 8 3.4 8 7.7 0 5.5-4.8 9.1-8 10.3-3.2-1.2-8-4.8-8-10.3C4 6.4 7.6 3 12 3z"/><path d="M9 12c1.4-2 3.6-2.6 5.4-1.8"/></svg></div>
+        <h3>Facials</h3>
+        <p>Cleansing and skin-conditioning facial treatments.</p>
+      </article>
+      <article class="card">
+        <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 8.5v7M8.5 12h7"/></svg></div>
+        <h3>Wart removal</h3>
+        <p>In-clinic removal of warts by trained clinic staff.</p>
+      </article>
+      <article class="card">
+        <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20c4-2 6-6 7-10s2-6 5-7"/><path d="M9 13c3 1 5 3 6 6"/></svg></div>
+        <h3>Sclerotherapy</h3>
+        <p>Treatment for visible leg and surface veins.</p>
+      </article>
+      <article class="card">
+        <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3h8v5l-2 2v9a3 3 0 0 1-6 0V10L8 8z"/><path d="M8 13h8"/></svg></div>
+        <h3>IV glutathione</h3>
+        <p>Intravenous glutathione administered at the clinic.</p>
+      </article>
+      <article class="card">
+        <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m14.5 3.5 6 6L9 21H3v-6z"/><path d="m12 6 6 6"/></svg></div>
+        <h3>Dermal fillers</h3>
+        <p>Filler treatments for facial contour and volume.</p>
+      </article>
+      <article class="card">
+        <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="9.4" cy="10" r="1.2" fill="currentColor" stroke="none"/><circle cx="15" cy="13.4" r="1.2" fill="currentColor" stroke="none"/><circle cx="11" cy="15.6" r="1" fill="currentColor" stroke="none"/></svg></div>
+        <h3>Acne surgery</h3>
+        <p>Clinical acne extraction and related procedures.</p>
+      </article>
+      <article class="card">
+        <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 16c3-1 4-4 5-7 1.2-3.6 3-5 6-5.6"/><path d="M5 16c4 2.4 9 1.4 11-2.4"/><path d="M4 20h16"/></svg></div>
+        <h3>Keloid treatment</h3>
+        <p>Management of raised and thickened scar tissue.</p>
+      </article>
+      <article class="card">
+        <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5c0 4-4 5-4 9a4 4 0 0 0 8 0c0-4-4-5-4-9z"/><path d="M6 20h12"/></svg></div>
+        <h3>Chemical peels</h3>
+        <p>Peels matched to your skin type and concern.</p>
+      </article>
+      <article class="card">
+        <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><path d="M8 9.5h3.5M8 14h6.5M15.5 9.5h.5"/></svg></div>
+        <h3>Psoriasis care</h3>
+        <p>Ongoing management of psoriasis and related conditions.</p>
+      </article>
+    </div>
+    <p class="placeholder-note" style="margin-top:24px; max-width:520px">Treatment prices: ₱ ___ — your actual rates go here, so patients stop calling just to ask.</p>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="section section--tint">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Why HugoDerm</p>
+      <h2>Everything a patient needs to know, on one page</h2>
+    </div>
+    <div class="why">
+      <div class="why-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <div><h3>The complete address</h3><p>2/F Davao Yakal Tire Supply Bldg, 99 Roxas Ave — the full building, not just "Poblacion District".</p></div>
+      </div>
+      <div class="why-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+        <div><h3>Two ways to reach us</h3><p>Mobile 0955 418 3246 and landline (082) 284-2296 — both tap-to-call.</p></div>
+      </div>
+      <div class="why-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+        <div><h3>Clear opening hours</h3><p>Tuesday to Saturday, 10:00 to 20:00. Closed Monday and Sunday — no wasted trips.</p></div>
+      </div>
+      <div class="why-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h10M4 18h13"/></svg>
+        <div><h3>Medical and aesthetic together</h3><p>Psoriasis, keloids and acne surgery alongside facials, peels and fillers.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT + HOURS -->
+<section class="section" id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div>
+        <p class="eyebrow">About the clinic</p>
+        <h2>HugoDerm Skincare Clinic, Roxas Avenue</h2>
+        <p>HugoDerm Skincare Clinic is a skincare and dermatology clinic on the second floor of the Davao Yakal Tire Supply Building at 99 Roxas Avenue, Poblacion, Davao City. The clinic handles both medical skin conditions — psoriasis, keloids, warts, acne — and aesthetic treatments such as facials, peels, fillers and IV glutathione.</p>
+        <p>For appointments and enquiries, contact the clinic by phone during opening hours, or message the Facebook page. Clinic contact: <strong>Karen Pasco</strong>.</p>
+        <div class="tag-row">
+          <span class="tag">Facials</span>
+          <span class="tag">Peels</span>
+          <span class="tag">Fillers</span>
+          <span class="tag">Wart removal</span>
+          <span class="tag">Sclerotherapy</span>
+          <span class="tag">IV glutathione</span>
+          <span class="tag">Keloid treatment</span>
+          <span class="tag">Psoriasis care</span>
+        </div>
+        <h3 style="margin-top:34px; font-size:19px">Opening hours</h3>
+        <table class="hours-table">
+          <tbody>
+            <tr class="closed"><th scope="row">Monday</th><td>Closed</td></tr>
+            <tr><th scope="row">Tuesday</th><td>10:00 &ndash; 20:00</td></tr>
+            <tr><th scope="row">Wednesday</th><td>10:00 &ndash; 20:00</td></tr>
+            <tr><th scope="row">Thursday</th><td>10:00 &ndash; 20:00</td></tr>
+            <tr><th scope="row">Friday</th><td>10:00 &ndash; 20:00</td></tr>
+            <tr><th scope="row">Saturday</th><td>10:00 &ndash; 20:00</td></tr>
+            <tr class="closed"><th scope="row">Sunday</th><td>Closed</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="art-frame">
+        <svg viewBox="0 0 460 480" role="img" aria-label="Illustration of the clinic on the second floor of a Roxas Avenue building">
+          <defs>
+            <linearGradient id="bg1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#eaf5f8"/><stop offset="1" stop-color="#d5e9ef"/></linearGradient>
+            <linearGradient id="bd1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#eef6f9"/></linearGradient>
+            <linearGradient id="wn1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7ed3dc"/><stop offset="1" stop-color="#12587f"/></linearGradient>
+          </defs>
+          <rect width="460" height="480" fill="url(#bg1)"/>
+          <circle cx="372" cy="86" r="46" fill="#fff" opacity=".7"/>
+          <!-- building -->
+          <rect x="58" y="112" width="304" height="316" rx="14" fill="url(#bd1)" stroke="#bcd7e0" stroke-width="2.6"/>
+          <!-- 2F band -->
+          <rect x="58" y="196" width="304" height="104" fill="#f3fafb"/>
+          <line x1="58" y1="196" x2="362" y2="196" stroke="#bcd7e0" stroke-width="2.4"/>
+          <line x1="58" y1="300" x2="362" y2="300" stroke="#bcd7e0" stroke-width="2.4"/>
+          <!-- windows -->
+          <g fill="url(#wn1)" opacity=".82">
+            <rect x="86" y="220" width="56" height="56" rx="8"/>
+            <rect x="158" y="220" width="56" height="56" rx="8"/>
+            <rect x="230" y="220" width="56" height="56" rx="8"/>
+            <rect x="302" y="220" width="34" height="56" rx="8"/>
+          </g>
+          <g fill="#cfe4ea" opacity=".9">
+            <rect x="86" y="330" width="56" height="46" rx="8"/>
+            <rect x="158" y="330" width="56" height="46" rx="8"/>
+            <rect x="248" y="330" width="88" height="98" rx="8"/>
+          </g>
+          <!-- signage -->
+          <rect x="86" y="136" width="250" height="42" rx="10" fill="#0b2b42"/>
+          <text x="211" y="163" text-anchor="middle" font-family="Sora, Inter, Arial, sans-serif" font-size="19" font-weight="700" fill="#ffffff" letter-spacing="1">HUGODERM</text>
+          <!-- 2F badge -->
+          <g transform="translate(300,192)">
+            <circle cx="24" cy="24" r="24" fill="#1a9bab"/>
+            <text x="24" y="30" text-anchor="middle" font-family="Sora, Inter, Arial, sans-serif" font-size="17" font-weight="700" fill="#fff">2F</text>
+          </g>
+          <!-- street -->
+          <rect x="0" y="428" width="460" height="52" fill="#cfe0e6"/>
+          <g stroke="#fff" stroke-width="5" stroke-dasharray="26 20" opacity=".9"><path d="M0 456h460"/></g>
+          <text x="16" y="472" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="600" fill="#5f7789">99 Roxas Avenue</text>
+          <!-- pin -->
+          <g transform="translate(196,52)">
+            <path d="M24 0A24 24 0 0 0 0 24c0 18 24 42 24 42s24-24 24-42A24 24 0 0 0 24 0z" fill="#12587f"/>
+            <circle cx="24" cy="23" r="9" fill="#7ed3dc"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section section--mist" id="contact">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Find us &amp; get in touch</p>
+      <h2>Book an appointment</h2>
+      <p>Call either number during clinic hours, or send us a message and we will get back to you.</p>
+    </div>
+    <div class="contact-grid">
+      <div>
+        <ul class="detail-list">
+          <li>
+            <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+            <span><span class="k">Address</span><span class="v">2/F Davao Yakal Tire Supply Bldg, 99 Roxas Ave, Poblacion, Davao City 8000, Philippines</span></span>
+          </li>
+          <li>
+            <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2.5" width="12" height="19" rx="3"/><path d="M11 18.5h2"/></svg></span>
+            <span><span class="k">Mobile</span><span class="v"><a href="tel:+639554183246">0955 418 3246</a></span></span>
+          </li>
+          <li>
+            <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></span>
+            <span><span class="k">Landline</span><span class="v"><a href="tel:+63822842296">(082) 284-2296</a></span></span>
+          </li>
+          <li>
+            <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4.5" width="19" height="15" rx="3"/><path d="m3 7 9 6 9-6"/></svg></span>
+            <span><span class="k">Email</span><span class="v"><a href="mailto:hugodermskincare@yahoo.com">hugodermskincare@yahoo.com</a></span></span>
+          </li>
+          <li>
+            <span class="ico"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7h-2.5V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.6V12h2.7l-.4 2.9h-2.3v7A10 10 0 0 0 22 12z"/></svg></span>
+            <span><span class="k">Facebook</span><span class="v"><a href="https://facebook.com/hugodermskincareclinic" target="_blank" rel="noopener">HugoDerm Skincare Clinic</a></span></span>
+          </li>
+          <li>
+            <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+            <span><span class="k">Hours</span><span class="v">Tuesday &ndash; Saturday, 10:00 &ndash; 20:00<br>Closed Monday and Sunday</span></span>
+          </li>
+        </ul>
+
+        <div class="map-card">
+          <svg viewBox="0 0 560 260" role="img" aria-label="Simplified map placeholder showing the clinic on Roxas Avenue, Poblacion, Davao City">
+            <rect width="560" height="260" fill="#e8f0f3"/>
+            <g stroke="#d2e2e8" stroke-width="12"><path d="M0 96h560M0 200h560M150 0v260M400 0v260"/></g>
+            <g stroke="#fff" stroke-width="4" stroke-dasharray="14 12" opacity=".85"><path d="M0 96h560M0 200h560M150 0v260M400 0v260"/></g>
+            <rect x="24" y="118" width="106" height="60" rx="6" fill="#d9e8ed"/>
+            <rect x="422" y="24" width="112" height="56" rx="6" fill="#d9e8ed"/>
+            <rect x="180" y="212" width="180" height="38" rx="6" fill="#d9e8ed"/>
+            <text x="16" y="88" font-family="Inter, Arial, sans-serif" font-size="13" fill="#5f7789">Roxas Ave</text>
+            <text x="404" y="252" font-family="Inter, Arial, sans-serif" font-size="13" fill="#5f7789">Poblacion</text>
+            <g transform="translate(258,66)">
+              <path d="M30 0A30 30 0 0 0 0 30c0 22 30 52 30 52s30-30 30-52A30 30 0 0 0 30 0z" fill="#0b2b42"/>
+              <circle cx="30" cy="29" r="11" fill="#7ed3dc"/>
+            </g>
+            <text x="234" y="170" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#0b2b42">HugoDerm &middot; 2/F</text>
+          </svg>
+          <div class="map-cap">Illustrative map placeholder — a live Google map would be embedded here on the finished site.</div>
+        </div>
+      </div>
+
+      <div>
+        <form id="enquiry" novalidate>
+          <h3 style="font-size:19px; margin-bottom:14px">Send an enquiry</h3>
+          <div class="field">
+            <label for="name">Your name</label>
+            <input id="name" name="name" type="text" autocomplete="name" placeholder="Juan Dela Cruz">
+          </div>
+          <div class="field">
+            <label for="contact">Phone or email</label>
+            <input id="contact" name="contact" type="text" autocomplete="tel" placeholder="09XX XXX XXXX">
+          </div>
+          <div class="field">
+            <label for="service">Treatment you're interested in</label>
+            <select id="service" name="service">
+              <option>Facial</option>
+              <option>Wart removal</option>
+              <option>Sclerotherapy</option>
+              <option>IV glutathione</option>
+              <option>Dermal fillers</option>
+              <option>Acne surgery</option>
+              <option>Keloid treatment</option>
+              <option>Chemical peel</option>
+              <option>Psoriasis care</option>
+              <option>Not sure yet</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Tell us what you need and your preferred day (we're open Tue–Sat, 10:00–20:00)."></textarea>
+          </div>
+          <button class="btn btn-solid" type="submit" style="width:100%">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4z"/></svg>
+            Send
+          </button>
+          <p class="form-note">This preview form opens your email app. On the live site it would deliver straight to the clinic inbox and send an automatic confirmation.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">HugoDerm Skincare Clinic</div>
+        <p>Medical and aesthetic skin care in Poblacion, Davao City.</p>
+        <p>Clinic contact: Karen Pasco</p>
+      </div>
+      <div>
+        <h4>Visit</h4>
+        <p>2/F Davao Yakal Tire Supply Bldg<br>99 Roxas Ave, Poblacion<br>Davao City 8000, Philippines</p>
+        <p>Tue &ndash; Sat, 10:00 &ndash; 20:00<br>Closed Mon &amp; Sun</p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p><a href="tel:+639554183246">0955 418 3246</a></p>
+        <p><a href="tel:+63822842296">(082) 284-2296</a></p>
+        <p><a href="mailto:hugodermskincare@yahoo.com">hugodermskincare@yahoo.com</a></p>
+        <p><a href="https://facebook.com/hugodermskincareclinic" target="_blank" rel="noopener">Facebook</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 HugoDerm Skincare Clinic, Davao City.</span>
+      <span>Website by CloudSpring IT Solutions</span>
+    </div>
+  </div>
+</footer>
+
+<div class="cs-bar" role="complementary" aria-label="CloudSpring IT Solutions preview notice">
+  <div class="cs-inner">
+    <div class="cs-copy">
+      <p class="cs-eyebrow">PREVIEW &middot; CloudSpring IT Solutions</p>
+      <p class="cs-line">You already pay for hugoderm.com — let's put this on it, before the directories keep your patients.</p>
+    </div>
+    <a class="cs-btn" href="https://api.leadconnectorhq.com/widget/booking/QRPEnWRw2Kx9rBe0Mj6J" target="_blank" rel="noopener">Book a FREE Discovery Call &rarr;</a>
+  </div>
+</div>
+
+<script>
+(function(){
+  var f = document.getElementById('enquiry');
+  if(!f) return;
+  f.addEventListener('submit', function(e){
+    e.preventDefault();
+    var n = (document.getElementById('name').value || '').trim();
+    var c = (document.getElementById('contact').value || '').trim();
+    var s = document.getElementById('service').value;
+    var m = (document.getElementById('message').value || '').trim();
+    var body = 'Name: ' + n + '\nContact: ' + c + '\nTreatment: ' + s + '\n\n' + m;
+    window.location.href = 'mailto:hugodermskincare@yahoo.com'
+      + '?subject=' + encodeURIComponent('Appointment enquiry - ' + (n || 'Website'))
+      + '&body=' + encodeURIComponent(body);
+  });
+})();
+</script>
+</body>
+</html>

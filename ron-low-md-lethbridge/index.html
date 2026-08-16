@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dr. Ron Low, MD — Dermatologist in Lethbridge, Alberta</title>
+<meta name="description" content="Dr. Ron Low, MD — board-certified dermatologist practising in Lethbridge, Alberta since 1987. Medical and cosmetic dermatology at 1410 Mayor Magrath Dr S. Call (403) 328-3100.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0F1E2E;
+  --navy:#123A5C;
+  --navy-700:#0E2E49;
+  --blue:#1C6FA8;
+  --blue-600:#155C8D;
+  --ice:#E9F1F7;
+  --ice-2:#F5F9FC;
+  --paper:#F7F5F1;
+  --line:#D9E4ED;
+  --muted:#4A6076;
+  --clay:#A86B45;
+  --shadow-sm:0 1px 2px rgba(15,30,46,.08), 0 2px 6px rgba(15,30,46,.06);
+  --shadow-md:0 4px 12px rgba(15,30,46,.10), 0 12px 28px rgba(15,30,46,.09);
+  --shadow-lg:0 16px 48px rgba(15,30,46,.18);
+  --r-sm:8px; --r-md:12px; --r-lg:20px; --r-pill:999px;
+  --display:"Source Serif 4",ui-serif,Georgia,"Times New Roman",serif;
+  --body:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{
+  margin:0;font-family:var(--body);font-size:16px;line-height:1.62;color:var(--ink);
+  background:#fff;padding-bottom:172px;overflow-x:hidden;
+}
+@media (min-width:640px){body{padding-bottom:120px}}
+img,svg{max-width:100%;display:block}
+h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.18;letter-spacing:-.005em;margin:0 0 12px}
+h1{font-size:2rem}
+h2{font-size:1.6rem}
+h3{font-size:1.1rem;font-family:var(--body);font-weight:700;letter-spacing:0}
+p{margin:0 0 16px}
+a{color:var(--blue-600)}
+.wrap{width:100%;max-width:1080px;margin:0 auto;padding:0 20px}
+.eyebrow{font-size:.74rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--blue);margin:0 0 8px}
+.section{padding:56px 0}
+.section--ice{background:var(--ice-2)}
+.section--paper{background:var(--paper)}
+.lead{font-size:1.05rem;color:var(--muted);max-width:62ch}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{
+  outline:3px solid var(--clay);outline-offset:3px;border-radius:6px;
+}
+.skip{position:absolute;left:-9999px;top:0;background:var(--navy);color:#fff;padding:12px 16px;z-index:200}
+.skip:focus{left:0}
+
+/* header */
+.hdr{position:sticky;top:0;z-index:90;background:rgba(255,255,255,.95);backdrop-filter:saturate(160%) blur(10px);border-bottom:1px solid var(--line)}
+.hdr__in{display:flex;align-items:center;gap:12px;min-height:64px;padding:8px 20px;max-width:1080px;margin:0 auto}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);flex:1 1 auto;min-width:0;min-height:44px}
+.brand__mark{flex:none;width:38px;height:38px}
+.brand__name{font-family:var(--display);font-weight:700;font-size:1rem;line-height:1.1;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.brand__sub{font-size:.65rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);display:block}
+.hdr__call{
+  flex:none;display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;
+  padding:10px 16px;border-radius:var(--r-pill);background:var(--navy);color:#fff;text-decoration:none;
+  font-weight:600;font-size:.9rem;box-shadow:var(--shadow-sm);
+  transition:background .18s ease,transform .18s ease,box-shadow .18s ease;
+}
+.hdr__call:hover{background:var(--navy-700);transform:translateY(-1px);box-shadow:var(--shadow-md)}
+.hdr__call .lbl{display:none}
+@media (min-width:560px){.hdr__call .lbl{display:inline}}
+.nav{display:none}
+@media (min-width:920px){
+  .nav{display:flex;gap:4px;margin-left:auto;margin-right:8px}
+  .nav a{display:inline-flex;align-items:center;min-height:44px;padding:0 12px;border-radius:var(--r-sm);color:var(--muted);text-decoration:none;font-size:.92rem;font-weight:500;transition:color .16s ease,background .16s ease}
+  .nav a:hover{color:var(--navy);background:var(--ice)}
+}
+
+/* hero */
+.hero{background:linear-gradient(170deg,#F4F9FC 0%,#E7F0F7 55%,#DEEAF3 100%);position:relative;overflow:hidden}
+.hero__in{position:relative;z-index:2;padding:44px 20px 52px;max-width:1080px;margin:0 auto}
+@media (min-width:920px){.hero__in{display:grid;grid-template-columns:1.06fr .94fr;gap:40px;align-items:center;padding:72px 20px 80px}}
+.hero h1{font-size:2rem;color:var(--navy-700)}
+@media (min-width:480px){.hero h1{font-size:2.35rem}}
+@media (min-width:920px){.hero h1{font-size:2.9rem}}
+.hero__sub{font-size:1.05rem;color:#2C4C66;max-width:54ch}
+.badge{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);border-radius:var(--r-pill);padding:7px 14px;font-size:.78rem;font-weight:600;color:var(--navy);box-shadow:var(--shadow-sm);margin-bottom:16px}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:48px;padding:12px 22px;border-radius:var(--r-pill);font-weight:600;font-size:1rem;text-decoration:none;cursor:pointer;border:1px solid transparent;transition:transform .18s ease,background .18s ease,box-shadow .18s ease,color .18s ease,border-color .18s ease}
+.btn--primary{background:var(--navy);color:#fff;box-shadow:var(--shadow-md)}
+.btn--primary:hover{background:var(--navy-700);transform:translateY(-2px);box-shadow:var(--shadow-lg)}
+.btn--ghost{background:#fff;color:var(--navy);border-color:var(--line);box-shadow:var(--shadow-sm)}
+.btn--ghost:hover{border-color:var(--blue);color:var(--blue-600);transform:translateY(-2px);box-shadow:var(--shadow-md)}
+.hero__facts{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:26px;padding-top:22px;border-top:1px solid rgba(18,58,92,.14)}
+.fact{display:flex;align-items:center;gap:8px;font-size:.86rem;color:#2C4C66;font-weight:500}
+.hero__art{margin-top:34px}
+@media (min-width:920px){.hero__art{margin-top:0}}
+.artcard{border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow-lg);background:#fff;border:1px solid rgba(255,255,255,.8)}
+
+/* referral steps */
+.steps{counter-reset:s;display:grid;gap:14px;margin-top:26px}
+@media (min-width:820px){.steps{grid-template-columns:repeat(4,1fr)}}
+.step{position:relative;background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:20px 20px 18px;box-shadow:var(--shadow-sm);transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+.step:hover{transform:translateY(-3px);box-shadow:var(--shadow-md);border-color:#BBD3E4}
+.step__n{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--navy);color:#fff;font-weight:700;font-size:.9rem;margin-bottom:12px;font-family:var(--body)}
+.step h3{font-size:1rem;margin-bottom:4px;color:var(--navy-700)}
+.step p{margin:0;font-size:.92rem;color:var(--muted)}
+.callout{display:flex;gap:12px;align-items:flex-start;background:#FBF3EC;border:1px solid #E7D3C1;border-left:4px solid var(--clay);border-radius:var(--r-md);padding:14px 16px;margin-top:22px}
+.callout p{margin:0;font-size:.9rem;color:#6A4830}
+.callout strong{color:#4E3320}
+
+/* services */
+.grid{display:grid;gap:16px}
+@media (min-width:600px){.grid--2{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:920px){.grid--3{grid-template-columns:repeat(3,1fr)}}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:22px;box-shadow:var(--shadow-sm);transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow-md);border-color:#BBD3E4}
+.card__ico{width:46px;height:46px;border-radius:12px;background:var(--ice);display:grid;place-items:center;margin-bottom:14px}
+.card h3{margin-bottom:6px;color:var(--navy-700)}
+.card p{margin:0;color:var(--muted);font-size:.94rem}
+.tags{list-style:none;margin:12px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+.tags li{font-size:.74rem;font-weight:600;color:var(--blue-600);background:var(--ice);border-radius:var(--r-pill);padding:4px 10px}
+.split{display:grid;gap:20px}
+@media (min-width:820px){.split{grid-template-columns:1fr 1fr;gap:32px}}
+.panel{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:24px;box-shadow:var(--shadow-sm)}
+.panel h3{color:var(--navy-700)}
+.ticks{list-style:none;margin:0;padding:0}
+.ticks li{position:relative;padding:8px 0 8px 30px;font-size:.95rem;color:var(--muted);border-bottom:1px solid var(--line)}
+.ticks li:last-child{border-bottom:0}
+.ticks li::before{content:"";position:absolute;left:0;top:15px;width:16px;height:16px;border-radius:50%;background:var(--ice);box-shadow:inset 0 0 0 2px var(--blue)}
+
+/* why */
+.why{background:var(--navy-700);color:#CBDDEA}
+.why h2{color:#fff}
+.why .lead{color:#A8C4D7}
+.why__grid{display:grid;gap:16px;margin-top:28px}
+@media (min-width:700px){.why__grid{grid-template-columns:repeat(2,1fr)}}
+.why__item{display:flex;gap:14px;align-items:flex-start;background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.12);border-radius:var(--r-md);padding:18px}
+.why__item h3{color:#fff;font-size:1rem;margin-bottom:4px}
+.why__item p{margin:0;font-size:.92rem;color:#A8C4D7}
+.why__ico{flex:none;width:40px;height:40px;border-radius:10px;background:rgba(255,255,255,.1);display:grid;place-items:center}
+
+/* about + contact */
+.about__grid{display:grid;gap:28px}
+@media (min-width:920px){.about__grid{grid-template-columns:1fr 1fr;gap:44px;align-items:center}}
+.contact__grid{display:grid;gap:24px}
+@media (min-width:920px){.contact__grid{grid-template-columns:1fr 1fr;gap:40px}}
+.info{list-style:none;margin:0;padding:0}
+.info li{display:flex;gap:14px;padding:14px 0;border-bottom:1px solid var(--line)}
+.info li:last-child{border-bottom:0}
+.info__ico{flex:none;width:38px;height:38px;border-radius:10px;background:var(--ice);display:grid;place-items:center}
+.info__k{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:700;display:block;margin-bottom:2px}
+.info__v{font-weight:600;color:var(--navy-700);text-decoration:none;word-break:break-word}
+a.info__v:hover{color:var(--blue);text-decoration:underline}
+.info__note{display:block;font-size:.84rem;font-weight:400;color:var(--muted);margin-top:2px}
+.callbox{background:var(--navy);color:#fff;border-radius:var(--r-lg);padding:26px;box-shadow:var(--shadow-lg);text-align:center}
+.callbox h3{color:#fff;font-family:var(--display);font-size:1.35rem;margin-bottom:8px}
+.callbox p{color:#BFD6E6;font-size:.95rem}
+.callbox .btn{background:#fff;color:var(--navy-700);width:100%;box-shadow:0 8px 22px rgba(8,25,40,.35)}
+.callbox .btn:hover{background:#E9F1F7;transform:translateY(-2px)}
+.callbox__hours{margin-top:18px;padding-top:16px;border-top:1px solid rgba(255,255,255,.16);font-size:.88rem;color:#BFD6E6}
+.mapbox{margin-top:20px;border-radius:var(--r-lg);overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow-sm);background:#EDF3F7}
+.mapbox__cap{padding:12px 16px;font-size:.84rem;color:var(--muted);background:#fff;border-top:1px solid var(--line)}
+
+/* footer */
+.ftr{background:#0A2033;color:#96B3C8;padding:40px 0 32px;font-size:.9rem}
+.ftr a{color:#C6DCEA;text-decoration:none}
+.ftr a:hover{color:#fff;text-decoration:underline}
+.ftr__top{display:grid;gap:22px}
+@media (min-width:700px){.ftr__top{grid-template-columns:1.4fr 1fr 1fr}}
+.ftr h4{font-family:var(--display);color:#fff;font-size:1.05rem;margin:0 0 10px}
+.ftr ul{list-style:none;margin:0;padding:0}
+.ftr li{margin-bottom:8px}
+.ftr__bar{margin-top:28px;padding-top:20px;border-top:1px solid rgba(255,255,255,.12);display:flex;flex-wrap:wrap;gap:8px 16px;justify-content:space-between;font-size:.82rem}
+.ftr__credit strong{color:#fff}
+
+/* CloudSpring bar */
+.cs-bar{position:fixed;left:0;right:0;bottom:0;z-index:120;background:rgba(10,32,51,.95);backdrop-filter:saturate(160%) blur(12px);border-top:1px solid rgba(255,255,255,.14);box-shadow:0 -8px 30px rgba(15,30,46,.36);padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px));color:#E7F0F7}
+.cs-bar__in{max-width:1080px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center}
+.cs-bar__eyebrow{font-size:.62rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#7FB8DD;margin:0}
+.cs-bar__line{margin:0;font-size:.95rem;font-weight:600;line-height:1.35;color:#fff;max-width:58ch}
+.cs-bar__btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:46px;padding:12px 22px;border-radius:var(--r-pill);background:#2E92D6;color:#04202F;font-weight:700;font-size:.95rem;text-decoration:none;white-space:nowrap;box-shadow:0 6px 18px rgba(46,146,214,.42);animation:csPulse 2.6s ease-in-out infinite;transition:background .18s ease,transform .18s ease,box-shadow .18s ease}
+.cs-bar__btn:hover{background:#57ACE6;transform:translateY(-2px);animation-play-state:paused;box-shadow:0 10px 26px rgba(46,146,214,.5)}
+.cs-bar__btn:focus-visible{outline:3px solid #FFD98A;outline-offset:3px;animation-play-state:paused}
+@keyframes csPulse{
+  0%,100%{box-shadow:0 6px 18px rgba(46,146,214,.42),0 0 0 0 rgba(46,146,214,.5)}
+  55%{box-shadow:0 6px 18px rgba(46,146,214,.42),0 0 0 12px rgba(46,146,214,0)}
+}
+@media (min-width:640px){.cs-bar__in{flex-direction:row;justify-content:space-between;text-align:left;gap:20px}.cs-bar__txt{min-width:0}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition-duration:.01ms!important;scroll-behavior:auto!important}.cs-bar__btn{animation:none}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="hdr">
+  <div class="hdr__in">
+    <a class="brand" href="#top" aria-label="Dr. Ron Low, MD — Dermatology, home">
+      <svg class="brand__mark" viewBox="0 0 48 48" role="img" aria-hidden="true">
+        <rect width="48" height="48" rx="13" fill="#123A5C"/>
+        <path d="M24 12.5c5.5 0 10 4.4 10 9.9 0 7.4-10 15.1-10 15.1S14 29.8 14 22.4c0-5.5 4.5-9.9 10-9.9Z" fill="none" stroke="#8FC4E6" stroke-width="2.1"/>
+        <path d="M24 18.6v7.6M20.2 22.4h7.6" stroke="#A86B45" stroke-width="2.4" stroke-linecap="round"/>
+      </svg>
+      <span>
+        <span class="brand__name">Dr. Ron Low, MD</span>
+        <span class="brand__sub">Dermatology · Lethbridge</span>
+      </span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="#referral">Referrals</a>
+      <a href="#services">Services</a>
+      <a href="#why">The practice</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="hdr__call" href="tel:+14033283100">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 3h3l1.5 4.2-2.1 1.5a12.6 12.6 0 0 0 6.3 6.3l1.5-2.1L21 14.4v3A2.6 2.6 0 0 1 18.4 20 15.4 15.4 0 0 1 4 5.6 2.6 2.6 0 0 1 6.6 3Z" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/></svg>
+      <span class="lbl">(403) 328-3100</span>
+    </a>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero" id="top">
+  <div class="hero__in">
+    <div>
+      <span class="badge">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 7.5 12 4l8 3.5v4.9c0 4.4-3.3 7.6-8 8.6-4.7-1-8-4.2-8-8.6V7.5Z" stroke="#1C6FA8" stroke-width="1.8" stroke-linejoin="round"/><path d="m9.2 12 2 2 3.6-3.8" stroke="#1C6FA8" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Practising in Lethbridge since 1987
+      </span>
+      <h1>Board-certified dermatologist in Lethbridge since 1987</h1>
+      <p class="hero__sub">Dr. Ron Low, MD provides medical and cosmetic dermatology from 1410 Mayor Magrath Drive South. Medical dermatology appointments are arranged by referral; the office can confirm what your visit involves.</p>
+      <div class="cta-row">
+        <a class="btn btn--primary" href="tel:+14033283100">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 3h3l1.5 4.2-2.1 1.5a12.6 12.6 0 0 0 6.3 6.3l1.5-2.1L21 14.4v3A2.6 2.6 0 0 1 18.4 20 15.4 15.4 0 0 1 4 5.6 2.6 2.6 0 0 1 6.6 3Z" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/></svg>
+          Call (403) 328-3100
+        </a>
+        <a class="btn btn--ghost" href="#referral">How referrals work</a>
+      </div>
+      <div class="hero__facts">
+        <span class="fact"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s7-5.4 7-11a7 7 0 1 0-14 0c0 5.6 7 11 7 11Z" stroke="#1C6FA8" stroke-width="1.8"/><circle cx="12" cy="10" r="2.6" stroke="#1C6FA8" stroke-width="1.8"/></svg> 203-1410 Mayor Magrath Dr S</span>
+        <span class="fact"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3.6" y="4.6" width="16.8" height="15" rx="3" stroke="#1C6FA8" stroke-width="1.8"/><path d="M8.2 9.4h7.6M8.2 13h5" stroke="#1C6FA8" stroke-width="1.8" stroke-linecap="round"/></svg> Referrals from your family doctor welcome</span>
+        <span class="fact"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="8.6" stroke="#1C6FA8" stroke-width="1.8"/><path d="m8.6 12 2.4 2.4 4.4-4.8" stroke="#1C6FA8" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg> Medical &amp; cosmetic dermatology</span>
+      </div>
+    </div>
+    <div class="hero__art">
+      <div class="artcard">
+        <svg viewBox="0 0 520 400" role="img" aria-label="Illustration of a dermatology consulting room with a doctor's desk, referral chart and examination lamp">
+          <defs>
+            <linearGradient id="rl-wall" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#EFF6FA"/><stop offset="1" stop-color="#DCE9F3"/></linearGradient>
+            <linearGradient id="rl-win" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F8FCFE"/><stop offset="1" stop-color="#DFEDF7"/></linearGradient>
+          </defs>
+          <rect width="520" height="400" fill="url(#rl-wall)"/>
+          <rect x="40" y="34" width="164" height="120" rx="10" fill="url(#rl-win)" stroke="#C3D8E7" stroke-width="2"/>
+          <path d="M46 148c26-42 40-56 56-56s28 14 56 56Z" fill="#CBDFEC"/>
+          <path d="M46 148c34-26 52-34 70-34s40 12 82 34Z" fill="#BCD4E4"/>
+          <circle cx="170" cy="66" r="13" fill="#F2E2C4"/>
+          <rect x="248" y="36" width="88" height="118" rx="9" fill="#FFFFFF" stroke="#C3D8E7" stroke-width="2"/>
+          <rect x="262" y="54" width="60" height="8" rx="4" fill="#DCE9F3"/>
+          <rect x="262" y="70" width="44" height="8" rx="4" fill="#E9F1F7"/>
+          <rect x="262" y="92" width="60" height="46" rx="6" fill="#E9F1F7"/>
+          <path d="M272 122h12l6-14 8 24 6-12h8" stroke="#1C6FA8" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <rect x="366" y="52" width="118" height="102" rx="9" fill="#FFFFFF" stroke="#C3D8E7" stroke-width="2"/>
+          <rect x="382" y="72" width="86" height="8" rx="4" fill="#DCE9F3"/>
+          <rect x="382" y="90" width="60" height="8" rx="4" fill="#E9F1F7"/>
+          <rect x="382" y="108" width="74" height="8" rx="4" fill="#E9F1F7"/>
+          <rect x="382" y="128" width="44" height="12" rx="6" fill="#A86B45"/>
+          <rect x="0" y="286" width="520" height="114" fill="#F3F8FB"/>
+          <rect x="34" y="236" width="286" height="52" rx="10" fill="#FFFFFF" stroke="#C3D8E7" stroke-width="2"/>
+          <rect x="56" y="288" width="14" height="60" rx="6" fill="#C3D8E7"/>
+          <rect x="284" y="288" width="14" height="60" rx="6" fill="#C3D8E7"/>
+          <rect x="66" y="206" width="86" height="30" rx="6" fill="#E9F1F7" stroke="#C3D8E7" stroke-width="2"/>
+          <rect x="80" y="216" width="58" height="6" rx="3" fill="#BCD4E4"/>
+          <rect x="80" y="226" width="38" height="5" rx="2.5" fill="#BCD4E4"/>
+          <rect x="186" y="212" width="60" height="24" rx="12" fill="#123A5C"/>
+          <circle cx="216" cy="224" r="7" fill="#8FC4E6"/>
+          <path d="M420 150v122" stroke="#B4CFE1" stroke-width="7" stroke-linecap="round"/>
+          <circle cx="420" cy="272" r="26" fill="#C3D8E7"/>
+          <path d="M394 138a26 26 0 0 1 52 0Z" fill="#123A5C"/>
+          <circle cx="420" cy="140" r="8" fill="#F5E7C6"/>
+          <rect x="352" y="278" width="136" height="12" rx="6" fill="#C3D8E7"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="referral">
+  <div class="wrap">
+    <p class="eyebrow">Getting an appointment</p>
+    <h2>How to be seen at this office</h2>
+    <p class="lead">Dermatology in Alberta is a specialist service. Here is the usual route from your first concern to your appointment — and who to ask if anything is unclear.</p>
+    <div class="steps">
+      <div class="step">
+        <span class="step__n">1</span>
+        <h3>See your family doctor</h3>
+        <p>Book with your family physician or nurse practitioner and describe the skin, hair or nail concern you would like assessed.</p>
+      </div>
+      <div class="step">
+        <span class="step__n">2</span>
+        <h3>Ask for a referral</h3>
+        <p>Ask them to send a dermatology referral to this office. Referrals are faxed or sent electronically by your provider's clinic.</p>
+      </div>
+      <div class="step">
+        <span class="step__n">3</span>
+        <h3>We contact you</h3>
+        <p>Once the referral is received, the office arranges an appointment time with you by phone.</p>
+      </div>
+      <div class="step">
+        <span class="step__n">4</span>
+        <h3>Bring your Alberta health card</h3>
+        <p>Bring your Alberta Health Care Insurance Plan card and any referral paperwork to your visit.</p>
+      </div>
+    </div>
+    <div class="callout">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="flex:none;margin-top:2px"><circle cx="12" cy="12" r="8.8" stroke="#A86B45" stroke-width="1.8"/><path d="M12 7.8v5M12 16.2h.01" stroke="#A86B45" stroke-width="2" stroke-linecap="round"/></svg>
+      <p><strong>Coverage:</strong> medically necessary dermatology is generally covered by the Alberta Health Care Insurance Plan when you have a valid Alberta health card and a referral. Cosmetic treatments are not insured services and are paid privately. Please call the office at <a href="tel:+14033283100">(403) 328-3100</a> to confirm how your particular visit is billed before you attend.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section--ice" id="services">
+  <div class="wrap">
+    <p class="eyebrow">Services</p>
+    <h2>Medical and cosmetic dermatology</h2>
+    <p class="lead">The office offers both insured medical dermatology by referral and privately paid cosmetic treatments.</p>
+    <div class="split" style="margin-top:28px">
+      <div class="panel">
+        <h3>Medical dermatology</h3>
+        <p style="color:var(--muted);font-size:.94rem">Specialist assessment of skin, hair and nail conditions, arranged by referral from your family physician or nurse practitioner.</p>
+        <ul class="ticks">
+          <li>Specialist consultation and diagnosis</li>
+          <li>Ongoing management of skin conditions</li>
+          <li>Referral-based appointments</li>
+          <li>Bring your Alberta health card to each visit</li>
+        </ul>
+      </div>
+      <div class="panel">
+        <h3>Cosmetic dermatology</h3>
+        <p style="color:var(--muted);font-size:.94rem">Elective treatments performed at the office. These are not insured services — the office can explain the cost when you call.</p>
+        <ul class="ticks">
+          <li>Laser hair removal</li>
+          <li>Laser wrinkle treatment</li>
+          <li>Botox</li>
+          <li>Chemical peels</li>
+        </ul>
+      </div>
+    </div>
+    <div class="grid grid--3" style="margin-top:28px">
+      <article class="card">
+        <div class="card__ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8 3h8l-1.4 8.4a2 2 0 0 1-.9 1.3L12 14l-1.7-1.3a2 2 0 0 1-.9-1.3L8 3Z" stroke="#1C6FA8" stroke-width="1.8" stroke-linejoin="round"/><path d="M12 14v7M9.6 20.4h4.8" stroke="#A86B45" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+        <h3>Laser hair removal</h3>
+        <p>Laser treatment for unwanted hair, planned around the area and the number of sessions discussed at your visit.</p>
+        <ul class="tags"><li>Cosmetic</li><li>By appointment</li></ul>
+      </article>
+      <article class="card">
+        <div class="card__ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="7.2" stroke="#1C6FA8" stroke-width="1.8"/><path d="M12 4.8V2.4M12 21.6v-2.4M4.8 12H2.4M21.6 12h-2.4" stroke="#A86B45" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+        <h3>Laser wrinkle treatment</h3>
+        <p>Laser resurfacing aimed at fine lines and skin texture, assessed by the dermatologist beforehand.</p>
+        <ul class="tags"><li>Cosmetic</li><li>Assessed first</li></ul>
+      </article>
+      <article class="card">
+        <div class="card__ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M14.6 3.4 20.6 9.4 9.8 20.2H3.8v-6Z" stroke="#1C6FA8" stroke-width="1.8" stroke-linejoin="round"/><path d="m12.6 5.4 6 6" stroke="#A86B45" stroke-width="1.8"/></svg></div>
+        <h3>Botox</h3>
+        <p>Injectable treatment carried out at the office. Timing and follow-up are explained at your appointment.</p>
+        <ul class="tags"><li>Cosmetic</li><li>In-office</li></ul>
+      </article>
+      <article class="card">
+        <div class="card__ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3.5c4.3 2.3 6.6 5.3 6.6 9 0 4.1-3 7-6.6 7s-6.6-2.9-6.6-7c0-3.7 2.3-6.7 6.6-9Z" stroke="#1C6FA8" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 13.4c1-2 2.5-3.3 4.6-4" stroke="#A86B45" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+        <h3>Chemical peels</h3>
+        <p>Peels selected for your skin and concern, with aftercare instructions given before you leave.</p>
+        <ul class="tags"><li>Cosmetic</li><li>Aftercare</li></ul>
+      </article>
+      <article class="card">
+        <div class="card__ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="3.4" width="16" height="17.2" rx="3" stroke="#1C6FA8" stroke-width="1.8"/><path d="M8.4 9h7.2M8.4 13h5" stroke="#1C6FA8" stroke-width="1.8" stroke-linecap="round"/><path d="M8.4 16.8h3" stroke="#A86B45" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+        <h3>Referral consultations</h3>
+        <p>Specialist assessment of a skin, hair or nail concern sent through by your family doctor.</p>
+        <ul class="tags"><li>Medical</li><li>Referral</li></ul>
+      </article>
+      <article class="card">
+        <div class="card__ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3.6" y="5" width="16.8" height="15" rx="3" stroke="#1C6FA8" stroke-width="1.8"/><path d="M3.6 9.6h16.8M8.4 3.2v3.6M15.6 3.2v3.6" stroke="#1C6FA8" stroke-width="1.8" stroke-linecap="round"/><path d="M8.6 14.4h3.2" stroke="#A86B45" stroke-width="1.9" stroke-linecap="round"/></svg></div>
+        <h3>Follow-up visits</h3>
+        <p>Review appointments to check how a condition or treatment is progressing.</p>
+        <ul class="tags"><li>Medical</li><li>Review</li></ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section why" id="why">
+  <div class="wrap">
+    <p class="eyebrow" style="color:#7FB8DD">The practice</p>
+    <h2>A long-standing dermatology office in Lethbridge</h2>
+    <p class="lead">What patients and referring physicians can expect from this office.</p>
+    <div class="why__grid">
+      <div class="why__item">
+        <span class="why__ico"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 7.5 12 4l8 3.5v4.9c0 4.4-3.3 7.6-8 8.6-4.7-1-8-4.2-8-8.6V7.5Z" stroke="#8FC4E6" stroke-width="1.8" stroke-linejoin="round"/></svg></span>
+        <div><h3>Board-certified dermatologist</h3><p>Dr. Low is a certified specialist in dermatology, listed on the College of Physicians &amp; Surgeons of Alberta register.</p></div>
+      </div>
+      <div class="why__item">
+        <span class="why__ico"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="8.6" stroke="#8FC4E6" stroke-width="1.8"/><path d="M12 7.4V12l3 1.8" stroke="#8FC4E6" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+        <div><h3>Serving Lethbridge since 1987</h3><p>The practice has been treating patients in Lethbridge and southern Alberta for well over three decades.</p></div>
+      </div>
+      <div class="why__item">
+        <span class="why__ico"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3.6" y="4.6" width="16.8" height="15" rx="3" stroke="#8FC4E6" stroke-width="1.8"/><path d="M8.2 9.4h7.6M8.2 13h5" stroke="#8FC4E6" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+        <div><h3>Clear referral pathway</h3><p>Referrals come directly from your family physician or nurse practitioner, and the office rings you to arrange the time.</p></div>
+      </div>
+      <div class="why__item">
+        <span class="why__ico"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s7-5.4 7-11a7 7 0 1 0-14 0c0 5.6 7 11 7 11Z" stroke="#8FC4E6" stroke-width="1.8"/><circle cx="12" cy="10" r="2.6" stroke="#8FC4E6" stroke-width="1.8"/></svg></span>
+        <div><h3>Central Lethbridge location</h3><p>Suite 203 at 1410 Mayor Magrath Drive South, with parking on site.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="about">
+  <div class="wrap about__grid">
+    <div>
+      <p class="eyebrow">About</p>
+      <h2>Dr. Ron Low, MD</h2>
+      <p>Dr. Ron Low is a board-certified dermatologist who has practised in Lethbridge, Alberta since 1987. His office at 1410 Mayor Magrath Drive South provides both medical dermatology — the assessment and management of skin, hair and nail conditions — and cosmetic dermatology treatments.</p>
+      <p>Medical appointments are arranged through a referral from your family physician or nurse practitioner. Cosmetic treatments such as laser hair removal, laser wrinkle treatment, Botox and chemical peels are booked directly with the office and are paid privately.</p>
+      <p style="margin-bottom:0">If you are unsure which applies to you, call <a href="tel:+14033283100">(403) 328-3100</a> and the office will explain the next step.</p>
+    </div>
+    <div class="artcard">
+      <svg viewBox="0 0 520 370" role="img" aria-label="Illustration of a dermatologist reviewing a patient chart at the office">
+        <defs><linearGradient id="rl-a" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F5FAFD"/><stop offset="1" stop-color="#E1EDF6"/></linearGradient></defs>
+        <rect width="520" height="370" fill="url(#rl-a)"/>
+        <rect x="0" y="280" width="520" height="90" fill="#EBF3F9"/>
+        <rect x="316" y="46" width="162" height="118" rx="10" fill="#FFFFFF" stroke="#C3D8E7" stroke-width="2"/>
+        <rect x="334" y="68" width="98" height="9" rx="4.5" fill="#DCE9F3"/>
+        <rect x="334" y="88" width="124" height="9" rx="4.5" fill="#E9F1F7"/>
+        <rect x="334" y="108" width="80" height="9" rx="4.5" fill="#E9F1F7"/>
+        <rect x="334" y="130" width="56" height="14" rx="7" fill="#8FC4E6"/>
+        <g>
+          <ellipse cx="180" cy="298" rx="92" ry="12" fill="#DCE9F3"/>
+          <path d="M132 286c0-40 22-64 48-64s48 24 48 64Z" fill="#FFFFFF" stroke="#C3D8E7" stroke-width="2"/>
+          <path d="M158 228c8-6 36-6 44 0l-7 24h-30Z" fill="#123A5C"/>
+          <circle cx="180" cy="196" r="27" fill="#F2E2C4"/>
+          <path d="M153 194c1-19 13-28 27-28s26 9 27 28c-8-8-17-11-27-11s-19 3-27 11Z" fill="#8B8B8B"/>
+          <rect x="167" y="246" width="26" height="9" rx="4.5" fill="#0E2E49"/>
+          <path d="M172 254c-5 11-5 20 0 28" stroke="#0E2E49" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <path d="M189 254c5 11 5 20 0 28" stroke="#0E2E49" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <rect x="214" y="240" width="62" height="80" rx="8" fill="#FFFFFF" stroke="#C3D8E7" stroke-width="2" transform="rotate(-8 245 280)"/>
+          <path d="M228 262h34M228 276h26M228 290h30" stroke="#BCD4E4" stroke-width="4" stroke-linecap="round" transform="rotate(-8 245 280)"/>
+        </g>
+        <path d="M52 96c0-8 6-14 14-14h64c8 0 14 6 14 14v36c0 8-6 14-14 14H96l-18 15v-15h-12c-8 0-14-6-14-14Z" fill="#FFFFFF" stroke="#C3D8E7" stroke-width="2"/>
+        <rect x="70" y="102" width="58" height="8" rx="4" fill="#DCE9F3"/>
+        <rect x="70" y="118" width="38" height="8" rx="4" fill="#E9F1F7"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="section section--paper" id="contact">
+  <div class="wrap">
+    <p class="eyebrow">Contact</p>
+    <h2>Reach the office</h2>
+    <p class="lead">The fastest way to reach this practice is by telephone during office hours.</p>
+    <div class="contact__grid" style="margin-top:28px">
+      <div>
+        <ul class="info">
+          <li>
+            <span class="info__ico"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 3h3l1.5 4.2-2.1 1.5a12.6 12.6 0 0 0 6.3 6.3l1.5-2.1L21 14.4v3A2.6 2.6 0 0 1 18.4 20 15.4 15.4 0 0 1 4 5.6 2.6 2.6 0 0 1 6.6 3Z" stroke="#1C6FA8" stroke-width="1.9" stroke-linejoin="round"/></svg></span>
+            <span><span class="info__k">Telephone</span><a class="info__v" href="tel:+14033283100">(403) 328-3100</a><span class="info__note">Appointments, referrals and enquiries.</span></span>
+          </li>
+          <li>
+            <span class="info__ico"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s7-5.4 7-11a7 7 0 1 0-14 0c0 5.6 7 11 7 11Z" stroke="#1C6FA8" stroke-width="1.8"/><circle cx="12" cy="10" r="2.6" stroke="#1C6FA8" stroke-width="1.8"/></svg></span>
+            <span><span class="info__k">Office</span><span class="info__v">203-1410 Mayor Magrath Dr S<br>Lethbridge, AB T1K 2R3</span></span>
+          </li>
+          <li>
+            <span class="info__ico"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="8.6" stroke="#1C6FA8" stroke-width="1.8"/><path d="M12 7.4V12l3 1.8" stroke="#1C6FA8" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+            <span><span class="info__k">Office hours</span><span class="info__v">Please call to confirm</span><span class="info__note">Hours are not published here — the office will confirm current hours when you ring.</span></span>
+          </li>
+          <li>
+            <span class="info__ico"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3.6" y="4.6" width="16.8" height="15" rx="3" stroke="#1C6FA8" stroke-width="1.8"/><path d="M8.2 9.4h7.6M8.2 13h5" stroke="#1C6FA8" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+            <span><span class="info__k">For referring physicians</span><span class="info__v">Call the office for referral details</span><span class="info__note">Staff can confirm the current fax number and preferred referral format.</span></span>
+          </li>
+        </ul>
+        <div class="mapbox">
+          <svg viewBox="0 0 520 250" role="img" aria-label="Simplified map showing the office on Mayor Magrath Drive South, Lethbridge">
+            <rect width="520" height="250" fill="#EBF2F7"/>
+            <path d="M300 0v250" stroke="#D5E3EE" stroke-width="26"/>
+            <path d="M0 156h520M0 60h520" stroke="#D5E3EE" stroke-width="16"/>
+            <path d="M300 0v250" stroke="#FFFFFF" stroke-width="3" stroke-dasharray="16 14"/>
+            <rect x="30" y="80" width="106" height="60" rx="7" fill="#DEEAF3"/>
+            <rect x="164" y="82" width="86" height="58" rx="7" fill="#DEEAF3"/>
+            <rect x="360" y="80" width="120" height="62" rx="7" fill="#DEEAF3"/>
+            <rect x="150" y="180" width="150" height="42" rx="7" fill="#DEEAF3"/>
+            <text x="308" y="30" font-family="Inter,sans-serif" font-size="13" fill="#65809A">Mayor Magrath Dr S</text>
+            <text x="16" y="242" font-family="Inter,sans-serif" font-size="13" fill="#65809A">Lethbridge, AB</text>
+            <g transform="translate(340 136)">
+              <path d="M0-34c11 0 20 9 20 20 0 15-20 34-20 34S-20 1-20-14c0-11 9-20 20-20Z" fill="#123A5C"/>
+              <circle cx="0" cy="-14" r="7.4" fill="#FFFFFF"/>
+            </g>
+          </svg>
+          <p class="mapbox__cap">Suite 203, 1410 Mayor Magrath Drive South, Lethbridge. Illustrative map.</p>
+        </div>
+      </div>
+      <div>
+        <div class="callbox">
+          <h3>Call the office</h3>
+          <p>Appointments at this practice are arranged by telephone. Have your Alberta health card and, for medical dermatology, your referral details to hand.</p>
+          <a class="btn" href="tel:+14033283100">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 3h3l1.5 4.2-2.1 1.5a12.6 12.6 0 0 0 6.3 6.3l1.5-2.1L21 14.4v3A2.6 2.6 0 0 1 18.4 20 15.4 15.4 0 0 1 4 5.6 2.6 2.6 0 0 1 6.6 3Z" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/></svg>
+            (403) 328-3100
+          </a>
+          <div class="callbox__hours">Referrals are sent to this office directly by your family physician or nurse practitioner's clinic.</div>
+        </div>
+        <div class="panel" style="margin-top:20px">
+          <h3>Before you call</h3>
+          <ul class="ticks">
+            <li>Know whether your concern is medical or cosmetic</li>
+            <li>Have your Alberta health card number ready</li>
+            <li>For a medical visit, confirm your doctor has sent the referral</li>
+            <li>Ask the office to confirm costs for any cosmetic treatment</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="ftr">
+  <div class="wrap">
+    <div class="ftr__top">
+      <div>
+        <h4>Dr. Ron Low, MD</h4>
+        <p style="margin:0">Dermatology — medical &amp; cosmetic<br>203-1410 Mayor Magrath Dr S<br>Lethbridge, AB T1K 2R3</p>
+      </div>
+      <div>
+        <h4>Practice</h4>
+        <ul>
+          <li><a href="#referral">Referrals</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+14033283100">(403) 328-3100</a></li>
+          <li>Lethbridge, Alberta</li>
+          <li>Call to confirm office hours</li>
+        </ul>
+      </div>
+    </div>
+    <div class="ftr__bar">
+      <span>&copy; 2026 Dr. Ron Low, MD — Dermatology, Lethbridge, Alberta.</span>
+      <span class="ftr__credit">Website by <strong>CloudSpring IT Solutions</strong></span>
+    </div>
+  </div>
+</footer>
+
+<aside class="cs-bar" aria-label="Preview notice from CloudSpring IT Solutions">
+  <div class="cs-bar__in">
+    <div class="cs-bar__txt">
+      <p class="cs-bar__eyebrow">PREVIEW · CloudSpring IT Solutions</p>
+      <p class="cs-bar__line">Search “dermatologist Lethbridge” and a newer clinic’s own website comes first — want this site on your own domain, so patients and referrals reach you, not a directory?</p>
+    </div>
+    <a class="cs-bar__btn" href="https://api.leadconnectorhq.com/widget/booking/QRPEnWRw2Kx9rBe0Mj6J" target="_blank" rel="noopener">Book a FREE Discovery Call →</a>
+  </div>
+</aside>
+</body>
+</html>

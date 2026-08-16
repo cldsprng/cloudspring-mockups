@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en-PH">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Skin Aesthetiques Dermatology and Laser Center — South Triangle, Quezon City</title>
+<meta name="description" content="Skin Aesthetiques Dermatology and Laser Center — PDS board-certified dermatologists in South Triangle, Quezon City. Ultherapy, HydraFacial, laser and general dermatology.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0B2E31;
+  --deep:#0E4A50;
+  --teal:#127C86;
+  --teal-600:#0F6B74;
+  --mint:#E6F4F3;
+  --mint-2:#F4FAF9;
+  --sand:#F7F4EF;
+  --line:#DCE9E8;
+  --muted:#4C6A6C;
+  --white:#FFFFFF;
+  --gold:#B4894B;
+  --shadow-sm:0 1px 2px rgba(11,46,49,.08), 0 2px 6px rgba(11,46,49,.06);
+  --shadow-md:0 4px 12px rgba(11,46,49,.10), 0 12px 28px rgba(11,46,49,.08);
+  --shadow-lg:0 16px 48px rgba(11,46,49,.16);
+  --r-sm:8px; --r-md:12px; --r-lg:20px; --r-pill:999px;
+  --display:"Fraunces",ui-serif,Georgia,"Times New Roman",serif;
+  --body:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:var(--body);
+  font-size:16px;
+  line-height:1.6;
+  color:var(--ink);
+  background:var(--white);
+  padding-bottom:168px; /* space for floating CloudSpring bar */
+  overflow-x:hidden;
+}
+@media (min-width:640px){body{padding-bottom:120px}}
+img,svg{max-width:100%;display:block}
+h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.15;letter-spacing:-.01em;margin:0 0 12px}
+h1{font-size:2rem}
+h2{font-size:1.6rem}
+h3{font-size:1.125rem;font-family:var(--body);font-weight:700;letter-spacing:0}
+p{margin:0 0 16px}
+a{color:var(--teal-600)}
+.wrap{width:100%;max-width:1100px;margin:0 auto;padding:0 20px}
+.eyebrow{
+  font-size:.75rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--teal);margin:0 0 8px;
+}
+.section{padding:56px 0}
+.section--tint{background:var(--mint-2)}
+.section--sand{background:var(--sand)}
+.lead{font-size:1.05rem;color:var(--muted);max-width:60ch}
+
+/* ---------- focus ---------- */
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible,summary:focus-visible{
+  outline:3px solid var(--gold);outline-offset:3px;border-radius:6px;
+}
+
+/* ---------- skip link ---------- */
+.skip{position:absolute;left:-9999px;top:0;background:var(--deep);color:#fff;padding:12px 16px;z-index:200;border-radius:0 0 8px 0}
+.skip:focus{left:0}
+
+/* ---------- header ---------- */
+.hdr{
+  position:sticky;top:0;z-index:90;background:rgba(255,255,255,.94);
+  backdrop-filter:saturate(160%) blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.hdr__in{display:flex;align-items:center;gap:12px;min-height:64px;padding:8px 20px;max-width:1100px;margin:0 auto}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);min-height:44px;flex:1 1 auto;min-width:0}
+.brand__mark{flex:none;width:38px;height:38px}
+.brand__txt{min-width:0}
+.brand__name{font-family:var(--display);font-weight:700;font-size:1rem;line-height:1.1;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.brand__sub{font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);display:block}
+.hdr__call{
+  flex:none;display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  min-height:44px;padding:10px 16px;border-radius:var(--r-pill);
+  background:var(--teal);color:#fff;text-decoration:none;font-weight:600;font-size:.9rem;
+  box-shadow:var(--shadow-sm);transition:background .18s ease, transform .18s ease, box-shadow .18s ease;
+}
+.hdr__call:hover{background:var(--teal-600);transform:translateY(-1px);box-shadow:var(--shadow-md)}
+.hdr__call .lbl{display:none}
+@media (min-width:560px){.hdr__call .lbl{display:inline}}
+.nav{display:none}
+@media (min-width:900px){
+  .nav{display:flex;gap:4px;margin-left:auto;margin-right:8px}
+  .nav a{
+    display:inline-flex;align-items:center;min-height:44px;padding:0 12px;border-radius:var(--r-sm);
+    color:var(--muted);text-decoration:none;font-size:.92rem;font-weight:500;
+    transition:color .16s ease,background .16s ease;
+  }
+  .nav a:hover{color:var(--deep);background:var(--mint)}
+}
+
+/* ---------- hero ---------- */
+.hero{position:relative;background:linear-gradient(168deg,#F2FAF9 0%,#E4F2F1 52%,#DCEDEC 100%);overflow:hidden}
+.hero__in{position:relative;z-index:2;padding:44px 20px 52px;max-width:1100px;margin:0 auto}
+@media (min-width:900px){
+  .hero__in{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center;padding:72px 20px 80px}
+}
+.hero h1{font-size:2.05rem;color:var(--deep)}
+@media (min-width:480px){.hero h1{font-size:2.4rem}}
+@media (min-width:900px){.hero h1{font-size:3rem}}
+.hero__sub{font-size:1.05rem;color:#2F5457;max-width:52ch}
+.badge{
+  display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);
+  border-radius:var(--r-pill);padding:7px 14px;font-size:.78rem;font-weight:600;color:var(--deep);
+  box-shadow:var(--shadow-sm);margin-bottom:16px;
+}
+.badge svg{flex:none}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  min-height:48px;padding:12px 22px;border-radius:var(--r-pill);
+  font-weight:600;font-size:1rem;text-decoration:none;cursor:pointer;border:1px solid transparent;
+  transition:transform .18s ease,background .18s ease,box-shadow .18s ease,color .18s ease,border-color .18s ease;
+}
+.btn--primary{background:var(--teal);color:#fff;box-shadow:var(--shadow-md)}
+.btn--primary:hover{background:var(--teal-600);transform:translateY(-2px);box-shadow:var(--shadow-lg)}
+.btn--ghost{background:#fff;color:var(--deep);border-color:var(--line);box-shadow:var(--shadow-sm)}
+.btn--ghost:hover{border-color:var(--teal);color:var(--teal-600);transform:translateY(-2px);box-shadow:var(--shadow-md)}
+.hero__facts{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:26px;padding-top:22px;border-top:1px solid rgba(14,74,80,.14)}
+.fact{display:flex;align-items:center;gap:8px;font-size:.86rem;color:#2F5457;font-weight:500}
+.hero__art{margin-top:34px}
+@media (min-width:900px){.hero__art{margin-top:0}}
+.artcard{border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow-lg);background:#fff;border:1px solid rgba(255,255,255,.8)}
+
+/* ---------- services ---------- */
+.grid{display:grid;gap:16px}
+@media (min-width:600px){.grid--2{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:900px){.grid--3{grid-template-columns:repeat(3,1fr)}}
+.card{
+  background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:22px;
+  box-shadow:var(--shadow-sm);transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease;
+}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow-md);border-color:#BFDCDA}
+.card__ico{width:46px;height:46px;border-radius:12px;background:var(--mint);display:grid;place-items:center;margin-bottom:14px}
+.card h3{margin-bottom:6px;color:var(--deep)}
+.card p{margin:0;color:var(--muted);font-size:.94rem}
+.tags{list-style:none;margin:12px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+.tags li{font-size:.74rem;font-weight:600;color:var(--teal-600);background:var(--mint);border-radius:var(--r-pill);padding:4px 10px}
+
+/* ---------- why us ---------- */
+.why{background:var(--deep);color:#DCEDEC}
+.why h2{color:#fff}
+.why .lead{color:#B6D3D3}
+.why__grid{display:grid;gap:16px;margin-top:28px}
+@media (min-width:700px){.why__grid{grid-template-columns:repeat(2,1fr)}}
+.why__item{display:flex;gap:14px;align-items:flex-start;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.11);border-radius:var(--r-md);padding:18px}
+.why__item h3{color:#fff;font-size:1rem;margin-bottom:4px}
+.why__item p{margin:0;font-size:.92rem;color:#B6D3D3}
+.why__ico{flex:none;width:40px;height:40px;border-radius:10px;background:rgba(255,255,255,.10);display:grid;place-items:center}
+
+/* ---------- pricing ---------- */
+.notice{
+  display:flex;gap:12px;align-items:flex-start;background:#FFF8EC;border:1px solid #EBD9B8;
+  border-left:4px solid var(--gold);border-radius:var(--r-md);padding:14px 16px;margin-bottom:22px;
+}
+.notice p{margin:0;font-size:.9rem;color:#6B4F23}
+.notice strong{color:#4E3915}
+.rate{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:14px 0;border-bottom:1px dashed var(--line)}
+.rate:last-child{border-bottom:0}
+.rate__n{font-weight:600;color:var(--deep)}
+.rate__d{display:block;font-weight:400;font-size:.85rem;color:var(--muted)}
+.rate__p{flex:none;font-family:var(--display);font-weight:600;color:#9AAFAF;font-size:.95rem;letter-spacing:.02em}
+
+/* ---------- about ---------- */
+.about__grid{display:grid;gap:28px}
+@media (min-width:900px){.about__grid{grid-template-columns:1fr 1fr;gap:44px;align-items:center}}
+
+/* ---------- contact ---------- */
+.contact__grid{display:grid;gap:24px}
+@media (min-width:900px){.contact__grid{grid-template-columns:1fr 1fr;gap:40px}}
+.info{list-style:none;margin:0;padding:0}
+.info li{display:flex;gap:14px;padding:14px 0;border-bottom:1px solid var(--line)}
+.info li:last-child{border-bottom:0}
+.info__ico{flex:none;width:38px;height:38px;border-radius:10px;background:var(--mint);display:grid;place-items:center}
+.info__k{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:700;display:block;margin-bottom:2px}
+.info__v{font-weight:600;color:var(--deep);text-decoration:none;word-break:break-word}
+a.info__v:hover{color:var(--teal);text-decoration:underline}
+.tbc{font-size:.78rem;color:#8A6A2E;background:#FFF8EC;border:1px solid #EBD9B8;border-radius:var(--r-pill);padding:2px 9px;display:inline-block;margin-left:6px;font-weight:600;white-space:nowrap}
+.form{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:22px;box-shadow:var(--shadow-md)}
+.field{margin-bottom:14px}
+.field label{display:block;font-size:.8rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.field input,.field select,.field textarea{
+  width:100%;min-height:48px;padding:12px 14px;border:1px solid var(--line);border-radius:var(--r-sm);
+  font:inherit;font-size:16px;color:var(--ink);background:var(--mint-2);
+  transition:border-color .16s ease,background .16s ease,box-shadow .16s ease;
+}
+.field textarea{min-height:110px;resize:vertical}
+.field input:hover,.field select:hover,.field textarea:hover{border-color:#BFDCDA}
+.field input:focus,.field select:focus,.field textarea:focus{background:#fff;border-color:var(--teal);box-shadow:0 0 0 3px rgba(18,124,134,.14);outline:none}
+.form .btn{width:100%}
+.form__note{font-size:.78rem;color:var(--muted);margin:12px 0 0;text-align:center}
+.mapbox{margin-top:20px;border-radius:var(--r-lg);overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow-sm);background:#EFF5F4}
+.mapbox__cap{padding:12px 16px;font-size:.84rem;color:var(--muted);background:#fff;border-top:1px solid var(--line)}
+
+/* ---------- footer ---------- */
+.ftr{background:#082326;color:#9FC0C0;padding:40px 0 32px;font-size:.9rem}
+.ftr a{color:#CDE5E4;text-decoration:none}
+.ftr a:hover{color:#fff;text-decoration:underline}
+.ftr__top{display:grid;gap:22px}
+@media (min-width:700px){.ftr__top{grid-template-columns:1.4fr 1fr 1fr}}
+.ftr h4{font-family:var(--display);color:#fff;font-size:1.05rem;margin:0 0 10px}
+.ftr ul{list-style:none;margin:0;padding:0}
+.ftr li{margin-bottom:8px}
+.ftr__bar{margin-top:28px;padding-top:20px;border-top:1px solid rgba(255,255,255,.12);display:flex;flex-wrap:wrap;gap:8px 16px;justify-content:space-between;font-size:.82rem}
+.ftr__credit strong{color:#fff}
+
+/* ---------- CloudSpring floating bar ---------- */
+.cs-bar{
+  position:fixed;left:0;right:0;bottom:0;z-index:120;
+  background:rgba(8,35,38,.94);
+  backdrop-filter:saturate(160%) blur(12px);
+  border-top:1px solid rgba(255,255,255,.14);
+  box-shadow:0 -8px 30px rgba(11,46,49,.34);
+  padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px));
+  color:#EAF4F3;
+}
+.cs-bar__in{
+  max-width:1100px;margin:0 auto;display:flex;flex-direction:column;align-items:center;
+  gap:10px;text-align:center;
+}
+.cs-bar__eyebrow{
+  font-size:.62rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;
+  color:#7FD3D3;margin:0;
+}
+.cs-bar__line{margin:0;font-size:.95rem;font-weight:600;line-height:1.35;color:#fff;max-width:56ch}
+.cs-bar__btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  min-height:46px;padding:12px 22px;border-radius:var(--r-pill);
+  background:#17A2AC;color:#04191B;font-weight:700;font-size:.95rem;text-decoration:none;
+  white-space:nowrap;box-shadow:0 6px 18px rgba(23,162,172,.42);
+  animation:csPulse 2.6s ease-in-out infinite;
+  transition:background .18s ease,transform .18s ease,box-shadow .18s ease;
+}
+.cs-bar__btn:hover{background:#3FC3CC;transform:translateY(-2px);animation-play-state:paused;box-shadow:0 10px 26px rgba(23,162,172,.5)}
+.cs-bar__btn:focus-visible{outline:3px solid #FFD98A;outline-offset:3px;animation-play-state:paused}
+@keyframes csPulse{
+  0%,100%{box-shadow:0 6px 18px rgba(23,162,172,.42),0 0 0 0 rgba(23,162,172,.5)}
+  55%{box-shadow:0 6px 18px rgba(23,162,172,.42),0 0 0 12px rgba(23,162,172,0)}
+}
+@media (min-width:640px){
+  .cs-bar__in{flex-direction:row;justify-content:space-between;text-align:left;gap:20px}
+  .cs-bar__txt{min-width:0}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+  .cs-bar__btn{animation:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="hdr">
+  <div class="hdr__in">
+    <a class="brand" href="#top" aria-label="Skin Aesthetiques Dermatology and Laser Center home">
+      <svg class="brand__mark" viewBox="0 0 48 48" role="img" aria-hidden="true">
+        <rect width="48" height="48" rx="13" fill="#0E4A50"/>
+        <path d="M24 11c6.2 3.1 9.6 7.2 9.6 12.6 0 5.8-4.3 10.2-9.6 10.2s-9.6-4.4-9.6-10.2C14.4 18.2 17.8 14.1 24 11Z" fill="none" stroke="#5FD0CF" stroke-width="2.1"/>
+        <path d="M19.4 24.6c1.6-3.1 4-5.1 7.3-6.1" fill="none" stroke="#B4894B" stroke-width="2.1" stroke-linecap="round"/>
+        <circle cx="24" cy="37.6" r="1.8" fill="#5FD0CF"/>
+      </svg>
+      <span class="brand__txt">
+        <span class="brand__name">Skin Aesthetiques</span>
+        <span class="brand__sub">Dermatology &amp; Laser</span>
+      </span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="#treatments">Treatments</a>
+      <a href="#why">Why us</a>
+      <a href="#rates">Rates</a>
+      <a href="#about">About</a>
+      <a href="#contact">Visit us</a>
+    </nav>
+    <a class="hdr__call" href="tel:+639178453350">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 3h3l1.5 4.2-2.1 1.5a12.6 12.6 0 0 0 6.3 6.3l1.5-2.1L21 14.4v3A2.6 2.6 0 0 1 18.4 20 15.4 15.4 0 0 1 4 5.6 2.6 2.6 0 0 1 6.6 3Z" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/></svg>
+      <span class="lbl">0917 845 3350</span>
+      <span class="sr" style="position:absolute;left:-9999px">Call the clinic</span>
+    </a>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero" id="top">
+  <div class="hero__in">
+    <div>
+      <span class="badge">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3l2.3 4.7 5.2.8-3.8 3.6.9 5.1L12 14.8 7.4 17.2l.9-5.1L4.5 8.5l5.2-.8L12 3Z" stroke="#127C86" stroke-width="1.8" stroke-linejoin="round"/></svg>
+        PDS board-certified dermatologists
+      </span>
+      <h1>PDS board-certified dermatologists, South Triangle QC</h1>
+      <p class="hero__sub">Skin Aesthetiques Dermatology and Laser Center is a doctor-led skin clinic on Sgt. Esguerra Ave. — Ultherapy, HydraFacial, laser and general dermatology, all under one roof.</p>
+      <div class="cta-row">
+        <a class="btn btn--primary" href="tel:+639178453350">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 3h3l1.5 4.2-2.1 1.5a12.6 12.6 0 0 0 6.3 6.3l1.5-2.1L21 14.4v3A2.6 2.6 0 0 1 18.4 20 15.4 15.4 0 0 1 4 5.6 2.6 2.6 0 0 1 6.6 3Z" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/></svg>
+          Call 0917 845 3350
+        </a>
+        <a class="btn btn--ghost" href="#contact">Request an appointment</a>
+      </div>
+      <div class="hero__facts">
+        <span class="fact"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s7-5.4 7-11a7 7 0 1 0-14 0c0 5.6 7 11 7 11Z" stroke="#127C86" stroke-width="1.8"/><circle cx="12" cy="10" r="2.6" stroke="#127C86" stroke-width="1.8"/></svg> South Triangle, Quezon City</span>
+        <span class="fact"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="8.6" stroke="#127C86" stroke-width="1.8"/><path d="M12 7.4V12l3 1.8" stroke="#127C86" stroke-width="1.8" stroke-linecap="round"/></svg> Mon–Sat, 10AM–7PM</span>
+        <span class="fact"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 7.5 12 4l8 3.5v4.9c0 4.4-3.3 7.6-8 8.6-4.7-1-8-4.2-8-8.6V7.5Z" stroke="#127C86" stroke-width="1.8" stroke-linejoin="round"/></svg> Doctor-led consultations</span>
+      </div>
+    </div>
+    <div class="hero__art">
+      <div class="artcard">
+        <svg viewBox="0 0 520 400" role="img" aria-label="Illustration of a calm dermatology treatment room with a laser device and skincare tray">
+          <defs>
+            <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F6FCFB"/><stop offset="1" stop-color="#DDEEEC"/></linearGradient>
+            <linearGradient id="wall" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#EAF5F4"/><stop offset="1" stop-color="#D6E9E7"/></linearGradient>
+            <linearGradient id="bed" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#E7F1F0"/></linearGradient>
+            <linearGradient id="beam" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5FD0CF" stop-opacity=".55"/><stop offset="1" stop-color="#5FD0CF" stop-opacity="0"/></linearGradient>
+          </defs>
+          <rect width="520" height="400" fill="url(#wall)"/>
+          <rect x="42" y="34" width="150" height="112" rx="12" fill="url(#sky)" stroke="#C9E0DE" stroke-width="2"/>
+          <path d="M52 132c22-30 36-44 52-44s26 16 46 44Z" fill="#CDE6E3"/>
+          <circle cx="158" cy="66" r="13" fill="#F3E3C6"/>
+          <rect x="232" y="40" width="76" height="106" rx="10" fill="#FFFFFF" stroke="#C9E0DE" stroke-width="2"/>
+          <rect x="244" y="56" width="52" height="8" rx="4" fill="#DCEDEC"/>
+          <rect x="244" y="74" width="38" height="8" rx="4" fill="#DCEDEC"/>
+          <rect x="244" y="96" width="52" height="34" rx="6" fill="#E6F4F3"/>
+          <path d="M258 118l10-12 8 9 6-6 8 9" stroke="#127C86" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <rect x="0" y="272" width="520" height="128" fill="#F3F9F8"/>
+          <rect x="46" y="228" width="330" height="64" rx="26" fill="url(#bed)" stroke="#C9E0DE" stroke-width="2"/>
+          <rect x="52" y="214" width="96" height="26" rx="13" fill="#FFFFFF" stroke="#C9E0DE" stroke-width="2"/>
+          <rect x="86" y="292" width="12" height="52" rx="5" fill="#C9E0DE"/>
+          <rect x="318" y="292" width="12" height="52" rx="5" fill="#C9E0DE"/>
+          <path d="M414 122v128" stroke="#B9D6D3" stroke-width="7" stroke-linecap="round"/>
+          <rect x="384" y="86" width="62" height="42" rx="12" fill="#0E4A50"/>
+          <circle cx="415" cy="107" r="9" fill="#5FD0CF"/>
+          <path d="M400 128h30l24 96h-78Z" fill="url(#beam)"/>
+          <rect x="376" y="250" width="86" height="14" rx="7" fill="#CFE4E2"/>
+          <rect x="404" y="264" width="30" height="46" rx="8" fill="#B9D6D3"/>
+          <rect x="368" y="308" width="102" height="12" rx="6" fill="#C9E0DE"/>
+          <g>
+            <rect x="150" y="316" width="128" height="46" rx="10" fill="#FFFFFF" stroke="#C9E0DE" stroke-width="2"/>
+            <rect x="164" y="326" width="18" height="26" rx="5" fill="#E6F4F3" stroke="#B9D6D3" stroke-width="1.6"/>
+            <rect x="192" y="330" width="18" height="22" rx="5" fill="#F3E3C6" stroke="#DCC69B" stroke-width="1.6"/>
+            <rect x="220" y="324" width="18" height="28" rx="5" fill="#E6F4F3" stroke="#B9D6D3" stroke-width="1.6"/>
+            <circle cx="258" cy="338" r="10" fill="#DCEDEC" stroke="#B9D6D3" stroke-width="1.6"/>
+          </g>
+          <circle cx="470" cy="52" r="26" fill="#E6F4F3"/>
+          <circle cx="470" cy="52" r="14" fill="#CFE4E2"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="treatments">
+  <div class="wrap">
+    <p class="eyebrow">Treatments</p>
+    <h2>Medical and aesthetic dermatology in one clinic</h2>
+    <p class="lead">Services listed on our Facebook page. Every treatment starts with a consultation so a dermatologist can confirm what suits your skin.</p>
+    <div class="grid grid--3" style="margin-top:28px">
+      <article class="card">
+        <div class="card__ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3.5c4.3 2.3 6.6 5.3 6.6 9 0 4.1-3 7-6.6 7s-6.6-2.9-6.6-7c0-3.7 2.3-6.7 6.6-9Z" stroke="#127C86" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 13.4c1-2 2.5-3.3 4.6-4" stroke="#B4894B" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+        <h3>Ultherapy</h3>
+        <p>Non-surgical lifting and tightening, assessed and performed under dermatologist supervision.</p>
+        <ul class="tags"><li>Lifting</li><li>Non-surgical</li></ul>
+      </article>
+      <article class="card">
+        <div class="card__ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="7.2" stroke="#127C86" stroke-width="1.8"/><path d="M12 4.8V2.4M12 21.6v-2.4M4.8 12H2.4M21.6 12h-2.4M6.9 6.9 5.2 5.2M18.8 18.8l-1.7-1.7M17.1 6.9l1.7-1.7M5.2 18.8l1.7-1.7" stroke="#B4894B" stroke-width="1.7" stroke-linecap="round"/></svg></div>
+        <h3>HydraFacial</h3>
+        <p>Deep cleansing, exfoliation and hydration for congested, dull or dehydrated skin.</p>
+        <ul class="tags"><li>Cleansing</li><li>Hydration</li></ul>
+      </article>
+      <article class="card">
+        <div class="card__ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8 3h8l-1.4 8.4a2 2 0 0 1-.9 1.3L12 14l-1.7-1.3a2 2 0 0 1-.9-1.3L8 3Z" stroke="#127C86" stroke-width="1.8" stroke-linejoin="round"/><path d="M12 14v7" stroke="#B4894B" stroke-width="1.8" stroke-linecap="round"/><path d="M9.6 20.4h4.8" stroke="#B4894B" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+        <h3>Laser treatments</h3>
+        <p>Laser procedures for pigmentation, texture, unwanted hair and other concerns discussed at consultation.</p>
+        <ul class="tags"><li>Pigmentation</li><li>Texture</li></ul>
+      </article>
+      <article class="card">
+        <div class="card__ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="3.5" width="16" height="17" rx="3" stroke="#127C86" stroke-width="1.8"/><path d="M12 8.4v6.2M8.9 11.5h6.2" stroke="#B4894B" stroke-width="1.9" stroke-linecap="round"/></svg></div>
+        <h3>General dermatology</h3>
+        <p>Consultations for acne, rashes, moles and other skin, hair and nail concerns.</p>
+        <ul class="tags"><li>Acne</li><li>Skin checks</li></ul>
+      </article>
+      <article class="card">
+        <div class="card__ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19c1.6-4.2 4-6.3 7-6.3s5.4 2.1 7 6.3" stroke="#127C86" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="7.6" r="3.8" stroke="#127C86" stroke-width="1.8"/><path d="M17.4 5.2c1.4.6 2.3 1.6 2.6 3" stroke="#B4894B" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+        <h3>Aesthetic consultations</h3>
+        <p>A dermatologist reviews your skin and maps out a plan before any aesthetic procedure is booked.</p>
+        <ul class="tags"><li>Assessment</li><li>Planning</li></ul>
+      </article>
+      <article class="card">
+        <div class="card__ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3.6" y="5" width="16.8" height="15" rx="3" stroke="#127C86" stroke-width="1.8"/><path d="M3.6 9.6h16.8M8.4 3.2v3.6M15.6 3.2v3.6" stroke="#127C86" stroke-width="1.8" stroke-linecap="round"/><path d="M8.6 14.4h3.2" stroke="#B4894B" stroke-width="1.9" stroke-linecap="round"/></svg></div>
+        <h3>Treatment follow-ups</h3>
+        <p>Scheduled reviews so your results are tracked and your plan adjusted as your skin responds.</p>
+        <ul class="tags"><li>Aftercare</li><li>Review</li></ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section why" id="why">
+  <div class="wrap">
+    <p class="eyebrow" style="color:#7FD3D3">Why Skin Aesthetiques</p>
+    <h2>A clinic built around board-certified doctors</h2>
+    <p class="lead">These are the facts patients most often ask about before booking a first appointment.</p>
+    <div class="why__grid">
+      <div class="why__item">
+        <span class="why__ico"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 7.5 12 4l8 3.5v4.9c0 4.4-3.3 7.6-8 8.6-4.7-1-8-4.2-8-8.6V7.5Z" stroke="#7FD3D3" stroke-width="1.8" stroke-linejoin="round"/><path d="m9.2 12 2 2 3.6-3.8" stroke="#7FD3D3" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <div><h3>PDS board-certified dermatologists</h3><p>Every dermatologist at the clinic is board-certified by the Philippine Dermatological Society.</p></div>
+      </div>
+      <div class="why__item">
+        <span class="why__ico"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s7-5.4 7-11a7 7 0 1 0-14 0c0 5.6 7 11 7 11Z" stroke="#7FD3D3" stroke-width="1.8"/><circle cx="12" cy="10" r="2.6" stroke="#7FD3D3" stroke-width="1.8"/></svg></span>
+        <div><h3>Easy to reach in South Triangle</h3><p>Ground floor of Heart of the City Condominium on Sgt. Esguerra Ave. — walkable from the Timog and Quezon Ave. area.</p></div>
+      </div>
+      <div class="why__item">
+        <span class="why__ico"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="8.6" stroke="#7FD3D3" stroke-width="1.8"/><path d="M12 7.4V12l3 1.8" stroke="#7FD3D3" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+        <div><h3>Open six days a week</h3><p>Monday to Saturday, 10AM to 7PM, so appointments can fall after work or on a weekend.</p></div>
+      </div>
+      <div class="why__item">
+        <span class="why__ico"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4.5 5.5h15v10.4h-9L6 19.4v-3.5H4.5Z" stroke="#7FD3D3" stroke-width="1.8" stroke-linejoin="round"/></svg></span>
+        <div><h3>Talk to us on your channel</h3><p>Call the clinic, or message us on Facebook or Instagram — whichever is easiest for you.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--tint" id="rates">
+  <div class="wrap">
+    <p class="eyebrow">Treatment rates</p>
+    <h2>Rates, clearly listed</h2>
+    <div class="notice" style="margin-top:20px">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="flex:none;margin-top:2px"><circle cx="12" cy="12" r="8.8" stroke="#B4894B" stroke-width="1.8"/><path d="M12 7.8v5M12 16.2h.01" stroke="#B4894B" stroke-width="2" stroke-linecap="round"/></svg>
+      <p><strong>Sample layout — your actual rates go here.</strong> The prices below are intentionally left blank. Once you send us your real price list, this section fills in and answers the question patients message you about most.</p>
+    </div>
+    <div class="card" style="padding:8px 22px">
+      <div class="rate"><span class="rate__n">Dermatologist consultation<span class="rate__d">Assessment and treatment plan</span></span><span class="rate__p">Your rate here</span></div>
+      <div class="rate"><span class="rate__n">Ultherapy<span class="rate__d">Priced by treatment area</span></span><span class="rate__p">Your rate here</span></div>
+      <div class="rate"><span class="rate__n">HydraFacial<span class="rate__d">Single session</span></span><span class="rate__p">Your rate here</span></div>
+      <div class="rate"><span class="rate__n">Laser treatments<span class="rate__d">Priced by concern and area</span></span><span class="rate__p">Your rate here</span></div>
+      <div class="rate"><span class="rate__n">Follow-up visit<span class="rate__d">Review after a procedure</span></span><span class="rate__p">Your rate here</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="about">
+  <div class="wrap about__grid">
+    <div>
+      <p class="eyebrow">About the clinic</p>
+      <h2>Skin Aesthetiques Dermatology and Laser Center</h2>
+      <p>Skin Aesthetiques is a dermatology and laser centre on the ground floor of Heart of the City Condominium along Sgt. Esguerra Avenue in South Triangle, Quezon City. The clinic combines medical dermatology with aesthetic treatments such as Ultherapy, HydraFacial and laser procedures.</p>
+      <p>All of the dermatologists at Skin Aesthetiques are board-certified by the Philippine Dermatological Society, so the doctor assessing your skin is the same specialist planning your treatment.</p>
+      <p style="margin-bottom:0">The clinic is open Monday to Saturday, 10AM to 7PM. Appointments can be arranged by phone, or through our Facebook and Instagram pages.</p>
+    </div>
+    <div class="artcard">
+      <svg viewBox="0 0 520 380" role="img" aria-label="Illustration of a dermatologist consulting with a patient at the clinic">
+        <defs>
+          <linearGradient id="a-bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F6FCFB"/><stop offset="1" stop-color="#E1F0EE"/></linearGradient>
+        </defs>
+        <rect width="520" height="380" fill="url(#a-bg)"/>
+        <rect x="0" y="286" width="520" height="94" fill="#EAF5F4"/>
+        <rect x="330" y="52" width="150" height="112" rx="12" fill="#FFFFFF" stroke="#C9E0DE" stroke-width="2"/>
+        <rect x="348" y="72" width="90" height="9" rx="4.5" fill="#DCEDEC"/>
+        <rect x="348" y="92" width="114" height="9" rx="4.5" fill="#E6F4F3"/>
+        <rect x="348" y="112" width="70" height="9" rx="4.5" fill="#E6F4F3"/>
+        <rect x="348" y="134" width="52" height="14" rx="7" fill="#5FD0CF"/>
+        <g>
+          <ellipse cx="164" cy="300" rx="86" ry="12" fill="#DCEDEC"/>
+          <path d="M120 288c0-38 20-60 44-60s44 22 44 60Z" fill="#FFFFFF" stroke="#C9E0DE" stroke-width="2"/>
+          <path d="M144 234c8-6 32-6 40 0l-6 22h-28Z" fill="#127C86"/>
+          <circle cx="164" cy="204" r="26" fill="#F3E3C6"/>
+          <path d="M138 200c2-18 14-26 26-26s24 8 26 26c-8-6-16-9-26-9s-18 3-26 9Z" fill="#3B2A20"/>
+          <rect x="152" y="252" width="24" height="8" rx="4" fill="#0E4A50"/>
+          <path d="M156 258c-4 10-4 18 0 26" stroke="#0E4A50" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <path d="M172 258c4 10 4 18 0 26" stroke="#0E4A50" stroke-width="3" fill="none" stroke-linecap="round"/>
+        </g>
+        <g>
+          <ellipse cx="292" cy="304" rx="72" ry="11" fill="#DCEDEC"/>
+          <path d="M256 292c0-32 16-52 36-52s36 20 36 52Z" fill="#E6F4F3" stroke="#C9E0DE" stroke-width="2"/>
+          <circle cx="292" cy="216" r="23" fill="#F0D8BE"/>
+          <path d="M269 214c0-16 10-24 23-24s23 8 23 24c-6-10-14-14-23-14s-17 4-23 14Z" fill="#5A4032"/>
+          <path d="M316 236c10 6 16 14 18 24" stroke="#F0D8BE" stroke-width="8" fill="none" stroke-linecap="round"/>
+        </g>
+        <path d="M60 108c0-8 6-14 14-14h58c8 0 14 6 14 14v34c0 8-6 14-14 14H96l-16 14v-14h-6c-8 0-14-6-14-14Z" fill="#FFFFFF" stroke="#C9E0DE" stroke-width="2"/>
+        <rect x="76" y="112" width="54" height="8" rx="4" fill="#DCEDEC"/>
+        <rect x="76" y="128" width="36" height="8" rx="4" fill="#E6F4F3"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="section section--sand" id="contact">
+  <div class="wrap">
+    <p class="eyebrow">Visit us</p>
+    <h2>Book an appointment</h2>
+    <p class="lead">Call the clinic during opening hours, or send the form below and we will get back to you.</p>
+    <div class="contact__grid" style="margin-top:28px">
+      <div>
+        <ul class="info">
+          <li>
+            <span class="info__ico"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s7-5.4 7-11a7 7 0 1 0-14 0c0 5.6 7 11 7 11Z" stroke="#127C86" stroke-width="1.8"/><circle cx="12" cy="10" r="2.6" stroke="#127C86" stroke-width="1.8"/></svg></span>
+            <span><span class="info__k">Address</span><span class="info__v">G/F Heart of the City Condominium, Sgt. Esguerra Ave., South Triangle, Quezon City</span></span>
+          </li>
+          <li>
+            <span class="info__ico"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 3h3l1.5 4.2-2.1 1.5a12.6 12.6 0 0 0 6.3 6.3l1.5-2.1L21 14.4v3A2.6 2.6 0 0 1 18.4 20 15.4 15.4 0 0 1 4 5.6 2.6 2.6 0 0 1 6.6 3Z" stroke="#127C86" stroke-width="1.9" stroke-linejoin="round"/></svg></span>
+            <span><span class="info__k">Phone</span><a class="info__v" href="tel:+639178453350">0917 845 3350</a></span>
+          </li>
+          <li>
+            <span class="info__ico"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3.4" y="5.4" width="17.2" height="13.2" rx="3" stroke="#127C86" stroke-width="1.8"/><path d="m4 7 8 5.6L20 7" stroke="#127C86" stroke-width="1.8" stroke-linejoin="round"/></svg></span>
+            <span><span class="info__k">Email</span><a class="info__v" href="mailto:sa.southtriangle@gmail.com">sa.southtriangle@gmail.com</a></span>
+          </li>
+          <li>
+            <span class="info__ico"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M14 8.4h2.6V5.2h-2.8c-2.6 0-4 1.6-4 4v2.2H7.4v3.2h2.4v7.2h3.4v-7.2h2.6l.5-3.2h-3.1V9.8c0-1 .3-1.4.8-1.4Z" stroke="#127C86" stroke-width="1.7" stroke-linejoin="round"/></svg></span>
+            <span><span class="info__k">Facebook</span><a class="info__v" href="https://www.facebook.com/SkinAesthetiques/" target="_blank" rel="noopener">facebook.com/SkinAesthetiques</a></span>
+          </li>
+          <li>
+            <span class="info__ico"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="8.6" stroke="#127C86" stroke-width="1.8"/><path d="M12 7.4V12l3 1.8" stroke="#127C86" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+            <span><span class="info__k">Opening hours</span><span class="info__v">Mon–Sat 10AM–7PM <span class="tbc">to be confirmed</span></span></span>
+          </li>
+        </ul>
+        <div class="mapbox">
+          <svg viewBox="0 0 520 250" role="img" aria-label="Simplified map showing the clinic location on Sgt. Esguerra Avenue, South Triangle, Quezon City">
+            <rect width="520" height="250" fill="#EAF2F0"/>
+            <path d="M0 176h520M0 66h520" stroke="#D6E5E3" stroke-width="18"/>
+            <path d="M148 0v250M368 0v250" stroke="#D6E5E3" stroke-width="16"/>
+            <path d="M0 176h520" stroke="#FFFFFF" stroke-width="3" stroke-dasharray="14 12"/>
+            <rect x="24" y="88" width="98" height="66" rx="7" fill="#DDEBE9"/>
+            <rect x="176" y="86" width="80" height="70" rx="7" fill="#DDEBE9"/>
+            <rect x="396" y="92" width="98" height="62" rx="7" fill="#DDEBE9"/>
+            <rect x="184" y="196" width="140" height="40" rx="7" fill="#DDEBE9"/>
+            <text x="16" y="60" font-family="Inter,sans-serif" font-size="13" fill="#6D8B89">Sgt. Esguerra Ave.</text>
+            <text x="384" y="238" font-family="Inter,sans-serif" font-size="13" fill="#6D8B89">South Triangle, QC</text>
+            <g transform="translate(292 132)">
+              <path d="M0-34c11 0 20 9 20 20 0 15-20 34-20 34S-20 1-20-14c0-11 9-20 20-20Z" fill="#127C86"/>
+              <circle cx="0" cy="-14" r="7.4" fill="#FFFFFF"/>
+            </g>
+            <rect x="292" y="140" width="128" height="0" fill="none"/>
+          </svg>
+          <p class="mapbox__cap">Ground floor, Heart of the City Condominium — Sgt. Esguerra Ave., South Triangle. Illustrative map.</p>
+        </div>
+      </div>
+      <div>
+        <form class="form" id="apptForm" novalidate>
+          <h3 style="margin-bottom:14px;color:var(--deep)">Request an appointment</h3>
+          <div class="field">
+            <label for="f-name">Your name</label>
+            <input id="f-name" name="name" type="text" autocomplete="name" required placeholder="Juan Dela Cruz">
+          </div>
+          <div class="field">
+            <label for="f-phone">Mobile number</label>
+            <input id="f-phone" name="phone" type="tel" autocomplete="tel" required placeholder="09XX XXX XXXX">
+          </div>
+          <div class="field">
+            <label for="f-service">Treatment of interest</label>
+            <select id="f-service" name="service">
+              <option>Dermatologist consultation</option>
+              <option>Ultherapy</option>
+              <option>HydraFacial</option>
+              <option>Laser treatment</option>
+              <option>Not sure yet</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="f-msg">Preferred day / message</label>
+            <textarea id="f-msg" name="message" placeholder="e.g. Saturday morning if possible"></textarea>
+          </div>
+          <button class="btn btn--primary" type="submit">Send request</button>
+          <p class="form__note" id="formNote">This opens your email app addressed to the clinic. In the live site this can send straight to your inbox.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="ftr">
+  <div class="wrap">
+    <div class="ftr__top">
+      <div>
+        <h4>Skin Aesthetiques</h4>
+        <p style="margin:0">Dermatology and Laser Center<br>South Triangle, Quezon City</p>
+      </div>
+      <div>
+        <h4>Clinic</h4>
+        <ul>
+          <li><a href="#treatments">Treatments</a></li>
+          <li><a href="#rates">Rates</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Visit us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+639178453350">0917 845 3350</a></li>
+          <li><a href="mailto:sa.southtriangle@gmail.com">sa.southtriangle@gmail.com</a></li>
+          <li><a href="https://www.facebook.com/SkinAesthetiques/" target="_blank" rel="noopener">Facebook</a></li>
+          <li>Mon–Sat 10AM–7PM (to be confirmed)</li>
+        </ul>
+      </div>
+    </div>
+    <div class="ftr__bar">
+      <span>&copy; 2026 Skin Aesthetiques Dermatology and Laser Center, Quezon City.</span>
+      <span class="ftr__credit">Website by <strong>CloudSpring IT Solutions</strong></span>
+    </div>
+  </div>
+</footer>
+
+<aside class="cs-bar" aria-label="Preview notice from CloudSpring IT Solutions">
+  <div class="cs-bar__in">
+    <div class="cs-bar__txt">
+      <p class="cs-bar__eyebrow">PREVIEW · CloudSpring IT Solutions</p>
+      <p class="cs-bar__line">Patients searching “laser clinic South Triangle” find your competitors’ own websites — want this site on your own domain, so Google finds you first?</p>
+    </div>
+    <a class="cs-bar__btn" href="https://api.leadconnectorhq.com/widget/booking/QRPEnWRw2Kx9rBe0Mj6J" target="_blank" rel="noopener">Book a FREE Discovery Call →</a>
+  </div>
+</aside>
+
+<script>
+(function(){
+  var form=document.getElementById('apptForm');
+  var note=document.getElementById('formNote');
+  if(!form) return;
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var name=(document.getElementById('f-name').value||'').trim();
+    var phone=(document.getElementById('f-phone').value||'').trim();
+    if(!name||!phone){
+      note.textContent='Please add your name and mobile number so we can call you back.';
+      note.style.color='#A4553B';
+      (!name?document.getElementById('f-name'):document.getElementById('f-phone')).focus();
+      return;
+    }
+    var service=document.getElementById('f-service').value;
+    var msg=(document.getElementById('f-msg').value||'').trim();
+    var body='Name: '+name+'%0D%0AMobile: '+phone+'%0D%0ATreatment: '+service+'%0D%0A%0D%0A'+encodeURIComponent(msg);
+    note.textContent='Opening your email app…';
+    note.style.color='';
+    window.location.href='mailto:sa.southtriangle@gmail.com?subject='+encodeURIComponent('Appointment request — '+name)+'&body='+body;
+  });
+})();
+</script>
+</body>
+</html>

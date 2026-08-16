@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>One World Skin &amp; Wellness — Makati, Quezon City, Parañaque &amp; Laguna</title>
+<meta name="description" content="One World Skin & Wellness — facials, skin treatments and aesthetics across four branches: Makati, Quezon City, Parañaque and Santa Rosa, Laguna. One clinic, four locations.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1F2A26;
+  --ink-2:#2E403A;
+  --slate:#5F6F69;
+  --line:#E4E0D8;
+  --paper:#FFFFFF;
+  --cream:#FBF8F3;
+  --mist:#F3F1EA;
+  --sage:#4E6F60;
+  --sage-dk:#38513f;
+  --sage-lt:#8FB09E;
+  --copper:#B0793F;
+  --copper-dk:#8E5F2E;
+  --shadow-1:0 1px 2px rgba(31,42,38,.06), 0 2px 8px rgba(31,42,38,.06);
+  --shadow-2:0 2px 6px rgba(31,42,38,.07), 0 12px 28px rgba(31,42,38,.11);
+  --shadow-3:0 -2px 10px rgba(31,42,38,.18), 0 -12px 40px rgba(31,42,38,.24);
+  --r-s:8px; --r-m:14px; --r-l:22px; --r-pill:999px;
+  --display:"Cormorant Garamond", "Iowan Old Style", Palatino, Georgia, "Times New Roman", serif;
+  --body:"Karla", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;font-family:var(--body);color:var(--ink);background:var(--paper);font-size:16px;line-height:1.62;padding-bottom:172px;overflow-x:hidden}
+h1,h2,h3,h4{font-family:var(--display);font-weight:600;line-height:1.14;margin:0}
+p{margin:0}
+img,svg{max-width:100%;display:block}
+.wrap{width:100%;max-width:1100px;margin:0 auto;padding:0 20px}
+.eyebrow{font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:var(--copper);margin:0 0 12px}
+.sec{padding:56px 0}
+.sec-alt{background:var(--cream)}
+.sec-head{max-width:640px;margin:0 0 32px}
+.sec-head h2{font-size:34px}
+.sec-head p{margin-top:12px;color:var(--slate)}
+.tbc{color:var(--copper-dk);font-style:italic}
+
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible,[tabindex]:focus-visible{
+  outline:3px solid var(--copper);outline-offset:3px;border-radius:4px;
+}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:12px 22px;border-radius:var(--r-pill);font-family:var(--body);font-size:15px;font-weight:600;text-decoration:none;border:1.5px solid transparent;cursor:pointer;transition:transform .16s ease, background-color .16s ease, border-color .16s ease, box-shadow .16s ease, color .16s ease}
+.btn-primary{background:var(--sage);color:#fff;box-shadow:var(--shadow-1)}
+.btn-primary:hover{background:var(--sage-dk);transform:translateY(-2px);box-shadow:var(--shadow-2)}
+.btn-copper{background:var(--copper);color:#fff;box-shadow:var(--shadow-1)}
+.btn-copper:hover{background:var(--copper-dk);transform:translateY(-2px);box-shadow:var(--shadow-2)}
+.btn-ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+.btn-ghost:hover{border-color:var(--sage);color:var(--sage-dk);background:#fff;transform:translateY(-2px)}
+.btn-light{background:#fff;color:var(--ink-2);box-shadow:var(--shadow-1)}
+.btn-light:hover{background:var(--mist);transform:translateY(-2px)}
+.btn:active{transform:translateY(0)}
+
+/* header */
+.hdr{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.95);backdrop-filter:saturate(180%) blur(10px);border-bottom:1px solid var(--line)}
+.hdr-in{display:flex;align-items:center;gap:12px;min-height:64px;padding:8px 20px;max-width:1100px;margin:0 auto}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);min-width:0;flex:1}
+.mark{flex:0 0 auto;width:38px;height:38px}
+.brand-name{font-family:var(--display);font-size:19px;line-height:1.05;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.brand-sub{display:block;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--slate);margin-top:2px}
+.hdr-call{flex:0 0 auto;display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:10px 16px;border-radius:var(--r-pill);background:var(--sage);color:#fff;text-decoration:none;font-weight:600;font-size:14px;transition:background-color .16s ease, transform .16s ease}
+.hdr-call:hover{background:var(--sage-dk);transform:translateY(-1px)}
+.hdr-call .lbl{display:none}
+@media(min-width:520px){.hdr-call .lbl{display:inline}}
+.nav{display:none}
+@media(min-width:900px){
+  .nav{display:flex;gap:4px;margin-right:8px}
+  .nav a{text-decoration:none;color:var(--slate);font-size:14px;font-weight:500;padding:10px 12px;border-radius:var(--r-s);min-height:44px;display:inline-flex;align-items:center;transition:color .16s ease,background-color .16s ease}
+  .nav a:hover{color:var(--ink);background:var(--mist)}
+}
+
+/* hero */
+.hero{position:relative;background:linear-gradient(170deg,#FBF8F3 0%,#F1EEE5 55%,#E9EFE9 100%);overflow:hidden;border-bottom:1px solid var(--line)}
+.hero::before{content:"";position:absolute;width:560px;height:560px;left:-200px;bottom:-260px;border-radius:50%;background:radial-gradient(circle,rgba(143,176,158,.28) 0%,rgba(143,176,158,0) 70%)}
+.hero-in{position:relative;z-index:2;padding:40px 0 46px;display:grid;gap:30px}
+.hero h1{font-size:40px}
+.hero h1 em{font-style:normal;color:var(--sage-dk)}
+.hero-sub{margin-top:14px;color:var(--slate);font-size:16.5px;max-width:52ch}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.hero-art{border-radius:var(--r-l);overflow:hidden;box-shadow:var(--shadow-2)}
+@media(min-width:900px){
+  .hero-in{grid-template-columns:1.08fr .92fr;align-items:center;padding:62px 0 68px;gap:44px}
+  .hero h1{font-size:58px}
+}
+
+/* branch picker */
+.picker{background:#fff;border:1px solid var(--line);border-radius:var(--r-l);padding:20px;box-shadow:var(--shadow-2);margin-top:26px}
+.picker h2{font-size:24px;margin-bottom:4px}
+.picker .lead{color:var(--slate);font-size:14.5px;margin-top:6px}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 16px}
+.tab{min-height:44px;padding:10px 18px;border-radius:var(--r-pill);border:1.5px solid var(--line);background:#fff;color:var(--slate);font-family:var(--body);font-size:14.5px;font-weight:600;cursor:pointer;transition:all .16s ease}
+.tab:hover{border-color:var(--sage);color:var(--sage-dk)}
+.tab[aria-selected="true"]{background:var(--sage);border-color:var(--sage);color:#fff}
+.panel{border-top:1px dashed var(--line);padding-top:18px}
+.panel[hidden]{display:none}
+.panel h3{font-size:24px;margin-bottom:8px}
+.panel dl{margin:12px 0 0;display:grid;gap:12px}
+.panel dt{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--slate);font-weight:700}
+.panel dd{margin:4px 0 0;font-size:15.5px}
+.panel .acts{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.panel a.lnk{color:var(--sage-dk);text-decoration:none;border-bottom:1px solid rgba(78,111,96,.35)}
+.panel a.lnk:hover{color:var(--sage);border-color:var(--sage)}
+
+/* cards */
+.grid{display:grid;gap:16px}
+@media(min-width:640px){.grid-2{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:900px){.grid-3{grid-template-columns:repeat(3,1fr)}}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r-m);padding:24px;box-shadow:var(--shadow-1);transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow-2);border-color:#D6CFC1}
+.card .ico{width:46px;height:46px;margin-bottom:14px}
+.card h3{font-size:23px;margin-bottom:8px}
+.card p{color:var(--slate);font-size:14.5px}
+.card .rate{margin-top:16px;padding-top:12px;border-top:1px dashed var(--line);font-size:13px;color:var(--copper-dk)}
+.note-band{margin-top:20px;background:var(--mist);border:1px dashed #D9D2C4;border-radius:var(--r-m);padding:16px 18px;font-size:14px;color:var(--ink-2)}
+
+/* why */
+.why{display:grid;gap:14px}
+.why-item{display:flex;gap:14px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:var(--r-m);padding:20px;box-shadow:var(--shadow-1)}
+.why-item .ico{flex:0 0 auto;width:36px;height:36px;margin-top:2px}
+.why-item h3{font-size:20px;margin-bottom:4px}
+.why-item p{color:var(--slate);font-size:14.5px}
+@media(min-width:820px){.why{grid-template-columns:repeat(2,1fr)}}
+
+/* about */
+.about{display:grid;gap:28px;align-items:center}
+.about-art{border-radius:var(--r-l);overflow:hidden;box-shadow:var(--shadow-2)}
+.about p{color:var(--slate);font-size:15.5px}
+.about p+p{margin-top:14px}
+@media(min-width:900px){.about{grid-template-columns:1.05fr .95fr;gap:44px}}
+
+/* contact */
+.contact{display:grid;gap:22px}
+@media(min-width:900px){.contact{grid-template-columns:1fr 1fr;gap:32px}}
+.info{background:#fff;border:1px solid var(--line);border-radius:var(--r-m);padding:24px;box-shadow:var(--shadow-1)}
+.info dl{margin:0;display:grid;gap:16px}
+.info dt{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--slate);font-weight:700}
+.info dd{margin:5px 0 0;font-size:15.5px}
+.info a{color:var(--sage-dk);text-decoration:none;border-bottom:1px solid rgba(78,111,96,.35);transition:color .16s ease,border-color .16s ease;word-break:break-word}
+.info a:hover{color:var(--sage);border-color:var(--sage)}
+.mapbox{border-radius:var(--r-m);overflow:hidden;border:1px solid var(--line);margin-top:18px;position:relative}
+.mapbox .caption{position:absolute;left:12px;bottom:12px;background:rgba(255,255,255,.94);border-radius:var(--r-s);padding:8px 12px;font-size:12.5px;color:var(--slate);box-shadow:var(--shadow-1);max-width:calc(100% - 24px)}
+form{background:#fff;border:1px solid var(--line);border-radius:var(--r-m);padding:24px;box-shadow:var(--shadow-1)}
+.field{margin-bottom:16px}
+label{display:block;font-size:13px;font-weight:600;margin-bottom:6px;color:var(--ink-2)}
+input,textarea,select{width:100%;min-height:48px;padding:12px 14px;border:1.5px solid var(--line);border-radius:var(--r-s);font-family:var(--body);font-size:15px;color:var(--ink);background:#fff;transition:border-color .16s ease, box-shadow .16s ease}
+textarea{min-height:110px;resize:vertical}
+input:hover,textarea:hover,select:hover{border-color:#CFC7B7}
+input:focus,textarea:focus,select:focus{border-color:var(--sage);box-shadow:0 0 0 3px rgba(78,111,96,.14);outline:none}
+.form-note{font-size:12.5px;color:var(--slate);margin-top:12px}
+
+/* footer */
+.ftr{background:var(--ink);color:#C3CFC9;padding:40px 0 34px}
+.ftr-in{display:grid;gap:22px}
+.ftr h4{color:#fff;font-size:22px;margin-bottom:8px}
+.ftr p,.ftr li{font-size:14px}
+.ftr ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.ftr a{color:#DDE7E2;text-decoration:none;border-bottom:1px solid rgba(221,231,226,.25);word-break:break-word}
+.ftr a:hover{color:#fff;border-color:#fff}
+.ftr-btm{margin-top:26px;padding-top:20px;border-top:1px solid rgba(255,255,255,.14);font-size:13px;display:grid;gap:6px}
+.cs-credit{color:#EEF4F1}
+@media(min-width:760px){.ftr-in{grid-template-columns:1.4fr 1fr 1fr}}
+
+/* CloudSpring bar */
+.cs-bar{position:fixed;left:0;right:0;bottom:0;z-index:200;background:rgba(20,29,25,.94);backdrop-filter:saturate(160%) blur(12px);border-top:1px solid rgba(176,121,63,.45);box-shadow:var(--shadow-3);padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px))}
+.cs-in{max-width:1100px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;justify-content:center;text-align:center}
+.cs-eyebrow{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:#E0B183;margin:0 0 4px}
+.cs-line{color:#fff;font-size:15px;font-weight:600;line-height:1.35;margin:0}
+.cs-btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:13px 24px;border-radius:var(--r-pill);background:var(--copper);color:#FFF7EE;font-weight:700;font-size:14.5px;text-decoration:none;white-space:nowrap;box-shadow:0 0 0 0 rgba(176,121,63,.6);animation:csPulse 2.4s ease-out infinite;transition:background-color .16s ease, transform .16s ease}
+.cs-btn:hover{background:#C48A4C;transform:translateY(-2px);animation:none}
+@keyframes csPulse{0%{box-shadow:0 0 0 0 rgba(176,121,63,.55)}70%{box-shadow:0 0 0 14px rgba(176,121,63,0)}100%{box-shadow:0 0 0 0 rgba(176,121,63,0)}}
+@media(min-width:640px){
+  .cs-in{flex-wrap:nowrap;justify-content:space-between;text-align:left}
+  .cs-line{font-size:16px}
+  body{padding-bottom:120px}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none !important;transition-duration:.01ms !important;scroll-behavior:auto !important}
+  .cs-btn{box-shadow:0 0 0 3px rgba(176,121,63,.5)}
+}
+.skip{position:absolute;left:-9999px;top:0;background:#fff;color:var(--ink);padding:12px 18px;z-index:300}
+.skip:focus{left:0}
+</style>
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="hdr">
+  <div class="hdr-in">
+    <a class="brand" href="#top" aria-label="One World Skin and Wellness — home">
+      <svg class="mark" viewBox="0 0 48 48" role="img" aria-hidden="true" focusable="false">
+        <circle cx="24" cy="24" r="23" fill="#1F2A26"/>
+        <circle cx="24" cy="24" r="14" fill="none" stroke="#8FB09E" stroke-width="2"/>
+        <path d="M24 10c5 6 5 22 0 28M24 10c-5 6-5 22 0 28" fill="none" stroke="#8FB09E" stroke-width="1.6"/>
+        <path d="M10 24h28" stroke="#B0793F" stroke-width="1.8"/>
+      </svg>
+      <span>
+        <span class="brand-name">One World</span>
+        <span class="brand-sub">Skin &amp; Wellness</span>
+      </span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#branches">Branches</a>
+      <a href="#services">Treatments</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="hdr-call" href="tel:+639163213379" aria-label="Call One World Skin and Wellness at 0916 321 3379">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .3 1.9.6 2.8a2 2 0 0 1-.5 2.1L8.1 9.7a16 16 0 0 0 6 6l1.1-1.1a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.8.6a2 2 0 0 1 1.7 2Z"/></svg>
+      <span class="lbl">0916 321 3379</span>
+    </a>
+  </div>
+</header>
+
+<main id="main">
+<a id="top"></a>
+
+<!-- HERO + BRANCH PICKER ABOVE THE FOLD -->
+<section class="hero">
+  <div class="wrap hero-in">
+    <div>
+      <p class="eyebrow">One clinic · Four branches</p>
+      <h1>Skin &amp; wellness care, <em>close to you</em></h1>
+      <p class="hero-sub">One World Skin &amp; Wellness offers facials, skin treatments and aesthetic care across Quezon City, Makati, Parañaque and Santa Rosa, Laguna — the same menu, the same standard, whichever branch you visit.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#branches">Choose your branch</a>
+        <a class="btn btn-light" href="tel:+639163213379">Call 0916 321 3379</a>
+      </div>
+
+      <div class="picker" id="branches">
+        <p class="eyebrow" style="margin-bottom:6px">Branch finder</p>
+        <h2>Find your nearest branch</h2>
+        <p class="lead">Pick a location for its address and contact details.</p>
+
+        <div class="tabs" role="tablist" aria-label="Branch selector">
+          <button class="tab" role="tab" id="t-mkt" aria-controls="p-mkt" aria-selected="true">Makati</button>
+          <button class="tab" role="tab" id="t-qc"  aria-controls="p-qc"  aria-selected="false" tabindex="-1">Quezon City</button>
+          <button class="tab" role="tab" id="t-prq" aria-controls="p-prq" aria-selected="false" tabindex="-1">Parañaque</button>
+          <button class="tab" role="tab" id="t-lag" aria-controls="p-lag" aria-selected="false" tabindex="-1">Laguna</button>
+        </div>
+
+        <div class="panel" id="p-mkt" role="tabpanel" aria-labelledby="t-mkt" tabindex="0">
+          <h3>Makati branch</h3>
+          <dl>
+            <dt>Address</dt><dd>2nd Floor, Diane Optical Building, Arnaiz Avenue, Makati City</dd>
+            <dt>Phone</dt><dd><a class="lnk" href="tel:+639163213379">0916 321 3379</a></dd>
+            <dt>Email</dt><dd><a class="lnk" href="mailto:owmskincareclinic@gmail.com">owmskincareclinic@gmail.com</a></dd>
+            <dt>Branch hours</dt><dd class="tbc">Branch hours — to be confirmed</dd>
+          </dl>
+          <div class="acts">
+            <a class="btn btn-primary" href="tel:+639163213379">Call this branch</a>
+            <a class="btn btn-ghost" href="https://www.facebook.com/owskinandwellnessph/" target="_blank" rel="noopener">Message on Facebook</a>
+          </div>
+        </div>
+
+        <div class="panel" id="p-qc" role="tabpanel" aria-labelledby="t-qc" tabindex="0" hidden>
+          <h3>Quezon City branch</h3>
+          <dl>
+            <dt>Address</dt><dd class="tbc">Branch address — to be confirmed</dd>
+            <dt>Phone</dt><dd><a class="lnk" href="tel:+639163213379">0916 321 3379</a> <span class="tbc">(main line)</span></dd>
+            <dt>Branch hours</dt><dd class="tbc">Branch hours — to be confirmed</dd>
+          </dl>
+          <div class="acts">
+            <a class="btn btn-primary" href="tel:+639163213379">Call us</a>
+            <a class="btn btn-ghost" href="https://www.facebook.com/owskinandwellnessph/" target="_blank" rel="noopener">Message on Facebook</a>
+          </div>
+        </div>
+
+        <div class="panel" id="p-prq" role="tabpanel" aria-labelledby="t-prq" tabindex="0" hidden>
+          <h3>Parañaque branch</h3>
+          <dl>
+            <dt>Address</dt><dd class="tbc">Branch address — to be confirmed</dd>
+            <dt>Phone</dt><dd><a class="lnk" href="tel:+639163213379">0916 321 3379</a> <span class="tbc">(main line)</span></dd>
+            <dt>Branch hours</dt><dd class="tbc">Branch hours — to be confirmed</dd>
+          </dl>
+          <div class="acts">
+            <a class="btn btn-primary" href="tel:+639163213379">Call us</a>
+            <a class="btn btn-ghost" href="https://www.facebook.com/owskinandwellnessph/" target="_blank" rel="noopener">Message on Facebook</a>
+          </div>
+        </div>
+
+        <div class="panel" id="p-lag" role="tabpanel" aria-labelledby="t-lag" tabindex="0" hidden>
+          <h3>Laguna branch</h3>
+          <dl>
+            <dt>Address</dt><dd>Santa Rosa, Laguna — <span class="tbc">street address to be confirmed</span></dd>
+            <dt>Phone</dt><dd><a class="lnk" href="tel:+639163213379">0916 321 3379</a> <span class="tbc">(main line)</span></dd>
+            <dt>Branch hours</dt><dd class="tbc">Branch hours — to be confirmed</dd>
+          </dl>
+          <div class="acts">
+            <a class="btn btn-primary" href="tel:+639163213379">Call us</a>
+            <a class="btn btn-ghost" href="https://www.facebook.com/owskinandwellnessph/" target="_blank" rel="noopener">Message on Facebook</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-art">
+      <svg viewBox="0 0 520 470" role="img" aria-label="Illustration of a calm skin and wellness treatment room">
+        <defs>
+          <linearGradient id="oBg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#EFEFE6"/><stop offset="100%" stop-color="#DFE8E0"/></linearGradient>
+          <linearGradient id="oBed" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#FFFFFF"/><stop offset="100%" stop-color="#ECE7DC"/></linearGradient>
+          <linearGradient id="oArch" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#F7EFE3"/><stop offset="100%" stop-color="#E5D9C6"/></linearGradient>
+        </defs>
+        <rect width="520" height="470" fill="url(#oBg)"/>
+        <!-- arch -->
+        <path d="M136 300V150a124 124 0 0 1 248 0v150Z" fill="url(#oArch)"/>
+        <circle cx="260" cy="150" r="62" fill="#F3E4D2"/>
+        <circle cx="260" cy="150" r="42" fill="#E7D3BB"/>
+        <!-- shelf plants -->
+        <rect x="60" y="196" width="58" height="10" rx="5" fill="#C9C2B2"/>
+        <path d="M89 196v-30" stroke="#4E6F60" stroke-width="4" stroke-linecap="round"/>
+        <path d="M89 176c-20-4-26-20-24-30 12-2 26 8 24 30Z" fill="#6E9480"/>
+        <path d="M89 182c18-6 24-22 20-32-12 0-24 12-20 32Z" fill="#8FB09E"/>
+        <rect x="402" y="196" width="58" height="10" rx="5" fill="#C9C2B2"/>
+        <path d="M431 196v-24" stroke="#4E6F60" stroke-width="4" stroke-linecap="round"/>
+        <ellipse cx="431" cy="164" rx="24" ry="16" fill="#7FA692"/>
+        <!-- treatment bed -->
+        <rect x="86" y="300" width="348" height="54" rx="22" fill="url(#oBed)"/>
+        <rect x="86" y="286" width="120" height="28" rx="14" fill="#FFFFFF"/>
+        <rect x="120" y="354" width="16" height="52" rx="7" fill="#C9C2B2"/>
+        <rect x="384" y="354" width="16" height="52" rx="7" fill="#C9C2B2"/>
+        <!-- trolley with bottles -->
+        <rect x="424" y="318" width="70" height="88" rx="10" fill="#EFE9DE"/>
+        <rect x="424" y="348" width="70" height="4" fill="#D8D0C1"/>
+        <rect x="436" y="296" width="14" height="24" rx="5" fill="#B0793F"/>
+        <rect x="456" y="302" width="12" height="18" rx="5" fill="#8FB09E"/>
+        <rect x="474" y="298" width="12" height="22" rx="5" fill="#4E6F60"/>
+        <!-- towels -->
+        <rect x="196" y="284" width="52" height="16" rx="8" fill="#8FB09E"/>
+        <rect x="206" y="272" width="34" height="14" rx="7" fill="#B7CDBF"/>
+        <!-- floor -->
+        <rect x="0" y="406" width="520" height="64" fill="#D6CFC1"/>
+        <ellipse cx="260" cy="424" rx="196" ry="18" fill="#C7BFAF" opacity=".7"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="sec" id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Treatments</p>
+      <h2>The same menu at every branch</h2>
+      <p>Whether you book in Makati, Quezon City, Parañaque or Laguna, you get the same skin and wellness services.</p>
+    </div>
+    <div class="grid grid-3">
+      <article class="card">
+        <svg class="ico" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+          <path d="M24 41c9.4 0 15-7 15-16 0-8-6-15-15-15S9 17 9 25c0 9 5.6 16 15 16Z" stroke="#4E6F60" stroke-width="2.4"/>
+          <path d="M17 22c2.4-2.4 5-3.4 8-3" stroke="#8FB09E" stroke-width="2.4" stroke-linecap="round"/>
+          <circle cx="30" cy="27" r="2.6" fill="#B0793F"/><circle cx="20" cy="31" r="2" fill="#B0793F"/>
+        </svg>
+        <h3>Facials</h3>
+        <p>Cleansing and rejuvenating facial treatments for everyday skin health.</p>
+        <p class="rate">₱ ___ — your actual rates go here</p>
+      </article>
+      <article class="card">
+        <svg class="ico" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+          <path d="M12 34c0-12 6-22 12-26 6 4 12 14 12 26 0 5-5.4 8-12 8s-12-3-12-8Z" stroke="#4E6F60" stroke-width="2.4" stroke-linejoin="round"/>
+          <path d="M24 20v18" stroke="#8FB09E" stroke-width="2.4" stroke-linecap="round"/>
+          <path d="M24 28c3-2 5-2 7-1M24 34c-3-2-5-2-7-1" stroke="#8FB09E" stroke-width="2.2" stroke-linecap="round"/>
+        </svg>
+        <h3>Skin treatments</h3>
+        <p>Targeted programmes for tone, texture, blemishes and skin concerns.</p>
+        <p class="rate">₱ ___ — your actual rates go here</p>
+      </article>
+      <article class="card">
+        <svg class="ico" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+          <circle cx="24" cy="24" r="13" stroke="#4E6F60" stroke-width="2.4"/>
+          <path d="M24 8V4M24 44v-4M8 24H4M44 24h-4M13 13l-3-3M35 35l3 3M35 13l3-3M13 35l-3 3" stroke="#B0793F" stroke-width="2.2" stroke-linecap="round"/>
+          <path d="M19 25l3.5 3.5L30 21" stroke="#8FB09E" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <h3>Aesthetics</h3>
+        <p>Aesthetic services delivered in a calm, professional clinic setting.</p>
+        <p class="rate">₱ ___ — your actual rates go here</p>
+      </article>
+    </div>
+    <p class="note-band"><strong>Placeholder:</strong> the full treatment menu, inclusions and prices for each branch would be listed here — supplied by the clinic.</p>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="sec sec-alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Why One World</p>
+      <h2>One brand, wherever you book</h2>
+    </div>
+    <div class="why">
+      <div class="why-item">
+        <svg class="ico" viewBox="0 0 40 40" fill="none" aria-hidden="true"><circle cx="20" cy="20" r="14" stroke="#4E6F60" stroke-width="2.2"/><path d="M20 6c6 7 6 21 0 28M20 6c-6 7-6 21 0 28M6 20h28" stroke="#8FB09E" stroke-width="2"/></svg>
+        <div><h3>Four branches, one clinic</h3><p>Quezon City, Makati, Parañaque and Santa Rosa, Laguna — all One World Skin &amp; Wellness.</p></div>
+      </div>
+      <div class="why-item">
+        <svg class="ico" viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect x="6" y="9" width="28" height="24" rx="5" stroke="#4E6F60" stroke-width="2.2"/><path d="M12 18h16M12 24h11" stroke="#8FB09E" stroke-width="2.2" stroke-linecap="round"/></svg>
+        <div><h3>The same service menu</h3><p>Facials, skin treatments and aesthetics at every location — no guessing what a branch offers.</p></div>
+      </div>
+      <div class="why-item">
+        <svg class="ico" viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M22 4l-2 14h10L18 36l2-14H10L22 4Z" stroke="#B0793F" stroke-width="2.2" stroke-linejoin="round"/></svg>
+        <div><h3>One place to reach us</h3><p>One phone number, one email and one Facebook page — instead of four scattered listings.</p></div>
+      </div>
+      <div class="why-item">
+        <svg class="ico" viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M20 35s12-8.6 12-16A12 12 0 0 0 8 19c0 7.4 12 16 12 16Z" stroke="#4E6F60" stroke-width="2.2" stroke-linejoin="round"/><circle cx="20" cy="19" r="4.2" fill="#8FB09E"/></svg>
+        <div><h3>Addresses you can trust</h3><p>Each branch's address published by us, kept current — not copied into a directory we don't control.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="sec" id="about">
+  <div class="wrap about">
+    <div>
+      <p class="eyebrow">About us</p>
+      <h2>One World Skin &amp; Wellness</h2>
+      <p style="margin-top:14px">One World Skin &amp; Wellness is a skin and wellness clinic offering facials, skin treatments and aesthetic services. The clinic operates four branches: Quezon City, Makati, Parañaque and Santa Rosa, Laguna.</p>
+      <p>Our Makati branch is on the 2nd Floor of the Diane Optical Building along Arnaiz Avenue.</p>
+      <p>This page brings all four branches together in one place, so you can find the right location, the right treatment and a way to reach us without hunting across separate listings.</p>
+      <div class="hero-cta" style="margin-top:22px">
+        <a class="btn btn-copper" href="#contact">Send an enquiry</a>
+        <a class="btn btn-ghost" href="https://www.facebook.com/owskinandwellnessph/" target="_blank" rel="noopener">Visit our Facebook page</a>
+      </div>
+    </div>
+    <div class="about-art">
+      <svg viewBox="0 0 440 400" role="img" aria-label="Illustration of four branch pins connected under one brand">
+        <defs><linearGradient id="oMapBg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#F7F4ED"/><stop offset="100%" stop-color="#E9EFE9"/></linearGradient></defs>
+        <rect width="440" height="400" rx="0" fill="url(#oMapBg)"/>
+        <g stroke="#DCD8CC" stroke-width="2" fill="none">
+          <path d="M0 96h440M0 200h440M0 300h440M110 0v400M250 0v400M354 0v400"/>
+        </g>
+        <path d="M150 110 L292 96 M150 110 L120 250 M292 96 L330 262 M120 250 L236 322 M330 262 L236 322"
+              stroke="#8FB09E" stroke-width="3" stroke-dasharray="7 8" fill="none"/>
+        <g fill="#4E6F60">
+          <path d="M150 84c-11 0-20 9-20 20 0 15 20 32 20 32s20-17 20-32c0-11-9-20-20-20Z"/>
+          <path d="M292 70c-11 0-20 9-20 20 0 15 20 32 20 32s20-17 20-32c0-11-9-20-20-20Z"/>
+          <path d="M120 224c-11 0-20 9-20 20 0 15 20 32 20 32s20-17 20-32c0-11-9-20-20-20Z"/>
+          <path d="M330 236c-11 0-20 9-20 20 0 15 20 32 20 32s20-17 20-32c0-11-9-20-20-20Z"/>
+        </g>
+        <g fill="#FFFFFF">
+          <circle cx="150" cy="104" r="7"/><circle cx="292" cy="90" r="7"/>
+          <circle cx="120" cy="244" r="7"/><circle cx="330" cy="256" r="7"/>
+        </g>
+        <g font-family="Karla, Arial, sans-serif" font-size="13" fill="#2E403A" font-weight="600">
+          <text x="150" y="152" text-anchor="middle">Quezon City</text>
+          <text x="292" y="138" text-anchor="middle">Makati</text>
+          <text x="120" y="292" text-anchor="middle">Parañaque</text>
+          <text x="330" y="304" text-anchor="middle">Laguna</text>
+        </g>
+        <circle cx="236" cy="322" r="30" fill="#1F2A26"/>
+        <circle cx="236" cy="322" r="18" fill="none" stroke="#8FB09E" stroke-width="2"/>
+        <path d="M236 304c6.5 8 6.5 28 0 36M236 304c-6.5 8-6.5 28 0 36M218 322h36" stroke="#8FB09E" stroke-width="1.6" fill="none"/>
+        <text x="236" y="376" text-anchor="middle" font-family="Cormorant Garamond, Georgia, serif" font-size="19" fill="#1F2A26">One World Skin &amp; Wellness</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="sec sec-alt" id="contact">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Contact</p>
+      <h2>Book or ask us anything</h2>
+      <p>One number, one inbox, one Facebook page — for all four branches.</p>
+    </div>
+    <div class="contact">
+      <div class="info">
+        <dl>
+          <dt>Makati branch</dt>
+          <dd>2nd Floor, Diane Optical Building<br>Arnaiz Avenue, Makati City, Philippines</dd>
+          <dt>Other branches</dt>
+          <dd>Quezon City · Parañaque · Santa Rosa, Laguna<br><span class="tbc">Full branch addresses — to be confirmed</span></dd>
+          <dt>Phone</dt>
+          <dd><a href="tel:+639163213379">0916 321 3379</a></dd>
+          <dt>Email</dt>
+          <dd><a href="mailto:owmskincareclinic@gmail.com">owmskincareclinic@gmail.com</a></dd>
+          <dt>Facebook</dt>
+          <dd><a href="https://www.facebook.com/owskinandwellnessph/" target="_blank" rel="noopener">facebook.com/owskinandwellnessph</a></dd>
+          <dt>Branch hours</dt>
+          <dd class="tbc">Branch hours — to be confirmed</dd>
+        </dl>
+        <div class="mapbox">
+          <svg viewBox="0 0 520 250" role="img" aria-label="Stylised map showing the Makati branch on Arnaiz Avenue">
+            <rect width="520" height="250" fill="#F1EEE6"/>
+            <g stroke="#E1DCD0" stroke-width="10">
+              <line x1="0" y1="60" x2="520" y2="60"/><line x1="0" y1="190" x2="520" y2="190"/>
+              <line x1="164" y1="0" x2="164" y2="250"/><line x1="376" y1="0" x2="376" y2="250"/>
+            </g>
+            <rect x="0" y="116" width="520" height="22" fill="#DFE6DE"/>
+            <g fill="#E7E2D6">
+              <rect x="182" y="72" width="80" height="30" rx="4"/><rect x="290" y="72" width="70" height="30" rx="4"/>
+              <rect x="182" y="150" width="80" height="30" rx="4"/><rect x="290" y="150" width="70" height="30" rx="4"/>
+              <rect x="392" y="72" width="100" height="30" rx="4"/><rect x="30" y="150" width="112" height="30" rx="4"/>
+            </g>
+            <text x="260" y="244" text-anchor="middle" font-family="Karla, Arial, sans-serif" font-size="13" fill="#5F6F69">Arnaiz Avenue, Makati City</text>
+            <circle cx="260" cy="127" r="27" fill="rgba(78,111,96,.16)"/>
+            <path d="M260 105c-9.4 0-17 7.6-17 17 0 12.7 17 27 17 27s17-14.3 17-27c0-9.4-7.6-17-17-17Z" fill="#4E6F60"/>
+            <circle cx="260" cy="122" r="6.2" fill="#fff"/>
+          </svg>
+          <span class="caption">Diane Optical Bldg, Arnaiz Ave — illustrative map</span>
+        </div>
+      </div>
+
+      <form id="enquiry" novalidate>
+        <div class="field">
+          <label for="o-name">Your name</label>
+          <input id="o-name" name="name" type="text" autocomplete="name" placeholder="Juan dela Cruz">
+        </div>
+        <div class="field">
+          <label for="o-phone">Mobile number</label>
+          <input id="o-phone" name="phone" type="tel" autocomplete="tel" placeholder="09XX XXX XXXX">
+        </div>
+        <div class="field">
+          <label for="o-branch">Preferred branch</label>
+          <select id="o-branch" name="branch">
+            <option>Makati</option><option>Quezon City</option><option>Parañaque</option><option>Santa Rosa, Laguna</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="o-msg">What are you interested in?</label>
+          <textarea id="o-msg" name="message" placeholder="e.g. facial, skin treatment, aesthetic service"></textarea>
+        </div>
+        <button class="btn btn-copper" type="submit" style="width:100%">Send</button>
+        <p class="form-note">This preview form opens your email app addressed to owmskincareclinic@gmail.com. A live booking form can be connected later.</p>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="ftr">
+  <div class="wrap ftr-in">
+    <div>
+      <h4>One World Skin &amp; Wellness</h4>
+      <p>Facials · Skin treatments · Aesthetics<br>2nd Flr, Diane Optical Bldg, Arnaiz Ave<br>Makati City, Philippines</p>
+    </div>
+    <div>
+      <h4>Branches</h4>
+      <ul><li>Makati City</li><li>Quezon City</li><li>Parañaque City</li><li>Santa Rosa, Laguna</li></ul>
+    </div>
+    <div>
+      <h4>Reach us</h4>
+      <ul>
+        <li><a href="tel:+639163213379">0916 321 3379</a></li>
+        <li><a href="mailto:owmskincareclinic@gmail.com">owmskincareclinic@gmail.com</a></li>
+        <li><a href="https://www.facebook.com/owskinandwellnessph/" target="_blank" rel="noopener">Facebook</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap ftr-btm">
+    <p>© 2026 One World Skin &amp; Wellness, Makati City.</p>
+    <p class="cs-credit">Website by CloudSpring IT Solutions</p>
+  </div>
+</footer>
+
+<!-- CLOUDSPRING PREVIEW BAR -->
+<aside class="cs-bar" aria-label="CloudSpring IT Solutions preview">
+  <div class="cs-in">
+    <div class="cs-txt">
+      <p class="cs-eyebrow">PREVIEW · CloudSpring IT Solutions</p>
+      <p class="cs-line">Want this website + online booking, with all 4 branches under one brand?</p>
+    </div>
+    <a class="cs-btn" href="https://api.leadconnectorhq.com/widget/booking/QRPEnWRw2Kx9rBe0Mj6J" target="_blank" rel="noopener">Book a FREE Discovery Call →</a>
+  </div>
+</aside>
+
+<script>
+(function(){
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('.tab'));
+  function select(tab){
+    tabs.forEach(function(t){
+      var on = t === tab;
+      t.setAttribute('aria-selected', on ? 'true' : 'false');
+      t.tabIndex = on ? 0 : -1;
+      document.getElementById(t.getAttribute('aria-controls')).hidden = !on;
+    });
+  }
+  tabs.forEach(function(t, i){
+    t.addEventListener('click', function(){ select(t); });
+    t.addEventListener('keydown', function(e){
+      var d = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
+      if(!d) return;
+      e.preventDefault();
+      var n = tabs[(i + d + tabs.length) % tabs.length];
+      select(n); n.focus();
+    });
+  });
+
+  var f = document.getElementById('enquiry');
+  if(f){
+    f.addEventListener('submit', function(e){
+      e.preventDefault();
+      var n = encodeURIComponent(document.getElementById('o-name').value || '');
+      var p = encodeURIComponent(document.getElementById('o-phone').value || '');
+      var b = encodeURIComponent(document.getElementById('o-branch').value || '');
+      var m = encodeURIComponent(document.getElementById('o-msg').value || '');
+      window.location.href = 'mailto:owmskincareclinic@gmail.com'
+        + '?subject=' + encodeURIComponent('Enquiry — ' + decodeURIComponent(b) + ' branch')
+        + '&body=' + 'Name:%20' + n + '%0APhone:%20' + p + '%0ABranch:%20' + b + '%0A%0A' + m;
+    });
+  }
+})();
+</script>
+</body>
+</html>

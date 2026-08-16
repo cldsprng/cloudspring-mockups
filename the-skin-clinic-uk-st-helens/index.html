@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Skin Clinic uk — Laser Hair Removal, Plasma Pen &amp; Facials in St Helens</title>
+<meta name="description" content="The Skin Clinic uk offers laser hair removal, plasma pen fibroblasting, Crystal Freeze and facials in St Helens, Merseyside. Inside MWX Beauty Salon, 52 North John Street. Book by phone or Facebook.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ---------- tokens ---------- */
+:root{
+  --ink:#2E2126;            /* deepest brand colour */
+  --ink-soft:#5B4A50;
+  --muted:#7C6A70;
+  --rose:#B76E79;
+  --rose-deep:#96525C;
+  --rose-tint:#F3E3E4;
+  --sand:#EFE6DE;
+  --cream:#FBF7F5;
+  --white:#FFFFFF;
+  --line:#E7DCD7;
+  --shadow-sm:0 1px 2px rgba(46,33,38,.08), 0 2px 8px rgba(46,33,38,.06);
+  --shadow-md:0 4px 16px rgba(46,33,38,.10), 0 12px 32px rgba(46,33,38,.08);
+  --shadow-lg:0 16px 48px rgba(46,33,38,.14);
+  --r-sm:8px; --r-md:16px; --r-lg:24px; --r-pill:999px;
+  --display:"Cormorant Garamond", "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Times New Roman", serif;
+  --body:"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%; scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{
+  margin:0;
+  font-family:var(--body);
+  font-size:16px; line-height:1.65;
+  color:var(--ink-soft);
+  background:var(--cream);
+  padding-bottom:184px;            /* room for the floating CloudSpring bar */
+  -webkit-font-smoothing:antialiased;
+}
+@media (min-width:640px){body{padding-bottom:128px}}
+img,svg{max-width:100%; display:block}
+h1,h2,h3,h4{font-family:var(--display); color:var(--ink); margin:0 0 8px; line-height:1.15; font-weight:600; letter-spacing:.2px}
+h1{font-size:34px}
+h2{font-size:28px}
+h3{font-size:21px}
+p{margin:0 0 16px}
+a{color:var(--rose-deep)}
+.wrap{width:100%; max-width:1080px; margin:0 auto; padding:0 20px}
+.eyebrow{
+  font-family:var(--body); font-size:11px; font-weight:700; letter-spacing:.16em;
+  text-transform:uppercase; color:var(--rose-deep); margin:0 0 8px;
+}
+.lede{font-size:17px; color:var(--ink-soft)}
+section{padding:56px 0}
+@media (min-width:900px){
+  h1{font-size:52px} h2{font-size:38px} h3{font-size:23px}
+  section{padding:80px 0}
+}
+
+/* ---------- a11y ---------- */
+:focus-visible{outline:3px solid var(--rose-deep); outline-offset:3px; border-radius:4px}
+.skip{
+  position:absolute; left:8px; top:-64px; z-index:200;
+  background:var(--ink); color:#fff; padding:12px 20px; border-radius:var(--r-sm);
+  font-weight:600; text-decoration:none; transition:top .15s ease;
+}
+.skip:focus{top:8px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+
+/* ---------- buttons ---------- */
+.btn{
+  display:inline-flex; align-items:center; justify-content:center; gap:8px;
+  min-height:48px; padding:12px 24px; border-radius:var(--r-pill);
+  font-family:var(--body); font-size:15px; font-weight:600; text-decoration:none;
+  border:1.5px solid transparent; cursor:pointer; transition:transform .15s ease, box-shadow .15s ease, background .15s ease, color .15s ease;
+}
+.btn-primary{background:var(--ink); color:#fff; box-shadow:var(--shadow-sm)}
+.btn-primary:hover{background:var(--rose-deep); box-shadow:var(--shadow-md); transform:translateY(-1px)}
+.btn-ghost{background:transparent; color:var(--ink); border-color:var(--line)}
+.btn-ghost:hover{border-color:var(--rose); color:var(--rose-deep); background:var(--white)}
+.btn-rose{background:var(--rose); color:#fff}
+.btn-rose:hover{background:var(--rose-deep); transform:translateY(-1px); box-shadow:var(--shadow-md)}
+@media (prefers-reduced-motion:reduce){.btn:hover{transform:none}}
+
+/* ---------- header ---------- */
+.site-header{
+  position:sticky; top:0; z-index:100;
+  background:rgba(251,247,245,.94);
+  backdrop-filter:saturate(160%) blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.hdr{display:flex; align-items:center; gap:12px; min-height:66px; padding:8px 20px; max-width:1080px; margin:0 auto}
+.brand{display:flex; align-items:center; gap:10px; text-decoration:none; margin-right:auto; min-height:44px}
+.mark{width:38px; height:38px; flex:0 0 38px}
+.brand-txt{display:flex; flex-direction:column; line-height:1.05}
+.brand-name{font-family:var(--display); font-size:20px; font-weight:700; color:var(--ink); letter-spacing:.3px}
+.brand-sub{font-size:9.5px; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:var(--muted)}
+.hdr-call{
+  display:inline-flex; align-items:center; gap:8px; min-height:44px; padding:10px 16px;
+  border-radius:var(--r-pill); background:var(--ink); color:#fff; text-decoration:none;
+  font-size:14px; font-weight:600; white-space:nowrap; transition:background .15s ease, transform .15s ease;
+}
+.hdr-call:hover{background:var(--rose-deep); transform:translateY(-1px)}
+.hdr-call .lbl{display:none}
+@media (min-width:560px){.hdr-call .lbl{display:inline}}
+.nav{display:none}
+@media (min-width:900px){
+  .nav{display:flex; gap:4px; margin-right:8px}
+  .nav a{
+    padding:10px 12px; min-height:44px; display:inline-flex; align-items:center;
+    font-size:14px; font-weight:500; color:var(--ink-soft); text-decoration:none; border-radius:var(--r-sm);
+    transition:color .15s ease, background .15s ease;
+  }
+  .nav a:hover{color:var(--ink); background:var(--rose-tint)}
+}
+
+/* ---------- hero ---------- */
+.hero{position:relative; overflow:hidden; background:linear-gradient(168deg,#FBF7F5 0%, #F5E9E7 52%, #EFE0DC 100%); padding:44px 0 56px}
+.hero::after{
+  content:""; position:absolute; right:-120px; top:-120px; width:360px; height:360px; border-radius:50%;
+  background:radial-gradient(circle at 35% 35%, rgba(183,110,121,.20), rgba(183,110,121,0) 70%);
+}
+.hero .wrap{position:relative; z-index:1}
+.hero-grid{display:grid; gap:32px}
+@media (min-width:900px){.hero-grid{grid-template-columns:1.05fr .95fr; align-items:center; gap:48px}}
+.hero h1{margin-bottom:16px}
+.hero h1 em{font-style:normal; color:var(--rose-deep)}
+.hero-cta{display:flex; flex-wrap:wrap; gap:12px; margin-top:24px}
+.hero-facts{display:flex; flex-wrap:wrap; gap:8px; margin-top:24px; padding:0; list-style:none}
+.hero-facts li{
+  background:rgba(255,255,255,.72); border:1px solid var(--line); border-radius:var(--r-pill);
+  padding:7px 14px; font-size:13px; font-weight:500; color:var(--ink-soft);
+}
+.hero-art{border-radius:var(--r-lg); overflow:hidden; box-shadow:var(--shadow-lg); background:var(--white)}
+
+/* ---------- treatments ---------- */
+.section-head{max-width:620px; margin-bottom:32px}
+.treat{
+  background:var(--white); border:1px solid var(--line); border-radius:var(--r-lg);
+  box-shadow:var(--shadow-sm); overflow:hidden; margin-bottom:24px;
+}
+.treat-inner{display:grid; gap:0}
+@media (min-width:820px){
+  .treat-inner{grid-template-columns:300px 1fr}
+  .treat:nth-child(even) .treat-art{order:2}
+}
+.treat-art{background:var(--rose-tint); display:flex; align-items:center; justify-content:center; padding:20px; min-height:190px}
+.treat-body{padding:24px}
+@media (min-width:820px){.treat-body{padding:32px}}
+.treat-body h3{margin-bottom:4px}
+.treat-loc{font-size:12px; font-weight:600; letter-spacing:.1em; text-transform:uppercase; color:var(--rose-deep); margin:0 0 12px}
+.treat ul{margin:0 0 20px; padding:0; list-style:none}
+.treat ul li{position:relative; padding:0 0 0 24px; margin-bottom:8px; font-size:15px}
+.treat ul li::before{
+  content:""; position:absolute; left:0; top:8px; width:9px; height:9px; border-radius:50%;
+  background:var(--rose); box-shadow:0 0 0 4px var(--rose-tint);
+}
+.treat-actions{display:flex; flex-wrap:wrap; gap:10px}
+
+/* ---------- price note ---------- */
+.pricebox{
+  border:1.5px dashed var(--rose); background:var(--rose-tint);
+  border-radius:var(--r-md); padding:20px; margin:0 0 24px;
+}
+.pricebox p{margin:0; font-size:14px; color:var(--ink)}
+.pricebox strong{color:var(--rose-deep)}
+.price-rows{margin:12px 0 0; padding:0; list-style:none; border-top:1px solid rgba(183,110,121,.3)}
+.price-rows li{
+  display:flex; justify-content:space-between; gap:16px; align-items:baseline;
+  padding:10px 0; border-bottom:1px solid rgba(183,110,121,.22); font-size:14px; color:var(--ink-soft);
+}
+.price-rows .amt{font-family:var(--display); font-size:16px; color:var(--muted); font-style:italic}
+
+/* ---------- why us ---------- */
+.why{background:var(--ink); color:#EFE2E2}
+.why h2{color:#fff}
+.why .eyebrow{color:var(--rose-tint)}
+.why-grid{display:grid; gap:16px; margin-top:32px}
+@media (min-width:700px){.why-grid{grid-template-columns:repeat(3,1fr)}}
+.why-card{background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.12); border-radius:var(--r-md); padding:24px}
+.why-card h3{color:#fff; font-size:19px}
+.why-card p{margin:0; font-size:14.5px; color:#DCC9CC}
+.why-ico{width:34px; height:34px; margin-bottom:12px}
+
+/* ---------- about / locator ---------- */
+.split{display:grid; gap:32px}
+@media (min-width:900px){.split{grid-template-columns:1fr 1fr; gap:48px; align-items:center}}
+.locator{
+  background:var(--white); border:1px solid var(--line); border-radius:var(--r-lg);
+  box-shadow:var(--shadow-md); overflow:hidden;
+}
+.locator-map{position:relative; height:200px; background:var(--sand)}
+.locator-body{padding:24px}
+.locator-body p{margin:0 0 8px}
+.addr{font-family:var(--display); font-size:22px; color:var(--ink); line-height:1.3}
+
+/* ---------- contact ---------- */
+.contact{background:linear-gradient(180deg,#F5E9E7 0%, #FBF7F5 100%)}
+.contact-grid{display:grid; gap:28px}
+@media (min-width:900px){.contact-grid{grid-template-columns:.95fr 1.05fr; gap:48px; align-items:start}}
+.info-list{list-style:none; margin:0 0 24px; padding:0}
+.info-list li{display:flex; gap:14px; padding:14px 0; border-bottom:1px solid var(--line)}
+.info-list .ico{flex:0 0 22px; margin-top:3px; color:var(--rose-deep)}
+.info-list .k{display:block; font-size:11px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); margin-bottom:2px}
+.info-list a{color:var(--ink); text-decoration:none; font-weight:600; word-break:break-word}
+.info-list a:hover{color:var(--rose-deep); text-decoration:underline}
+.tbc{display:inline-block; background:var(--rose-tint); color:var(--rose-deep); font-size:12px; font-weight:700; padding:3px 10px; border-radius:var(--r-pill)}
+form{background:var(--white); border:1px solid var(--line); border-radius:var(--r-lg); padding:24px; box-shadow:var(--shadow-md)}
+.field{margin-bottom:16px}
+label{display:block; font-size:13px; font-weight:600; color:var(--ink); margin-bottom:6px}
+input,select,textarea{
+  width:100%; min-height:48px; padding:12px 14px; font-family:var(--body); font-size:15px; color:var(--ink);
+  background:var(--cream); border:1.5px solid var(--line); border-radius:var(--r-sm);
+  transition:border-color .15s ease, background .15s ease;
+}
+textarea{min-height:104px; resize:vertical}
+input:hover,select:hover,textarea:hover{border-color:var(--rose)}
+input:focus,select:focus,textarea:focus{outline:none; border-color:var(--rose-deep); background:#fff; box-shadow:0 0 0 3px rgba(183,110,121,.18)}
+.form-note{font-size:12.5px; color:var(--muted); margin:12px 0 0}
+
+/* ---------- footer ---------- */
+.site-footer{background:var(--ink); color:#C9B6BA; padding:40px 0 32px; font-size:14px}
+.foot-grid{display:grid; gap:24px}
+@media (min-width:700px){.foot-grid{grid-template-columns:1.4fr 1fr 1fr}}
+.site-footer h4{color:#fff; font-family:var(--body); font-size:12px; letter-spacing:.14em; text-transform:uppercase; margin:0 0 12px}
+.site-footer a{color:#E4D3D6; text-decoration:none}
+.site-footer a:hover{color:#fff; text-decoration:underline}
+.site-footer ul{list-style:none; margin:0; padding:0}
+.site-footer li{margin-bottom:8px}
+.foot-bar{border-top:1px solid rgba(255,255,255,.14); margin-top:28px; padding-top:20px; font-size:13px; color:#A99095}
+.foot-bar strong{color:#fff; font-weight:600}
+
+/* ---------- CloudSpring preview bar ---------- */
+.cs-bar{
+  position:fixed; left:0; right:0; bottom:0; z-index:150;
+  background:rgba(28,19,22,.94);
+  backdrop-filter:saturate(150%) blur(12px);
+  border-top:1px solid rgba(255,255,255,.14);
+  box-shadow:0 -8px 32px rgba(46,33,38,.30);
+  padding:12px 16px calc(12px + env(safe-area-inset-bottom));
+  color:#fff;
+}
+.cs-in{max-width:1080px; margin:0 auto; display:flex; flex-wrap:wrap; align-items:center; gap:12px 20px; justify-content:center; text-align:center}
+.cs-copy{flex:1 1 260px; min-width:0}
+.cs-eyebrow{font-size:10px; font-weight:700; letter-spacing:.18em; text-transform:uppercase; color:#E3B3BA; margin:0 0 3px}
+.cs-line{font-size:15px; font-weight:700; line-height:1.35; margin:0; color:#fff; font-family:var(--body)}
+.cs-btn{
+  flex:0 0 auto; display:inline-flex; align-items:center; justify-content:center;
+  min-height:48px; padding:13px 24px; border-radius:var(--r-pill);
+  background:var(--rose); color:#fff; text-decoration:none; font-size:15px; font-weight:700;
+  box-shadow:0 0 0 0 rgba(183,110,121,.62);
+  animation:cs-pulse 2.4s cubic-bezier(.4,0,.6,1) infinite;
+  transition:background .15s ease, transform .15s ease;
+}
+.cs-btn:hover{background:#C97F89; transform:translateY(-1px); animation-play-state:paused}
+@keyframes cs-pulse{
+  0%{box-shadow:0 0 0 0 rgba(183,110,121,.60)}
+  70%{box-shadow:0 0 0 16px rgba(183,110,121,0)}
+  100%{box-shadow:0 0 0 0 rgba(183,110,121,0)}
+}
+@media (min-width:640px){.cs-in{text-align:left; justify-content:space-between; flex-wrap:nowrap}}
+@media (max-width:639px){.cs-btn{flex:1 1 100%}}
+@media (prefers-reduced-motion:reduce){
+  .cs-btn{animation:none; box-shadow:0 4px 14px rgba(0,0,0,.35)}
+  .cs-btn:hover{transform:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="hdr">
+    <a class="brand" href="#top" aria-label="The Skin Clinic uk — home">
+      <svg class="mark" viewBox="0 0 48 48" role="img" aria-hidden="true" focusable="false">
+        <circle cx="24" cy="24" r="23" fill="#F3E3E4" stroke="#B76E79" stroke-width="1.4"/>
+        <path d="M24 11c6 4.6 9 9 9 13.6A9 9 0 0 1 15 24.6C15 20 18 15.6 24 11Z" fill="none" stroke="#96525C" stroke-width="1.8" stroke-linejoin="round"/>
+        <path d="M24 18.5c2.6 2.2 3.9 4.2 3.9 6.2a3.9 3.9 0 0 1-7.8 0c0-2 1.3-4 3.9-6.2Z" fill="#B76E79"/>
+        <path d="M13.5 33.5c6.5 3.4 14.5 3.4 21 0" stroke="#B76E79" stroke-width="1.6" stroke-linecap="round" fill="none"/>
+      </svg>
+      <span class="brand-txt">
+        <span class="brand-name">The Skin Clinic uk</span>
+        <span class="brand-sub">St Helens · Merseyside</span>
+      </span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#treatments">Treatments</a>
+      <a href="#why">Why us</a>
+      <a href="#about">About</a>
+      <a href="#find-us">Find us</a>
+      <a href="#contact">Book</a>
+    </nav>
+    <a class="hdr-call" href="tel:+447561785999">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+      <span class="lbl">07561 785999</span><span class="sr-only">Call The Skin Clinic uk on 07561 785999</span>
+    </a>
+  </div>
+</header>
+
+<main id="main">
+<a id="top"></a>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <p class="eyebrow">Aesthetic skin clinic · St Helens</p>
+        <h1>Laser hair removal, plasma pen &amp; skin treatments in <em>St Helens</em></h1>
+        <p class="lede">The Skin Clinic uk is an aesthetic skin clinic based inside MWX Beauty Salon on North John Street. Laser hair removal, plasma pen fibroblasting, Crystal Freeze and facials — carried out by the same practitioner every time.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="tel:+447561785999">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+            Ring to book
+          </a>
+          <a class="btn btn-ghost" href="#contact">Request an appointment</a>
+        </div>
+        <ul class="hero-facts">
+          <li>Inside MWX Beauty Salon</li>
+          <li>52 North John Street</li>
+          <li>Booking by phone or Facebook</li>
+        </ul>
+      </div>
+      <div class="hero-art">
+        <svg viewBox="0 0 520 400" role="img" aria-label="Illustration of a calm treatment room at the clinic">
+          <defs>
+            <linearGradient id="hbg" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#FBF7F5"/><stop offset="1" stop-color="#F0DFDC"/>
+            </linearGradient>
+            <linearGradient id="hbed" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#F3E3E4"/>
+            </linearGradient>
+            <linearGradient id="hwin" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#F7EDEA"/><stop offset="1" stop-color="#E9D6D3"/>
+            </linearGradient>
+          </defs>
+          <rect width="520" height="400" fill="url(#hbg)"/>
+          <rect x="40" y="36" width="150" height="176" rx="74" fill="url(#hwin)" stroke="#DCC6C2" stroke-width="2"/>
+          <circle cx="115" cy="96" r="24" fill="#F6E4E2"/>
+          <path d="M0 300h520v100H0z" fill="#EBDCD7"/>
+          <rect x="60" y="252" width="400" height="26" rx="13" fill="#D9C4BF"/>
+          <rect x="72" y="212" width="376" height="48" rx="24" fill="url(#hbed)" stroke="#E2CDC9" stroke-width="2"/>
+          <rect x="96" y="196" width="96" height="26" rx="13" fill="#FFFFFF" stroke="#E2CDC9" stroke-width="2"/>
+          <g stroke="#C79AA0" stroke-width="2" fill="none" stroke-linecap="round">
+            <path d="M336 108v56"/><path d="M336 108c-18 0-32 14-32 30"/><path d="M336 108c18 0 32 14 32 30"/>
+          </g>
+          <circle cx="336" cy="100" r="14" fill="#B76E79"/>
+          <rect x="300" y="164" width="72" height="16" rx="8" fill="#D9C4BF"/>
+          <g opacity=".85">
+            <circle cx="418" cy="72" r="7" fill="#B76E79"/>
+            <circle cx="446" cy="104" r="4.5" fill="#C79AA0"/>
+            <circle cx="398" cy="118" r="3.5" fill="#D9AEB3"/>
+          </g>
+          <g fill="none" stroke="#96525C" stroke-width="2.4" stroke-linecap="round">
+            <path d="M212 320c14-14 34-14 48 0"/><path d="M262 320c14-14 34-14 48 0"/>
+          </g>
+          <rect x="196" y="336" width="128" height="8" rx="4" fill="#DDC8C4"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TREATMENTS -->
+<section id="treatments">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Treatments</p>
+      <h2>What we do at the clinic</h2>
+      <p class="lede">Every treatment listed below is offered at The Skin Clinic uk in St Helens. Ring or message to check availability and to talk through what suits your skin.</p>
+    </div>
+
+    <!-- Laser hair removal -->
+    <article class="treat">
+      <div class="treat-inner">
+        <div class="treat-art">
+          <svg viewBox="0 0 200 160" role="img" aria-label="Laser hair removal handpiece illustration">
+            <rect x="18" y="96" width="164" height="40" rx="20" fill="#FFF" stroke="#E2CDC9" stroke-width="2"/>
+            <rect x="76" y="26" width="48" height="52" rx="14" fill="#96525C"/>
+            <rect x="84" y="72" width="32" height="14" rx="7" fill="#B76E79"/>
+            <g stroke="#B76E79" stroke-width="3" stroke-linecap="round">
+              <path d="M100 88v10"/><path d="M88 90l-5 8"/><path d="M112 90l5 8"/>
+            </g>
+            <g fill="none" stroke="#C79AA0" stroke-width="2" stroke-linecap="round">
+              <path d="M60 44c0-8 6-12 6-12"/><path d="M140 44c0-8-6-12-6-12"/>
+            </g>
+            <circle cx="100" cy="116" r="9" fill="#F3E3E4"/>
+          </svg>
+        </div>
+        <div class="treat-body">
+          <h3>Laser hair removal</h3>
+          <p class="treat-loc">Laser hair removal in St Helens, Merseyside</p>
+          <p>Laser hair removal for the face and body, worked through as a course of sessions rather than a one-off. Your first appointment is a chat about the area you want treated, your skin and hair type, and what the course would look like.</p>
+          <ul>
+            <li>Face and body areas — ask about the area you have in mind</li>
+            <li>Planned as a course of sessions</li>
+            <li>Consultation and patch test before your first treatment</li>
+          </ul>
+          <div class="treat-actions">
+            <a class="btn btn-primary" href="tel:+447561785999">Ring to book</a>
+            <a class="btn btn-ghost" href="#contact">Ask a question</a>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Plasma pen -->
+    <article class="treat">
+      <div class="treat-inner">
+        <div class="treat-art">
+          <svg viewBox="0 0 200 160" role="img" aria-label="Plasma pen illustration">
+            <rect x="30" y="104" width="140" height="30" rx="15" fill="#FFF" stroke="#E2CDC9" stroke-width="2"/>
+            <g transform="rotate(-28 100 70)">
+              <rect x="88" y="16" width="24" height="86" rx="12" fill="#2E2126"/>
+              <rect x="88" y="16" width="24" height="22" rx="11" fill="#96525C"/>
+              <path d="M100 102v14" stroke="#B76E79" stroke-width="3" stroke-linecap="round"/>
+            </g>
+            <g fill="#B76E79">
+              <circle cx="132" cy="96" r="4"/><circle cx="144" cy="86" r="2.6"/><circle cx="122" cy="86" r="2.2"/>
+            </g>
+            <path d="M52 118c14-10 30-10 44 0" fill="none" stroke="#C79AA0" stroke-width="2.4" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="treat-body">
+          <h3>Plasma pen fibroblasting</h3>
+          <p class="treat-loc">Plasma pen fibroblasting in St Helens</p>
+          <p>Plasma pen fibroblasting is a non-surgical skin-tightening treatment. It is carried out area by area after a consultation, and there is downtime while the treated area heals — that is explained to you in full before you book anything in.</p>
+          <ul>
+            <li>Non-surgical skin tightening, treated area by area</li>
+            <li>Consultation first — suitability and aftercare explained</li>
+            <li>Healing time discussed before you commit to a date</li>
+          </ul>
+          <div class="treat-actions">
+            <a class="btn btn-primary" href="tel:+447561785999">Ring to book</a>
+            <a class="btn btn-ghost" href="#contact">Ask a question</a>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Crystal Freeze -->
+    <article class="treat">
+      <div class="treat-inner">
+        <div class="treat-art">
+          <svg viewBox="0 0 200 160" role="img" aria-label="Crystal Freeze cooling treatment illustration">
+            <circle cx="100" cy="80" r="46" fill="#F3E3E4"/>
+            <g stroke="#96525C" stroke-width="3" stroke-linecap="round">
+              <path d="M100 44v72"/><path d="M69 62l62 36"/><path d="M131 62l-62 36"/>
+            </g>
+            <g stroke="#B76E79" stroke-width="2.4" stroke-linecap="round">
+              <path d="M100 54l-8 8M100 54l8 8"/><path d="M100 106l-8-8M100 106l8-8"/>
+              <path d="M76 68l1 11M76 68l11-1"/><path d="M124 92l-1-11M124 92l-11 1"/>
+              <path d="M124 68l-11-1M124 68l-1 11"/><path d="M76 92l11 1M76 92l1-11"/>
+            </g>
+            <circle cx="100" cy="80" r="8" fill="#FFF" stroke="#96525C" stroke-width="2"/>
+          </svg>
+        </div>
+        <div class="treat-body">
+          <h3>Crystal Freeze</h3>
+          <p class="treat-loc">Crystal Freeze treatments in St Helens</p>
+          <p>Crystal Freeze is offered at the clinic and is best talked through in person or over the phone, so you know exactly what the treatment involves for your skin before booking.</p>
+          <ul>
+            <li>Available at the St Helens clinic</li>
+            <li>Consultation before treatment</li>
+            <li>Ring or message to check what it involves for you</li>
+          </ul>
+          <div class="treat-actions">
+            <a class="btn btn-primary" href="tel:+447561785999">Ring to book</a>
+            <a class="btn btn-ghost" href="#contact">Ask a question</a>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Facials -->
+    <article class="treat">
+      <div class="treat-inner">
+        <div class="treat-art">
+          <svg viewBox="0 0 200 160" role="img" aria-label="Facial treatment illustration">
+            <path d="M100 26c22 0 34 16 34 38 0 26-16 48-34 48S66 90 66 64c0-22 12-38 34-38Z" fill="#FFF" stroke="#E2CDC9" stroke-width="2"/>
+            <path d="M74 58c10-6 20-6 28 0" fill="none" stroke="#C79AA0" stroke-width="2.4" stroke-linecap="round"/>
+            <path d="M112 58c6-4 12-4 16 0" fill="none" stroke="#C79AA0" stroke-width="2.4" stroke-linecap="round"/>
+            <path d="M86 88c8 7 20 7 28 0" fill="none" stroke="#96525C" stroke-width="2.6" stroke-linecap="round"/>
+            <g fill="#B76E79" opacity=".9">
+              <circle cx="52" cy="46" r="5"/><circle cx="150" cy="52" r="4"/><circle cx="44" cy="98" r="3.4"/><circle cx="158" cy="96" r="3"/>
+            </g>
+            <path d="M56 132h88" stroke="#DDC8C4" stroke-width="8" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="treat-body">
+          <h3>Facials</h3>
+          <p class="treat-loc">Facials in St Helens, Merseyside</p>
+          <p>Facials at the clinic, chosen around what your skin needs on the day rather than a fixed menu you have to pick blind. Tell us what you are dealing with — congestion, dryness, dullness — and we will talk you through the options.</p>
+          <ul>
+            <li>Treatment chosen after looking at your skin</li>
+            <li>Aftercare advice you can actually keep up at home</li>
+            <li>Can be booked alongside other treatments</li>
+          </ul>
+          <div class="treat-actions">
+            <a class="btn btn-primary" href="tel:+447561785999">Ring to book</a>
+            <a class="btn btn-ghost" href="#contact">Ask a question</a>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <div class="pricebox">
+      <p><strong>Sample layout — your prices go here.</strong> This preview deliberately shows no figures. On the live site each treatment would carry your real prices, course options and deposit terms, laid out like this:</p>
+      <ul class="price-rows">
+        <li><span>Laser hair removal — per area</span> <span class="amt">your price</span></li>
+        <li><span>Laser hair removal — course</span> <span class="amt">your price</span></li>
+        <li><span>Plasma pen fibroblasting — per area</span> <span class="amt">your price</span></li>
+        <li><span>Crystal Freeze</span> <span class="amt">your price</span></li>
+        <li><span>Facials</span> <span class="amt">your price</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section id="why" class="why">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Why The Skin Clinic uk</p>
+      <h2>A small clinic, and that is the point</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <svg class="why-ico" viewBox="0 0 32 32" fill="none" stroke="#E3B3BA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 17a6 6 0 1 0 0-12 6 6 0 0 0 0 12Z"/><path d="M5 28c0-5.5 4.9-9 11-9s11 3.5 11 9"/></svg>
+        <h3>The same practitioner</h3>
+        <p>The Skin Clinic uk is run by one practitioner, so the person who consults with you is the person who treats you — every appointment, every course.</p>
+      </div>
+      <div class="why-card">
+        <svg class="why-ico" viewBox="0 0 32 32" fill="none" stroke="#E3B3BA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 29s11-6.9 11-14.5A7.5 7.5 0 0 0 16 8a7.5 7.5 0 0 0-11 6.5C5 22.1 16 29 16 29Z"/><circle cx="16" cy="14" r="3"/></svg>
+        <h3>Easy to find in town</h3>
+        <p>Treatments take place inside MWX Beauty Salon on North John Street, right in St Helens town centre.</p>
+      </div>
+      <div class="why-card">
+        <svg class="why-ico" viewBox="0 0 32 32" fill="none" stroke="#E3B3BA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M28 19a3 3 0 0 1-3 3H9l-6 6V6a3 3 0 0 1 3-3h19a3 3 0 0 1 3 3Z"/></svg>
+        <h3>Ask before you book</h3>
+        <p>Not sure which treatment you need? Ring or message with your question first — no pressure to book anything on the spot.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT + LOCATOR -->
+<section id="about">
+  <div class="wrap">
+    <div class="split">
+      <div>
+        <p class="eyebrow">About</p>
+        <h2>Skin treatments on North John Street</h2>
+        <p>The Skin Clinic uk is an aesthetic skin clinic serving St Helens and the wider Merseyside area. The clinic offers laser hair removal, plasma pen fibroblasting, Crystal Freeze and facials from a treatment space inside MWX Beauty Salon.</p>
+        <p>Because it is a single-practitioner clinic, appointments are arranged directly — by phone, by email or through the clinic's Facebook page — rather than through a call centre or a third-party booking desk.</p>
+        <p><a class="btn btn-rose" href="#contact">Get in touch about an appointment</a></p>
+      </div>
+      <div id="find-us" class="locator">
+        <div class="locator-map" role="img" aria-label="Stylised map showing the clinic on North John Street, St Helens">
+          <svg viewBox="0 0 520 200" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <rect width="520" height="200" fill="#EFE6DE"/>
+            <g stroke="#DFD0C8" stroke-width="12" stroke-linecap="round">
+              <path d="M-10 60h540"/><path d="M-10 148h540"/><path d="M120 -10v220"/><path d="M370 -10v220"/>
+            </g>
+            <g stroke="#F7F1EC" stroke-width="3" stroke-dasharray="10 12">
+              <path d="M-10 60h540"/><path d="M-10 148h540"/><path d="M120 -10v220"/><path d="M370 -10v220"/>
+            </g>
+            <g fill="#E4D8D0">
+              <rect x="150" y="76" width="70" height="56" rx="6"/>
+              <rect x="240" y="80" width="52" height="48" rx="6"/>
+              <rect x="400" y="74" width="80" height="60" rx="6"/>
+              <rect x="20" y="82" width="72" height="50" rx="6"/>
+            </g>
+            <g transform="translate(300 60)">
+              <path d="M0 44c0 0 18-14.5 18-26A18 18 0 0 0 0 0a18 18 0 0 0-18 18C-18 29.5 0 44 0 44Z" fill="#96525C"/>
+              <circle cx="0" cy="17" r="6.5" fill="#F3E3E4"/>
+            </g>
+            <text x="300" y="130" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#5B4A50">52 North John St</text>
+          </svg>
+        </div>
+        <div class="locator-body">
+          <p class="eyebrow">Find us</p>
+          <p class="addr">Inside MWX Beauty Salon<br>52 North John Street<br>St Helens, Merseyside</p>
+          <p style="margin-top:12px">The clinic operates from a treatment room within MWX Beauty Salon — walk in to the salon and ask for The Skin Clinic uk.</p>
+          <a class="btn btn-ghost" href="tel:+447561785999">Ring for directions</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Book an appointment</p>
+      <h2>Get in touch</h2>
+      <p class="lede">Ring, email or message on Facebook to book a treatment or a consultation. Tell us the treatment you are interested in and we will come back to you with availability.</p>
+    </div>
+    <div class="contact-grid">
+      <div>
+        <ul class="info-list">
+          <li>
+            <span class="ico" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg></span>
+            <span><span class="k">Phone</span><a href="tel:+447561785999">+44 7561 785999</a></span>
+          </li>
+          <li>
+            <span class="ico" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg></span>
+            <span><span class="k">Email</span><a href="mailto:theskinclinicuk@hotmail.com">theskinclinicuk@hotmail.com</a></span>
+          </li>
+          <li>
+            <span class="ico" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7h-2.5V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.6V12h2.7l-.4 2.9h-2.3v7A10 10 0 0 0 22 12Z"/></svg></span>
+            <span><span class="k">Facebook</span><a href="https://www.facebook.com/p/The-Skin-Clinic-uk-100063654338246/" target="_blank" rel="noopener">The Skin Clinic uk on Facebook</a></span>
+          </li>
+          <li>
+            <span class="ico" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
+            <span><span class="k">Address</span><a href="#find-us">Inside MWX Beauty Salon, 52 North John Street, St Helens, Merseyside</a></span>
+          </li>
+          <li>
+            <span class="ico" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+            <span><span class="k">Opening hours</span><span class="tbc">To be confirmed</span></span>
+          </li>
+        </ul>
+      </div>
+
+      <form id="enquiry" novalidate>
+        <div class="field">
+          <label for="f-name">Your name</label>
+          <input id="f-name" name="name" type="text" autocomplete="name" placeholder="First and last name">
+        </div>
+        <div class="field">
+          <label for="f-phone">Phone or email</label>
+          <input id="f-phone" name="contact" type="text" autocomplete="tel" placeholder="How should we reply?">
+        </div>
+        <div class="field">
+          <label for="f-treat">Treatment you are interested in</label>
+          <select id="f-treat" name="treatment">
+            <option>Laser hair removal</option>
+            <option>Plasma pen fibroblasting</option>
+            <option>Crystal Freeze</option>
+            <option>Facial</option>
+            <option>Not sure yet — please advise</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="f-msg">Your message</label>
+          <textarea id="f-msg" name="message" placeholder="Tell us what you would like treated and when suits you."></textarea>
+        </div>
+        <button class="btn btn-primary" type="submit" style="width:100%">Send enquiry</button>
+        <p class="form-note">This preview form opens your own email app with the details filled in — no data is stored anywhere. On the live site it would send straight to the clinic's inbox.</p>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h4>The Skin Clinic uk</h4>
+        <p style="margin:0 0 8px">Aesthetic skin clinic in St Helens, Merseyside. Laser hair removal, plasma pen fibroblasting, Crystal Freeze and facials.</p>
+        <p style="margin:0">Inside MWX Beauty Salon<br>52 North John Street, St Helens</p>
+      </div>
+      <div>
+        <h4>Treatments</h4>
+        <ul>
+          <li><a href="#treatments">Laser hair removal</a></li>
+          <li><a href="#treatments">Plasma pen fibroblasting</a></li>
+          <li><a href="#treatments">Crystal Freeze</a></li>
+          <li><a href="#treatments">Facials</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+447561785999">+44 7561 785999</a></li>
+          <li><a href="mailto:theskinclinicuk@hotmail.com">theskinclinicuk@hotmail.com</a></li>
+          <li><a href="https://www.facebook.com/p/The-Skin-Clinic-uk-100063654338246/" target="_blank" rel="noopener">Facebook page</a></li>
+          <li>Opening hours: to be confirmed</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bar">
+      <span>&copy; <span id="yr">2026</span> The Skin Clinic uk · St Helens, Merseyside</span><br>
+      <strong>Website by CloudSpring IT Solutions</strong>
+    </div>
+  </div>
+</footer>
+
+<!-- CloudSpring preview bar -->
+<aside class="cs-bar" aria-label="Website preview by CloudSpring IT Solutions">
+  <div class="cs-in">
+    <div class="cs-copy">
+      <p class="cs-eyebrow">PREVIEW · CloudSpring IT Solutions</p>
+      <p class="cs-line">Want this site + a page for every treatment, so &ldquo;plasma pen St Helens&rdquo; finds you instead of a competitor?</p>
+    </div>
+    <a class="cs-btn" href="https://api.leadconnectorhq.com/widget/booking/QRPEnWRw2Kx9rBe0Mj6J" target="_blank" rel="noopener">Book a FREE Discovery Call &rarr;</a>
+  </div>
+</aside>
+
+<script>
+(function(){
+  var y=document.getElementById('yr'); if(y){y.textContent=new Date().getFullYear();}
+  var f=document.getElementById('enquiry');
+  if(f){
+    f.addEventListener('submit',function(e){
+      e.preventDefault();
+      var g=function(id){var el=document.getElementById(id);return el?el.value.trim():'';};
+      var subject='Appointment enquiry - '+(g('f-treat')||'Treatment');
+      var body='Name: '+g('f-name')+'\nContact: '+g('f-phone')+'\nTreatment: '+g('f-treat')+'\n\n'+g('f-msg');
+      window.location.href='mailto:theskinclinicuk@hotmail.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
+    });
+  }
+})();
+</script>
+</body>
+</html>

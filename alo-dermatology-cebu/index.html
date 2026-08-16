@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ALO Dermatology — Dr. Marie Kristy Alo-Manal, Cebu City</title>
+<meta name="description" content="ALO Dermatology at Bldg B, Escario Central Mall, N. Escario St, Brgy. Camputhaw, Cebu City. Dr. Marie Kristy Alo-Manal, PDS Diplomate. Open Monday to Saturday, 10:00–18:00.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#17302b;
+  --ink-2:#33544c;
+  --muted:#63837a;
+  --green-900:#0f342c;
+  --green-800:#14483c;
+  --green-700:#1c6252;
+  --green-500:#2f8d76;
+  --green-300:#8fcbb9;
+  --green-050:#eef7f3;
+  --sand:#f7f2ea;
+  --clay:#b3873f;
+  --line:#dee9e4;
+  --white:#fff;
+  --shadow-sm:0 1px 2px rgba(15,52,44,.07), 0 2px 8px rgba(15,52,44,.06);
+  --shadow-md:0 4px 12px rgba(15,52,44,.10), 0 12px 30px rgba(15,52,44,.08);
+  --shadow-lg:0 10px 26px rgba(15,52,44,.13), 0 26px 60px rgba(15,52,44,.10);
+  --r-sm:8px; --r-md:16px; --r-lg:24px; --r-pill:999px;
+  --display:"Playfair Display",Georgia,"Times New Roman",serif;
+  --body:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%; scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0; background:var(--white); color:var(--ink); font-family:var(--body); font-size:16px; line-height:1.6; padding-bottom:184px; -webkit-font-smoothing:antialiased}
+@media (min-width:640px){body{padding-bottom:132px}}
+img,svg{max-width:100%; display:block}
+h1,h2,h3{font-family:var(--display); font-weight:600; line-height:1.16; margin:0 0 12px; letter-spacing:-.01em}
+h1{font-size:32px}
+h2{font-size:27px}
+h3{font-size:17.5px; font-family:var(--body); font-weight:700; letter-spacing:0}
+p{margin:0 0 16px}
+a{color:var(--green-700)}
+.wrap{width:100%; max-width:1080px; margin:0 auto; padding:0 20px}
+.eyebrow{font-size:12px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--green-500); margin:0 0 8px}
+.section{padding:56px 0}
+.section--tint{background:var(--green-050)}
+.section--sand{background:var(--sand)}
+:focus-visible{outline:3px solid var(--green-500); outline-offset:3px; border-radius:4px}
+
+/* Header */
+.site-header{position:sticky; top:0; z-index:60; background:rgba(255,255,255,.95); backdrop-filter:saturate(180%) blur(10px); border-bottom:1px solid var(--line)}
+.header-inner{display:flex; align-items:center; gap:12px; min-height:64px; padding:8px 20px; max-width:1080px; margin:0 auto}
+.brand{display:flex; align-items:center; gap:10px; text-decoration:none; color:var(--ink); min-height:44px}
+.brand-mark{width:38px; height:38px; flex:0 0 38px}
+.brand-name{font-family:var(--display); font-weight:700; font-size:18px; line-height:1.1; letter-spacing:.02em}
+.brand-sub{display:block; font-family:var(--body); font-size:10.5px; font-weight:600; letter-spacing:.12em; text-transform:uppercase; color:var(--muted)}
+.header-cta{margin-left:auto; display:inline-flex; align-items:center; gap:8px; min-height:44px; padding:10px 16px; border-radius:var(--r-pill); background:var(--green-700); color:#fff; text-decoration:none; font-weight:700; font-size:14px; white-space:nowrap; box-shadow:var(--shadow-sm); transition:background .18s ease, transform .18s ease, box-shadow .18s ease}
+.header-cta:hover{background:var(--green-900); transform:translateY(-1px); box-shadow:var(--shadow-md)}
+.header-cta .label-long{display:none}
+@media (min-width:540px){.header-cta .label-long{display:inline} .header-cta .label-short{display:none}}
+
+/* Hero */
+.hero{position:relative; overflow:hidden; background:radial-gradient(110% 90% at 0% 0%, #eaf6f1 0%, rgba(234,246,241,0) 62%), linear-gradient(180deg,#fff 0%, #f8fbf9 100%); border-bottom:1px solid var(--line)}
+.hero-inner{padding:36px 20px 46px; max-width:1080px; margin:0 auto}
+.hero-grid{display:grid; gap:28px}
+@media (min-width:920px){.hero-inner{padding:62px 20px 72px} .hero-grid{grid-template-columns:1.05fr .95fr; align-items:center; gap:46px}}
+.badge{display:inline-flex; align-items:center; gap:8px; padding:7px 14px 7px 10px; background:#fff; border:1px solid var(--line); border-radius:var(--r-pill); font-size:12.5px; font-weight:600; color:var(--ink-2); box-shadow:var(--shadow-sm); margin-bottom:16px}
+.badge svg{width:16px; height:16px; flex:0 0 16px}
+.hero h1{font-size:clamp(30px,7vw,48px); margin-bottom:14px}
+.hero h1 .accent{color:var(--green-700)}
+.hero-lede{font-size:17px; color:var(--ink-2); max-width:46ch}
+@media (min-width:920px){.hero-lede{font-size:18.5px}}
+.hero-actions{display:flex; flex-wrap:wrap; gap:12px; margin:24px 0 0}
+.btn{display:inline-flex; align-items:center; justify-content:center; gap:9px; min-height:48px; padding:12px 22px; border-radius:var(--r-pill); font-family:var(--body); font-weight:700; font-size:15.5px; text-decoration:none; cursor:pointer; border:1.5px solid transparent; transition:background .18s ease, color .18s ease, transform .18s ease, box-shadow .18s ease, border-color .18s ease}
+.btn svg{width:18px; height:18px; flex:0 0 18px}
+.btn-primary{background:var(--green-700); color:#fff; box-shadow:var(--shadow-md)}
+.btn-primary:hover{background:var(--green-900); transform:translateY(-2px); box-shadow:var(--shadow-lg)}
+.btn-primary:active{transform:translateY(0)}
+.btn-ghost{background:#fff; color:var(--green-900); border-color:var(--line); box-shadow:var(--shadow-sm)}
+.btn-ghost:hover{border-color:var(--green-500); color:var(--green-700); transform:translateY(-2px); box-shadow:var(--shadow-md)}
+
+/* Where & when panel */
+.wpanel{background:#fff; border:1px solid var(--line); border-radius:var(--r-lg); box-shadow:var(--shadow-lg); overflow:hidden}
+.wpanel-head{background:var(--green-900); color:#e2f2ec; padding:16px 20px}
+.wpanel-head .k{font-size:10.5px; letter-spacing:.16em; text-transform:uppercase; font-weight:700; color:var(--green-300); margin-bottom:4px}
+.wpanel-head .v{font-family:var(--display); font-size:19px; font-weight:600; color:#fff; line-height:1.3}
+.wpanel-body{padding:18px 20px 20px}
+.wrow{display:flex; gap:14px; align-items:flex-start; padding:12px 0; border-bottom:1px solid var(--line)}
+.wrow:last-child{border-bottom:0; padding-bottom:0}
+.wrow svg{width:20px; height:20px; flex:0 0 20px; color:var(--green-500); margin-top:3px}
+.wrow .k{font-size:10.5px; letter-spacing:.13em; text-transform:uppercase; font-weight:700; color:var(--muted); margin-bottom:2px}
+.wrow .v{font-size:15.5px; font-weight:600; color:var(--ink)}
+.wrow .v a{color:var(--green-700); text-decoration:none; border-bottom:1px solid var(--green-300)}
+.wrow .v a:hover{color:var(--green-900); border-bottom-color:var(--green-700)}
+.wrow .v small{display:block; font-weight:500; font-size:13.5px; color:var(--muted); margin-top:2px}
+
+/* Review proof */
+.proof{display:flex; align-items:center; gap:16px; flex-wrap:wrap; padding:18px 20px; background:#fff; border:1px solid var(--line); border-left:4px solid var(--clay); border-radius:var(--r-md); box-shadow:var(--shadow-sm); margin-top:22px}
+.proof-score{font-family:var(--display); font-size:38px; font-weight:700; line-height:1; color:var(--ink)}
+.stars{display:flex; gap:2px; margin-bottom:4px}
+.stars svg{width:16px; height:16px}
+.proof-meta{font-size:14px; color:var(--muted); line-height:1.45; max-width:32ch}
+.proof-meta strong{color:var(--ink-2); font-weight:600}
+
+/* Services */
+.section-head{max-width:660px; margin-bottom:32px}
+.section-head p{color:var(--muted); margin-bottom:0}
+.cards{display:grid; gap:16px}
+@media (min-width:600px){.cards{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:960px){.cards{grid-template-columns:repeat(3,1fr)}}
+.card{background:#fff; border:1px solid var(--line); border-radius:var(--r-md); padding:22px 20px; box-shadow:var(--shadow-sm); transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease}
+.card:hover{transform:translateY(-3px); box-shadow:var(--shadow-md); border-color:var(--green-300)}
+.card-icon{width:44px; height:44px; border-radius:12px; background:var(--green-050); display:flex; align-items:center; justify-content:center; margin-bottom:14px; color:var(--green-700)}
+.card-icon svg{width:24px; height:24px}
+.card h3{margin-bottom:6px}
+.card p{font-size:14.5px; color:var(--muted); margin-bottom:0}
+.placeholder-note{display:block; font-size:13px; color:#8a6a2f; background:#fdf6e7; border:1px dashed #dcc08a; border-radius:var(--r-sm); padding:8px 12px; margin-top:8px; font-weight:500}
+
+/* Why */
+.why{display:grid; gap:16px}
+@media (min-width:700px){.why{grid-template-columns:repeat(2,1fr)}}
+.why-item{display:flex; gap:14px; padding:20px; background:#fff; border-radius:var(--r-md); border:1px solid var(--line); box-shadow:var(--shadow-sm)}
+.why-item svg{width:22px; height:22px; flex:0 0 22px; color:var(--green-500); margin-top:3px}
+.why-item h3{font-size:16px; margin-bottom:4px}
+.why-item p{font-size:14.5px; color:var(--muted); margin:0}
+
+/* About */
+.about-grid{display:grid; gap:28px; align-items:center}
+@media (min-width:900px){.about-grid{grid-template-columns:.85fr 1.15fr; gap:44px}}
+.portrait{border-radius:var(--r-lg); overflow:hidden; box-shadow:var(--shadow-md); border:1px solid var(--line); background:#fff}
+.cred-list{list-style:none; padding:0; margin:18px 0 0; display:grid; gap:10px}
+.cred-list li{display:flex; gap:10px; align-items:flex-start; font-size:15px; color:var(--ink-2)}
+.cred-list svg{width:18px; height:18px; flex:0 0 18px; color:var(--green-500); margin-top:3px}
+
+/* Hours table */
+.hours-table{width:100%; border-collapse:collapse; background:#fff; border:1px solid var(--line); border-radius:var(--r-md); overflow:hidden; box-shadow:var(--shadow-sm); margin-top:12px}
+.hours-table th,.hours-table td{text-align:left; padding:13px 16px; font-size:15px; border-bottom:1px solid var(--line)}
+.hours-table tr:last-child th,.hours-table tr:last-child td{border-bottom:0}
+.hours-table th{font-weight:600; color:var(--ink-2); width:52%}
+.hours-table td{font-weight:600; color:var(--green-700); text-align:right}
+.hours-table tr.closed th{color:var(--muted)}
+.hours-table tr.closed td{color:var(--muted); font-weight:500}
+
+/* Contact */
+.contact-grid{display:grid; gap:24px}
+@media (min-width:900px){.contact-grid{grid-template-columns:1fr 1fr; gap:40px}}
+.detail-list{list-style:none; padding:0; margin:0 0 24px; display:grid; gap:16px}
+.detail-list li{display:flex; gap:14px; align-items:flex-start}
+.detail-list .ico{width:40px; height:40px; flex:0 0 40px; border-radius:11px; background:#fff; border:1px solid var(--line); display:flex; align-items:center; justify-content:center; color:var(--green-700); box-shadow:var(--shadow-sm)}
+.detail-list .ico svg{width:20px; height:20px}
+.detail-list .k{font-size:11.5px; letter-spacing:.12em; text-transform:uppercase; font-weight:700; color:var(--muted); margin-bottom:2px}
+.detail-list .v{font-size:15.5px; font-weight:500; color:var(--ink)}
+.detail-list a{color:var(--green-700); text-decoration:none; border-bottom:1px solid var(--green-300); display:inline-block; min-height:24px}
+.detail-list a:hover{color:var(--green-900); border-bottom-color:var(--green-700)}
+.map-card{border-radius:var(--r-md); overflow:hidden; border:1px solid var(--line); box-shadow:var(--shadow-sm); background:#fff}
+.map-cap{padding:12px 16px; font-size:13px; color:var(--muted); border-top:1px solid var(--line)}
+form{background:#fff; border:1px solid var(--line); border-radius:var(--r-md); padding:22px 20px; box-shadow:var(--shadow-sm)}
+.field{margin-bottom:16px}
+label{display:block; font-size:13px; font-weight:600; color:var(--ink-2); margin-bottom:6px}
+input,textarea,select{width:100%; font-family:var(--body); font-size:16px; color:var(--ink); padding:12px 14px; min-height:48px; border:1.5px solid var(--line); border-radius:10px; background:#fcfefd; transition:border-color .18s ease, box-shadow .18s ease}
+textarea{min-height:110px; resize:vertical}
+input:hover,textarea:hover,select:hover{border-color:var(--green-300)}
+input:focus,textarea:focus,select:focus{outline:none; border-color:var(--green-500); box-shadow:0 0 0 4px rgba(47,141,118,.16)}
+.form-note{font-size:12.5px; color:var(--muted); margin:12px 0 0}
+
+/* Footer */
+.site-footer{background:var(--green-900); color:#c6e0d6; padding:40px 0 32px}
+.footer-grid{display:grid; gap:24px}
+@media (min-width:760px){.footer-grid{grid-template-columns:1.3fr 1fr 1fr}}
+.site-footer h4{font-family:var(--body); font-size:12px; letter-spacing:.13em; text-transform:uppercase; color:var(--green-300); margin:0 0 12px}
+.site-footer p{font-size:14.5px; margin:0 0 8px}
+.site-footer a{color:#e9f6f1; text-decoration:none; border-bottom:1px solid rgba(255,255,255,.28)}
+.site-footer a:hover{border-bottom-color:#fff; color:#fff}
+.footer-brand{font-family:var(--display); font-size:21px; color:#fff; margin-bottom:8px}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.14); margin-top:28px; padding-top:20px; font-size:13.5px; display:flex; flex-wrap:wrap; gap:8px 18px; justify-content:space-between}
+
+/* CloudSpring bar */
+.cs-bar{position:fixed; left:0; right:0; bottom:0; z-index:100; background:rgba(8,30,25,.93); backdrop-filter:blur(12px) saturate(160%); border-top:1px solid rgba(143,203,185,.3); color:#e9f6f1; box-shadow:0 -8px 32px rgba(15,52,44,.3); padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px))}
+.cs-inner{max-width:1080px; margin:0 auto; display:flex; flex-direction:column; align-items:center; gap:10px; text-align:center}
+.cs-eyebrow{font-size:10.5px; font-weight:700; letter-spacing:.16em; text-transform:uppercase; color:#8fcbb9; margin:0 0 3px}
+.cs-line{font-size:14.5px; font-weight:700; line-height:1.35; margin:0; color:#fff}
+.cs-btn{display:inline-flex; align-items:center; justify-content:center; gap:8px; min-height:46px; padding:12px 22px; border-radius:var(--r-pill); background:#2fb58f; color:#04231b; font-weight:800; font-size:14.5px; text-decoration:none; white-space:nowrap; border:2px solid transparent; box-shadow:0 4px 18px rgba(47,181,143,.42); animation:cs-pulse 2.4s ease-in-out infinite; transition:background .18s ease, transform .18s ease, box-shadow .18s ease}
+.cs-btn:hover{background:#8fe3c9; transform:translateY(-2px); box-shadow:0 8px 26px rgba(47,181,143,.55); animation-play-state:paused}
+.cs-btn:focus-visible{outline:3px solid #fff; outline-offset:3px; animation-play-state:paused}
+@keyframes cs-pulse{0%,100%{box-shadow:0 4px 18px rgba(47,181,143,.42)} 50%{box-shadow:0 4px 18px rgba(47,181,143,.42), 0 0 0 10px rgba(47,181,143,.14)}}
+@media (prefers-reduced-motion:reduce){.cs-btn{animation:none} .card,.btn,.header-cta{transition:none}}
+@media (min-width:640px){.cs-inner{flex-direction:row; justify-content:space-between; text-align:left; gap:20px} .cs-line{font-size:15.5px}}
+.skip-link{position:absolute; left:-9999px; top:0; background:#fff; color:var(--green-900); padding:12px 18px; z-index:200; border-radius:0 0 8px 0; font-weight:700}
+.skip-link:focus{left:0}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="#top" aria-label="ALO Dermatology home">
+      <svg class="brand-mark" viewBox="0 0 48 48" role="img" aria-hidden="true">
+        <defs><linearGradient id="am1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2f8d76"/><stop offset="1" stop-color="#0f342c"/></linearGradient></defs>
+        <rect width="48" height="48" rx="14" fill="url(#am1)"/>
+        <path d="M24 12c7 3 11 8 11 14a11 11 0 0 1-22 0c0-6 4-11 11-14z" fill="none" stroke="#fff" stroke-width="2.2" stroke-linejoin="round"/>
+        <path d="M19 27c1.4-3 4-4.6 6.6-4.2" fill="none" stroke="#8fcbb9" stroke-width="2.2" stroke-linecap="round"/>
+      </svg>
+      <span>
+        <span class="brand-name">ALO Dermatology</span>
+        <span class="brand-sub">Cebu City</span>
+      </span>
+    </a>
+    <a class="header-cta" href="tel:+639178311712">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="17" height="17"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+      <span class="label-long">Call 0917 831 1712</span>
+      <span class="label-short">Call</span>
+    </a>
+  </div>
+</header>
+
+<main id="main">
+<a id="top"></a>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-grid">
+      <div>
+        <span class="badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#2f8d76" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l7 3v6c0 4.6-3 8.6-7 10-4-1.4-7-5.4-7-10V5l7-3z"/><path d="M9 12l2 2 4-4"/></svg>
+          Dr. Marie Kristy Alo-Manal &mdash; PDS Diplomate
+        </span>
+        <h1>Dermatology in Cebu City, at <span class="accent">Escario Central Mall</span>.</h1>
+        <p class="hero-lede">Medical and aesthetic skin care — dermabrasion, dermaroller, electrotherapy, and hair and nail concerns — at Bldg B, Escario Central Mall, N. Escario St, Brgy. Camputhaw. Open Monday to Saturday, 10:00 to 18:00.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="tel:+639178311712">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+            Call the clinic
+          </a>
+          <a class="btn btn-ghost" href="https://facebook.com/p/ALO-Dermatology-100064101100731/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7h-2.5V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.6V12h2.7l-.4 2.9h-2.3v7A10 10 0 0 0 22 12z"/></svg>
+            Message on Facebook
+          </a>
+        </div>
+
+        <div class="proof">
+          <div>
+            <div class="stars" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="#b3873f"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+              <svg viewBox="0 0 24 24" fill="#b3873f"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+              <svg viewBox="0 0 24 24" fill="#b3873f"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+              <svg viewBox="0 0 24 24" fill="#b3873f"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+              <svg viewBox="0 0 24 24" fill="#b3873f"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+            </div>
+            <div class="proof-score">4.7</div>
+          </div>
+          <div class="proof-meta"><strong>64 reviews</strong><br>The verified rating for ALO Dermatology.</div>
+        </div>
+      </div>
+
+      <!-- Where & when: the correction the whole page exists for -->
+      <div class="wpanel">
+        <div class="wpanel-head">
+          <div class="k">Where to find us</div>
+          <div class="v">Bldg B, Escario Central Mall</div>
+        </div>
+        <div class="wpanel-body">
+          <div class="wrow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <div><div class="k">Address</div><div class="v">N. Escario St, Brgy. Camputhaw<small>Cebu City, Philippines</small></div></div>
+          </div>
+          <div class="wrow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+            <div><div class="k">Clinic hours</div><div class="v">Monday &ndash; Saturday, 10:00 &ndash; 18:00<small>Closed Sunday</small></div></div>
+          </div>
+          <div class="wrow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2.5" width="12" height="19" rx="3"/><path d="M11 18.5h2"/></svg>
+            <div><div class="k">Mobile</div><div class="v"><a href="tel:+639178311712">0917 831 1712</a></div></div>
+          </div>
+          <div class="wrow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+            <div><div class="k">Landline</div><div class="v"><a href="tel:+63322534772">(032) 253 4772</a></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section" id="services">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Services</p>
+      <h2>Medical and aesthetic dermatology</h2>
+      <p>Treatments offered at ALO Dermatology. Your plan is decided at consultation with Dr. Alo-Manal.</p>
+    </div>
+    <div class="cards">
+      <article class="card">
+        <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c4.4 0 8 3.4 8 7.7 0 5.5-4.8 9.1-8 10.3-3.2-1.2-8-4.8-8-10.3C4 6.4 7.6 3 12 3z"/><path d="M9.2 12.2c1.5-2 3.7-2.6 5.5-1.8"/></svg></div>
+        <h3>Medical dermatology</h3>
+        <p>Diagnosis and treatment of skin conditions by a dermatologist.</p>
+      </article>
+      <article class="card">
+        <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5.2 5.2 7.3 7.3M16.7 16.7l2.1 2.1M18.8 5.2l-2.1 2.1M7.3 16.7l-2.1 2.1"/><circle cx="12" cy="12" r="3.4"/></svg></div>
+        <h3>Aesthetic dermatology</h3>
+        <p>Cosmetic skin treatments performed in-clinic.</p>
+      </article>
+      <article class="card">
+        <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18c4-1.5 6.5-5 8-9"/><path d="M4 18c5 2.4 10.5.4 13-4.4"/><path d="M14 4.5c2.5 1 4.5 3 5.5 5.5"/></svg></div>
+        <h3>Dermabrasion</h3>
+        <p>Resurfacing treatment for skin texture concerns.</p>
+      </article>
+      <article class="card">
+        <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 20 18 8"/><rect x="14.5" y="2.5" width="7" height="7" rx="2" transform="rotate(45 18 6)"/><path d="M4.5 18.5 7 21"/></svg></div>
+        <h3>Dermaroller</h3>
+        <p>Microneedling treatment for the skin's surface.</p>
+      </article>
+      <article class="card">
+        <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 5 13h6l-2 9 8-11h-6z"/></svg></div>
+        <h3>Electrotherapy</h3>
+        <p>Electro-based procedures for selected skin lesions.</p>
+      </article>
+      <article class="card">
+        <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21c-1.5-4 0-9 2-12s5-5 7-6"/><path d="M11 21c-1-3 .5-7 2.5-9.5"/><rect x="14" y="14" width="7" height="7" rx="3.5"/></svg></div>
+        <h3>Hair &amp; nail concerns</h3>
+        <p>Assessment and treatment of hair and nail conditions.</p>
+      </article>
+    </div>
+    <p class="placeholder-note" style="max-width:560px">Consultation fee: ₱ ___ — your actual rate goes here, so no directory can publish a price you never set.</p>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="section section--tint">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Why patients choose ALO Dermatology</p>
+      <h2>The right address, the right hours, the right doctor</h2>
+    </div>
+    <div class="why">
+      <div class="why-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l7 3v6c0 4.6-3 8.6-7 10-4-1.4-7-5.4-7-10V5l7-3z"/><path d="M9 12l2 2 4-4"/></svg>
+        <div><h3>PDS Diplomate</h3><p>Consultations with Dr. Marie Kristy Alo-Manal, a Diplomate of the Philippine Dermatological Society.</p></div>
+      </div>
+      <div class="why-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+        <div><h3>Rated 4.7 by patients</h3><p>4.7 out of 5 from 64 reviews — the verified rating for this clinic.</p></div>
+      </div>
+      <div class="why-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <div><h3>Easy to reach in Escario</h3><p>Inside Escario Central Mall on N. Escario St — mall parking, sheltered access, central Cebu City.</p></div>
+      </div>
+      <div class="why-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+        <div><h3>Six days a week</h3><p>Open Monday to Saturday, 10:00 to 18:00 — including afternoons, not mornings only.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section" id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="portrait">
+        <svg viewBox="0 0 420 470" role="img" aria-label="Portrait illustration of the clinic's dermatologist">
+          <defs>
+            <linearGradient id="ag1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#eef7f3"/><stop offset="1" stop-color="#d8ece3"/></linearGradient>
+            <linearGradient id="ag2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#f3faf7"/></linearGradient>
+          </defs>
+          <rect width="420" height="470" fill="url(#ag1)"/>
+          <circle cx="210" cy="198" r="134" fill="#fff" opacity=".62"/>
+          <path d="M210 298c78 0 132 44 148 96 4 14 6 30 6 44v32H56v-32c0-14 2-30 6-44 16-52 70-96 148-96z" fill="url(#ag2)" stroke="#bfdfd2" stroke-width="2.4"/>
+          <path d="M210 298l-34 62 34 26 34-26z" fill="#eaf6f1" stroke="#bfdfd2" stroke-width="2.2"/>
+          <path d="M182 256h56v46c0 8-56 8-56 0z" fill="#e4f1eb" stroke="#bfdfd2" stroke-width="2"/>
+          <ellipse cx="210" cy="192" rx="66" ry="78" fill="#f7fcfa" stroke="#bfdfd2" stroke-width="2.4"/>
+          <path d="M144 190c0-46 30-74 66-74s66 28 66 74c0-24-16-36-32-40-20-5-32 5-54 3-20-2-32 10-38 24-3 7-8 9-8 13z" fill="#14483c" opacity=".86"/>
+          <path d="M146 190c-8 40-2 74 6 92-18-28-20-70-6-92zM274 190c8 40 2 74-6 92 18-28 20-70 6-92z" fill="#14483c" opacity=".72"/>
+          <path d="M188 190c6-5 14-5 20 0M212 190c6-5 14-5 20 0" fill="none" stroke="#14483c" stroke-width="3.2" stroke-linecap="round"/>
+          <path d="M198 230c8 6 16 6 24 0" fill="none" stroke="#14483c" stroke-width="3.2" stroke-linecap="round"/>
+          <g transform="translate(244,356)">
+            <rect x="0" y="0" width="112" height="34" rx="17" fill="#0f342c"/>
+            <text x="56" y="22" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#8fe3c9">PDS DIPLOMATE</text>
+          </g>
+          <path d="M162 312c-10 32 4 56 26 60s34-12 34-30" fill="none" stroke="#2f8d76" stroke-width="4" stroke-linecap="round"/>
+          <circle cx="224" cy="342" r="9" fill="none" stroke="#2f8d76" stroke-width="4"/>
+        </svg>
+      </div>
+      <div>
+        <p class="eyebrow">About the clinic</p>
+        <h2>ALO Dermatology, Escario Central Mall</h2>
+        <p>ALO Dermatology is a dermatology clinic at Bldg B, Escario Central Mall on N. Escario St, Brgy. Camputhaw, Cebu City. The clinic covers both medical and aesthetic dermatology — from skin condition diagnosis and treatment to dermabrasion, dermaroller and electrotherapy, plus hair and nail concerns.</p>
+        <p>Consultations are led by <strong>Dr. Marie Kristy Alo-Manal</strong>, a Diplomate of the Philippine Dermatological Society. Appointments are arranged by phone or through the clinic's Facebook page.</p>
+        <ul class="cred-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Diplomate, Philippine Dermatological Society (PDS)</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Listed on the PDS member registry</li>
+        </ul>
+        <h3 style="margin-top:32px; font-size:19px">Clinic hours</h3>
+        <table class="hours-table">
+          <tbody>
+            <tr><th scope="row">Monday &ndash; Saturday</th><td>10:00 &ndash; 18:00</td></tr>
+            <tr class="closed"><th scope="row">Sunday</th><td>Closed</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section section--sand" id="contact">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Visit or contact the clinic</p>
+      <h2>Book a consultation</h2>
+      <p>Call either number during clinic hours, or send a message and we will confirm your schedule.</p>
+    </div>
+    <div class="contact-grid">
+      <div>
+        <ul class="detail-list">
+          <li>
+            <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+            <span><span class="k">Address</span><span class="v">Bldg B, Escario Central Mall, N. Escario St, Brgy. Camputhaw, Cebu City, Philippines</span></span>
+          </li>
+          <li>
+            <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2.5" width="12" height="19" rx="3"/><path d="M11 18.5h2"/></svg></span>
+            <span><span class="k">Mobile</span><span class="v"><a href="tel:+639178311712">0917 831 1712</a></span></span>
+          </li>
+          <li>
+            <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></span>
+            <span><span class="k">Landline</span><span class="v"><a href="tel:+63322534772">(032) 253 4772</a></span></span>
+          </li>
+          <li>
+            <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4.5" width="19" height="15" rx="3"/><path d="m3 7 9 6 9-6"/></svg></span>
+            <span><span class="k">Email</span><span class="v"><a href="mailto:alo_727@yahoo.com">alo_727@yahoo.com</a></span></span>
+          </li>
+          <li>
+            <span class="ico"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7h-2.5V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.6V12h2.7l-.4 2.9h-2.3v7A10 10 0 0 0 22 12z"/></svg></span>
+            <span><span class="k">Facebook</span><span class="v"><a href="https://facebook.com/p/ALO-Dermatology-100064101100731/" target="_blank" rel="noopener">ALO Dermatology</a></span></span>
+          </li>
+          <li>
+            <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+            <span><span class="k">Hours</span><span class="v">Monday &ndash; Saturday, 10:00 &ndash; 18:00<br>Closed Sunday</span></span>
+          </li>
+        </ul>
+
+        <div class="map-card">
+          <svg viewBox="0 0 560 260" role="img" aria-label="Simplified map placeholder showing the clinic at Escario Central Mall on N. Escario Street, Cebu City">
+            <rect width="560" height="260" fill="#edf4f0"/>
+            <g stroke="#d7e8e0" stroke-width="12"><path d="M0 88h560M0 196h560M132 0v260M392 0v260"/></g>
+            <g stroke="#fff" stroke-width="4" stroke-dasharray="14 12" opacity=".85"><path d="M0 88h560M0 196h560M132 0v260M392 0v260"/></g>
+            <rect x="18" y="110" width="98" height="66" rx="6" fill="#dcece5"/>
+            <rect x="412" y="20" width="126" height="52" rx="6" fill="#dcece5"/>
+            <rect x="160" y="212" width="200" height="38" rx="6" fill="#dcece5"/>
+            <text x="14" y="80" font-family="Inter, Arial, sans-serif" font-size="13" fill="#63837a">N. Escario St</text>
+            <text x="398" y="248" font-family="Inter, Arial, sans-serif" font-size="13" fill="#63837a">Brgy. Camputhaw</text>
+            <rect x="176" y="104" width="176" height="80" rx="10" fill="#fff" stroke="#bcdccd" stroke-width="2"/>
+            <text x="264" y="140" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" fill="#0f342c">Escario Central Mall</text>
+            <text x="264" y="162" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="12.5" fill="#63837a">Bldg B &middot; ALO Dermatology</text>
+            <g transform="translate(238,26)">
+              <path d="M26 0A26 26 0 0 0 0 26c0 19 26 46 26 46s26-27 26-46A26 26 0 0 0 26 0z" fill="#0f342c"/>
+              <circle cx="26" cy="25" r="10" fill="#8fe3c9"/>
+            </g>
+          </svg>
+          <div class="map-cap">Illustrative map placeholder — a live Google map would be embedded here on the finished site.</div>
+        </div>
+      </div>
+
+      <div>
+        <form id="enquiry" novalidate>
+          <h3 style="font-size:19px; margin-bottom:14px">Request an appointment</h3>
+          <div class="field">
+            <label for="name">Your name</label>
+            <input id="name" name="name" type="text" autocomplete="name" placeholder="Juan Dela Cruz">
+          </div>
+          <div class="field">
+            <label for="contact">Phone or email</label>
+            <input id="contact" name="contact" type="text" autocomplete="tel" placeholder="09XX XXX XXXX">
+          </div>
+          <div class="field">
+            <label for="service">What would you like to consult about?</label>
+            <select id="service" name="service">
+              <option>Medical dermatology</option>
+              <option>Aesthetic dermatology</option>
+              <option>Dermabrasion</option>
+              <option>Dermaroller</option>
+              <option>Electrotherapy</option>
+              <option>Hair or nail concern</option>
+              <option>Not sure yet</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Tell us briefly about your concern and your preferred day (we're open Mon–Sat, 10:00–18:00)."></textarea>
+          </div>
+          <button class="btn btn-primary" type="submit" style="width:100%">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4z"/></svg>
+            Send
+          </button>
+          <p class="form-note">This preview form opens your email app. On the live site it would deliver straight to the clinic inbox and confirm the request automatically.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">ALO Dermatology</div>
+        <p>Medical and aesthetic dermatology in Cebu City, Philippines.</p>
+        <p>Dr. Marie Kristy Alo-Manal, PDS Diplomate</p>
+      </div>
+      <div>
+        <h4>Visit</h4>
+        <p>Bldg B, Escario Central Mall<br>N. Escario St, Brgy. Camputhaw<br>Cebu City, Philippines</p>
+        <p>Mon &ndash; Sat, 10:00 &ndash; 18:00<br>Closed Sunday</p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p><a href="tel:+639178311712">0917 831 1712</a></p>
+        <p><a href="tel:+63322534772">(032) 253 4772</a></p>
+        <p><a href="mailto:alo_727@yahoo.com">alo_727@yahoo.com</a></p>
+        <p><a href="https://facebook.com/p/ALO-Dermatology-100064101100731/" target="_blank" rel="noopener">Facebook</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 ALO Dermatology, Cebu City.</span>
+      <span>Website by CloudSpring IT Solutions</span>
+    </div>
+  </div>
+</footer>
+
+<div class="cs-bar" role="complementary" aria-label="CloudSpring IT Solutions preview notice">
+  <div class="cs-inner">
+    <div class="cs-copy">
+      <p class="cs-eyebrow">PREVIEW &middot; CloudSpring IT Solutions</p>
+      <p class="cs-line">Stop directories sending your patients to the wrong address — one page you control, always correct.</p>
+    </div>
+    <a class="cs-btn" href="https://api.leadconnectorhq.com/widget/booking/QRPEnWRw2Kx9rBe0Mj6J" target="_blank" rel="noopener">Book a FREE Discovery Call &rarr;</a>
+  </div>
+</div>
+
+<script>
+(function(){
+  var f = document.getElementById('enquiry');
+  if(!f) return;
+  f.addEventListener('submit', function(e){
+    e.preventDefault();
+    var n = (document.getElementById('name').value || '').trim();
+    var c = (document.getElementById('contact').value || '').trim();
+    var s = document.getElementById('service').value;
+    var m = (document.getElementById('message').value || '').trim();
+    var body = 'Name: ' + n + '\nContact: ' + c + '\nConcern: ' + s + '\n\n' + m;
+    window.location.href = 'mailto:alo_727@yahoo.com'
+      + '?subject=' + encodeURIComponent('Appointment request - ' + (n || 'Website'))
+      + '&body=' + encodeURIComponent(body);
+  });
+})();
+</script>
+</body>
+</html>

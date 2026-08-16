@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gulfan Skin Clinic — Dermatology in Makati City</title>
+<meta name="description" content="Gulfan Skin Clinic — clinical dermatology, cosmetic dermatology and skin surgery at Unit 305, IDC Plaza, Kalayaan Ave cor. Zapote, Makati City. Board-certified dermatologist Dra. Gulfan.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0A2E2C;
+  --ink-2:#12403D;
+  --slate:#4E6E6B;
+  --line:#DCEAE7;
+  --paper:#FFFFFF;
+  --mist:#F2F9F7;
+  --teal:#0F7A72;
+  --teal-dk:#0A5A54;
+  --teal-lt:#3FB3A6;
+  --sand:#F8F4EC;
+  --clay:#9A7443;
+  --shadow-1:0 1px 2px rgba(10,46,44,.06), 0 2px 8px rgba(10,46,44,.06);
+  --shadow-2:0 2px 6px rgba(10,46,44,.07), 0 12px 28px rgba(10,46,44,.11);
+  --shadow-3:0 -2px 10px rgba(10,46,44,.18), 0 -12px 40px rgba(10,46,44,.24);
+  --r-s:8px; --r-m:14px; --r-l:22px; --r-pill:999px;
+  --display:"DM Serif Display", "Iowan Old Style", Palatino, Georgia, "Times New Roman", serif;
+  --body:"Jost", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{
+  margin:0;font-family:var(--body);color:var(--ink);background:var(--paper);
+  font-size:16px;line-height:1.62;padding-bottom:168px;overflow-x:hidden;
+}
+h1,h2,h3,h4{font-family:var(--display);font-weight:400;line-height:1.18;margin:0}
+p{margin:0}
+img,svg{max-width:100%;display:block}
+.wrap{width:100%;max-width:1100px;margin:0 auto;padding:0 20px}
+.eyebrow{font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;color:var(--teal);margin:0 0 12px}
+.sec{padding:56px 0}
+.sec-alt{background:var(--mist)}
+.sec-head{max-width:620px;margin:0 0 32px}
+.sec-head h2{font-size:30px}
+.sec-head p{margin-top:12px;color:var(--slate)}
+.tbc{color:var(--clay);font-style:italic}
+
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible,[tabindex]:focus-visible{
+  outline:3px solid var(--teal-lt);outline-offset:3px;border-radius:4px;
+}
+
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  min-height:48px;padding:12px 22px;border-radius:var(--r-pill);
+  font-family:var(--body);font-size:15px;font-weight:600;text-decoration:none;
+  border:1.5px solid transparent;cursor:pointer;
+  transition:transform .16s ease, background-color .16s ease, border-color .16s ease, box-shadow .16s ease, color .16s ease;
+}
+.btn-primary{background:var(--teal);color:#fff;box-shadow:var(--shadow-1)}
+.btn-primary:hover{background:var(--teal-dk);transform:translateY(-2px);box-shadow:var(--shadow-2)}
+.btn-ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+.btn-ghost:hover{border-color:var(--teal);color:var(--teal-dk);background:#fff;transform:translateY(-2px)}
+.btn-light{background:#fff;color:var(--ink-2);box-shadow:var(--shadow-1)}
+.btn-light:hover{background:var(--sand);transform:translateY(-2px)}
+.btn:active{transform:translateY(0)}
+
+/* header */
+.hdr{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.95);backdrop-filter:saturate(180%) blur(10px);border-bottom:1px solid var(--line)}
+.hdr-in{display:flex;align-items:center;gap:12px;min-height:64px;padding:8px 20px;max-width:1100px;margin:0 auto}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);min-width:0;flex:1}
+.mark{flex:0 0 auto;width:38px;height:38px}
+.brand-name{font-family:var(--display);font-size:17.5px;line-height:1.1;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.brand-sub{display:block;font-size:10.5px;letter-spacing:.15em;text-transform:uppercase;color:var(--slate);margin-top:3px}
+.hdr-call{flex:0 0 auto;display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:10px 16px;border-radius:var(--r-pill);background:var(--teal);color:#fff;text-decoration:none;font-weight:600;font-size:14px;transition:background-color .16s ease, transform .16s ease}
+.hdr-call:hover{background:var(--teal-dk);transform:translateY(-1px)}
+.hdr-call .lbl{display:none}
+@media(min-width:520px){.hdr-call .lbl{display:inline}}
+.nav{display:none}
+@media(min-width:900px){
+  .nav{display:flex;gap:4px;margin-right:8px}
+  .nav a{text-decoration:none;color:var(--slate);font-size:14px;font-weight:500;padding:10px 12px;border-radius:var(--r-s);min-height:44px;display:inline-flex;align-items:center;transition:color .16s ease,background-color .16s ease}
+  .nav a:hover{color:var(--ink);background:var(--mist)}
+}
+
+/* hero */
+.hero{position:relative;background:linear-gradient(168deg,#F2F9F7 0%,#E4F1EE 60%,#F8F4EC 100%);overflow:hidden;border-bottom:1px solid var(--line)}
+.hero::before{content:"";position:absolute;width:520px;height:520px;right:-160px;top:-200px;border-radius:50%;background:radial-gradient(circle,rgba(63,179,166,.22) 0%,rgba(63,179,166,0) 70%)}
+.hero-in{position:relative;z-index:2;padding:38px 0 48px;display:grid;gap:28px}
+.hero h1{font-size:34px}
+.hero h1 em{font-style:normal;color:var(--teal-dk)}
+.hero-sub{margin-top:14px;color:var(--slate);font-size:16.5px;max-width:52ch}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+@media(min-width:900px){
+  .hero-in{grid-template-columns:1.05fr .95fr;align-items:center;padding:60px 0 70px;gap:44px}
+  .hero h1{font-size:50px}
+}
+
+/* hours card — above the fold */
+.hours{
+  background:#fff;border:1px solid var(--line);border-radius:var(--r-l);
+  padding:22px;box-shadow:var(--shadow-2);
+}
+.hours h2{font-size:22px;margin-bottom:4px}
+.hours .lead{color:var(--slate);font-size:14.5px;margin-top:6px}
+.hours-list{list-style:none;margin:18px 0 0;padding:0;display:grid;gap:2px}
+.hours-list li{display:flex;justify-content:space-between;gap:14px;padding:11px 12px;border-radius:var(--r-s);font-size:15px}
+.hours-list li:nth-child(odd){background:var(--mist)}
+.hours-list .d{font-weight:600}
+.hours-list .t{color:var(--clay);font-style:italic;text-align:right}
+.correction{
+  margin-top:16px;padding:14px 16px;border-radius:var(--r-m);
+  background:var(--sand);border:1px dashed #E0D2BC;font-size:13.5px;color:#6B5433;
+}
+.hours .call-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.hours .call-row .btn{flex:1 1 auto}
+
+/* cards */
+.grid{display:grid;gap:16px}
+@media(min-width:640px){.grid-2{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:900px){.grid-3{grid-template-columns:repeat(3,1fr)}}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r-m);padding:24px;box-shadow:var(--shadow-1);transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow-2);border-color:#C2DFDA}
+.card .ico{width:46px;height:46px;margin-bottom:14px}
+.card h3{font-size:20px;margin-bottom:8px}
+.card p{color:var(--slate);font-size:14.5px}
+.card ul{margin:12px 0 0;padding:0;list-style:none;display:grid;gap:7px}
+.card li{font-size:14px;color:var(--ink-2);padding-left:20px;position:relative}
+.card li::before{content:"";position:absolute;left:0;top:8px;width:9px;height:9px;border-radius:50%;background:var(--teal-lt)}
+.card .rate{margin-top:16px;padding-top:12px;border-top:1px dashed var(--line);font-size:13px;color:var(--clay)}
+
+/* why */
+.why{display:grid;gap:14px}
+.why-item{display:flex;gap:14px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:var(--r-m);padding:20px;box-shadow:var(--shadow-1)}
+.why-item .ico{flex:0 0 auto;width:36px;height:36px;margin-top:2px}
+.why-item h3{font-size:17.5px;margin-bottom:5px}
+.why-item p{color:var(--slate);font-size:14.5px}
+@media(min-width:820px){.why{grid-template-columns:repeat(2,1fr)}}
+
+/* about */
+.about{display:grid;gap:28px;align-items:center}
+.about-art{border-radius:var(--r-l);overflow:hidden;box-shadow:var(--shadow-2)}
+.about p{color:var(--slate);font-size:15.5px}
+.about p+p{margin-top:14px}
+.sig{margin-top:20px;font-family:var(--display);font-size:20px;color:var(--ink)}
+.sig span{display:block;font-family:var(--body);font-size:13px;color:var(--slate);letter-spacing:.05em;margin-top:4px}
+@media(min-width:900px){.about{grid-template-columns:.85fr 1.15fr;gap:44px}}
+
+/* contact */
+.contact{display:grid;gap:22px}
+@media(min-width:900px){.contact{grid-template-columns:1fr 1fr;gap:32px}}
+.info{background:#fff;border:1px solid var(--line);border-radius:var(--r-m);padding:24px;box-shadow:var(--shadow-1)}
+.info dl{margin:0;display:grid;gap:16px}
+.info dt{font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--slate);font-weight:600}
+.info dd{margin:5px 0 0;font-size:15.5px}
+.info a{color:var(--teal-dk);text-decoration:none;border-bottom:1px solid rgba(15,122,114,.3);transition:color .16s ease,border-color .16s ease}
+.info a:hover{color:var(--teal);border-color:var(--teal)}
+.mapbox{border-radius:var(--r-m);overflow:hidden;border:1px solid var(--line);margin-top:18px;position:relative}
+.mapbox .caption{position:absolute;left:12px;bottom:12px;background:rgba(255,255,255,.94);border-radius:var(--r-s);padding:8px 12px;font-size:12.5px;color:var(--slate);box-shadow:var(--shadow-1);max-width:calc(100% - 24px)}
+form{background:#fff;border:1px solid var(--line);border-radius:var(--r-m);padding:24px;box-shadow:var(--shadow-1)}
+.field{margin-bottom:16px}
+label{display:block;font-size:13px;font-weight:600;margin-bottom:6px;color:var(--ink-2)}
+input,textarea,select{width:100%;min-height:48px;padding:12px 14px;border:1.5px solid var(--line);border-radius:var(--r-s);font-family:var(--body);font-size:15px;color:var(--ink);background:#fff;transition:border-color .16s ease, box-shadow .16s ease}
+textarea{min-height:110px;resize:vertical}
+input:hover,textarea:hover,select:hover{border-color:#AFD3CD}
+input:focus,textarea:focus,select:focus{border-color:var(--teal);box-shadow:0 0 0 3px rgba(15,122,114,.14);outline:none}
+.form-note{font-size:12.5px;color:var(--slate);margin-top:12px}
+
+/* footer */
+.ftr{background:var(--ink);color:#B7D4D0;padding:40px 0 34px}
+.ftr-in{display:grid;gap:22px}
+.ftr h4{color:#fff;font-size:19px;margin-bottom:8px}
+.ftr p,.ftr li{font-size:14px}
+.ftr ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.ftr a{color:#D9EEEB;text-decoration:none;border-bottom:1px solid rgba(217,238,235,.25)}
+.ftr a:hover{color:#fff;border-color:#fff}
+.ftr-btm{margin-top:26px;padding-top:20px;border-top:1px solid rgba(255,255,255,.14);font-size:13px;display:grid;gap:6px}
+.cs-credit{color:#EAF6F4}
+@media(min-width:760px){.ftr-in{grid-template-columns:1.4fr 1fr 1fr}}
+
+/* CloudSpring bar */
+.cs-bar{position:fixed;left:0;right:0;bottom:0;z-index:200;background:rgba(6,32,30,.94);backdrop-filter:saturate(160%) blur(12px);border-top:1px solid rgba(63,179,166,.38);box-shadow:var(--shadow-3);padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px))}
+.cs-in{max-width:1100px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;justify-content:center;text-align:center}
+.cs-eyebrow{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:#79D6CA;margin:0 0 4px}
+.cs-line{color:#fff;font-size:15px;font-weight:600;line-height:1.35;margin:0}
+.cs-btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:13px 24px;border-radius:var(--r-pill);background:var(--teal-lt);color:#04241F;font-weight:700;font-size:14.5px;text-decoration:none;white-space:nowrap;box-shadow:0 0 0 0 rgba(63,179,166,.55);animation:csPulse 2.4s ease-out infinite;transition:background-color .16s ease, transform .16s ease}
+.cs-btn:hover{background:#5FCBBE;transform:translateY(-2px);animation:none}
+@keyframes csPulse{0%{box-shadow:0 0 0 0 rgba(63,179,166,.5)}70%{box-shadow:0 0 0 14px rgba(63,179,166,0)}100%{box-shadow:0 0 0 0 rgba(63,179,166,0)}}
+@media(min-width:640px){
+  .cs-in{flex-wrap:nowrap;justify-content:space-between;text-align:left}
+  .cs-line{font-size:16px}
+  body{padding-bottom:120px}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none !important;transition-duration:.01ms !important;scroll-behavior:auto !important}
+  .cs-btn{box-shadow:0 0 0 3px rgba(63,179,166,.45)}
+}
+.skip{position:absolute;left:-9999px;top:0;background:#fff;color:var(--ink);padding:12px 18px;z-index:300}
+.skip:focus{left:0}
+</style>
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="hdr">
+  <div class="hdr-in">
+    <a class="brand" href="#top" aria-label="Gulfan Skin Clinic — home">
+      <svg class="mark" viewBox="0 0 48 48" role="img" aria-hidden="true" focusable="false">
+        <rect width="48" height="48" rx="14" fill="#0A2E2C"/>
+        <path d="M24 12c6.6 0 12 5.4 12 12s-5.4 12-12 12" fill="none" stroke="#3FB3A6" stroke-width="2.4" stroke-linecap="round"/>
+        <text x="24" y="30" text-anchor="middle" font-family="'DM Serif Display', Georgia, serif" font-size="17" fill="#ffffff">G</text>
+      </svg>
+      <span>
+        <span class="brand-name">Gulfan Skin Clinic</span>
+        <span class="brand-sub">Dermatology · Makati</span>
+      </span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#hours">Hours</a>
+      <a href="#services">Services</a>
+      <a href="#doctor">Dra. Gulfan</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="hdr-call" href="tel:+639177135124" aria-label="Call Gulfan Skin Clinic at 0917 713 5124">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .3 1.9.6 2.8a2 2 0 0 1-.5 2.1L8.1 9.7a16 16 0 0 0 6 6l1.1-1.1a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.8.6a2 2 0 0 1 1.7 2Z"/></svg>
+      <span class="lbl">0917 713 5124</span>
+    </a>
+  </div>
+</header>
+
+<main id="main">
+<a id="top"></a>
+
+<!-- HERO + HOURS ABOVE THE FOLD -->
+<section class="hero">
+  <div class="wrap hero-in">
+    <div>
+      <p class="eyebrow">Kalayaan Ave cor. Zapote · Makati City</p>
+      <h1>Board-certified <em>dermatology</em> in Makati — one tap away</h1>
+      <p class="hero-sub">Gulfan Skin Clinic provides clinical dermatology, cosmetic dermatology and skin surgery at Unit 305, IDC Plaza. Our real opening hours and our direct line are right here — not buried in a directory.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="tel:+639177135124">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .3 1.9.6 2.8a2 2 0 0 1-.5 2.1L8.1 9.7a16 16 0 0 0 6 6l1.1-1.1a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.8.6a2 2 0 0 1 1.7 2Z"/></svg>
+          Call 0917 713 5124
+        </a>
+        <a class="btn btn-light" href="https://www.facebook.com/gulfanskin/" target="_blank" rel="noopener">Message us on Facebook</a>
+      </div>
+    </div>
+
+    <div class="hours" id="hours">
+      <p class="eyebrow" style="margin-bottom:6px">Clinic hours</p>
+      <h2>When we're open</h2>
+      <p class="lead">Straight from the clinic — no third-party listing guessing on our behalf.</p>
+      <ul class="hours-list">
+        <li><span class="d">Monday</span><span class="t">To be confirmed</span></li>
+        <li><span class="d">Tuesday</span><span class="t">To be confirmed</span></li>
+        <li><span class="d">Wednesday</span><span class="t">To be confirmed</span></li>
+        <li><span class="d">Thursday</span><span class="t">To be confirmed</span></li>
+        <li><span class="d">Friday</span><span class="t">To be confirmed</span></li>
+        <li><span class="d">Saturday</span><span class="t">To be confirmed</span></li>
+        <li><span class="d">Sunday</span><span class="t">To be confirmed</span></li>
+      </ul>
+      <p class="correction"><strong>Placeholder:</strong> your real opening hours go here. A third-party directory currently publishes Monday and Tuesday as “Closed” for this clinic — on your own site, you set the hours and they are correct the moment you change them.</p>
+      <div class="call-row">
+        <a class="btn btn-primary" href="tel:+639177135124">Call the clinic</a>
+        <a class="btn btn-ghost" href="#contact">Ask a question</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="sec" id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">What we do</p>
+      <h2>Clinical, cosmetic and surgical dermatology</h2>
+      <p>Skin care handled by a board-certified dermatologist, from medical diagnosis through to aesthetic treatment and minor skin surgery.</p>
+    </div>
+    <div class="grid grid-3">
+      <article class="card">
+        <svg class="ico" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+          <path d="M24 41s-15-9.7-15-19.5A8.5 8.5 0 0 1 24 15a8.5 8.5 0 0 1 15 6.5C39 31.3 24 41 24 41Z" stroke="#0F7A72" stroke-width="2.4" stroke-linejoin="round"/>
+          <path d="M14 25h6l2.5-5 3 10 2.5-5h6" stroke="#3FB3A6" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <h3>Clinical dermatology</h3>
+        <p>Medical assessment and treatment of skin, hair and nail conditions.</p>
+        <ul><li>Consultation &amp; diagnosis</li><li>Ongoing treatment plans</li></ul>
+        <p class="rate">₱ ___ — your actual rates go here</p>
+      </article>
+      <article class="card">
+        <svg class="ico" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+          <circle cx="24" cy="24" r="14" stroke="#0F7A72" stroke-width="2.4"/>
+          <path d="M24 10v-4M24 42v-4M10 24H6M42 24h-4M14 14l-3-3M34 34l3 3M34 14l3-3M14 34l-3 3" stroke="#3FB3A6" stroke-width="2.2" stroke-linecap="round"/>
+          <circle cx="24" cy="24" r="5" fill="#9A7443" opacity=".55"/>
+        </svg>
+        <h3>Cosmetic dermatology</h3>
+        <p>Aesthetic procedures for tone, texture and the visible signs of ageing.</p>
+        <ul><li>Skin-quality treatments</li><li>Procedure planning &amp; aftercare</li></ul>
+        <p class="rate">₱ ___ — your actual rates go here</p>
+      </article>
+      <article class="card">
+        <svg class="ico" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+          <path d="M11 33 30 14l4 4-19 19H11v-4Z" stroke="#0F7A72" stroke-width="2.4" stroke-linejoin="round"/>
+          <path d="M28 12l4-4 8 8-4 4" stroke="#3FB3A6" stroke-width="2.4" stroke-linejoin="round"/>
+          <path d="M9 41h30" stroke="#0F7A72" stroke-width="2.4" stroke-linecap="round"/>
+        </svg>
+        <h3>Skin surgery</h3>
+        <p>Minor dermatologic surgical procedures performed in-clinic.</p>
+        <ul><li>Assessment before any procedure</li><li>Post-procedure follow-up</li></ul>
+        <p class="rate">₱ ___ — your actual rates go here</p>
+      </article>
+    </div>
+    <p style="margin-top:18px;font-size:14px" class="tbc">Full procedure list and inclusions — to be confirmed with the clinic.</p>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="sec sec-alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Why patients choose us</p>
+      <h2>A small clinic that answers</h2>
+    </div>
+    <div class="why">
+      <div class="why-item">
+        <svg class="ico" viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M20 5l4.6 9.4 10.4 1.5-7.5 7.3 1.8 10.3L20 28.6l-9.3 4.9 1.8-10.3L5 15.9l10.4-1.5L20 5Z" stroke="#9A7443" stroke-width="2.2" stroke-linejoin="round"/></svg>
+        <div><h3>5.0★ from 20 Google reviews</h3><p>As recorded on Google in August 2026 — a perfect score across every review left.</p></div>
+      </div>
+      <div class="why-item">
+        <svg class="ico" viewBox="0 0 40 40" fill="none" aria-hidden="true"><circle cx="20" cy="20" r="15" stroke="#0F7A72" stroke-width="2.2"/><path d="M13.5 20.5l4.5 4.5 9-9" stroke="#3FB3A6" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div><h3>Board-certified dermatologist</h3><p>Your consultation is with Dra. Gulfan, a board-certified dermatologist.</p></div>
+      </div>
+      <div class="why-item">
+        <svg class="ico" viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M20 35s12-8.6 12-16A12 12 0 0 0 8 19c0 7.4 12 16 12 16Z" stroke="#0F7A72" stroke-width="2.2" stroke-linejoin="round"/><circle cx="20" cy="19" r="4.2" fill="#3FB3A6"/></svg>
+        <div><h3>One Makati address</h3><p>Unit 305, IDC Plaza on Kalayaan Ave corner Zapote — easy to find, easy to reach.</p></div>
+      </div>
+      <div class="why-item">
+        <svg class="ico" viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M34 24c0 5-4.6 9-10.4 9-1.8 0-3.5-.4-5-1L11 34l1.7-6.2A9.6 9.6 0 0 1 9 21c0-5 5.4-10 12.5-10S34 16 34 19Z" stroke="#0F7A72" stroke-width="2.2" stroke-linejoin="round"/><circle cx="17" cy="21" r="1.9" fill="#3FB3A6"/><circle cx="23" cy="21" r="1.9" fill="#3FB3A6"/><circle cx="29" cy="21" r="1.9" fill="#3FB3A6"/></svg>
+        <div><h3>Reachable directly</h3><p>Call the clinic line or message us on Facebook or Instagram — links, not dead ends.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT / DOCTOR -->
+<section class="sec" id="doctor">
+  <div class="wrap about">
+    <div class="about-art">
+      <svg viewBox="0 0 420 400" role="img" aria-label="Portrait illustration of a board-certified dermatologist">
+        <defs><linearGradient id="gAb" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0F7A72"/><stop offset="100%" stop-color="#0A2E2C"/></linearGradient></defs>
+        <rect width="420" height="400" fill="url(#gAb)"/>
+        <circle cx="210" cy="152" r="114" fill="#14837A" opacity=".45"/>
+        <path d="M118 400c0-56 41-97 92-97s92 41 92 97Z" fill="#F2F9F7"/>
+        <path d="M172 318c0 40 76 40 76 0v-30h-76Z" fill="#E4CBB6"/>
+        <circle cx="210" cy="250" r="60" fill="#F1D9C4"/>
+        <path d="M150 250c0-46 26-68 60-68s60 22 60 68c6-58-18-84-60-84s-66 28-60 84Z" fill="#2C2320"/>
+        <path d="M152 244c-6 30 2 56 8 60-14-16-16-42-8-60Z" fill="#2C2320"/>
+        <path d="M268 244c6 30-2 56-8 60 14-16 16-42 8-60Z" fill="#2C2320"/>
+        <circle cx="191" cy="250" r="4.4" fill="#2C2320"/><circle cx="229" cy="250" r="4.4" fill="#2C2320"/>
+        <path d="M199 278c7 6 15 6 22 0" stroke="#BE8168" stroke-width="3.4" stroke-linecap="round" fill="none"/>
+        <path d="M180 322 L210 356 L240 322 l40 20 v58 H140 v-58Z" fill="#FFFFFF"/>
+        <path d="M210 356 v44" stroke="#DCEAE7" stroke-width="3"/>
+        <rect x="150" y="352" width="30" height="9" rx="4.5" fill="#3FB3A6"/>
+        <path d="M158 361 v24 a12 12 0 0 0 24 0 v-12" stroke="#3FB3A6" stroke-width="3.4" fill="none" stroke-linecap="round"/>
+        <circle cx="182" cy="371" r="6" fill="#0F7A72"/>
+      </svg>
+    </div>
+    <div>
+      <p class="eyebrow">About the clinic</p>
+      <h2>Gulfan Skin Clinic, Makati City</h2>
+      <p style="margin-top:14px">Gulfan Skin Clinic is a dermatology practice in Makati City covering clinical dermatology, cosmetic dermatology and skin surgery. Consultations are with Dra. Gulfan, a board-certified dermatologist.</p>
+      <p>The clinic sits at Unit 305, IDC Plaza, 3271 Kalayaan Avenue corner Zapote, Makati City 1208 — along the Kalayaan–Zapote corridor, minutes from Olympia.</p>
+      <p>As of August 2026, the clinic holds a 5.0★ rating across 20 Google reviews.</p>
+      <p class="sig">Dra. Gulfan<span>Board-certified dermatologist</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="sec sec-alt" id="contact">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Get in touch</p>
+      <h2>Book a consultation</h2>
+      <p>Call the clinic directly, message us on Facebook or Instagram, or send an enquiry below.</p>
+    </div>
+    <div class="contact">
+      <div class="info">
+        <dl>
+          <dt>Address</dt>
+          <dd>Unit 305, IDC Plaza<br>3271 Kalayaan Ave cor. Zapote<br>Makati City 1208, Philippines</dd>
+          <dt>Phone</dt>
+          <dd><a href="tel:+639177135124">0917 713 5124</a></dd>
+          <dt>Facebook</dt>
+          <dd><a href="https://www.facebook.com/gulfanskin/" target="_blank" rel="noopener">facebook.com/gulfanskin</a></dd>
+          <dt>Instagram</dt>
+          <dd><a href="https://www.instagram.com/gulfanskin/" target="_blank" rel="noopener">@gulfanskin</a></dd>
+          <dt>Clinic hours</dt>
+          <dd class="tbc">Clinic hours — to be confirmed (see the hours block above)</dd>
+        </dl>
+        <div class="mapbox">
+          <svg viewBox="0 0 520 260" role="img" aria-label="Stylised map showing the clinic at Kalayaan Avenue corner Zapote, Makati City">
+            <rect width="520" height="260" fill="#EDF6F4"/>
+            <g stroke="#DCEAE7" stroke-width="10">
+              <line x1="0" y1="70" x2="520" y2="70"/><line x1="0" y1="196" x2="520" y2="196"/>
+              <line x1="150" y1="0" x2="150" y2="260"/><line x1="392" y1="0" x2="392" y2="260"/>
+            </g>
+            <rect x="0" y="122" width="520" height="20" fill="#CDE6E1"/>
+            <rect x="256" y="0" width="20" height="260" fill="#CDE6E1"/>
+            <g fill="#E1EFEC">
+              <rect x="170" y="82" width="70" height="32" rx="4"/><rect x="298" y="82" width="76" height="32" rx="4"/>
+              <rect x="170" y="152" width="70" height="34" rx="4"/><rect x="298" y="152" width="76" height="34" rx="4"/>
+              <rect x="410" y="82" width="88" height="32" rx="4"/><rect x="24" y="152" width="106" height="34" rx="4"/>
+            </g>
+            <text x="266" y="252" text-anchor="middle" font-family="Jost, Arial, sans-serif" font-size="13" fill="#4E6E6B">Kalayaan Ave cor. Zapote</text>
+            <circle cx="266" cy="132" r="27" fill="rgba(15,122,114,.16)"/>
+            <path d="M266 110c-9.4 0-17 7.6-17 17 0 12.7 17 27 17 27s17-14.3 17-27c0-9.4-7.6-17-17-17Z" fill="#0F7A72"/>
+            <circle cx="266" cy="127" r="6.2" fill="#fff"/>
+          </svg>
+          <span class="caption">IDC Plaza, Kalayaan cor. Zapote — illustrative map</span>
+        </div>
+      </div>
+
+      <form id="enquiry" novalidate>
+        <div class="field">
+          <label for="g-name">Your name</label>
+          <input id="g-name" name="name" type="text" autocomplete="name" placeholder="Juan dela Cruz">
+        </div>
+        <div class="field">
+          <label for="g-phone">Mobile number</label>
+          <input id="g-phone" name="phone" type="tel" autocomplete="tel" placeholder="09XX XXX XXXX">
+        </div>
+        <div class="field">
+          <label for="g-topic">What is this about?</label>
+          <select id="g-topic" name="topic">
+            <option>Clinical dermatology</option>
+            <option>Cosmetic dermatology</option>
+            <option>Skin surgery</option>
+            <option>Clinic hours / availability</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="g-msg">Your message</label>
+          <textarea id="g-msg" name="message" placeholder="Tell us briefly what you'd like to have checked."></textarea>
+        </div>
+        <button class="btn btn-primary" type="submit" style="width:100%">Send</button>
+        <p class="form-note">This preview form opens our Facebook page so you can send the message there. A live enquiry form and online booking can be connected later.</p>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="ftr">
+  <div class="wrap ftr-in">
+    <div>
+      <h4>Gulfan Skin Clinic</h4>
+      <p>Clinical &amp; cosmetic dermatology, skin surgery<br>Unit 305, IDC Plaza, 3271 Kalayaan Ave cor. Zapote<br>Makati City 1208, Philippines</p>
+    </div>
+    <div>
+      <h4>Services</h4>
+      <ul><li>Clinical dermatology</li><li>Cosmetic dermatology</li><li>Skin surgery</li></ul>
+    </div>
+    <div>
+      <h4>Reach us</h4>
+      <ul>
+        <li><a href="tel:+639177135124">0917 713 5124</a></li>
+        <li><a href="https://www.facebook.com/gulfanskin/" target="_blank" rel="noopener">Facebook</a></li>
+        <li><a href="https://www.instagram.com/gulfanskin/" target="_blank" rel="noopener">Instagram</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap ftr-btm">
+    <p>© 2026 Gulfan Skin Clinic, Makati City.</p>
+    <p class="cs-credit">Website by CloudSpring IT Solutions</p>
+  </div>
+</footer>
+
+<!-- CLOUDSPRING PREVIEW BAR -->
+<aside class="cs-bar" aria-label="CloudSpring IT Solutions preview">
+  <div class="cs-in">
+    <div class="cs-txt">
+      <p class="cs-eyebrow">PREVIEW · CloudSpring IT Solutions</p>
+      <p class="cs-line">Want this website + online booking, with your real hours and one-tap call?</p>
+    </div>
+    <a class="cs-btn" href="https://api.leadconnectorhq.com/widget/booking/QRPEnWRw2Kx9rBe0Mj6J" target="_blank" rel="noopener">Book a FREE Discovery Call →</a>
+  </div>
+</aside>
+
+<script>
+(function(){
+  var f = document.getElementById('enquiry');
+  if(f){
+    f.addEventListener('submit', function(e){
+      e.preventDefault();
+      window.open('https://www.facebook.com/gulfanskin/', '_blank', 'noopener');
+    });
+  }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DermQuest Skin and Aesthetic Clinic — Laging Handa, Quezon City</title>
+<meta name="description" content="DermQuest Skin and Aesthetic Clinic — 90 Scout Dr. Lazcano St., Brgy. Laging Handa, Diliman, Quezon City. Open Wednesday to Sunday, 11AM–8PM. Call +63 906 353 5886 to book an appointment.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#12302B;
+  --ink-2:#4A6660;
+  --brand:#17685C;
+  --brand-700:#115349;
+  --brand-100:#DFEFEB;
+  --brand-050:#F2F9F7;
+  --cream:#FBF7F2;
+  --line:#E0E9E6;
+  --accent:#C0724A;
+  --accent-100:#FBEDE4;
+  --alert:#8A4B1E;
+  --shadow-sm:0 1px 2px rgba(18,48,43,.07), 0 2px 8px rgba(18,48,43,.06);
+  --shadow-md:0 10px 28px rgba(18,48,43,.10);
+  --shadow-lg:0 18px 52px rgba(18,48,43,.16);
+  --r-sm:8px; --r-md:16px; --r-lg:24px; --r-pill:999px;
+  --display:'DM Serif Display', 'Iowan Old Style', Georgia, 'Times New Roman', serif;
+  --body:'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;font-family:var(--body);color:var(--ink);background:#fff;font-size:16px;line-height:1.6;
+  padding-bottom:176px;overflow-x:hidden}
+img,svg{max-width:100%;display:block}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.18;margin:0 0 12px;letter-spacing:0}
+h1{font-size:33px} h2{font-size:27px} h3{font-size:20px}
+p{margin:0 0 16px}
+a{color:var(--brand-700)}
+.wrap{width:100%;max-width:1080px;margin:0 auto;padding:0 20px}
+.eyebrow{font-family:var(--body);font-size:12px;letter-spacing:.15em;text-transform:uppercase;font-weight:800;color:var(--brand);margin:0 0 8px}
+.section{padding:56px 0}
+.section--tint{background:var(--brand-050)}
+.section--cream{background:var(--cream)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+
+.header{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.95);backdrop-filter:saturate(140%) blur(8px);border-bottom:1px solid var(--line)}
+.header__in{display:flex;align-items:center;gap:12px;min-height:64px;padding:8px 20px;max-width:1080px;margin:0 auto}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);min-height:44px}
+.brand__mark{width:38px;height:38px;flex:0 0 38px}
+.brand__txt{display:flex;flex-direction:column;line-height:1.12}
+.brand__name{font-family:var(--display);font-size:18px}
+.brand__sub{font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2);font-weight:700}
+.header__cta{margin-left:auto}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:11px 18px;
+  border-radius:var(--r-pill);font-family:var(--body);font-weight:700;font-size:15px;text-decoration:none;
+  border:1px solid transparent;cursor:pointer;
+  transition:background-color .18s ease,color .18s ease,border-color .18s ease,transform .18s ease,box-shadow .18s ease}
+.btn--primary{background:var(--brand);color:#fff;box-shadow:var(--shadow-sm)}
+.btn--primary:hover{background:var(--brand-700);transform:translateY(-1px);box-shadow:var(--shadow-md)}
+.btn--accent{background:var(--accent);color:#fff;box-shadow:var(--shadow-sm)}
+.btn--accent:hover{background:#A85F3B;transform:translateY(-1px);box-shadow:var(--shadow-md)}
+.btn--ghost{background:#fff;color:var(--brand-700);border-color:var(--line)}
+.btn--ghost:hover{border-color:var(--brand);background:var(--brand-100)}
+.btn--sm{font-size:14px;padding:9px 14px}
+.btn--block{width:100%}
+
+/* hero */
+.hero{background:linear-gradient(172deg,#F2F9F7 0%,#FFFFFF 62%);position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-150px;top:-130px;width:400px;height:400px;border-radius:50%;
+  background:radial-gradient(circle at 45% 45%, rgba(23,104,92,.13), rgba(23,104,92,0) 70%);pointer-events:none}
+.hero__in{position:relative;z-index:1;max-width:1080px;margin:0 auto;padding:34px 20px 46px}
+.hero h1{font-size:clamp(30px,7.4vw,48px);margin-bottom:14px}
+.hero__lead{font-size:17px;color:var(--ink-2);max-width:56ch;margin-bottom:20px}
+.hero__btns{display:flex;flex-direction:column;gap:10px}
+.hero__art{margin-top:30px}
+
+/* the correct details block */
+.truth{background:#fff;border:2px solid var(--brand);border-radius:var(--r-lg);padding:20px;box-shadow:var(--shadow-md);margin:0 0 22px}
+.truth__tag{display:inline-flex;align-items:center;gap:7px;background:var(--brand);color:#fff;font-size:11px;font-weight:800;
+  letter-spacing:.1em;text-transform:uppercase;border-radius:var(--r-pill);padding:6px 13px;margin-bottom:14px}
+.truth__row{display:flex;gap:12px;padding:12px 0;align-items:flex-start;border-top:1px solid var(--line)}
+.truth__row:first-of-type{border-top:0;padding-top:0}
+.truth__ico{flex:0 0 24px;width:24px;height:24px;color:var(--brand);margin-top:2px}
+.truth__k{font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:800;color:var(--ink-2);margin:0 0 3px}
+.truth__v{font-size:17px;font-weight:700;margin:0;line-height:1.35}
+.truth__v a{color:var(--ink);text-decoration:none;border-bottom:2px solid var(--brand-100)}
+.truth__v a:hover{color:var(--brand);border-bottom-color:var(--brand)}
+.truth__note{font-size:13px;color:var(--ink-2);margin:12px 0 0;font-weight:500}
+
+/* loud hours */
+.hoursband{background:var(--ink);color:#fff}
+.hoursband__in{max-width:1080px;margin:0 auto;padding:40px 20px}
+.hoursband h2{color:#fff;margin-bottom:6px}
+.hoursband__big{font-family:var(--display);font-size:clamp(30px,8.4vw,54px);line-height:1.1;margin:14px 0 6px;color:#fff}
+.hoursband__closed{font-size:clamp(18px,4.6vw,26px);font-weight:800;color:#F0B18C;margin:0 0 16px;letter-spacing:.01em}
+.hoursband__grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin:20px 0 0;padding:0;list-style:none}
+.hoursband__day{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.16);border-radius:var(--r-sm);
+  padding:11px 12px;font-size:14px;font-weight:700;display:flex;flex-direction:column;gap:2px}
+.hoursband__day span{font-weight:500;font-size:12.5px;color:#B7D2CC}
+.hoursband__day--off{background:transparent;border-style:dashed;color:#8FAEA8}
+.hoursband__day--off span{color:#7A9A94}
+.tbc{display:inline-flex;align-items:center;gap:8px;background:rgba(240,177,140,.16);border:1px dashed #E0A47F;
+  color:#F6D6C1;border-radius:var(--r-pill);padding:8px 15px;font-size:12.5px;font-weight:700;letter-spacing:.04em}
+
+.grid{display:grid;gap:16px;grid-template-columns:1fr}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:22px;box-shadow:var(--shadow-sm);
+  transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow-md);border-color:var(--brand-100)}
+.card__ico{width:44px;height:44px;border-radius:12px;background:var(--brand-100);color:var(--brand-700);
+  display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+.card__ico svg{width:24px;height:24px}
+.card p{font-size:15px;color:var(--ink-2);margin:0}
+
+.note{display:block;font-size:13.5px;line-height:1.5;background:var(--accent-100);border:1px dashed #DDA681;
+  color:#7A4520;padding:12px 14px;border-radius:var(--r-sm)}
+.note b{display:block;text-transform:uppercase;letter-spacing:.08em;font-size:11.5px;margin-bottom:4px;font-weight:800}
+
+.pricetable{background:#fff;border:1px dashed #DDA681;border-radius:var(--r-md);overflow:hidden;box-shadow:var(--shadow-sm)}
+.pricetable__hd{background:var(--accent-100);padding:12px 18px;font-size:12px;font-weight:800;letter-spacing:.09em;
+  text-transform:uppercase;color:#7A4520;border-bottom:1px dashed #DDA681}
+.pricetable__row{display:flex;justify-content:space-between;gap:14px;padding:14px 18px;border-top:1px solid var(--line);font-size:15px;align-items:center}
+.pricetable__row:first-of-type{border-top:0}
+.pricetable__row strong{font-weight:700}
+.pricetable__row span{color:var(--ink-2);font-size:14px;white-space:nowrap;font-weight:600}
+
+.why{display:grid;gap:14px;grid-template-columns:1fr}
+.why__item{display:flex;gap:14px;align-items:flex-start;background:#fff;border-radius:var(--r-md);padding:18px;box-shadow:var(--shadow-sm)}
+.why__ico{flex:0 0 38px;width:38px;height:38px;border-radius:10px;background:var(--brand-100);color:var(--brand-700);display:flex;align-items:center;justify-content:center}
+.why__ico svg{width:20px;height:20px}
+.why__item h3{font-size:17px;margin-bottom:4px}
+.why__item p{font-size:14.5px;color:var(--ink-2);margin:0}
+
+.contact{display:grid;gap:20px;grid-template-columns:1fr}
+.info{background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:18px;box-shadow:var(--shadow-sm)}
+.info__row{display:flex;gap:12px;padding:12px 0;align-items:flex-start;border-top:1px solid var(--line)}
+.info__row:first-child{border-top:0;padding-top:0}
+.info__ico{flex:0 0 22px;width:22px;height:22px;color:var(--brand);margin-top:2px}
+.info__k{font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:800;color:var(--ink-2);margin:0 0 2px}
+.info__v{font-size:15.5px;font-weight:600;margin:0}
+.info__v a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--brand-100)}
+.info__v a:hover{color:var(--brand);border-bottom-color:var(--brand)}
+.map{border-radius:var(--r-md);overflow:hidden;border:1px solid var(--line);position:relative;box-shadow:var(--shadow-sm);margin-top:20px}
+.map__label{position:absolute;left:12px;right:12px;bottom:12px;background:rgba(255,255,255,.95);border-radius:var(--r-sm);
+  padding:10px 12px;font-size:12.5px;color:var(--ink-2);font-weight:500}
+
+.form{background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:20px;box-shadow:var(--shadow-sm)}
+.field{margin-bottom:14px}
+.field label{display:block;font-size:13px;font-weight:700;margin-bottom:6px}
+.field input,.field select,.field textarea{width:100%;font-family:var(--body);font-size:16px;color:var(--ink);
+  padding:12px;border:1px solid var(--line);border-radius:var(--r-sm);background:#FCFDFD;min-height:44px;
+  transition:border-color .18s ease,box-shadow .18s ease}
+.field textarea{min-height:104px;resize:vertical}
+.field input:hover,.field select:hover,.field textarea:hover{border-color:#BBD2CC}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--brand);box-shadow:0 0 0 3px rgba(23,104,92,.16)}
+.formnote{font-size:12.5px;color:var(--ink-2);margin:10px 0 0}
+
+.footer{background:var(--ink);color:#BDD4CF;padding:40px 0 32px}
+.footer h3{color:#fff;font-size:19px}
+.footer a{color:#8FCEC1;text-decoration:none}
+.footer a:hover{color:#fff;text-decoration:underline}
+.footer__grid{display:grid;gap:24px;grid-template-columns:1fr}
+.footer__p{font-size:14.5px;line-height:1.7;margin:0}
+.footer__credit{margin-top:28px;padding-top:18px;border-top:1px solid rgba(255,255,255,.14);font-size:13px;
+  display:flex;flex-wrap:wrap;gap:6px;justify-content:space-between}
+
+.cs-bar{position:fixed;left:0;right:0;bottom:0;z-index:200;background:rgba(8,29,26,.94);
+  backdrop-filter:saturate(150%) blur(10px);border-top:1px solid rgba(255,255,255,.14);
+  box-shadow:0 -8px 32px rgba(18,48,43,.34);color:#fff;padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px))}
+.cs-bar__in{max-width:1080px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:10px 18px;text-align:center}
+.cs-bar__eyebrow{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:800;color:#84D2C2;margin:0 0 3px}
+.cs-bar__line{font-size:15px;font-weight:700;line-height:1.35;margin:0;color:#fff}
+.cs-bar__btn{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:12px 22px;
+  border-radius:var(--r-pill);background:var(--accent);color:#fff;font-weight:800;font-size:15px;text-decoration:none;
+  white-space:nowrap;box-shadow:0 4px 18px rgba(192,114,74,.38);animation:csPulse 2.4s ease-in-out infinite;
+  transition:transform .18s ease,background-color .18s ease,box-shadow .18s ease}
+.cs-bar__btn:hover{background:#D4835A;transform:translateY(-2px);box-shadow:0 8px 26px rgba(192,114,74,.55);animation-play-state:paused}
+.cs-bar__btn:focus-visible{outline:3px solid #fff;outline-offset:3px}
+@keyframes csPulse{0%,100%{box-shadow:0 4px 18px rgba(192,114,74,.32)}50%{box-shadow:0 4px 26px rgba(192,114,74,.66)}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition-duration:.01ms!important}.cs-bar__btn{animation:none}}
+
+@media (min-width:600px){
+  .hero__btns{flex-direction:row;flex-wrap:wrap}
+  .hero__btns .btn{flex:1 1 auto;min-width:210px}
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .why{grid-template-columns:repeat(2,1fr)}
+  .hoursband__grid{grid-template-columns:repeat(4,1fr)}
+}
+@media (min-width:900px){
+  body{padding-bottom:104px}
+  .section{padding:76px 0}
+  h1{font-size:46px} h2{font-size:35px}
+  .hero__in{display:grid;grid-template-columns:1.06fr .94fr;gap:44px;align-items:center;padding:58px 20px 72px}
+  .hero__art{margin-top:0}
+  .grid{grid-template-columns:repeat(3,1fr)}
+  .hoursband__grid{grid-template-columns:repeat(7,1fr)}
+  .hoursband__in{padding:64px 20px}
+  .contact{grid-template-columns:1.05fr .95fr;align-items:start}
+  .footer__grid{grid-template-columns:1.4fr 1fr 1fr}
+  .cs-bar__in{flex-wrap:nowrap;justify-content:space-between;text-align:left}
+  .cs-bar__line{font-size:16.5px}
+}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="header__in">
+    <a class="brand" href="#top" aria-label="DermQuest Skin and Aesthetic Clinic, back to top">
+      <svg class="brand__mark" viewBox="0 0 48 48" role="img" aria-hidden="true" focusable="false">
+        <circle cx="24" cy="24" r="23" fill="#17685C"/>
+        <circle cx="21.5" cy="21.5" r="9.5" fill="none" stroke="#DFEFEB" stroke-width="3"/>
+        <path d="M28.5 28.5 37 37" stroke="#DFEFEB" stroke-width="3.6" stroke-linecap="round"/>
+        <path d="M21.5 17.5v8M17.5 21.5h8" stroke="#DFEFEB" stroke-width="2.6" stroke-linecap="round"/>
+        <circle cx="34.5" cy="14" r="3" fill="#C0724A"/>
+      </svg>
+      <span class="brand__txt">
+        <span class="brand__name">DermQuest</span>
+        <span class="brand__sub">Skin &amp; Aesthetic &middot; QC</span>
+      </span>
+    </a>
+    <a class="btn btn--primary btn--sm header__cta" href="tel:+639063535886">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+      <span>Call clinic</span>
+    </a>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="hero__in">
+      <div>
+        <p class="eyebrow">Brgy. Laging Handa &middot; Diliman, Quezon City</p>
+        <h1>DermQuest Skin and Aesthetic Clinic</h1>
+        <p class="hero__lead">Skin and aesthetic care in Diliman, Quezon City. One address. One phone number. One place to book &mdash; so you never have to work out which listing is right.</p>
+
+        <div class="truth">
+          <span class="truth__tag">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5.5 5.5L20 7"/></svg>
+            The correct details
+          </span>
+          <div class="truth__row">
+            <svg class="truth__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <div>
+              <p class="truth__k">Our one and only clinic address</p>
+              <p class="truth__v">90 Scout Dr. Lazcano St., Brgy. Laging Handa, Diliman, Quezon City</p>
+            </div>
+          </div>
+          <div class="truth__row">
+            <svg class="truth__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+            <div>
+              <p class="truth__k">Our one and only phone number</p>
+              <p class="truth__v"><a href="tel:+639063535886">+63 906 353 5886</a></p>
+            </div>
+          </div>
+          <p class="truth__note">Online directories list other addresses and numbers for us. This page is the clinic&rsquo;s own &mdash; these are the details to use.</p>
+        </div>
+
+        <div class="hero__btns">
+          <a class="btn btn--accent" href="#book">Book an appointment</a>
+          <a class="btn btn--ghost" href="tel:+639063535886">Call +63 906 353 5886</a>
+        </div>
+      </div>
+
+      <div class="hero__art" aria-hidden="true">
+        <svg viewBox="0 0 460 400" role="img" aria-hidden="true" focusable="false" style="width:100%;height:auto;filter:drop-shadow(0 18px 44px rgba(18,48,43,.16))">
+          <defs>
+            <linearGradient id="dq1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#DFEFEB"/><stop offset="1" stop-color="#FBF7F2"/></linearGradient>
+            <linearGradient id="dq2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#F2F9F7"/></linearGradient>
+          </defs>
+          <rect x="8" y="12" width="444" height="376" rx="30" fill="url(#dq1)"/>
+          <!-- booking card -->
+          <g transform="translate(56,54)">
+            <rect x="0" y="0" width="252" height="292" rx="22" fill="url(#dq2)" stroke="#17685C" stroke-width="2.6"/>
+            <rect x="0" y="0" width="252" height="56" rx="22" fill="#17685C"/>
+            <rect x="0" y="40" width="252" height="16" fill="#17685C"/>
+            <text x="24" y="35" font-family="Manrope, Arial, sans-serif" font-size="15" font-weight="800" fill="#FFFFFF" letter-spacing="1">BOOK APPOINTMENT</text>
+            <rect x="24" y="82" width="88" height="9" rx="4.5" fill="#4A6660" opacity=".55"/>
+            <rect x="24" y="100" width="204" height="34" rx="9" fill="#fff" stroke="#E0E9E6" stroke-width="2"/>
+            <rect x="24" y="148" width="72" height="9" rx="4.5" fill="#4A6660" opacity=".55"/>
+            <rect x="24" y="166" width="204" height="34" rx="9" fill="#fff" stroke="#E0E9E6" stroke-width="2"/>
+            <rect x="24" y="214" width="204" height="30" rx="9" fill="#DFEFEB"/>
+            <rect x="24" y="256" width="204" height="16" rx="8" fill="#C0724A"/>
+            <rect x="24" y="250" width="204" height="28" rx="14" fill="#C0724A"/>
+            <text x="126" y="269" text-anchor="middle" font-family="Manrope, Arial, sans-serif" font-size="13" font-weight="800" fill="#FFFFFF">CONFIRM</text>
+          </g>
+          <!-- calendar chip -->
+          <g transform="translate(300,96)">
+            <rect x="0" y="0" width="126" height="122" rx="18" fill="#fff" stroke="#E0E9E6" stroke-width="2"/>
+            <rect x="0" y="0" width="126" height="30" rx="18" fill="#12302B"/>
+            <rect x="0" y="18" width="126" height="12" fill="#12302B"/>
+            <text x="63" y="21" text-anchor="middle" font-family="Manrope, Arial, sans-serif" font-size="11" font-weight="800" fill="#fff" letter-spacing="1.2">WED &ndash; SUN</text>
+            <text x="63" y="72" text-anchor="middle" font-family="DM Serif Display, Georgia, serif" font-size="26" fill="#17685C">11AM</text>
+            <text x="63" y="100" text-anchor="middle" font-family="DM Serif Display, Georgia, serif" font-size="26" fill="#17685C">8PM</text>
+          </g>
+          <!-- pin chip -->
+          <g transform="translate(300,246)">
+            <rect x="0" y="0" width="126" height="100" rx="18" fill="#fff" stroke="#E0E9E6" stroke-width="2"/>
+            <g transform="translate(34,48)">
+              <path d="M0-22c8 0 14.5 6.5 14.5 14.5C14.5 3.5 0 17 0 17S-14.5 3.5-14.5-7.5C-14.5-15.5-8-22 0-22z" fill="#17685C"/>
+              <circle cx="0" cy="-7.5" r="5.4" fill="#fff"/>
+            </g>
+            <rect x="58" y="34" width="46" height="8" rx="4" fill="#4A6660" opacity=".5"/>
+            <rect x="58" y="50" width="52" height="8" rx="4" fill="#4A6660" opacity=".35"/>
+            <rect x="58" y="66" width="34" height="8" rx="4" fill="#C0724A"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOUD HOURS -->
+  <section class="hoursband" id="hours">
+    <div class="hoursband__in">
+      <p class="eyebrow" style="color:#84D2C2">Clinic hours</p>
+      <h2>Before you travel, check the day.</h2>
+      <p class="hoursband__big">Wednesday &ndash; Sunday, 11AM &ndash; 8PM</p>
+      <p class="hoursband__closed">Closed Mondays &amp; Tuesdays</p>
+      <p class="tbc">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5.5M12 16.4v.1"/></svg>
+        To be confirmed by the clinic
+      </p>
+      <ul class="hoursband__grid">
+        <li class="hoursband__day hoursband__day--off">Mon<span>Closed</span></li>
+        <li class="hoursband__day hoursband__day--off">Tue<span>Closed</span></li>
+        <li class="hoursband__day">Wed<span>11AM &ndash; 8PM</span></li>
+        <li class="hoursband__day">Thu<span>11AM &ndash; 8PM</span></li>
+        <li class="hoursband__day">Fri<span>11AM &ndash; 8PM</span></li>
+        <li class="hoursband__day">Sat<span>11AM &ndash; 8PM</span></li>
+        <li class="hoursband__day">Sun<span>11AM &ndash; 8PM</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section" id="services">
+    <div class="wrap">
+      <p class="eyebrow">Services</p>
+      <h2>Skin and aesthetic care in Diliman</h2>
+      <p style="max-width:60ch;color:var(--ink-2)">DermQuest is a skin and aesthetic clinic. The categories below reflect that stated scope &mdash; the exact treatment list is confirmed by the clinic and appears here in full on the finished site.</p>
+
+      <div class="grid" style="margin-top:26px">
+        <article class="card">
+          <div class="card__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21"/></svg></div>
+          <h3>Skin consultation</h3>
+          <p>An assessment of your skin concern before any treatment is recommended &mdash; the starting point for every patient.</p>
+        </article>
+        <article class="card">
+          <div class="card__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c3.6 2.4 5.8 5.7 5.8 9C17.8 15.9 15.2 19 12 21c-3.2-2-5.8-5.1-5.8-9C6.2 8.7 8.4 5.4 12 3z"/><path d="M12 8v9"/></svg></div>
+          <h3>Skin treatments</h3>
+          <p>Clinic-based treatments for common skin concerns, planned around your skin type and schedule.</p>
+        </article>
+        <article class="card">
+          <div class="card__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5l2.3 5.2 5.7.6-4.3 3.8 1.3 5.6L12 14.8 7 17.7l1.3-5.6L4 8.3l5.7-.6z"/></svg></div>
+          <h3>Aesthetic services</h3>
+          <p>The aesthetic side of the clinic &mdash; appearance-focused services delivered in the same Diliman location.</p>
+        </article>
+        <article class="card">
+          <div class="card__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="16" rx="3"/><path d="M3.5 9.5h17M8 2.5v4M16 2.5v4"/></svg></div>
+          <h3>Scheduled sessions</h3>
+          <p>Multi-visit treatment plans booked across the Wednesday-to-Sunday schedule so your course stays on track.</p>
+        </article>
+        <article class="card">
+          <div class="card__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V9l8-5 8 5v11"/><path d="M9.5 20v-6h5v6"/></svg></div>
+          <h3>Aftercare advice</h3>
+          <p>Guidance on caring for your skin between visits, given in clinic as part of your treatment plan.</p>
+        </article>
+        <article class="card" style="border-style:dashed;background:var(--cream)">
+          <div class="card__ico" style="background:var(--accent-100);color:#7A4520"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></div>
+          <h3>Your full treatment menu</h3>
+          <p class="note" style="margin-top:8px"><b>Placeholder</b>Send DermQuest&rsquo;s complete list of treatments and this card is replaced with the real menu. Nothing here is invented.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="section section--cream" id="pricing">
+    <div class="wrap" style="max-width:820px">
+      <p class="eyebrow">Rates</p>
+      <h2>Where your prices will live</h2>
+      <p style="color:var(--ink-2)">DermQuest&rsquo;s rates have not been published anywhere the clinic controls, so nothing below is a real figure. This is the layout, waiting for the clinic&rsquo;s own numbers.</p>
+
+      <div class="pricetable" style="margin-top:22px">
+        <div class="pricetable__hd">Sample layout &mdash; your rates go here</div>
+        <div class="pricetable__row"><strong>Skin consultation</strong><span>Your rate here</span></div>
+        <div class="pricetable__row"><strong>Facial / skin treatment</strong><span>Your rate here</span></div>
+        <div class="pricetable__row"><strong>Aesthetic procedure</strong><span>Your rate here</span></div>
+        <div class="pricetable__row"><strong>Treatment package (per session)</strong><span>Your rate here</span></div>
+        <div class="pricetable__row"><strong>Follow-up visit</strong><span>Your rate here</span></div>
+      </div>
+      <p class="note" style="margin-top:16px"><b>Sample layout &mdash; not real prices</b>Every row is a placeholder. No price on this page has been invented or copied from a directory. Send the real rate card and it drops straight in.</p>
+    </div>
+  </section>
+
+  <!-- WHY -->
+  <section class="section section--tint" id="why">
+    <div class="wrap">
+      <p class="eyebrow">Why book direct</p>
+      <h2>One source of truth for DermQuest</h2>
+      <div class="why" style="margin-top:24px">
+        <div class="why__item">
+          <span class="why__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+          <div><h3>One address, stated plainly</h3><p>90 Scout Dr. Lazcano St., Brgy. Laging Handa, Diliman. Directory listings disagree; this is the clinic&rsquo;s own page and its own address.</p></div>
+        </div>
+        <div class="why__item">
+          <span class="why__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></span>
+          <div><h3>One number that rings the clinic</h3><p>+63 906 353 5886. Tap to dial &mdash; no guessing between the different numbers other sites publish.</p></div>
+        </div>
+        <div class="why__item">
+          <span class="why__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.2 1.8"/></svg></span>
+          <div><h3>Five clinic days, clearly posted</h3><p>Wednesday to Sunday, 11AM to 8PM, closed Mondays and Tuesdays &mdash; visible before you set out.</p></div>
+        </div>
+        <div class="why__item">
+          <span class="why__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 6.5h15v13h-15z"/><path d="M8 3.5v4M16 3.5v4M9 13l2 2 4-4"/></svg></span>
+          <div><h3>Book without Messenger</h3><p>Request an appointment straight from this page, or call. No app to install, no waiting for a chat reply.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="wrap" style="max-width:760px">
+      <p class="eyebrow">About</p>
+      <h2>DermQuest Skin and Aesthetic Clinic</h2>
+      <p>DermQuest Skin and Aesthetic Clinic is a skin and aesthetic clinic at 90 Scout Dr. Lazcano St., Brgy. Laging Handa, Diliman, Quezon City. The clinic sees patients Wednesday to Sunday, 11:00 AM to 8:00 PM, and is closed on Mondays and Tuesdays.</p>
+      <p>Appointments and enquiries reach the clinic on +63 906 353 5886, by email at dermquest_ph@yahoo.com, or through the DermQuest Facebook page.</p>
+      <p class="note"><b>Placeholder &mdash; needs the clinic&rsquo;s input</b>The doctors&rsquo; names and credentials, the year DermQuest opened and the clinic&rsquo;s story are left blank on purpose. Send them and they go in word for word. This preview contains no invented reviews, ratings, prices or certifications.</p>
+    </div>
+  </section>
+
+  <!-- BOOK / CONTACT -->
+  <section class="section section--cream" id="book">
+    <div class="wrap">
+      <p class="eyebrow">Appointments</p>
+      <h2>Book an appointment</h2>
+
+      <div class="contact" style="margin-top:26px">
+        <div>
+          <div class="info">
+            <div class="info__row">
+              <svg class="info__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <div><p class="info__k">Address</p><p class="info__v">90 Scout Dr. Lazcano St., Brgy. Laging Handa, Diliman, Quezon City, Philippines</p></div>
+            </div>
+            <div class="info__row">
+              <svg class="info__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+              <div><p class="info__k">Phone</p><p class="info__v"><a href="tel:+639063535886">+63 906 353 5886</a></p></div>
+            </div>
+            <div class="info__row">
+              <svg class="info__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m3.6 6.6 8.4 6 8.4-6"/></svg>
+              <div><p class="info__k">Email</p><p class="info__v"><a href="mailto:dermquest_ph@yahoo.com">dermquest_ph@yahoo.com</a></p></div>
+            </div>
+            <div class="info__row">
+              <svg class="info__ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5h1.65V3.63A22 22 0 0 0 14.3 3.5c-2.4 0-4 1.46-4 4.15V9.9H7.6V13h2.7v8z"/></svg>
+              <div><p class="info__k">Facebook</p><p class="info__v"><a href="https://www.facebook.com/DermQuest.ph/" target="_blank" rel="noopener">facebook.com/DermQuest.ph</a></p></div>
+            </div>
+            <div class="info__row">
+              <svg class="info__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.2 1.8"/></svg>
+              <div><p class="info__k">Hours</p><p class="info__v">Wed &ndash; Sun, 11:00 AM &ndash; 8:00 PM &middot; Closed Mon &amp; Tue</p></div>
+            </div>
+          </div>
+
+          <div class="map">
+            <svg viewBox="0 0 600 300" role="img" aria-label="Illustrated map placeholder showing the clinic on Scout Dr. Lazcano Street, Barangay Laging Handa, Diliman, Quezon City" style="width:100%;height:auto;display:block">
+              <rect width="600" height="300" fill="#EDF6F3"/>
+              <path d="M0 196h600" stroke="#fff" stroke-width="30"/>
+              <path d="M0 196h600" stroke="#D2E5E0" stroke-width="2"/>
+              <path d="M232 0v300" stroke="#fff" stroke-width="24"/>
+              <path d="M232 0v300" stroke="#D2E5E0" stroke-width="2"/>
+              <path d="M452 0v300" stroke="#fff" stroke-width="14"/>
+              <rect x="46" y="86" width="150" height="82" rx="8" fill="#DFEFEB"/>
+              <rect x="266" y="80" width="146" height="88" rx="8" fill="#DFEFEB"/>
+              <rect x="46" y="222" width="150" height="62" rx="8" fill="#DFEFEB"/>
+              <rect x="486" y="86" width="90" height="82" rx="8" fill="#DFEFEB"/>
+              <text x="14" y="188" font-family="Manrope, Arial, sans-serif" font-size="13" font-weight="700" fill="#4A6660">Sct. Dr. Lazcano St.</text>
+              <text x="244" y="42" font-family="Manrope, Arial, sans-serif" font-size="13" font-weight="700" fill="#4A6660">Brgy. Laging Handa</text>
+              <g transform="translate(232,152)">
+                <circle cx="0" cy="0" r="32" fill="#17685C" opacity=".14"/>
+                <path d="M0-26c9.5 0 17 7.5 17 17 0 13-17 28-17 28S-17 4-17-9c0-9.5 7.5-17 17-17z" fill="#17685C"/>
+                <circle cx="0" cy="-9" r="6.4" fill="#fff"/>
+              </g>
+            </svg>
+            <p class="map__label"><strong>Illustration, not a live map.</strong> A live Google Map pinned to 90 Scout Dr. Lazcano St. goes here on the finished site.</p>
+          </div>
+        </div>
+
+        <div class="form">
+          <h3>Request your appointment</h3>
+          <p style="font-size:14.5px;color:var(--ink-2)">Pick a clinic day and tell us your concern. In this preview the button opens your email app addressed to the clinic; on the live site it books straight into DermQuest&rsquo;s calendar with an automatic confirmation.</p>
+          <form onsubmit="return csSend(event)">
+            <div class="field"><label for="n">Your name</label><input id="n" name="name" type="text" autocomplete="name" placeholder="Juan Dela Cruz"></div>
+            <div class="field"><label for="p">Mobile number</label><input id="p" name="phone" type="tel" autocomplete="tel" placeholder="09XX XXX XXXX"></div>
+            <div class="field">
+              <label for="d">Preferred clinic day</label>
+              <select id="d" name="day">
+                <option>Wednesday</option><option>Thursday</option><option>Friday</option>
+                <option>Saturday</option><option>Sunday</option>
+              </select>
+            </div>
+            <div class="field"><label for="m">What would you like to be seen for?</label><textarea id="m" name="message" placeholder="Briefly describe your skin concern"></textarea></div>
+            <button class="btn btn--accent btn--block" type="submit">Book an appointment</button>
+          </form>
+          <p class="formnote">Or call <a href="tel:+639063535886">+63 906 353 5886</a> during clinic hours &middot; message us on <a href="https://m.me/DermQuest.ph" target="_blank" rel="noopener">Facebook</a>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <h3>DermQuest Skin and Aesthetic Clinic</h3>
+        <p class="footer__p">90 Scout Dr. Lazcano St.<br>Brgy. Laging Handa, Diliman<br>Quezon City, Philippines<br><a href="tel:+639063535886">+63 906 353 5886</a></p>
+      </div>
+      <div>
+        <h3>Clinic hours</h3>
+        <p class="footer__p">Wed &ndash; Sun &middot; 11AM &ndash; 8PM<br>Closed Mon &amp; Tue<br><span style="opacity:.8">To be confirmed</span></p>
+      </div>
+      <div>
+        <h3>Get in touch</h3>
+        <p class="footer__p"><a href="mailto:dermquest_ph@yahoo.com">dermquest_ph@yahoo.com</a><br><a href="https://www.facebook.com/DermQuest.ph/" target="_blank" rel="noopener">Facebook</a></p>
+      </div>
+    </div>
+    <div class="footer__credit">
+      <span>&copy; 2026 DermQuest Skin and Aesthetic Clinic &middot; Quezon City</span>
+      <span>Website by CloudSpring IT Solutions</span>
+    </div>
+  </div>
+</footer>
+
+<aside class="cs-bar" role="complementary" aria-label="CloudSpring IT Solutions preview notice">
+  <div class="cs-bar__in">
+    <div class="cs-bar__txt">
+      <p class="cs-bar__eyebrow">PREVIEW &middot; CloudSpring IT Solutions</p>
+      <p class="cs-bar__line">Want this website + one page that finally settles your address, number and hours &mdash; instead of six directories disagreeing about you?</p>
+    </div>
+    <a class="cs-bar__btn" href="https://api.leadconnectorhq.com/widget/booking/QRPEnWRw2Kx9rBe0Mj6J" target="_blank" rel="noopener">Book a FREE Discovery Call &rarr;</a>
+  </div>
+</aside>
+
+<script>
+function csSend(e){
+  e.preventDefault();
+  var f=e.target;
+  var g=function(n){var el=f.elements[n];return el?el.value:'';};
+  var body='Name: '+g('name')+'%0D%0AMobile: '+g('phone')+'%0D%0APreferred day: '+g('day')+'%0D%0A%0D%0A'+g('message');
+  window.location.href='mailto:dermquest_ph@yahoo.com?subject=Appointment%20request%20-%20DermQuest%20Skin%20and%20Aesthetic%20Clinic&body='+body;
+  return false;
+}
+</script>
+</body>
+</html>
