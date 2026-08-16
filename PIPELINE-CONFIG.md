@@ -175,3 +175,54 @@ sound human + runs the sales QA checklist; only cards marked
   on Jul 27, matching the calendar. The Jul 26 plumbing mismatch was a
   one-off; no calendar edit needed.
 - 2026-07-27: Dental Hive mockup shipped with generic palette (no brand asset access) and QA missed it. Fixes: brand-assets convention above, GENERIC BRANDING flag, QA branding check, Lead Hunter to download Place photos per lead.
+- 2026-08-16 (derma W wrap): NEW ANGLE — "the blank domain you already pay for".
+  4 of 14 derma leads OWN a domain that serves an empty body (hugoderm.com,
+  kutisbykei.com/.ph, skincosmeticclinic.com.au, alodermatology.com), and in
+  HugoDerm's case the directory that ranks for their name points its "Visit
+  Website" button at WhatClinic instead. This beats plain invisibility: the
+  owner has already decided they want a site and already spent money on it,
+  so the ask is "let's put something on it", not "let's start from zero".
+  Check every lead's candidate domain for a 200-with-blank-body before
+  defaulting to the directory-capture angle.
+- 2026-08-16: directory capture confirmed for derma exactly as for dental —
+  ClinicFinderPH, doktor.ph, WhatClinic, Timesmed, Fresha. Sharpest variant is
+  a directory publishing WRONG data (ALO: Timesmed gives the wrong building,
+  wrong hours and a fee she never set, with nine rivals underneath). "They are
+  sending your patients to the wrong address" outperforms "you rank poorly".
+- 2026-08-16 (INTL targeting): US MEDICAL dermatology is a dead end for this
+  offer — 7 of 8 US candidates had real sites, almost all multi-location group
+  practices. The FB-only US skin businesses are esthetician-led acne/skin-care
+  clinics in small towns. Point the Lead Hunter at "skin care clinic" /
+  "acne clinic" rather than "dermatology" on US days.
+- 2026-08-16 (BACKLOG — needs a human decision): STRATEGY READY held 25+ cards,
+  of which 23 were dental (Jul 29 - Aug 01) and pediatric (Aug 09 - Aug 10)
+  leads that were strategised but NEVER built. This run cleared all 14 derma
+  cards; the ~9 dental + ~8 pediatric cards remain unbuilt and are now 2-3
+  weeks stale (evidence dates and competitor claims will need re-verifying
+  before they can be sent). Either schedule a catch-up build run or archive
+  them — the daily run cannot absorb a backlog this size on top of quota.
+- 2026-08-16 (brand capture cannot run unattended): a scheduled Cowork run has
+  no Claude in Chrome — list_connected_browsers returned []. So step 3 is
+  structurally a HUMAN-initiated desktop step, not something the daily job can
+  ever do. Consequence: all 14 derma mockups shipped flagged GENERIC BRANDING.
+  The auto-rebrand pass is the only path back, and it needs Dei to run
+  brand-capture in a desktop session first.
+- 2026-08-16 (GHL blocked): the GoHighLevel connector returned "No locations
+  available for this connection", so no contact/opportunity sync and no
+  inbound-reply check was possible. Nothing was due (APPROVED was empty), but
+  the connection needs re-authorising before the next approval batch.
+- 2026-08-16 (slop patterns to ban): two independent drafting agents converged
+  on the same three tells. (a) pivot verb "So I/we built you one"; (b) closer
+  of the shape "<positive ask>? If not, <opt-out> and I'll leave you be";
+  (c) an em-dash as the default clause separator, ~1 per paragraph. (a) is
+  already banned and still got through; add (b) and (c) explicitly. Also:
+  drafts shipped with "[Your name]" placeholders — the sender is DEI, and the
+  outreach agent should sign as Dei by default.
+- 2026-08-16 (env gotchas, Cowork run): `git clone` into the MOUNTED outputs
+  folder fails ("could not lock config file", Operation not permitted) —
+  clone into $HOME/work instead. And the sandbox has NO outbound network from
+  bash (curl exits 000 for every host), so deploy verification must go through
+  web_fetch, never curl/wget.
+- 2026-08-16 (deploy): 14 mockups pushed in one commit; both pages.dev and the
+  branded domain served all 14 correctly within ~2 min, no lag this time. The
+  2026-07-26 first-deploy lag warning did not reproduce at this batch size.
