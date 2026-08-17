@@ -226,3 +226,49 @@ sound human + runs the sales QA checklist; only cards marked
 - 2026-08-16 (deploy): 14 mockups pushed in one commit; both pages.dev and the
   branded domain served all 14 correctly within ~2 min, no lag this time. The
   2026-07-26 first-deploy lag warning did not reproduce at this batch size.
+- 2026-08-17 (auto repair W, run 1): LEAD HUNTER DID NOT RUN. INCOMING LEADS
+  was empty at 09:00 PHT, so the daily job carried the full 3 PH + 1 INTL
+  quota itself via web search (Method B). Worth checking why the 6AM routine
+  produced nothing — this is the second capability gap in a row (the other
+  being brand capture) where the daily job silently absorbs another job's
+  work.
+- 2026-08-17 (niche angle, auto repair): directory capture holds for QC auto
+  repair exactly as for dental and derma. Search "auto repair shop Quezon City
+  best mechanic" returns ONLY aggregators on page 1 — Yelp (three separate
+  result variants, including a street-level "Auto Repair near 213 Banawe St"
+  page), WhoDoYou, StarOfService, infoisinfo-ph, philkotse. Not one QC shop
+  ranks on its own domain. The sharpest variant found yet: Yelp's roundup
+  NAMES the lead (PowerTORQ) alongside three rivals, so "the page ranking for
+  your name has your competitors on it" is literally checkable in one click.
+- 2026-08-17 (blank-domain angle confirmed OUTSIDE derma): Eastside Auto Repair
+  (Van Wert OH) owns eastsideautorepairandsales.com, which returns 200 with an
+  empty body, while both of its two town competitors (England's Bay, Lloyd's)
+  run real sites. The 2026-08-16 derma learning generalises: always fetch the
+  candidate domain before defaulting to directory capture. It is now 5 leads
+  across two niches.
+- 2026-08-17 (INTL targeting that worked): US small-town auto repair is a much
+  better intl pool than US medical was. "small auto repair shop facebook page
+  only <state> family owned" surfaced several FB-only shops in one search;
+  small-town trades have weak web presence AND published phone/email, unlike
+  PH trades. Prefer US/Canada small towns for intl days on trade niches.
+- 2026-08-17 (lead quality, first good batch): 3 of 4 leads have a real email
+  address (PowerTORQ, Automotive 1, Eastside), breaking the 0/8 and 0/4 email
+  droughts of the dental and plumbing runs. Auto repair shops publish contact
+  emails on directory listings far more often than clinics do. Only Dr. Mechanic
+  is manual-send (FB/IG only).
+- 2026-08-17 (slop patterns, new): drafting converged again on non-contracted
+  formal English ("you would rather", "it is not for you") which reads more
+  robotic than any single banned phrase. Contractions are now a hard rule, not
+  a preference. Also caught a near-miss on the banned pivot: "So I built out
+  what that domain could be showing" is the same move as "So I built you one" —
+  ban the whole "So I built …" opening clause, not just the exact phrase.
+- 2026-08-17 (BACKLOG unchanged): STRATEGY READY still holds the ~31 stale
+  dental + pediatric cards flagged on 2026-08-16. This run added and cleared
+  only today's 4. READY TO SEND is now at 26 cards awaiting human approval,
+  which is the real bottleneck — nothing has been approved since the derma
+  batch. Suggest Dei triage READY TO SEND before the pipeline generates more.
+- 2026-08-17 (env, both blockers reproduced): Claude in Chrome unavailable
+  (list_connected_browsers = []) so brand capture skipped again — all 4 mockups
+  shipped GENERIC BRANDING. GHL still returns "No locations available for this
+  connection", so no sync or reply check was possible. APPROVED was empty so
+  nothing was blocked, but the GHL connection has now been broken for two runs.
