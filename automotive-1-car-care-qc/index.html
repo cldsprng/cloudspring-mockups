@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Automotive 1 Car Care Center — Banawe, Quezon City · Since 1999</title>
+<meta name="description" content="Automotive 1 Car Care Center — general auto repair and maintenance on Nicanor Roxas St near Banawe, Quezon City. Serving Banawe motorists since 1999. Insurance-accredited shop.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--coal:#1b1d21;--coal2:#26292f;--red:#d32027;--red2:#e8434a;--gold:#c9a227;--ink:#15171a;--body:#585e66;--line:#e6e8ec;--bg:#f5f6f8;--white:#fff;
+--sh:0 1px 4px rgba(27,29,33,.07);--sh2:0 14px 34px rgba(27,29,33,.13);
+--dsp:'Oswald',Impact,'Arial Narrow',sans-serif;--txt:'Source Sans 3',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--txt);color:var(--body);background:var(--white);line-height:1.62;padding-bottom:104px;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:var(--dsp);color:var(--ink);line-height:1.12;text-transform:uppercase;letter-spacing:.015em;font-weight:600}
+a{color:inherit}
+.wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid var(--line);box-shadow:var(--sh)}
+.hd{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:11px 0}
+.logo{display:flex;align-items:center;gap:11px;text-decoration:none}
+.mark{width:42px;height:42px;border-radius:7px;background:var(--coal);display:grid;place-items:center;position:relative;flex:0 0 auto}
+.mark span{font-family:var(--dsp);font-size:23px;color:#fff;line-height:1}
+.mark:after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background:var(--red);border-radius:0 0 7px 7px}
+.logo b{font-family:var(--dsp);font-size:21px;color:var(--ink);display:block;line-height:1.05}
+.logo small{display:block;font-family:var(--txt);font-size:10px;letter-spacing:.19em;text-transform:uppercase;color:#8d949d;margin-top:2px}
+.nav{display:none;gap:24px}
+.nav a{text-decoration:none;font-size:14.5px;font-weight:600;color:#585e66;padding:5px 0;border-bottom:2px solid transparent;transition:.16s}
+.nav a:hover,.nav a:focus-visible{color:var(--red);border-color:var(--red);outline:none}
+@media(min-width:920px){.nav{display:flex}}
+.tel{display:inline-flex;align-items:center;gap:7px;background:var(--red);color:#fff;text-decoration:none;font-weight:700;font-size:14px;padding:10px 16px;border-radius:6px;transition:.16s;white-space:nowrap}
+.tel:hover,.tel:focus-visible{background:var(--red2);outline:none;transform:translateY(-1px)}
+/* hero */
+.hero{background:var(--coal);color:#c8cdd4;position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;top:-90px;right:-120px;width:520px;height:520px;border:70px solid rgba(211,32,39,.09);border-radius:50%}
+.hero .wrap{position:relative;padding:58px 20px 62px;display:grid;gap:34px}
+@media(min-width:980px){.hero .wrap{grid-template-columns:1.05fr .95fr;align-items:center;padding:82px 20px 86px}}
+.badge{display:inline-flex;align-items:center;gap:9px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:99px;padding:7px 15px;font-size:12px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--gold);margin-bottom:18px}
+.hero h1{font-size:clamp(36px,7vw,58px);color:#fff}
+.hero h1 em{font-style:normal;color:var(--red2)}
+.hero p{margin-top:16px;font-size:17px;max-width:33em;color:#a6adb6}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.btn{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:15px;padding:14px 24px;border-radius:6px;text-decoration:none;transition:.17s;border:2px solid transparent;cursor:pointer;font-family:var(--txt)}
+.btn-p{background:var(--red);color:#fff}
+.btn-p:hover,.btn-p:focus-visible{background:var(--red2);transform:translateY(-2px);outline:none}
+.btn-g{border-color:rgba(255,255,255,.26);color:#fff}
+.btn-g:hover,.btn-g:focus-visible{border-color:var(--gold);color:var(--gold);outline:none}
+.years{background:linear-gradient(150deg,#2c3037,#1b1d21);border:1px solid rgba(255,255,255,.13);border-radius:14px;padding:30px;text-align:center}
+.years .big{font-family:var(--dsp);font-size:clamp(64px,14vw,104px);line-height:.9;color:#fff}
+.years .big i{font-style:normal;color:var(--red2)}
+.years .lbl{margin-top:10px;font-size:12.5px;letter-spacing:.2em;text-transform:uppercase;color:#9aa2ac}
+.years hr{border:0;border-top:1px solid rgba(255,255,255,.13);margin:20px 0}
+.years p{font-size:14.5px;color:#a6adb6}
+/* strip */
+.strip{background:var(--gold);color:#211c05}
+.strip .wrap{display:flex;flex-wrap:wrap;gap:12px 34px;justify-content:center;padding:15px 20px;font-size:13.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase}
+.strip span{display:flex;align-items:center;gap:8px}
+section{padding:64px 0}
+.alt{background:var(--bg)}
+.shead{max-width:660px;margin-bottom:36px}
+.kick{font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--red);margin-bottom:9px}
+.shead h2{font-size:clamp(27px,4.5vw,39px)}
+.shead p{margin-top:12px;font-size:16.5px}
+.grid{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+@media(min-width:640px){.grid{grid-template-columns:1fr 1fr}}
+@media(min-width:980px){.grid{grid-template-columns:repeat(3,1fr)}}
+.svc{background:#fff;padding:27px 24px;transition:.18s;position:relative}
+.svc:hover{background:#fffafa}
+.num{font-family:var(--dsp);font-size:13px;letter-spacing:.15em;color:var(--red);display:block;margin-bottom:9px}
+.svc h3{font-size:20px;margin-bottom:8px}
+.svc p{font-size:14.5px}
+.svc .p{margin-top:13px;padding-top:11px;border-top:1px dashed var(--line);font-size:13px;color:#8d949d}
+.svc .p b{font-family:var(--dsp);font-size:19px;color:var(--ink)}
+.note{display:inline-block;margin-top:24px;font-size:13px;color:#7a828b;background:#fff;border:1px dashed #c8ced6;border-radius:7px;padding:10px 14px}
+.why{display:grid;gap:18px}
+@media(min-width:760px){.why{grid-template-columns:repeat(3,1fr)}}
+.w{background:#fff;border:1px solid var(--line);border-top:4px solid var(--red);border-radius:9px;padding:26px;box-shadow:var(--sh);transition:.18s}
+.w:hover{box-shadow:var(--sh2);transform:translateY(-3px)}
+.w h3{font-size:20px;margin-bottom:8px}
+.w p{font-size:14.5px}
+.about{display:grid;gap:32px}
+@media(min-width:900px){.about{grid-template-columns:1.1fr .9fr;align-items:start}}
+.about p{margin-bottom:14px;font-size:16.5px}
+.panel{background:#fff;border:1px solid var(--line);border-radius:10px;padding:26px;box-shadow:var(--sh)}
+.panel h3{font-size:20px;margin-bottom:14px}
+.row{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px solid var(--line);font-size:14.5px}
+.row:last-child{border:0}.row b{color:var(--ink)}
+.cgrid{display:grid;gap:26px}
+@media(min-width:900px){.cgrid{grid-template-columns:1fr 1fr}}
+.cl{display:flex;gap:13px;align-items:flex-start;padding:13px 0;border-bottom:1px solid var(--line)}
+.cl:last-of-type{border:0}
+.cl span{font-size:11.5px;text-transform:uppercase;letter-spacing:.14em;color:#949ba3;display:block;margin-bottom:2px}
+.cl a,.cl p{font-size:15.5px;color:var(--ink);text-decoration:none;font-weight:600}
+.cl a:hover{color:var(--red)}
+label{display:block;font-size:12px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:#7a828b;margin:14px 0 6px}
+input,textarea,select{width:100%;font-family:var(--txt);font-size:15px;color:var(--ink);padding:12px 14px;border:1.5px solid var(--line);border-radius:6px;background:#fafbfc;transition:.15s}
+input:focus,textarea:focus,select:focus{outline:none;border-color:var(--red);background:#fff;box-shadow:0 0 0 3px rgba(211,32,39,.12)}
+textarea{min-height:100px;resize:vertical}
+.map{margin-top:16px;height:172px;border-radius:8px;border:1px solid var(--line);position:relative;overflow:hidden;background:
+linear-gradient(0deg,transparent 55%,#d9dee5 55% 56.4%,transparent 56.4%),
+linear-gradient(90deg,transparent 33%,#d9dee5 33% 34.2%,transparent 34.2%),
+linear-gradient(90deg,transparent 72%,#e4e9ef 72% 72.8%,transparent 72.8%),#eef1f5}
+.pin{position:absolute;left:34%;top:55.5%;transform:translate(-50%,-100%)}
+.mlbl{position:absolute;left:34%;top:57%;transform:translateX(-50%);background:#fff;border:1px solid var(--line);border-radius:6px;padding:6px 10px;font-size:11.5px;font-weight:700;color:var(--ink);white-space:nowrap;box-shadow:var(--sh)}
+footer{background:var(--coal);color:#9aa2ac;padding:40px 0 28px;font-size:14.5px}
+.fg{display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between}
+footer b{font-family:var(--dsp);font-size:21px;color:#fff;display:block}
+footer a{color:#c8cdd4}footer a:hover{color:var(--red2)}
+.fb{margin-top:26px;padding-top:17px;border-top:1px solid rgba(255,255,255,.11);font-size:12.5px;display:flex;flex-wrap:wrap;gap:8px;justify-content:space-between}
+.csbar{position:fixed;left:0;right:0;bottom:0;z-index:99;background:rgba(15,16,19,.97);backdrop-filter:blur(10px);border-top:1px solid rgba(255,255,255,.14);padding:11px 16px}
+.csin{max-width:1140px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.cstag{font-size:9.5px;letter-spacing:.24em;text-transform:uppercase;color:#7f868f;margin-bottom:3px}
+.csmsg{color:#fff;font-size:14.5px;font-weight:700;line-height:1.35;max-width:60ch}
+.csmsg i{font-style:normal;color:#f3b33d}
+.csbtn{display:inline-flex;align-items:center;gap:8px;background:var(--red);color:#fff;text-decoration:none;font-weight:700;font-size:14px;padding:12px 21px;border-radius:99px;white-space:nowrap;animation:pulse 2.4s infinite;transition:.17s}
+.csbtn:hover,.csbtn:focus-visible{background:var(--red2);transform:translateY(-2px);outline:none;animation:none}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(211,32,39,.5)}70%{box-shadow:0 0 0 15px rgba(211,32,39,0)}100%{box-shadow:0 0 0 0 rgba(211,32,39,0)}}
+@media(prefers-reduced-motion:reduce){.csbtn{animation:none}*{transition:none!important}}
+@media(max-width:640px){.csin{flex-direction:column;text-align:center;gap:10px}body{padding-bottom:142px}}
+</style>
+</head>
+<body>
+<header><div class="wrap hd">
+  <a class="logo" href="#top"><span class="mark"><span>A1</span></span><span><b>Automotive 1</b><small>Car Care Center · Banawe QC</small></span></a>
+  <nav class="nav"><a href="#services">Services</a><a href="#why">Why us</a><a href="#about">About</a><a href="#contact">Visit us</a></nav>
+  <a class="tel" href="tel:+639178600000"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M6.6 2h3l1.6 4-2.2 1.4a13 13 0 0 0 5.6 5.6L16 10.8l4 1.6v3a2 2 0 0 1-2.2 2A17.6 17.6 0 0 1 2.4 4.2 2 2 0 0 1 4.4 2h2.2Z" stroke="#fff" stroke-width="2" stroke-linejoin="round"/></svg>0917 860 0000</a>
+</div></header>
+
+<div class="hero" id="top"><div class="wrap">
+  <div>
+    <div class="badge">Serving Banawe since 1999</div>
+    <h1>The car care center Banawe has <em>trusted for 27 years.</em></h1>
+    <p>General repair and maintenance on Nicanor Roxas Street, just off Banawe. Top notch service at a friendly price — that has not changed since we opened in 1999.</p>
+    <div class="cta">
+      <a class="btn btn-p" href="tel:+639178600000">Call 0917 860 0000</a>
+      <a class="btn btn-g" href="#contact">Get a quote</a>
+    </div>
+  </div>
+  <div class="years">
+    <div class="big">19<i>99</i></div>
+    <div class="lbl">The year we opened</div>
+    <hr>
+    <p>Same street, same standard. An insurance-accredited shop in the middle of Metro Manila's car-parts district.</p>
+  </div>
+</div></div>
+
+<div class="strip"><div class="wrap">
+  <span>★ Established 1999</span><span>★ Insurance-accredited shop</span><span>★ Nicanor Roxas St, off Banawe</span>
+</div></div>
+
+<section id="services"><div class="wrap">
+  <div class="shead"><div class="kick">Our services</div><h2>General repair and maintenance, done properly</h2><p>The everyday work that keeps a car dependable — with the estimate agreed before anything is touched.</p></div>
+  <div class="grid">
+    <div class="svc"><span class="num">01</span><h3>Periodic maintenance</h3><p>Scheduled servicing on mileage — oil, filters, fluids, belts and a full check of what wears out next.</p><div class="p">From <b>₱ ___</b> · your real rates go here</div></div>
+    <div class="svc"><span class="num">02</span><h3>Engine repair</h3><p>Overheating, oil leaks, rough running or loss of power, diagnosed before the parts list is written.</p><div class="p">From <b>₱ ___</b> · your real rates go here</div></div>
+    <div class="svc"><span class="num">03</span><h3>Brakes &amp; suspension</h3><p>Pads, discs, bushings, shocks and alignment — the parts that decide whether the car stops and steers straight.</p><div class="p">From <b>₱ ___</b> · your real rates go here</div></div>
+    <div class="svc"><span class="num">04</span><h3>Electrical &amp; aircon</h3><p>Batteries, alternators, starters, lighting and aircon service for Metro Manila traffic.</p><div class="p">From <b>₱ ___</b> · your real rates go here</div></div>
+    <div class="svc"><span class="num">05</span><h3>Insurance repairs</h3><p>An accredited shop on the insurer's list, so claim work is handled without the back-and-forth.</p><div class="p">Coverage varies · we'll check for you</div></div>
+    <div class="svc"><span class="num">06</span><h3>Parts sourcing</h3><p>Being in the heart of Banawe means the part you need is usually minutes away, not days.</p><div class="p">From <b>₱ ___</b> · your real rates go here</div></div>
+  </div>
+  <div class="note">Sample layout — service names and prices shown are placeholders for Automotive 1's actual list.</div>
+</div></section>
+
+<section class="alt" id="why"><div class="wrap">
+  <div class="shead"><div class="kick">Why Automotive 1</div><h2>Twenty-seven years on the same street</h2></div>
+  <div class="why">
+    <div class="w"><h3>Since 1999</h3><p>Most shops on Banawe have changed hands more than once in that time. We are still here, still under the same name, still taking the same work.</p></div>
+    <div class="w"><h3>Insurance-accredited</h3><p>Listed among accredited motor shops by FPG Insurance — a standard a shop has to keep meeting, not a badge you buy once.</p></div>
+    <div class="w"><h3>In the parts district</h3><p>Nicanor Roxas Street sits off Banawe, where the suppliers are. Sourcing is faster and the car is off the road for less time.</p></div>
+  </div>
+</div></section>
+
+<section id="about"><div class="wrap about">
+  <div>
+    <div class="shead"><div class="kick">About us</div><h2>A Banawe shop, run the old-fashioned way</h2></div>
+    <p>Automotive 1 Car Care Center has been repairing and maintaining cars from 74A Nicanor Roxas Street, near the corner of Banawe, since 1999. The promise on our Facebook page is the same one we make in the bay: top notch service at a friendly price.</p>
+    <p>We take general repair and maintenance work on everyday cars — the servicing, the brakes, the electricals, the things that go wrong in Manila traffic. Estimates are agreed before work starts, and we tell you when something can safely wait.</p>
+    <div class="cta"><a class="btn btn-p" href="#contact">Request an estimate</a></div>
+  </div>
+  <div class="panel">
+    <h3>Shop details</h3>
+    <div class="row"><span>Established</span><b>1999</b></div>
+    <div class="row"><span>Location</span><b>Nicanor Roxas St, QC</b></div>
+    <div class="row"><span>Accreditation</span><b>FPG Insurance list</b></div>
+    <div class="row"><span>Shop hours</span><b>To be confirmed</b></div>
+    <p style="margin-top:14px;font-size:13px;color:#8d949d">Opening hours are a placeholder — your actual hours go here.</p>
+  </div>
+</div></section>
+
+<section class="alt" id="contact"><div class="wrap">
+  <div class="shead"><div class="kick">Find us</div><h2>74A Nicanor Roxas Street, off Banawe</h2></div>
+  <div class="cgrid">
+    <div class="panel">
+      <div class="cl"><svg width="19" height="19" viewBox="0 0 24 24" fill="none"><path d="M12 21s7-6.4 7-11a7 7 0 1 0-14 0c0 4.6 7 11 7 11Z" stroke="#d32027" stroke-width="1.9"/><circle cx="12" cy="10" r="2.6" stroke="#1b1d21" stroke-width="1.9"/></svg><div><span>Address</span><p>74A Nicanor Roxas St near cnr Banawe St,<br>Brgy. Sto. Domingo, Quezon City</p></div></div>
+      <div class="cl"><svg width="19" height="19" viewBox="0 0 24 24" fill="none"><path d="M6.6 2h3l1.6 4-2.2 1.4a13 13 0 0 0 5.6 5.6L16 10.8l4 1.6v3a2 2 0 0 1-2.2 2A17.6 17.6 0 0 1 2.4 4.2 2 2 0 0 1 4.4 2h2.2Z" stroke="#d32027" stroke-width="1.9" stroke-linejoin="round"/></svg><div><span>Phone</span><a href="tel:+639178600000">0917 860 0000</a></div></div>
+      <div class="cl"><svg width="19" height="19" viewBox="0 0 24 24" fill="none"><rect x="2.6" y="4.6" width="18.8" height="14.8" rx="2.4" stroke="#d32027" stroke-width="1.9"/><path d="m3.6 6.4 8.4 6.2 8.4-6.2" stroke="#1b1d21" stroke-width="1.9"/></svg><div><span>Email</span><a href="mailto:automotive1carcarecenter@yahoo.com">automotive1carcarecenter@yahoo.com</a></div></div>
+      <div class="cl"><svg width="19" height="19" viewBox="0 0 24 24" fill="none"><path d="M14 8.4h2.6V5.2H14c-2.4 0-4 1.6-4 4v2H7.6v3.2H10v6.4h3.2v-6.4h2.6l.6-3.2h-3.2v-1.6c0-.7.3-1.2.8-1.2Z" stroke="#d32027" stroke-width="1.7" stroke-linejoin="round"/></svg><div><span>Facebook</span><a href="https://facebook.com/Automotive1CarCareCenter" target="_blank" rel="noopener">Automotive 1 Car Care Center</a></div></div>
+      <div class="map"><svg class="pin" width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 22s7-6.4 7-11a7 7 0 1 0-14 0c0 4.6 7 11 7 11Z" fill="#d32027"/><circle cx="12" cy="10.6" r="2.6" fill="#fff"/></svg><div class="mlbl">Nicanor Roxas St · Banawe</div></div>
+    </div>
+    <div class="panel">
+      <h3>Request an estimate</h3>
+      <p style="font-size:14.5px;margin-top:6px">Tell us the car and what it is doing. We will come back with a range before you bring it in.</p>
+      <form onsubmit="event.preventDefault();window.location.href='mailto:automotive1carcarecenter@yahoo.com?subject=Estimate%20request%20from%20website&body='+encodeURIComponent(document.getElementById('m').value||'');">
+        <label for="n">Your name</label><input id="n" type="text" placeholder="Maria Santos">
+        <label for="v">Vehicle (make, model, year)</label><input id="v" type="text" placeholder="Honda City 2016">
+        <label for="s">What do you need?</label>
+        <select id="s"><option>Periodic maintenance</option><option>Engine repair</option><option>Brakes or suspension</option><option>Electrical or aircon</option><option>Insurance repair</option><option>Not sure — please advise</option></select>
+        <label for="m">Details</label><textarea id="m" placeholder="Squealing when braking, worse in the morning."></textarea>
+        <button class="btn btn-p" style="margin-top:18px;width:100%;justify-content:center;border:0" type="submit">Send request</button>
+      </form>
+    </div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="fg">
+    <div><b>AUTOMOTIVE 1</b><p style="margin-top:6px">Car Care Center · Since 1999<br>Quezon City, Philippines</p></div>
+    <div><p><a href="tel:+639178600000">0917 860 0000</a><br><a href="mailto:automotive1carcarecenter@yahoo.com">automotive1carcarecenter@yahoo.com</a><br><a href="https://facebook.com/Automotive1CarCareCenter" target="_blank" rel="noopener">facebook.com/Automotive1CarCareCenter</a></p></div>
+    <div><p>74A Nicanor Roxas Street<br>near cnr Banawe St, Brgy. Sto. Domingo<br>Quezon City</p></div>
+  </div>
+  <div class="fb"><span>© 2026 Automotive 1 Car Care Center.</span><span>Website by CloudSpring IT Solutions</span></div>
+</div></footer>
+
+<div class="csbar" role="complementary" aria-label="CloudSpring preview"><div class="csin">
+  <div><div class="cstag">Preview · CloudSpring IT Solutions</div>
+  <div class="csmsg">Want this website <i>+ 27 years of reputation working for you on Google instead of on Yelp's Banawe page?</i></div></div>
+  <a class="csbtn" href="https://api.leadconnectorhq.com/widget/booking/QRPEnWRw2Kx9rBe0Mj6J" target="_blank" rel="noopener">Book a FREE Discovery Call →</a>
+</div></div>
+</body></html>

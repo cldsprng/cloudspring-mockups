@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dr. Mechanic Auto Care Center — #29 Congressional Ave, Project 8, Quezon City</title>
+<meta name="description" content="Dr. Mechanic Autocare Center Corp. — one-stop car shop specialising in European and all-brand vehicles. #29 Congressional Avenue, Brgy. Bahay Toro, Project 8, Quezon City.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--graphite:#14171a;--graphite2:#1d2226;--green:#0f5132;--jade:#1a7a4c;--jade2:#25a066;--silver:#b9c2c9;--ink:#0f1214;--body:#565f66;--line:#e4e8ea;--bg:#f6f8f8;
+--sh:0 1px 3px rgba(15,18,20,.07);--sh2:0 16px 38px rgba(15,18,20,.14);
+--dsp:'Space Grotesk',-apple-system,'Segoe UI',sans-serif;--txt:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--txt);color:var(--body);background:#fff;line-height:1.65;padding-bottom:104px;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:var(--dsp);color:var(--ink);line-height:1.14;font-weight:700;letter-spacing:-.015em}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:0;z-index:50;background:rgba(20,23,26,.97);backdrop-filter:blur(9px)}
+.hd{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:13px 0}
+.logo{display:flex;align-items:center;gap:11px;text-decoration:none}
+.logo b{font-family:var(--dsp);font-size:19px;color:#fff;display:block;line-height:1.1;letter-spacing:-.01em}
+.logo small{display:block;font-size:9.5px;letter-spacing:.23em;text-transform:uppercase;color:#7f8c94;margin-top:3px}
+.nav{display:none;gap:26px}
+.nav a{color:#aab5bc;text-decoration:none;font-size:14px;font-weight:500;transition:.16s}
+.nav a:hover,.nav a:focus-visible{color:var(--jade2);outline:none}
+@media(min-width:920px){.nav{display:flex}}
+.fbtn{display:inline-flex;align-items:center;gap:8px;background:var(--jade);color:#fff;text-decoration:none;font-weight:600;font-size:14px;padding:10px 17px;border-radius:99px;transition:.16s;white-space:nowrap}
+.fbtn:hover,.fbtn:focus-visible{background:var(--jade2);transform:translateY(-1px);outline:none}
+/* hero */
+.hero{background:linear-gradient(168deg,var(--graphite) 0%,var(--graphite2) 68%,#232b2c 100%);color:#aab5bc;position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;inset:0;background:radial-gradient(700px 340px at 78% 26%,rgba(37,160,102,.15),transparent 70%)}
+.hero .wrap{position:relative;padding:62px 20px 66px}
+@media(min-width:960px){.hero .wrap{padding:92px 20px 88px}}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:11px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--jade2);margin-bottom:18px}
+.eyebrow:before{content:"";width:30px;height:1.5px;background:var(--jade2)}
+.hero h1{font-size:clamp(34px,6.6vw,58px);color:#fff;max-width:16ch}
+.hero h1 em{font-style:normal;color:var(--jade2)}
+.hero p{margin-top:18px;font-size:17px;max-width:38em;color:#98a4ab}
+.idcard{margin-top:32px;display:inline-grid;gap:0;background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.14);border-radius:14px;overflow:hidden;max-width:560px}
+@media(min-width:560px){.idcard{grid-template-columns:1fr 1fr}}
+.idc{padding:18px 22px;border-bottom:1px solid rgba(255,255,255,.1)}
+@media(min-width:560px){.idc:nth-child(odd){border-right:1px solid rgba(255,255,255,.1)}.idc:nth-last-child(-n+2){border-bottom:0}}
+.idc span{display:block;font-size:10px;letter-spacing:.19em;text-transform:uppercase;color:#7f8c94;margin-bottom:5px}
+.idc b{font-family:var(--dsp);font-size:16px;color:#fff;font-weight:500;line-height:1.35;display:block}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.btn{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:15px;padding:14px 25px;border-radius:99px;text-decoration:none;transition:.17s;border:1.5px solid transparent;cursor:pointer;font-family:var(--txt)}
+.btn-p{background:var(--jade);color:#fff}
+.btn-p:hover,.btn-p:focus-visible{background:var(--jade2);transform:translateY(-2px);outline:none}
+.btn-g{border-color:rgba(255,255,255,.26);color:#fff}
+.btn-g:hover,.btn-g:focus-visible{border-color:var(--jade2);color:var(--jade2);outline:none}
+/* marques */
+.marq{background:var(--graphite2);border-top:1px solid rgba(255,255,255,.08);padding:22px 0}
+.marq .wrap{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:center}
+.chip{border:1px solid rgba(255,255,255,.18);color:#c3ccd2;border-radius:99px;padding:7px 17px;font-size:13px;font-weight:500;letter-spacing:.03em;transition:.16s}
+.chip:hover{border-color:var(--jade2);color:#fff}
+.marqlbl{width:100%;text-align:center;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:#7f8c94;margin-bottom:6px}
+section{padding:68px 0}
+.alt{background:var(--bg)}
+.shead{max-width:640px;margin-bottom:38px}
+.kick{font-size:11px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--jade);margin-bottom:10px}
+.shead h2{font-size:clamp(27px,4.4vw,38px)}
+.shead p{margin-top:13px;font-size:16.5px}
+.grid{display:grid;gap:18px}
+@media(min-width:640px){.grid{grid-template-columns:1fr 1fr}}
+@media(min-width:980px){.grid{grid-template-columns:repeat(3,1fr)}}
+.card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:26px;transition:.2s;box-shadow:var(--sh)}
+.card:hover{box-shadow:var(--sh2);transform:translateY(-3px);border-color:#cdd6da}
+.ico{width:42px;height:42px;border-radius:11px;background:rgba(26,122,76,.1);display:grid;place-items:center;margin-bottom:16px}
+.card h3{font-size:19px;margin-bottom:8px}
+.card p{font-size:14.5px}
+.tbd{margin-top:14px;padding-top:12px;border-top:1px dashed var(--line);font-size:12.5px;color:#8b959b}
+.note{display:inline-block;margin-top:26px;font-size:13px;color:#7a848a;background:#fff;border:1px dashed #ccd5d9;border-radius:8px;padding:10px 14px}
+.split{display:grid;gap:34px}
+@media(min-width:900px){.split{grid-template-columns:1.05fr .95fr;align-items:center}}
+.split p{margin-bottom:14px;font-size:16.5px}
+.gallery{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.ph{aspect-ratio:1;border-radius:12px;background:linear-gradient(140deg,#e9eeef,#dbe3e5);display:grid;place-items:center;border:1px solid var(--line);position:relative}
+.ph:nth-child(1){background:linear-gradient(140deg,#20282b,#161c1e)}
+.ph:nth-child(4){background:linear-gradient(140deg,#1a7a4c,#0f5132)}
+.ph small{position:absolute;bottom:9px;left:0;right:0;text-align:center;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:#8b959b}
+.ph:nth-child(1) small,.ph:nth-child(4) small{color:rgba(255,255,255,.6)}
+.panel{background:#fff;border:1px solid var(--line);border-radius:14px;padding:26px;box-shadow:var(--sh)}
+.panel h3{font-size:19px;margin-bottom:14px}
+.row{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px solid var(--line);font-size:14.5px}
+.row:last-child{border:0}.row b{color:var(--ink);font-weight:600}
+.cgrid{display:grid;gap:26px}
+@media(min-width:900px){.cgrid{grid-template-columns:1fr 1fr}}
+.cl{display:flex;gap:13px;align-items:flex-start;padding:13px 0;border-bottom:1px solid var(--line)}
+.cl:last-of-type{border:0}
+.cl span{font-size:11px;text-transform:uppercase;letter-spacing:.15em;color:#939da3;display:block;margin-bottom:2px}
+.cl a,.cl p{font-size:15.5px;color:var(--ink);text-decoration:none;font-weight:500}
+.cl a:hover{color:var(--jade)}
+label{display:block;font-size:11.5px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:#7a848a;margin:14px 0 6px}
+input,textarea,select{width:100%;font-family:var(--txt);font-size:15px;color:var(--ink);padding:12px 14px;border:1.5px solid var(--line);border-radius:9px;background:#fafcfc;transition:.15s}
+input:focus,textarea:focus,select:focus{outline:none;border-color:var(--jade);background:#fff;box-shadow:0 0 0 3px rgba(26,122,76,.13)}
+textarea{min-height:100px;resize:vertical}
+.map{margin-top:16px;height:170px;border-radius:11px;border:1px solid var(--line);position:relative;overflow:hidden;background:
+linear-gradient(0deg,transparent 58%,#d5dee1 58% 59.5%,transparent 59.5%),
+linear-gradient(90deg,transparent 44%,#d5dee1 44% 45.4%,transparent 45.4%),#edf1f2}
+.pin{position:absolute;left:44.5%;top:58.5%;transform:translate(-50%,-100%)}
+.mlbl{position:absolute;left:44.5%;top:60%;transform:translateX(-50%);background:#fff;border:1px solid var(--line);border-radius:7px;padding:6px 11px;font-size:11.5px;font-weight:600;color:var(--ink);white-space:nowrap;box-shadow:var(--sh)}
+footer{background:var(--graphite);color:#8b959b;padding:42px 0 28px;font-size:14.5px}
+.fg{display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between}
+footer b{font-family:var(--dsp);font-size:19px;color:#fff;display:block}
+footer a{color:#b5bfc5}footer a:hover{color:var(--jade2)}
+.fb{margin-top:26px;padding-top:17px;border-top:1px solid rgba(255,255,255,.1);font-size:12.5px;display:flex;flex-wrap:wrap;gap:8px;justify-content:space-between}
+.csbar{position:fixed;left:0;right:0;bottom:0;z-index:99;background:rgba(12,14,16,.97);backdrop-filter:blur(10px);border-top:1px solid rgba(255,255,255,.13);padding:11px 16px}
+.csin{max-width:1120px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.cstag{font-size:9.5px;letter-spacing:.24em;text-transform:uppercase;color:#78848b;margin-bottom:3px}
+.csmsg{color:#fff;font-size:14.5px;font-weight:600;line-height:1.35;max-width:62ch}
+.csmsg i{font-style:normal;color:var(--jade2)}
+.csbtn{display:inline-flex;align-items:center;gap:8px;background:var(--jade);color:#fff;text-decoration:none;font-weight:700;font-size:14px;padding:12px 21px;border-radius:99px;white-space:nowrap;animation:pulse 2.4s infinite;transition:.17s}
+.csbtn:hover,.csbtn:focus-visible{background:var(--jade2);transform:translateY(-2px);outline:none;animation:none}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(26,122,76,.55)}70%{box-shadow:0 0 0 15px rgba(26,122,76,0)}100%{box-shadow:0 0 0 0 rgba(26,122,76,0)}}
+@media(prefers-reduced-motion:reduce){.csbtn{animation:none}*{transition:none!important}}
+@media(max-width:640px){.csin{flex-direction:column;text-align:center;gap:10px}body{padding-bottom:146px}}
+</style>
+</head>
+<body>
+<header><div class="wrap hd">
+  <a class="logo" href="#top">
+    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+      <rect x="1.4" y="1.4" width="33.2" height="33.2" rx="9" stroke="#25a066" stroke-width="2"/>
+      <path d="M18 10v16M10 18h16" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/>
+      <circle cx="18" cy="18" r="4.6" fill="#14171a" stroke="#25a066" stroke-width="2"/>
+    </svg>
+    <span><b>Dr. Mechanic</b><small>Auto Care Center · QC</small></span>
+  </a>
+  <nav class="nav"><a href="#services">Services</a><a href="#about">About</a><a href="#find">Find us</a></nav>
+  <a class="fbtn" href="https://facebook.com/dr.mechanicautocare" target="_blank" rel="noopener">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M14 8.4h2.6V5.2H14c-2.4 0-4 1.6-4 4v2H7.6v3.2H10v6.4h3.2v-6.4h2.6l.6-3.2h-3.2v-1.6c0-.7.3-1.2.8-1.2Z" stroke="#fff" stroke-width="1.8" stroke-linejoin="round"/></svg>
+    Message us</a>
+</div></header>
+
+<div class="hero" id="top"><div class="wrap">
+  <div class="eyebrow">Project 8 · Quezon City</div>
+  <h1>The one-stop car shop for <em>European and every other marque.</em></h1>
+  <p>Dr. Mechanic Autocare Center Corp. at #29 Congressional Avenue, Brgy. Bahay Toro. One address, one team, and the equipment to handle continental cars alongside everything else on the road.</p>
+  <div class="idcard">
+    <div class="idc"><span>Registered name</span><b>Dr. Mechanic Autocare Center Corp.</b></div>
+    <div class="idc"><span>Address</span><b>#29 Congressional Avenue<br>Brgy. Bahay Toro, Project 8, QC</b></div>
+    <div class="idc"><span>Specialisation</span><b>European &amp; all-brand servicing</b></div>
+    <div class="idc"><span>Contact</span><b>Facebook &amp; Instagram · @drmechanicautocarecenter</b></div>
+  </div>
+  <div class="cta">
+    <a class="btn btn-p" href="https://facebook.com/dr.mechanicautocare" target="_blank" rel="noopener">Message us on Facebook</a>
+    <a class="btn btn-g" href="#find">Get directions</a>
+  </div>
+</div></div>
+
+<div class="marq"><div class="wrap">
+  <div class="marqlbl">Marques we work on</div>
+  <span class="chip">BMW</span><span class="chip">Mercedes-Benz</span><span class="chip">Audi</span><span class="chip">Volkswagen</span><span class="chip">Volvo</span><span class="chip">MINI</span><span class="chip">Peugeot</span><span class="chip">Japanese &amp; Korean</span><span class="chip">American</span>
+</div></div>
+
+<section id="services"><div class="wrap">
+  <div class="shead"><div class="kick">Services</div><h2>Everything a continental car needs, under one roof</h2><p>Owners of European cars in Metro Manila usually end up driving between three shops. The point of a one-stop centre is that you do not have to.</p></div>
+  <div class="grid">
+    <div class="card"><div class="ico"><svg width="21" height="21" viewBox="0 0 24 24" fill="none"><rect x="3" y="6" width="18" height="12" rx="2.5" stroke="#0f5132" stroke-width="1.8"/><path d="M7 12h3l2-3 2 6 2-3h1" stroke="#25a066" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3>Computerised diagnostics</h3><p>European electronics throw codes that generic scanners misread. Faults are read properly and explained before any part is ordered.</p><div class="tbd">Rates to be confirmed</div></div>
+    <div class="card"><div class="ico"><svg width="21" height="21" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8.6" stroke="#0f5132" stroke-width="1.8"/><circle cx="12" cy="12" r="3.4" stroke="#25a066" stroke-width="2.2"/></svg></div><h3>Periodic maintenance</h3><p>Service intervals kept to the manufacturer's schedule, with the correct oil specification rather than whatever is on the shelf.</p><div class="tbd">Rates to be confirmed</div></div>
+    <div class="card"><div class="ico"><svg width="21" height="21" viewBox="0 0 24 24" fill="none"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z" stroke="#25a066" stroke-width="2" stroke-linejoin="round"/></svg></div><h3>Engine &amp; transmission</h3><p>Major mechanical work — timing, cooling, turbo, gearbox service — handled in-house instead of subcontracted out.</p><div class="tbd">Rates to be confirmed</div></div>
+    <div class="card"><div class="ico"><svg width="21" height="21" viewBox="0 0 24 24" fill="none"><path d="M3 17h18M6 17V9l3-4h6l3 4v8" stroke="#0f5132" stroke-width="1.8" stroke-linejoin="round"/><circle cx="8" cy="17" r="2.2" stroke="#25a066" stroke-width="1.9"/><circle cx="16" cy="17" r="2.2" stroke="#25a066" stroke-width="1.9"/></svg></div><h3>Brakes &amp; suspension</h3><p>Heavier cars wear brakes and bushings faster on Manila roads. Parts matched to the car, not to the cheapest catalogue entry.</p><div class="tbd">Rates to be confirmed</div></div>
+    <div class="card"><div class="ico"><svg width="21" height="21" viewBox="0 0 24 24" fill="none"><path d="M6 14c0-4 6-10 6-10s6 6 6 10a6 6 0 0 1-12 0Z" stroke="#25a066" stroke-width="1.9" stroke-linejoin="round"/></svg></div><h3>Aircon &amp; electricals</h3><p>Climate systems, batteries, alternators and the electrical gremlins that European cars are known for.</p><div class="tbd">Rates to be confirmed</div></div>
+    <div class="card"><div class="ico"><svg width="21" height="21" viewBox="0 0 24 24" fill="none"><path d="M4 12h16M12 4v16" stroke="#25a066" stroke-width="2.4" stroke-linecap="round"/><circle cx="12" cy="12" r="8.6" stroke="#0f5132" stroke-width="1.8"/></svg></div><h3>All other makes</h3><p>Japanese, Korean and American cars are just as welcome — the European work is a specialisation, not a restriction.</p><div class="tbd">Rates to be confirmed</div></div>
+  </div>
+  <div class="note">Sample layout — the marque list and services shown are placeholders until Dr. Mechanic confirms the exact coverage.</div>
+</div></section>
+
+<section class="alt"><div class="wrap split">
+  <div>
+    <div class="shead"><div class="kick">About</div><h2>One address, and it is on Congressional Avenue</h2></div>
+    <p>Dr. Mechanic Autocare Center Corp. operates from #29 Congressional Avenue in Brgy. Bahay Toro, Project 8, Quezon City. It is a one-stop car shop: European marques are the specialisation, and every other brand on the road is handled from the same bays.</p>
+    <p>Work in progress goes up on Facebook and Instagram most weeks — the cars, the strip-downs and the finished jobs. This page is simply the fixed point they all link back to.</p>
+    <div class="cta"><a class="btn btn-p" href="https://instagram.com/drmechanicautocarecenter" target="_blank" rel="noopener">See the work on Instagram</a></div>
+  </div>
+  <div class="gallery">
+    <div class="ph"><small>Your shop photo</small></div>
+    <div class="ph"><small>Your shop photo</small></div>
+    <div class="ph"><small>Your shop photo</small></div>
+    <div class="ph"><small>Your shop photo</small></div>
+  </div>
+</div></section>
+
+<section id="find"><div class="wrap">
+  <div class="shead"><div class="kick">Find us</div><h2>#29 Congressional Avenue, Project 8</h2></div>
+  <div class="cgrid">
+    <div class="panel">
+      <div class="cl"><svg width="19" height="19" viewBox="0 0 24 24" fill="none"><path d="M12 21s7-6.4 7-11a7 7 0 1 0-14 0c0 4.6 7 11 7 11Z" stroke="#0f5132" stroke-width="1.9"/><circle cx="12" cy="10" r="2.6" stroke="#25a066" stroke-width="1.9"/></svg><div><span>Address</span><p>#29 Congressional Avenue,<br>Brgy. Bahay Toro, Project 8, Quezon City</p></div></div>
+      <div class="cl"><svg width="19" height="19" viewBox="0 0 24 24" fill="none"><path d="M14 8.4h2.6V5.2H14c-2.4 0-4 1.6-4 4v2H7.6v3.2H10v6.4h3.2v-6.4h2.6l.6-3.2h-3.2v-1.6c0-.7.3-1.2.8-1.2Z" stroke="#0f5132" stroke-width="1.7" stroke-linejoin="round"/></svg><div><span>Facebook</span><a href="https://facebook.com/dr.mechanicautocare" target="_blank" rel="noopener">facebook.com/dr.mechanicautocare</a></div></div>
+      <div class="cl"><svg width="19" height="19" viewBox="0 0 24 24" fill="none"><rect x="3.4" y="3.4" width="17.2" height="17.2" rx="5" stroke="#0f5132" stroke-width="1.8"/><circle cx="12" cy="12" r="4.1" stroke="#25a066" stroke-width="1.8"/><circle cx="17.1" cy="6.9" r="1.15" fill="#25a066"/></svg><div><span>Instagram</span><a href="https://instagram.com/drmechanicautocarecenter" target="_blank" rel="noopener">@drmechanicautocarecenter</a></div></div>
+      <div class="cl"><svg width="19" height="19" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8.6" stroke="#0f5132" stroke-width="1.8"/><path d="M12 7v5l3.2 2" stroke="#25a066" stroke-width="1.9" stroke-linecap="round"/></svg><div><span>Shop hours</span><p style="font-weight:400;color:#8b959b">To be confirmed — your hours go here</p></div></div>
+      <div class="map"><svg class="pin" width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 22s7-6.4 7-11a7 7 0 1 0-14 0c0 4.6 7 11 7 11Z" fill="#1a7a4c"/><circle cx="12" cy="10.6" r="2.6" fill="#fff"/></svg><div class="mlbl">#29 Congressional Ave · Project 8</div></div>
+    </div>
+    <div class="panel">
+      <h3>Ask about your car</h3>
+      <p style="font-size:14.5px;margin-top:6px">Send the make, model and symptom. We will tell you whether it is something we take, and roughly what it involves.</p>
+      <form onsubmit="event.preventDefault();window.open('https://facebook.com/dr.mechanicautocare','_blank','noopener');">
+        <label for="n">Your name</label><input id="n" type="text" placeholder="Juan dela Cruz">
+        <label for="v">Vehicle</label><input id="v" type="text" placeholder="BMW 320i 2015">
+        <label for="s">What do you need?</label>
+        <select id="s"><option>Diagnostics</option><option>Periodic maintenance</option><option>Engine or transmission work</option><option>Brakes or suspension</option><option>Aircon or electricals</option><option>Not sure — please advise</option></select>
+        <label for="m">Details</label><textarea id="m" placeholder="Warning light on the dash since Monday, car drives normally."></textarea>
+        <button class="btn btn-p" style="margin-top:18px;width:100%;justify-content:center;border:0" type="submit">Continue on Facebook</button>
+      </form>
+    </div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="fg">
+    <div><b>DR. MECHANIC</b><p style="margin-top:6px">Autocare Center Corp.<br>Project 8, Quezon City</p></div>
+    <div><p><a href="https://facebook.com/dr.mechanicautocare" target="_blank" rel="noopener">facebook.com/dr.mechanicautocare</a><br><a href="https://instagram.com/drmechanicautocarecenter" target="_blank" rel="noopener">@drmechanicautocarecenter</a></p></div>
+    <div><p>#29 Congressional Avenue<br>Brgy. Bahay Toro, Project 8<br>Quezon City, Philippines</p></div>
+  </div>
+  <div class="fb"><span>© 2026 Dr. Mechanic Autocare Center Corp.</span><span>Website by CloudSpring IT Solutions</span></div>
+</div></footer>
+
+<div class="csbar" role="complementary" aria-label="CloudSpring preview"><div class="csin">
+  <div><div class="cstag">Preview · CloudSpring IT Solutions</div>
+  <div class="csmsg">Want this website <i>+ your own name finally pointing at your shop instead of a company you have nothing to do with?</i></div></div>
+  <a class="csbtn" href="https://api.leadconnectorhq.com/widget/booking/QRPEnWRw2Kx9rBe0Mj6J" target="_blank" rel="noopener">Book a FREE Discovery Call →</a>
+</div></div>
+</body></html>
