@@ -122,7 +122,12 @@ have repeatedly beaten it: fetch the lead's candidate domain looking for a
 200-with-empty-body, and look for duplicate directory listings that contradict
 each other on address, hours or price.
 
-**Reports:** cards strategised · angle chosen per card.
+The offer half of the angle is bounded by `OFFER-MENU.md`. Name every automation
+by its menu ID (`CL-03`, `TR-01`, `XC-01`) and mark its state on the card. An
+`IN BUILD` line may be **diagnosed and sized in the owner's numbers** but never
+promised — see the template and worked example in that file.
+
+**Reports:** cards strategised · angle chosen per card · menu IDs cited per card.
 
 ### 3 — Brand capture (first-class, same run as strategy)
 
@@ -179,7 +184,7 @@ closer or a skeleton.
 
 ### 6 — QA
 
-sales-qa-humanizer. Three checks, all must pass before the card is marked
+sales-qa-humanizer. Four checks, all must pass before the card is marked
 `✅ QA'd & humanized`. Only marked cards should ever be approved by the human.
 
 1. **Humanize.** Contractions are a hard rule, not a preference. Banned:
@@ -190,10 +195,17 @@ sales-qa-humanizer. Three checks, all must pass before the card is marked
    than trusting the builder's report. Same script, second pair of eyes — the
    Dental Hive miss happened because one agent both built and judged.
 3. **Pricing floor.** PH ₱1,000–1,500/month; international USD 300–500 build +
-   USD 50–100/month. When a draft quotes a non-USD currency, convert it and
-   check against the floor before it leaves QA.
+   USD 50–100/month. When a draft quotes a non-USD currency, quote from the
+   dated FX band table in `OFFER-MENU.md` — AUD 475–700 + 80–140 · GBP 240–370
+   + 40–75 · CAD 450–690 + 75–140. Never convert in your head.
+4. **Menu boundary.** Every automation the draft names must appear in
+   `OFFER-MENU.md` as `SELLABLE TODAY`. A draft that promises an `IN BUILD`
+   line, or names a capability that is not on the menu at all, fails — however
+   well it would fit the lead. Diagnosing the pain and sizing it in the owner's
+   numbers is allowed and encouraged; promising delivery is not.
 
-**Reports:** pass/fail per check per card · what was rewritten.
+**Reports:** pass/fail per check per card · what was rewritten · any menu-boundary
+rejections and the line that caused them.
 
 ### 7 — Approved handling
 
@@ -336,11 +348,32 @@ Non-zero exit means **do not deploy**. There is no override.
   api.pexels.com / places.googleapis.com. GitHub works. Code Routine
   environments: places.googleapis.com allowed if configured in env settings.
 
+## What we may sell — see OFFER-MENU.md
+
+`OFFER-MENU.md` in this repo is the **boundary on what any agent or human may
+pitch**. A capability that is not listed there as `SELLABLE TODAY` may not appear
+in a Sales Angle, a mockup, an outreach draft or a call — not as a promise, not
+as a "coming soon". Only the Automation Engineer moves a line to `SELLABLE
+TODAY`, and only after it demonstrably runs.
+
+Every Sales Angle names its automations by menu ID (`CL-03`, `TR-01`, `XC-01`).
+QA rejects a card that names an automation not on the menu, or one marked
+`IN BUILD`.
+
+As of 2026-08-19 every automation line is `IN BUILD` (blocked on the GHL
+connection), so the website tier is the only sellable offer. Diagnosing the
+automation pain and putting a number on it is still required — it is the
+promise, not the diagnosis, that the menu gates.
+
 ## Language & pricing
 
 - Professional English only (PH and international). No Taglish.
 - PH: ₱1,000–1,500/month · first month FREE · 3/6/12-mo terms · no build fee
 - International: build fee USD 300–500 + retainer USD 50–100/month
+- Non-USD quotes (AUD/GBP/CAD): use the dated FX floor table in `OFFER-MENU.md`.
+  Never convert in your head — that is what produced the 2026-08-18 QA catch.
+- Automation tiers A/B/C in `OFFER-MENU.md` price ABOVE this band and are
+  PROPOSED — they need CEO approval before any quote uses them.
 
 ## Do-not-contact list
 
@@ -652,3 +685,34 @@ Non-zero exit means **do not deploy**. There is no override.
   is un-SENT: no lead is currently in a state where a follow-up could even be
   due. Fixing the approval bottleneck strictly precedes any follow-up sequencing
   work — FOLLOW-UP DUE will sit empty until cards start reaching CONTACTED.
+- 2026-08-19 (OFFER-MENU.md added — the boundary on what may be pitched): the
+  offer was a ₱1,000–1,500/month website, which is a low ceiling and puts an
+  automations agency in the website-vendor category. `OFFER-MENU.md` fixes that:
+  every automation gets an ID (`CL-01`…`XC-04`), a one-sentence description, ROI
+  in the client's own numbers, and a build state. The hard rule is that nothing
+  goes on the menu that is not built, and only the Automation Engineer moves a
+  line to `SELLABLE TODAY`.
+- 2026-08-19 (what the hard rule actually costs us right now): applying it
+  honestly puts EVERY automation line at `IN BUILD` — CLO-11 (engine v1) is
+  unstarted and blocked on CLO-6 (GHL down five consecutive runs), and CLO-14
+  (n8n) is not confirmed running. So today the menu authorises the website tier
+  and nothing else. That is the GHL blocker priced: it is holding closed the gap
+  between ₱1,500/month and a ₱5,000–6,500/month stack on every lead in the
+  pipeline. Diagnosing the automation pain and sizing it in the owner's numbers
+  stays mandatory — it is the promise the menu gates, never the diagnosis.
+- 2026-08-19 (mockup forms are NOT lead capture): every `<form>` shipped so far
+  is an `onsubmit` handler that opens a `mailto:` in the visitor's mail app.
+  Nothing is recorded, nothing replies, and on a phone with no mail client
+  configured nothing happens at all. It is fine to ship and fine to sell, but it
+  must never be described as lead capture — real capture is `XC-04` and it is
+  `IN BUILD`. Checked across the repo, not assumed.
+- 2026-08-19 (FX, correcting the 2026-08-18 QA catch): that catch converted
+  AUD 450 to "roughly USD 295" and called it below the USD 300 floor. The
+  reference rate that day was 1.4068 AUD per USD, which makes AUD 450 = USD 320
+  — above the floor. The catch's arithmetic implied ~1.52, an 8% error, because
+  it was done from memory. The conclusion still holds (check the floor before a
+  draft leaves QA) but the method changes: quote from the dated FX band table in
+  `OFFER-MENU.md` (AUD 475–700 + 80–140 · GBP 240–370 + 40–75 · CAD 450–690 +
+  75–140, floors carrying an 8% drift buffer), and re-pull the rates when the
+  stamp is over 30 days old. The corrected AUD 650 + 110 sits inside the band,
+  so nothing needs re-quoting.
