@@ -34,15 +34,17 @@ Niche calendar (the human owns this list — edit freely):
 ## Trello board
 
 Board: CLOUDSPRING_MAINBOARD — https://trello.com/b/TIAlGfU8/cloudspringmainboard
-Lists: INCOMING LEADS → STRATEGY READY → MOCKUP READY → READY TO SEND →
-CHANGES REQUESTED → APPROVED → SYNCED TO GHL (SEND MANUALLY) → CONTACTED →
-REPLIED (HITS) → CLIENTS, + BRAND BLOCKED, + REJECTED
+Lists, in board order: NICHE · INCOMING LEADS → STRATEGY READY → **BRAND
+BLOCKED** → MOCKUP READY → READY TO SEND → CHANGES REQUESTED → APPROVED →
+SYNCED TO GHL (SEND MANUALLY) → CONTACTED → FOLLOW-UP DUE → REPLIED (HITS) →
+CLIENTS, + REJECTED
 
-BRAND BLOCKED holds leads where brand capture returned `no-assets` — no logo
-could be found anywhere, so no mockup may be built. It is a human decision
-queue, not a failure bin: drop real assets into `<slug>/brand/` and the card
-re-enters at MOCKUP READY, or reject the lead. Nothing leaves this list by
-being built with an invented palette.
+BRAND BLOCKED sits between STRATEGY READY and MOCKUP READY because capture runs
+before the build. It holds leads where capture returned `no-assets` — no logo
+found anywhere, so no mockup may be built. It is a human decision queue, not a
+failure bin: drop real assets into `<slug>/brand/` and the card re-enters at
+MOCKUP READY, or reject the lead. Nothing leaves this list by being built with
+an invented palette.
 
 APPROVED flow: agent syncs every approved card to GHL (contact + opportunity
 + note, "✅ Synced to GHL" marker). Email leads auto-send via GHL → CONTACTED.
