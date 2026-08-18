@@ -37,8 +37,11 @@ Niche calendar (the human owns this list — edit freely):
 Board: CLOUDSPRING_MAINBOARD — https://trello.com/b/TIAlGfU8/cloudspringmainboard
 Lists, in board order: NICHE · INCOMING LEADS → STRATEGY READY → **BRAND
 BLOCKED** → MOCKUP READY → READY TO SEND → CHANGES REQUESTED → APPROVED →
-SYNCED TO GHL (SEND MANUALLY) → CONTACTED → FOLLOW-UP DUE → REPLIED (HITS) →
+SYNCED TO GHL (SEND MANUALLY) → CONTACTED → **FOLLOW-UP DUE** → REPLIED (HITS) →
 CLIENTS, + REJECTED
+
+NICHE is a reference list, not a stage. REJECTED is a terminal sink — cards can
+land there from any stage.
 
 BRAND BLOCKED sits between STRATEGY READY and MOCKUP READY because capture runs
 before the build. It holds leads where capture returned `no-assets` — no logo
@@ -47,10 +50,29 @@ failure bin: drop real assets into `<slug>/brand/` and the card re-enters at
 MOCKUP READY, or reject the lead. Nothing leaves this list by being built with
 an invented palette.
 
+FOLLOW-UP DUE: Trello has no sequencer, so the later touches need somewhere to
+physically land. A card moves CONTACTED → FOLLOW-UP DUE when its due date comes
+up. Whoever owns the channel sends the next touch, then moves the card back to
+CONTACTED with the next due date set — or on to REPLIED (HITS) or REJECTED.
+
+Touch schedule: touch 1 on send · touch 2 at day 3 · touch 3 at day 7 · clean
+breakup at day 14. There is no touch 4.
+
+CONTACTED due-date discipline — MANDATORY on arrival, no exceptions:
+- The card DESCRIPTION carries a `Sent: YYYY-MM-DD` line plus the channel used.
+- The card DUE DATE is set to sent date + 3 days at 09:00 Asia/Manila
+  (= 01:00 UTC; the Trello API takes UTC ISO 8601).
+- Whoever moves the card in sets both — the outreach agent on email/GHL sends,
+  the human on manual FB/SMS sends.
+- A card sitting in CONTACTED with no due date is a defect. The next run stamps
+  it from the card's move-in date and logs it.
+- Re-stamp after every touch: day 3 → due day 7 → due day 14 → breakup → done.
+
 APPROVED flow: agent syncs every approved card to GHL (contact + opportunity
 + note, "✅ Synced to GHL" marker). Email leads auto-send via GHL → CONTACTED.
 Manual-channel leads (FB/SMS) → SYNCED TO GHL (SEND MANUALLY); the human
-sends the draft and drags the card to CONTACTED, which is the "sent" signal.
+sends the draft and drags the card to CONTACTED, which is the "sent" signal —
+and which triggers the due-date discipline above, on either path.
 No processed card ever sits in plain APPROVED.
 
 Human touchpoints: READY TO SEND → APPROVED authorizes sending · revisions
@@ -612,3 +634,21 @@ Non-zero exit means **do not deploy**. There is no override.
   expensive than a known bug, because nobody ever retries it. Applies now to
   the GHL connection: it has failed four runs, but "the connector is down" and
   "CRM sync is impossible" are not the same claim.
+- 2026-08-19 (board restructure, NOT a migration): the board question is settled
+  — Trello stays. None of the pipeline's failures are Trello limitations; the
+  missing leg is GoHighLevel, and the SYNCED TO GHL list is a column standing in
+  for a system. Revisit only if humans join the pipeline or active cards pass
+  ~300. Two lists added instead, and both now exist on CLOUDSPRING_MAINBOARD:
+  BRAND BLOCKED (between STRATEGY READY and MOCKUP READY — see the entry above)
+  and FOLLOW-UP DUE (between CONTACTED and REPLIED (HITS), because Trello has no
+  sequencer and the day-3/day-7/day-14 touches need a physical place to land).
+  The Trello board section above is authoritative for list order — it was drifting
+  from the live board and is now reconciled against it.
+- 2026-08-19 (CONTACTED backfill was a no-op, and that is the finding): the
+  due-date discipline was written to be applied to existing CONTACTED cards, but
+  CONTACTED is EMPTY — 0 cards. Nothing has been sent since the derma batch.
+  SYNCED TO GHL (SEND MANUALLY) holds exactly 1 card (Custom Cakes by Bam) while
+  READY TO SEND holds ~30. So the pipeline's output is not merely un-drained, it
+  is un-SENT: no lead is currently in a state where a follow-up could even be
+  due. Fixing the approval bottleneck strictly precedes any follow-up sequencing
+  work — FOLLOW-UP DUE will sit empty until cards start reaching CONTACTED.
