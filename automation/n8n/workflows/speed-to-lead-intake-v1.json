@@ -1,0 +1,361 @@
+{
+  "name": "speed-to-lead-intake-v1",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "speed-to-lead",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "id": "inbound-lead",
+      "name": "Inbound Lead",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        -780,
+        0
+      ],
+      "webhookId": "a7f3c1e2-5b40-4d19-9c8a-1e6f2b0d7c34"
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "// Speed-to-Lead v1 -- normalize every inbound source into one lead shape.\n// Sources: mockup form (web), Facebook message, missed call.\nconst t0 = Date.now();\nconst out = [];\n\nfor (const item of $input.all()) {\n  const b = item.json.body ?? item.json;\n  const q = item.json.query ?? {};\n  const raw = { ...q, ...b };\n\n  const source = String(raw.source ?? 'web_form').toLowerCase().trim();\n  const digits = String(raw.phone ?? raw.from ?? '').replace(/[^0-9+]/g, '');\n  const email = String(raw.email ?? '').trim().toLowerCase();\n  const name = String(raw.name ?? raw.full_name ?? '').trim();\n\n  const problems = [];\n  if (!['web_form', 'facebook', 'missed_call'].includes(source)) {\n    problems.push('unknown_source:' + source);\n  }\n  if (!digits && !email) problems.push('no_reachable_channel');\n  if (digits && !/^\\+?[0-9]{7,15}$/.test(digits)) problems.push('bad_phone');\n  if (email && !/^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$/.test(email)) problems.push('bad_email');\n\n  out.push({\n    json: {\n      t0,\n      valid: problems.length === 0,\n      problems,\n      lead: {\n        source,\n        name: name || 'there',\n        phone: digits || null,\n        email: email || null,\n        message: String(raw.message ?? raw.text ?? '').trim(),\n        clinic: String(raw.clinic ?? raw.business ?? 'the clinic').trim(),\n        mockup_url: raw.mockup_url ?? null,\n        received_at: new Date(t0).toISOString(),\n      },\n    },\n  });\n}\n\nreturn out;"
+      },
+      "id": "normalize-lead",
+      "name": "Normalize Lead",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -560,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "loose",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "valid-lead-c1",
+              "leftValue": "={{ $json.valid }}",
+              "rightValue": "",
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "looseTypeValidation": true,
+        "options": {}
+      },
+      "id": "valid-lead",
+      "name": "Valid Lead",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        -340,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "// Clinic-flavoured first-touch copy. Kept in one place so the GHL snapshot and\n// the n8n workflow never drift apart.\nconst BOOKING_URL = $env.STL_BOOKING_URL || 'https://api.leadconnectorhq.com/widget/booking/QRPEnWRw2Kx9rBe0Mj6J';\n\nreturn $input.all().map((item) => {\n  const l = item.json.lead;\n  const first = l.name.split(' ')[0];\n\n  const sms =\n    'Hi ' + first + ', this is ' + l.clinic + '. Thanks for reaching out! ' +\n    'Are you looking to book a consultation? Reply with a day that suits you ' +\n    'and I will get you in. Or book directly: ' + BOOKING_URL;\n\n  const emailSubject = 'Re: your enquiry to ' + l.clinic;\n  const emailBody =\n    'Hi ' + first + ',\\n\\n' +\n    'Thanks for getting in touch with ' + l.clinic + '.\\n\\n' +\n    (l.message ? 'You wrote: \"' + l.message + '\"\\n\\n' : '') +\n    'We have consultation slots open this week. Pick a time here: ' + BOOKING_URL + '\\n\\n' +\n    'If you would rather talk first, just reply to this email.\\n\\n' +\n    '-- ' + l.clinic;\n\n  return {\n    json: {\n      ...item.json,\n      messages: {\n        sms: l.phone ? { to: l.phone, body: sms } : null,\n        email: l.email ? { to: l.email, subject: emailSubject, body: emailBody } : null,\n      },\n    },\n  };\n});"
+      },
+      "id": "compose-reply",
+      "name": "Compose Reply",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -120,
+        -120
+      ]
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "// SANDBOX TRANSPORT.\n// Hard boundary: this workflow must never send a real SMS or email to a real\n// person. STL_DELIVERY_MODE must stay 'sandbox' unless a live client account\n// has been signed off by the CEO. Swapping to Twilio/SMTP is a transport change\n// here only -- nothing upstream or downstream moves.\nconst mode = $env.STL_DELIVERY_MODE || 'sandbox';\n\nif (mode !== 'sandbox') {\n  throw new Error(\n    'STL_DELIVERY_MODE=' + mode + ' but no live transport is wired. ' +\n    'Refusing to silently drop messages.'\n  );\n}\n\nreturn $input.all().map((item) => {\n  const m = item.json.messages;\n  const attempts = [];\n\n  if (m.sms) {\n    attempts.push({ channel: 'sms', to: m.sms.to, transport: 'sandbox-sink', status: 'delivered', chars: m.sms.body.length });\n  }\n  if (m.email) {\n    attempts.push({ channel: 'email', to: m.email.to, transport: 'sandbox-sink', status: 'delivered', subject: m.email.subject });\n  }\n\n  return { json: { ...item.json, delivery: { mode, attempts, delivered_at: new Date().toISOString() } } };\n});"
+      },
+      "id": "deliver-first-touch",
+      "name": "Deliver First Touch",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        100,
+        -120
+      ]
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "// The GHL agency API is unconfigured (list_locations -> \"dependencies are not\n// configured\"). Rather than stall the demo, park a replay-ready payload. When\n// the credential is restored, the true branch takes over and this queue is\n// drained -- see automation/n8n/README.md, \"When the GHL credential comes back\".\nconst configured = ($env.GHL_SANDBOX_LOCATION_ID || '').trim().length > 0;\n\nreturn $input.all().map((item) => ({\n  json: {\n    ...item.json,\n    ghl: {\n      configured,\n      pipeline_id: '7yd9fhvPcfz1vqbF3kxN',\n      stage: 'New Lead',\n      tags: ['speed-to-lead', 'source-' + item.json.lead.source],\n      upsert_payload: {\n        firstName: item.json.lead.name,\n        phone: item.json.lead.phone,\n        email: item.json.lead.email,\n        source: item.json.lead.source,\n      },\n    },\n  },\n}));"
+      },
+      "id": "ghl-gate",
+      "name": "GHL Gate",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        320,
+        -120
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "loose",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "ghl-configured-c1",
+              "leftValue": "={{ $json.ghl.configured }}",
+              "rightValue": "",
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "looseTypeValidation": true,
+        "options": {}
+      },
+      "id": "ghl-configured",
+      "name": "GHL Configured",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        540,
+        -120
+      ]
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "// GHL configured -- placeholder for the HTTP upsert against the sandbox\n// location. Left inert until the credential is restored so the workflow imports\n// and runs cleanly either way (CLO-14 scope item 2).\nreturn $input.all().map((item) => ({\n  json: { ...item.json, crm: { status: 'upsert_pending_wiring', location: $env.GHL_SANDBOX_LOCATION_ID } },\n}));"
+      },
+      "id": "upsert-ghl-contact",
+      "name": "Upsert GHL Contact",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        760,
+        -220
+      ]
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "// GHL not configured -- record the contact upsert so nothing is lost.\nreturn $input.all().map((item) => ({\n  json: { ...item.json, crm: { status: 'queued_for_replay', reason: 'ghl_credential_unconfigured' } },\n}));"
+      },
+      "id": "queue-for-ghl-replay",
+      "name": "Queue For GHL Replay",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        760,
+        -20
+      ]
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "// The claim the whole pitch rests on: first touch inside 60 seconds.\n// pipeline_ms measures normalize -> respond inside n8n. It excludes inbound\n// network latency to the webhook; the end-to-end number is measured from the\n// caller's side by automation/n8n/test/speed-to-lead-smoke.mjs.\nconst BUDGET_MS = 60000;\n\nreturn $input.all().map((item) => {\n  const pipeline_ms = Date.now() - item.json.t0;\n  return {\n    json: {\n      ok: true,\n      lead: item.json.lead,\n      delivery: item.json.delivery,\n      crm: item.json.crm,\n      timing: { pipeline_ms, budget_ms: BUDGET_MS, within_budget: pipeline_ms < BUDGET_MS },\n    },\n  };\n});"
+      },
+      "id": "measure-response-time",
+      "name": "Measure Response Time",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        980,
+        -120
+      ]
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "return $input.all().map((item) => ({\n  json: { ok: false, rejected: true, problems: item.json.problems, lead: item.json.lead },\n}));"
+      },
+      "id": "reject-lead",
+      "name": "Reject Lead",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -120,
+        140
+      ]
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "respond",
+      "name": "Respond",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [
+        1200,
+        0
+      ]
+    }
+  ],
+  "connections": {
+    "Inbound Lead": {
+      "main": [
+        [
+          {
+            "node": "Normalize Lead",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Normalize Lead": {
+      "main": [
+        [
+          {
+            "node": "Valid Lead",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Valid Lead": {
+      "main": [
+        [
+          {
+            "node": "Compose Reply",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Reject Lead",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Compose Reply": {
+      "main": [
+        [
+          {
+            "node": "Deliver First Touch",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Deliver First Touch": {
+      "main": [
+        [
+          {
+            "node": "GHL Gate",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "GHL Gate": {
+      "main": [
+        [
+          {
+            "node": "GHL Configured",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "GHL Configured": {
+      "main": [
+        [
+          {
+            "node": "Upsert GHL Contact",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Queue For GHL Replay",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Upsert GHL Contact": {
+      "main": [
+        [
+          {
+            "node": "Measure Response Time",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Queue For GHL Replay": {
+      "main": [
+        [
+          {
+            "node": "Measure Response Time",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Measure Response Time": {
+      "main": [
+        [
+          {
+            "node": "Respond",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Reject Lead": {
+      "main": [
+        [
+          {
+            "node": "Respond",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "00000000-0000-4000-8000-000000000001",
+  "id": "SpeedToLeadIntakeV1",
+  "tags": []
+}

@@ -61,7 +61,14 @@ sound human + runs the sales QA checklist; only cards marked
   https://api.leadconnectorhq.com/widget/booking/QRPEnWRw2Kx9rBe0Mj6J
 - On approval: contact (tags cloudspring-web-leads + niche + ph/intl) +
   opportunity (12-mo value) + note (angle, mockup URL, offer, Trello link)
-- Nurture workflow: (not built yet — add name/ID here when created)
+- Nurture workflow: SPEC COMPLETE, NOT YET BUILT. Seven "STL" workflows are
+  specified turn-by-turn in `automation/ghl/speed-to-lead-snapshot-v1.md`
+  (first touch → AI qualification → booking → reminders → no-show recovery →
+  reactivation → weekly owner report). They must be built BY HAND in the GHL UI:
+  the public API has no create-workflow and no snapshot operation (checked
+  2026-08-19 across all 302 registry operations). Add names/IDs here once built.
+- GHL API health check: use `get-calendars` or `get-pipelines`, NOT
+  `list_locations` — see the 2026-08-19 learning below.
 
 ## Brand assets convention
 
@@ -328,6 +335,30 @@ sound human + runs the sales QA checklist; only cards marked
   "could not lock config file" (Operation not permitted) as on 08-16, AND the
   failed clone leaves an undeletable .git skeleton behind. Clone into /tmp
   instead of any mounted path.
+- 2026-08-19 (GHL WAS NEVER DOWN — correcting three runs of learnings): the
+  08-16, 08-17 and 08-18 entries above all report GHL as broken. They are wrong.
+  `list_locations` fails ("dependencies are not configured") because the
+  connection is bound to a SINGLE location and that operation is only meaningful
+  for multi-location connections. The API itself is fully live: `get-calendars`,
+  `get-pipelines` and `get-location` all return 200, and all 302 operations are
+  in scope (scopeFilteredCount: 0). Nothing needed re-authorising. Health-check
+  with `get-pipelines`, never `list_locations`. Cost of this mistake: three runs
+  of skipped contact/opportunity sync and skipped inbound-reply checks that
+  would have worked.
+- 2026-08-19 (GHL API limits, hard): the public API can create contacts, custom
+  fields, custom values, tags, pipelines, opportunities and calendars. It CANNOT
+  create workflows or snapshots — those are UI-only surfaces (verified across
+  85 write-operation candidates for workflows, 92 for snapshots; the closest hit
+  is `add-contact-to-workflow`, which only enrols a contact in an existing one).
+  Any plan that assumes an agent can build a GHL workflow end-to-end is not
+  achievable; agents write the spec, a human transcribes it in the UI.
+- 2026-08-19 (the connected location is PRODUCTION, not a sandbox): the bound
+  location `AtaR2iB3BL1hlhP4oU26` is CloudSpring IT Solutions itself — it holds
+  the live EASYCHURCH PH, MYHOMS PH and CLOUDSPRING WEB LEADS pipelines plus two
+  PUBLISHED workflows whose triggers the API does not expose. Creating a demo
+  contact there could enrol it in a published workflow and fire real outbound
+  from the company number. Demo/test contacts must NOT be written to this
+  location; a separate sandbox sub-account has to be created in the UI first.
 - 2026-08-18 (BACKLOG worsening — needs a decision now): STRATEGY READY holds
   35 stale dental + pediatric cards (Aug 09 and older, i.e. 9+ days). READY TO
   SEND is now at 30 cards, up from 26, and nothing has been approved since the
