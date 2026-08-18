@@ -272,3 +272,65 @@ sound human + runs the sales QA checklist; only cards marked
   shipped GENERIC BRANDING. GHL still returns "No locations available for this
   connection", so no sync or reply check was possible. APPROVED was empty so
   nothing was blocked, but the GHL connection has now been broken for two runs.
+- 2026-08-18 (auto repair W, run 2): LEAD HUNTER DID NOT RUN AGAIN. INCOMING
+  LEADS was empty at ~19:20 PHT, so the daily job carried the full 3 PH + 1
+  INTL quota itself via web search (Method B) for the second consecutive day.
+  This is no longer a one-off; treat the 6AM routine as broken until proven
+  otherwise, or fold lead-gen into the daily job officially.
+- 2026-08-18 (niche angle, Makati auto repair): directory capture holds for
+  Makati exactly as for QC. "auto repair shop Makati City best mechanic" p1 =
+  Yelp (4 result variants), StarOfService, infoisinfo-ph. Not one Makati shop
+  on its own domain. Three niches, three cities, same finding — this is now
+  the default PH angle and can be assumed rather than re-proved every run.
+- 2026-08-18 (NEW ANGLE — "the listings contradict each other"): a sharper,
+  more personal variant of directory capture. Makati Motorist is listed TWICE
+  on yellow-pages.ph with different postcodes (1234 vs 1200). Tower of David
+  is placed by Philkotse at Makati Cinema Square while its own Yelp and Yellow
+  Pages entries say J. Victor St., Pio del Pilar. "Two of the pages about you
+  disagree about where you are" beats "you rank poorly" because it is a
+  concrete error the owner can verify in ten seconds, and it makes the mockup
+  an identity-proof page. Check for conflicting duplicate listings on every
+  PH lead; it appeared on 2 of 3 today.
+- 2026-08-18 (NEW ANGLE — "the invisible second branch"): McQueen announced a
+  Las Piñas branch in a single FB post. Searching "McQueen auto repair Las
+  Piñas" returns nothing. An entire location invisible is a bigger, more
+  emotive loss than abstract ranking, and it gives the outreach a natural
+  question to ask ("where is it exactly?") that invites a reply instead of a
+  decision. Look for recent expansion/new-branch posts on every FB-only lead.
+- 2026-08-18 (blank borrowed domain, 3rd niche): Kingaroy Auto's only web
+  address is a Repco-AFFILIATE microsite (…-affiliate.repcoservice.net) that
+  returns 200 with an empty body — and Repco Authorised Service runs a rival
+  branch in the same town. New sub-variant of the 2026-08-16 blank-domain
+  learning: franchise/parts-network affiliate microsites count as blank
+  domains AND hand SEO value to a competitor. Check for them on every
+  AU/US/CA trade lead (Repco, NAPA, Bosch Car Service, etc.).
+- 2026-08-18 (INTL targeting confirmed): AU small-town auto repair behaves
+  like the US small-town pool found on 08-17 — FB-only, published email, weak
+  web presence, dealership competitors on real domains. Kingaroy (pop ~10k)
+  produced a lead with an email in one search. Small towns + trades remains
+  the best intl formula; keep rotating US → AU → CA → UK on trade weeks.
+- 2026-08-18 (lead quality): 2 of 4 have real email (Makati Motorist,
+  Kingaroy). Auto repair continues to out-perform clinics on contactability
+  (5 of 8 across two days vs 0 of 12 for dental/plumbing).
+- 2026-08-18 (QA catch worth repeating): the INTL draft was first quoted at
+  AUD 450 build + AUD 75/month, which converts to roughly USD 295 + USD 49 —
+  BELOW the config's USD 300–500 + USD 50–100 floor. When quoting a non-USD
+  currency, always convert and check against the config band before the draft
+  leaves QA. Corrected to AUD 650 + AUD 110/month.
+- 2026-08-18 (env, both blockers reproduced a 3rd time): Claude in Chrome
+  unavailable (list_connected_browsers = []), so brand capture skipped and all
+  4 mockups shipped GENERIC BRANDING. GHL now fails harder than before —
+  list_locations returns "list_locations dependencies are not configured"
+  (previously "No locations available"), so no sync and no inbound-reply check.
+  APPROVED was empty so nothing was blocked, but the GHL connection has been
+  down for three consecutive runs and needs re-authorising.
+- 2026-08-18 (env, git): cloning into the mounted outputs folder fails with
+  "could not lock config file" (Operation not permitted) as on 08-16, AND the
+  failed clone leaves an undeletable .git skeleton behind. Clone into /tmp
+  instead of any mounted path.
+- 2026-08-18 (BACKLOG worsening — needs a decision now): STRATEGY READY holds
+  35 stale dental + pediatric cards (Aug 09 and older, i.e. 9+ days). READY TO
+  SEND is now at 30 cards, up from 26, and nothing has been approved since the
+  derma batch on Aug 16. The pipeline is producing roughly 4 approvable drafts
+  a day into a queue no one is draining. Recommend Dei either triage READY TO
+  SEND before the next run or pause lead-gen for a day.
