@@ -87,10 +87,20 @@ canonical order; nothing runs outside it.
 ONE job, every day including weekends, starting **07:00 Asia/Manila**. All nine
 steps below belong to this single run.
 
+The job is the Paperclip routine **"Daily pipeline run (Asia/Manila)"**
+(`384fbc06-eb67-4554-8dbd-252922400301`), scheduled `0 7 * * *` Asia/Manila,
+`skip_if_active` + `skip_missed` so a slow run is never doubled and a missed day
+never arrives as two days of quota. It is owned by the CEO agent, which delegates
+each step to its specialist and compiles the report.
+
 There is no separate 6AM Lead Hunter routine any more. Lead generation is step 1
 of this run. (2026-08-17 and 2026-08-18: the separate routine silently produced
 nothing two days running and the daily job absorbed the full quota both times.
-One job that reliably runs beats two where one doesn't.)
+One job that reliably runs beats two where one doesn't.) If a 6AM Lead Hunter
+routine still exists on any other surface — a Claude Code Routine or a Cowork
+schedule — **disable it**. Two lead-gen jobs against one shared quota is the
+failure this section exists to remove, and a duplicate that works is worse than
+one that doesn't.
 
 Two rules that hold across every step:
 
