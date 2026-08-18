@@ -174,10 +174,15 @@ Mockup Builder works this order and does not reorder it:
 Gate, enforced not advised:
 
 - No card is built without `brand/brand.json` at `ready: true`.
-- Before every `git push`, run `node tools/brand-capture/verify-brand.mjs
-  <business-slug>`. Non-zero exit blocks the push for that slug.
-- There is no flag-and-ship-anyway path and no override. A mockup either carries
-  the lead's real branding or it is not pushed.
+- The gate runs **automatically on every `git push`**, via the versioned
+  `tools/hooks/pre-push` hook. It verifies every mockup folder the push touches
+  and refuses the entire push if any one of them fails. A refused push never
+  reaches Cloudflare Pages, so it never reaches a prospect.
+- Run `node tools/hooks/install.mjs` once per clone to wire the hook up. A clone
+  that has not run it is ungated — that is a broken environment, not a shortcut.
+- There is no flag-and-ship-anyway path and no override. `--no-verify` is not a
+  sanctioned command in this pipeline. A mockup either carries the lead's real
+  branding or it is not pushed.
 
 **Reports:** revisions / backlog / new built · gate pass and fail per slug ·
 deploy URL per slug.
@@ -324,7 +329,16 @@ There is no fourth state. There is no build-anyway path, no placeholder palette
 and no warning-label flag — a design the builder invented is not the prospect's
 brand, and labelling it as such does not make it sendable.
 
-### Deploy gate — run before every `git push`
+### Deploy gate — automatic on every `git push`
+
+One-time per clone:
+
+```bash
+node tools/hooks/install.mjs      # sets core.hooksPath = tools/hooks
+```
+
+After that the gate runs itself. To check a single folder by hand — QA does this
+as its independent second check — run it directly:
 
 ```bash
 node tools/brand-capture/verify-brand.mjs <business-slug>
@@ -337,6 +351,12 @@ Helvetica / Roboto don't count — they're in every font stack) · no leftover
 generic-branding marker · the real business name is on the page.
 
 Non-zero exit means **do not deploy**. There is no override.
+
+**What the hook gates.** A mockup folder is a top-level directory containing
+`index.html` — the deploy unit. The hook gates exactly those folders that the
+push touches, so a learnings-log or config commit is not blocked by unrelated
+folders. It also fails a folder with uncommitted changes: if the working tree
+isn't what's being pushed, the gate can't prove what would deploy.
 
 ### Other assets
 
