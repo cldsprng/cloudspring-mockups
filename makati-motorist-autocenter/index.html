@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Makati Motorist Auto Center Inc. — Auto Repair in Makati, QC & Parañaque</title>
+<meta name="description" content="Makati Motorist Auto Center Inc. — casa-quality auto repair at lower cost, accredited by most major insurers. Three branches: Makati, Quezon City and Parañaque. Since 2012.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0c1f3a;--navy2:#14304f;--steel:#1d4570;--orange:#d92b2b;--orange2:#f04747;--ink:#101820;--body:#4a5763;--line:#e3e8ee;--bg:#f6f8fb;--white:#fff;
+--sh:0 2px 8px rgba(12,31,58,.08);--sh2:0 12px 32px rgba(12,31,58,.15);--r:12px;
+--dsp:'Barlow Condensed',Impact,'Arial Narrow',sans-serif;--txt:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--txt);color:var(--body);background:var(--white);line-height:1.6;padding-bottom:104px;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.dsp{font-family:var(--dsp);color:var(--ink);letter-spacing:.01em;line-height:1.08;text-transform:uppercase}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:0;z-index:50;background:rgba(12,31,58,.97);backdrop-filter:blur(8px);border-bottom:3px solid var(--orange)}
+.hd{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 0}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo svg{flex:0 0 auto}
+.logo b{font-family:var(--dsp);font-size:24px;color:#fff;letter-spacing:.02em;line-height:1}
+.logo b span{color:var(--orange)}
+.logo small{display:block;font-family:var(--txt);font-size:9.5px;letter-spacing:.2em;color:#93a8c2;text-transform:uppercase;margin-top:3px}
+.nav{display:none;gap:26px}
+.nav a{color:#c3d3e5;text-decoration:none;font-size:14px;font-weight:500;padding:6px 0;border-bottom:2px solid transparent;transition:.18s}
+.nav a:hover,.nav a:focus-visible{color:#fff;border-color:var(--orange);outline:none}
+.tel{display:inline-flex;align-items:center;gap:7px;background:var(--orange);color:#fff;text-decoration:none;font-weight:600;font-size:14px;padding:10px 16px;border-radius:8px;box-shadow:0 3px 10px rgba(217,43,43,.32);transition:.18s;white-space:nowrap}
+.tel:hover,.tel:focus-visible{background:var(--orange2);transform:translateY(-1px);outline:none}
+@media(min-width:900px){.nav{display:flex}}
+.hero{position:relative;background:linear-gradient(155deg,var(--navy) 0%,var(--navy2) 55%,var(--steel) 100%);color:#dbe6f2;overflow:hidden}
+.hero:before{content:"";position:absolute;inset:0;background-image:repeating-linear-gradient(115deg,rgba(255,255,255,.028) 0 2px,transparent 2px 9px);pointer-events:none}
+.hero .wrap{position:relative;display:grid;gap:36px;padding-top:56px;padding-bottom:60px}
+@media(min-width:960px){.hero .wrap{grid-template-columns:1.08fr .92fr;align-items:center;padding-top:76px;padding-bottom:80px}}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:11.5px;font-weight:600;letter-spacing:.19em;text-transform:uppercase;color:var(--orange2);margin-bottom:16px}
+.eyebrow:before{content:"";width:26px;height:2px;background:var(--orange)}
+.hero h1{font-size:clamp(36px,7.2vw,60px);color:#fff}
+.hero h1 em{font-style:normal;color:var(--orange)}
+.hero p.sub{margin-top:16px;font-size:17px;max-width:32em;color:#b4c6da}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.btn{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:15px;padding:14px 24px;border-radius:9px;text-decoration:none;transition:.18s;border:2px solid transparent}
+.btn-p{background:var(--orange);color:#fff;box-shadow:0 5px 18px rgba(217,43,43,.32)}
+.btn-p:hover,.btn-p:focus-visible{background:var(--orange2);transform:translateY(-2px);outline:none}
+.btn-g{border-color:rgba(255,255,255,.28);color:#fff}
+.btn-g:hover,.btn-g:focus-visible{border-color:var(--orange);background:rgba(255,255,255,.09);outline:none}
+.facts{display:flex;flex-wrap:wrap;gap:10px 26px;margin-top:30px;padding-top:22px;border-top:1px solid rgba(255,255,255,.12)}
+.fact{font-size:13px;color:#93a8c2}
+.fact b{display:block;font-family:var(--dsp);font-size:20px;color:#fff;letter-spacing:.02em}
+.art{background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.13);border-radius:16px;padding:22px}
+.art svg{width:100%;height:auto;display:block}
+.artcap{margin-top:14px;font-size:12px;color:#93a8c2;text-align:center;letter-spacing:.04em}
+section{padding:66px 0}
+.alt{background:var(--bg)}
+.shead{max-width:660px;margin-bottom:38px}
+.shead .kick{font-size:11.5px;font-weight:600;letter-spacing:.19em;text-transform:uppercase;color:var(--orange);margin-bottom:10px}
+.shead h2{font-size:clamp(27px,4.5vw,39px)}
+.shead p{margin-top:12px;font-size:16px}
+.grid{display:grid;gap:18px;grid-template-columns:1fr}
+@media(min-width:620px){.grid{grid-template-columns:1fr 1fr}}
+@media(min-width:960px){.grid.g3{grid-template-columns:repeat(3,1fr)}}
+.card{background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:24px;box-shadow:var(--sh);transition:.2s}
+.card:hover{box-shadow:var(--sh2);transform:translateY(-3px);border-color:#c9d7e6}
+.ico{width:44px;height:44px;border-radius:10px;background:linear-gradient(140deg,var(--navy),var(--steel));display:grid;place-items:center;margin-bottom:15px}
+.card h3{font-size:19px;margin-bottom:8px}
+.card p{font-size:14.5px}
+.price{margin-top:14px;padding-top:12px;border-top:1px dashed var(--line);font-size:13px;color:#8b98a5}
+.price b{font-family:var(--dsp);font-size:19px;color:var(--ink);letter-spacing:.02em}
+.note{display:inline-block;margin-top:26px;font-size:13px;color:#7c8894;background:#fff5f5;border:1px dashed var(--orange2);border-radius:8px;padding:10px 14px}
+.why{display:grid;gap:16px;grid-template-columns:1fr}
+@media(min-width:720px){.why{grid-template-columns:repeat(3,1fr)}}
+.wcard{background:var(--navy);color:#c1d2e5;border-radius:var(--r);padding:26px;border-left:4px solid var(--orange)}
+.wcard h3{color:#fff;font-size:20px;margin-bottom:8px}
+.wcard p{font-size:14.5px}
+.about{display:grid;gap:32px}
+@media(min-width:900px){.about{grid-template-columns:1.15fr .85fr;align-items:start}}
+.about p{margin-bottom:14px;font-size:16px}
+.hours{background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:24px;box-shadow:var(--sh)}
+.hours h3{font-size:20px;margin-bottom:14px}
+.hrow{display:flex;justify-content:space-between;gap:14px;padding:9px 0;border-bottom:1px solid var(--line);font-size:14.5px}
+.hrow:last-child{border:0}
+.hrow b{color:var(--ink);font-weight:600}
+.open{display:inline-block;margin-top:12px;background:#eafaf0;color:#12703c;font-size:12.5px;font-weight:600;padding:6px 12px;border-radius:99px}
+.cgrid{display:grid;gap:26px}
+@media(min-width:900px){.cgrid{grid-template-columns:.95fr 1.05fr}}
+.cbox{background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:26px;box-shadow:var(--sh)}
+.cline{display:flex;gap:13px;align-items:flex-start;padding:13px 0;border-bottom:1px solid var(--line)}
+.cline:last-of-type{border:0}
+.cline svg{flex:0 0 auto;margin-top:2px}
+.cline span{font-size:12px;text-transform:uppercase;letter-spacing:.13em;color:#93a0ad;display:block;margin-bottom:2px}
+.cline a,.cline p{font-size:15.5px;color:var(--ink);text-decoration:none;font-weight:500}
+.cline a:hover{color:var(--orange)}
+label{display:block;font-size:12.5px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:#7c8894;margin:14px 0 6px}
+input,textarea,select{width:100%;font-family:var(--txt);font-size:15px;color:var(--ink);padding:12px 14px;border:1.5px solid var(--line);border-radius:9px;background:#fbfcfe;transition:.16s}
+input:focus,textarea:focus,select:focus{outline:none;border-color:var(--orange);background:#fff;box-shadow:0 0 0 3px rgba(217,43,43,.32)}
+textarea{min-height:104px;resize:vertical}
+.map{margin-top:16px;height:170px;border-radius:10px;border:1px solid var(--line);background:
+linear-gradient(90deg,transparent 49.4%,#d6e0ea 49.4% 50.6%,transparent 50.6%),
+linear-gradient(0deg,transparent 61%,#d6e0ea 61% 62%,transparent 62%),
+linear-gradient(0deg,transparent 27%,#e2e9f0 27% 27.8%,transparent 27.8%),#eef3f8;position:relative;overflow:hidden}
+.pin{position:absolute;left:50%;top:61%;transform:translate(-50%,-100%)}
+.maplbl{position:absolute;left:50%;top:63%;transform:translateX(-50%);background:#fff;border:1px solid var(--line);border-radius:7px;padding:6px 11px;font-size:12px;font-weight:600;color:var(--ink);white-space:nowrap;box-shadow:var(--sh)}
+.branches{display:grid;gap:16px;grid-template-columns:1fr}
+@media(min-width:760px){.branches{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}}
+.bcard{background:var(--white);border:1px solid var(--line);border-left:4px solid var(--orange);border-radius:var(--r);padding:22px;box-shadow:var(--sh)}
+.bcard h3{font-size:18px;margin-bottom:8px}
+.bcard p{font-size:14.5px;margin-bottom:8px}
+.bcard a{color:var(--orange);font-weight:600;text-decoration:none;font-size:14.5px}
+.bcard a:hover{text-decoration:underline}
+.badge{display:inline-flex;align-items:center;gap:7px;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.2);color:#fff;font-size:12.5px;font-weight:600;padding:7px 13px;border-radius:99px;margin-top:18px}
+footer{background:var(--navy);color:#93a8c2;padding:40px 0 30px;font-size:14px}
+.fgrid{display:flex;flex-wrap:wrap;gap:22px;justify-content:space-between;align-items:flex-start}
+footer b{font-family:var(--dsp);font-size:22px;color:#fff;display:block;letter-spacing:.02em}
+footer a{color:#c3d3e5}
+footer a:hover{color:var(--orange2)}
+.fbot{margin-top:26px;padding-top:18px;border-top:1px solid rgba(255,255,255,.11);font-size:12.5px;display:flex;flex-wrap:wrap;gap:8px;justify-content:space-between}
+.csbar{position:fixed;left:0;right:0;bottom:0;z-index:99;background:rgba(10,17,26,.965);backdrop-filter:blur(10px);border-top:1px solid rgba(255,255,255,.14);padding:11px 16px}
+.csin{max-width:1120px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.cstag{font-size:9.5px;letter-spacing:.24em;text-transform:uppercase;color:#7d90a6;margin-bottom:3px}
+.csmsg{color:#fff;font-size:14.5px;font-weight:600;line-height:1.35;max-width:62ch}
+.csmsg i{font-style:normal;color:var(--orange2)}
+.csbtn{display:inline-flex;align-items:center;gap:8px;background:var(--orange);color:#fff;text-decoration:none;font-weight:700;font-size:14px;padding:12px 21px;border-radius:99px;white-space:nowrap;box-shadow:0 0 0 0 rgba(217,43,43,.32);animation:pulse 2.4s infinite;transition:.18s}
+.csbtn:hover,.csbtn:focus-visible{background:var(--orange2);transform:translateY(-2px);outline:none;animation:none}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(217,43,43,.32)}70%{box-shadow:0 0 0 15px rgba(0,0,0,0)}100%{box-shadow:0 0 0 0 rgba(0,0,0,0)}}
+@media(prefers-reduced-motion:reduce){.csbtn{animation:none}*{transition:none!important}}
+@media(max-width:640px){.csin{flex-direction:column;text-align:center;gap:10px}.csmsg{font-size:13.5px}body{padding-bottom:150px}}
+
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap hd">
+    <a class="logo" href="#top" aria-label="Makati Motorist Auto Center Inc. home">
+      <svg width="38" height="38" viewBox="0 0 38 38" fill="none" aria-hidden="true"><path d="M19 3.2 4.6 8.6v10.2c0 8 6.1 14.4 14.4 16.4 8.3-2 14.4-8.4 14.4-16.4V8.6L19 3.2Z" stroke="#d92b2b" stroke-width="2.2" stroke-linejoin="round"/><path d="M11.6 16.4h14.8M14.4 16.4v6.4M23.6 16.4v6.4" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/></svg>
+      <span><b>MAKATI <span>MOTORIST</span></b><small>Auto Center Inc. &middot; Since 2012</small></span>
+    </a>
+    <nav class="nav"><a href="#services">Services</a><a href="#why">Why us</a><a href="#branches">Branches</a><a href="#contact">Contact</a></nav>
+    <a class="tel" href="tel:+63288441066">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 2h3l1.6 4-2.2 1.4a13 13 0 0 0 5.6 5.6L16 10.8l4 1.6v3a2 2 0 0 1-2.2 2A17.6 17.6 0 0 1 2.4 4.2 2 2 0 0 1 4.4 2h2.2Z" stroke="#fff" stroke-width="2" stroke-linejoin="round"/></svg>
+      (02) 8844 1066
+    </a>
+  </div>
+</header>
+
+<div class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Guatemala St. &middot; Brgy. San Isidro, Makati City</div>
+      <h1>Casa quality repairs, <em>without the casa bill.</em></h1>
+      <p class="sub">Makati Motorist Auto Center has been repairing cars in Metro Manila since 2012, from three branches, accredited by most of the country’s major insurers. Same standard of work as the dealership, at an independent shop’s price.</p>
+      <div class="cta">
+        <a class="btn btn-p" href="tel:+63288441066">Call (02) 8844 1066</a>
+        <a class="btn btn-g" href="https://facebook.com/makatimotorist" target="_blank" rel="noopener">Message us on Facebook</a>
+      </div>
+      <div class="facts"><div class="fact"><b>Since 2012</b>14 years on Guatemala St.</div><div class="fact"><b>3 branches</b>Makati &middot; QC &middot; Para&ntilde;aque</div><div class="fact"><b>Insurance</b>accredited repair shop</div></div>
+    </div>
+    <div class="art">
+      <svg viewBox="0 0 400 250" role="img" aria-label="Illustration of a car being inspected in a service bay">
+        <rect width="400" height="250" rx="10" fill="#081527"/>
+        <g stroke="#1d4570" stroke-width="1.4"><line x1="0" y1="198" x2="400" y2="198"/><line x1="0" y1="54" x2="400" y2="54"/></g>
+        <rect x="34" y="70" width="86" height="112" rx="7" fill="#0f2745" stroke="#1d4570" stroke-width="1.6"/>
+        <g stroke="#3c6698" stroke-width="2.6" stroke-linecap="round"><path d="M50 92h54M50 108h54M50 124h34"/></g>
+        <path d="M62 150l10 10 20-22" stroke="#d92b2b" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <path d="M152 152h190c7 0 10-5 8-11l-9-25c-3-8-9-13-18-14l-52-4c-9-1-16 1-23 5l-28 18-58 8c-8 1-13 6-13 13v3c0 4 1 7 3 7Z" fill="#d92b2b"/>
+        <path d="M222 108l-24 16 48-1-3-14c-7-1-14-1-21-1Z" fill="#a9d4f6"/>
+        <path d="M253 109l4 14 46-1-4-8c-3-4-7-6-13-6l-33 1Z" fill="#cbe6fb"/>
+        <circle cx="191" cy="153" r="19" fill="#0b1420"/><circle cx="191" cy="153" r="8" fill="#8ea3bb"/>
+        <circle cx="306" cy="153" r="19" fill="#0b1420"/><circle cx="306" cy="153" r="8" fill="#8ea3bb"/>
+        <rect x="146" y="180" width="220" height="8" rx="3" fill="#14304f"/>
+        <g stroke="#4a6b92" stroke-width="3" stroke-linecap="round"><path d="M348 78l22 0"/><path d="M359 67v22"/></g>
+      </svg>
+      <div class="artcap">Sample layout — your own shop photos go here</div>
+    </div>
+  </div>
+</div>
+
+<section id="services">
+  <div class="wrap">
+    <div class="shead">
+      <div class="kick">What we do</div>
+      <h2>General repair for every make on the road</h2>
+      <p>The work Makati Motorist has been doing on Guatemala Street since 2012 — insurance jobs, mechanical, electrical and body repair, all under one roof.</p>
+    </div>
+    <div class="grid g3"><div class="card"><div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 2.6 4.4 5.8v6c0 4.7 3.2 8.4 7.6 9.6 4.4-1.2 7.6-4.9 7.6-9.6v-6L12 2.6Z" stroke="#d92b2b" stroke-width="1.9" stroke-linejoin="round"/><path d="m8.6 11.8 2.4 2.4 4.4-4.6" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3>Insurance repair jobs</h3><p>Accredited with most of the major insurers, so an accident claim is handled shop-to-insurer instead of landing on you. Estimates prepared in the format adjusters expect.</p><div class="price">Coordinated with <b>your insurer</b></div></div>
+      <div class="card"><div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M20.2 5.6a5.2 5.2 0 0 1-6.6 6.6L6 19.8a2.3 2.3 0 0 1-3.3-3.3l7.6-7.6a5.2 5.2 0 0 1 6.6-6.6l-3 3 .6 3.4 3.4.6 3-3Z" stroke="#d92b2b" stroke-width="1.9" stroke-linejoin="round"/></svg></div>
+        <h3>General mechanical</h3><p>Engine, transmission, brakes, suspension and cooling. Diagnosed first, quoted second, repaired third — never the other way around.</p><div class="price">Starting at <b>&#8369; ___</b> &middot; your actual rates go here</div></div>
+      <div class="card"><div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M6 14c0-4 6-10 6-10s6 6 6 10a6 6 0 0 1-12 0Z" stroke="#d92b2b" stroke-width="2" stroke-linejoin="round"/></svg></div>
+        <h3>Preventive maintenance</h3><p>Scheduled PMS, oil and filter changes at the intervals your engine actually calls for, using the grade the manufacturer specifies.</p><div class="price">Starting at <b>&#8369; ___</b> &middot; your actual rates go here</div></div>
+      <div class="card"><div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 17h18M6 17V9l3-4h6l3 4v8" stroke="#d92b2b" stroke-width="2" stroke-linejoin="round"/><circle cx="8" cy="17" r="2.2" stroke="#fff" stroke-width="1.8"/><circle cx="16" cy="17" r="2.2" stroke="#fff" stroke-width="1.8"/></svg></div>
+        <h3>Body repair &amp; refinishing</h3><p>Panel work, dents and repainting for both insurance jobs and private repairs, colour-matched to your car’s factory finish.</p><div class="price">Starting at <b>&#8369; ___</b> &middot; your actual rates go here</div></div>
+      <div class="card"><div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="3" y="6" width="18" height="12" rx="2.5" stroke="#fff" stroke-width="1.8"/><path d="M7 12h3l2-3 2 6 2-3h1" stroke="#d92b2b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3>Diagnostics</h3><p>Check-engine light read and explained in plain language, with a written estimate before anything is opened up.</p><div class="price">Starting at <b>&#8369; ___</b> &middot; your actual rates go here</div></div>
+      <div class="card"><div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8.6" stroke="#fff" stroke-width="1.8"/><circle cx="12" cy="12" r="3.4" stroke="#d92b2b" stroke-width="2.2"/></svg></div>
+        <h3>All makes &amp; models</h3><p>Japanese, Korean, American and European vehicles serviced across all three branches.</p><div class="price">Starting at <b>&#8369; ___</b> &middot; your actual rates go here</div></div></div>
+    <div class="note">Sample layout — the service list and prices above are placeholders for Makati Motorist’s real rates.</div>
+  </div>
+</section>
+
+<section class="alt" id="why">
+  <div class="wrap">
+    <div class="shead"><div class="kick">Why Makati Motorist</div><h2>Fourteen years, three branches, one standard</h2></div>
+    <div class="why"><div class="wcard"><h3>Insurance-accredited</h3><p>Accredited with most of the country’s top insurance companies. If your car is covered, the claim work is something this shop does every week, not a favour.</p></div>
+      <div class="wcard"><h3>Casa quality, lower cost</h3><p>The same repair standard the dealership applies, without dealership labour rates — the reason customers have kept coming back since 2012.</p></div>
+      <div class="wcard"><h3>Three branches</h3><p>Makati, Quezon City and Para&ntilde;aque, so the car goes to whichever bay is closest to where you actually are.</p></div></div>
+  </div>
+</section>
+
+<section id="branches">
+  <div class="wrap">
+    <div class="shead"><div class="kick">Where to find us</div><h2>Three branches across Metro Manila</h2><p>One company, three service bays. Call the branch nearest you to check availability before driving in.</p></div>
+    <div class="branches">
+      <div class="bcard"><h3>Makati &mdash; Main</h3><p>2700 Guatemala Street,<br>Brgy. San Isidro, Makati City</p><a href="tel:+63288441066">(02) 8844 1066</a></div>
+      <div class="bcard"><h3>Quezon City</h3><p>Branch address &mdash; to be confirmed<br>Quezon City, Metro Manila</p><a href="tel:+63288885565">(02) 8888 5565</a></div>
+      <div class="bcard"><h3>Para&ntilde;aque</h3><p>Branch address &mdash; to be confirmed<br>Para&ntilde;aque City, Metro Manila</p><a href="tel:+63288441066">(02) 8844 1066</a></div>
+    </div>
+    <div class="note">Sample layout &mdash; branch addresses and direct lines are placeholders until confirmed by the shop.</div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap about">
+    <div>
+      <div class="shead"><div class="kick">About the shop</div><h2>An independent shop the insurers trust</h2></div>
+      <p>Makati Motorist Auto Center Inc. has operated from Guatemala Street in Brgy. San Isidro since 2012. The proposition has stayed the same the whole time: casa-standard repair work at an independent shop’s price, done by people who explain what the car needs and what it does not.</p><p>Accreditation with most major insurers means claim repairs are routine here. Three branches across Makati, Quezon City and Para&ntilde;aque keep the work close to where customers live and drive.</p>
+      <div class="cta"><a class="btn btn-p" href="tel:+63288441066">Call (02) 8844 1066</a></div>
+    </div>
+    <div class="hours">
+      <h3>Shop hours</h3>
+      <div class="hrow"><span>Monday &ndash; Friday</span><b>To be confirmed</b></div><div class="hrow"><span>Saturday</span><b>To be confirmed</b></div><div class="hrow"><span>Sunday</span><b>To be confirmed</b></div>
+      <p style="margin-top:14px;font-size:13px;color:#8b98a5">Public directory listings disagree on this shop’s hours and even its postcode. Confirmed hours go here — on a page you control.</p>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="contact">
+  <div class="wrap">
+    <div class="shead"><div class="kick">Visit or call</div><h2>Guatemala Street, Brgy. San Isidro</h2></div>
+    <div class="cgrid">
+      <div class="cbox">
+        <div class="cline"><svg width="19" height="19" viewBox="0 0 24 24" fill="none"><path d="M12 21s7-6.4 7-11a7 7 0 1 0-14 0c0 4.6 7 11 7 11Z" stroke="#d92b2b" stroke-width="1.9"/><circle cx="12" cy="10" r="2.6" stroke="#0c1f3a" stroke-width="1.9"/></svg><div><span>Address</span><p>2700 Guatemala Street,<br>Brgy. San Isidro, Makati City</p></div></div>
+        <div class="cline"><svg width="19" height="19" viewBox="0 0 24 24" fill="none"><path d="M6.6 2h3l1.6 4-2.2 1.4a13 13 0 0 0 5.6 5.6L16 10.8l4 1.6v3a2 2 0 0 1-2.2 2A17.6 17.6 0 0 1 2.4 4.2 2 2 0 0 1 4.4 2h2.2Z" stroke="#d92b2b" stroke-width="1.9" stroke-linejoin="round"/></svg><div><span>Phone</span><a href="tel:+63288441066">(02) 8844 1066</a> &nbsp;&middot;&nbsp; <a href="tel:+63288885565">(02) 8888 5565</a></div></div>
+        <div class="cline"><svg width="19" height="19" viewBox="0 0 24 24" fill="none"><rect x="2.6" y="4.6" width="18.8" height="14.8" rx="2.4" stroke="#d92b2b" stroke-width="1.9"/><path d="m3.6 6.4 8.4 6.2 8.4-6.2" stroke="#0c1f3a" stroke-width="1.9"/></svg><div><span>Email</span><a href="mailto:makati_motorist@yahoo.com">makati_motorist@yahoo.com</a></div></div>
+        <div class="cline"><svg width="19" height="19" viewBox="0 0 24 24" fill="none"><path d="M14 8.4h2.6V5.2H14c-2.4 0-4 1.6-4 4v2H7.6v3.2H10v6.4h3.2v-6.4h2.6l.6-3.2h-3.2v-1.6c0-.7.3-1.2.8-1.2Z" stroke="#d92b2b" stroke-width="1.7" stroke-linejoin="round"/></svg><div><span>Facebook</span><a href="https://facebook.com/makatimotorist" target="_blank" rel="noopener">facebook.com/makatimotorist</a></div></div>
+        <div class="map"><svg class="pin" width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 22s7-6.4 7-11a7 7 0 1 0-14 0c0 4.6 7 11 7 11Z" fill="#d92b2b"/><circle cx="12" cy="10.6" r="2.6" fill="#fff"/></svg><div class="maplbl">2700 Guatemala St, San Isidro</div></div>
+      </div>
+      <div class="cbox">
+        <h3 style="font-size:21px">Request an estimate</h3>
+        <p style="font-size:14.5px;margin-top:6px">Tell us the car and what happened, and we’ll come back with an estimate — insurance or private.</p>
+        <form onsubmit="event.preventDefault();window.location.href='mailto:makati_motorist@yahoo.com?subject=Service%20enquiry%20from%20website&body='+encodeURIComponent(document.getElementById('m').value||'');">
+          <label for="n">Your name</label><input id="n" type="text" placeholder="Juan dela Cruz">
+          <label for="c">Vehicle (make, model, year)</label><input id="c" type="text" placeholder="Toyota Vios 2018">
+          <label for="s">Service needed</label>
+          <select id="s"><option>Insurance claim repair</option><option>General mechanical repair</option><option>Preventive maintenance / oil change</option><option>Body repair &amp; repaint</option><option>Diagnostics</option><option>Something else</option></select>
+          <label for="m">Details</label><textarea id="m" placeholder="Rear bumper damage from a minor collision, insured with …"></textarea>
+          <button class="btn btn-p" style="margin-top:18px;width:100%;justify-content:center;border:0;cursor:pointer" type="submit">Send enquiry</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div><b>MAKATI MOTORIST</b><p style="margin-top:6px">Auto Center Inc.<br>Makati &middot; Quezon City &middot; Para&ntilde;aque</p></div>
+      <div><p><a href="tel:+63288441066">(02) 8844 1066</a><br><a href="mailto:makati_motorist@yahoo.com">makati_motorist@yahoo.com</a><br><a href="https://facebook.com/makatimotorist" target="_blank" rel="noopener">facebook.com/makatimotorist</a></p></div>
+      <div><p>2700 Guatemala Street<br>Brgy. San Isidro, Makati City<br>Insurance-accredited since 2012</p></div>
+    </div>
+    <div class="fbot"><span>&copy; 2026 Makati Motorist Auto Center Inc.. All rights reserved.</span><span>Website by CloudSpring IT Solutions</span></div>
+  </div>
+</footer>
+
+<div class="csbar" role="complementary" aria-label="CloudSpring preview">
+  <div class="csin">
+    <div>
+      <div class="cstag">Preview &middot; CloudSpring IT Solutions</div>
+      <div class="csmsg">Want this website <i>+ one page that finally lists all three branches, instead of eight directory listings that each say something different?</i></div>
+    </div>
+    <a class="csbtn" href="https://api.leadconnectorhq.com/widget/booking/QRPEnWRw2Kx9rBe0Mj6J" target="_blank" rel="noopener">Book a FREE Discovery Call &rarr;</a>
+  </div>
+</div>
+
+</body>
+</html>
