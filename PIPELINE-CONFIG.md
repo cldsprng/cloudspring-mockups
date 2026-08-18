@@ -36,7 +36,13 @@ Niche calendar (the human owns this list — edit freely):
 Board: CLOUDSPRING_MAINBOARD — https://trello.com/b/TIAlGfU8/cloudspringmainboard
 Lists: INCOMING LEADS → STRATEGY READY → MOCKUP READY → READY TO SEND →
 CHANGES REQUESTED → APPROVED → SYNCED TO GHL (SEND MANUALLY) → CONTACTED →
-REPLIED (HITS) → CLIENTS, + REJECTED
+REPLIED (HITS) → CLIENTS, + BRAND BLOCKED, + REJECTED
+
+BRAND BLOCKED holds leads where brand capture returned `no-assets` — no logo
+could be found anywhere, so no mockup may be built. It is a human decision
+queue, not a failure bin: drop real assets into `<slug>/brand/` and the card
+re-enters at MOCKUP READY, or reject the lead. Nothing leaves this list by
+being built with an invented palette.
 
 APPROVED flow: agent syncs every approved card to GHL (contact + opportunity
 + note, "✅ Synced to GHL" marker). Email leads auto-send via GHL → CONTACTED.
@@ -65,12 +71,57 @@ sound human + runs the sales QA checklist; only cards marked
 
 ## Brand assets convention
 
-- Per-lead asset folders in this repo: `<business-slug>/brand/` (logo, brand screenshots) and `<business-slug>/photos/` (real photos of the business — the Lead Hunter downloads Google Place photos here via the Places API).
-- The mockup builder reads these with vision to derive the REAL brand palette and uses the real photos as site imagery.
-- No assets available → builder ships a neutral-premium design FLAGGED "⚠️ GENERIC BRANDING" on the card; QA enforces the flag; the human decides (send anyway / drop assets in and request changes / polish in a Claude Code session).
+Brand capture is **headless and automatic**. It runs in any scheduled run — no
+browser, no desktop session, no human step. `tools/brand-capture/` is the
+implementation; run it for every lead before the mockup is built.
+
+```bash
+node tools/brand-capture/capture.mjs --site <domain> --facebook <page-slug> \
+     --slug <business-slug> --out <business-slug>/brand
+```
+
+Plain Node (v18+), zero dependencies. Writes `<slug>/brand/brand.json` plus every
+logo file it could download. Exit code is `0` when `ready`, `1` otherwise.
+
+**Facebook is capturable without a browser.** The page *HTML* is login-walled,
+but `https://graph.facebook.com/<page-slug>/picture?type=large` needs **no access
+token, no login and no browser** — a plain HTTP request returns the page's
+profile picture. For a Facebook-only lead, which is most of this pipeline by
+definition of the qualifier, that image *is* the brand. (Verified 2026-08-19:
+returns the Fast Autoworks logo as a 5.5KB JPEG from an unauthenticated run.)
+
+### The three states of `brand.json`
+
+| `ready` | `blockedBy` | What the builder does |
+|---|---|---|
+| `true` | `null` | **Build.** Use the captured logo file, the `colors.brand` hexes, and the captured typeface. |
+| `false` | `palette-pending` | Logo exists, no CSS to read colour from — the Facebook-only case. **Vision-read the logo**, write the hexes into `colors.brand[]` with `colors.source: "vision"`, set `ready: true`, then build. |
+| `false` | `no-assets` | **Do not build.** No usable logo anywhere. Card goes to `BRAND BLOCKED` for a human call: hand-drop assets into `<slug>/brand/`, or drop the lead. |
+
+There is no fourth state. There is no build-anyway path, no placeholder palette
+and no warning-label flag — a design the builder invented is not the prospect's
+brand, and labelling it as such does not make it sendable.
+
+### Deploy gate — run before every `git push`
+
+```bash
+node tools/brand-capture/verify-brand.mjs <business-slug>
+```
+
+Six checks: `brand.json` is `ready` · a captured logo file is actually referenced
+in `index.html` · **≥2 captured brand hexes appear in the styling** (this is the
+check that catches an invented palette) · the captured typeface is used (Arial /
+Helvetica / Roboto don't count — they're in every font stack) · no leftover
+generic-branding marker · the real business name is on the page.
+
+Non-zero exit means **do not deploy**. There is no override.
+
+### Other assets
+
+- Per-lead folders in this repo: `<business-slug>/brand/` (logo + `brand.json`) and `<business-slug>/photos/` (real photos — the Lead Hunter downloads Google Place photos here via the Places API).
+- The builder uses the real photos as site imagery.
 - Human/Claude Code edits to a mockup folder are authoritative — pipeline agents git pull first and never rebuild over non-pipeline commits.
-- Facebook cannot be scraped from any headless run (robots-blocked). FB photos/logos are captured by the HUMAN via Claude in Chrome (browses as the logged-in user) and committed to `<slug>/brand/` and `<slug>/photos/`.
-- Auto-rebrand: every run, the builder rechecks GENERIC BRANDING-flagged cards; if asset folders now have files, it rebuilds with the real branding on the same URL and clears the flag.
+- Re-capture pass: every run, the builder rechecks cards sitting in `BRAND BLOCKED`; if assets have since appeared, it re-runs capture, rebuilds on the same URL, and moves the card back into the flow.
 
 ## Deployment
 
@@ -174,7 +225,7 @@ sound human + runs the sales QA checklist; only cards marked
 - 2026-07-27 (calendar drift RESOLVED): Lead Hunter delivered dental leads
   on Jul 27, matching the calendar. The Jul 26 plumbing mismatch was a
   one-off; no calendar edit needed.
-- 2026-07-27: Dental Hive mockup shipped with generic palette (no brand asset access) and QA missed it. Fixes: brand-assets convention above, GENERIC BRANDING flag, QA branding check, Lead Hunter to download Place photos per lead.
+- 2026-07-27: Dental Hive mockup shipped with an invented palette (no brand asset access) and QA missed it. Fixes at the time: brand-assets convention above, a warning flag on the card, QA branding check, Lead Hunter to download Place photos per lead. The warning flag was retired on 2026-08-19 — see that entry; it was the part of this fix that did not work.
 - 2026-08-16 (derma W wrap): NEW ANGLE — "the blank domain you already pay for".
   4 of 14 derma leads OWN a domain that serves an empty body (hugoderm.com,
   kutisbykei.com/.ph, skincosmeticclinic.com.au, alodermatology.com), and in
@@ -201,12 +252,12 @@ sound human + runs the sales QA checklist; only cards marked
   weeks stale (evidence dates and competitor claims will need re-verifying
   before they can be sent). Either schedule a catch-up build run or archive
   them — the daily run cannot absorb a backlog this size on top of quota.
-- 2026-08-16 (brand capture cannot run unattended): a scheduled Cowork run has
-  no Claude in Chrome — list_connected_browsers returned []. So step 3 is
-  structurally a HUMAN-initiated desktop step, not something the daily job can
-  ever do. Consequence: all 14 derma mockups shipped flagged GENERIC BRANDING.
-  The auto-rebrand pass is the only path back, and it needs Dei to run
-  brand-capture in a desktop session first.
+- 2026-08-16 (brand capture cannot run unattended) — **WRONG, corrected
+  2026-08-19, see that entry**: a scheduled Cowork run has no Claude in Chrome —
+  list_connected_browsers returned []. Concluded step 3 was structurally a
+  HUMAN-initiated desktop step. Consequence: all 14 derma mockups shipped with
+  an invented palette. The browser was never the requirement; the conclusion
+  drawn from an empty browser list was.
 - 2026-08-16 (GHL blocked): the GoHighLevel connector returned "No locations
   available for this connection", so no contact/opportunity sync and no
   inbound-reply check was possible. Nothing was due (APPROVED was empty), but
@@ -268,10 +319,12 @@ sound human + runs the sales QA checklist; only cards marked
   which is the real bottleneck — nothing has been approved since the derma
   batch. Suggest Dei triage READY TO SEND before the pipeline generates more.
 - 2026-08-17 (env, both blockers reproduced): Claude in Chrome unavailable
-  (list_connected_browsers = []) so brand capture skipped again — all 4 mockups
-  shipped GENERIC BRANDING. GHL still returns "No locations available for this
-  connection", so no sync or reply check was possible. APPROVED was empty so
-  nothing was blocked, but the GHL connection has now been broken for two runs.
+  (list_connected_browsers = []) so brand capture was skipped again — all 4
+  mockups shipped with an invented palette. (The browser half of this was a
+  false blocker; corrected 2026-08-19.) GHL still returns "No locations
+  available for this connection", so no sync or reply check was possible.
+  APPROVED was empty so nothing was blocked, but the GHL connection has now
+  been broken for two runs.
 - 2026-08-18 (auto repair W, run 2): LEAD HUNTER DID NOT RUN AGAIN. INCOMING
   LEADS was empty at ~19:20 PHT, so the daily job carried the full 3 PH + 1
   INTL quota itself via web search (Method B) for the second consecutive day.
@@ -318,8 +371,9 @@ sound human + runs the sales QA checklist; only cards marked
   currency, always convert and check against the config band before the draft
   leaves QA. Corrected to AUD 650 + AUD 110/month.
 - 2026-08-18 (env, both blockers reproduced a 3rd time): Claude in Chrome
-  unavailable (list_connected_browsers = []), so brand capture skipped and all
-  4 mockups shipped GENERIC BRANDING. GHL now fails harder than before —
+  unavailable (list_connected_browsers = []), so brand capture was skipped and
+  all 4 mockups shipped with an invented palette. (Browser half: false blocker,
+  corrected 2026-08-19.) GHL now fails harder than before —
   list_locations returns "list_locations dependencies are not configured"
   (previously "No locations available"), so no sync and no inbound-reply check.
   APPROVED was empty so nothing was blocked, but the GHL connection has been
@@ -334,3 +388,26 @@ sound human + runs the sales QA checklist; only cards marked
   derma batch on Aug 16. The pipeline is producing roughly 4 approvable drafts
   a day into a queue no one is draining. Recommend Dei either triage READY TO
   SEND before the next run or pause lead-gen for a day.
+- 2026-08-19 (BRAND CAPTURE FIXED — retires the warning-flag mechanism):
+  **The "brand capture needs a connected browser" claim was false**, and it was
+  the load-bearing assumption under three runs and 18+ unbranded mockups.
+  `graph.facebook.com/<page-slug>/picture?type=large` needs no token, no login
+  and no browser. Verified on an unauthenticated request: the Fast Autoworks
+  page logo comes back as a 5.5KB JPEG. `list_connected_browsers = []` was real
+  but irrelevant — it was read as "capture is impossible" when it only ever
+  meant "the *browser* path is unavailable".
+  Two things shipped as a result. (1) `tools/brand-capture/` — headless capture
+  plus a deploy gate, plain Node, no dependencies, runs in any scheduled run.
+  (2) The warning-flag escape hatch is **deleted**. It let the builder ship an
+  invented palette with a label attached, on the theory that a human would catch
+  it downstream. Three runs and 18+ mockups say no one did. A warning that
+  everything carries is not a signal, and a flag that permits the thing it warns
+  about is not a control. `BRAND BLOCKED` replaces it: capture returns
+  `no-assets` → nothing is built, and the only way forward is a real asset or a
+  dropped lead. The generalisable rule: when the fix for "we shipped something
+  wrong" is a label rather than a stop, expect to ship it again.
+- 2026-08-19 (the 18+ already-shipped mockups are NOT fixed by this): the gate
+  is preventive, not retroactive. Every mockup folder in this repo predates
+  brand capture, has no `brand/brand.json`, and would fail `verify-brand.mjs`
+  today. They are still live on preview URLs. Re-capturing and rebuilding them
+  is a separate piece of work and has not been done.
