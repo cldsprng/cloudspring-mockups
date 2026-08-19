@@ -788,3 +788,76 @@ promise, not the diagnosis, that the menu gates.
   75–140, floors carrying an 8% drift buffer), and re-pull the rates when the
   stamp is over 30 days old. The corrected AUD 650 + 110 sits inside the band,
   so nothing needs re-quoting.
+- 2026-08-19 (run 2, Cowork scheduled — **BRAND CAPTURE CANNOT RUN IN THIS
+  SURFACE, AND THE SCRIPT CANNOT TELL YOU THAT**): the Cowork sandbox routes all
+  bash egress through a proxy at localhost:3128 whose allowlist is effectively
+  **github.com only**. Measured this run: `github.com` 200 ·
+  `graph.facebook.com` 000 · `facebook.com` 000 · `scontent.xx.fbcdn.net` 000 ·
+  `raw.githubusercontent.com` 000 · `api.cloudflare.com` 000 · `example.com` 000
+  · `yellow-pages.ph` 000. `web_fetch` reaches ordinary websites but returns an
+  empty body for a binary image, so it is not a substitute for the picture
+  endpoint.
+  The consequence is worse than the outage. `capture.mjs` wraps its fetches in a
+  bare `catch` and emits the SAME `no-assets` blocker for "the network is
+  unreachable" as for "this page genuinely has no logo". Run here, it returns
+  `no-assets` for **every lead, always** — including Fast Auto Works, whose logo
+  the 04:43 PHT lead-gen run had already downloaded and md5'd from that exact
+  endpoint. Left unexamined, this run would have routed the entire day's intake
+  into BRAND BLOCKED on manufactured evidence, and BRAND BLOCKED is a HUMAN
+  decision queue, so the false verdict would have been read as a human-ready
+  finding.
+  Two fixes needed, neither applied this run (flagging beats an unattended patch
+  to the gate's own dependency):
+  (a) `capture.mjs` needs a preflight reachability probe and a THIRD state,
+      `capture-unavailable`, which stops the build exactly like `no-assets` but
+      routes the card **back to STRATEGY READY**, never to BRAND BLOCKED. A tool
+      that cannot distinguish "I could not look" from "I looked and there is
+      nothing" must not be allowed to write into a human queue.
+  (b) Step 3 must run on a surface with Facebook egress. The 6AM-equivalent
+      lead-gen pass reached graph.facebook.com today from a Code Routine, so the
+      capability is live — it is this surface that lacks it. Either move step 3
+      to that surface or add graph.facebook.com to the Cowork allowlist.
+  This is the 2026-08-19 "false blocker" lesson recurring with its sign flipped:
+  that entry warned against writing "impossible" when a tool comes back empty.
+  The same shape here produces a false NEGATIVE — an empty result presented as a
+  confident finding about the lead. Check which of the two you are looking at.
+- 2026-08-19 (run 2, NEW ANGLE — "your name is parked for sale"): Fast Auto Works
+  (Pasig) does not merely lack a domain. `fastautoworks.com` returns HTTP 200
+  with the title "fastautoworks.com is for sale | HugeDomains" — their trading
+  name sits on a broker's page with a price on it, buyable by the shop down the
+  road. This is a harder version of the 2026-08-16 blank-domain angle: blank says
+  "you already paid for this, let's use it"; parked-for-sale says "someone else
+  can buy your name this afternoon". Check the candidate domain for a parking
+  page as well as an empty body — HugeDomains, Sedo, Afternic, DAN.
+- 2026-08-19 (run 2, directory capture — 4th city, stop re-proving it): "auto
+  repair shop Pasig City best mechanic" p1 = Yelp (4 result variants),
+  StarOfService, InfoisInfo. Not one Pasig shop on its own domain. QC, Makati,
+  Pasig, plus dental and derma before them. Treat the PH directory-capture angle
+  as established and spend the research budget on the lead-specific variant
+  (contradictory listings, invisible branch, parked name) instead.
+- 2026-08-19 (run 2, GHL confirmed live a second time): `get-pipelines` → 200,
+  all three pipelines returned, CLOUDSPRING WEB LEADS intact. The 08-16/17/18
+  "GHL is down" entries stay corrected. Reply triage ran properly for the first
+  time: 19 inbound conversations in the location, **zero** on a
+  `cloudspring-web-leads` contact — every one is EasyChurch or another product
+  line. Nothing to route. The pipeline has exactly ONE opportunity ever created
+  (Custom Cakes by Bam, still stage New Lead, created 2026-07-26).
+- 2026-08-19 (run 2, the bottleneck is now the whole story): READY TO SEND 25,
+  APPROVED 0, CONTACTED 0, FOLLOW-UP DUE 0. Custom Cakes by Bam has sat in
+  SYNCED TO GHL (SEND MANUALLY) since 2026-07-27 — 23 days — waiting on a
+  copy-paste. All 25 READY TO SEND cards are already marked QA'd; there is no
+  agent-side work left on them. Three consecutive runs have now reported this
+  queue growing or static with nothing approved. Per the run-report contract that
+  makes it a human bottleneck, and the honest reading is that the pipeline's
+  constraint is not lead supply, strategy, build or QA — it is that no message
+  has been sent to a prospect since the derma batch. Generating more leads into
+  this state adds cost and no pipeline.
+- 2026-08-19 (run 2, QA check 2 at scale): the independent brand-gate re-check
+  fails for all 25 READY TO SEND cards — none of their mockup folders contains
+  `brand/brand.json`, because all predate brand capture. This is the known
+  2026-08-19 "gate is preventive, not retroactive" position, not a new defect.
+  Deliberately NOT routing 25 cards backwards in an unattended run: that is a
+  bulk board mutation on a known-and-accepted condition, and it would bury the
+  one queue Dei actually needs to look at. Re-capture of the 30+ legacy folders
+  stays a scheduled piece of work, and it needs the same Facebook egress as (b)
+  above.
