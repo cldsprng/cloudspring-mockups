@@ -10,17 +10,17 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --ink:#2E2620;
-  --espresso:#3F332A;
-  --clay:#8A6A55;
-  --clay-600:#75594A;
-  --rose:#C9A38B;
-  --sand:#F2E9E1;
-  --ivory:#FBF7F3;
-  --ivory-2:#F7F1EA;
-  --line:#E6DAD0;
-  --muted:#6E6058;
-  --gold:#B08144;
+  --ink:#26282a;
+  --espresso:#26282a;
+  --clay:#4a4d50;
+  --clay-600:#3b3e40;
+  --rose:#96989a;
+  --sand:#f1f1f1;
+  --ivory:#fafafa;
+  --ivory-2:#f6f6f6;
+  --line:#e6e6e7;
+  --muted:#6b6d70;
+  --gold:#4a4d50;
   --shadow-sm:0 1px 2px rgba(63,51,42,.07), 0 2px 6px rgba(63,51,42,.06);
   --shadow-md:0 4px 12px rgba(63,51,42,.09), 0 12px 28px rgba(63,51,42,.08);
   --shadow-lg:0 16px 48px rgba(63,51,42,.16);
@@ -69,7 +69,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
 }
 
 /* hero */
-.hero{background:linear-gradient(166deg,#FBF7F3 0%,#F3E9E1 54%,#EADDD2 100%);position:relative;overflow:hidden}
+.hero{background:linear-gradient(166deg,#fafafa 0%,#F3E9E1 54%,#EADDD2 100%);position:relative;overflow:hidden}
 .hero__in{position:relative;z-index:2;padding:46px 20px 54px;max-width:1080px;margin:0 auto}
 @media (min-width:940px){.hero__in{display:grid;grid-template-columns:1.04fr .96fr;gap:44px;align-items:center;padding:76px 20px 84px}}
 .hero h1{font-size:2.3rem;color:var(--espresso)}
@@ -176,7 +176,7 @@ a.info__v:hover{color:var(--clay);text-decoration:underline}
 .ftr__credit strong{color:#fff}
 
 /* CloudSpring bar */
-.cs-bar{position:fixed;left:0;right:0;bottom:0;z-index:120;background:rgba(42,33,26,.95);backdrop-filter:saturate(160%) blur(12px);border-top:1px solid rgba(255,255,255,.14);box-shadow:0 -8px 30px rgba(63,51,42,.34);padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px));color:#F2E9E1}
+.cs-bar{position:fixed;left:0;right:0;bottom:0;z-index:120;background:rgba(42,33,26,.95);backdrop-filter:saturate(160%) blur(12px);border-top:1px solid rgba(255,255,255,.14);box-shadow:0 -8px 30px rgba(63,51,42,.34);padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px));color:#f1f1f1}
 .cs-bar__in{max-width:1080px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center}
 .cs-bar__eyebrow{font-size:.62rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#E0B37A;margin:0}
 .cs-bar__line{margin:0;font-size:.95rem;font-weight:600;line-height:1.35;color:#fff;max-width:58ch}
@@ -189,6 +189,7 @@ a.info__v:hover{color:var(--clay);text-decoration:underline}
 }
 @media (min-width:640px){.cs-bar__in{flex-direction:row;justify-content:space-between;text-align:left;gap:20px}.cs-bar__txt{min-width:0}}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition-duration:.01ms!important;scroll-behavior:auto!important}.cs-bar__btn{animation:none}}
+.brand-logo-img{width:38px;height:38px;flex:0 0 38px;object-fit:contain;border-radius:9px;background:#fff}
 </style>
 </head>
 <body>
@@ -197,11 +198,7 @@ a.info__v:hover{color:var(--clay);text-decoration:underline}
 <header class="hdr">
   <div class="hdr__in">
     <a class="brand" href="#top" aria-label="Skin Cosmetic Clinic home">
-      <svg class="brand__mark" viewBox="0 0 48 48" role="img" aria-hidden="true">
-        <rect width="48" height="48" rx="14" fill="#3F332A"/>
-        <path d="M24 12c7 4.6 10.4 9.2 10.4 14 0 5.9-4.6 10-10.4 10s-10.4-4.1-10.4-10c0-4.8 3.4-9.4 10.4-14Z" fill="none" stroke="#D8B79C" stroke-width="2"/>
-        <path d="M19.4 27.4c1.2-3.4 3.4-5.6 6.6-6.6" stroke="#C9A38B" stroke-width="2" stroke-linecap="round" fill="none"/>
-      </svg>
+      <img class="brand__mark brand-logo-img" src="brand/logo-facebook-profile.jpg" alt="Skin Cosmetic Clinic logo" width="38" height="38" decoding="async">
       <span>
         <span class="brand__name">Skin Cosmetic Clinic</span>
         <span class="brand__sub">Renmark · Adelaide</span>
@@ -227,11 +224,11 @@ a.info__v:hover{color:var(--clay);text-decoration:underline}
     <div>
       <span class="stars">
         <span class="stars__ico" aria-hidden="true">
-          <svg width="15" height="15" viewBox="0 0 24 24"><path d="M12 3l2.5 5.4 5.9.7-4.4 4 1.2 5.8L12 16.1 6.8 18.9 8 13.1 3.6 9.1l5.9-.7Z" fill="#C9A38B"/></svg>
-          <svg width="15" height="15" viewBox="0 0 24 24"><path d="M12 3l2.5 5.4 5.9.7-4.4 4 1.2 5.8L12 16.1 6.8 18.9 8 13.1 3.6 9.1l5.9-.7Z" fill="#C9A38B"/></svg>
-          <svg width="15" height="15" viewBox="0 0 24 24"><path d="M12 3l2.5 5.4 5.9.7-4.4 4 1.2 5.8L12 16.1 6.8 18.9 8 13.1 3.6 9.1l5.9-.7Z" fill="#C9A38B"/></svg>
-          <svg width="15" height="15" viewBox="0 0 24 24"><path d="M12 3l2.5 5.4 5.9.7-4.4 4 1.2 5.8L12 16.1 6.8 18.9 8 13.1 3.6 9.1l5.9-.7Z" fill="#C9A38B"/></svg>
-          <svg width="15" height="15" viewBox="0 0 24 24"><path d="M12 3l2.5 5.4 5.9.7-4.4 4 1.2 5.8L12 16.1 6.8 18.9 8 13.1 3.6 9.1l5.9-.7Z" fill="#C9A38B"/></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24"><path d="M12 3l2.5 5.4 5.9.7-4.4 4 1.2 5.8L12 16.1 6.8 18.9 8 13.1 3.6 9.1l5.9-.7Z" fill="#96989a"/></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24"><path d="M12 3l2.5 5.4 5.9.7-4.4 4 1.2 5.8L12 16.1 6.8 18.9 8 13.1 3.6 9.1l5.9-.7Z" fill="#96989a"/></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24"><path d="M12 3l2.5 5.4 5.9.7-4.4 4 1.2 5.8L12 16.1 6.8 18.9 8 13.1 3.6 9.1l5.9-.7Z" fill="#96989a"/></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24"><path d="M12 3l2.5 5.4 5.9.7-4.4 4 1.2 5.8L12 16.1 6.8 18.9 8 13.1 3.6 9.1l5.9-.7Z" fill="#96989a"/></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24"><path d="M12 3l2.5 5.4 5.9.7-4.4 4 1.2 5.8L12 16.1 6.8 18.9 8 13.1 3.6 9.1l5.9-.7Z" fill="#96989a"/></svg>
         </span>
         <span class="stars__txt">5.0 from 24 reviews <span class="stars__src">· via Fresha</span></span>
       </span>
@@ -245,9 +242,9 @@ a.info__v:hover{color:var(--clay);text-decoration:underline}
         <a class="btn btn--ghost" href="tel:+61484650989">Call 0484 650 989</a>
       </div>
       <div class="hero__facts">
-        <span class="fact"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 7.5 12 4l8 3.5v4.9c0 4.4-3.3 7.6-8 8.6-4.7-1-8-4.2-8-8.6V7.5Z" stroke="#8A6A55" stroke-width="1.8" stroke-linejoin="round"/></svg> Nurse-led treatments</span>
-        <span class="fact"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s7-5.4 7-11a7 7 0 1 0-14 0c0 5.6 7 11 7 11Z" stroke="#8A6A55" stroke-width="1.8"/><circle cx="12" cy="10" r="2.6" stroke="#8A6A55" stroke-width="1.8"/></svg> Two locations</span>
-        <span class="fact"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="8.6" stroke="#8A6A55" stroke-width="1.8"/><path d="m8.6 12 2.4 2.4 4.4-4.8" stroke="#8A6A55" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg> 104 services on the menu</span>
+        <span class="fact"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 7.5 12 4l8 3.5v4.9c0 4.4-3.3 7.6-8 8.6-4.7-1-8-4.2-8-8.6V7.5Z" stroke="#4a4d50" stroke-width="1.8" stroke-linejoin="round"/></svg> Nurse-led treatments</span>
+        <span class="fact"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s7-5.4 7-11a7 7 0 1 0-14 0c0 5.6 7 11 7 11Z" stroke="#4a4d50" stroke-width="1.8"/><circle cx="12" cy="10" r="2.6" stroke="#4a4d50" stroke-width="1.8"/></svg> Two locations</span>
+        <span class="fact"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="8.6" stroke="#4a4d50" stroke-width="1.8"/><path d="m8.6 12 2.4 2.4 4.4-4.8" stroke="#4a4d50" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg> 104 services on the menu</span>
       </div>
     </div>
     <div class="hero__art">
@@ -283,7 +280,7 @@ a.info__v:hover{color:var(--clay);text-decoration:underline}
           <rect x="230" y="232" width="60" height="26" rx="13" fill="#FFFFFF" stroke="#E0CDBE" stroke-width="2"/>
           <path d="M452 132v170" stroke="#DFCBBB" stroke-width="6" stroke-linecap="round"/>
           <circle cx="452" cy="302" r="22" fill="#E0CDBE"/>
-          <path d="M424 122a28 28 0 0 1 56 0Z" fill="#3F332A"/>
+          <path d="M424 122a28 28 0 0 1 56 0Z" fill="#26282a"/>
           <path d="M424 122h56l16 62h-88Z" fill="url(#sc-glow)"/>
           <g>
             <rect x="128" y="252" width="96" height="50" rx="10" fill="#FFFFFF" stroke="#E0CDBE" stroke-width="2"/>
@@ -319,42 +316,42 @@ a.info__v:hover{color:var(--clay);text-decoration:underline}
     <p class="lead">Every treatment begins with a consultation so Heidi can recommend what genuinely suits your skin and your goals.</p>
     <div class="grid grid--2 grid--4" style="margin-top:30px">
       <article class="card">
-        <div class="card__ico"><svg width="23" height="23" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M14.6 3.4 20.6 9.4 9.8 20.2H3.8v-6Z" stroke="#8A6A55" stroke-width="1.8" stroke-linejoin="round"/><path d="m12.6 5.4 6 6" stroke="#C9A38B" stroke-width="1.8"/></svg></div>
+        <div class="card__ico"><svg width="23" height="23" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M14.6 3.4 20.6 9.4 9.8 20.2H3.8v-6Z" stroke="#4a4d50" stroke-width="1.8" stroke-linejoin="round"/><path d="m12.6 5.4 6 6" stroke="#96989a" stroke-width="1.8"/></svg></div>
         <h3>Wrinkle reduction</h3>
         <p>Injectable treatment for expression lines, planned around how your face naturally moves.</p>
       </article>
       <article class="card">
-        <div class="card__ico"><svg width="23" height="23" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3.5c4.3 2.3 6.6 5.3 6.6 9 0 4.1-3 7-6.6 7s-6.6-2.9-6.6-7c0-3.7 2.3-6.7 6.6-9Z" stroke="#8A6A55" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 13.4c1-2 2.5-3.3 4.6-4" stroke="#C9A38B" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+        <div class="card__ico"><svg width="23" height="23" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3.5c4.3 2.3 6.6 5.3 6.6 9 0 4.1-3 7-6.6 7s-6.6-2.9-6.6-7c0-3.7 2.3-6.7 6.6-9Z" stroke="#4a4d50" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 13.4c1-2 2.5-3.3 4.6-4" stroke="#96989a" stroke-width="1.8" stroke-linecap="round"/></svg></div>
         <h3>Rejuran</h3>
         <p>Skin-conditioning injectable treatment aimed at overall skin quality and texture.</p>
       </article>
       <article class="card">
-        <div class="card__ico"><svg width="23" height="23" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="7.4" stroke="#8A6A55" stroke-width="1.8"/><path d="M8 13.4c1.6-3 3.8-4.6 6.8-5.2" stroke="#C9A38B" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+        <div class="card__ico"><svg width="23" height="23" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="7.4" stroke="#4a4d50" stroke-width="1.8"/><path d="M8 13.4c1.6-3 3.8-4.6 6.8-5.2" stroke="#96989a" stroke-width="1.8" stroke-linecap="round"/></svg></div>
         <h3>Bio-remodelling</h3>
         <p>Hydrating injectable treatment designed to support firmness and glow rather than add volume.</p>
       </article>
       <article class="card">
-        <div class="card__ico"><svg width="23" height="23" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4.4 18.6 18.6 4.4M8 20l4-4M4 16l4-4M12 20l6-6" stroke="#8A6A55" stroke-width="1.8" stroke-linecap="round"/><circle cx="18.6" cy="5.4" r="1.8" fill="#C9A38B"/></svg></div>
+        <div class="card__ico"><svg width="23" height="23" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4.4 18.6 18.6 4.4M8 20l4-4M4 16l4-4M12 20l6-6" stroke="#4a4d50" stroke-width="1.8" stroke-linecap="round"/><circle cx="18.6" cy="5.4" r="1.8" fill="#96989a"/></svg></div>
         <h3>PDO threads</h3>
         <p>Thread treatment used to support and lift specific areas, discussed in detail at consultation.</p>
       </article>
       <article class="card">
-        <div class="card__ico"><svg width="23" height="23" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="4" stroke="#8A6A55" stroke-width="1.8"/><circle cx="9" cy="9" r="1.2" fill="#C9A38B"/><circle cx="15" cy="9" r="1.2" fill="#C9A38B"/><circle cx="9" cy="15" r="1.2" fill="#C9A38B"/><circle cx="15" cy="15" r="1.2" fill="#C9A38B"/><circle cx="12" cy="12" r="1.2" fill="#C9A38B"/></svg></div>
+        <div class="card__ico"><svg width="23" height="23" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="4" stroke="#4a4d50" stroke-width="1.8"/><circle cx="9" cy="9" r="1.2" fill="#96989a"/><circle cx="15" cy="9" r="1.2" fill="#96989a"/><circle cx="9" cy="15" r="1.2" fill="#96989a"/><circle cx="15" cy="15" r="1.2" fill="#96989a"/><circle cx="12" cy="12" r="1.2" fill="#96989a"/></svg></div>
         <h3>Micro-needling</h3>
         <p>Collagen-stimulating treatment for texture, scarring and general skin renewal.</p>
       </article>
       <article class="card">
-        <div class="card__ico"><svg width="23" height="23" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="4.4" stroke="#8A6A55" stroke-width="1.8"/><path d="M12 3.4V6M12 18v2.6M3.4 12H6M18 12h2.6M6.2 6.2 8 8M16 16l1.8 1.8M17.8 6.2 16 8M8 16l-1.8 1.8" stroke="#C9A38B" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+        <div class="card__ico"><svg width="23" height="23" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="4.4" stroke="#4a4d50" stroke-width="1.8"/><path d="M12 3.4V6M12 18v2.6M3.4 12H6M18 12h2.6M6.2 6.2 8 8M16 16l1.8 1.8M17.8 6.2 16 8M8 16l-1.8 1.8" stroke="#96989a" stroke-width="1.8" stroke-linecap="round"/></svg></div>
         <h3>IPL</h3>
         <p>Intense pulsed light for pigmentation, redness and other light-responsive skin concerns.</p>
       </article>
       <article class="card">
-        <div class="card__ico"><svg width="23" height="23" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3.4 15c3-6 6-9 8.6-9s5.6 3 8.6 9" stroke="#8A6A55" stroke-width="1.8" stroke-linecap="round"/><path d="M6.6 19.4c2.4-3.4 4.4-5 5.4-5s3 1.6 5.4 5" stroke="#C9A38B" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+        <div class="card__ico"><svg width="23" height="23" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3.4 15c3-6 6-9 8.6-9s5.6 3 8.6 9" stroke="#4a4d50" stroke-width="1.8" stroke-linecap="round"/><path d="M6.6 19.4c2.4-3.4 4.4-5 5.4-5s3 1.6 5.4 5" stroke="#96989a" stroke-width="1.8" stroke-linecap="round"/></svg></div>
         <h3>RF tightening</h3>
         <p>Radiofrequency treatment used to encourage firmer-looking skin over a course of sessions.</p>
       </article>
       <article class="card">
-        <div class="card__ico"><svg width="23" height="23" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8 3h8l-1.4 8.4a2 2 0 0 1-.9 1.3L12 14l-1.7-1.3a2 2 0 0 1-.9-1.3L8 3Z" stroke="#8A6A55" stroke-width="1.8" stroke-linejoin="round"/><path d="M12 14v7M9.6 20.4h4.8" stroke="#C9A38B" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+        <div class="card__ico"><svg width="23" height="23" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8 3h8l-1.4 8.4a2 2 0 0 1-.9 1.3L12 14l-1.7-1.3a2 2 0 0 1-.9-1.3L8 3Z" stroke="#4a4d50" stroke-width="1.8" stroke-linejoin="round"/><path d="M12 14v7M9.6 20.4h4.8" stroke="#96989a" stroke-width="1.8" stroke-linecap="round"/></svg></div>
         <h3>Tattoo removal</h3>
         <p>Laser tattoo removal, planned session by session according to the ink and the area.</p>
       </article>
@@ -372,15 +369,15 @@ a.info__v:hover{color:var(--clay);text-decoration:underline}
         <rect width="460" height="460" fill="url(#sc-p)"/>
         <circle cx="230" cy="196" r="128" fill="#EFE0D3"/>
         <path d="M78 460c0-84 68-136 152-136s152 52 152 136Z" fill="#FFFFFF"/>
-        <path d="M172 330c18-12 58-12 76 0l-14 130h-48Z" fill="#3F332A"/>
+        <path d="M172 330c18-12 58-12 76 0l-14 130h-48Z" fill="#26282a"/>
         <path d="M154 336c-30 16-50 46-56 68l38 8Z" fill="#F6F0EA"/>
         <path d="M306 336c30 16 50 46 56 68l-38 8Z" fill="#F6F0EA"/>
         <circle cx="230" cy="246" r="66" fill="#F3DECA"/>
         <path d="M164 244c0-46 30-66 66-66s66 20 66 66c0-24-16-38-30-42-16 12-56 16-78 4-14 8-24 20-24 38Z" fill="#8A5F3C"/>
         <path d="M164 240c-10 22-8 52 4 66-8-26-8-46-4-66Z" fill="#7A5233"/>
         <path d="M296 240c10 22 8 52-4 66 8-26 8-46 4-66Z" fill="#7A5233"/>
-        <ellipse cx="206" cy="248" rx="6" ry="7" fill="#3F332A"/>
-        <ellipse cx="254" cy="248" rx="6" ry="7" fill="#3F332A"/>
+        <ellipse cx="206" cy="248" rx="6" ry="7" fill="#26282a"/>
+        <ellipse cx="254" cy="248" rx="6" ry="7" fill="#26282a"/>
         <path d="M196 234c6-5 14-5 20-1M244 233c6-4 14-4 20 1" stroke="#6B4A31" stroke-width="4" stroke-linecap="round" fill="none"/>
         <path d="M218 276c8 4 16 4 24 0" stroke="#C9967B" stroke-width="4" stroke-linecap="round" fill="none"/>
         <path d="M216 288c9 7 19 7 28 0" stroke="#B9705E" stroke-width="5" stroke-linecap="round" fill="none"/>
@@ -433,14 +430,14 @@ a.info__v:hover{color:var(--clay);text-decoration:underline}
         <svg viewBox="0 0 520 200" role="img" aria-label="Simplified map of the Renmark clinic on Renmark Avenue">
           <rect width="520" height="200" fill="#EFE4D9"/>
           <path d="M0 128h520" stroke="#E2D0BF" stroke-width="22"/>
-          <path d="M0 128h520" stroke="#FBF7F3" stroke-width="3" stroke-dasharray="14 12"/>
+          <path d="M0 128h520" stroke="#fafafa" stroke-width="3" stroke-dasharray="14 12"/>
           <path d="M188 0v200" stroke="#E2D0BF" stroke-width="14"/>
           <path d="M0 44c60 12 120 6 180 20s180 4 340 22" stroke="#CFDCD5" stroke-width="16" fill="none"/>
           <rect x="34" y="150" width="94" height="36" rx="6" fill="#E6D8C9"/>
           <rect x="230" y="152" width="106" height="34" rx="6" fill="#E6D8C9"/>
           <rect x="400" y="148" width="94" height="38" rx="6" fill="#E6D8C9"/>
           <text x="16" y="112" font-family="Jost,sans-serif" font-size="13" fill="#8A7566">Renmark Avenue</text>
-          <g transform="translate(300 118)"><path d="M0-30c10 0 18 8 18 18 0 13-18 30-18 30S-18 1-18-12c0-10 8-18 18-18Z" fill="#3F332A"/><circle cx="0" cy="-12" r="6.6" fill="#FBF7F3"/></g>
+          <g transform="translate(300 118)"><path d="M0-30c10 0 18 8 18 18 0 13-18 30-18 30S-18 1-18-12c0-10 8-18 18-18Z" fill="#26282a"/><circle cx="0" cy="-12" r="6.6" fill="#fafafa"/></g>
         </svg>
         <div class="loc__body">
           <span class="loc__tag">Riverland</span>
@@ -457,13 +454,13 @@ a.info__v:hover{color:var(--clay);text-decoration:underline}
           <rect width="520" height="200" fill="#EFE4D9"/>
           <path d="M0 96h520" stroke="#E2D0BF" stroke-width="20"/>
           <path d="M264 0v200" stroke="#E2D0BF" stroke-width="18"/>
-          <path d="M264 0v200" stroke="#FBF7F3" stroke-width="3" stroke-dasharray="14 12"/>
+          <path d="M264 0v200" stroke="#fafafa" stroke-width="3" stroke-dasharray="14 12"/>
           <rect x="40" y="20" width="180" height="56" rx="7" fill="#E6D8C9"/>
           <rect x="40" y="120" width="180" height="60" rx="7" fill="#E6D8C9"/>
           <rect x="310" y="20" width="170" height="56" rx="7" fill="#E6D8C9"/>
           <rect x="310" y="120" width="170" height="60" rx="7" fill="#D9E3DB"/>
           <text x="316" y="164" font-family="Jost,sans-serif" font-size="13" fill="#8A7566">Parkside · Fullarton</text>
-          <g transform="translate(264 92)"><path d="M0-30c10 0 18 8 18 18 0 13-18 30-18 30S-18 1-18-12c0-10 8-18 18-18Z" fill="#3F332A"/><circle cx="0" cy="-12" r="6.6" fill="#FBF7F3"/></g>
+          <g transform="translate(264 92)"><path d="M0-30c10 0 18 8 18 18 0 13-18 30-18 30S-18 1-18-12c0-10 8-18 18-18Z" fill="#26282a"/><circle cx="0" cy="-12" r="6.6" fill="#fafafa"/></g>
         </svg>
         <div class="loc__body">
           <span class="loc__tag">Adelaide</span>
@@ -488,19 +485,19 @@ a.info__v:hover{color:var(--clay);text-decoration:underline}
       <div>
         <ul class="info">
           <li>
-            <span class="info__ico"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 3h3l1.5 4.2-2.1 1.5a12.6 12.6 0 0 0 6.3 6.3l1.5-2.1L21 14.4v3A2.6 2.6 0 0 1 18.4 20 15.4 15.4 0 0 1 4 5.6 2.6 2.6 0 0 1 6.6 3Z" stroke="#8A6A55" stroke-width="1.9" stroke-linejoin="round"/></svg></span>
+            <span class="info__ico"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 3h3l1.5 4.2-2.1 1.5a12.6 12.6 0 0 0 6.3 6.3l1.5-2.1L21 14.4v3A2.6 2.6 0 0 1 18.4 20 15.4 15.4 0 0 1 4 5.6 2.6 2.6 0 0 1 6.6 3Z" stroke="#4a4d50" stroke-width="1.9" stroke-linejoin="round"/></svg></span>
             <span><span class="info__k">Phone</span><a class="info__v" href="tel:+61484650989">0484 650 989</a><span class="info__note">+61 484 650 989 from overseas.</span></span>
           </li>
           <li>
-            <span class="info__ico"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3.4" y="5.4" width="17.2" height="13.2" rx="3" stroke="#8A6A55" stroke-width="1.8"/><path d="m4 7 8 5.6L20 7" stroke="#8A6A55" stroke-width="1.8" stroke-linejoin="round"/></svg></span>
+            <span class="info__ico"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3.4" y="5.4" width="17.2" height="13.2" rx="3" stroke="#4a4d50" stroke-width="1.8"/><path d="m4 7 8 5.6L20 7" stroke="#4a4d50" stroke-width="1.8" stroke-linejoin="round"/></svg></span>
             <span><span class="info__k">Email</span><a class="info__v" href="mailto:rediscoveryourconfidence@gmail.com">rediscoveryourconfidence@gmail.com</a></span>
           </li>
           <li>
-            <span class="info__ico"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M14 8.4h2.6V5.2h-2.8c-2.6 0-4 1.6-4 4v2.2H7.4v3.2h2.4v7.2h3.4v-7.2h2.6l.5-3.2h-3.1V9.8c0-1 .3-1.4.8-1.4Z" stroke="#8A6A55" stroke-width="1.7" stroke-linejoin="round"/></svg></span>
+            <span class="info__ico"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M14 8.4h2.6V5.2h-2.8c-2.6 0-4 1.6-4 4v2.2H7.4v3.2h2.4v7.2h3.4v-7.2h2.6l.5-3.2h-3.1V9.8c0-1 .3-1.4.8-1.4Z" stroke="#4a4d50" stroke-width="1.7" stroke-linejoin="round"/></svg></span>
             <span><span class="info__k">Facebook</span><a class="info__v" href="https://www.facebook.com/skincosmeticclinic" target="_blank" rel="noopener">facebook.com/skincosmeticclinic</a></span>
           </li>
           <li>
-            <span class="info__ico"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s7-5.4 7-11a7 7 0 1 0-14 0c0 5.6 7 11 7 11Z" stroke="#8A6A55" stroke-width="1.8"/><circle cx="12" cy="10" r="2.6" stroke="#8A6A55" stroke-width="1.8"/></svg></span>
+            <span class="info__ico"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s7-5.4 7-11a7 7 0 1 0-14 0c0 5.6 7 11 7 11Z" stroke="#4a4d50" stroke-width="1.8"/><circle cx="12" cy="10" r="2.6" stroke="#4a4d50" stroke-width="1.8"/></svg></span>
             <span><span class="info__k">Clinics</span><span class="info__v">129 Renmark Avenue, Renmark SA 5341<br>Parkside / Fullarton, Adelaide SA</span></span>
           </li>
         </ul>
