@@ -5,55 +5,24 @@
   "capturedAt": "2026-08-19T23:25:44.728Z",
   "source": "headless-http",
   "name": null,
-  "logo": {
-    "file": "logo-facebook-profile.jpg",
-    "score": 95,
-    "why": "facebook profile picture"
-  },
-  "logoFiles": [
-    {
-      "file": "logo-facebook-profile.jpg",
-      "bytes": 287143,
-      "from": "graph.facebook.com/RJFVShop/picture?width=1200&height=1200",
-      "why": "facebook profile picture",
-      "score": 95
-    }
-  ],
+  "logo": null,
+  "logoFiles": [],
   "colors": {
-    "brand": [
-      {
-        "hex": "#BFFF00",
-        "weight": 40
-      },
-      {
-        "hex": "#DC143C",
-        "weight": 35
-      },
-      {
-        "hex": "#00CCFF",
-        "weight": 25
-      }
-    ],
-    "neutral": [
-      {
-        "hex": "#808080",
-        "weight": 35
-      },
-      {
-        "hex": "#E0E0E0",
-        "weight": 25
-      }
-    ],
-    "themeColor": "#BFFF00",
-    "source": "vision"
+    "brand": [],
+    "neutral": [],
+    "themeColor": null,
+    "source": null
   },
   "fonts": [],
-  "ready": true,
-  "blockedBy": null,
-  "confidence": 80,
+  "ready": false,
+  "blockedBy": "logo-not-a-mark",
+  "confidence": 0,
   "notes": [
     "facebook profile picture captured headlessly for \"RJFVShop\"",
     "no website for this lead — facebook-only capture path",
-    "BLOCKER palette-pending: logo captured (logo-facebook-profile.jpg) but fewer than 2 chromatic colours found. Vision-read the logo, then write the hex values into colors.brand[] with colors.source=\"vision\" and re-run the gate."
+    "BLOCKER logo-not-a-mark: the captured logo-facebook-profile.jpg is a photograph of the shop interior — tyres on wall racks, red roof trusses, a green-painted partition and teal plastic chairs. It is not a brand mark, so no palette can honestly be read from it.",
+    "REVERTED 2026-08-20 (CLO-36, Mockup Builder): this record previously carried ready:true with a vision palette of #BFFF00 / #DC143C / #00CCFF. Those hexes are the colours of green wall paint, roof steel and plastic chairs in the photo, not of any brand asset. Building on them would have shipped an invented palette under the prospect's name, which is exactly what the gate exists to stop. Palette and logo cleared; the file no longer asserts branding it does not have.",
+    "Same state CLO-35 recorded as logo-not-a-mark for powertorq-auto-repair-qc, hugoderm-skincare-davao and kutis-by-kei-makati.",
+    "TO UNBLOCK: a human drops a genuine logo file into rjf-vulcanizing-taguig/brand/ and re-runs the gate, or the lead is rejected. Note this lead also publishes no street address and no phone number anywhere, so the W-02 identity-proof hero needs both from the owner regardless of the logo."
   ]
 }
