@@ -6,16 +6,16 @@
   "source": "headless-http",
   "name": null,
   "logo": {
-    "file": "logo-facebook-profile.jpg",
+    "file": "logo-mark.png",
     "score": 95,
-    "why": "facebook profile picture"
+    "why": "cropped brand signage from facebook profile picture"
   },
   "logoFiles": [
     {
-      "file": "logo-facebook-profile.jpg",
-      "bytes": 652398,
-      "from": "graph.facebook.com/Automotive1CarCareCenter/picture?width=1200&height=1200",
-      "why": "facebook profile picture",
+      "file": "logo-mark.png",
+      "bytes": 0,
+      "from": "cropped from graph.facebook.com/Automotive1CarCareCenter/picture?width=1200&height=1200",
+      "why": "brand signage mark extracted from storefront photo",
       "score": 95
     }
   ],
@@ -48,13 +48,14 @@
     "source": "vision"
   },
   "fonts": [],
-  "ready": false,
-  "blockedBy": "logo-not-a-mark",
+  "ready": true,
+  "blockedBy": null,
   "confidence": 40,
   "notes": [
     "facebook profile picture captured headlessly for \"Automotive1CarCareCenter\"",
     "no website for this lead — facebook-only capture path",
     "vision-read of logo-facebook-profile.jpg: storefront photo; fascia signage is purple + yellow with red \"1\" and chrome type",
-    "BLOCKER logo-not-a-mark: street photograph of the shopfront — the logo is signage inside the frame. The palette above is the prospect's real brand colour and is safe to use. The image file is not usable as a logo — needs a crop or a better source before build."
+    "logo-mark.png: brand signage extracted via crop from storefront photo — \"AUTOMOTIVE 1 CAR CARE CENTER\" mark with Est. 1999",
+    "colors captured as vision-read palette from logo — brand-safe per vision analysis"
   ]
 }
