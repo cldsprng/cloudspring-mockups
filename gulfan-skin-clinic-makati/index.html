@@ -10,17 +10,17 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --ink:#0A2E2C;
-  --ink-2:#12403D;
-  --slate:#4E6E6B;
-  --line:#DCEAE7;
+  --ink:#111111;
+  --ink-2:#1c1c1c;
+  --slate:#4a4a4a;
+  --line:#e4e4e4;
   --paper:#FFFFFF;
-  --mist:#F2F9F7;
-  --teal:#0F7A72;
-  --teal-dk:#0A5A54;
-  --teal-lt:#3FB3A6;
-  --sand:#F8F4EC;
-  --clay:#9A7443;
+  --mist:#f6f6f6;
+  --teal:#111111;
+  --teal-dk:#000000;
+  --teal-lt:#8a8a8a;
+  --sand:#f7f7f7;
+  --clay:#4a4a4a;
   --shadow-1:0 1px 2px rgba(10,46,44,.06), 0 2px 8px rgba(10,46,44,.06);
   --shadow-2:0 2px 6px rgba(10,46,44,.07), 0 12px 28px rgba(10,46,44,.11);
   --shadow-3:0 -2px 10px rgba(10,46,44,.18), 0 -12px 40px rgba(10,46,44,.24);
@@ -84,7 +84,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
 }
 
 /* hero */
-.hero{position:relative;background:linear-gradient(168deg,#F2F9F7 0%,#E4F1EE 60%,#F8F4EC 100%);overflow:hidden;border-bottom:1px solid var(--line)}
+.hero{position:relative;background:linear-gradient(168deg,#f6f6f6 0%,#E4F1EE 60%,#f7f7f7 100%);overflow:hidden;border-bottom:1px solid var(--line)}
 .hero::before{content:"";position:absolute;width:520px;height:520px;right:-160px;top:-200px;border-radius:50%;background:radial-gradient(circle,rgba(63,179,166,.22) 0%,rgba(63,179,166,0) 70%)}
 .hero-in{position:relative;z-index:2;padding:38px 0 48px;display:grid;gap:28px}
 .hero h1{font-size:34px}
@@ -197,6 +197,7 @@ input:focus,textarea:focus,select:focus{border-color:var(--teal);box-shadow:0 0 
 }
 .skip{position:absolute;left:-9999px;top:0;background:#fff;color:var(--ink);padding:12px 18px;z-index:300}
 .skip:focus{left:0}
+.brand-logo-img{width:38px;height:38px;flex:0 0 38px;object-fit:contain;border-radius:9px;background:#fff}
 </style>
 </head>
 <body>
@@ -206,11 +207,7 @@ input:focus,textarea:focus,select:focus{border-color:var(--teal);box-shadow:0 0 
 <header class="hdr">
   <div class="hdr-in">
     <a class="brand" href="#top" aria-label="Gulfan Skin Clinic — home">
-      <svg class="mark" viewBox="0 0 48 48" role="img" aria-hidden="true" focusable="false">
-        <rect width="48" height="48" rx="14" fill="#0A2E2C"/>
-        <path d="M24 12c6.6 0 12 5.4 12 12s-5.4 12-12 12" fill="none" stroke="#3FB3A6" stroke-width="2.4" stroke-linecap="round"/>
-        <text x="24" y="30" text-anchor="middle" font-family="'DM Serif Display', Georgia, serif" font-size="17" fill="#ffffff">G</text>
-      </svg>
+      <img class="mark brand-logo-img" src="brand/logo-facebook-profile.jpg" alt="Gulfan Skin Clinic logo" width="38" height="38" decoding="async">
       <span>
         <span class="brand-name">Gulfan Skin Clinic</span>
         <span class="brand-sub">Dermatology · Makati</span>
@@ -281,8 +278,8 @@ input:focus,textarea:focus,select:focus{border-color:var(--teal);box-shadow:0 0 
     <div class="grid grid-3">
       <article class="card">
         <svg class="ico" viewBox="0 0 48 48" fill="none" aria-hidden="true">
-          <path d="M24 41s-15-9.7-15-19.5A8.5 8.5 0 0 1 24 15a8.5 8.5 0 0 1 15 6.5C39 31.3 24 41 24 41Z" stroke="#0F7A72" stroke-width="2.4" stroke-linejoin="round"/>
-          <path d="M14 25h6l2.5-5 3 10 2.5-5h6" stroke="#3FB3A6" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M24 41s-15-9.7-15-19.5A8.5 8.5 0 0 1 24 15a8.5 8.5 0 0 1 15 6.5C39 31.3 24 41 24 41Z" stroke="#111111" stroke-width="2.4" stroke-linejoin="round"/>
+          <path d="M14 25h6l2.5-5 3 10 2.5-5h6" stroke="#8a8a8a" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
         <h3>Clinical dermatology</h3>
         <p>Medical assessment and treatment of skin, hair and nail conditions.</p>
@@ -291,9 +288,9 @@ input:focus,textarea:focus,select:focus{border-color:var(--teal);box-shadow:0 0 
       </article>
       <article class="card">
         <svg class="ico" viewBox="0 0 48 48" fill="none" aria-hidden="true">
-          <circle cx="24" cy="24" r="14" stroke="#0F7A72" stroke-width="2.4"/>
-          <path d="M24 10v-4M24 42v-4M10 24H6M42 24h-4M14 14l-3-3M34 34l3 3M34 14l3-3M14 34l-3 3" stroke="#3FB3A6" stroke-width="2.2" stroke-linecap="round"/>
-          <circle cx="24" cy="24" r="5" fill="#9A7443" opacity=".55"/>
+          <circle cx="24" cy="24" r="14" stroke="#111111" stroke-width="2.4"/>
+          <path d="M24 10v-4M24 42v-4M10 24H6M42 24h-4M14 14l-3-3M34 34l3 3M34 14l3-3M14 34l-3 3" stroke="#8a8a8a" stroke-width="2.2" stroke-linecap="round"/>
+          <circle cx="24" cy="24" r="5" fill="#4a4a4a" opacity=".55"/>
         </svg>
         <h3>Cosmetic dermatology</h3>
         <p>Aesthetic procedures for tone, texture and the visible signs of ageing.</p>
@@ -302,9 +299,9 @@ input:focus,textarea:focus,select:focus{border-color:var(--teal);box-shadow:0 0 
       </article>
       <article class="card">
         <svg class="ico" viewBox="0 0 48 48" fill="none" aria-hidden="true">
-          <path d="M11 33 30 14l4 4-19 19H11v-4Z" stroke="#0F7A72" stroke-width="2.4" stroke-linejoin="round"/>
-          <path d="M28 12l4-4 8 8-4 4" stroke="#3FB3A6" stroke-width="2.4" stroke-linejoin="round"/>
-          <path d="M9 41h30" stroke="#0F7A72" stroke-width="2.4" stroke-linecap="round"/>
+          <path d="M11 33 30 14l4 4-19 19H11v-4Z" stroke="#111111" stroke-width="2.4" stroke-linejoin="round"/>
+          <path d="M28 12l4-4 8 8-4 4" stroke="#8a8a8a" stroke-width="2.4" stroke-linejoin="round"/>
+          <path d="M9 41h30" stroke="#111111" stroke-width="2.4" stroke-linecap="round"/>
         </svg>
         <h3>Skin surgery</h3>
         <p>Minor dermatologic surgical procedures performed in-clinic.</p>
@@ -325,19 +322,19 @@ input:focus,textarea:focus,select:focus{border-color:var(--teal);box-shadow:0 0 
     </div>
     <div class="why">
       <div class="why-item">
-        <svg class="ico" viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M20 5l4.6 9.4 10.4 1.5-7.5 7.3 1.8 10.3L20 28.6l-9.3 4.9 1.8-10.3L5 15.9l10.4-1.5L20 5Z" stroke="#9A7443" stroke-width="2.2" stroke-linejoin="round"/></svg>
+        <svg class="ico" viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M20 5l4.6 9.4 10.4 1.5-7.5 7.3 1.8 10.3L20 28.6l-9.3 4.9 1.8-10.3L5 15.9l10.4-1.5L20 5Z" stroke="#4a4a4a" stroke-width="2.2" stroke-linejoin="round"/></svg>
         <div><h3>5.0★ from 20 Google reviews</h3><p>As recorded on Google in August 2026 — a perfect score across every review left.</p></div>
       </div>
       <div class="why-item">
-        <svg class="ico" viewBox="0 0 40 40" fill="none" aria-hidden="true"><circle cx="20" cy="20" r="15" stroke="#0F7A72" stroke-width="2.2"/><path d="M13.5 20.5l4.5 4.5 9-9" stroke="#3FB3A6" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <svg class="ico" viewBox="0 0 40 40" fill="none" aria-hidden="true"><circle cx="20" cy="20" r="15" stroke="#111111" stroke-width="2.2"/><path d="M13.5 20.5l4.5 4.5 9-9" stroke="#8a8a8a" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
         <div><h3>Board-certified dermatologist</h3><p>Your consultation is with Dra. Gulfan, a board-certified dermatologist.</p></div>
       </div>
       <div class="why-item">
-        <svg class="ico" viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M20 35s12-8.6 12-16A12 12 0 0 0 8 19c0 7.4 12 16 12 16Z" stroke="#0F7A72" stroke-width="2.2" stroke-linejoin="round"/><circle cx="20" cy="19" r="4.2" fill="#3FB3A6"/></svg>
+        <svg class="ico" viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M20 35s12-8.6 12-16A12 12 0 0 0 8 19c0 7.4 12 16 12 16Z" stroke="#111111" stroke-width="2.2" stroke-linejoin="round"/><circle cx="20" cy="19" r="4.2" fill="#8a8a8a"/></svg>
         <div><h3>One Makati address</h3><p>Unit 305, IDC Plaza on Kalayaan Ave corner Zapote — easy to find, easy to reach.</p></div>
       </div>
       <div class="why-item">
-        <svg class="ico" viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M34 24c0 5-4.6 9-10.4 9-1.8 0-3.5-.4-5-1L11 34l1.7-6.2A9.6 9.6 0 0 1 9 21c0-5 5.4-10 12.5-10S34 16 34 19Z" stroke="#0F7A72" stroke-width="2.2" stroke-linejoin="round"/><circle cx="17" cy="21" r="1.9" fill="#3FB3A6"/><circle cx="23" cy="21" r="1.9" fill="#3FB3A6"/><circle cx="29" cy="21" r="1.9" fill="#3FB3A6"/></svg>
+        <svg class="ico" viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M34 24c0 5-4.6 9-10.4 9-1.8 0-3.5-.4-5-1L11 34l1.7-6.2A9.6 9.6 0 0 1 9 21c0-5 5.4-10 12.5-10S34 16 34 19Z" stroke="#111111" stroke-width="2.2" stroke-linejoin="round"/><circle cx="17" cy="21" r="1.9" fill="#8a8a8a"/><circle cx="23" cy="21" r="1.9" fill="#8a8a8a"/><circle cx="29" cy="21" r="1.9" fill="#8a8a8a"/></svg>
         <div><h3>Reachable directly</h3><p>Call the clinic line or message us on Facebook or Instagram — links, not dead ends.</p></div>
       </div>
     </div>
@@ -349,10 +346,10 @@ input:focus,textarea:focus,select:focus{border-color:var(--teal);box-shadow:0 0 
   <div class="wrap about">
     <div class="about-art">
       <svg viewBox="0 0 420 400" role="img" aria-label="Portrait illustration of a board-certified dermatologist">
-        <defs><linearGradient id="gAb" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0F7A72"/><stop offset="100%" stop-color="#0A2E2C"/></linearGradient></defs>
+        <defs><linearGradient id="gAb" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#111111"/><stop offset="100%" stop-color="#111111"/></linearGradient></defs>
         <rect width="420" height="400" fill="url(#gAb)"/>
         <circle cx="210" cy="152" r="114" fill="#14837A" opacity=".45"/>
-        <path d="M118 400c0-56 41-97 92-97s92 41 92 97Z" fill="#F2F9F7"/>
+        <path d="M118 400c0-56 41-97 92-97s92 41 92 97Z" fill="#f6f6f6"/>
         <path d="M172 318c0 40 76 40 76 0v-30h-76Z" fill="#E4CBB6"/>
         <circle cx="210" cy="250" r="60" fill="#F1D9C4"/>
         <path d="M150 250c0-46 26-68 60-68s60 22 60 68c6-58-18-84-60-84s-66 28-60 84Z" fill="#2C2320"/>
@@ -361,10 +358,10 @@ input:focus,textarea:focus,select:focus{border-color:var(--teal);box-shadow:0 0 
         <circle cx="191" cy="250" r="4.4" fill="#2C2320"/><circle cx="229" cy="250" r="4.4" fill="#2C2320"/>
         <path d="M199 278c7 6 15 6 22 0" stroke="#BE8168" stroke-width="3.4" stroke-linecap="round" fill="none"/>
         <path d="M180 322 L210 356 L240 322 l40 20 v58 H140 v-58Z" fill="#FFFFFF"/>
-        <path d="M210 356 v44" stroke="#DCEAE7" stroke-width="3"/>
-        <rect x="150" y="352" width="30" height="9" rx="4.5" fill="#3FB3A6"/>
-        <path d="M158 361 v24 a12 12 0 0 0 24 0 v-12" stroke="#3FB3A6" stroke-width="3.4" fill="none" stroke-linecap="round"/>
-        <circle cx="182" cy="371" r="6" fill="#0F7A72"/>
+        <path d="M210 356 v44" stroke="#e4e4e4" stroke-width="3"/>
+        <rect x="150" y="352" width="30" height="9" rx="4.5" fill="#8a8a8a"/>
+        <path d="M158 361 v24 a12 12 0 0 0 24 0 v-12" stroke="#8a8a8a" stroke-width="3.4" fill="none" stroke-linecap="round"/>
+        <circle cx="182" cy="371" r="6" fill="#111111"/>
       </svg>
     </div>
     <div>
@@ -403,7 +400,7 @@ input:focus,textarea:focus,select:focus{border-color:var(--teal);box-shadow:0 0 
         <div class="mapbox">
           <svg viewBox="0 0 520 260" role="img" aria-label="Stylised map showing the clinic at Kalayaan Avenue corner Zapote, Makati City">
             <rect width="520" height="260" fill="#EDF6F4"/>
-            <g stroke="#DCEAE7" stroke-width="10">
+            <g stroke="#e4e4e4" stroke-width="10">
               <line x1="0" y1="70" x2="520" y2="70"/><line x1="0" y1="196" x2="520" y2="196"/>
               <line x1="150" y1="0" x2="150" y2="260"/><line x1="392" y1="0" x2="392" y2="260"/>
             </g>
@@ -414,9 +411,9 @@ input:focus,textarea:focus,select:focus{border-color:var(--teal);box-shadow:0 0 
               <rect x="170" y="152" width="70" height="34" rx="4"/><rect x="298" y="152" width="76" height="34" rx="4"/>
               <rect x="410" y="82" width="88" height="32" rx="4"/><rect x="24" y="152" width="106" height="34" rx="4"/>
             </g>
-            <text x="266" y="252" text-anchor="middle" font-family="Jost, Arial, sans-serif" font-size="13" fill="#4E6E6B">Kalayaan Ave cor. Zapote</text>
+            <text x="266" y="252" text-anchor="middle" font-family="Jost, Arial, sans-serif" font-size="13" fill="#4a4a4a">Kalayaan Ave cor. Zapote</text>
             <circle cx="266" cy="132" r="27" fill="rgba(15,122,114,.16)"/>
-            <path d="M266 110c-9.4 0-17 7.6-17 17 0 12.7 17 27 17 27s17-14.3 17-27c0-9.4-7.6-17-17-17Z" fill="#0F7A72"/>
+            <path d="M266 110c-9.4 0-17 7.6-17 17 0 12.7 17 27 17 27s17-14.3 17-27c0-9.4-7.6-17-17-17Z" fill="#111111"/>
             <circle cx="266" cy="127" r="6.2" fill="#fff"/>
           </svg>
           <span class="caption">IDC Plaza, Kalayaan cor. Zapote — illustrative map</span>
