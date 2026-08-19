@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pcars Auto Solutions — Kapitolyo, Pasig City · Accessories, Tint &amp; Detailing</title>
+<meta name="description" content="Pcars Auto Solutions — one-stop auto shop at 8006 Pioneer St. cor. United St., Kapitolyo, Pasig City. Car accessories, window tinting and premium detailing. Not Manila — Pasig.">
+<meta name="theme-color" content="#E31937">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+--red:#E31937;--red-d:#b30f28;
+--jet:#000000;--jet-2:#151515;--grey:#808080;
+--white:#FFFFFF;--silver:#D3D3D3;
+--ink:#0f0f0f;--body:#4e4e4e;--line:#e5e5e5;--bg:#f4f4f4;
+--sh:0 2px 8px rgba(0,0,0,.09);--sh2:0 12px 32px rgba(0,0,0,.16);--r:12px;
+--dsp:'Barlow Condensed',Impact,'Arial Narrow',sans-serif;--txt:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--txt);color:var(--body);background:var(--white);line-height:1.6;padding-bottom:104px;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.dsp{font-family:var(--dsp);color:var(--ink);letter-spacing:.01em;line-height:1.08;text-transform:uppercase}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.97);backdrop-filter:blur(8px);border-bottom:3px solid var(--red);box-shadow:0 1px 12px rgba(0,0,0,.07)}
+.hd{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 0}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand-logo-img{width:52px;height:52px;flex:0 0 52px;object-fit:contain;background:var(--white)}
+.logo b{font-family:var(--dsp);font-size:23px;color:var(--ink);letter-spacing:.03em;line-height:1}
+.logo b span{color:var(--red)}
+.logo small{display:block;font-family:var(--txt);font-size:9.5px;letter-spacing:.18em;color:var(--grey);text-transform:uppercase;margin-top:3px}
+.nav{display:none;gap:24px}
+.nav a{color:#3d3d3d;text-decoration:none;font-size:14px;font-weight:500;padding:6px 0;border-bottom:2px solid transparent;transition:.18s}
+.nav a:hover,.nav a:focus-visible{color:var(--jet);border-color:var(--red);outline:none}
+.tel{display:inline-flex;align-items:center;gap:7px;background:var(--jet);color:#fff;text-decoration:none;font-weight:600;font-size:14px;padding:10px 16px;border-radius:8px;transition:.18s;white-space:nowrap}
+.tel:hover,.tel:focus-visible{background:var(--red);transform:translateY(-1px);outline:none}
+@media(min-width:960px){.nav{display:flex}}
+.hero{position:relative;background:linear-gradient(150deg,var(--jet) 0%,var(--jet-2) 50%,#2e2e2e 100%);color:#d0d0d0;overflow:hidden}
+.hero:before{content:"";position:absolute;inset:0;background-image:repeating-linear-gradient(115deg,rgba(255,255,255,.03) 0 2px,transparent 2px 9px);pointer-events:none}
+.hero:after{content:"";position:absolute;left:0;right:0;bottom:0;height:14px;background:repeating-linear-gradient(90deg,var(--jet) 0 22px,var(--white) 22px 44px);opacity:.9}
+.hero .wrap{position:relative;display:grid;gap:36px;padding-top:54px;padding-bottom:70px}
+@media(min-width:960px){.hero .wrap{grid-template-columns:1.08fr .92fr;align-items:center;padding-top:74px;padding-bottom:88px}}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:11.5px;font-weight:600;letter-spacing:.19em;text-transform:uppercase;color:var(--silver);margin-bottom:16px}
+.eyebrow:before{content:"";width:26px;height:2px;background:var(--red)}
+.hero h1{font-size:clamp(36px,7.2vw,60px);color:#fff}
+.hero h1 em{font-style:normal;color:var(--red)}
+.hero p.sub{margin-top:16px;font-size:17px;max-width:33em;color:#ababab}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.btn{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:15px;padding:14px 24px;border-radius:9px;text-decoration:none;transition:.18s;border:2px solid transparent}
+.btn-p{background:var(--red);color:#fff;box-shadow:0 5px 18px rgba(227,25,55,.34)}
+.btn-p:hover,.btn-p:focus-visible{background:var(--red-d);transform:translateY(-2px);outline:none}
+.btn-g{border-color:rgba(255,255,255,.3);color:#fff}
+.btn-g:hover,.btn-g:focus-visible{border-color:var(--red);background:rgba(255,255,255,.09);outline:none}
+.facts{display:flex;flex-wrap:wrap;gap:10px 26px;margin-top:30px;padding-top:22px;border-top:1px solid rgba(255,255,255,.14)}
+.fact{font-size:13px;color:#9e9e9e}
+.fact b{display:block;font-family:var(--dsp);font-size:20px;color:#fff;letter-spacing:.02em}
+.art{background:var(--white);border-radius:16px;padding:22px;text-align:center}
+.art img{width:100%;max-width:350px;height:auto;display:block;margin:0 auto}
+.artcap{margin-top:10px;font-size:12px;color:var(--grey);letter-spacing:.04em}
+section{padding:64px 0}
+.alt{background:var(--bg)}
+.shead{max-width:680px;margin-bottom:36px}
+.shead .kick{font-size:11.5px;font-weight:600;letter-spacing:.19em;text-transform:uppercase;color:var(--red);margin-bottom:10px}
+.shead h2{font-size:clamp(27px,4.5vw,39px)}
+.shead p{margin-top:12px;font-size:16px}
+.grid{display:grid;gap:18px;grid-template-columns:1fr}
+@media(min-width:620px){.grid{grid-template-columns:1fr 1fr}}
+@media(min-width:960px){.grid.g3{grid-template-columns:repeat(3,1fr)}}
+.card{background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:24px;box-shadow:var(--sh);transition:.2s}
+.card:hover{box-shadow:var(--sh2);transform:translateY(-3px);border-color:var(--silver)}
+.ico{width:44px;height:44px;border-radius:10px;background:linear-gradient(140deg,var(--jet),#3d3d3d);display:grid;place-items:center;margin-bottom:15px}
+.card h3{font-size:19px;margin-bottom:8px}
+.card p{font-size:14.5px}
+.price{margin-top:14px;padding-top:12px;border-top:1px dashed var(--line);font-size:13px;color:#8b8b8b}
+.price b{font-family:var(--dsp);font-size:19px;color:var(--ink);letter-spacing:.02em}
+.note{display:inline-block;margin-top:26px;font-size:13px;color:#6c6c6c;background:#fff;border:1px dashed var(--red);border-radius:8px;padding:10px 14px}
+.why{display:grid;gap:16px;grid-template-columns:1fr}
+@media(min-width:720px){.why{grid-template-columns:repeat(3,1fr)}}
+.wcard{background:var(--jet);color:#bababa;border-radius:var(--r);padding:26px;border-left:4px solid var(--red)}
+.wcard h3{color:#fff;font-size:20px;margin-bottom:8px}
+.wcard p{font-size:14.5px}
+.about{display:grid;gap:32px}
+@media(min-width:900px){.about{grid-template-columns:1.15fr .85fr;align-items:start}}
+.about p{margin-bottom:14px;font-size:16px}
+.hours{background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:24px;box-shadow:var(--sh)}
+.hours h3{font-size:20px;margin-bottom:14px}
+.hrow{display:flex;justify-content:space-between;gap:14px;padding:9px 0;border-bottom:1px solid var(--line);font-size:14.5px}
+.hrow:last-child{border:0}
+.hrow b{color:var(--ink);font-weight:600}
+.cgrid{display:grid;gap:26px}
+@media(min-width:900px){.cgrid{grid-template-columns:.95fr 1.05fr}}
+.cbox{background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:26px;box-shadow:var(--sh)}
+.cline{display:flex;gap:13px;align-items:flex-start;padding:13px 0;border-bottom:1px solid var(--line)}
+.cline:last-of-type{border:0}
+.cline svg{flex:0 0 auto;margin-top:2px}
+.cline span{font-size:12px;text-transform:uppercase;letter-spacing:.13em;color:#949494;display:block;margin-bottom:2px}
+.cline a,.cline p{font-size:15.5px;color:var(--ink);text-decoration:none;font-weight:500}
+.cline a:hover{color:var(--red)}
+label{display:block;font-size:12.5px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:#797979;margin:14px 0 6px}
+input,textarea,select{width:100%;font-family:var(--txt);font-size:15px;color:var(--ink);padding:12px 14px;border:1.5px solid var(--line);border-radius:9px;background:#fafafa;transition:.16s}
+input:focus,textarea:focus,select:focus{outline:none;border-color:var(--red);background:#fff;box-shadow:0 0 0 3px rgba(227,25,55,.16)}
+textarea{min-height:104px;resize:vertical}
+.map{margin-top:16px;height:170px;border-radius:10px;border:1px solid var(--line);background:
+linear-gradient(90deg,transparent 49.4%,#d8d8d8 49.4% 50.6%,transparent 50.6%),
+linear-gradient(0deg,transparent 61%,#d8d8d8 61% 62%,transparent 62%),
+linear-gradient(0deg,transparent 27%,#e7e7e7 27% 27.8%,transparent 27.8%),#f1f1f1;position:relative;overflow:hidden}
+.pin{position:absolute;left:50%;top:61%;transform:translate(-50%,-100%)}
+.maplbl{position:absolute;left:50%;top:63%;transform:translateX(-50%);background:#fff;border:1px solid var(--line);border-radius:7px;padding:6px 11px;font-size:12px;font-weight:600;color:var(--ink);white-space:nowrap;box-shadow:var(--sh)}
+.rec{background:var(--white);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;box-shadow:var(--sh);margin-top:6px}
+.rrow{display:grid;gap:4px;padding:16px 20px;border-bottom:1px solid var(--line)}
+@media(min-width:700px){.rrow{grid-template-columns:1fr 1.4fr;gap:18px;align-items:baseline}}
+.rrow:last-child{border:0}
+.rrow b{font-family:var(--dsp);font-size:17px;color:var(--ink);letter-spacing:.02em}
+.rrow p{font-size:14.5px}
+.tick{color:#12703c;font-weight:600}
+.cross{color:var(--red);font-weight:600}
+footer{background:var(--jet);color:#9e9e9e;padding:40px 0 30px;font-size:14px}
+.fgrid{display:flex;flex-wrap:wrap;gap:22px;justify-content:space-between;align-items:flex-start}
+footer b{font-family:var(--dsp);font-size:22px;color:#fff;display:block;letter-spacing:.03em}
+footer a{color:#d6d6d6}
+footer a:hover{color:var(--red)}
+.fbot{margin-top:26px;padding-top:18px;border-top:1px solid rgba(255,255,255,.12);font-size:12.5px;display:flex;flex-wrap:wrap;gap:8px;justify-content:space-between}
+.csbar{position:fixed;left:0;right:0;bottom:0;z-index:99;background:rgba(10,10,10,.965);backdrop-filter:blur(10px);border-top:1px solid rgba(255,255,255,.15);padding:11px 16px}
+.csin{max-width:1120px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.cstag{font-size:9.5px;letter-spacing:.24em;text-transform:uppercase;color:#8c8c8c;margin-bottom:3px}
+.csmsg{color:#fff;font-size:14.5px;font-weight:600;line-height:1.35;max-width:62ch}
+.csmsg i{font-style:normal;color:var(--red)}
+.csbtn{display:inline-flex;align-items:center;gap:8px;background:var(--red);color:#fff;text-decoration:none;font-weight:700;font-size:14px;padding:12px 21px;border-radius:99px;white-space:nowrap;box-shadow:0 0 0 0 rgba(227,25,55,.4);animation:pulse 2.4s infinite;transition:.18s}
+.csbtn:hover,.csbtn:focus-visible{background:#fff;color:var(--jet);transform:translateY(-2px);outline:none;animation:none}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(227,25,55,.4)}70%{box-shadow:0 0 0 15px rgba(0,0,0,0)}100%{box-shadow:0 0 0 0 rgba(0,0,0,0)}}
+@media(prefers-reduced-motion:reduce){.csbtn{animation:none}*{transition:none!important}}
+@media(max-width:640px){.csin{flex-direction:column;text-align:center;gap:10px}.csmsg{font-size:13.5px}body{padding-bottom:150px}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap hd">
+    <a class="logo" href="#top" aria-label="Pcars Auto Solutions home">
+      <img class="brand-logo-img" src="brand/logo-facebook-profile.jpg" alt="Pcars Auto Solutions logo" width="52" height="52" decoding="async">
+      <span><b>PCARS <span>AUTO SOLUTIONS</span></b><small>Kapitolyo, Pasig City</small></span>
+    </a>
+    <nav class="nav"><a href="#services">Services</a><a href="#record">The record</a><a href="#find">Find us</a><a href="#contact">Contact</a></nav>
+    <a class="tel" href="tel:+63287092481">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 2h3l1.6 4-2.2 1.4a13 13 0 0 0 5.6 5.6L16 10.8l4 1.6v3a2 2 0 0 1-2.2 2A17.6 17.6 0 0 1 2.4 4.2 2 2 0 0 1 4.4 2h2.2Z" stroke="#fff" stroke-width="2" stroke-linejoin="round"/></svg>
+      (02) 8709 2481
+    </a>
+  </div>
+</header>
+
+<div class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">8006 Pioneer St. cor. United St. &middot; Kapitolyo, Pasig City</div>
+      <h1>Kapitolyo. <em>Not Manila.</em></h1>
+      <p class="sub">Pcars Auto Solutions is a one-stop auto shop on the corner of Pioneer and United in Kapitolyo — accessories, window tinting and premium detailing under one roof. This page exists so a search for the shop lands on the shop.</p>
+      <div class="cta">
+        <a class="btn btn-p" href="tel:+63287092481">Call (02) 8709 2481</a>
+        <a class="btn btn-g" href="https://facebook.com/pcarsautosolutions" target="_blank" rel="noopener">Message us on Facebook</a>
+      </div>
+      <div class="facts"><div class="fact"><b>One stop</b>accessories, tint, detailing</div><div class="fact"><b>Kapitolyo</b>Pioneer cor. United</div><div class="fact"><b>3 lines</b>landline and two mobiles</div></div>
+    </div>
+    <div class="art">
+      <img src="brand/logo-facebook-profile.jpg" alt="Pcars Auto Solutions logo — Pcars Performance" decoding="async">
+      <div class="artcap">Sample layout &mdash; your own bay and detailing photos go here</div>
+    </div>
+  </div>
+</div>
+
+<section id="services">
+  <div class="wrap">
+    <div class="shead">
+      <div class="kick">What we do</div>
+      <h2>Accessories, tint and detailing in one shop</h2>
+      <p>The reason a one-stop shop is worth the drive is that the tint, the accessories and the paint correction do not become three separate appointments across three suburbs.</p>
+    </div>
+    <div class="grid g3">
+      <div class="card"><div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="3" y="6.4" width="18" height="11.2" rx="2.4" stroke="#fff" stroke-width="1.8"/><path d="M7.4 10.2h9.2M7.4 13.8h5.6" stroke="#E31937" stroke-width="1.9" stroke-linecap="round"/></svg></div>
+        <h3>Window tinting</h3><p>Film selected for the heat rejection you actually want, fitted without bubbles or a peeling edge two summers later.</p><div class="price">Starting at <b>&#8369; ___</b> &middot; your actual rates go here</div></div>
+      <div class="card"><div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M6 13.6c0-4 6-10.6 6-10.6s6 6.6 6 10.6a6 6 0 0 1-12 0Z" stroke="#E31937" stroke-width="1.9" stroke-linejoin="round"/></svg></div>
+        <h3>Premium detailing</h3><p>Wash, decontamination, paint correction and protection — the difference between a car that is clean and a car that looks new.</p><div class="price">Starting at <b>&#8369; ___</b> &middot; your actual rates go here</div></div>
+      <div class="card"><div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8.6" stroke="#fff" stroke-width="1.8"/><circle cx="12" cy="12" r="3.4" stroke="#E31937" stroke-width="2.2"/></svg></div>
+        <h3>Car accessories</h3><p>Fitted accessories chosen for your model rather than sold as a universal part that never quite lines up.</p><div class="price">Starting at <b>&#8369; ___</b> &middot; your actual rates go here</div></div>
+      <div class="card"><div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="3" y="5.4" width="18" height="13.2" rx="2.4" stroke="#fff" stroke-width="1.8"/><path d="M7 13h2.6l1.8-3.4 2 6.4 1.8-3h1.8" stroke="#E31937" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3>Lighting &amp; electronics</h3><p>Lighting upgrades, dash cameras and in-car electronics wired in properly instead of spliced into the nearest live feed.</p><div class="price">Starting at <b>&#8369; ___</b> &middot; your actual rates go here</div></div>
+      <div class="card"><div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 3.4 20 7v5.4c0 4.6-3.4 7.6-8 8.6-4.6-1-8-4-8-8.6V7l8-3.6Z" stroke="#E31937" stroke-width="1.8" stroke-linejoin="round"/></svg></div>
+        <h3>Paint protection</h3><p>Coatings and film to keep the finish through Metro Manila sun, dust and traffic &mdash; options to be confirmed against current stock.</p><div class="price">Ask in store &middot; confirm options</div></div>
+      <div class="card"><div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4.6 6.6h14.8M4.6 12h14.8M4.6 17.4h14.8" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/><circle cx="8.6" cy="6.6" r="2.4" fill="#E31937"/><circle cx="15.4" cy="17.4" r="2.4" fill="#E31937"/></svg></div>
+        <h3>Everything on one booking</h3><p>Tint, accessories and detailing arranged as a single visit rather than a car that is away three separate weekends.</p><div class="price">Ask about <b>packages</b></div></div>
+    </div>
+    <div class="note">Sample layout &mdash; the service list and prices above are labelled placeholders for Pcars Auto Solutions&rsquo; real rates and packages.</div>
+  </div>
+</section>
+
+<section class="alt" id="record">
+  <div class="wrap">
+    <div class="shead"><div class="kick">Setting the record straight</div><h2>Three published versions of this shop. None of them ours.</h2><p>Everything a customer can currently find about Pcars Auto Solutions was written by someone else, and the versions do not agree.</p></div>
+    <div class="rec">
+      <div class="rrow"><b>Filed under Manila</b><p><span class="cross">Wrong.</span> A directory listing files this shop under Manila. It is in <b>Kapitolyo, Pasig City 1603</b> — Pioneer corner United.</p></div>
+      <div class="rrow"><b>&ldquo;Pcars Auto Accessories&rdquo;</b><p><span class="cross">Partial.</span> One business registry carries an accessories-only trading name. Another carries <b>PCARS AUTO SOLUTIONS CO.</b> Two registries, two names, one shop.</p></div>
+      <div class="rrow"><b>pcarsautosolutions.com</b><p><span class="cross">Does not resolve.</span> Checked 19 August 2026 — the domain fails DNS. Nothing on the shop&rsquo;s own name is reachable, so no page it owns can correct any of the above.</p></div>
+      <div class="rrow"><b>This page</b><p><span class="tick">Correct.</span> One trading name, one Kapitolyo address, three working numbers, stated by the shop itself.</p></div>
+    </div>
+    <div class="note">Search &ldquo;auto repair shop Pasig City best mechanic&rdquo; on 19 August 2026 and page one is Yelp four times over, StarOfService and InfoisInfo. Not one Pasig shop appears on its own domain.</div>
+  </div>
+</section>
+
+<section id="find">
+  <div class="wrap about">
+    <div>
+      <div class="shead"><div class="kick">About the shop</div><h2>Kapitolyo&rsquo;s one-stop auto shop</h2></div>
+      <p>Pcars Auto Solutions operates from 8006 Pioneer Street corner United Street in Kapitolyo, Pasig City 1603 — an accessories, window tinting and premium detailing shop registered as PCARS AUTO SOLUTIONS CO.</p>
+      <p>Three phone lines reach the shop, along with Facebook and Instagram. That is four inboxes for one enquiry, which works fine until two of them are busy. Everything below is the shop&rsquo;s own contact detail, in one place.</p>
+      <div class="cta"><a class="btn btn-p" href="tel:+63287092481">Call (02) 8709 2481</a></div>
+    </div>
+    <div class="hours">
+      <h3>Opening hours</h3>
+      <div class="hrow"><span>Monday &ndash; Saturday</span><b>To be confirmed</b></div>
+      <div class="hrow"><span>Sunday</span><b>To be confirmed</b></div>
+      <p style="margin-top:14px;font-size:13px;color:#8b8b8b">No verified hours are published on any listing we could find, so they are marked to be confirmed rather than invented. The shop sets them here.</p>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="contact">
+  <div class="wrap">
+    <div class="shead"><div class="kick">Visit or call</div><h2>Pioneer corner United, Kapitolyo</h2></div>
+    <div class="cgrid">
+      <div class="cbox">
+        <div class="cline"><svg width="19" height="19" viewBox="0 0 24 24" fill="none"><path d="M12 21s7-6.4 7-11a7 7 0 1 0-14 0c0 4.6 7 11 7 11Z" stroke="#E31937" stroke-width="1.9"/><circle cx="12" cy="10" r="2.6" stroke="#808080" stroke-width="1.9"/></svg><div><span>Address</span><p>8006 Pioneer St. cor. United St.,<br>Kapitolyo, Pasig City 1603</p></div></div>
+        <div class="cline"><svg width="19" height="19" viewBox="0 0 24 24" fill="none"><path d="M6.6 2h3l1.6 4-2.2 1.4a13 13 0 0 0 5.6 5.6L16 10.8l4 1.6v3a2 2 0 0 1-2.2 2A17.6 17.6 0 0 1 2.4 4.2 2 2 0 0 1 4.4 2h2.2Z" stroke="#E31937" stroke-width="1.9" stroke-linejoin="round"/></svg><div><span>Phone</span><a href="tel:+63287092481">(02) 8709 2481</a><br><a href="tel:+639544434000">0954 443 4000</a> &middot; <a href="tel:+639561790300">0956 179 0300</a></div></div>
+        <div class="cline"><svg width="19" height="19" viewBox="0 0 24 24" fill="none"><path d="M14 8.4h2.6V5.2H14c-2.4 0-4 1.6-4 4v2H7.6v3.2H10v6.4h3.2v-6.4h2.6l.6-3.2h-3.2v-1.6c0-.7.3-1.2.8-1.2Z" stroke="#E31937" stroke-width="1.7" stroke-linejoin="round"/></svg><div><span>Facebook</span><a href="https://facebook.com/pcarsautosolutions" target="_blank" rel="noopener">facebook.com/pcarsautosolutions</a></div></div>
+        <div class="cline"><svg width="19" height="19" viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="16" rx="4.6" stroke="#E31937" stroke-width="1.8"/><circle cx="12" cy="12" r="3.6" stroke="#808080" stroke-width="1.8"/><circle cx="16.6" cy="7.4" r="1.1" fill="#E31937"/></svg><div><span>Instagram</span><a href="https://instagram.com/p_cars_auto" target="_blank" rel="noopener">@p_cars_auto</a></div></div>
+        <div class="map"><svg class="pin" width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 22s7-6.4 7-11a7 7 0 1 0-14 0c0 4.6 7 11 7 11Z" fill="#E31937"/><circle cx="12" cy="10.6" r="2.6" fill="#fff"/></svg><div class="maplbl">Pioneer cor. United, Kapitolyo, Pasig</div></div>
+      </div>
+      <div class="cbox">
+        <h3 style="font-size:21px">Get a quote</h3>
+        <p style="font-size:14.5px;margin-top:6px">One form instead of three inboxes. Tell us the car and the job and you get a price back.</p>
+        <form onsubmit="event.preventDefault();window.open('https://facebook.com/pcarsautosolutions','_blank');">
+          <label for="n">Your name</label><input id="n" type="text" placeholder="Juan dela Cruz">
+          <label for="c">Vehicle (make, model, year)</label><input id="c" type="text" placeholder="Ford Ranger 2021">
+          <label for="s">What do you need?</label>
+          <select id="s"><option>Window tinting</option><option>Premium detailing</option><option>Car accessories</option><option>Lighting / electronics</option><option>Paint protection</option><option>Package &mdash; more than one of the above</option></select>
+          <label for="m">Details</label><textarea id="m" placeholder="Full tint plus a detail before handover next month."></textarea>
+          <button class="btn btn-p" style="margin-top:18px;width:100%;justify-content:center;border:0;cursor:pointer" type="submit">Send via Facebook</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div><b>PCARS AUTO SOLUTIONS</b><p style="margin-top:6px">Accessories &middot; Window tinting &middot; Premium detailing<br>Registered as PCARS AUTO SOLUTIONS CO.</p></div>
+      <div><p><a href="tel:+63287092481">(02) 8709 2481</a><br><a href="tel:+639544434000">0954 443 4000</a><br><a href="tel:+639561790300">0956 179 0300</a></p></div>
+      <div><p>8006 Pioneer St. cor. United St.<br>Kapitolyo, Pasig City 1603<br><a href="https://instagram.com/p_cars_auto" target="_blank" rel="noopener">@p_cars_auto</a></p></div>
+    </div>
+    <div class="fbot"><span>&copy; 2026 Pcars Auto Solutions. All rights reserved.</span><span>Website by CloudSpring IT Solutions</span></div>
+  </div>
+</footer>
+
+<div class="csbar" role="complementary" aria-label="CloudSpring preview">
+  <div class="csin">
+    <div>
+      <div class="cstag">Preview &middot; CloudSpring IT Solutions</div>
+      <div class="csmsg">Want this website <i>putting you in Pasig under one name &mdash; instead of a directory filing you under Manila and your own domain not resolving?</i></div>
+    </div>
+    <a class="csbtn" href="https://api.leadconnectorhq.com/widget/booking/QRPEnWRw2Kx9rBe0Mj6J" target="_blank" rel="noopener">Book a FREE Discovery Call &rarr;</a>
+  </div>
+</div>
+
+</body>
+</html>
