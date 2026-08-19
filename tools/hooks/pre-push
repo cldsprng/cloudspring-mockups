@@ -22,6 +22,18 @@ ZERO=$(git hash-object --stdin </dev/null | tr '0-9a-f' '0')
 # A mockup folder is a top-level directory containing index.html — that is the
 # deploy unit per PIPELINE-CONFIG.md ("One folder per mockup: /<slug>/index.html").
 # tools/, automation/ and root files have no index.html, so they are never gated.
+#
+# Scoped to deploy artifacts: <slug>/brand/** is builder *input* — the captured
+# logo and palette the rebuild reads from. It is not part of the rendered page,
+# so adding it cannot make a deployed mockup worse. A push that only adds or
+# updates <slug>/brand/** is therefore not gated; anything that changes
+# <slug>/index.html or an asset it renders still is.
+#
+# This is a scoping correction, not an override. Without it the gate deadlocks:
+# the rebuild cannot start without the captured brand data, and the brand data
+# cannot land until the rebuild is done. It also made the no-assets records
+# ("do not build this slug") permanently unlandable, so every run re-attempted
+# the same dead captures. Approved on CLO-27.
 changed_mockup_folders() {
   local_sha=$1
   remote_sha=$2
@@ -41,6 +53,7 @@ changed_mockup_folders() {
 
   git diff --name-only "$range" -- 2>/dev/null \
     | grep '/' \
+    | grep -v '^[^/]*/brand/' \
     | sed 's|/.*||' \
     | sort -u
 }
