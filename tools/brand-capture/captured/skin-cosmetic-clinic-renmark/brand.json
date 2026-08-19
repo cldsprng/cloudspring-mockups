@@ -1,0 +1,52 @@
+{
+  "slug": "skin-cosmetic-clinic-renmark",
+  "site": "skincosmeticclinic.com.au",
+  "facebook": "skincosmeticclinic",
+  "capturedAt": "2026-08-19T00:02:27.111Z",
+  "source": "headless-http",
+  "name": null,
+  "logo": {
+    "file": "logo-facebook-profile.jpg",
+    "score": 95,
+    "why": "facebook profile picture"
+  },
+  "logoFiles": [
+    {
+      "file": "logo-facebook-profile.jpg",
+      "bytes": 34069,
+      "from": "graph.facebook.com/skincosmeticclinic/picture?width=1200&height=1200",
+      "why": "facebook profile picture",
+      "score": 95
+    }
+  ],
+  "colors": {
+    "brand": [
+      {
+        "hex": "#26282a",
+        "weight": 70
+      },
+      {
+        "hex": "#4a4d50",
+        "weight": 20
+      }
+    ],
+    "neutral": [
+      {
+        "hex": "#ffffff",
+        "weight": 80
+      }
+    ],
+    "themeColor": "#26282a",
+    "source": "vision"
+  },
+  "fonts": [],
+  "ready": true,
+  "blockedBy": "palette-pending",
+  "confidence": 85,
+  "notes": [
+    "facebook profile picture captured headlessly for \"skincosmeticclinic\"",
+    "site unreachable over plain HTTP(S)",
+    "vision-read of logo-facebook-profile.jpg: charcoal handwritten \"Skin\" script on white",
+    "monochrome brand: the mark is black-on-white by design, so capture.mjs's \">=2 chromatic colours\" heuristic can never be satisfied. The recorded palette is the prospect's actual one, not a substitute."
+  ]
+}
