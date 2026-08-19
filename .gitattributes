@@ -1,0 +1,3 @@
+# The pre-push brand gate is a POSIX shell script. CRLF breaks its shebang.
+tools/hooks/pre-push text eol=lf
+*.mjs text eol=lf

@@ -45,7 +45,25 @@ separated out as `neutral` — they're structure, not identity.
 
 Exit code is `0` when `ready`, `1` otherwise, so a run can branch on it.
 
-## 3. Gate — run before `git push`
+## 3. Gate — automatic on `git push`
+
+Wire it up once per clone:
+
+```bash
+node tools/hooks/install.mjs
+```
+
+That sets `core.hooksPath` to `tools/hooks`, so `tools/hooks/pre-push` runs on
+every push. It gates each mockup folder the push touches — a mockup folder being
+a top-level directory with an `index.html` — and refuses the whole push if any
+one of them fails. `tools/` and `automation/` have no `index.html`, so they are
+never gated, and a config or learnings-log commit isn't blocked by the unrelated
+folders sitting in the repo.
+
+Hooks in `.git/hooks` aren't versioned and don't survive a clone, which is why
+the gate lives in `tools/hooks/` instead.
+
+To check a single folder by hand — QA's independent second check:
 
 ```bash
 node verify-brand.mjs ./jn-tirezone

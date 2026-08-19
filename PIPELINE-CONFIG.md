@@ -24,8 +24,9 @@ Niche calendar (the human owns this list — edit freely):
 ## Quotas & targeting
 
 - Daily quota: 3 PH + 1 international — TOTAL across all agents/surfaces.
-  If INCOMING LEADS already has today's quota (e.g. the 6AM Lead Hunter
-  routine filled it), later runs only top up, never duplicate.
+  Lead generation is STEP 1 OF THE DAILY RUN (see below), not a separate
+  routine. Count what INCOMING LEADS already holds for today and top up to
+  quota — never past it, never duplicate.
 - City rotation within the week: Mon Quezon City · Tue Makati · Wed Pasig ·
   Thu Taguig · Fri Cebu · Sat Davao · Sun agent's choice among cities with
   thin coverage so far this week
@@ -34,24 +35,256 @@ Niche calendar (the human owns this list — edit freely):
 ## Trello board
 
 Board: CLOUDSPRING_MAINBOARD — https://trello.com/b/TIAlGfU8/cloudspringmainboard
-Lists: INCOMING LEADS → STRATEGY READY → MOCKUP READY → READY TO SEND →
-CHANGES REQUESTED → APPROVED → SYNCED TO GHL (SEND MANUALLY) → CONTACTED →
-REPLIED (HITS) → CLIENTS, + REJECTED
+Lists, in board order: NICHE · INCOMING LEADS → STRATEGY READY → **BRAND
+BLOCKED** → MOCKUP READY → READY TO SEND → CHANGES REQUESTED → APPROVED →
+SYNCED TO GHL (SEND MANUALLY) → CONTACTED → **FOLLOW-UP DUE** → REPLIED (HITS) →
+CLIENTS, + REJECTED
+
+NICHE is a reference list, not a stage. REJECTED is a terminal sink — cards can
+land there from any stage.
+
+BRAND BLOCKED sits between STRATEGY READY and MOCKUP READY because capture runs
+before the build. It holds leads where capture returned `no-assets` — no logo
+found anywhere, so no mockup may be built. It is a human decision queue, not a
+failure bin: drop real assets into `<slug>/brand/` and the card re-enters at
+MOCKUP READY, or reject the lead. Nothing leaves this list by being built with
+an invented palette.
+
+FOLLOW-UP DUE: Trello has no sequencer, so the later touches need somewhere to
+physically land. A card moves CONTACTED → FOLLOW-UP DUE when its due date comes
+up. Whoever owns the channel sends the next touch, then moves the card back to
+CONTACTED with the next due date set — or on to REPLIED (HITS) or REJECTED.
+
+Touch schedule: touch 1 on send · touch 2 at day 3 · touch 3 at day 7 · clean
+breakup at day 14. There is no touch 4.
+
+CONTACTED due-date discipline — MANDATORY on arrival, no exceptions:
+- The card DESCRIPTION carries a `Sent: YYYY-MM-DD` line plus the channel used.
+- The card DUE DATE is set to sent date + 3 days at 09:00 Asia/Manila
+  (= 01:00 UTC; the Trello API takes UTC ISO 8601).
+- Whoever moves the card in sets both — the outreach agent on email/GHL sends,
+  the human on manual FB/SMS sends.
+- A card sitting in CONTACTED with no due date is a defect. The next run stamps
+  it from the card's move-in date and logs it.
+- Re-stamp after every touch: day 3 → due day 7 → due day 14 → breakup → done.
 
 APPROVED flow: agent syncs every approved card to GHL (contact + opportunity
 + note, "✅ Synced to GHL" marker). Email leads auto-send via GHL → CONTACTED.
 Manual-channel leads (FB/SMS) → SYNCED TO GHL (SEND MANUALLY); the human
-sends the draft and drags the card to CONTACTED, which is the "sent" signal.
+sends the draft and drags the card to CONTACTED, which is the "sent" signal —
+and which triggers the due-date discipline above, on either path.
 No processed card ever sits in plain APPROVED.
 
 Human touchpoints: READY TO SEND → APPROVED authorizes sending · revisions
 via CHANGES REQUESTED with "## CHANGES" in the card DESCRIPTION (comments are
 invisible to agents) · REPLIED (HITS) is human territory.
 
-Agent order: lead-gen (or 6AM Lead Hunter routine) → solution-strategist →
-mockup-builder → outreach → sales-qa-humanizer (rewrites every draft to
-sound human + runs the sales QA checklist; only cards marked
-"✅ QA'd & humanized" should be approved by the human).
+Agent order: see "Daily run — order of operations" below. That section is the
+canonical order; nothing runs outside it.
+
+## Daily run — order of operations (CANONICAL)
+
+ONE job, every day including weekends, starting **07:00 Asia/Manila**. All nine
+steps below belong to this single run.
+
+The job is the Paperclip routine **"Daily pipeline run (Asia/Manila)"**
+(`384fbc06-eb67-4554-8dbd-252922400301`), scheduled `0 7 * * *` Asia/Manila,
+`skip_if_active` + `skip_missed` so a slow run is never doubled and a missed day
+never arrives as two days of quota. It is owned by the CEO agent, which delegates
+each step to its specialist and compiles the report.
+
+There is no separate 6AM Lead Hunter routine any more. Lead generation is step 1
+of this run. (2026-08-17 and 2026-08-18: the separate routine silently produced
+nothing two days running and the daily job absorbed the full quota both times.
+One job that reliably runs beats two where one doesn't.) If a 6AM Lead Hunter
+routine still exists on any other surface — a Claude Code Routine or a Cowork
+schedule — **disable it**. Two lead-gen jobs against one shared quota is the
+failure this section exists to remove, and a duplicate that works is worse than
+one that doesn't.
+
+Two rules that hold across every step:
+
+- **A step that produces nothing still reports.** Silence is the failure mode
+  this pipeline keeps hitting; there is no such thing as a quiet skip.
+- **No step covers for a skipped earlier step.** If step 3 could not run, step 4
+  does not build unbranded "to keep the day moving" — it reports the gap and
+  builds only what is genuinely ready.
+
+### 1 — Lead generation (folded in)
+
+Read this week's niche and today's city from the calendar above. Count today's
+existing INCOMING LEADS cards, top up to 3 PH + 1 international, stop at quota.
+Prefer leads with at least one messageable channel (email or FB); mark
+phone-only leads `☎️ PHONE ONLY` — they cannot be emailed or auto-sent and
+become a human SMS/call script. Download Google Place photos to
+`<slug>/photos/` where the Places API is reachable.
+
+**Reports:** quota target · found · already present · shortfall and why.
+
+### 2 — Strategy
+
+Solutions Strategist turns every INCOMING LEADS card into a two-part Sales Angle
+(evidence, then offer), writes it into the card DESCRIPTION at ~1,250 chars max,
+and moves the card to STRATEGY READY.
+
+Before defaulting to the directory-capture angle, run the two cheap checks that
+have repeatedly beaten it: fetch the lead's candidate domain looking for a
+200-with-empty-body, and look for duplicate directory listings that contradict
+each other on address, hours or price.
+
+The offer half of the angle is bounded by `OFFER-MENU.md`. Name every automation
+by its menu ID (`CL-03`, `TR-01`, `XC-01`) and mark its state on the card. An
+`IN BUILD` line may be **diagnosed and sized in the owner's numbers** but never
+promised — see the template and worked example in that file.
+
+**Reports:** cards strategised · angle chosen per card · menu IDs cited per card.
+
+### 3 — Brand capture (first-class, same run as strategy)
+
+For every card step 2 moved into STRATEGY READY, run
+`tools/brand-capture/capture.mjs` and write `<slug>/brand/brand.json`. Nothing
+reaches the builder unbranded. This step is headless — see "Brand assets
+convention" below for the invocation and the three `brand.json` states.
+
+Routing, which is the part that belongs to the run order:
+
+- `ready: true` → the card continues to step 4.
+- `palette-pending` → vision-read the logo, complete `colors.brand[]`, then
+  continue to step 4 in the same run. This is the common Facebook-only case, not
+  an exception.
+- `no-assets` → the card moves to **BRAND BLOCKED** and stops. It does not
+  consume today's build capacity and it is never built anyway.
+
+**Reports:** captured · vision-resolved · brand-blocked counts, with the logo
+source and confidence per lead. Report the brand-blocked cards by name — an
+empty BRAND BLOCKED list and an unreported one look identical otherwise.
+
+### 4 — Build: revisions first, then backlog, then new
+
+Mockup Builder works this order and does not reorder it:
+
+1. **Revisions** — every CHANGES REQUESTED card carrying `## CHANGES` in its
+   DESCRIPTION. A revision is a prospect already engaged; it outranks a new
+   lead every time.
+2. **Backlog** — oldest branded, ready STRATEGY READY cards, up to remaining
+   capacity. A card older than 7 days must have its evidence re-verified before
+   build; rankings, competitor claims and directory data go stale.
+3. **New** — today's step-3 output.
+
+Gate, enforced not advised:
+
+- No card is built without `brand/brand.json` at `ready: true`.
+- The gate runs **automatically on every `git push`**, via the versioned
+  `tools/hooks/pre-push` hook. It verifies every mockup folder the push touches
+  and refuses the entire push if any one of them fails. A refused push never
+  reaches Cloudflare Pages, so it never reaches a prospect.
+- Run `node tools/hooks/install.mjs` once per clone to wire the hook up. A clone
+  that has not run it is ungated — that is a broken environment, not a shortcut.
+- There is no flag-and-ship-anyway path and no override. `--no-verify` is not a
+  sanctioned command in this pipeline. A mockup either carries the lead's real
+  branding or it is not pushed.
+
+**Reports:** revisions / backlog / new built · gate pass and fail per slug ·
+deploy URL per slug.
+
+### 5 — Drafting
+
+Outreach writes the draft INTO the MOCKUP READY card's DESCRIPTION (comments are
+invisible to agents) and moves the card to READY TO SEND. Budget ~800 chars —
+condense the Sales Angle first, dropping the Stack/Mockup directive now the
+build is done. Sign as Dei. No two drafts in one day may share an opener, a
+closer or a skeleton.
+
+**Reports:** drafts written · send channel per lead.
+
+### 6 — QA
+
+sales-qa-humanizer. Four checks, all must pass before the card is marked
+`✅ QA'd & humanized`. Only marked cards should ever be approved by the human.
+
+1. **Humanize.** Contractions are a hard rule, not a preference. Banned:
+   any "So I built …" opening clause; the "<positive ask>? If not, <opt-out>
+   and I'll leave you be" closer; the em-dash used as a default clause
+   separator.
+2. **Brand gate, independently.** QA re-runs `verify-brand.mjs` itself rather
+   than trusting the builder's report. Same script, second pair of eyes — the
+   Dental Hive miss happened because one agent both built and judged.
+3. **Pricing floor.** PH ₱1,000–1,500/month; international USD 300–500 build +
+   USD 50–100/month. When a draft quotes a non-USD currency, quote from the
+   dated FX band table in `OFFER-MENU.md` — AUD 475–700 + 80–140 · GBP 240–370
+   + 40–75 · CAD 450–690 + 75–140. Never convert in your head.
+4. **Menu boundary.** Every automation the draft names must appear in
+   `OFFER-MENU.md` as `SELLABLE TODAY`. A draft that promises an `IN BUILD`
+   line, or names a capability that is not on the menu at all, fails — however
+   well it would fit the lead. Diagnosing the pain and sizing it in the owner's
+   numbers is allowed and encouraged; promising delivery is not.
+
+**Reports:** pass/fail per check per card · what was rewritten · any menu-boundary
+rejections and the line that caused them.
+
+### 7 — Approved handling
+
+For every card the human moved to APPROVED:
+
+- **GHL sync** — contact (tags `cloudspring-web-leads` + niche + `ph`/`intl`),
+  opportunity (12-month value), note (angle, mockup URL, offer, Trello link).
+- **Send by channel** — email leads auto-send via GHL and move to CONTACTED.
+  FB/SMS leads move to SYNCED TO GHL (SEND MANUALLY); Dei sends the draft and
+  drags the card to CONTACTED, which is the "sent" signal.
+- **Stamp the follow-up date** — set the card's due date to CONTACTED + 3 days.
+  The date is what makes step 8 possible; a card that reaches CONTACTED without
+  one falls out of the pipeline silently.
+- **If GHL is unreachable**, sending still proceeds. Advance the card by channel
+  as normal, mark it `⏳ GHL SYNC PENDING`, and name it in the run report; the
+  next run with a live connection back-fills the sync. A dead CRM must never
+  block a send.
+
+No processed card is left sitting in plain APPROVED.
+
+### 8 — Follow-ups due
+
+Sweep every CONTACTED card whose stamped due date falls today into FOLLOW-UP
+DUE, then work that list. Email follow-ups send through the same channel as the
+original; FB/SMS follow-ups are drafted for Dei to send, exactly like step 7.
+
+- **Day 3** — reply in the same thread with one new piece of evidence, not a
+  nudge. Re-stamp for day 7 and return the card to CONTACTED.
+- **Day 7** — change the angle, not the volume. Re-stamp for day 14, return to
+  CONTACTED.
+- **Day 14** — breakup. One line, no ask, closes the loop. Card moves to
+  REJECTED unless it drew a reply.
+
+A card never sits in FOLLOW-UP DUE overnight: by the end of the run it has gone
+back to CONTACTED with a new date, or on to REJECTED.
+
+**Reports:** follow-ups due · sent · drafted for manual send · re-stamped ·
+broken up.
+
+### 9 — Reply triage
+
+Same day, no carry-over. Check GHL inbound and the board for anything that came
+back. Move it to REPLIED (HITS) and hand it to Dei — REPLIED is human territory
+and agents do not answer prospects.
+
+**Reports:** replies found · where each was routed.
+
+## Run report (required output of every run)
+
+Every run ends by writing a report to the run's Trello card / issue thread. It
+is not optional and it is not prose-only. Minimum contents:
+
+- **Quota** — target 3 PH + 1 intl, found, shortfall and cause.
+- **Capture** — captured / vision-resolved / brand-blocked, per lead.
+- **Gates** — brand gate and QA results per slug, including every failure and
+  what blocked it.
+- **Queue depths** — card counts in INCOMING LEADS, STRATEGY READY, BRAND
+  BLOCKED, MOCKUP READY, READY TO SEND, CHANGES REQUESTED, APPROVED, SYNCED TO
+  GHL (SEND MANUALLY), CONTACTED, FOLLOW-UP DUE. Flag any queue that grew for a
+  third consecutive run — that is a human bottleneck, not an agent one, and the
+  run should say so plainly rather than keep filling it.
+- **Blockers** — anything that failed, named, with who unblocks it.
+- **Learnings** — new angles, slop patterns and environment gotchas appended to
+  the log at the bottom of this file.
 
 ## GHL (customer-facing CRM)
 
@@ -72,12 +305,72 @@ sound human + runs the sales QA checklist; only cards marked
 
 ## Brand assets convention
 
-- Per-lead asset folders in this repo: `<business-slug>/brand/` (logo, brand screenshots) and `<business-slug>/photos/` (real photos of the business — the Lead Hunter downloads Google Place photos here via the Places API).
-- The mockup builder reads these with vision to derive the REAL brand palette and uses the real photos as site imagery.
-- No assets available → builder ships a neutral-premium design FLAGGED "⚠️ GENERIC BRANDING" on the card; QA enforces the flag; the human decides (send anyway / drop assets in and request changes / polish in a Claude Code session).
+Brand capture is **headless and automatic**. It runs in any scheduled run — no
+browser, no desktop session, no human step. `tools/brand-capture/` is the
+implementation; run it for every lead before the mockup is built.
+
+```bash
+node tools/brand-capture/capture.mjs --site <domain> --facebook <page-slug> \
+     --slug <business-slug> --out <business-slug>/brand
+```
+
+Plain Node (v18+), zero dependencies. Writes `<slug>/brand/brand.json` plus every
+logo file it could download. Exit code is `0` when `ready`, `1` otherwise.
+
+**Facebook is capturable without a browser.** The page *HTML* is login-walled,
+but `https://graph.facebook.com/<page-slug>/picture?type=large` needs **no access
+token, no login and no browser** — a plain HTTP request returns the page's
+profile picture. For a Facebook-only lead, which is most of this pipeline by
+definition of the qualifier, that image *is* the brand. (Verified 2026-08-19:
+returns the Fast Autoworks logo as a 5.5KB JPEG from an unauthenticated run.)
+
+### The three states of `brand.json`
+
+| `ready` | `blockedBy` | What the builder does |
+|---|---|---|
+| `true` | `null` | **Build.** Use the captured logo file, the `colors.brand` hexes, and the captured typeface. |
+| `false` | `palette-pending` | Logo exists, no CSS to read colour from — the Facebook-only case. **Vision-read the logo**, write the hexes into `colors.brand[]` with `colors.source: "vision"`, set `ready: true`, then build. |
+| `false` | `no-assets` | **Do not build.** No usable logo anywhere. Card goes to `BRAND BLOCKED` for a human call: hand-drop assets into `<slug>/brand/`, or drop the lead. |
+
+There is no fourth state. There is no build-anyway path, no placeholder palette
+and no warning-label flag — a design the builder invented is not the prospect's
+brand, and labelling it as such does not make it sendable.
+
+### Deploy gate — automatic on every `git push`
+
+One-time per clone:
+
+```bash
+node tools/hooks/install.mjs      # sets core.hooksPath = tools/hooks
+```
+
+After that the gate runs itself. To check a single folder by hand — QA does this
+as its independent second check — run it directly:
+
+```bash
+node tools/brand-capture/verify-brand.mjs <business-slug>
+```
+
+Six checks: `brand.json` is `ready` · a captured logo file is actually referenced
+in `index.html` · **≥2 captured brand hexes appear in the styling** (this is the
+check that catches an invented palette) · the captured typeface is used (Arial /
+Helvetica / Roboto don't count — they're in every font stack) · no leftover
+generic-branding marker · the real business name is on the page.
+
+Non-zero exit means **do not deploy**. There is no override.
+
+**What the hook gates.** A mockup folder is a top-level directory containing
+`index.html` — the deploy unit. The hook gates exactly those folders that the
+push touches, so a learnings-log or config commit is not blocked by unrelated
+folders. It also fails a folder with uncommitted changes: if the working tree
+isn't what's being pushed, the gate can't prove what would deploy.
+
+### Other assets
+
+- Per-lead folders in this repo: `<business-slug>/brand/` (logo + `brand.json`) and `<business-slug>/photos/` (real photos — the Lead Hunter downloads Google Place photos here via the Places API).
+- The builder uses the real photos as site imagery.
 - Human/Claude Code edits to a mockup folder are authoritative — pipeline agents git pull first and never rebuild over non-pipeline commits.
-- Facebook cannot be scraped from any headless run (robots-blocked). FB photos/logos are captured by the HUMAN via Claude in Chrome (browses as the logged-in user) and committed to `<slug>/brand/` and `<slug>/photos/`.
-- Auto-rebrand: every run, the builder rechecks GENERIC BRANDING-flagged cards; if asset folders now have files, it rebuilds with the real branding on the same URL and clears the flag.
+- Re-capture pass: every run, the builder rechecks cards sitting in `BRAND BLOCKED`; if assets have since appeared, it re-runs capture, rebuilds on the same URL, and moves the card back into the flow.
 
 ## Deployment
 
@@ -92,11 +385,32 @@ sound human + runs the sales QA checklist; only cards marked
   api.pexels.com / places.googleapis.com. GitHub works. Code Routine
   environments: places.googleapis.com allowed if configured in env settings.
 
+## What we may sell — see OFFER-MENU.md
+
+`OFFER-MENU.md` in this repo is the **boundary on what any agent or human may
+pitch**. A capability that is not listed there as `SELLABLE TODAY` may not appear
+in a Sales Angle, a mockup, an outreach draft or a call — not as a promise, not
+as a "coming soon". Only the Automation Engineer moves a line to `SELLABLE
+TODAY`, and only after it demonstrably runs.
+
+Every Sales Angle names its automations by menu ID (`CL-03`, `TR-01`, `XC-01`).
+QA rejects a card that names an automation not on the menu, or one marked
+`IN BUILD`.
+
+As of 2026-08-19 every automation line is `IN BUILD` (blocked on the GHL
+connection), so the website tier is the only sellable offer. Diagnosing the
+automation pain and putting a number on it is still required — it is the
+promise, not the diagnosis, that the menu gates.
+
 ## Language & pricing
 
 - Professional English only (PH and international). No Taglish.
 - PH: ₱1,000–1,500/month · first month FREE · 3/6/12-mo terms · no build fee
 - International: build fee USD 300–500 + retainer USD 50–100/month
+- Non-USD quotes (AUD/GBP/CAD): use the dated FX floor table in `OFFER-MENU.md`.
+  Never convert in your head — that is what produced the 2026-08-18 QA catch.
+- Automation tiers A/B/C in `OFFER-MENU.md` price ABOVE this band and are
+  PROPOSED — they need CEO approval before any quote uses them.
 
 ## Do-not-contact list
 
@@ -181,7 +495,7 @@ sound human + runs the sales QA checklist; only cards marked
 - 2026-07-27 (calendar drift RESOLVED): Lead Hunter delivered dental leads
   on Jul 27, matching the calendar. The Jul 26 plumbing mismatch was a
   one-off; no calendar edit needed.
-- 2026-07-27: Dental Hive mockup shipped with generic palette (no brand asset access) and QA missed it. Fixes: brand-assets convention above, GENERIC BRANDING flag, QA branding check, Lead Hunter to download Place photos per lead.
+- 2026-07-27: Dental Hive mockup shipped with an invented palette (no brand asset access) and QA missed it. Fixes at the time: brand-assets convention above, a warning flag on the card, QA branding check, Lead Hunter to download Place photos per lead. The warning flag was retired on 2026-08-19 — see that entry; it was the part of this fix that did not work.
 - 2026-08-16 (derma W wrap): NEW ANGLE — "the blank domain you already pay for".
   4 of 14 derma leads OWN a domain that serves an empty body (hugoderm.com,
   kutisbykei.com/.ph, skincosmeticclinic.com.au, alodermatology.com), and in
@@ -208,12 +522,12 @@ sound human + runs the sales QA checklist; only cards marked
   weeks stale (evidence dates and competitor claims will need re-verifying
   before they can be sent). Either schedule a catch-up build run or archive
   them — the daily run cannot absorb a backlog this size on top of quota.
-- 2026-08-16 (brand capture cannot run unattended): a scheduled Cowork run has
-  no Claude in Chrome — list_connected_browsers returned []. So step 3 is
-  structurally a HUMAN-initiated desktop step, not something the daily job can
-  ever do. Consequence: all 14 derma mockups shipped flagged GENERIC BRANDING.
-  The auto-rebrand pass is the only path back, and it needs Dei to run
-  brand-capture in a desktop session first.
+- 2026-08-16 (brand capture cannot run unattended) — **WRONG, corrected
+  2026-08-19, see that entry**: a scheduled Cowork run has no Claude in Chrome —
+  list_connected_browsers returned []. Concluded step 3 was structurally a
+  HUMAN-initiated desktop step. Consequence: all 14 derma mockups shipped with
+  an invented palette. The browser was never the requirement; the conclusion
+  drawn from an empty browser list was.
 - 2026-08-16 (GHL blocked): the GoHighLevel connector returned "No locations
   available for this connection", so no contact/opportunity sync and no
   inbound-reply check was possible. Nothing was due (APPROVED was empty), but
@@ -275,10 +589,12 @@ sound human + runs the sales QA checklist; only cards marked
   which is the real bottleneck — nothing has been approved since the derma
   batch. Suggest Dei triage READY TO SEND before the pipeline generates more.
 - 2026-08-17 (env, both blockers reproduced): Claude in Chrome unavailable
-  (list_connected_browsers = []) so brand capture skipped again — all 4 mockups
-  shipped GENERIC BRANDING. GHL still returns "No locations available for this
-  connection", so no sync or reply check was possible. APPROVED was empty so
-  nothing was blocked, but the GHL connection has now been broken for two runs.
+  (list_connected_browsers = []) so brand capture was skipped again — all 4
+  mockups shipped with an invented palette. (The browser half of this was a
+  false blocker; corrected 2026-08-19.) GHL still returns "No locations
+  available for this connection", so no sync or reply check was possible.
+  APPROVED was empty so nothing was blocked, but the GHL connection has now
+  been broken for two runs.
 - 2026-08-18 (auto repair W, run 2): LEAD HUNTER DID NOT RUN AGAIN. INCOMING
   LEADS was empty at ~19:20 PHT, so the daily job carried the full 3 PH + 1
   INTL quota itself via web search (Method B) for the second consecutive day.
@@ -325,8 +641,9 @@ sound human + runs the sales QA checklist; only cards marked
   currency, always convert and check against the config band before the draft
   leaves QA. Corrected to AUD 650 + AUD 110/month.
 - 2026-08-18 (env, both blockers reproduced a 3rd time): Claude in Chrome
-  unavailable (list_connected_browsers = []), so brand capture skipped and all
-  4 mockups shipped GENERIC BRANDING. GHL now fails harder than before —
+  unavailable (list_connected_browsers = []), so brand capture was skipped and
+  all 4 mockups shipped with an invented palette. (Browser half: false blocker,
+  corrected 2026-08-19.) GHL now fails harder than before —
   list_locations returns "list_locations dependencies are not configured"
   (previously "No locations available"), so no sync and no inbound-reply check.
   APPROVED was empty so nothing was blocked, but the GHL connection has been
@@ -365,3 +682,98 @@ sound human + runs the sales QA checklist; only cards marked
   derma batch on Aug 16. The pipeline is producing roughly 4 approvable drafts
   a day into a queue no one is draining. Recommend Dei either triage READY TO
   SEND before the next run or pause lead-gen for a day.
+- 2026-08-19 (BRAND CAPTURE FIXED — retires the warning-flag mechanism):
+  **The "brand capture needs a connected browser" claim was false**, and it was
+  the load-bearing assumption under three runs and 18+ unbranded mockups.
+  `graph.facebook.com/<page-slug>/picture?type=large` needs no token, no login
+  and no browser. Verified on an unauthenticated request: the Fast Autoworks
+  page logo comes back as a 5.5KB JPEG. `list_connected_browsers = []` was real
+  but irrelevant — it was read as "capture is impossible" when it only ever
+  meant "the *browser* path is unavailable".
+  Two things shipped as a result. (1) `tools/brand-capture/` — headless capture
+  plus a deploy gate, plain Node, no dependencies, runs in any scheduled run.
+  (2) The warning-flag escape hatch is **deleted**. It let the builder ship an
+  invented palette with a label attached, on the theory that a human would catch
+  it downstream. Three runs and 18+ mockups say no one did. A warning that
+  everything carries is not a signal, and a flag that permits the thing it warns
+  about is not a control. `BRAND BLOCKED` replaces it: capture returns
+  `no-assets` → nothing is built, and the only way forward is a real asset or a
+  dropped lead. The generalisable rule: when the fix for "we shipped something
+  wrong" is a label rather than a stop, expect to ship it again.
+- 2026-08-19 (the 18+ already-shipped mockups are NOT fixed by this): the gate
+  is preventive, not retroactive. Every mockup folder in this repo predates
+  brand capture, has no `brand/brand.json`, and would fail `verify-brand.mjs`
+  today. They are still live on preview URLs. Re-capturing and rebuilding them
+  is a separate piece of work and has not been done.
+- 2026-08-19 (STRUCTURAL — run order is now canonical): added the "Daily run —
+  order of operations" section above. It replaces the loose agent-order line and
+  is the only sanctioned order. Two fixes it turns on:
+  (a) **Lead-gen folded in.** The separate 6AM Lead Hunter routine is retired.
+  It produced nothing on 08-17 and again on 08-18 while reporting nothing, and
+  the daily job silently absorbed a full quota both times. A dark routine costs
+  more than a slow one.
+  (b) **Brand capture is step 3, not a human favour.** It runs in the same run
+  as strategy, before anything reaches the builder, with a hard pre-push gate
+  and no flag-and-ship path.
+  Also added a required run-report contract: quota, capture counts, gate results
+  and queue depths, every run, including when a step produced nothing.
+- 2026-08-19 (pricing floor is now a named QA check): the AUD 450 + 75 near-miss
+  on 08-18 was caught by luck, not by process. Currency conversion against the
+  config band is now check 3 of step 6, and QA re-runs the brand gate itself
+  rather than trusting the builder's report — the Dental Hive miss happened
+  because one agent both built and judged.
+- 2026-08-19 (general lesson from the false blocker): when a tool comes back
+  empty, test whether the CAPABILITY is actually unreachable before writing
+  "structurally impossible" into this file. A false impossibility is more
+  expensive than a known bug, because nobody ever retries it. Applies now to
+  the GHL connection: it has failed four runs, but "the connector is down" and
+  "CRM sync is impossible" are not the same claim.
+- 2026-08-19 (board restructure, NOT a migration): the board question is settled
+  — Trello stays. None of the pipeline's failures are Trello limitations; the
+  missing leg is GoHighLevel, and the SYNCED TO GHL list is a column standing in
+  for a system. Revisit only if humans join the pipeline or active cards pass
+  ~300. Two lists added instead, and both now exist on CLOUDSPRING_MAINBOARD:
+  BRAND BLOCKED (between STRATEGY READY and MOCKUP READY — see the entry above)
+  and FOLLOW-UP DUE (between CONTACTED and REPLIED (HITS), because Trello has no
+  sequencer and the day-3/day-7/day-14 touches need a physical place to land).
+  The Trello board section above is authoritative for list order — it was drifting
+  from the live board and is now reconciled against it.
+- 2026-08-19 (CONTACTED backfill was a no-op, and that is the finding): the
+  due-date discipline was written to be applied to existing CONTACTED cards, but
+  CONTACTED is EMPTY — 0 cards. Nothing has been sent since the derma batch.
+  SYNCED TO GHL (SEND MANUALLY) holds exactly 1 card (Custom Cakes by Bam) while
+  READY TO SEND holds ~30. So the pipeline's output is not merely un-drained, it
+  is un-SENT: no lead is currently in a state where a follow-up could even be
+  due. Fixing the approval bottleneck strictly precedes any follow-up sequencing
+  work — FOLLOW-UP DUE will sit empty until cards start reaching CONTACTED.
+- 2026-08-19 (OFFER-MENU.md added — the boundary on what may be pitched): the
+  offer was a ₱1,000–1,500/month website, which is a low ceiling and puts an
+  automations agency in the website-vendor category. `OFFER-MENU.md` fixes that:
+  every automation gets an ID (`CL-01`…`XC-04`), a one-sentence description, ROI
+  in the client's own numbers, and a build state. The hard rule is that nothing
+  goes on the menu that is not built, and only the Automation Engineer moves a
+  line to `SELLABLE TODAY`.
+- 2026-08-19 (what the hard rule actually costs us right now): applying it
+  honestly puts EVERY automation line at `IN BUILD` — CLO-11 (engine v1) is
+  unstarted and blocked on CLO-6 (GHL down five consecutive runs), and CLO-14
+  (n8n) is not confirmed running. So today the menu authorises the website tier
+  and nothing else. That is the GHL blocker priced: it is holding closed the gap
+  between ₱1,500/month and a ₱5,000–6,500/month stack on every lead in the
+  pipeline. Diagnosing the automation pain and sizing it in the owner's numbers
+  stays mandatory — it is the promise the menu gates, never the diagnosis.
+- 2026-08-19 (mockup forms are NOT lead capture): every `<form>` shipped so far
+  is an `onsubmit` handler that opens a `mailto:` in the visitor's mail app.
+  Nothing is recorded, nothing replies, and on a phone with no mail client
+  configured nothing happens at all. It is fine to ship and fine to sell, but it
+  must never be described as lead capture — real capture is `XC-04` and it is
+  `IN BUILD`. Checked across the repo, not assumed.
+- 2026-08-19 (FX, correcting the 2026-08-18 QA catch): that catch converted
+  AUD 450 to "roughly USD 295" and called it below the USD 300 floor. The
+  reference rate that day was 1.4068 AUD per USD, which makes AUD 450 = USD 320
+  — above the floor. The catch's arithmetic implied ~1.52, an 8% error, because
+  it was done from memory. The conclusion still holds (check the floor before a
+  draft leaves QA) but the method changes: quote from the dated FX band table in
+  `OFFER-MENU.md` (AUD 475–700 + 80–140 · GBP 240–370 + 40–75 · CAD 450–690 +
+  75–140, floors carrying an 8% drift buffer), and re-pull the rates when the
+  stamp is over 30 days old. The corrected AUD 650 + 110 sits inside the band,
+  so nothing needs re-quoting.
