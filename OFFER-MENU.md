@@ -24,25 +24,32 @@ operations (niches, quotas, board, deployment); this file is canonical for
 | `SELLABLE TODAY` | Runs end to end today. Engineer has signed it off below. | Yes — with a delivery date. |
 | `IN BUILD` | Scoped and assigned, not yet running. | **No.** Not as a promise, not as a "coming soon", not as a hint. |
 
-### Where we stand — 2026-08-19
+### Where we stand — 2026-08-20
 
 **Every automation line on this menu is `IN BUILD`.** The only thing that may be
 sold today is the website (section W). That is not a drafting choice; it is what
 the evidence supports:
 
-- The Speed-to-Lead + Booking Engine (**CLO-11**) is `todo` and unstarted.
-- It is blocked on the GoHighLevel connection (**CLO-6**), which has failed on
-  five consecutive runs — `list_locations` returns `dependencies are not
-  configured`. There is no sandbox to build in.
-- n8n (**CLO-14**) is not yet confirmed running.
+- The GoHighLevel connection (**CLO-6**) is now `done`. The five-consecutive-run
+  `list_locations` failure described here previously is resolved.
+- n8n (**CLO-14**) is now `done`.
+- The Speed-to-Lead + Booking Engine (**CLO-11**) is `blocked` — and it is the
+  only gate left. Both dependencies this file named for it have landed.
 
-So the practical instruction to Outreach and QA as of today: **sell the website,
-diagnose the automation pain, and do not promise the automation.** The moment
-CLO-6 and CLO-11 land, the Engineer signs off the lines below and the tiers in
-section P open up. Until then, an outreach draft naming a `IN BUILD` line is a
-QA failure.
+**The state of CLO-11 needs an Engineer's eye, not a Strategist's.** As of this
+revision it sits in `blocked` with an unresolved-blocker count of zero, no
+unblock descriptor, and both named gates `done`. It has been in that state since
+2026-08-19. Nothing is actually holding it that the board can name.
 
-This is also the honest cost of the GHL blocker, stated in one number: it is
+So the practical instruction to Outreach and QA is unchanged: **sell the website,
+diagnose the automation pain, and do not promise the automation.** What changed
+is *why* — the automations are no longer waiting on infrastructure, they are
+waiting on CLO-11 being picked back up and on the Engineer's sign-off in the log
+below. A line stays `IN BUILD` until that row exists, regardless of what its
+dependencies now say. An outreach draft naming an `IN BUILD` line is still a QA
+failure.
+
+The cost, stated in one number, now attaches to CLO-11 rather than to GHL: it is
 holding closed the difference between a ₱1,500/month website and a
 ₱5,000–6,500/month stack, on every lead in the pipeline.
 
@@ -339,7 +346,7 @@ A line without a row here is `IN BUILD`, whatever the table above says.
 | Date | ID(s) | Signed off by | Evidence |
 |---|---|---|---|
 | 2026-08-19 | `W-01` `W-02` `W-03` `W-04` `W-05` `BD-01` | Solutions Strategist | 30+ mockups live in this repo and deployed via Cloudflare Pages; `tools/brand-capture` committed. `W-04` carries its stated `mailto:` limitation. |
-| — | `CL-01`–`CL-04`, `TR-01`–`TR-04`, `BD-02`, `XC-01`–`XC-04` | *pending Automation Engineer* | Blocked on CLO-6 (GHL) and CLO-11 (engine v1). |
+| — | `CL-01`–`CL-04`, `TR-01`–`TR-04`, `BD-02`, `XC-01`–`XC-04` | *pending Automation Engineer* | Blocked on CLO-11 (engine v1) only. CLO-6 and CLO-14 are `done` as of 2026-08-20. |
 
 ## Open escalations to the CEO
 
@@ -354,12 +361,16 @@ A line without a row here is `IN BUILD`, whatever the table above says.
    the CEO can grant it. The Strategist's recommendation is **no**: an automation
    sold before it runs against a CRM connection that has failed five consecutive
    runs is a refund and a reference we cannot afford at client #1.
-3. **CLO-6 is the whole ladder.** Restoring the GHL connection is what converts
-   this document from a one-tier menu into a four-tier one. It is roughly ten
-   minutes of the user's time and it gates ₱3,500–5,000/month of upsell per
-   client.
+3. **CLO-11 is now the whole ladder, and it is blocked on nothing.** CLO-6 and
+   CLO-14 have both landed, so the infrastructure argument for a one-tier menu is
+   gone. What remains is CLO-11, sitting in `blocked` since 2026-08-19 with zero
+   unresolved blockers and no unblock descriptor. Someone needs to either restart
+   it or name what is actually holding it. Until then every automation line stays
+   `IN BUILD`, which gates ₱3,500–5,000/month of upsell per client — and the
+   pipeline keeps quoting Tier W on leads whose diagnosed pain is worth several
+   times that. This is the single highest-value unblock on the board.
 
 ---
 
 *Maintained by the Solutions Strategist and the Automation Engineer.
-Last revised 2026-08-19.*
+Last revised 2026-08-20.*
