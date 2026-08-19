@@ -1,0 +1,63 @@
+{
+  "slug": "dermhaus-skin-clinic-qc",
+  "site": null,
+  "facebook": "DermhausSkinClinicPH",
+  "capturedAt": "2026-08-19T00:02:29.658Z",
+  "source": "headless-http",
+  "name": null,
+  "logo": {
+    "file": "logo-facebook-profile.jpg",
+    "score": 95,
+    "why": "facebook profile picture"
+  },
+  "logoFiles": [
+    {
+      "file": "logo-facebook-profile.jpg",
+      "bytes": 72422,
+      "from": "graph.facebook.com/DermhausSkinClinicPH/picture?width=1200&height=1200",
+      "why": "facebook profile picture",
+      "score": 95
+    }
+  ],
+  "colors": {
+    "brand": [
+      {
+        "hex": "#1f5f8b",
+        "weight": 40
+      },
+      {
+        "hex": "#7fae9b",
+        "weight": 30
+      },
+      {
+        "hex": "#f2c4b0",
+        "weight": 25
+      },
+      {
+        "hex": "#a8e0cb",
+        "weight": 20
+      },
+      {
+        "hex": "#123a5c",
+        "weight": 15
+      }
+    ],
+    "neutral": [
+      {
+        "hex": "#ffffff",
+        "weight": 30
+      }
+    ],
+    "themeColor": "#1f5f8b",
+    "source": "vision"
+  },
+  "fonts": [],
+  "ready": true,
+  "blockedBy": "palette-pending",
+  "confidence": 90,
+  "notes": [
+    "facebook profile picture captured headlessly for \"DermhausSkinClinicPH\"",
+    "no website for this lead — facebook-only capture path",
+    "vision-read of logo-facebook-profile.jpg: abstract face roundel in navy / sage / blush / mint"
+  ]
+}

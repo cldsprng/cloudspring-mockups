@@ -1,0 +1,59 @@
+{
+  "slug": "limderm-dermatology-cebu",
+  "site": null,
+  "facebook": "LimDerm",
+  "capturedAt": "2026-08-19T00:02:00.633Z",
+  "source": "headless-http",
+  "name": null,
+  "logo": {
+    "file": "logo-facebook-profile.jpg",
+    "score": 95,
+    "why": "facebook profile picture"
+  },
+  "logoFiles": [
+    {
+      "file": "logo-facebook-profile.jpg",
+      "bytes": 47027,
+      "from": "graph.facebook.com/LimDerm/picture?width=1200&height=1200",
+      "why": "facebook profile picture",
+      "score": 95
+    }
+  ],
+  "colors": {
+    "brand": [
+      {
+        "hex": "#5e9c60",
+        "weight": 50
+      },
+      {
+        "hex": "#2f5d38",
+        "weight": 25
+      },
+      {
+        "hex": "#c9b46b",
+        "weight": 20
+      }
+    ],
+    "neutral": [
+      {
+        "hex": "#eef2dc",
+        "weight": 80
+      },
+      {
+        "hex": "#1a1a1a",
+        "weight": 15
+      }
+    ],
+    "themeColor": "#5e9c60",
+    "source": "vision"
+  },
+  "fonts": [],
+  "ready": true,
+  "blockedBy": "palette-pending",
+  "confidence": 90,
+  "notes": [
+    "facebook profile picture captured headlessly for \"LimDerm\"",
+    "no website for this lead — facebook-only capture path",
+    "vision-read of logo-facebook-profile.jpg: green \"DERM\" + gold script \"Lim\" on a cream circle"
+  ]
+}

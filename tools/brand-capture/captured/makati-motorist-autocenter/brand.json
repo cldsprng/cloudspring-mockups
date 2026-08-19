@@ -1,0 +1,59 @@
+{
+  "slug": "makati-motorist-autocenter",
+  "site": null,
+  "facebook": "makatimotorist",
+  "capturedAt": "2026-08-19T00:02:02.511Z",
+  "source": "headless-http",
+  "name": null,
+  "logo": {
+    "file": "logo-facebook-profile.jpg",
+    "score": 95,
+    "why": "facebook profile picture"
+  },
+  "logoFiles": [
+    {
+      "file": "logo-facebook-profile.jpg",
+      "bytes": 96680,
+      "from": "graph.facebook.com/makatimotorist/picture?width=1200&height=1200",
+      "why": "facebook profile picture",
+      "score": 95
+    }
+  ],
+  "colors": {
+    "brand": [
+      {
+        "hex": "#157a32",
+        "weight": 55
+      },
+      {
+        "hex": "#0e5522",
+        "weight": 20
+      }
+    ],
+    "neutral": [
+      {
+        "hex": "#9a9a9a",
+        "weight": 40
+      },
+      {
+        "hex": "#ffffff",
+        "weight": 30
+      },
+      {
+        "hex": "#000000",
+        "weight": 15
+      }
+    ],
+    "themeColor": "#157a32",
+    "source": "vision"
+  },
+  "fonts": [],
+  "ready": true,
+  "blockedBy": "palette-pending",
+  "confidence": 90,
+  "notes": [
+    "facebook profile picture captured headlessly for \"makatimotorist\"",
+    "no website for this lead — facebook-only capture path",
+    "vision-read of logo-facebook-profile.jpg: green ring \"MAKATI MOTORISTS AUTO CENTER\" around a chrome M"
+  ]
+}

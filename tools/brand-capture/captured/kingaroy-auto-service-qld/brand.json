@@ -1,0 +1,59 @@
+{
+  "slug": "kingaroy-auto-service-qld",
+  "site": null,
+  "facebook": "kingaroyauto",
+  "capturedAt": "2026-08-19T00:02:31.796Z",
+  "source": "headless-http",
+  "name": null,
+  "logo": {
+    "file": "logo-facebook-profile.jpg",
+    "score": 95,
+    "why": "facebook profile picture"
+  },
+  "logoFiles": [
+    {
+      "file": "logo-facebook-profile.jpg",
+      "bytes": 66675,
+      "from": "graph.facebook.com/kingaroyauto/picture?width=1200&height=1200",
+      "why": "facebook profile picture",
+      "score": 95
+    }
+  ],
+  "colors": {
+    "brand": [
+      {
+        "hex": "#f5321e",
+        "weight": 50
+      },
+      {
+        "hex": "#d42a16",
+        "weight": 20
+      }
+    ],
+    "neutral": [
+      {
+        "hex": "#9e9e9e",
+        "weight": 35
+      },
+      {
+        "hex": "#111111",
+        "weight": 40
+      },
+      {
+        "hex": "#ffffff",
+        "weight": 30
+      }
+    ],
+    "themeColor": "#f5321e",
+    "source": "vision"
+  },
+  "fonts": [],
+  "ready": true,
+  "blockedBy": "palette-pending",
+  "confidence": 90,
+  "notes": [
+    "facebook profile picture captured headlessly for \"kingaroyauto\"",
+    "no website for this lead — facebook-only capture path",
+    "vision-read of logo-facebook-profile.jpg: red gear + grey spanners, black \"Auto Service Centre\""
+  ]
+}

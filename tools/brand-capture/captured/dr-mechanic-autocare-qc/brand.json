@@ -1,0 +1,60 @@
+{
+  "slug": "dr-mechanic-autocare-qc",
+  "site": null,
+  "facebook": "dr.mechanicautocare",
+  "capturedAt": "2026-08-19T00:02:01.508Z",
+  "source": "headless-http",
+  "name": null,
+  "logo": {
+    "file": "logo-facebook-profile.jpg",
+    "score": 95,
+    "why": "facebook profile picture"
+  },
+  "logoFiles": [
+    {
+      "file": "logo-facebook-profile.jpg",
+      "bytes": 64818,
+      "from": "graph.facebook.com/dr.mechanicautocare/picture?width=1200&height=1200",
+      "why": "facebook profile picture",
+      "score": 95
+    }
+  ],
+  "colors": {
+    "brand": [
+      {
+        "hex": "#2a211c",
+        "weight": 50
+      },
+      {
+        "hex": "#6e6e6e",
+        "weight": 25
+      }
+    ],
+    "neutral": [
+      {
+        "hex": "#c9c9c9",
+        "weight": 40
+      },
+      {
+        "hex": "#ffffff",
+        "weight": 30
+      },
+      {
+        "hex": "#141414",
+        "weight": 45
+      }
+    ],
+    "themeColor": "#2a211c",
+    "source": "vision"
+  },
+  "fonts": [],
+  "ready": true,
+  "blockedBy": "palette-pending",
+  "confidence": 85,
+  "notes": [
+    "facebook profile picture captured headlessly for \"dr.mechanicautocare\"",
+    "no website for this lead — facebook-only capture path",
+    "vision-read of logo-facebook-profile.jpg: greyscale gear-and-spanner tile on a warm near-black workshop photo",
+    "monochrome brand: the mark is black-on-white by design, so capture.mjs's \">=2 chromatic colours\" heuristic can never be satisfied. The recorded palette is the prospect's actual one, not a substitute."
+  ]
+}

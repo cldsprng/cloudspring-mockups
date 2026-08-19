@@ -1,0 +1,60 @@
+{
+  "slug": "automotive-1-car-care-qc",
+  "site": null,
+  "facebook": "Automotive1CarCareCenter",
+  "capturedAt": "2026-08-19T00:02:24.951Z",
+  "source": "headless-http",
+  "name": null,
+  "logo": {
+    "file": "logo-facebook-profile.jpg",
+    "score": 95,
+    "why": "facebook profile picture"
+  },
+  "logoFiles": [
+    {
+      "file": "logo-facebook-profile.jpg",
+      "bytes": 652398,
+      "from": "graph.facebook.com/Automotive1CarCareCenter/picture?width=1200&height=1200",
+      "why": "facebook profile picture",
+      "score": 95
+    }
+  ],
+  "colors": {
+    "brand": [
+      {
+        "hex": "#5b2d8e",
+        "weight": 45
+      },
+      {
+        "hex": "#f2b705",
+        "weight": 35
+      },
+      {
+        "hex": "#d82a20",
+        "weight": 20
+      }
+    ],
+    "neutral": [
+      {
+        "hex": "#c9c9c9",
+        "weight": 25
+      },
+      {
+        "hex": "#ffffff",
+        "weight": 20
+      }
+    ],
+    "themeColor": "#5b2d8e",
+    "source": "vision"
+  },
+  "fonts": [],
+  "ready": false,
+  "blockedBy": "logo-not-a-mark",
+  "confidence": 40,
+  "notes": [
+    "facebook profile picture captured headlessly for \"Automotive1CarCareCenter\"",
+    "no website for this lead — facebook-only capture path",
+    "vision-read of logo-facebook-profile.jpg: storefront photo; fascia signage is purple + yellow with red \"1\" and chrome type",
+    "BLOCKER logo-not-a-mark: street photograph of the shopfront — the logo is signage inside the frame. The palette above is the prospect's real brand colour and is safe to use. The image file is not usable as a logo — needs a crop or a better source before build."
+  ]
+}

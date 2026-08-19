@@ -1,0 +1,60 @@
+{
+  "slug": "hugoderm-skincare-davao",
+  "site": "hugoderm.com",
+  "facebook": "hugodermskincareclinic",
+  "capturedAt": "2026-08-19T00:02:30.447Z",
+  "source": "headless-http",
+  "name": null,
+  "logo": {
+    "file": "logo-facebook-profile.jpg",
+    "score": 95,
+    "why": "facebook profile picture"
+  },
+  "logoFiles": [
+    {
+      "file": "logo-facebook-profile.jpg",
+      "bytes": 66319,
+      "from": "graph.facebook.com/hugodermskincareclinic/picture?width=1200&height=1200",
+      "why": "facebook profile picture",
+      "score": 95
+    }
+  ],
+  "colors": {
+    "brand": [
+      {
+        "hex": "#6e9ba3",
+        "weight": 40
+      },
+      {
+        "hex": "#4e9a51",
+        "weight": 30
+      },
+      {
+        "hex": "#8fbf6a",
+        "weight": 20
+      }
+    ],
+    "neutral": [
+      {
+        "hex": "#dfe6e6",
+        "weight": 35
+      },
+      {
+        "hex": "#ffffff",
+        "weight": 25
+      }
+    ],
+    "themeColor": "#6e9ba3",
+    "source": "vision"
+  },
+  "fonts": [],
+  "ready": false,
+  "blockedBy": "logo-not-a-mark",
+  "confidence": 40,
+  "notes": [
+    "facebook profile picture captured headlessly for \"hugodermskincareclinic\"",
+    "site unreachable over plain HTTP(S)",
+    "vision-read of logo-facebook-profile.jpg: clinic interior photo; frosted-glass signage reads \"HugoDerm SKIN CARE CLINIC\" in teal + green",
+    "BLOCKER logo-not-a-mark: photograph of staff in the corridor — the logo is etched signage in the background. The palette above is the prospect's real brand colour and is safe to use. The image file is not usable as a logo — needs a crop or a better source before build."
+  ]
+}

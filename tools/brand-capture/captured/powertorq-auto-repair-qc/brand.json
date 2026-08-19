@@ -1,0 +1,60 @@
+{
+  "slug": "powertorq-auto-repair-qc",
+  "site": null,
+  "facebook": "Powertorq",
+  "capturedAt": "2026-08-19T00:02:25.383Z",
+  "source": "headless-http",
+  "name": null,
+  "logo": {
+    "file": "logo-facebook-profile.jpg",
+    "score": 95,
+    "why": "facebook profile picture"
+  },
+  "logoFiles": [
+    {
+      "file": "logo-facebook-profile.jpg",
+      "bytes": 265433,
+      "from": "graph.facebook.com/Powertorq/picture?width=1200&height=1200",
+      "why": "facebook profile picture",
+      "score": 95
+    }
+  ],
+  "colors": {
+    "brand": [
+      {
+        "hex": "#d81e1e",
+        "weight": 55
+      },
+      {
+        "hex": "#f5d915",
+        "weight": 30
+      },
+      {
+        "hex": "#a51414",
+        "weight": 20
+      }
+    ],
+    "neutral": [
+      {
+        "hex": "#111111",
+        "weight": 25
+      },
+      {
+        "hex": "#ffffff",
+        "weight": 20
+      }
+    ],
+    "themeColor": "#d81e1e",
+    "source": "vision"
+  },
+  "fonts": [],
+  "ready": false,
+  "blockedBy": "logo-not-a-mark",
+  "confidence": 40,
+  "notes": [
+    "facebook profile picture captured headlessly for \"Powertorq\"",
+    "no website for this lead — facebook-only capture path",
+    "vision-read of logo-facebook-profile.jpg: red \"PMS PROMO\" price-list graphic; the PowerTorq badge sits top-left",
+    "BLOCKER logo-not-a-mark: marketing promo graphic — the logo badge would need cropping out. The palette above is the prospect's real brand colour and is safe to use. The image file is not usable as a logo — needs a crop or a better source before build."
+  ]
+}

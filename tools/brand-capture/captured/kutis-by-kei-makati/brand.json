@@ -1,0 +1,38 @@
+{
+  "slug": "kutis-by-kei-makati",
+  "site": null,
+  "facebook": "kutisbykei",
+  "capturedAt": "2026-08-19T00:02:02.059Z",
+  "source": "headless-http",
+  "name": null,
+  "logo": {
+    "file": "logo-facebook-profile.jpg",
+    "score": 95,
+    "why": "facebook profile picture"
+  },
+  "logoFiles": [
+    {
+      "file": "logo-facebook-profile.jpg",
+      "bytes": 626288,
+      "from": "graph.facebook.com/kutisbykei/picture?width=1200&height=1200",
+      "why": "facebook profile picture",
+      "score": 95
+    }
+  ],
+  "colors": {
+    "brand": [],
+    "neutral": [],
+    "themeColor": null,
+    "source": "vision"
+  },
+  "fonts": [],
+  "ready": false,
+  "blockedBy": "logo-not-a-mark",
+  "confidence": 15,
+  "notes": [
+    "facebook profile picture captured headlessly for \"kutisbykei\"",
+    "no website for this lead — facebook-only capture path",
+    "vision-read of logo-facebook-profile.jpg: studio portrait of the dermatologist in a white coat — no mark, no wordmark, no brand colour",
+    "BLOCKER logo-not-a-mark: studio portrait of the practitioner — carries no brand artwork at all. No palette either — nothing brand-bearing in the image."
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "slug": "dental-hive-visayas-qc",
+  "site": null,
+  "facebook": "dentalhive.ph",
+  "capturedAt": "2026-08-19T00:01:59.744Z",
+  "source": "headless-http",
+  "name": null,
+  "logo": {
+    "file": "logo-facebook-profile.jpg",
+    "score": 95,
+    "why": "facebook profile picture"
+  },
+  "logoFiles": [
+    {
+      "file": "logo-facebook-profile.jpg",
+      "bytes": 42117,
+      "from": "graph.facebook.com/dentalhive.ph/picture?width=1200&height=1200",
+      "why": "facebook profile picture",
+      "score": 95
+    }
+  ],
+  "colors": {
+    "brand": [
+      {
+        "hex": "#2a8fd4",
+        "weight": 50
+      },
+      {
+        "hex": "#f5b21d",
+        "weight": 45
+      }
+    ],
+    "neutral": [
+      {
+        "hex": "#e9ecef",
+        "weight": 40
+      },
+      {
+        "hex": "#ffffff",
+        "weight": 30
+      }
+    ],
+    "themeColor": "#2a8fd4",
+    "source": "vision"
+  },
+  "fonts": [],
+  "ready": true,
+  "blockedBy": "palette-pending",
+  "confidence": 90,
+  "notes": [
+    "facebook profile picture captured headlessly for \"dentalhive.ph\"",
+    "no website for this lead — facebook-only capture path",
+    "vision-read of logo-facebook-profile.jpg: yellow bee with blue tooth body, \"dental hive\" in blue + yellow"
+  ]
+}

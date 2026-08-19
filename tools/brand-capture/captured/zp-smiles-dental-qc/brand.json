@@ -1,0 +1,55 @@
+{
+  "slug": "zp-smiles-dental-qc",
+  "site": null,
+  "facebook": "zpsmilesdental",
+  "capturedAt": "2026-08-19T14:49:23.890Z",
+  "source": "headless-http",
+  "name": null,
+  "logo": {
+    "file": "logo-facebook-profile.jpg",
+    "score": 95,
+    "why": "facebook profile picture"
+  },
+  "logoFiles": [
+    {
+      "file": "logo-facebook-profile.jpg",
+      "bytes": 35238,
+      "from": "graph.facebook.com/zpsmilesdental/picture?width=1200&height=1200",
+      "why": "facebook profile picture",
+      "score": 95
+    }
+  ],
+  "colors": {
+    "brand": [
+      {
+        "hex": "#c9a227",
+        "weight": 55
+      },
+      {
+        "hex": "#b8860b",
+        "weight": 25
+      },
+      {
+        "hex": "#dcc06a",
+        "weight": 20
+      }
+    ],
+    "neutral": [
+      {
+        "hex": "#ffffff",
+        "weight": 60
+      }
+    ],
+    "themeColor": "#c9a227",
+    "source": "vision"
+  },
+  "fonts": [],
+  "ready": true,
+  "blockedBy": "palette-pending",
+  "confidence": 90,
+  "notes": [
+    "facebook profile picture captured headlessly for \"zpsmilesdental\"",
+    "no website for this lead — facebook-only capture path",
+    "vision-read of logo-facebook-profile.jpg: gold ZP monogram inside a gold tooth outline, gold serif wordmark"
+  ]
+}
