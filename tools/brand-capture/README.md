@@ -25,9 +25,23 @@ Writes `<out>/brand.json` plus every logo file it could download.
 Facebook page profile picture (95) · `<img>` marked logo/brand/wordmark (90) ·
 `apple-touch-icon` (70) · `og:image` (60) · favicon (50).
 
-`graph.facebook.com/<slug>/picture?type=large` needs **no access token and no
-login**. The Facebook page HTML is login-walled — the picture endpoint is not.
-This is why brand capture no longer requires a desktop session for FB-only leads.
+`graph.facebook.com/<slug>/picture` needs **no access token and no login**. The
+Facebook page HTML is login-walled — the picture endpoint is not. This is why
+brand capture no longer requires a desktop session for FB-only leads.
+
+We ask for `?width=1200&height=1200` (≈960px) rather than `?type=large` (200px),
+because the builder has to vision-read this image for a `palette-pending` lead.
+
+**The silhouette trap.** `?redirect=false` returns JSON metadata instead of the
+image, including `is_silhouette`. Pages reachable only by numeric ID — the
+`facebook.com/p/Some-Name-100063654338246/` form — serve Facebook's anonymous
+grey avatar to logged-out callers, `is_silhouette: true`, one fixed 1876-byte
+CDN object shared by every such page. We check the flag and treat it as
+`no-assets`. Do **not** rely on the byte-size floor to catch it: an anonymous
+avatar shipping as a business logo is the same failure as an invented palette,
+and nothing stops Facebook shipping a larger placeholder. Guessing a vanity
+slug that isn't on the lead card is not a recovery — it attaches some other
+business's logo. Those leads go to BRAND BLOCKED.
 
 **Where colour comes from:** `theme-color`, CSS custom properties named
 `--primary/--brand/--accent/...` (weighted 40× — a site declaring `--primary` is

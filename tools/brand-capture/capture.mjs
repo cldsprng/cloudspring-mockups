@@ -253,16 +253,35 @@ await mkdir(outDir, { recursive: true })
 // and needs no access token. For a Facebook-only lead this is the logo.
 if (fbSlug) {
   let got = false
-  for (const type of ['large', 'normal']) {
-    const r = await get(`https://graph.facebook.com/${fbSlug}/picture?type=${type}`, true)
+  let silhouette = false
+  // `redirect=false` returns JSON metadata instead of the image, including
+  // is_silhouette. That flag is the only reliable way to tell a real profile
+  // picture from Facebook's anonymous grey avatar — pages reachable only by
+  // numeric ID (the /p/Name-<id>/ form) serve the placeholder to logged-out
+  // callers, and shipping that as a logo is exactly the failure this tool
+  // exists to prevent. Size alone won't catch it: today's placeholder is 1876
+  // bytes, and nothing stops Facebook shipping a bigger one.
+  // width/height ask for the full-resolution picture (~960px) rather than the
+  // 200px `type=large` crop — the builder has to vision-read this image.
+  for (const q of ['width=1200&height=1200', 'type=large', 'type=normal']) {
+    const meta = await get(`https://graph.facebook.com/${fbSlug}/picture?${q}&redirect=false`)
+    let src = `https://graph.facebook.com/${fbSlug}/picture?${q}`
+    if (meta) {
+      try {
+        const data = JSON.parse(meta.body).data
+        if (data?.is_silhouette) { silhouette = true; break }
+        if (data?.url) src = data.url
+      } catch { /* fall back to the redirecting URL below */ }
+    }
+    const r = await get(src, true)
     if (!r || !/image/i.test(r.type) || r.body.length < 2048) continue
     const ext = /png/.test(r.type) ? '.png' : '.jpg'
-    const file = `logo-facebook-profile-${type}${ext}`
+    const file = `logo-facebook-profile${ext}`
     await writeFile(join(outDir, file), r.body)
     brand.logoFiles.push({
       file,
       bytes: r.body.length,
-      from: `graph.facebook.com/${fbSlug}/picture?type=${type}`,
+      from: `graph.facebook.com/${fbSlug}/picture?${q}`,
       why: 'facebook profile picture',
       score: 95,
     })
@@ -273,7 +292,9 @@ if (fbSlug) {
   notes.push(
     got
       ? `facebook profile picture captured headlessly for "${fbSlug}"`
-      : `facebook profile picture unavailable for "${fbSlug}" (page may be renamed, unpublished, or ID-only)`
+      : silhouette
+        ? `facebook page "${fbSlug}" has no profile picture — the graph endpoint returns the anonymous silhouette (is_silhouette: true). Common for pages reachable only by numeric ID. Not recoverable headlessly.`
+        : `facebook profile picture unavailable for "${fbSlug}" (page may be renamed, unpublished, or ID-only)`
   )
 }
 
