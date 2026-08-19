@@ -294,12 +294,23 @@ is not optional and it is not prose-only. Minimum contents:
   https://api.leadconnectorhq.com/widget/booking/QRPEnWRw2Kx9rBe0Mj6J
 - On approval: contact (tags cloudspring-web-leads + niche + ph/intl) +
   opportunity (12-mo value) + note (angle, mockup URL, offer, Trello link)
-- Nurture workflow: SPEC COMPLETE, NOT YET BUILT. Seven "STL" workflows are
+- Nurture workflow: STL 1–6 SPECIFIED, STL 7 BUILT. Seven "STL" workflows are
   specified turn-by-turn in `automation/ghl/speed-to-lead-snapshot-v1.md`
   (first touch → AI qualification → booking → reminders → no-show recovery →
-  reactivation → weekly owner report). They must be built BY HAND in the GHL UI:
-  the public API has no create-workflow and no snapshot operation (checked
+  reactivation → weekly owner report). STL 1–6 must be built BY HAND in the GHL
+  UI: the public API has no create-workflow and no snapshot operation (checked
   2026-08-19 across all 302 registry operations). Add names/IDs here once built.
+  STL 7 needs no transcription — it is built and tested in n8n at
+  `automation/n8n/workflows/weekly-owner-report-v1.json`.
+- Speed-to-lead intake runs in n8n and is proven without a GHL account:
+  `node automation/n8n/test/speed-to-lead-smoke.mjs` (9 scenarios) and
+  `node automation/n8n/test/weekly-report-smoke.mjs` (every report figure).
+  Both must exit 0 before anyone records a walkthrough or quotes a number.
+- **Messenger is drafted, never auto-sent.** A Facebook lead with only a thread
+  id is a valid lead — the engine writes the reply and queues it for a human
+  with a 60-second deadline. It reports `automated: false` and is excluded from
+  the sub-60-second figure on the weekly report. Quote the 60-second claim for
+  SMS and email only.
 - GHL API health check: use `get-calendars` or `get-pipelines`, NOT
   `list_locations` — see the 2026-08-19 learning below.
 

@@ -7,7 +7,9 @@ measuring the response budget, and aggregating the weekly owner report.
 automation/
   n8n/
     workflows/speed-to-lead-intake-v1.json   importable n8n workflow
+    workflows/weekly-owner-report-v1.json    STL 7, the weekly owner report
     test/speed-to-lead-smoke.mjs             the sub-60s proof
+    test/weekly-report-smoke.mjs             every report metric, hand-checked
     host/start-n8n.ps1                       deployed to the box, see "The host"
     host/.env.example                        config template (secrets stay off the repo)
     README.md                                this file
@@ -26,9 +28,20 @@ No dependencies, no browser, no running n8n — same constraints as
 `tools/brand-capture`, so it runs in any scheduled run. Exit 0 means every
 scenario passed inside the 60-second budget.
 
-Last run 2026-08-19: **6/6 scenarios, 11/12 nodes exercised, worst case 6 ms of
+Last run 2026-08-19: **9/9 scenarios, 11/12 nodes exercised, worst case 3 ms of
 a 60 000 ms budget.** The one unexercised node is the GHL upsert branch, which
 stays dark until a sandbox location exists.
+
+The weekly owner report has its own harness — every figure on the page is
+hand-computed in the fixture and asserted exactly:
+
+```bash
+node automation/n8n/test/weekly-report-smoke.mjs
+```
+
+It also runs the workflow twice, once from the Monday schedule and once from the
+on-demand webhook, and fails if the two produce different numbers. The owner must
+never read a different report than the one we demoed.
 
 Against a live instance, measuring the real round trip:
 
@@ -133,6 +146,26 @@ attempt uses `sandbox-sink`. Verified 2026-08-19 by tampering the workflow to
 use `twilio-live` — the harness failed all four delivering scenarios and exited
 non-zero. If you swap in a real transport without CEO sign-off, the test breaks.
 
+### Messenger is a second, permanent boundary
+
+Facebook does not permit automated sending on these threads. So the engine goes
+right up to the send and stops: it drafts the reply, attaches a deep link to the
+thread, stamps a `due_by` 60 seconds out, and hands it to a human. Messenger
+actions live in `delivery.manual_actions`, never in `delivery.attempts`, and
+carry `status: awaiting_human_send`.
+
+Two consequences worth stating plainly:
+
+- A Messenger-only lead reports `timing.automated: false`. It does **not** count
+  toward the sub-60-second claim, in the API response or on the weekly report.
+  Outreach quotes the 60-second line for SMS and email.
+- Verified 2026-08-19 by tampering the workflow to report `delivered` on a
+  Messenger action — the harness failed both Messenger scenarios and exited
+  non-zero.
+
+Unlike the sandbox sink, this one does not lift when a client signs. It is what
+Facebook allows, not what we have not built yet.
+
 ## When the sandbox sub-account exists
 
 The GHL *credential* is working (confirmed 2026-08-19). What is missing is a
@@ -195,5 +228,9 @@ Once a sandbox exists:
   Local mode is unaffected and passes today.
 - **`Upsert GHL Contact` is a placeholder**, inert by design so the workflow
   imports and runs cleanly either way.
-- **STL 7 (weekly report) is specified, not built** — it needs real
-  `response_seconds` data, which needs the sandbox.
+- **The weekly report runs on supplied rows, not a live GHL fetch.** STL 7 is
+  built and every metric is tested, but `Load Week` is handed rows rather than
+  querying GHL for them. Wiring that query is a one-node change once the sandbox
+  exists — the aggregation and the rendering are done and proven.
+- **Messenger has no automated send, and never will.** Not a gap; a boundary.
+  See "The safety boundary".

@@ -1,35 +1,154 @@
 {
   "snapshot": "cloudspring-speed-to-lead-clinic",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "niche": "clinic",
   "status": "spec-complete-awaiting-sandbox",
-  "description": "Speed-to-Lead + Booking Engine v1. Inbound -> SMS+email inside 60s -> AI qualification -> booked -> reminders -> no-show recovery -> reactivation -> weekly owner report.",
+  "description": "Speed-to-Lead + Booking Engine v1. Inbound (form / Messenger / missed call) -> SMS+email inside 60s, Messenger drafted for a human -> AI qualification -> booked -> reminders -> no-show recovery -> reactivation -> weekly owner report.",
   "buildSurface": {
     "note": "GHL workflows and snapshots are UI-only. The public API exposes no create-workflow and no create-snapshot operation (verified 2026-08-19 against 302 registry operations). Everything in workflows[] below is built by hand in the GHL UI from speed-to-lead-snapshot-v1.md, then exported as a snapshot.",
-    "apiBuildable": ["customFields", "customValues", "tags", "pipeline", "calendar"],
-    "uiOnly": ["workflows", "snapshot"]
+    "apiBuildable": [
+      "customFields",
+      "customValues",
+      "tags",
+      "pipeline",
+      "calendar"
+    ],
+    "uiOnly": [
+      "workflows",
+      "snapshot"
+    ]
   },
   "configPoints": {
     "comment": "Everything a new client changes. Client #2 edits only this block -- that is what makes redeploy configuration, not construction. Set as GHL Custom Values so workflow copy never hardcodes a clinic name.",
     "values": [
-      { "key": "clinic_name", "example": "DermHaus Skin Clinic", "usedBy": ["all SMS", "all email", "report header"] },
-      { "key": "clinic_phone", "example": "+63 2 8123 4567", "usedBy": ["email signature", "no-show recovery SMS"] },
-      { "key": "booking_url", "example": "https://api.leadconnectorhq.com/widget/booking/QRPEnWRw2Kx9rBe0Mj6J", "usedBy": ["first-touch SMS", "first-touch email", "reactivation"] },
-      { "key": "booking_calendar_id", "example": "QRPEnWRw2Kx9rBe0Mj6J", "usedBy": ["Booked Appointment + Reminders"] },
-      { "key": "pipeline_id", "example": "7yd9fhvPcfz1vqbF3kxN", "usedBy": ["opportunity create"] },
-      { "key": "owner_report_email", "example": "owner@clinic.com", "usedBy": ["Weekly Owner Report"] },
-      { "key": "business_hours", "example": "Mon-Sat 9:00-18:00 Asia/Manila", "usedBy": ["after-hours branch"] },
-      { "key": "consult_price_note", "example": "Consultations start at PHP 800", "usedBy": ["AI qualification replies"] },
-      { "key": "n8n_webhook_url", "example": "https://n8n.example.com/webhook/speed-to-lead", "usedBy": ["outbound webhook from GHL"] }
+      {
+        "key": "clinic_name",
+        "example": "DermHaus Skin Clinic",
+        "usedBy": [
+          "all SMS",
+          "all email",
+          "report header"
+        ]
+      },
+      {
+        "key": "clinic_phone",
+        "example": "+63 2 8123 4567",
+        "usedBy": [
+          "email signature",
+          "no-show recovery SMS"
+        ]
+      },
+      {
+        "key": "booking_url",
+        "example": "https://api.leadconnectorhq.com/widget/booking/QRPEnWRw2Kx9rBe0Mj6J",
+        "usedBy": [
+          "first-touch SMS",
+          "first-touch email",
+          "reactivation"
+        ]
+      },
+      {
+        "key": "booking_calendar_id",
+        "example": "QRPEnWRw2Kx9rBe0Mj6J",
+        "usedBy": [
+          "Booked Appointment + Reminders"
+        ]
+      },
+      {
+        "key": "pipeline_id",
+        "example": "7yd9fhvPcfz1vqbF3kxN",
+        "usedBy": [
+          "opportunity create"
+        ]
+      },
+      {
+        "key": "owner_report_email",
+        "example": "owner@clinic.com",
+        "usedBy": [
+          "Weekly Owner Report"
+        ]
+      },
+      {
+        "key": "business_hours",
+        "example": "Mon-Sat 9:00-18:00 Asia/Manila",
+        "usedBy": [
+          "after-hours branch"
+        ]
+      },
+      {
+        "key": "consult_price_note",
+        "example": "Consultations start at PHP 800",
+        "usedBy": [
+          "AI qualification replies"
+        ]
+      },
+      {
+        "key": "n8n_webhook_url",
+        "example": "https://n8n.example.com/webhook/speed-to-lead",
+        "usedBy": [
+          "outbound webhook from GHL"
+        ]
+      },
+      {
+        "key": "facebook_page_id",
+        "example": "102938475610111",
+        "usedBy": [
+          "Messenger manual-send queue",
+          "inbox deep link"
+        ]
+      },
+      {
+        "key": "messenger_sla_seconds",
+        "example": "60",
+        "usedBy": [
+          "Messenger manual-send queue due_by"
+        ]
+      }
     ]
   },
   "customFields": [
-    { "name": "Lead Source Detail", "key": "lead_source_detail", "dataType": "TEXT", "why": "web_form | facebook | missed_call -- drives per-channel reporting" },
-    { "name": "First Touch At", "key": "first_touch_at", "dataType": "DATE", "why": "stamped when the first SMS/email leaves; the sub-60s proof" },
-    { "name": "Response Seconds", "key": "response_seconds", "dataType": "NUMERICAL", "why": "inbound -> first touch, in seconds. The number on the weekly report." },
-    { "name": "Qualification Status", "key": "qualification_status", "dataType": "TEXT", "why": "qualified | unqualified | needs_human" },
-    { "name": "Treatment Interest", "key": "treatment_interest", "dataType": "TEXT", "why": "captured by AI qualification; drives which reactivation copy is used" },
-    { "name": "No Show Count", "key": "no_show_count", "dataType": "NUMERICAL", "why": "caps no-show recovery at 2 attempts" }
+    {
+      "name": "Lead Source Detail",
+      "key": "lead_source_detail",
+      "dataType": "TEXT",
+      "why": "web_form | facebook | missed_call -- drives per-channel reporting"
+    },
+    {
+      "name": "First Touch At",
+      "key": "first_touch_at",
+      "dataType": "DATE",
+      "why": "stamped when the first SMS/email leaves; the sub-60s proof"
+    },
+    {
+      "name": "Response Seconds",
+      "key": "response_seconds",
+      "dataType": "NUMERICAL",
+      "why": "inbound -> first touch, in seconds. The number on the weekly report."
+    },
+    {
+      "name": "Qualification Status",
+      "key": "qualification_status",
+      "dataType": "TEXT",
+      "why": "qualified | unqualified | needs_human"
+    },
+    {
+      "name": "Treatment Interest",
+      "key": "treatment_interest",
+      "dataType": "TEXT",
+      "why": "captured by AI qualification; drives which reactivation copy is used"
+    },
+    {
+      "name": "No Show Count",
+      "key": "no_show_count",
+      "dataType": "NUMERICAL",
+      "why": "caps no-show recovery at 2 attempts"
+    },
+    {
+      "name": "Messenger Thread Id",
+      "key": "messenger_psid",
+      "dataType": "TEXT",
+      "why": "page-scoped id for the Facebook thread; the only handle a Messenger-only lead has"
+    }
   ],
   "tags": [
     "speed-to-lead",
@@ -41,25 +160,63 @@
     "booked",
     "no-show",
     "reactivation",
-    "opted-out"
+    "opted-out",
+    "messenger-manual-send"
   ],
   "workflows": [
-    { "name": "STL 1 -- First Touch (60s)", "trigger": "Inbound webhook / form submit / FB message / missed call", "sla": "first message out in <60s", "critical": true },
-    { "name": "STL 2 -- AI Qualification", "trigger": "Inbound reply to first touch", "critical": true },
-    { "name": "STL 3 -- Booking Confirmation", "trigger": "Appointment booked", "critical": true },
-    { "name": "STL 4 -- Reminders", "trigger": "Appointment booked", "schedule": "24h and 2h before", "critical": false },
-    { "name": "STL 5 -- No-Show Recovery", "trigger": "Appointment status = no-show", "critical": false },
-    { "name": "STL 6 -- Reactivation", "trigger": "No booking 30 days after qualification", "critical": false },
-    { "name": "STL 7 -- Weekly Owner Report", "trigger": "Schedule, Mondays 08:00 local", "critical": false }
+    {
+      "name": "STL 1 -- First Touch (60s)",
+      "trigger": "Inbound webhook / form submit / FB message / missed call",
+      "sla": "SMS/email out in <60s; Messenger drafted and queued for a human inside the same 60s",
+      "critical": true
+    },
+    {
+      "name": "STL 2 -- AI Qualification",
+      "trigger": "Inbound reply to first touch",
+      "critical": true
+    },
+    {
+      "name": "STL 3 -- Booking Confirmation",
+      "trigger": "Appointment booked",
+      "critical": true
+    },
+    {
+      "name": "STL 4 -- Reminders",
+      "trigger": "Appointment booked",
+      "schedule": "24h and 2h before",
+      "critical": false
+    },
+    {
+      "name": "STL 5 -- No-Show Recovery",
+      "trigger": "Appointment status = no-show",
+      "critical": false
+    },
+    {
+      "name": "STL 6 -- Reactivation",
+      "trigger": "No booking 30 days after qualification",
+      "critical": false
+    },
+    {
+      "name": "STL 7 -- Weekly Owner Report",
+      "trigger": "Schedule, Mondays 08:00 local",
+      "critical": false,
+      "builtIn": "n8n",
+      "artifact": "automation/n8n/workflows/weekly-owner-report-v1.json",
+      "note": "Built and tested. GHL cannot aggregate across contacts, appointments and a custom field, so this one lives in n8n rather than the snapshot."
+    }
   ],
   "safety": {
     "deliveryMode": "sandbox",
     "rule": "No real SMS or email to a real number from a non-client account. The n8n transport node enforces this; automation/n8n/test/speed-to-lead-smoke.mjs fails the build if sandbox-sink is swapped for a live transport.",
-    "verified": "2026-08-19 -- negative test confirmed the swap is caught"
+    "verified": "2026-08-19 -- negative test confirmed the swap is caught",
+    "messengerRule": "Messenger is never sent automatically. Facebook does not permit it on these threads and a ban costs the client every channel at once. The engine drafts the reply and queues it with a deadline; a human sends. speed-to-lead-smoke.mjs fails if a Messenger action ever reports a send."
   },
   "verification": {
-    "command": "node automation/n8n/test/speed-to-lead-smoke.mjs",
+    "commands": [
+      "node automation/n8n/test/speed-to-lead-smoke.mjs",
+      "node automation/n8n/test/weekly-report-smoke.mjs"
+    ],
     "lastRun": "2026-08-19",
-    "result": "6/6 scenarios passed, 11/12 nodes exercised, worst case 6 ms of a 60000 ms budget"
+    "result": "intake: 9/9 scenarios passed, 11/12 nodes exercised, worst case 3 ms of a 60000 ms budget. report: every metric matched the hand-computed fixture. Negative tests confirmed both the live-transport swap and a Messenger auto-send are caught."
   }
 }

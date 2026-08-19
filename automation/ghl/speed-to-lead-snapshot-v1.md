@@ -73,6 +73,31 @@ reference is a config point from the manifest.
 >
 > — {{custom_values.clinic_name}}
 
+**Messenger branch (Facebook — Message Received):** if the contact has no phone
+and no email, steps 5 and 6 have nothing to send on. Do **not** add a "send
+Facebook message" action.
+
+| # | Action | Detail |
+|---|---|---|
+| 5m | Set custom field | `messenger_psid` = trigger thread id |
+| 6m | Create task | assigned to the clinic user, due **+60 seconds**, title *"Reply on Messenger — {{contact.first_name}}"*, body = the draft below |
+| 7m | Internal notification | so the task is seen, not just filed |
+
+**Messenger draft** (the human pastes this; nothing sends it automatically):
+
+> Hi {{contact.first_name}}! Thanks for messaging {{custom_values.clinic_name}}.
+> Would you like to book a consultation? Grab a slot here:
+> {{custom_values.booking_url}} — or tell me a day that works and I will sort it out.
+
+> **This boundary is permanent.** Facebook does not permit automated sending on
+> these threads. A ban takes the page, the ads and the inbox with it — every
+> channel at once. We automate up to the send; the send is a human. The n8n
+> smoke test fails the build if a Messenger action ever reports `delivered`.
+>
+> Say it out loud on the walkthrough. "Messenger is drafted in under a second,
+> your receptionist taps send" is a *stronger* demo than a claim the prospect
+> knows Facebook does not allow.
+
 **After-hours:** do not add a wait. Outside
 `{{custom_values.business_hours}}` the same message goes out immediately with
 "Someone from the clinic will confirm in the morning." appended. A lead that
@@ -160,25 +185,49 @@ Honour `opted-out` at every step. Any "STOP" reply exits every STL workflow.
 
 **Trigger:** Schedule — Mondays 08:00 local.
 
-The one page the owner actually reads. Built in n8n (GHL can't aggregate like
-this) and emailed to `{{custom_values.owner_report_email}}`:
+**BUILT.** `automation/n8n/workflows/weekly-owner-report-v1.json` — nothing to
+transcribe into the GHL UI for this one. Verify with
+`node automation/n8n/test/weekly-report-smoke.mjs`.
+
+The one page the owner actually reads. Built in n8n (GHL can't aggregate across
+contacts, appointments and a custom field in one view) and emailed to
+`{{custom_values.owner_report_email}}`. Two ways in, identical numbers: the
+Monday 08:00 schedule, and a `POST /webhook/weekly-owner-report` with
+`{ rows: [...] }` for showing it on demand during a walkthrough.
+
+Real output from the fixture week:
 
 ```
-{{clinic_name}} — week of {{date}}
+DermHaus Skin Clinic -- week of 2026-08-17
 
-  New leads                 24
-  Answered inside 60s       24  (100%)
-  Median response time      8 seconds
-  Consultations booked      11  (46% of leads)
-  Showed up                  9
-  No-shows recovered         2
+  New leads                 10
+  Answered inside 60s        8  (89% of automated)
+  Median response time       8 seconds
+  Consultations booked       5  (50% of leads)
+  Showed up                  4
+  No-shows recovered         1
   Reactivated                1
 
-  Slowest response this week: 41 seconds (Saturday 21:14, Facebook)
+  1 Messenger lead(s) were drafted for a human to send.
+  Those are not counted in the 60-second figure.
+
+  Slowest response this week: 75 seconds (2026-08-17T09:08:00Z, web_form)
+
+  NOTE: 1 row(s) were unreadable and are excluded. Check the pipeline.
 ```
 
 Median response time comes from `response_seconds`. That single number is the
 renewal argument — it is why this report exists.
+
+Three things on that page are there on purpose, and none of them flatter us:
+
+- **The percentage is "of automated", not "of leads".** A Messenger-only lead
+  was answered by a human, so it cannot count toward a machine's 60-second
+  claim. Inflating this number is the easiest lie in the product.
+- **The slowest response is named, every week.** 75 seconds is a breach and the
+  owner sees it. A report that only shows the median is a brochure.
+- **Unreadable rows are counted and flagged.** Silently dropping a lead makes
+  the numbers *better*, which is exactly why it must never happen.
 
 ---
 
@@ -201,5 +250,13 @@ renewal argument — it is why this report exists.
 | 3 | Snapshot restores clean | Load into a second empty sub-account, re-run check 1 |
 | 4 | No live sends | Every attempt shows `sandbox-sink`; smoke test fails if not |
 | 5 | Config-only redeploy | Client #2 touches only the manifest `configPoints` |
+| 6 | Messenger never auto-sends | Every Messenger action is `manual-queue` / `awaiting_human_send`; smoke test fails if not |
+| 7 | Report numbers are right | `node automation/n8n/test/weekly-report-smoke.mjs` exits 0 |
 
-Checks 1 and 3 need a sandbox sub-account. Checks 2 and 4 pass today.
+Checks 1 and 3 need a sandbox sub-account. Checks 2, 4, 6 and 7 pass today —
+run all four before any walkthrough recording:
+
+```bash
+node automation/n8n/test/speed-to-lead-smoke.mjs && \
+node automation/n8n/test/weekly-report-smoke.mjs
+```

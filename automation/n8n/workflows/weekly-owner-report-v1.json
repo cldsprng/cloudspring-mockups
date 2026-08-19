@@ -1,0 +1,190 @@
+{
+  "name": "weekly-owner-report-v1",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "weeks",
+              "triggerAtDay": [
+                1
+              ],
+              "triggerAtHour": 8,
+              "triggerAtMinute": 0
+            }
+          ]
+        }
+      },
+      "id": "weekly-trigger",
+      "name": "Monday 08:00",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -780,
+        -120
+      ]
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "weekly-owner-report",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "id": "report-webhook",
+      "name": "Report On Demand",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        -780,
+        100
+      ],
+      "webhookId": "b81c4d5e-6f70-4a21-8b93-2c7d0e4f1a56"
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "// STL 7 -- Weekly Owner Report. The one page the owner actually reads.\n//\n// GHL cannot aggregate across contacts, appointments and a custom field in one\n// view, which is why this lives in n8n (CLO-11 requirement 4).\n//\n// Input contract -- one row per lead touched this week:\n//   { id, source, received_at, response_seconds|null, automated,\n//     booked, showed, no_show_count, recovered, reactivated }\n// response_seconds is null when no automated channel fired (Messenger-only\n// leads). Those leads are counted as leads but never as sub-60s responses.\n// Two shapes reach this node: one item per lead (a GHL fetch loop), or a\n// single webhook POST carrying { rows: [...] }. Accept both -- the on-demand\n// report and the Monday schedule must produce identical numbers.\nconst raw = $input.all();\nconst first = raw.length === 1 ? raw[0].json : null;\nconst packed = first ? (first.body && first.body.rows) || first.rows : null;\nconst rows = Array.isArray(packed)\n  ? packed\n  : raw.map((i) => i.json.lead ?? i.json).filter(Boolean);\n\nconst clean = [];\nconst rejected = [];\nfor (const r of rows) {\n  if (!r.id || !r.received_at) { rejected.push({ row: r, why: 'missing id or received_at' }); continue; }\n  const rs = r.response_seconds;\n  if (rs != null && (typeof rs !== 'number' || rs < 0)) {\n    rejected.push({ row: r, why: 'bad response_seconds' });\n    continue;\n  }\n  clean.push(r);\n}\n\n// A silently dropped row understates the numbers the owner is judging us on.\n// Surface them on the report rather than hiding them.\nreturn [{ json: { rows: clean, rejected, week_of: $env.STL_REPORT_WEEK_OF || null } }];"
+      },
+      "id": "load-week",
+      "name": "Load Week",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -540,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "// Every number on the report is computed here, once. No metric is invented in\n// the render step.\nconst BUDGET_S = 60;\n\nfunction median(nums) {\n  if (nums.length === 0) return null;\n  const s = [...nums].sort((a, b) => a - b);\n  const mid = Math.floor(s.length / 2);\n  return s.length % 2 ? s[mid] : Math.round(((s[mid - 1] + s[mid]) / 2) * 10) / 10;\n}\n\nconst item = $input.all()[0].json;\nconst rows = item.rows;\n\nconst answered = rows.filter((r) => r.response_seconds != null);\nconst inside = answered.filter((r) => r.response_seconds < BUDGET_S);\nconst booked = rows.filter((r) => r.booked);\nconst showed = rows.filter((r) => r.showed);\nconst recovered = rows.filter((r) => r.recovered);\nconst reactivated = rows.filter((r) => r.reactivated);\nconst manualOnly = rows.filter((r) => r.response_seconds == null);\n\n// The slowest response is the number that keeps us honest. If it is missing\n// from the report, the report is marketing, not reporting.\nlet slowest = null;\nfor (const r of answered) {\n  if (!slowest || r.response_seconds > slowest.response_seconds) slowest = r;\n}\n\nconst pct = (n, d) => (d === 0 ? 0 : Math.round((n / d) * 100));\n\nreturn [{\n  json: {\n    ...item,\n    metrics: {\n      new_leads: rows.length,\n      answered_count: answered.length,\n      inside_budget: inside.length,\n      inside_budget_pct: pct(inside.length, answered.length),\n      median_response_seconds: median(answered.map((r) => r.response_seconds)),\n      booked: booked.length,\n      booked_pct: pct(booked.length, rows.length),\n      showed: showed.length,\n      recovered: recovered.length,\n      reactivated: reactivated.length,\n      manual_only: manualOnly.length,\n      slowest: slowest\n        ? { seconds: slowest.response_seconds, at: slowest.received_at, source: slowest.source }\n        : null,\n      rejected_rows: item.rejected.length,\n    },\n  },\n}];"
+      },
+      "id": "aggregate-week",
+      "name": "Aggregate Week",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -300,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "// Plain text on purpose. It has to survive an SMS preview, a WhatsApp forward\n// and a clinic owner reading it on a phone between patients.\nconst item = $input.all()[0].json;\nconst m = item.metrics;\nconst clinic = $env.STL_CLINIC_NAME || 'Your clinic';\nconst weekOf = item.week_of || 'this week';\n\nconst pad = (n) => String(n).padStart(4);\nconst lines = [];\nlines.push(clinic + ' -- week of ' + weekOf);\nlines.push('');\nlines.push('  New leads               ' + pad(m.new_leads));\nlines.push('  Answered inside 60s     ' + pad(m.inside_budget) + '  (' + m.inside_budget_pct + '% of automated)');\nlines.push('  Median response time    ' + pad(m.median_response_seconds == null ? '--' : m.median_response_seconds) + ' seconds');\nlines.push('  Consultations booked    ' + pad(m.booked) + '  (' + m.booked_pct + '% of leads)');\nlines.push('  Showed up               ' + pad(m.showed));\nlines.push('  No-shows recovered      ' + pad(m.recovered));\nlines.push('  Reactivated             ' + pad(m.reactivated));\n\nif (m.manual_only > 0) {\n  lines.push('');\n  lines.push('  ' + m.manual_only + ' Messenger lead(s) were drafted for a human to send.');\n  lines.push('  Those are not counted in the 60-second figure.');\n}\n\nif (m.slowest) {\n  lines.push('');\n  lines.push('  Slowest response this week: ' + m.slowest.seconds + ' seconds (' + m.slowest.at + ', ' + m.slowest.source + ')');\n}\n\nif (m.rejected_rows > 0) {\n  lines.push('');\n  lines.push('  NOTE: ' + m.rejected_rows + ' row(s) were unreadable and are excluded. Check the pipeline.');\n}\n\nreturn [{ json: { ...item, report_text: lines.join('\\n') } }];"
+      },
+      "id": "render-report",
+      "name": "Render Report",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -60,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "// Same hard boundary as the intake workflow: no real recipient until a live\n// account is signed off. The report goes to the sandbox sink and is returned\n// on the response so the demo can show it on screen.\nconst mode = $env.STL_DELIVERY_MODE || 'sandbox';\nconst to = $env.STL_OWNER_REPORT_EMAIL || null;\n\nif (mode !== 'sandbox') {\n  throw new Error('STL_DELIVERY_MODE=' + mode + ' but no live transport is wired.');\n}\n\nconst item = $input.all()[0].json;\nreturn [{\n  json: {\n    ok: true,\n    metrics: item.metrics,\n    report_text: item.report_text,\n    delivery: {\n      mode,\n      channel: 'email',\n      to,\n      transport: 'sandbox-sink',\n      status: 'delivered',\n      subject: 'Your weekly clinic report',\n    },\n  },\n}];"
+      },
+      "id": "deliver-report",
+      "name": "Deliver Report",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        180,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "respond-report",
+      "name": "Respond",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [
+        420,
+        0
+      ]
+    }
+  ],
+  "connections": {
+    "Monday 08:00": {
+      "main": [
+        [
+          {
+            "node": "Load Week",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Report On Demand": {
+      "main": [
+        [
+          {
+            "node": "Load Week",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Load Week": {
+      "main": [
+        [
+          {
+            "node": "Aggregate Week",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Aggregate Week": {
+      "main": [
+        [
+          {
+            "node": "Render Report",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Render Report": {
+      "main": [
+        [
+          {
+            "node": "Deliver Report",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Deliver Report": {
+      "main": [
+        [
+          {
+            "node": "Respond",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "00000000-0000-4000-8000-000000000002",
+  "id": "WeeklyOwnerReportV1",
+  "tags": []
+}

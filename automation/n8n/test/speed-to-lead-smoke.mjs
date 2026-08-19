@@ -84,9 +84,42 @@ const SCENARIOS = [
     expect: { ok: true, channels: ['email'] },
   },
   {
+    // The commonest Facebook lead of all: a thread and a name, no phone, no
+    // email. v1 rejected this outright. It must now be drafted and queued.
+    name: 'facebook messenger -- thread only, no phone or email',
+    body: {
+      source: 'facebook',
+      name: 'Liza Bautista',
+      psid: '61550012345678',
+      page_id: '102938475610111',
+      message: 'hi po, open ba kayo sa Sunday?',
+      clinic: 'DermHaus Skin Clinic',
+    },
+    expect: { ok: true, channels: [], manual: ['messenger'] },
+  },
+  {
+    name: 'facebook -- messenger plus phone, both paths fire',
+    body: {
+      source: 'facebook',
+      name: 'Paolo Uy',
+      phone: '+639175559999',
+      psid: '61550087654321',
+      page_id: '102938475610111',
+      clinic: 'DermHaus Skin Clinic',
+    },
+    expect: { ok: true, channels: ['sms'], manual: ['messenger'] },
+  },
+  {
     name: 'REJECT -- no reachable channel',
     body: { source: 'web_form', name: 'Ghost Lead', clinic: 'DermHaus Skin Clinic' },
     expect: { ok: false, problems: ['no_reachable_channel'] },
+  },
+  {
+    // A psid can only come from Messenger. Anywhere else it means a mis-mapped
+    // form field, and a mis-mapped field silently messages the wrong person.
+    name: 'REJECT -- psid on a non-facebook source',
+    body: { source: 'web_form', name: 'Mismapped', psid: '61550011112222' },
+    expect: { ok: false, problems: ['psid_on_non_facebook_source'] },
   },
   {
     name: 'REJECT -- unknown source',
@@ -208,9 +241,40 @@ function checkLocal(scenario, res) {
         problems.push(`channel ${a.channel} used transport "${a.transport}" -- must be sandbox-sink`)
       }
     }
+
+    // Messenger: drafted by the engine, sent by a human. If this block ever
+    // reports a send, we are one step from a banned page.
+    const manual = out.delivery?.manual_actions ?? []
+    const queued = manual.map((a) => a.channel).sort()
+    const wantManual = [...(scenario.expect.manual ?? [])].sort()
+    if (queued.join(',') !== wantManual.join(',')) {
+      problems.push(`expected manual [${wantManual}], queued [${queued}]`)
+    }
+    for (const a of manual) {
+      if (a.transport !== 'manual-queue') {
+        problems.push(`${a.channel} manual action used transport "${a.transport}" -- must be manual-queue`)
+      }
+      if (a.status !== 'awaiting_human_send') {
+        problems.push(`${a.channel} manual action status "${a.status}" -- must be awaiting_human_send`)
+      }
+      if (!a.draft) problems.push(`${a.channel} manual action has no draft for the human to send`)
+      const slack = new Date(a.due_by).getTime() - new Date(out.lead.received_at).getTime()
+      if (!(slack > 0 && slack <= BUDGET_MS)) {
+        problems.push(`${a.channel} due_by is ${slack} ms after receipt -- must be inside the ${BUDGET_MS} ms budget`)
+      }
+    }
+
     if (!out.timing) problems.push('no timing block -- the sub-60s claim is unmeasured')
     else if (!out.timing.within_budget) {
       problems.push(`pipeline_ms=${out.timing.pipeline_ms} exceeded budget ${out.timing.budget_ms}`)
+    }
+    // Only an automated channel earns the sub-60s claim. A Messenger-only lead
+    // must report automated=false so nobody quotes it as a machine response.
+    if (out.timing && out.timing.automated !== (sent.length > 0)) {
+      problems.push(`timing.automated=${out.timing.automated} but ${sent.length} automated channel(s) fired`)
+    }
+    if (out.timing && out.timing.manual_pending !== manual.length) {
+      problems.push(`timing.manual_pending=${out.timing.manual_pending} but ${manual.length} queued`)
     }
     // With no sandbox location the lead must be queued, never silently dropped.
     const crmStatus = out.crm?.status
@@ -303,7 +367,7 @@ for (const s of SCENARIOS) {
 // Every node must have been exercised, or the demo has a path nobody tested.
 if (!remote) {
   const { visited } = executeWorkflow(wf, byName, SCENARIOS[0].body)
-  const rejected = executeWorkflow(wf, byName, SCENARIOS[4].body)
+  const rejected = executeWorkflow(wf, byName, SCENARIOS.find((s) => !s.expect.ok).body)
   const covered = new Set([...visited, ...rejected.visited, 'Respond'])
   const uncovered = wf.nodes.map((n) => n.name).filter((n) => !covered.has(n))
   // Exactly one GHL branch runs per config: with a sandbox location the lead is
