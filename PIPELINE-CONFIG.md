@@ -861,3 +861,87 @@ promise, not the diagnosis, that the menu gates.
   one queue Dei actually needs to look at. Re-capture of the 30+ legacy folders
   stays a scheduled piece of work, and it needs the same Facebook egress as (b)
   above.
+- 2026-08-20 (run 1, EGRESS IS SURFACE-SPECIFIC AND MUST BE MEASURED, NOT ASSUMED):
+  the 2026-08-19 Cowork entry above says brand capture "CANNOT RUN IN THIS
+  SURFACE". That is true of Cowork and false of the Paperclip Code Routine
+  surface. Measured here before step 3 was dispatched:
+  `graph.facebook.com/cocacola/picture?type=large` -> 200, 28,874-byte PNG ·
+  `/nike/` -> 200, 1,852-byte JPEG · github.com 200 · google.com 200 ·
+  preview.cloudspringitsolutions.com 200 · yelp.com 403 (bot block, not an
+  outage) · yellow-pages.ph 000.
+  The trap worth naming: an INVALID Facebook slug returns **HTTP 400 with a JSON
+  body** ("Object with ID '<slug>' does not exist"), not a connection failure.
+  400-with-JSON means the network is fine and the slug is wrong; 000 means you
+  could not look at all. `capture.mjs` collapses both into `no-assets`, which is
+  the defect the 08-19 entry asked for a fix to. Until that fix lands, every run
+  must probe one KNOWN-GOOD slug first and record the result in the report.
+  Rule: never copy an egress verdict from one surface's learning into another
+  run. Three lines of curl settles it; an inherited assumption cost three runs
+  and 18+ unbranded mockups the first time.
+- 2026-08-20 (the "descriptions are too long to edit" blocker was false, and 15
+  cards were stuck behind it): CLO-22 left the stale
+  `⚠️ GENERIC BRANDING — no brand assets found` line on every rebuilt READY TO
+  SEND card, reasoning that `trelloWriteCard`'s 2048-char `desc` cap would
+  truncate the humanised drafts. Measured this run: the 17 READY TO SEND
+  descriptions run 1,538–2,007 chars. **Every one fits, and removing a line makes
+  it strictly shorter.** All 15 stale warnings are now cleared and replaced with
+  `✅ Brand verified — captured logo + palette, verify-brand.mjs pass`, after
+  running `verify-brand.mjs` independently on all 15 slugs: **15 PASS, 0 FAIL**.
+  This mattered because CLO-7's approval digest reads the cards; the false
+  warning would have re-flagged all 15 as unbranded and the queue would not have
+  drained. Generalisable: a constraint quoted from a tool's schema is a hypothesis
+  until someone measures the actual data against it. One `node` one-liner beat
+  a day of the queue standing still.
+- 2026-08-20 (a FOURTH brand state exists and the config's table does not
+  contain it): three folders carry `blockedBy: "logo-not-a-mark"` —
+  `powertorq-auto-repair-qc`, `hugoderm-skincare-davao`, `kutis-by-kei-makati`.
+  The three-state table above (`ready` / `palette-pending` / `no-assets`) says
+  "There is no fourth state." There is. It means a logo file was fetched but the
+  image is a photograph or a text-over-photo cover rather than a usable mark —
+  the common Facebook case where the page's profile picture is a storefront
+  shot. Operationally it is NOT `no-assets`: an asset exists and a human crop can
+  rescue it, which is exactly what CLO-31 did for `automotive-1-car-care-qc`
+  (cropped the storefront signage, vision-read the palette, now `ready: true`).
+  Until the table is amended, treat `logo-not-a-mark` as a BRAND BLOCKED routing
+  with a named remedy ("crop a mark from the photo") rather than a dead end.
+- 2026-08-20 (a completed handoff can leave its artifact stranded off main):
+  CLO-31 was marked `done` on 08-19, but its commit (`8c4d5b5`) sat unpushed on
+  the local `clo-22-rebuild` branch. `automotive-1-car-care-qc` therefore looked
+  brand-blocked to every reader of `origin/main` while being `ready: true` on
+  disk. Pushed this run. The check that catches this is cheap and belongs in
+  every run: `git log --oneline origin/main..HEAD` before trusting any "done"
+  that claims a repo artifact. An issue status is a claim about work; `origin/main`
+  is the evidence.
+- 2026-08-20 (lead quality splits by sub-niche, not by niche): Taguig returned
+  3 vulcanizing/tire shops and the UK returned 1 mobile mechanic — **0 of 4 have
+  an email**, all phone-only. That is the dental/plumbing pattern, not the
+  08-17/08-18 auto-repair pattern (5 of 8 emails from QC and Makati auto repair
+  shops). The difference is not the niche, it is the sub-niche: full auto-repair
+  *shops* publish contact emails on directory listings; vulcanizing/tire stalls
+  and one-person mobile mechanics do not. On trade weeks, point the Lead Hunter
+  at "auto repair shop" / "car service centre" and away from "vulcanizing" if
+  email contactability matters for the day.
+- 2026-08-20 (the banned closer is still shipping, at scale): the 08-16 ban on
+  the "<positive ask>? If not, <opt-out>" closer has not held. Reading the 17
+  READY TO SEND drafts this run, **7 carry the banned shape wearing different
+  words** — "Not for you? Reply 'no thanks' and I'll stop there" (Tower of
+  David), "reply no thanks and I'll stop here" (Skinthority), "Or reply 'not
+  interested' and I'll leave you alone" (DermQuest), "Not interested? No worries,
+  I won't follow up" (LimDerm), "reply no thanks and I'm done" (Midwest), "If
+  not, I won't message again" (Gulfan), "Not interested? Just say so and I won't
+  message again" (Dental Hive). Two also carry the banned "So I built …" pivot in
+  disguise: "So I made you one" (Dental Hive) and "So here's one that's only
+  yours" (LimDerm). Each of those cards is now flagged in its own description
+  with a `⚠️ QA RE-CHECK` line naming the exact phrase.
+  The lesson is about how the rule was written, not about the drafts: banning
+  phrases bans phrases, and the generator paraphrases. The rule needs to name the
+  MOVE — "do not end on a pre-emptive permission-to-decline" — and QA needs to
+  check for the move. A ban that a synonym defeats is a style note, not a gate.
+- 2026-08-20 (reply triage, third clean run): GHL healthy (`search-conversation`
+  -> 200). 19 inbound conversations in the location, **zero** on a
+  `cloudspring-web-leads` contact — every one is EasyChurch, MyHoms or an
+  unrelated Messenger thread, and the newest is from 2026-07-31. Nothing to route
+  to REPLIED (HITS). This is now the expected result and will stay the expected
+  result until a card reaches CONTACTED: with APPROVED 0 and CONTACTED 0, there
+  is no prospect who could reply. Reply triage cannot find a reply to a message
+  that was never sent.
