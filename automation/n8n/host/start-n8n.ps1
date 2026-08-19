@@ -30,16 +30,28 @@ if (Test-Path $EnvFile) {
   }
 }
 
-$stamp  = Get-Date -Format 'yyyyMMdd-HHmmss'
-$stdout = Join-Path $LogDir "n8n-$stamp.log"
+# The engine log is written by n8n itself (N8N_LOG_OUTPUT=console,file), not by
+# this script. An earlier version piped the console through Tee-Object; the file
+# was never created, because PowerShell block-buffers a native command's output
+# and n8n is long-running, so nothing ever flushed. n8n's own logger writes
+# through and rotates itself -- N8N_LOG_FILE_SIZE_MAX / N8N_LOG_FILE_COUNT_MAX.
+$EngineLog = if ($env:N8N_LOG_FILE_LOCATION) { $env:N8N_LOG_FILE_LOCATION }
+             else { Join-Path $LogDir 'n8n.log' }
+
+# Console capture is a secondary: it catches anything that dies before the
+# logger is up. Named console-* so pruning can never touch n8n's rotated logs.
+$stamp   = Get-Date -Format 'yyyyMMdd-HHmmss'
+$console = Join-Path $LogDir "console-$stamp.log"
 
 Write-Host "Starting n8n"
 Write-Host "  user folder : $($env:N8N_USER_FOLDER)"
 Write-Host "  editor      : $($env:N8N_EDITOR_BASE_URL)"
-Write-Host "  log         : $stdout"
+Write-Host "  engine log  : $EngineLog"
+Write-Host "  console log : $console"
 
-# Prune logs older than 14 days so the box does not fill up.
-Get-ChildItem $LogDir -Filter 'n8n-*.log' |
+# Prune console captures older than 14 days so the box does not fill up.
+# Scoped to console-*.log on purpose: n8n rotates its own engine logs.
+Get-ChildItem $LogDir -Filter 'console-*.log' -ErrorAction SilentlyContinue |
   Where-Object { $_.LastWriteTime -lt (Get-Date).AddDays(-14) } |
   Remove-Item -Force -ErrorAction SilentlyContinue
 
@@ -48,4 +60,4 @@ if (-not (Test-Path $n8nCmd)) {
   throw "n8n not found at $n8nCmd -- run: npm install -g n8n"
 }
 
-& $n8nCmd start *>&1 | Tee-Object -FilePath $stdout
+& $n8nCmd start *>&1 | Tee-Object -FilePath $console
