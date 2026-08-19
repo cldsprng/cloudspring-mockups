@@ -1,0 +1,25 @@
+{
+  "slug": "bessacarr-dental-doncaster",
+  "site": null,
+  "facebook": "100064013286702",
+  "capturedAt": "2026-08-19T14:49:34.402Z",
+  "source": "headless-http",
+  "name": null,
+  "logo": null,
+  "logoFiles": [],
+  "colors": {
+    "brand": [],
+    "neutral": [],
+    "themeColor": null,
+    "source": null
+  },
+  "fonts": [],
+  "ready": false,
+  "blockedBy": "no-assets",
+  "confidence": 0,
+  "notes": [
+    "facebook page \"100064013286702\" has no profile picture — the graph endpoint returns the anonymous silhouette (is_silhouette: true). Common for pages reachable only by numeric ID. Not recoverable headlessly.",
+    "no website for this lead — facebook-only capture path",
+    "BLOCKER no-assets: no usable logo file (need >=1KB from a logo/icon/FB signal)"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "slug": "ron-low-md-lethbridge",
+  "site": null,
+  "facebook": null,
+  "capturedAt": "2026-08-19T00:00:00.000Z",
+  "source": "headless-http",
+  "name": "Ron Low MD",
+  "logo": null,
+  "logoFiles": [],
+  "colors": { "brand": [], "neutral": [], "themeColor": null, "source": null },
+  "fonts": [],
+  "ready": false,
+  "blockedBy": "no-assets",
+  "confidence": 0,
+  "notes": [
+    "PHONE-ONLY lead: no website, no Facebook page, directory listings only (411.ca, RateMDs, CPSA)",
+    "nothing to capture headlessly — there is no owned web property to read a logo or palette from",
+    "BLOCKER no-assets: no usable logo file or brand signal available"
+  ]
+}

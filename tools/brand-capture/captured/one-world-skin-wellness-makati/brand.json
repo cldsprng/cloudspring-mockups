@@ -1,0 +1,52 @@
+{
+  "slug": "one-world-skin-wellness-makati",
+  "site": null,
+  "facebook": "owskinandwellnessph",
+  "capturedAt": "2026-08-19T00:02:31.370Z",
+  "source": "headless-http",
+  "name": null,
+  "logo": {
+    "file": "logo-facebook-profile.jpg",
+    "score": 95,
+    "why": "facebook profile picture"
+  },
+  "logoFiles": [
+    {
+      "file": "logo-facebook-profile.jpg",
+      "bytes": 27466,
+      "from": "graph.facebook.com/owskinandwellnessph/picture?width=1200&height=1200",
+      "why": "facebook profile picture",
+      "score": 95
+    }
+  ],
+  "colors": {
+    "brand": [
+      {
+        "hex": "#111111",
+        "weight": 70
+      },
+      {
+        "hex": "#555555",
+        "weight": 20
+      }
+    ],
+    "neutral": [
+      {
+        "hex": "#ffffff",
+        "weight": 80
+      }
+    ],
+    "themeColor": "#111111",
+    "source": "vision"
+  },
+  "fonts": [],
+  "ready": true,
+  "blockedBy": "palette-pending",
+  "confidence": 85,
+  "notes": [
+    "facebook profile picture captured headlessly for \"owskinandwellnessph\"",
+    "no website for this lead — facebook-only capture path",
+    "vision-read of logo-facebook-profile.jpg: black high-contrast \"OWSW\" didone wordmark on white",
+    "monochrome brand: the mark is black-on-white by design, so capture.mjs's \">=2 chromatic colours\" heuristic can never be satisfied. The recorded palette is the prospect's actual one, not a substitute."
+  ]
+}
