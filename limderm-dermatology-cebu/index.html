@@ -10,16 +10,16 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --ink:#0E2A2B;
-  --ink-2:#3A5657;
-  --teal:#0C6C6B;
-  --teal-600:#0A5857;
-  --teal-100:#DCEFEE;
-  --mint:#EEF7F5;
-  --sand:#F7F4EF;
-  --line:#DCE6E4;
+  --ink:#1a1a1a;
+  --ink-2:#2a462b;
+  --teal:#2f5d38;
+  --teal-600:#264a2d;
+  --teal-100:#e7f0e7;
+  --mint:#eef2dc;
+  --sand:#f9f6ed;
+  --line:#dfebdf;
   --white:#FFFFFF;
-  --accent:#C9A227;
+  --accent:#c9b46b;
   --shadow-sm:0 1px 2px rgba(14,42,43,.08), 0 2px 8px rgba(14,42,43,.06);
   --shadow-md:0 8px 24px rgba(14,42,43,.10);
   --shadow-lg:0 16px 48px rgba(14,42,43,.14);
@@ -230,6 +230,7 @@ a{color:var(--teal-600)}
   .cs-bar__in{flex-wrap:nowrap;justify-content:space-between;text-align:left}
   .cs-bar__line{font-size:16.5px}
 }
+.brand-logo-img{width:38px;height:38px;flex:0 0 38px;object-fit:contain;border-radius:9px;background:#fff}
 </style>
 </head>
 <body>
@@ -237,12 +238,7 @@ a{color:var(--teal-600)}
 <header class="header">
   <div class="header__in">
     <a class="brand" href="#top" aria-label="LimDerm Dermatology and Laser Clinic, back to top">
-      <svg class="brand__mark" viewBox="0 0 48 48" role="img" aria-hidden="true" focusable="false">
-        <circle cx="24" cy="24" r="23" fill="#0C6C6B"/>
-        <path d="M24 12c5.2 3.4 8 8 8 12.6C32 30.2 28.4 34 24 36c-4.4-2-8-5.8-8-11.4C16 20 18.8 15.4 24 12z" fill="#DCEFEE"/>
-        <path d="M24 15.5v18" stroke="#0C6C6B" stroke-width="1.6" stroke-linecap="round"/>
-        <path d="M24 24c2.3-1.1 3.8-3 4.4-5.4M24 29.6c-2.1-1-3.5-2.7-4.1-4.9" stroke="#0C6C6B" stroke-width="1.4" stroke-linecap="round" fill="none"/>
-      </svg>
+      <img class="brand__mark brand-logo-img" src="brand/logo-facebook-profile.jpg" alt="LimDerm Dermatology &amp; Laser Clinic logo" width="38" height="38" decoding="async">
       <span class="brand__txt">
         <span class="brand__name">LimDerm</span>
         <span class="brand__sub">Dermatology &amp; Laser</span>
@@ -299,37 +295,37 @@ a{color:var(--teal-600)}
         <svg viewBox="0 0 460 380" role="img" aria-hidden="true" focusable="false" style="width:100%;height:auto;filter:drop-shadow(0 18px 40px rgba(14,42,43,.14))">
           <defs>
             <linearGradient id="lg1" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0" stop-color="#DCEFEE"/><stop offset="1" stop-color="#F7F4EF"/>
+              <stop offset="0" stop-color="#e7f0e7"/><stop offset="1" stop-color="#f9f6ed"/>
             </linearGradient>
             <linearGradient id="lg2" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0" stop-color="#0C6C6B"/><stop offset="1" stop-color="#0A5857"/>
+              <stop offset="0" stop-color="#2f5d38"/><stop offset="1" stop-color="#264a2d"/>
             </linearGradient>
             <linearGradient id="lg3" x1="0" y1="0" x2="1" y2="0">
-              <stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#EEF7F5"/>
+              <stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#eef2dc"/>
             </linearGradient>
           </defs>
           <rect x="10" y="14" width="440" height="352" rx="28" fill="url(#lg1)"/>
           <circle cx="360" cy="98" r="58" fill="#fff" opacity=".62"/>
           <!-- profile silhouette -->
-          <path d="M186 330c-6-40 4-72 4-96 0-16-14-22-14-46 0-42 30-72 70-72s70 28 70 74c0 26-10 44-10 62 0 12 10 16 10 28 0 10-10 14-22 16l-4 34z" fill="url(#lg3)" stroke="#0C6C6B" stroke-width="2.4" stroke-linejoin="round"/>
+          <path d="M186 330c-6-40 4-72 4-96 0-16-14-22-14-46 0-42 30-72 70-72s70 28 70 74c0 26-10 44-10 62 0 12 10 16 10 28 0 10-10 14-22 16l-4 34z" fill="url(#lg3)" stroke="#2f5d38" stroke-width="2.4" stroke-linejoin="round"/>
           <!-- light beam / laser -->
-          <path d="M64 132l112 44" stroke="#C9A227" stroke-width="4" stroke-linecap="round" opacity=".85"/>
-          <path d="M64 132l112 44" stroke="#C9A227" stroke-width="12" stroke-linecap="round" opacity=".16"/>
+          <path d="M64 132l112 44" stroke="#c9b46b" stroke-width="4" stroke-linecap="round" opacity=".85"/>
+          <path d="M64 132l112 44" stroke="#c9b46b" stroke-width="12" stroke-linecap="round" opacity=".16"/>
           <circle cx="64" cy="132" r="13" fill="url(#lg2)"/>
-          <circle cx="64" cy="132" r="21" fill="none" stroke="#0C6C6B" stroke-width="1.6" opacity=".4"/>
+          <circle cx="64" cy="132" r="21" fill="none" stroke="#2f5d38" stroke-width="1.6" opacity=".4"/>
           <!-- glow dots on skin -->
-          <circle cx="243" cy="176" r="4.5" fill="#C9A227" opacity=".9"/>
-          <circle cx="259" cy="204" r="3" fill="#C9A227" opacity=".65"/>
-          <circle cx="230" cy="212" r="3.6" fill="#C9A227" opacity=".5"/>
+          <circle cx="243" cy="176" r="4.5" fill="#c9b46b" opacity=".9"/>
+          <circle cx="259" cy="204" r="3" fill="#c9b46b" opacity=".65"/>
+          <circle cx="230" cy="212" r="3.6" fill="#c9b46b" opacity=".5"/>
           <!-- clinic card chip -->
-          <rect x="46" y="240" width="170" height="96" rx="16" fill="#fff" stroke="#DCE6E4" stroke-width="2"/>
-          <rect x="62" y="260" width="86" height="9" rx="4.5" fill="#0C6C6B"/>
-          <rect x="62" y="280" width="126" height="7" rx="3.5" fill="#DCE6E4"/>
-          <rect x="62" y="296" width="104" height="7" rx="3.5" fill="#DCE6E4"/>
-          <rect x="62" y="312" width="64" height="10" rx="5" fill="#C9A227" opacity=".85"/>
+          <rect x="46" y="240" width="170" height="96" rx="16" fill="#fff" stroke="#dfebdf" stroke-width="2"/>
+          <rect x="62" y="260" width="86" height="9" rx="4.5" fill="#2f5d38"/>
+          <rect x="62" y="280" width="126" height="7" rx="3.5" fill="#dfebdf"/>
+          <rect x="62" y="296" width="104" height="7" rx="3.5" fill="#dfebdf"/>
+          <rect x="62" y="312" width="64" height="10" rx="5" fill="#c9b46b" opacity=".85"/>
           <!-- decorative arcs -->
-          <path d="M330 300c30-8 54-30 64-58" stroke="#0C6C6B" stroke-width="2" fill="none" opacity=".35" stroke-linecap="round"/>
-          <path d="M336 320c40-10 70-40 82-76" stroke="#0C6C6B" stroke-width="2" fill="none" opacity=".2" stroke-linecap="round"/>
+          <path d="M330 300c30-8 54-30 64-58" stroke="#2f5d38" stroke-width="2" fill="none" opacity=".35" stroke-linecap="round"/>
+          <path d="M336 320c40-10 70-40 82-76" stroke="#2f5d38" stroke-width="2" fill="none" opacity=".2" stroke-linecap="round"/>
         </svg>
       </div>
     </div>
@@ -463,14 +459,14 @@ a{color:var(--teal-600)}
               <rect width="600" height="300" fill="#E8F2F0"/>
               <path d="M0 210h600M0 96h600M120 0v300M400 0v300" stroke="#fff" stroke-width="16"/>
               <path d="M0 210h600M0 96h600M120 0v300M400 0v300" stroke="#D3E4E1" stroke-width="2"/>
-              <rect x="150" y="120" width="90" height="60" rx="6" fill="#DCEFEE"/>
-              <rect x="256" y="120" width="120" height="60" rx="6" fill="#DCEFEE"/>
-              <rect x="150" y="228" width="120" height="52" rx="6" fill="#DCEFEE"/>
-              <rect x="430" y="120" width="130" height="60" rx="6" fill="#DCEFEE"/>
-              <text x="132" y="88" font-family="Inter, Arial, sans-serif" font-size="14" fill="#3A5657">Jumabon St</text>
+              <rect x="150" y="120" width="90" height="60" rx="6" fill="#e7f0e7"/>
+              <rect x="256" y="120" width="120" height="60" rx="6" fill="#e7f0e7"/>
+              <rect x="150" y="228" width="120" height="52" rx="6" fill="#e7f0e7"/>
+              <rect x="430" y="120" width="130" height="60" rx="6" fill="#e7f0e7"/>
+              <text x="132" y="88" font-family="Inter, Arial, sans-serif" font-size="14" fill="#2a462b">Jumabon St</text>
               <g transform="translate(286,150)">
-                <circle cx="0" cy="0" r="30" fill="#0C6C6B" opacity=".14"/>
-                <path d="M0-24c8.8 0 16 7.2 16 16 0 12-16 26-16 26S-16 4-16-8c0-8.8 7.2-16 16-16z" fill="#0C6C6B"/>
+                <circle cx="0" cy="0" r="30" fill="#2f5d38" opacity=".14"/>
+                <path d="M0-24c8.8 0 16 7.2 16 16 0 12-16 26-16 26S-16 4-16-8c0-8.8 7.2-16 16-16z" fill="#2f5d38"/>
                 <circle cx="0" cy="-8" r="6" fill="#fff"/>
               </g>
             </svg>
