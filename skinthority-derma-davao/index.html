@@ -10,17 +10,17 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --ink:#10302f;
-  --ink-2:#2f4f4d;
-  --muted:#5d7a78;
-  --teal-900:#0d3b3a;
-  --teal-700:#12615e;
-  --teal-500:#1a8b86;
-  --teal-300:#7ec9c3;
-  --teal-050:#eef7f6;
-  --sand:#f6f1e9;
-  --gold:#c39a5a;
-  --line:#dde9e7;
+  --ink:#2f260c;
+  --ink-2:#4c3c13;
+  --muted:#79601e;
+  --teal-900:#6f581c;
+  --teal-700:#a8862a;
+  --teal-500:#c9a22b;
+  --teal-300:#d9c3a5;
+  --teal-050:#f5efe6;
+  --sand:#f5efe6;
+  --gold:#c9a22b;
+  --line:#efe9d9;
   --white:#ffffff;
   --shadow-sm:0 1px 2px rgba(13,59,58,.07), 0 2px 8px rgba(13,59,58,.06);
   --shadow-md:0 4px 12px rgba(13,59,58,.09), 0 12px 32px rgba(13,59,58,.08);
@@ -238,7 +238,7 @@ input:focus,textarea:focus,select:focus{outline:none; border-color:var(--teal-50
 .cs-copy{min-width:0}
 .cs-eyebrow{
   font-size:10.5px; font-weight:700; letter-spacing:.16em; text-transform:uppercase;
-  color:#7ec9c3; margin:0 0 3px;
+  color:#d9c3a5; margin:0 0 3px;
 }
 .cs-line{font-size:14.5px; font-weight:700; line-height:1.35; margin:0; color:#fff}
 .cs-btn{
@@ -266,6 +266,7 @@ input:focus,textarea:focus,select:focus{outline:none; border-color:var(--teal-50
 }
 .skip-link{position:absolute; left:-9999px; top:0; background:#fff; color:var(--teal-900); padding:12px 18px; z-index:200; border-radius:0 0 8px 0; font-weight:700}
 .skip-link:focus{left:0}
+.brand-logo-img{width:38px;height:38px;flex:0 0 38px;object-fit:contain;border-radius:9px;background:#fff}
 </style>
 </head>
 <body>
@@ -274,14 +275,7 @@ input:focus,textarea:focus,select:focus{outline:none; border-color:var(--teal-50
 <header class="site-header">
   <div class="header-inner">
     <a class="brand" href="#top" aria-label="Skinthority Dermatology Clinic home">
-      <svg class="brand-mark" viewBox="0 0 48 48" role="img" aria-hidden="true">
-        <defs><linearGradient id="bm1" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0" stop-color="#1a8b86"/><stop offset="1" stop-color="#0d3b3a"/>
-        </linearGradient></defs>
-        <rect width="48" height="48" rx="14" fill="url(#bm1)"/>
-        <path d="M24 11c6.2 0 11 4.4 11 10.4 0 7.6-6.6 12.4-11 15.6-4.4-3.2-11-8-11-15.6C13 15.4 17.8 11 24 11z" fill="none" stroke="#fff" stroke-width="2.1" stroke-linejoin="round" opacity=".95"/>
-        <path d="M19.5 22.5c1.6-2.6 4.2-3.9 6.4-3.2M22 27.6c2.6.6 5-.6 6.3-2.9" fill="none" stroke="#7ec9c3" stroke-width="2" stroke-linecap="round"/>
-      </svg>
+      <img class="brand-mark brand-logo-img" src="brand/logo-facebook-profile.jpg" alt="Skinthority Dermatology Clinic logo" width="38" height="38" decoding="async">
       <span>
         <span class="brand-name">Skinthority</span>
         <span class="brand-sub">Dermatology Clinic</span>
@@ -306,7 +300,7 @@ input:focus,textarea:focus,select:focus{outline:none; border-color:var(--teal-50
     <div class="hero-grid">
       <div>
         <span class="credential-chip">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#1a8b86" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#c9a22b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="M12 2l7 3v6c0 4.6-3 8.6-7 10-4-1.4-7-5.4-7-10V5l7-3z"/><path d="M9 12l2 2 4-4"/>
           </svg>
           Dr. Joanne Kate Milana-Martinez, MD, FPDS, DPACS
@@ -330,11 +324,11 @@ input:focus,textarea:focus,select:focus{outline:none; border-color:var(--teal-50
         <div class="rating-card">
           <div>
             <div class="stars" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="#c39a5a"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
-              <svg viewBox="0 0 24 24" fill="#c39a5a"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
-              <svg viewBox="0 0 24 24" fill="#c39a5a"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
-              <svg viewBox="0 0 24 24" fill="#c39a5a"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
-              <svg viewBox="0 0 24 24" fill="#c39a5a"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+              <svg viewBox="0 0 24 24" fill="#c9a22b"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+              <svg viewBox="0 0 24 24" fill="#c9a22b"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+              <svg viewBox="0 0 24 24" fill="#c9a22b"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+              <svg viewBox="0 0 24 24" fill="#c9a22b"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+              <svg viewBox="0 0 24 24" fill="#c9a22b"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
             </div>
             <div class="rating-score">4.8</div>
           </div>
@@ -352,10 +346,10 @@ input:focus,textarea:focus,select:focus{outline:none; border-color:var(--teal-50
               <stop offset="0" stop-color="#f3faf9"/><stop offset="1" stop-color="#dcefec"/>
             </linearGradient>
             <linearGradient id="hg2" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0" stop-color="#1a8b86"/><stop offset="1" stop-color="#0d3b3a"/>
+              <stop offset="0" stop-color="#c9a22b"/><stop offset="1" stop-color="#6f581c"/>
             </linearGradient>
             <linearGradient id="hg3" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#eef7f6"/>
+              <stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#f5efe6"/>
             </linearGradient>
           </defs>
           <rect width="520" height="420" fill="url(#hg1)"/>
@@ -364,24 +358,24 @@ input:focus,textarea:focus,select:focus{outline:none; border-color:var(--teal-50
           <!-- profile silhouette -->
           <path d="M300 60c58 0 96 44 96 104 0 26-8 44-8 62 0 14 14 16 14 30 0 12-14 14-14 24 0 12 6 14 6 26 0 20-22 32-52 32-26 0-42-8-56-8-8 0-12 4-12 12v40H164V236c-16-14-28-40-28-70 0-62 44-106 104-106z" transform="translate(-30,10)" fill="url(#hg3)" stroke="#9ecfc9" stroke-width="2.4"/>
           <!-- cheek glow -->
-          <ellipse cx="222" cy="212" rx="46" ry="34" fill="#7ec9c3" opacity=".18"/>
+          <ellipse cx="222" cy="212" rx="46" ry="34" fill="#d9c3a5" opacity=".18"/>
           <!-- eye -->
-          <path d="M196 176c12-11 30-11 42 0" fill="none" stroke="#12615e" stroke-width="3.4" stroke-linecap="round"/>
+          <path d="M196 176c12-11 30-11 42 0" fill="none" stroke="#a8862a" stroke-width="3.4" stroke-linecap="round"/>
           <!-- lash sparkle marks -->
-          <g stroke="#1a8b86" stroke-width="2.6" stroke-linecap="round" opacity=".75">
+          <g stroke="#c9a22b" stroke-width="2.6" stroke-linecap="round" opacity=".75">
             <path d="M262 132l0-16M282 142l10-12M246 140l-8-14"/>
           </g>
           <!-- treatment card -->
           <g transform="translate(300,236)">
             <rect x="0" y="0" width="188" height="128" rx="18" fill="#fff" stroke="#cfe6e3" stroke-width="2"/>
-            <rect x="18" y="22" width="86" height="9" rx="4.5" fill="#0d3b3a" opacity=".82"/>
-            <rect x="18" y="42" width="128" height="7" rx="3.5" fill="#5d7a78" opacity=".45"/>
-            <rect x="18" y="58" width="104" height="7" rx="3.5" fill="#5d7a78" opacity=".45"/>
+            <rect x="18" y="22" width="86" height="9" rx="4.5" fill="#6f581c" opacity=".82"/>
+            <rect x="18" y="42" width="128" height="7" rx="3.5" fill="#79601e" opacity=".45"/>
+            <rect x="18" y="58" width="104" height="7" rx="3.5" fill="#79601e" opacity=".45"/>
             <rect x="18" y="84" width="96" height="30" rx="15" fill="url(#hg2)"/>
             <path d="M34 99h20M46 91l8 8-8 8" stroke="#fff" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
           </g>
           <!-- droplets -->
-          <g fill="none" stroke="#1a8b86" stroke-width="2.6" opacity=".55">
+          <g fill="none" stroke="#c9a22b" stroke-width="2.6" opacity=".55">
             <path d="M436 176c0 8-6 13-13 13s-13-5-13-13 13-22 13-22 13 14 13 22z"/>
             <path d="M472 128c0 6-4.6 10-10 10s-10-4-10-10 10-17 10-17 10 11 10 17z"/>
           </g>
@@ -488,7 +482,7 @@ input:focus,textarea:focus,select:focus{outline:none; border-color:var(--teal-50
       <div class="portrait">
         <svg viewBox="0 0 420 460" role="img" aria-label="Portrait illustration of the clinic's dermatologist">
           <defs>
-            <linearGradient id="pg1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#eef7f6"/><stop offset="1" stop-color="#d6ebe8"/></linearGradient>
+            <linearGradient id="pg1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f5efe6"/><stop offset="1" stop-color="#d6ebe8"/></linearGradient>
             <linearGradient id="pg2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#f2f9f8"/></linearGradient>
           </defs>
           <rect width="420" height="460" fill="url(#pg1)"/>
@@ -501,19 +495,19 @@ input:focus,textarea:focus,select:focus{outline:none; border-color:var(--teal-50
           <!-- head -->
           <ellipse cx="210" cy="188" rx="66" ry="78" fill="#f6fbfa" stroke="#bcdcd8" stroke-width="2.4"/>
           <!-- hair -->
-          <path d="M144 186c0-46 30-74 66-74s66 28 66 74c0-24-18-34-34-38-18-4-30 6-52 4-22-2-32 8-38 22-4 8-8 8-8 12z" fill="#12615e" opacity=".85"/>
-          <path d="M144 186c-6 34-2 62 4 76-14-24-16-58-4-76zM276 186c6 34 2 62-4 76 14-24 16-58 4-76z" fill="#12615e" opacity=".7"/>
+          <path d="M144 186c0-46 30-74 66-74s66 28 66 74c0-24-18-34-34-38-18-4-30 6-52 4-22-2-32 8-38 22-4 8-8 8-8 12z" fill="#a8862a" opacity=".85"/>
+          <path d="M144 186c-6 34-2 62 4 76-14-24-16-58-4-76zM276 186c6 34 2 62-4 76 14-24 16-58 4-76z" fill="#a8862a" opacity=".7"/>
           <!-- features -->
-          <path d="M188 186c6-5 14-5 20 0M212 186c6-5 14-5 20 0" fill="none" stroke="#12615e" stroke-width="3.2" stroke-linecap="round"/>
-          <path d="M198 226c8 6 16 6 24 0" fill="none" stroke="#12615e" stroke-width="3.2" stroke-linecap="round"/>
+          <path d="M188 186c6-5 14-5 20 0M212 186c6-5 14-5 20 0" fill="none" stroke="#a8862a" stroke-width="3.2" stroke-linecap="round"/>
+          <path d="M198 226c8 6 16 6 24 0" fill="none" stroke="#a8862a" stroke-width="3.2" stroke-linecap="round"/>
           <!-- badge -->
           <g transform="translate(252,352)">
-            <rect x="0" y="0" width="104" height="34" rx="17" fill="#0d3b3a"/>
+            <rect x="0" y="0" width="104" height="34" rx="17" fill="#6f581c"/>
             <text x="52" y="22" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" fill="#7ee6de">FPDS</text>
           </g>
           <!-- stethoscope hint -->
-          <path d="M162 306c-10 32 4 56 26 60s34-12 34-30" fill="none" stroke="#1a8b86" stroke-width="4" stroke-linecap="round"/>
-          <circle cx="224" cy="336" r="9" fill="none" stroke="#1a8b86" stroke-width="4"/>
+          <path d="M162 306c-10 32 4 56 26 60s34-12 34-30" fill="none" stroke="#c9a22b" stroke-width="4" stroke-linecap="round"/>
+          <circle cx="224" cy="336" r="9" fill="none" stroke="#c9a22b" stroke-width="4"/>
         </svg>
       </div>
       <div>
@@ -577,13 +571,13 @@ input:focus,textarea:focus,select:focus{outline:none; border-color:var(--teal-50
             <rect x="20" y="86" width="82" height="66" rx="6" fill="#dbeae7"/>
             <rect x="140" y="16" width="170" height="38" rx="6" fill="#dbeae7"/>
             <rect x="350" y="186" width="100" height="56" rx="6" fill="#dbeae7"/>
-            <text x="140" y="62" font-family="Inter, Arial, sans-serif" font-size="13" fill="#5d7a78">Poblacion District</text>
-            <text x="14" y="186" font-family="Inter, Arial, sans-serif" font-size="13" fill="#5d7a78">Artiaga St</text>
+            <text x="140" y="62" font-family="Inter, Arial, sans-serif" font-size="13" fill="#79601e">Poblacion District</text>
+            <text x="14" y="186" font-family="Inter, Arial, sans-serif" font-size="13" fill="#79601e">Artiaga St</text>
             <g transform="translate(300,96)">
-              <path d="M30 0a30 30 0 0 0-30 30c0 22 30 52 30 52s30-30 30-52A30 30 0 0 0 30 0z" fill="#0d3b3a"/>
+              <path d="M30 0a30 30 0 0 0-30 30c0 22 30 52 30 52s30-30 30-52A30 30 0 0 0 30 0z" fill="#6f581c"/>
               <circle cx="30" cy="29" r="11" fill="#7ee6de"/>
             </g>
-            <text x="272" y="196" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#0d3b3a">Skinthority</text>
+            <text x="272" y="196" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#6f581c">Skinthority</text>
           </svg>
           <div class="map-cap">Illustrative map placeholder — a live Google map would be embedded here on the finished site.</div>
         </div>
