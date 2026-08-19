@@ -54,15 +54,22 @@ Local mode proves the logic and the pipeline budget. Only remote mode proves
 network transport — quote remote-mode numbers to prospects, never local ones.
 
 **Remote mode now has numbers.** Against the live host on 2026-08-19, across
-three separate runs spanning two restarts: **6/6 scenarios, worst case 244 ms
-of a 60 000 ms budget (0.4 %)**, typical case 90–160 ms, in-workflow pipeline
-time 44–62 ms. All six executions land in the n8n execution log as
+four runs spanning three restarts: **9/9 scenarios, worst case 147 ms of a
+60 000 ms budget (0.2 %)**, typical case 55–150 ms, in-workflow pipeline time
+47–67 ms. Every execution lands in the n8n execution log as
 `mode=webhook, status=success`.
 
-That is the number to quote: **under a quarter of a second, against a budget of
-sixty seconds.** It is a loopback figure — it proves the engine, not the public
-internet. Re-measure through the tunnel before quoting a figure that includes
-WAN latency.
+That is the number to quote: **well under a fifth of a second, against a budget
+of sixty seconds.** It is a loopback figure — it proves the engine, not the
+public internet. Re-measure through the tunnel before quoting a figure that
+includes WAN latency.
+
+Both workflows are live on the host, not just importable:
+
+| Workflow | Trigger | Verified |
+|---|---|---|
+| `speed-to-lead-intake-v1` | `POST /webhook/speed-to-lead` | 9/9 remote, 147 ms worst case |
+| `weekly-owner-report-v1` | Monday 08:00 + `POST /webhook/weekly-owner-report` | returns a rendered report on demand |
 
 ## The host
 
@@ -338,8 +345,8 @@ Once a sandbox exists:
   This is the single blocker on CLO-11 — see "When the sandbox sub-account
   exists" above. It needs a human in the GHL agency UI; there is no API for it.
 - ~~n8n not currently running.~~ **Closed 2026-08-19.** n8n 2.35.3 is running,
-  reachable on `:5678`, the intake workflow is active, and remote-mode numbers
-  exist (see "Run the proof").
+  reachable on `:5678`, both workflows are active, and remote-mode numbers exist
+  (see "Run the proof").
 - **Logon-only restart, no crash recovery.** The Startup-folder launcher fires at
   logon, not at boot, and does not restart n8n if it dies. Needs one elevated
   command to fix — see "Surviving a reboot". This is the weakest link in the
