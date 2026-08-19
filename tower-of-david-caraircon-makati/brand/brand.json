@@ -2,7 +2,7 @@
   "slug": "tower-of-david-caraircon-makati",
   "site": null,
   "facebook": "towerofdavidcaraircon",
-  "capturedAt": "2026-08-18T20:53:21.311Z",
+  "capturedAt": "2026-08-19T00:02:02.992Z",
   "source": "headless-http",
   "name": null,
   "logo": {
@@ -20,18 +20,40 @@
     }
   ],
   "colors": {
-    "brand": [],
-    "neutral": [],
-    "themeColor": null,
-    "source": null
+    "brand": [
+      {
+        "hex": "#5b93c9",
+        "weight": 45
+      },
+      {
+        "hex": "#1c2e42",
+        "weight": 35
+      },
+      {
+        "hex": "#f0a81e",
+        "weight": 30
+      }
+    ],
+    "neutral": [
+      {
+        "hex": "#efede0",
+        "weight": 50
+      },
+      {
+        "hex": "#ffffff",
+        "weight": 20
+      }
+    ],
+    "themeColor": "#5b93c9",
+    "source": "vision"
   },
   "fonts": [],
-  "ready": false,
+  "ready": true,
   "blockedBy": "palette-pending",
-  "confidence": 50,
+  "confidence": 90,
   "notes": [
     "facebook profile picture captured headlessly for \"towerofdavidcaraircon\"",
     "no website for this lead — facebook-only capture path",
-    "BLOCKER palette-pending: logo captured (logo-facebook-profile.jpg) but fewer than 2 chromatic colours found. Vision-read the logo, then write the hex values into colors.brand[] with colors.source=\"vision\" and re-run the gate."
+    "vision-read of logo-facebook-profile.jpg: chess rook badge, blue EST/1990 ribbons, amber sunburst, cream ground"
   ]
 }

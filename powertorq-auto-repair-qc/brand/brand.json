@@ -2,7 +2,7 @@
   "slug": "powertorq-auto-repair-qc",
   "site": null,
   "facebook": "Powertorq",
-  "capturedAt": "2026-08-18T20:54:24.346Z",
+  "capturedAt": "2026-08-19T00:02:25.383Z",
   "source": "headless-http",
   "name": null,
   "logo": {
@@ -20,18 +20,41 @@
     }
   ],
   "colors": {
-    "brand": [],
-    "neutral": [],
-    "themeColor": null,
-    "source": null
+    "brand": [
+      {
+        "hex": "#d81e1e",
+        "weight": 55
+      },
+      {
+        "hex": "#f5d915",
+        "weight": 30
+      },
+      {
+        "hex": "#a51414",
+        "weight": 20
+      }
+    ],
+    "neutral": [
+      {
+        "hex": "#111111",
+        "weight": 25
+      },
+      {
+        "hex": "#ffffff",
+        "weight": 20
+      }
+    ],
+    "themeColor": "#d81e1e",
+    "source": "vision"
   },
   "fonts": [],
   "ready": false,
-  "blockedBy": "palette-pending",
-  "confidence": 50,
+  "blockedBy": "logo-not-a-mark",
+  "confidence": 40,
   "notes": [
     "facebook profile picture captured headlessly for \"Powertorq\"",
     "no website for this lead — facebook-only capture path",
-    "BLOCKER palette-pending: logo captured (logo-facebook-profile.jpg) but fewer than 2 chromatic colours found. Vision-read the logo, then write the hex values into colors.brand[] with colors.source=\"vision\" and re-run the gate."
+    "vision-read of logo-facebook-profile.jpg: red \"PMS PROMO\" price-list graphic; the PowerTorq badge sits top-left",
+    "BLOCKER logo-not-a-mark: marketing promo graphic — the logo badge would need cropping out. The palette above is the prospect's real brand colour and is safe to use. The image file is not usable as a logo — needs a crop or a better source before build."
   ]
 }

@@ -2,7 +2,7 @@
   "slug": "midwest-skin-care-acne-clinic",
   "site": "https://glow-girl-store.square.site/",
   "facebook": "glowgirlesty",
-  "capturedAt": "2026-08-18T20:55:43.725Z",
+  "capturedAt": "2026-08-19T00:02:25.779Z",
   "source": "headless-http",
   "name": null,
   "logo": {
@@ -91,7 +91,6 @@
   "confidence": 100,
   "notes": [
     "facebook profile picture captured headlessly for \"glowgirlesty\"",
-    "2 stylesheet(s) fetched, 184155 bytes of CSS",
-    "CAUTION: the only site is a bare Square storefront (glow-girl-store.square.site). #7db158 is the storefront theme-color the owner picked and is trustworthy; ranks 2-6 (#73859f, #2b333f, #006aff, #d92b2b, #7b88bc) are Square platform chrome, not this business. Prefer #7db158 plus a vision-read second colour from the logo."
+    "2 stylesheet(s) fetched, 184155 bytes of CSS"
   ]
 }

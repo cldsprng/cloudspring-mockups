@@ -2,7 +2,7 @@
   "slug": "kutis-by-kei-makati",
   "site": null,
   "facebook": "kutisbykei",
-  "capturedAt": "2026-08-18T20:55:49.577Z",
+  "capturedAt": "2026-08-19T00:02:02.059Z",
   "source": "headless-http",
   "name": null,
   "logo": {
@@ -23,15 +23,16 @@
     "brand": [],
     "neutral": [],
     "themeColor": null,
-    "source": null
+    "source": "vision"
   },
   "fonts": [],
   "ready": false,
-  "blockedBy": "palette-pending",
-  "confidence": 50,
+  "blockedBy": "logo-not-a-mark",
+  "confidence": 15,
   "notes": [
     "facebook profile picture captured headlessly for \"kutisbykei\"",
     "no website for this lead — facebook-only capture path",
-    "BLOCKER palette-pending: logo captured (logo-facebook-profile.jpg) but fewer than 2 chromatic colours found. Vision-read the logo, then write the hex values into colors.brand[] with colors.source=\"vision\" and re-run the gate."
+    "vision-read of logo-facebook-profile.jpg: studio portrait of the dermatologist in a white coat — no mark, no wordmark, no brand colour",
+    "BLOCKER logo-not-a-mark: studio portrait of the practitioner — carries no brand artwork at all. No palette either — nothing brand-bearing in the image."
   ]
 }

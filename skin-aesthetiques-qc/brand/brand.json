@@ -2,7 +2,7 @@
   "slug": "skin-aesthetiques-qc",
   "site": null,
   "facebook": "SkinAesthetiques",
-  "capturedAt": "2026-08-18T20:55:22.028Z",
+  "capturedAt": "2026-08-19T00:02:32.732Z",
   "source": "headless-http",
   "name": null,
   "logo": {
@@ -20,18 +20,36 @@
     }
   ],
   "colors": {
-    "brand": [],
-    "neutral": [],
-    "themeColor": null,
-    "source": null
+    "brand": [
+      {
+        "hex": "#7a4a21",
+        "weight": 60
+      },
+      {
+        "hex": "#5c3618",
+        "weight": 20
+      }
+    ],
+    "neutral": [
+      {
+        "hex": "#f2f2f0",
+        "weight": 70
+      },
+      {
+        "hex": "#111111",
+        "weight": 25
+      }
+    ],
+    "themeColor": "#7a4a21",
+    "source": "vision"
   },
   "fonts": [],
-  "ready": false,
+  "ready": true,
   "blockedBy": "palette-pending",
-  "confidence": 50,
+  "confidence": 90,
   "notes": [
     "facebook profile picture captured headlessly for \"SkinAesthetiques\"",
     "no website for this lead — facebook-only capture path",
-    "BLOCKER palette-pending: logo captured (logo-facebook-profile.jpg) but fewer than 2 chromatic colours found. Vision-read the logo, then write the hex values into colors.brand[] with colors.source=\"vision\" and re-run the gate."
+    "vision-read of logo-facebook-profile.jpg: brown field, white marble roundel, brown \"SKIN\" + black \"Aesthetiques\" script"
   ]
 }

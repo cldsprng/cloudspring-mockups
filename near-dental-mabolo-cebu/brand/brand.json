@@ -1,8 +1,8 @@
 {
-  "slug": "the-skin-clinic-uk-st-helens",
+  "slug": "near-dental-mabolo-cebu",
   "site": null,
-  "facebook": "100063654338246",
-  "capturedAt": "2026-08-19T00:02:32.228Z",
+  "facebook": "neardentalclinics",
+  "capturedAt": "2026-08-19T14:49:19.917Z",
   "source": "headless-http",
   "name": null,
   "logo": null,
@@ -18,7 +18,7 @@
   "blockedBy": "no-assets",
   "confidence": 0,
   "notes": [
-    "facebook page \"100063654338246\" has no profile picture — the graph endpoint returns the anonymous silhouette (is_silhouette: true). Common for pages reachable only by numeric ID. Not recoverable headlessly.",
+    "facebook profile picture unavailable for \"neardentalclinics\" (page may be renamed, unpublished, or ID-only)",
     "no website for this lead — facebook-only capture path",
     "BLOCKER no-assets: no usable logo file (need >=1KB from a logo/icon/FB signal)"
   ]

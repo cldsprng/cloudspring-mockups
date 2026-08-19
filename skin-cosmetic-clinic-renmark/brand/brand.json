@@ -2,7 +2,7 @@
   "slug": "skin-cosmetic-clinic-renmark",
   "site": "skincosmeticclinic.com.au",
   "facebook": "skincosmeticclinic",
-  "capturedAt": "2026-08-18T20:55:10.174Z",
+  "capturedAt": "2026-08-19T00:02:27.111Z",
   "source": "headless-http",
   "name": null,
   "logo": {
@@ -20,18 +20,33 @@
     }
   ],
   "colors": {
-    "brand": [],
-    "neutral": [],
-    "themeColor": null,
-    "source": null
+    "brand": [
+      {
+        "hex": "#26282a",
+        "weight": 70
+      },
+      {
+        "hex": "#4a4d50",
+        "weight": 20
+      }
+    ],
+    "neutral": [
+      {
+        "hex": "#ffffff",
+        "weight": 80
+      }
+    ],
+    "themeColor": "#26282a",
+    "source": "vision"
   },
   "fonts": [],
-  "ready": false,
+  "ready": true,
   "blockedBy": "palette-pending",
-  "confidence": 50,
+  "confidence": 85,
   "notes": [
     "facebook profile picture captured headlessly for \"skincosmeticclinic\"",
     "site unreachable over plain HTTP(S)",
-    "BLOCKER palette-pending: logo captured (logo-facebook-profile.jpg) but fewer than 2 chromatic colours found. Vision-read the logo, then write the hex values into colors.brand[] with colors.source=\"vision\" and re-run the gate."
+    "vision-read of logo-facebook-profile.jpg: charcoal handwritten \"Skin\" script on white",
+    "monochrome brand: the mark is black-on-white by design, so capture.mjs's \">=2 chromatic colours\" heuristic can never be satisfied. The recorded palette is the prospect's actual one, not a substitute."
   ]
 }

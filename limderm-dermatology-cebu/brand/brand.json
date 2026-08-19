@@ -2,7 +2,7 @@
   "slug": "limderm-dermatology-cebu",
   "site": null,
   "facebook": "LimDerm",
-  "capturedAt": "2026-08-18T20:55:40.604Z",
+  "capturedAt": "2026-08-19T00:02:00.633Z",
   "source": "headless-http",
   "name": null,
   "logo": {
@@ -20,18 +20,40 @@
     }
   ],
   "colors": {
-    "brand": [],
-    "neutral": [],
-    "themeColor": null,
-    "source": null
+    "brand": [
+      {
+        "hex": "#5e9c60",
+        "weight": 50
+      },
+      {
+        "hex": "#2f5d38",
+        "weight": 25
+      },
+      {
+        "hex": "#c9b46b",
+        "weight": 20
+      }
+    ],
+    "neutral": [
+      {
+        "hex": "#eef2dc",
+        "weight": 80
+      },
+      {
+        "hex": "#1a1a1a",
+        "weight": 15
+      }
+    ],
+    "themeColor": "#5e9c60",
+    "source": "vision"
   },
   "fonts": [],
-  "ready": false,
+  "ready": true,
   "blockedBy": "palette-pending",
-  "confidence": 50,
+  "confidence": 90,
   "notes": [
     "facebook profile picture captured headlessly for \"LimDerm\"",
     "no website for this lead — facebook-only capture path",
-    "BLOCKER palette-pending: logo captured (logo-facebook-profile.jpg) but fewer than 2 chromatic colours found. Vision-read the logo, then write the hex values into colors.brand[] with colors.source=\"vision\" and re-run the gate."
+    "vision-read of logo-facebook-profile.jpg: green \"DERM\" + gold script \"Lim\" on a cream circle"
   ]
 }

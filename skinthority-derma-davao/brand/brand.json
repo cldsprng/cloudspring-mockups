@@ -2,7 +2,7 @@
   "slug": "skinthority-derma-davao",
   "site": null,
   "facebook": "SkinthorityDermatologyClinic",
-  "capturedAt": "2026-08-18T20:54:36.528Z",
+  "capturedAt": "2026-08-19T00:02:30.956Z",
   "source": "headless-http",
   "name": null,
   "logo": {
@@ -20,18 +20,40 @@
     }
   ],
   "colors": {
-    "brand": [],
-    "neutral": [],
-    "themeColor": null,
-    "source": null
+    "brand": [
+      {
+        "hex": "#c9a22b",
+        "weight": 60
+      },
+      {
+        "hex": "#a8862a",
+        "weight": 20
+      }
+    ],
+    "neutral": [
+      {
+        "hex": "#f5efe6",
+        "weight": 90
+      },
+      {
+        "hex": "#d9c3a5",
+        "weight": 30
+      },
+      {
+        "hex": "#ffffff",
+        "weight": 20
+      }
+    ],
+    "themeColor": "#c9a22b",
+    "source": "vision"
   },
   "fonts": [],
-  "ready": false,
+  "ready": true,
   "blockedBy": "palette-pending",
-  "confidence": 50,
+  "confidence": 90,
   "notes": [
     "facebook profile picture captured headlessly for \"SkinthorityDermatologyClinic\"",
     "no website for this lead — facebook-only capture path",
-    "BLOCKER palette-pending: logo captured (logo-facebook-profile.jpg) but fewer than 2 chromatic colours found. Vision-read the logo, then write the hex values into colors.brand[] with colors.source=\"vision\" and re-run the gate."
+    "vision-read of logo-facebook-profile.jpg: gold serif wordmark \"SKINTHORITY / DERMATOLOGY CLINIC\" on cream marble"
   ]
 }

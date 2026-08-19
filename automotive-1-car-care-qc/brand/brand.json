@@ -2,7 +2,7 @@
   "slug": "automotive-1-car-care-qc",
   "site": null,
   "facebook": "Automotive1CarCareCenter",
-  "capturedAt": "2026-08-18T20:54:16.015Z",
+  "capturedAt": "2026-08-19T00:02:24.951Z",
   "source": "headless-http",
   "name": null,
   "logo": {
@@ -20,18 +20,41 @@
     }
   ],
   "colors": {
-    "brand": [],
-    "neutral": [],
-    "themeColor": null,
-    "source": null
+    "brand": [
+      {
+        "hex": "#5b2d8e",
+        "weight": 45
+      },
+      {
+        "hex": "#f2b705",
+        "weight": 35
+      },
+      {
+        "hex": "#d82a20",
+        "weight": 20
+      }
+    ],
+    "neutral": [
+      {
+        "hex": "#c9c9c9",
+        "weight": 25
+      },
+      {
+        "hex": "#ffffff",
+        "weight": 20
+      }
+    ],
+    "themeColor": "#5b2d8e",
+    "source": "vision"
   },
   "fonts": [],
   "ready": false,
-  "blockedBy": "palette-pending",
-  "confidence": 50,
+  "blockedBy": "logo-not-a-mark",
+  "confidence": 40,
   "notes": [
     "facebook profile picture captured headlessly for \"Automotive1CarCareCenter\"",
     "no website for this lead — facebook-only capture path",
-    "BLOCKER palette-pending: logo captured (logo-facebook-profile.jpg) but fewer than 2 chromatic colours found. Vision-read the logo, then write the hex values into colors.brand[] with colors.source=\"vision\" and re-run the gate."
+    "vision-read of logo-facebook-profile.jpg: storefront photo; fascia signage is purple + yellow with red \"1\" and chrome type",
+    "BLOCKER logo-not-a-mark: street photograph of the shopfront — the logo is signage inside the frame. The palette above is the prospect's real brand colour and is safe to use. The image file is not usable as a logo — needs a crop or a better source before build."
   ]
 }
