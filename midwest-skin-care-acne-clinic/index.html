@@ -11,17 +11,17 @@
 <style>
 /* ---------- tokens ---------- */
 :root{
-  --ink:#12313A;             /* deepest brand color */
-  --ink-soft:#41616A;
-  --muted:#6E888F;
-  --teal:#2E8497;
-  --teal-deep:#1D6274;
-  --mint:#DCEEF0;
-  --mint-soft:#EEF7F8;
-  --sand:#F4EFE8;
+  --ink:#2b333f;             /* deepest brand color */
+  --ink-soft:#515d6f;
+  --muted:#73859f;
+  --teal:#7db158;
+  --teal-deep:#2b333f;
+  --mint:#eaf3e4;
+  --mint-soft:#f6faf3;
+  --sand:#f4f5f7;
   --bg:#FBFCFC;
   --white:#FFFFFF;
-  --line:#DCE7E9;
+  --line:#ebeef2;
   --shadow-sm:0 1px 2px rgba(18,49,58,.07), 0 2px 8px rgba(18,49,58,.05);
   --shadow-md:0 4px 16px rgba(18,49,58,.09), 0 12px 32px rgba(18,49,58,.07);
   --shadow-lg:0 18px 48px rgba(18,49,58,.14);
@@ -211,7 +211,7 @@ input:focus,select:focus,textarea:focus{outline:none; border-color:var(--teal-de
 .cs-btn{
   flex:0 0 auto; display:inline-flex; align-items:center; justify-content:center;
   min-height:48px; padding:13px 24px; border-radius:var(--r-pill);
-  background:#2E8497; color:#fff; text-decoration:none; font-size:15px; font-weight:700;
+  background:#7db158; color:#fff; text-decoration:none; font-size:15px; font-weight:700;
   box-shadow:0 0 0 0 rgba(46,132,151,.62);
   animation:cs-pulse 2.4s cubic-bezier(.4,0,.6,1) infinite;
   transition:background .15s ease, transform .15s ease;
@@ -228,6 +228,7 @@ input:focus,select:focus,textarea:focus{outline:none; border-color:var(--teal-de
   .cs-btn{animation:none; box-shadow:0 4px 14px rgba(0,0,0,.35)}
   .cs-btn:hover{transform:none}
 }
+.brand-logo-img{width:38px;height:38px;flex:0 0 38px;object-fit:contain;border-radius:9px;background:#fff}
 </style>
 </head>
 <body>
@@ -236,12 +237,7 @@ input:focus,select:focus,textarea:focus{outline:none; border-color:var(--teal-de
 <header class="site-header">
   <div class="hdr">
     <a class="brand" href="#top" aria-label="Midwest Skin Care and Acne Clinic — home">
-      <svg class="mark" viewBox="0 0 48 48" role="img" aria-hidden="true" focusable="false">
-        <circle cx="24" cy="24" r="23" fill="#DCEEF0" stroke="#2E8497" stroke-width="1.4"/>
-        <path d="M24 10c7 5 11 10.5 11 16a11 11 0 1 1-22 0c0-5.5 4-11 11-16Z" fill="none" stroke="#1D6274" stroke-width="1.9" stroke-linejoin="round"/>
-        <path d="M18.5 27.5c1.5 3.6 4.8 5.6 8.6 5" fill="none" stroke="#2E8497" stroke-width="1.9" stroke-linecap="round"/>
-        <circle cx="21" cy="21" r="1.9" fill="#2E8497"/>
-      </svg>
+      <img class="mark brand-logo-img" src="brand/logo-facebook-profile.jpg" alt="Midwest Skin Care &amp; Acne Clinic logo" width="38" height="38" decoding="async">
       <span class="brand-txt">
         <span class="brand-name">Midwest Skin Care &amp; Acne Clinic</span>
         <span class="brand-sub">Crawfordsville, Indiana</span>
@@ -294,26 +290,26 @@ input:focus,select:focus,textarea:focus{outline:none; border-color:var(--teal-de
           <rect width="520" height="420" fill="url(#mbg)"/>
           <circle cx="264" cy="176" r="132" fill="#EAF5F6"/>
           <path d="M264 66c46 0 74 32 74 76 0 54-34 100-74 100s-74-46-74-100c0-44 28-76 74-76Z" fill="url(#mface)" stroke="#CFE4E7" stroke-width="2.5"/>
-          <path d="M222 136c12-8 24-8 34 0" fill="none" stroke="#2E8497" stroke-width="3" stroke-linecap="round"/>
-          <path d="M274 136c10-7 22-7 32 0" fill="none" stroke="#2E8497" stroke-width="3" stroke-linecap="round"/>
-          <path d="M240 202c14 11 30 11 46 0" fill="none" stroke="#1D6274" stroke-width="3.4" stroke-linecap="round"/>
+          <path d="M222 136c12-8 24-8 34 0" fill="none" stroke="#7db158" stroke-width="3" stroke-linecap="round"/>
+          <path d="M274 136c10-7 22-7 32 0" fill="none" stroke="#7db158" stroke-width="3" stroke-linecap="round"/>
+          <path d="M240 202c14 11 30 11 46 0" fill="none" stroke="#2b333f" stroke-width="3.4" stroke-linecap="round"/>
           <g fill="#9FD2DB" opacity=".95">
             <circle cx="212" cy="170" r="5.5"/><circle cx="318" cy="168" r="4.5"/><circle cx="226" cy="194" r="3.4"/><circle cx="306" cy="196" r="3"/>
           </g>
-          <g stroke="#1D6274" stroke-width="2.6" fill="none" stroke-linecap="round">
+          <g stroke="#2b333f" stroke-width="2.6" fill="none" stroke-linecap="round">
             <circle cx="396" cy="120" r="34"/><path d="M420 144l32 32"/>
           </g>
-          <rect x="440" y="164" width="40" height="18" rx="9" transform="rotate(45 460 173)" fill="#1D6274"/>
+          <rect x="440" y="164" width="40" height="18" rx="9" transform="rotate(45 460 173)" fill="#2b333f"/>
           <g>
             <rect x="52" y="248" width="52" height="96" rx="14" fill="#FFFFFF" stroke="#CFE4E7" stroke-width="2.5"/>
-            <rect x="66" y="232" width="24" height="20" rx="6" fill="#2E8497"/>
-            <rect x="62" y="286" width="32" height="6" rx="3" fill="#DCEEF0"/>
-            <rect x="62" y="300" width="22" height="6" rx="3" fill="#DCEEF0"/>
+            <rect x="66" y="232" width="24" height="20" rx="6" fill="#7db158"/>
+            <rect x="62" y="286" width="32" height="6" rx="3" fill="#eaf3e4"/>
+            <rect x="62" y="300" width="22" height="6" rx="3" fill="#eaf3e4"/>
           </g>
           <g>
             <rect x="416" y="268" width="56" height="76" rx="16" fill="#FFFFFF" stroke="#CFE4E7" stroke-width="2.5"/>
             <rect x="434" y="252" width="20" height="20" rx="6" fill="#9FD2DB"/>
-            <rect x="428" y="302" width="32" height="6" rx="3" fill="#DCEEF0"/>
+            <rect x="428" y="302" width="32" height="6" rx="3" fill="#eaf3e4"/>
           </g>
           <path d="M0 372h520v48H0z" fill="#EAF5F6"/>
           <rect x="120" y="360" width="280" height="12" rx="6" fill="#CFE4E7"/>
@@ -363,7 +359,7 @@ input:focus,select:focus,textarea:focus{outline:none; border-color:var(--teal-de
     </div>
     <div class="cards">
       <article class="card">
-        <svg class="card-ico" viewBox="0 0 44 44" fill="none" stroke="#1D6274" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <svg class="card-ico" viewBox="0 0 44 44" fill="none" stroke="#2b333f" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <path d="M22 6c8 6 12 12 12 18a12 12 0 1 1-24 0c0-6 4-12 12-18Z"/><path d="M16 27c1.8 4 5.6 6.2 10 5.4"/>
         </svg>
         <h3>Acne treatment</h3>
@@ -375,7 +371,7 @@ input:focus,select:focus,textarea:focus{outline:none; border-color:var(--teal-de
         </ul>
       </article>
       <article class="card">
-        <svg class="card-ico" viewBox="0 0 44 44" fill="none" stroke="#1D6274" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <svg class="card-ico" viewBox="0 0 44 44" fill="none" stroke="#2b333f" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <path d="M10 30c0-8 5.4-14 12-14s12 6 12 14"/><path d="M8 34h28"/><path d="M22 16V8"/><path d="M17 11l5-5 5 5"/>
         </svg>
         <h3>Chemical peels</h3>
@@ -444,13 +440,13 @@ input:focus,select:focus,textarea:focus{outline:none; border-color:var(--teal-de
           <defs><linearGradient id="abg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F7FBFB"/><stop offset="1" stop-color="#E5F1F2"/></linearGradient></defs>
           <rect width="520" height="400" fill="url(#abg)"/>
           <rect x="44" y="44" width="164" height="120" rx="12" fill="#FFFFFF" stroke="#CFE4E7" stroke-width="2.5"/>
-          <g stroke="#DCEEF0" stroke-width="8" stroke-linecap="round"><path d="M68 84h116"/><path d="M68 108h92"/><path d="M68 132h68"/></g>
-          <rect x="252" y="60" width="220" height="112" rx="16" fill="#DCEEF0"/>
+          <g stroke="#eaf3e4" stroke-width="8" stroke-linecap="round"><path d="M68 84h116"/><path d="M68 108h92"/><path d="M68 132h68"/></g>
+          <rect x="252" y="60" width="220" height="112" rx="16" fill="#eaf3e4"/>
           <circle cx="362" cy="116" r="34" fill="#FFFFFF" stroke="#9FD2DB" stroke-width="3"/>
-          <path d="M348 116c6-8 20-8 28 0" fill="none" stroke="#2E8497" stroke-width="3" stroke-linecap="round"/>
+          <path d="M348 116c6-8 20-8 28 0" fill="none" stroke="#7db158" stroke-width="3" stroke-linecap="round"/>
           <rect x="0" y="288" width="520" height="112" fill="#EAF5F6"/>
           <rect x="60" y="240" width="400" height="56" rx="28" fill="#FFFFFF" stroke="#CFE4E7" stroke-width="2.5"/>
-          <rect x="92" y="222" width="104" height="26" rx="13" fill="#DCEEF0"/>
+          <rect x="92" y="222" width="104" height="26" rx="13" fill="#eaf3e4"/>
           <rect x="80" y="296" width="24" height="60" rx="8" fill="#CFE4E7"/>
           <rect x="416" y="296" width="24" height="60" rx="8" fill="#CFE4E7"/>
           <g fill="#9FD2DB"><circle cx="252" cy="332" r="8"/><circle cx="282" cy="344" r="5"/><circle cx="228" cy="346" r="4"/></g>
@@ -508,10 +504,10 @@ input:focus,select:focus,textarea:focus{outline:none; border-color:var(--teal-de
             <g stroke="#F8FBFA" stroke-width="3" stroke-dasharray="10 12"><path d="M-10 56h540"/><path d="M-10 142h540"/><path d="M150 -10v210"/><path d="M392 -10v210"/></g>
             <g fill="#DFE9E6"><rect x="30" y="74" width="82" height="50" rx="6"/><rect x="180" y="72" width="64" height="54" rx="6"/><rect x="420" y="70" width="76" height="58" rx="6"/></g>
             <g transform="translate(310 56)">
-              <path d="M0 44c0 0 18-14.5 18-26A18 18 0 0 0 0 0a18 18 0 0 0-18 18C-18 29.5 0 44 0 44Z" fill="#1D6274"/>
-              <circle cx="0" cy="17" r="6.5" fill="#DCEEF0"/>
+              <path d="M0 44c0 0 18-14.5 18-26A18 18 0 0 0 0 0a18 18 0 0 0-18 18C-18 29.5 0 44 0 44Z" fill="#2b333f"/>
+              <circle cx="0" cy="17" r="6.5" fill="#eaf3e4"/>
             </g>
-            <text x="310" y="126" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#41616A">116 Walter Remley Dr</text>
+            <text x="310" y="126" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#515d6f">116 Walter Remley Dr</text>
           </svg>
         </div>
       </div>
