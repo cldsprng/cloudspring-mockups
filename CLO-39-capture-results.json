@@ -1,0 +1,148 @@
+{
+  "timestamp": "2026-08-19T23:26:00.638Z",
+  "ready": [],
+  "palettePending": [],
+  "noAssets": [],
+  "errors": [
+    {
+      "slug": "medika-davao",
+      "error": "Command failed: node tools/brand-capture/capture.mjs --slug medika-davao --out ./medika-davao/brand --facebook MedikaDavao"
+    },
+    {
+      "slug": "almario-dental-cebu",
+      "error": "Command failed: node tools/brand-capture/capture.mjs --slug almario-dental-cebu --out ./almario-dental-cebu/brand --facebook p/Almario-Dental-100065106747033"
+    },
+    {
+      "slug": "smile-specialist-cebu",
+      "error": "Command failed: node tools/brand-capture/capture.mjs --slug smile-specialist-cebu --out ./smile-specialist-cebu/brand --facebook smilespecialistdentalcenter"
+    },
+    {
+      "slug": "tooth-doctors-davao",
+      "error": "Command failed: node tools/brand-capture/capture.mjs --slug tooth-doctors-davao --out ./tooth-doctors-davao/brand --facebook toothdoctorsdavao"
+    },
+    {
+      "slug": "drs-beall-beall-americus",
+      "error": "Command failed: node tools/brand-capture/capture.mjs --slug drs-beall-beall-americus --out ./drs-beall-beall-americus/brand --facebook p/Drs-Beall-Beall-100027972836358"
+    },
+    {
+      "slug": "mississippi-dentistry-children",
+      "error": "Command failed: node tools/brand-capture/capture.mjs --slug mississippi-dentistry-children --out ./mississippi-dentistry-children/brand --site msdent4kids.com --facebook pages/Mississippi-Dentistry-For-Children/162271787125256"
+    },
+    {
+      "slug": "centapaeds-toowoomba",
+      "error": "Command failed: node tools/brand-capture/capture.mjs --slug centapaeds-toowoomba --out ./centapaeds-toowoomba/brand --site centapaeds.com.au"
+    },
+    {
+      "slug": "mcjt-tire-taguig",
+      "error": "Command failed: node tools/brand-capture/capture.mjs --slug mcjt-tire-taguig --out ./mcjt-tire-taguig/brand --facebook p/MCJT-Tire-supply-Vulcanizing-shop-100063992972413"
+    },
+    {
+      "slug": "automotive-1-car-care-qc",
+      "error": "Command failed: node tools/brand-capture/capture.mjs --slug automotive-1-car-care-qc --out ./automotive-1-car-care-qc/brand --facebook Automotive1CarCareCenter"
+    },
+    {
+      "slug": "rjf-vulcanizing-taguig",
+      "error": "Command failed: node tools/brand-capture/capture.mjs --slug rjf-vulcanizing-taguig --out ./rjf-vulcanizing-taguig/brand --facebook RJFVShop"
+    },
+    {
+      "slug": "jb-javier-tire-taguig",
+      "error": "Command failed: node tools/brand-capture/capture.mjs --slug jb-javier-tire-taguig --out ./jb-javier-tire-taguig/brand --facebook jbjaviertiresupply"
+    },
+    {
+      "slug": "pcars-auto-solutions",
+      "error": "Command failed: node tools/brand-capture/capture.mjs --slug pcars-auto-solutions --out ./pcars-auto-solutions/brand --site pcarsautosolutions.com --facebook pcarsautosolutions"
+    },
+    {
+      "slug": "fast-autoworks-pasig",
+      "error": "Command failed: node tools/brand-capture/capture.mjs --slug fast-autoworks-pasig --out ./fast-autoworks-pasig/brand --facebook fastautoworksPH"
+    },
+    {
+      "slug": "east-mids-auto-repairs",
+      "error": "Command failed: node tools/brand-capture/capture.mjs --slug east-mids-auto-repairs --out ./east-mids-auto-repairs/brand --facebook Mgautoservices"
+    },
+    {
+      "slug": "smilehq-dental-makati",
+      "error": "Command failed: node tools/brand-capture/capture.mjs --slug smilehq-dental-makati --out ./smilehq-dental-makati/brand --facebook smilehqdentalclinic"
+    },
+    {
+      "slug": "little-guardians-taguig",
+      "error": "Command failed: node tools/brand-capture/capture.mjs --slug little-guardians-taguig --out ./little-guardians-taguig/brand --facebook p/Little-Guardians-Medical-Clinic-61564193106467"
+    },
+    {
+      "slug": "dra-rona-ortho-dental",
+      "error": "Command failed: node tools/brand-capture/capture.mjs --slug dra-rona-ortho-dental --out ./dra-rona-ortho-dental/brand --facebook p/DRA-RONA-Ortho-Dental-Clinic-100057137753475"
+    },
+    {
+      "slug": "ivory-smile-dental-makati",
+      "error": "Command failed: node tools/brand-capture/capture.mjs --slug ivory-smile-dental-makati --out ./ivory-smile-dental-makati/brand --facebook Ivorydentalmakati"
+    },
+    {
+      "slug": "dr-jewelyn-calimbas-taguig",
+      "error": "Command failed: node tools/brand-capture/capture.mjs --slug dr-jewelyn-calimbas-taguig --out ./dr-jewelyn-calimbas-taguig/brand --facebook drjewelyn"
+    },
+    {
+      "slug": "childrens-medical-clinic-davao",
+      "error": "Command failed: node tools/brand-capture/capture.mjs --slug childrens-medical-clinic-davao --out ./childrens-medical-clinic-davao/brand --facebook CMPediatricClinic"
+    },
+    {
+      "slug": "smile-solutions-taguig",
+      "error": "Command failed: node tools/brand-capture/capture.mjs --slug smile-solutions-taguig --out ./smile-solutions-taguig/brand --facebook p/Smile-Solutions-Dental-Taguig-Branch-100064028413159"
+    },
+    {
+      "slug": "sk-dental-makati",
+      "error": "Command failed: node tools/brand-capture/capture.mjs --slug sk-dental-makati --out ./sk-dental-makati/brand --facebook skdentalclinicmakati"
+    },
+    {
+      "slug": "parkview-clinic-makati",
+      "error": "Command failed: node tools/brand-capture/capture.mjs --slug parkview-clinic-makati --out ./parkview-clinic-makati/brand --facebook ParkviewClinicForChildrenAndBreastfeedingMothers"
+    },
+    {
+      "slug": "dr-kathleen-dy-manlupig-davao",
+      "error": "Command failed: node tools/brand-capture/capture.mjs --slug dr-kathleen-dy-manlupig-davao --out ./dr-kathleen-dy-manlupig-davao/brand\nusage: capture.mjs [--site <url>] [--facebook <page-slug>] [--slug <slug>] [--out <dir>]\n"
+    },
+    {
+      "slug": "family-smiles-dental-taguig",
+      "error": "Command failed: node tools/brand-capture/capture.mjs --slug family-smiles-dental-taguig --out ./family-smiles-dental-taguig/brand --facebook famsmilesdentalcare12"
+    },
+    {
+      "slug": "prestige-dental-cebu",
+      "error": "Command failed: node tools/brand-capture/capture.mjs --slug prestige-dental-cebu --out ./prestige-dental-cebu/brand --facebook p/Prestige-Dental-Clinic-Lahug-Cebu-61566351230808"
+    },
+    {
+      "slug": "doc-neneth-pedia",
+      "error": "Command failed: node tools/brand-capture/capture.mjs --slug doc-neneth-pedia --out ./doc-neneth-pedia/brand --facebook p/Doc-Neneth-Pedia-61558395250834"
+    },
+    {
+      "slug": "pioquinto-clinic-pasig",
+      "error": "Command failed: node tools/brand-capture/capture.mjs --slug pioquinto-clinic-pasig --out ./pioquinto-clinic-pasig/brand --facebook PioquintoClinic"
+    },
+    {
+      "slug": "mother-child-clinic-pasig",
+      "error": "Command failed: node tools/brand-capture/capture.mjs --slug mother-child-clinic-pasig --out ./mother-child-clinic-pasig/brand\nusage: capture.mjs [--site <url>] [--facebook <page-slug>] [--slug <slug>] [--out <dir>]\n"
+    },
+    {
+      "slug": "dentoq-dental-davao",
+      "error": "Command failed: node tools/brand-capture/capture.mjs --slug dentoq-dental-davao --out ./dentoq-dental-davao/brand --facebook SmilePHDentalCenter"
+    },
+    {
+      "slug": "dr-a-dental-davao",
+      "error": "Command failed: node tools/brand-capture/capture.mjs --slug dr-a-dental-davao --out ./dr-a-dental-davao/brand --facebook dr.ayannadentalclinic"
+    },
+    {
+      "slug": "esmino-clinic-qc",
+      "error": "Command failed: node tools/brand-capture/capture.mjs --slug esmino-clinic-qc --out ./esmino-clinic-qc/brand --site esminoclinic.com --facebook esminoclinic"
+    },
+    {
+      "slug": "cliniqa-qc",
+      "error": "Command failed: node tools/brand-capture/capture.mjs --slug cliniqa-qc --out ./cliniqa-qc/brand\nusage: capture.mjs [--site <url>] [--facebook <page-slug>] [--slug <slug>] [--out <dir>]\n"
+    },
+    {
+      "slug": "eusebio-clinic-qc",
+      "error": "Command failed: node tools/brand-capture/capture.mjs --slug eusebio-clinic-qc --out ./eusebio-clinic-qc/brand\nusage: capture.mjs [--site <url>] [--facebook <page-slug>] [--slug <slug>] [--out <dir>]\n"
+    },
+    {
+      "slug": "509-family-care-cebu",
+      "error": "Command failed: node tools/brand-capture/capture.mjs --slug 509-family-care-cebu --out ./509-family-care-cebu/brand --facebook 509FamilyCareClinic2022"
+    }
+  ]
+}

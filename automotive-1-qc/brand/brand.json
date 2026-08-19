@@ -1,0 +1,37 @@
+{
+  "slug": "automotive-1-qc",
+  "site": null,
+  "facebook": "Automotive1CarCareCenter",
+  "capturedAt": "2026-08-19T23:27:14.730Z",
+  "source": "headless-http",
+  "name": null,
+  "logo": {
+    "file": "logo-facebook-profile.jpg",
+    "score": 95,
+    "why": "facebook profile picture"
+  },
+  "logoFiles": [
+    {
+      "file": "logo-facebook-profile.jpg",
+      "bytes": 652398,
+      "from": "graph.facebook.com/Automotive1CarCareCenter/picture?width=1200&height=1200",
+      "why": "facebook profile picture",
+      "score": 95
+    }
+  ],
+  "colors": {
+    "brand": [],
+    "neutral": [],
+    "themeColor": null,
+    "source": null
+  },
+  "fonts": [],
+  "ready": false,
+  "blockedBy": "palette-pending",
+  "confidence": 50,
+  "notes": [
+    "facebook profile picture captured headlessly for \"Automotive1CarCareCenter\"",
+    "no website for this lead — facebook-only capture path",
+    "BLOCKER palette-pending: logo captured (logo-facebook-profile.jpg) but fewer than 2 chromatic colours found. Vision-read the logo, then write the hex values into colors.brand[] with colors.source=\"vision\" and re-run the gate."
+  ]
+}

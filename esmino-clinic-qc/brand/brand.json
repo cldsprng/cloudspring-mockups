@@ -1,0 +1,37 @@
+{
+  "slug": "esmino-clinic-qc",
+  "site": "esminoclinic.com",
+  "facebook": "esminoclinic",
+  "capturedAt": "2026-08-19T23:25:59.584Z",
+  "source": "headless-http",
+  "name": null,
+  "logo": {
+    "file": "logo-facebook-profile.png",
+    "score": 95,
+    "why": "facebook profile picture"
+  },
+  "logoFiles": [
+    {
+      "file": "logo-facebook-profile.png",
+      "bytes": 192256,
+      "from": "graph.facebook.com/esminoclinic/picture?width=1200&height=1200",
+      "why": "facebook profile picture",
+      "score": 95
+    }
+  ],
+  "colors": {
+    "brand": [],
+    "neutral": [],
+    "themeColor": null,
+    "source": null
+  },
+  "fonts": [],
+  "ready": false,
+  "blockedBy": "palette-pending",
+  "confidence": 50,
+  "notes": [
+    "facebook profile picture captured headlessly for \"esminoclinic\"",
+    "site unreachable over plain HTTP(S)",
+    "BLOCKER palette-pending: logo captured (logo-facebook-profile.png) but fewer than 2 chromatic colours found. Vision-read the logo, then write the hex values into colors.brand[] with colors.source=\"vision\" and re-run the gate."
+  ]
+}

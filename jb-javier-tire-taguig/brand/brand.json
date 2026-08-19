@@ -1,0 +1,59 @@
+{
+  "slug": "jb-javier-tire-taguig",
+  "site": null,
+  "facebook": "jbjaviertiresupply",
+  "capturedAt": "2026-08-19T23:25:45.528Z",
+  "source": "headless-http",
+  "name": null,
+  "logo": {
+    "file": "logo-facebook-profile.jpg",
+    "score": 95,
+    "why": "facebook profile picture"
+  },
+  "logoFiles": [
+    {
+      "file": "logo-facebook-profile.jpg",
+      "bytes": 25580,
+      "from": "graph.facebook.com/jbjaviertiresupply/picture?width=1200&height=1200",
+      "why": "facebook profile picture",
+      "score": 95
+    }
+  ],
+  "colors": {
+    "brand": [
+      {
+        "hex": "#E31937",
+        "weight": 50
+      },
+      {
+        "hex": "#000000",
+        "weight": 35
+      },
+      {
+        "hex": "#808080",
+        "weight": 15
+      }
+    ],
+    "neutral": [
+      {
+        "hex": "#FFFFFF",
+        "weight": 40
+      },
+      {
+        "hex": "#D3D3D3",
+        "weight": 30
+      }
+    ],
+    "themeColor": "#E31937",
+    "source": "vision"
+  },
+  "fonts": [],
+  "ready": true,
+  "blockedBy": null,
+  "confidence": 80,
+  "notes": [
+    "facebook profile picture captured headlessly for \"jbjaviertiresupply\"",
+    "no website for this lead — facebook-only capture path",
+    "BLOCKER palette-pending: logo captured (logo-facebook-profile.jpg) but fewer than 2 chromatic colours found. Vision-read the logo, then write the hex values into colors.brand[] with colors.source=\"vision\" and re-run the gate."
+  ]
+}

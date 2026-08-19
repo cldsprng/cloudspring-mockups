@@ -1,0 +1,59 @@
+{
+  "slug": "fast-autoworks-pasig",
+  "site": null,
+  "facebook": "fastautoworksPH",
+  "capturedAt": "2026-08-19T23:25:46.502Z",
+  "source": "headless-http",
+  "name": null,
+  "logo": {
+    "file": "logo-facebook-profile.jpg",
+    "score": 95,
+    "why": "facebook profile picture"
+  },
+  "logoFiles": [
+    {
+      "file": "logo-facebook-profile.jpg",
+      "bytes": 144671,
+      "from": "graph.facebook.com/fastautoworksPH/picture?width=1200&height=1200",
+      "why": "facebook profile picture",
+      "score": 95
+    }
+  ],
+  "colors": {
+    "brand": [
+      {
+        "hex": "#DC143C",
+        "weight": 40
+      },
+      {
+        "hex": "#0033CC",
+        "weight": 35
+      },
+      {
+        "hex": "#FFFF00",
+        "weight": 25
+      }
+    ],
+    "neutral": [
+      {
+        "hex": "#000000",
+        "weight": 40
+      },
+      {
+        "hex": "#FFFFFF",
+        "weight": 30
+      }
+    ],
+    "themeColor": "#DC143C",
+    "source": "vision"
+  },
+  "fonts": [],
+  "ready": true,
+  "blockedBy": null,
+  "confidence": 85,
+  "notes": [
+    "facebook profile picture captured headlessly for \"fastautoworksPH\"",
+    "no website for this lead — facebook-only capture path",
+    "BLOCKER palette-pending: logo captured (logo-facebook-profile.jpg) but fewer than 2 chromatic colours found. Vision-read the logo, then write the hex values into colors.brand[] with colors.source=\"vision\" and re-run the gate."
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "slug": "rjf-vulcanizing-taguig",
+  "site": null,
+  "facebook": "RJFVShop",
+  "capturedAt": "2026-08-19T23:25:44.728Z",
+  "source": "headless-http",
+  "name": null,
+  "logo": {
+    "file": "logo-facebook-profile.jpg",
+    "score": 95,
+    "why": "facebook profile picture"
+  },
+  "logoFiles": [
+    {
+      "file": "logo-facebook-profile.jpg",
+      "bytes": 287143,
+      "from": "graph.facebook.com/RJFVShop/picture?width=1200&height=1200",
+      "why": "facebook profile picture",
+      "score": 95
+    }
+  ],
+  "colors": {
+    "brand": [
+      {
+        "hex": "#BFFF00",
+        "weight": 40
+      },
+      {
+        "hex": "#DC143C",
+        "weight": 35
+      },
+      {
+        "hex": "#00CCFF",
+        "weight": 25
+      }
+    ],
+    "neutral": [
+      {
+        "hex": "#808080",
+        "weight": 35
+      },
+      {
+        "hex": "#E0E0E0",
+        "weight": 25
+      }
+    ],
+    "themeColor": "#BFFF00",
+    "source": "vision"
+  },
+  "fonts": [],
+  "ready": true,
+  "blockedBy": null,
+  "confidence": 80,
+  "notes": [
+    "facebook profile picture captured headlessly for \"RJFVShop\"",
+    "no website for this lead — facebook-only capture path",
+    "BLOCKER palette-pending: logo captured (logo-facebook-profile.jpg) but fewer than 2 chromatic colours found. Vision-read the logo, then write the hex values into colors.brand[] with colors.source=\"vision\" and re-run the gate."
+  ]
+}

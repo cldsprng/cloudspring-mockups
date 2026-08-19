@@ -1,0 +1,37 @@
+{
+  "slug": "pioquinto-clinic-pasig",
+  "site": null,
+  "facebook": "PioquintoClinic",
+  "capturedAt": "2026-08-19T23:25:57.917Z",
+  "source": "headless-http",
+  "name": null,
+  "logo": {
+    "file": "logo-facebook-profile.jpg",
+    "score": 95,
+    "why": "facebook profile picture"
+  },
+  "logoFiles": [
+    {
+      "file": "logo-facebook-profile.jpg",
+      "bytes": 20267,
+      "from": "graph.facebook.com/PioquintoClinic/picture?width=1200&height=1200",
+      "why": "facebook profile picture",
+      "score": 95
+    }
+  ],
+  "colors": {
+    "brand": [],
+    "neutral": [],
+    "themeColor": null,
+    "source": null
+  },
+  "fonts": [],
+  "ready": false,
+  "blockedBy": "palette-pending",
+  "confidence": 50,
+  "notes": [
+    "facebook profile picture captured headlessly for \"PioquintoClinic\"",
+    "no website for this lead — facebook-only capture path",
+    "BLOCKER palette-pending: logo captured (logo-facebook-profile.jpg) but fewer than 2 chromatic colours found. Vision-read the logo, then write the hex values into colors.brand[] with colors.source=\"vision\" and re-run the gate."
+  ]
+}
