@@ -10,18 +10,18 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --ink:#1F2A26;
-  --ink-2:#2E403A;
-  --slate:#5F6F69;
-  --line:#E4E0D8;
+  --ink:#111111;
+  --ink-2:#1c1c1c;
+  --slate:#555555;
+  --line:#e4e4e4;
   --paper:#FFFFFF;
-  --cream:#FBF8F3;
-  --mist:#F3F1EA;
-  --sage:#4E6F60;
-  --sage-dk:#38513f;
-  --sage-lt:#8FB09E;
-  --copper:#B0793F;
-  --copper-dk:#8E5F2E;
+  --cream:#fafafa;
+  --mist:#f4f4f4;
+  --sage:#111111;
+  --sage-dk:#000000;
+  --sage-lt:#8a8a8a;
+  --copper:#555555;
+  --copper-dk:#3a3a3a;
   --shadow-1:0 1px 2px rgba(31,42,38,.06), 0 2px 8px rgba(31,42,38,.06);
   --shadow-2:0 2px 6px rgba(31,42,38,.07), 0 12px 28px rgba(31,42,38,.11);
   --shadow-3:0 -2px 10px rgba(31,42,38,.18), 0 -12px 40px rgba(31,42,38,.24);
@@ -78,7 +78,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
 }
 
 /* hero */
-.hero{position:relative;background:linear-gradient(170deg,#FBF8F3 0%,#F1EEE5 55%,#E9EFE9 100%);overflow:hidden;border-bottom:1px solid var(--line)}
+.hero{position:relative;background:linear-gradient(170deg,#fafafa 0%,#F1EEE5 55%,#E9EFE9 100%);overflow:hidden;border-bottom:1px solid var(--line)}
 .hero::before{content:"";position:absolute;width:560px;height:560px;left:-200px;bottom:-260px;border-radius:50%;background:radial-gradient(circle,rgba(143,176,158,.28) 0%,rgba(143,176,158,0) 70%)}
 .hero-in{position:relative;z-index:2;padding:40px 0 46px;display:grid;gap:30px}
 .hero h1{font-size:40px}
@@ -187,6 +187,7 @@ input:focus,textarea:focus,select:focus{border-color:var(--sage);box-shadow:0 0 
 }
 .skip{position:absolute;left:-9999px;top:0;background:#fff;color:var(--ink);padding:12px 18px;z-index:300}
 .skip:focus{left:0}
+.brand-logo-img{width:38px;height:38px;flex:0 0 38px;object-fit:contain;border-radius:9px;background:#fff}
 </style>
 </head>
 <body>
@@ -196,12 +197,7 @@ input:focus,textarea:focus,select:focus{border-color:var(--sage);box-shadow:0 0 
 <header class="hdr">
   <div class="hdr-in">
     <a class="brand" href="#top" aria-label="One World Skin and Wellness — home">
-      <svg class="mark" viewBox="0 0 48 48" role="img" aria-hidden="true" focusable="false">
-        <circle cx="24" cy="24" r="23" fill="#1F2A26"/>
-        <circle cx="24" cy="24" r="14" fill="none" stroke="#8FB09E" stroke-width="2"/>
-        <path d="M24 10c5 6 5 22 0 28M24 10c-5 6-5 22 0 28" fill="none" stroke="#8FB09E" stroke-width="1.6"/>
-        <path d="M10 24h28" stroke="#B0793F" stroke-width="1.8"/>
-      </svg>
+      <img class="mark brand-logo-img" src="brand/logo-facebook-profile.jpg" alt="One World Skin &amp; Wellness logo" width="38" height="38" decoding="async">
       <span>
         <span class="brand-name">One World</span>
         <span class="brand-sub">Skin &amp; Wellness</span>
@@ -316,11 +312,11 @@ input:focus,textarea:focus,select:focus{border-color:var(--sage);box-shadow:0 0 
         <circle cx="260" cy="150" r="42" fill="#E7D3BB"/>
         <!-- shelf plants -->
         <rect x="60" y="196" width="58" height="10" rx="5" fill="#C9C2B2"/>
-        <path d="M89 196v-30" stroke="#4E6F60" stroke-width="4" stroke-linecap="round"/>
+        <path d="M89 196v-30" stroke="#111111" stroke-width="4" stroke-linecap="round"/>
         <path d="M89 176c-20-4-26-20-24-30 12-2 26 8 24 30Z" fill="#6E9480"/>
-        <path d="M89 182c18-6 24-22 20-32-12 0-24 12-20 32Z" fill="#8FB09E"/>
+        <path d="M89 182c18-6 24-22 20-32-12 0-24 12-20 32Z" fill="#8a8a8a"/>
         <rect x="402" y="196" width="58" height="10" rx="5" fill="#C9C2B2"/>
-        <path d="M431 196v-24" stroke="#4E6F60" stroke-width="4" stroke-linecap="round"/>
+        <path d="M431 196v-24" stroke="#111111" stroke-width="4" stroke-linecap="round"/>
         <ellipse cx="431" cy="164" rx="24" ry="16" fill="#7FA692"/>
         <!-- treatment bed -->
         <rect x="86" y="300" width="348" height="54" rx="22" fill="url(#oBed)"/>
@@ -330,11 +326,11 @@ input:focus,textarea:focus,select:focus{border-color:var(--sage);box-shadow:0 0 
         <!-- trolley with bottles -->
         <rect x="424" y="318" width="70" height="88" rx="10" fill="#EFE9DE"/>
         <rect x="424" y="348" width="70" height="4" fill="#D8D0C1"/>
-        <rect x="436" y="296" width="14" height="24" rx="5" fill="#B0793F"/>
-        <rect x="456" y="302" width="12" height="18" rx="5" fill="#8FB09E"/>
-        <rect x="474" y="298" width="12" height="22" rx="5" fill="#4E6F60"/>
+        <rect x="436" y="296" width="14" height="24" rx="5" fill="#555555"/>
+        <rect x="456" y="302" width="12" height="18" rx="5" fill="#8a8a8a"/>
+        <rect x="474" y="298" width="12" height="22" rx="5" fill="#111111"/>
         <!-- towels -->
-        <rect x="196" y="284" width="52" height="16" rx="8" fill="#8FB09E"/>
+        <rect x="196" y="284" width="52" height="16" rx="8" fill="#8a8a8a"/>
         <rect x="206" y="272" width="34" height="14" rx="7" fill="#B7CDBF"/>
         <!-- floor -->
         <rect x="0" y="406" width="520" height="64" fill="#D6CFC1"/>
@@ -355,9 +351,9 @@ input:focus,textarea:focus,select:focus{border-color:var(--sage);box-shadow:0 0 
     <div class="grid grid-3">
       <article class="card">
         <svg class="ico" viewBox="0 0 48 48" fill="none" aria-hidden="true">
-          <path d="M24 41c9.4 0 15-7 15-16 0-8-6-15-15-15S9 17 9 25c0 9 5.6 16 15 16Z" stroke="#4E6F60" stroke-width="2.4"/>
-          <path d="M17 22c2.4-2.4 5-3.4 8-3" stroke="#8FB09E" stroke-width="2.4" stroke-linecap="round"/>
-          <circle cx="30" cy="27" r="2.6" fill="#B0793F"/><circle cx="20" cy="31" r="2" fill="#B0793F"/>
+          <path d="M24 41c9.4 0 15-7 15-16 0-8-6-15-15-15S9 17 9 25c0 9 5.6 16 15 16Z" stroke="#111111" stroke-width="2.4"/>
+          <path d="M17 22c2.4-2.4 5-3.4 8-3" stroke="#8a8a8a" stroke-width="2.4" stroke-linecap="round"/>
+          <circle cx="30" cy="27" r="2.6" fill="#555555"/><circle cx="20" cy="31" r="2" fill="#555555"/>
         </svg>
         <h3>Facials</h3>
         <p>Cleansing and rejuvenating facial treatments for everyday skin health.</p>
@@ -365,9 +361,9 @@ input:focus,textarea:focus,select:focus{border-color:var(--sage);box-shadow:0 0 
       </article>
       <article class="card">
         <svg class="ico" viewBox="0 0 48 48" fill="none" aria-hidden="true">
-          <path d="M12 34c0-12 6-22 12-26 6 4 12 14 12 26 0 5-5.4 8-12 8s-12-3-12-8Z" stroke="#4E6F60" stroke-width="2.4" stroke-linejoin="round"/>
-          <path d="M24 20v18" stroke="#8FB09E" stroke-width="2.4" stroke-linecap="round"/>
-          <path d="M24 28c3-2 5-2 7-1M24 34c-3-2-5-2-7-1" stroke="#8FB09E" stroke-width="2.2" stroke-linecap="round"/>
+          <path d="M12 34c0-12 6-22 12-26 6 4 12 14 12 26 0 5-5.4 8-12 8s-12-3-12-8Z" stroke="#111111" stroke-width="2.4" stroke-linejoin="round"/>
+          <path d="M24 20v18" stroke="#8a8a8a" stroke-width="2.4" stroke-linecap="round"/>
+          <path d="M24 28c3-2 5-2 7-1M24 34c-3-2-5-2-7-1" stroke="#8a8a8a" stroke-width="2.2" stroke-linecap="round"/>
         </svg>
         <h3>Skin treatments</h3>
         <p>Targeted programmes for tone, texture, blemishes and skin concerns.</p>
@@ -375,9 +371,9 @@ input:focus,textarea:focus,select:focus{border-color:var(--sage);box-shadow:0 0 
       </article>
       <article class="card">
         <svg class="ico" viewBox="0 0 48 48" fill="none" aria-hidden="true">
-          <circle cx="24" cy="24" r="13" stroke="#4E6F60" stroke-width="2.4"/>
-          <path d="M24 8V4M24 44v-4M8 24H4M44 24h-4M13 13l-3-3M35 35l3 3M35 13l3-3M13 35l-3 3" stroke="#B0793F" stroke-width="2.2" stroke-linecap="round"/>
-          <path d="M19 25l3.5 3.5L30 21" stroke="#8FB09E" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="24" cy="24" r="13" stroke="#111111" stroke-width="2.4"/>
+          <path d="M24 8V4M24 44v-4M8 24H4M44 24h-4M13 13l-3-3M35 35l3 3M35 13l3-3M13 35l-3 3" stroke="#555555" stroke-width="2.2" stroke-linecap="round"/>
+          <path d="M19 25l3.5 3.5L30 21" stroke="#8a8a8a" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
         <h3>Aesthetics</h3>
         <p>Aesthetic services delivered in a calm, professional clinic setting.</p>
@@ -397,19 +393,19 @@ input:focus,textarea:focus,select:focus{border-color:var(--sage);box-shadow:0 0 
     </div>
     <div class="why">
       <div class="why-item">
-        <svg class="ico" viewBox="0 0 40 40" fill="none" aria-hidden="true"><circle cx="20" cy="20" r="14" stroke="#4E6F60" stroke-width="2.2"/><path d="M20 6c6 7 6 21 0 28M20 6c-6 7-6 21 0 28M6 20h28" stroke="#8FB09E" stroke-width="2"/></svg>
+        <svg class="ico" viewBox="0 0 40 40" fill="none" aria-hidden="true"><circle cx="20" cy="20" r="14" stroke="#111111" stroke-width="2.2"/><path d="M20 6c6 7 6 21 0 28M20 6c-6 7-6 21 0 28M6 20h28" stroke="#8a8a8a" stroke-width="2"/></svg>
         <div><h3>Four branches, one clinic</h3><p>Quezon City, Makati, Parañaque and Santa Rosa, Laguna — all One World Skin &amp; Wellness.</p></div>
       </div>
       <div class="why-item">
-        <svg class="ico" viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect x="6" y="9" width="28" height="24" rx="5" stroke="#4E6F60" stroke-width="2.2"/><path d="M12 18h16M12 24h11" stroke="#8FB09E" stroke-width="2.2" stroke-linecap="round"/></svg>
+        <svg class="ico" viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect x="6" y="9" width="28" height="24" rx="5" stroke="#111111" stroke-width="2.2"/><path d="M12 18h16M12 24h11" stroke="#8a8a8a" stroke-width="2.2" stroke-linecap="round"/></svg>
         <div><h3>The same service menu</h3><p>Facials, skin treatments and aesthetics at every location — no guessing what a branch offers.</p></div>
       </div>
       <div class="why-item">
-        <svg class="ico" viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M22 4l-2 14h10L18 36l2-14H10L22 4Z" stroke="#B0793F" stroke-width="2.2" stroke-linejoin="round"/></svg>
+        <svg class="ico" viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M22 4l-2 14h10L18 36l2-14H10L22 4Z" stroke="#555555" stroke-width="2.2" stroke-linejoin="round"/></svg>
         <div><h3>One place to reach us</h3><p>One phone number, one email and one Facebook page — instead of four scattered listings.</p></div>
       </div>
       <div class="why-item">
-        <svg class="ico" viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M20 35s12-8.6 12-16A12 12 0 0 0 8 19c0 7.4 12 16 12 16Z" stroke="#4E6F60" stroke-width="2.2" stroke-linejoin="round"/><circle cx="20" cy="19" r="4.2" fill="#8FB09E"/></svg>
+        <svg class="ico" viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M20 35s12-8.6 12-16A12 12 0 0 0 8 19c0 7.4 12 16 12 16Z" stroke="#111111" stroke-width="2.2" stroke-linejoin="round"/><circle cx="20" cy="19" r="4.2" fill="#8a8a8a"/></svg>
         <div><h3>Addresses you can trust</h3><p>Each branch's address published by us, kept current — not copied into a directory we don't control.</p></div>
       </div>
     </div>
@@ -438,8 +434,8 @@ input:focus,textarea:focus,select:focus{border-color:var(--sage);box-shadow:0 0 
           <path d="M0 96h440M0 200h440M0 300h440M110 0v400M250 0v400M354 0v400"/>
         </g>
         <path d="M150 110 L292 96 M150 110 L120 250 M292 96 L330 262 M120 250 L236 322 M330 262 L236 322"
-              stroke="#8FB09E" stroke-width="3" stroke-dasharray="7 8" fill="none"/>
-        <g fill="#4E6F60">
+              stroke="#8a8a8a" stroke-width="3" stroke-dasharray="7 8" fill="none"/>
+        <g fill="#111111">
           <path d="M150 84c-11 0-20 9-20 20 0 15 20 32 20 32s20-17 20-32c0-11-9-20-20-20Z"/>
           <path d="M292 70c-11 0-20 9-20 20 0 15 20 32 20 32s20-17 20-32c0-11-9-20-20-20Z"/>
           <path d="M120 224c-11 0-20 9-20 20 0 15 20 32 20 32s20-17 20-32c0-11-9-20-20-20Z"/>
@@ -449,16 +445,16 @@ input:focus,textarea:focus,select:focus{border-color:var(--sage);box-shadow:0 0 
           <circle cx="150" cy="104" r="7"/><circle cx="292" cy="90" r="7"/>
           <circle cx="120" cy="244" r="7"/><circle cx="330" cy="256" r="7"/>
         </g>
-        <g font-family="Karla, Arial, sans-serif" font-size="13" fill="#2E403A" font-weight="600">
+        <g font-family="Karla, Arial, sans-serif" font-size="13" fill="#1c1c1c" font-weight="600">
           <text x="150" y="152" text-anchor="middle">Quezon City</text>
           <text x="292" y="138" text-anchor="middle">Makati</text>
           <text x="120" y="292" text-anchor="middle">Parañaque</text>
           <text x="330" y="304" text-anchor="middle">Laguna</text>
         </g>
-        <circle cx="236" cy="322" r="30" fill="#1F2A26"/>
-        <circle cx="236" cy="322" r="18" fill="none" stroke="#8FB09E" stroke-width="2"/>
-        <path d="M236 304c6.5 8 6.5 28 0 36M236 304c-6.5 8-6.5 28 0 36M218 322h36" stroke="#8FB09E" stroke-width="1.6" fill="none"/>
-        <text x="236" y="376" text-anchor="middle" font-family="Cormorant Garamond, Georgia, serif" font-size="19" fill="#1F2A26">One World Skin &amp; Wellness</text>
+        <circle cx="236" cy="322" r="30" fill="#111111"/>
+        <circle cx="236" cy="322" r="18" fill="none" stroke="#8a8a8a" stroke-width="2"/>
+        <path d="M236 304c6.5 8 6.5 28 0 36M236 304c-6.5 8-6.5 28 0 36M218 322h36" stroke="#8a8a8a" stroke-width="1.6" fill="none"/>
+        <text x="236" y="376" text-anchor="middle" font-family="Cormorant Garamond, Georgia, serif" font-size="19" fill="#111111">One World Skin &amp; Wellness</text>
       </svg>
     </div>
   </div>
@@ -501,9 +497,9 @@ input:focus,textarea:focus,select:focus{border-color:var(--sage);box-shadow:0 0 
               <rect x="182" y="150" width="80" height="30" rx="4"/><rect x="290" y="150" width="70" height="30" rx="4"/>
               <rect x="392" y="72" width="100" height="30" rx="4"/><rect x="30" y="150" width="112" height="30" rx="4"/>
             </g>
-            <text x="260" y="244" text-anchor="middle" font-family="Karla, Arial, sans-serif" font-size="13" fill="#5F6F69">Arnaiz Avenue, Makati City</text>
+            <text x="260" y="244" text-anchor="middle" font-family="Karla, Arial, sans-serif" font-size="13" fill="#555555">Arnaiz Avenue, Makati City</text>
             <circle cx="260" cy="127" r="27" fill="rgba(78,111,96,.16)"/>
-            <path d="M260 105c-9.4 0-17 7.6-17 17 0 12.7 17 27 17 27s17-14.3 17-27c0-9.4-7.6-17-17-17Z" fill="#4E6F60"/>
+            <path d="M260 105c-9.4 0-17 7.6-17 17 0 12.7 17 27 17 27s17-14.3 17-27c0-9.4-7.6-17-17-17Z" fill="#111111"/>
             <circle cx="260" cy="122" r="6.2" fill="#fff"/>
           </svg>
           <span class="caption">Diane Optical Bldg, Arnaiz Ave — illustrative map</span>
