@@ -1005,3 +1005,44 @@ promise, not the diagnosis, that the menu gates.
   report so far has counted cards. From now on, spot-check the *condition* on
   any queue that grew — for MOCKUP READY that is one `git ls-tree` for
   `index.html` per slug, which is what caught this.
+- 2026-08-21 (step 2 — the domain check needs an NS lookup, not just a body
+  check): the cheap check as written says "fetch the candidate domain looking
+  for a 200-with-empty-body". That phrasing nearly missed the best find of the
+  run. `noecar.com` — the trading name of a Cebu lead whose card said
+  `🌐 none` — answers **200 with a 114-byte body** that JS-redirects to
+  `/lander`. It is not empty and it is not blank; it is a domain-marketplace
+  parking page, and the decisive tell is the nameservers:
+  `ns1/ns2.afternic.com`. Same shape as the Fast Auto Works catch, found a
+  different way. **Add the NS lookup to the check** — it is one command and it
+  distinguishes "the owner has an empty domain" (their asset, BD-01 applies)
+  from "someone else is selling the domain with their name on it" (a much
+  sharper opener, and BD-01 does *not* apply because they don't control the
+  registrar):
+  ```
+  curl -s -o /dev/null -w "%{http_code} %{size_download}\n" -L http://<domain>
+  nslookup -type=NS <domain>          # afternic / sedo / dan / hugedomains = parked
+  ```
+  A 500 is worth recording too: `yorkautorepair.com` is registered on GoDaddy NS
+  and serves a bare IIS "500 - Internal server error", which is evidence for the
+  name-collision angle (page one for their name has no page they control) but is
+  *not* evidence they own it. Never tell an owner a domain is theirs on NS data
+  alone.
+- 2026-08-21 (the cheapest PH contradictory-listings check found so far):
+  `ph.near-place.com/<slug>` returns, in one fetch, the listing's address, its
+  phone *as the directory actually stores it*, a seven-day hours grid that shows
+  `no info` explicitly, and a distance-sorted list of every rival nearby. For
+  Complete Automotive Repair (Lahug) it showed a phone truncated to `+63`, all
+  seven days blank, and 26 rivals beneath — while `infoisinfo-ph`'s Cebu
+  car-repair page omitted the shop entirely and listed six rivals instead. Two
+  pages, one says they have no hours, the other says they don't exist. That is a
+  stronger and more honest line than "you rank poorly", and it cost two fetches.
+  Note also that the InfoisInfo result contradicted the step-1 card, which had
+  claimed the shop "ranks on Yelp and InfoisInfo-PH" — **verify the first-pass
+  ranking claim rather than inheriting it**; here the correction improved the
+  angle instead of weakening it.
+- 2026-08-21 (lead-quality tags are worth re-checking): a card arrived tagged
+  `☎️ PHONE ONLY` while carrying no phone number at all and an active Facebook
+  page (Manigos Auto Repair). The tag would have routed it to a human SMS script
+  when it is in fact FB-messageable. Step 2 now corrects the channel tag on the
+  card when the contact block contradicts it, since step 5 reads the tag, not
+  the fields.
