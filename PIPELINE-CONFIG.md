@@ -945,3 +945,29 @@ promise, not the diagnosis, that the menu gates.
   result until a card reaches CONTACTED: with APPROVED 0 and CONTACTED 0, there
   is no prospect who could reply. Reply triage cannot find a reply to a message
   that was never sent.
+- 2026-08-20 (step 6 QA, NEW SLOP PATTERN — the banned pivot survives as "I've
+  built a page…"): the 5 brand-new READY TO SEND cards from step 5 today (East
+  Mids, J.B Javier, Pcars, Fast Auto Works, Automotive 1) all independently
+  opened their pivot sentence with "I've built a page…". That is the exact same
+  MOVE as the banned "So I built…" clause with the "So" sanded off — a shared
+  skeleton across 5 of 5 drafts in one batch, which the batch-variation rule
+  bans on its own even before the pivot question comes up. Add "I've built a
+  page/one/this" to the banned-pivot family alongside "So I built…" and "I
+  built you one" — ban the MOVE (announcing the build as the transition into
+  the pitch), not any one wording of it. Rewrote all 5 to open the pivot with
+  the concrete fact the page proves ("That page nobody else controls now
+  exists…", "This page settles it…", etc.) instead of announcing that a page
+  was built.
+- 2026-08-20 (step 6 QA, the 8 flagged RE-CHECK cards resolved): every card the
+  same run had tagged `⚠️ QA RE-CHECK` for a paraphrased opt-out closer or pivot
+  (Tower of David, Dental Hive, Skinthority, Dermhaus, DermQuest, LimDerm,
+  Midwest, Gulfan) is now rewritten — closers replaced with a direct next-step
+  ask instead of a pre-emptive permission to decline, no two sharing wording.
+  Brand gate re-run independently on all 13 touched cards (5 new + 8 re-check):
+  13/13 PASS. Pricing re-checked against the config/OFFER-MENU bands for all 13
+  (PH ₱1,000–1,500/mo, UK GBP 300 build + 55/mo inside the 240–370 + 40–75 band,
+  US build 300–500 + 50–100/mo): all in band. Menu boundary: none of the 13
+  drafts name an automation ID as a promise — website tier only, as required
+  while every automation line stays `IN BUILD` per OFFER-MENU.md. No card was
+  moved list-wise; QA marks the description in place and APPROVED remains the
+  human's call.
