@@ -1,0 +1,25 @@
+{
+  "slug": "complete-automotive-repair-lahug-cebu",
+  "site": "none",
+  "facebook": "100060829856968",
+  "capturedAt": "2026-08-21T00:00:00.000Z",
+  "source": "headless-http",
+  "name": null,
+  "logo": null,
+  "logoFiles": [],
+  "colors": {
+    "brand": [],
+    "neutral": [],
+    "themeColor": null,
+    "source": null
+  },
+  "fonts": [],
+  "ready": false,
+  "blockedBy": "no-assets",
+  "confidence": 0,
+  "notes": [
+    "facebook page \"100060829856968\" (numeric ID, no slug) returns HTTP 302 to default silhouette — the page exists but has no custom profile picture",
+    "site unreachable over plain HTTP(S)",
+    "BLOCKER no-assets: page reachable by numeric ID only, no recoverable logo — requires human desktop session to find branded slug if one exists, or confirm page has no branded assets"
+  ]
+}
