@@ -4,7 +4,7 @@
   "facebook": "smilehqdentalclinic",
   "capturedAt": "2026-08-19T23:25:47.751Z",
   "source": "headless-http",
-  "name": null,
+  "name": "SmileHQ Dental Clinic",
   "logo": {
     "file": "logo-facebook-profile.jpg",
     "score": 95,
@@ -20,18 +20,41 @@
     }
   ],
   "colors": {
-    "brand": [],
-    "neutral": [],
-    "themeColor": null,
-    "source": null
+    "brand": [
+      {
+        "hex": "#5a4130",
+        "weight": 55
+      },
+      {
+        "hex": "#8a7260",
+        "weight": 25
+      },
+      {
+        "hex": "#d9cfc4",
+        "weight": 20
+      }
+    ],
+    "neutral": [
+      {
+        "hex": "#ebe5de",
+        "weight": 70
+      },
+      {
+        "hex": "#2a2320",
+        "weight": 30
+      }
+    ],
+    "themeColor": "#5a4130",
+    "source": "vision"
   },
   "fonts": [],
-  "ready": false,
-  "blockedBy": "palette-pending",
-  "confidence": 50,
+  "ready": true,
+  "blockedBy": null,
+  "confidence": 90,
   "notes": [
     "facebook profile picture captured headlessly for \"smilehqdentalclinic\"",
     "no website for this lead — facebook-only capture path",
-    "BLOCKER palette-pending: logo captured (logo-facebook-profile.jpg) but fewer than 2 chromatic colours found. Vision-read the logo, then write the hex values into colors.brand[] with colors.source=\"vision\" and re-run the gate."
+    "BLOCKER palette-pending: logo captured (logo-facebook-profile.jpg) but fewer than 2 chromatic colours found. Vision-read the logo, then write the hex values into colors.brand[] with colors.source=\"vision\" and re-run the gate.",
+    "RESOLVED palette-pending (CLO-44, 2026-08-21): vision-read 2026-08-21: hand-script \"Smile\" wordmark + \"HQ\" and a smile arc, all in one warm coffee brown (#5a4130) on a warm greige ground (#ebe5de). Mid-brown #8a7260 and deeper greige #d9cfc4 read off the stroke edges and background gradient."
   ]
 }

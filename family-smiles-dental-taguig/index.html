@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Family Smiles Dental Care — Bayani Road, Taguig | Where Healthy Smiles Begin</title>
+<meta name="description" content="Family Smiles Dental Care — 4th Floor Unit 4-C, Amber Place, 55 Bayani Rd, Fort Bonifacio, Taguig City. Family and general dentistry. Tuesday to Saturday 9:00 AM to 6:00 PM. Wheelchair accessible entrance and parking. Call 0915 257 2533.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* palette vision-read from brand/logo-facebook-profile.jpg — see brand/brand.json */
+  --sky:#2e9bd5;
+  --sky-deep:#1c7fb4;
+  --sky-100:#e5f3fb;
+  --olive:#6d8040;
+  --olive-100:#eef2e3;
+  --ink:#22303a;
+  --ink-2:#4d5f6b;
+  --paper:#f6fafc;
+  --line:#d9e7ef;
+  --white:#ffffff;
+  --accent:#c9a227;
+  --shadow-sm:0 1px 2px rgba(34,48,58,.07), 0 2px 8px rgba(34,48,58,.05);
+  --shadow-md:0 8px 26px rgba(34,48,58,.10);
+  --r-sm:8px; --r-md:16px; --r-lg:26px; --r-pill:999px;
+  --display:'Nunito',-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;
+  --body:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica Neue',Arial,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;font-family:var(--body);color:var(--ink);background:var(--white);font-size:16px;line-height:1.6;padding-bottom:168px;overflow-x:hidden}
+img,svg{max-width:100%;display:block}
+h1,h2,h3{font-family:var(--display);font-weight:800;line-height:1.16;margin:0 0 12px;letter-spacing:-.015em}
+h1{font-size:33px}h2{font-size:27px}h3{font-size:19px}
+p{margin:0 0 16px}
+a{color:var(--sky-deep)}
+.wrap{width:100%;max-width:1080px;margin:0 auto;padding:0 20px}
+.eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--sky-deep);margin:0 0 8px;font-family:var(--body)}
+.section{padding:56px 0}
+.section--sky{background:var(--sky-100)}
+.section--olive{background:var(--olive-100)}
+.section--paper{background:var(--paper)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+
+.header{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.95);backdrop-filter:saturate(140%) blur(8px);border-bottom:1px solid var(--line)}
+.header__in{display:flex;align-items:center;gap:12px;min-height:66px;padding:8px 20px;max-width:1080px;margin:0 auto}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none;color:var(--ink);min-height:44px}
+.brand-logo-img{width:44px;height:44px;flex:0 0 44px;object-fit:contain;border-radius:10px;background:#fff}
+.brand__txt{display:flex;flex-direction:column;line-height:1.1}
+.brand__name{font-family:var(--display);font-weight:800;font-size:17px;color:var(--sky)}
+.brand__sub{font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--olive);font-weight:700}
+.header__cta{margin-left:auto}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:11px 18px;border-radius:var(--r-pill);font-family:var(--body);font-weight:600;font-size:15px;text-decoration:none;border:1px solid transparent;cursor:pointer;transition:background-color .18s ease,color .18s ease,border-color .18s ease,transform .18s ease,box-shadow .18s ease}
+.btn--sky{background:var(--sky);color:#fff;box-shadow:var(--shadow-sm)}
+.btn--sky:hover{background:var(--sky-deep);transform:translateY(-1px);box-shadow:var(--shadow-md)}
+.btn--olive{background:var(--olive);color:#fff}
+.btn--olive:hover{background:#5b6b35;transform:translateY(-1px)}
+.btn--ghost{background:#fff;color:var(--sky-deep);border-color:var(--line)}
+.btn--ghost:hover{border-color:var(--sky);background:var(--sky-100)}
+.btn--sm{font-size:14px;padding:9px 14px}
+.btn--block{width:100%}
+
+.hero{position:relative;background:linear-gradient(168deg,var(--sky-100) 0%,#ffffff 62%);overflow:hidden}
+.hero::after{content:"";position:absolute;right:-150px;top:-130px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle at 36% 36%,rgba(46,155,213,.20),rgba(46,155,213,0) 70%);pointer-events:none}
+.hero__in{padding:38px 20px 46px;max-width:1080px;margin:0 auto;position:relative;z-index:1}
+.hero h1{font-size:clamp(31px,7.4vw,50px);margin-bottom:12px}
+.hero h1 em{font-style:normal;color:var(--sky)}
+.hero h1 b{font-weight:800;color:var(--olive)}
+.tagline{font-family:var(--display);font-weight:700;font-size:19px;color:var(--olive);margin:0 0 18px}
+.hero__lead{font-size:17px;color:var(--ink-2);max-width:56ch;margin-bottom:22px}
+.pill-row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+.pill{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;background:#fff;border:1px solid var(--line);border-radius:var(--r-pill);padding:7px 14px;color:var(--ink-2)}
+.pill svg{width:15px;height:15px;color:var(--olive)}
+.idcard{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:18px;box-shadow:var(--shadow-md);margin-bottom:22px}
+.idcard__row{display:flex;gap:12px;padding:11px 0;align-items:flex-start;border-top:1px solid var(--line)}
+.idcard__row:first-child{border-top:0;padding-top:0}
+.idcard__ico{flex:0 0 22px;width:22px;height:22px;color:var(--sky);margin-top:2px}
+.idcard__k{font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--olive);margin:0 0 2px}
+.idcard__v{font-size:15.5px;font-weight:500;margin:0}
+.idcard__v a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--sky-100)}
+.idcard__v a:hover{color:var(--sky-deep);border-bottom-color:var(--sky)}
+.hero__btns{display:flex;flex-direction:column;gap:10px}
+.hero__art{margin-top:32px}
+
+.grid{display:grid;gap:16px;grid-template-columns:1fr}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:22px;box-shadow:var(--shadow-sm);transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow-md);border-color:var(--sky)}
+.card__ico{width:48px;height:48px;border-radius:14px;background:var(--sky-100);color:var(--sky-deep);display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+.card__ico--olive{background:var(--olive-100);color:var(--olive)}
+.card__ico svg{width:25px;height:25px}
+.card p{font-size:15px;color:var(--ink-2);margin:0}
+.note{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;background:#FFF7DF;border:1px dashed #D9BE63;color:#6E5410;padding:6px 12px;border-radius:var(--r-sm)}
+.note--block{display:block;text-transform:none;letter-spacing:0;font-weight:500;font-size:13.5px;line-height:1.55;padding:12px 14px}
+.note--block b{text-transform:uppercase;letter-spacing:.06em;font-size:11.5px;display:block;margin-bottom:4px}
+
+.why{display:grid;gap:14px;grid-template-columns:1fr}
+.why__item{display:flex;gap:14px;align-items:flex-start;background:#fff;border-radius:var(--r-lg);padding:18px;box-shadow:var(--shadow-sm)}
+.why__num{font-family:var(--display);font-size:24px;font-weight:800;color:var(--sky);flex:0 0 auto;line-height:1.1}
+.why__item h3{font-size:17px;margin-bottom:4px}
+.why__item p{font-size:14.5px;color:var(--ink-2);margin:0}
+
+.branches{display:grid;gap:16px;grid-template-columns:1fr;margin-top:24px}
+.branch{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:20px;box-shadow:var(--shadow-sm)}
+.branch--this{border:2px solid var(--sky)}
+.branch__tag{display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;background:var(--sky);color:#fff;border-radius:var(--r-pill);padding:4px 11px;margin-bottom:10px}
+.branch h3{margin-bottom:6px}
+.branch p{font-size:14.5px;color:var(--ink-2);margin:0 0 5px}
+
+.hours{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow-sm)}
+.hours__row{display:flex;justify-content:space-between;gap:12px;padding:13px 18px;border-top:1px solid var(--line);font-size:15px}
+.hours__row:first-child{border-top:0}
+.hours__row--open{background:var(--sky-100);font-weight:600}
+.hours__row--short{background:var(--olive-100);font-weight:600}
+.hours__row span:last-child{color:var(--ink-2);text-align:right}
+.hours__row--open span:last-child{color:var(--sky-deep)}
+.hours__row--short span:last-child{color:var(--olive)}
+
+.contact{display:grid;gap:20px;grid-template-columns:1fr}
+.map{border-radius:var(--r-lg);overflow:hidden;border:1px solid var(--line);position:relative;box-shadow:var(--shadow-sm)}
+.map__label{position:absolute;left:12px;bottom:12px;right:12px;background:rgba(255,255,255,.95);border-radius:var(--r-sm);padding:10px 12px;font-size:12.5px;color:var(--ink-2);font-weight:500}
+.form{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:20px;box-shadow:var(--shadow-sm)}
+.field{margin-bottom:14px}
+.field label{display:block;font-size:13px;font-weight:600;margin-bottom:6px}
+.field input,.field textarea,.field select{width:100%;font-family:var(--body);font-size:16px;color:var(--ink);padding:12px;border:1px solid var(--line);border-radius:var(--r-sm);background:#FBFDFE;min-height:44px;transition:border-color .18s ease,box-shadow .18s ease}
+.field textarea{min-height:110px;resize:vertical}
+.field input:focus,.field textarea:focus,.field select:focus{outline:none;border-color:var(--sky);box-shadow:0 0 0 3px rgba(46,155,213,.20)}
+.formnote{font-size:12.5px;color:var(--ink-2);margin:10px 0 0}
+
+.footer{background:var(--ink);color:#c3d2da;padding:40px 0 32px}
+.footer h3{color:#fff;font-size:19px}
+.footer a{color:#9ed3ef;text-decoration:none}
+.footer a:hover{color:#fff;text-decoration:underline}
+.footer__grid{display:grid;gap:24px;grid-template-columns:1fr}
+.footer__p{font-size:14.5px;line-height:1.7;margin:0}
+.footer__credit{margin-top:28px;padding-top:18px;border-top:1px solid rgba(255,255,255,.14);font-size:13px;display:flex;flex-wrap:wrap;gap:6px;justify-content:space-between}
+
+.cs-bar{position:fixed;left:0;right:0;bottom:0;z-index:200;background:rgba(19,32,40,.95);backdrop-filter:saturate(150%) blur(10px);border-top:1px solid rgba(255,255,255,.14);box-shadow:0 -8px 32px rgba(34,48,58,.34);color:#fff;padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px))}
+.cs-bar__in{max-width:1080px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:10px 18px;text-align:center}
+.cs-bar__eyebrow{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:#8ed2f2;margin:0 0 3px}
+.cs-bar__line{font-size:15px;font-weight:600;line-height:1.35;margin:0;color:#fff}
+.cs-bar__btn{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:12px 22px;border-radius:var(--r-pill);background:var(--accent);color:#1A1405;font-weight:700;font-size:15px;text-decoration:none;white-space:nowrap;box-shadow:0 4px 18px rgba(201,162,39,.34);animation:csPulse 2.4s ease-in-out infinite;transition:transform .18s ease,background-color .18s ease,box-shadow .18s ease}
+.cs-bar__btn:hover{background:#DDB633;transform:translateY(-2px);box-shadow:0 8px 26px rgba(201,162,39,.46);animation-play-state:paused}
+.cs-bar__btn:focus-visible{outline:3px solid #fff;outline-offset:3px}
+@keyframes csPulse{0%,100%{box-shadow:0 4px 18px rgba(201,162,39,.30)}50%{box-shadow:0 4px 26px rgba(201,162,39,.62)}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition-duration:.01ms!important}.cs-bar__btn{animation:none}}
+
+@media (min-width:600px){
+  .hero__btns{flex-direction:row;flex-wrap:wrap}
+  .hero__btns .btn{flex:1 1 auto;min-width:200px}
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .why{grid-template-columns:repeat(2,1fr)}
+  .branches{grid-template-columns:repeat(2,1fr)}
+}
+@media (min-width:900px){
+  body{padding-bottom:104px}
+  .section{padding:76px 0}
+  h1{font-size:45px}h2{font-size:35px}
+  .hero__in{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center;padding:62px 20px 74px}
+  .hero__art{margin-top:0}
+  .grid{grid-template-columns:repeat(3,1fr)}
+  .contact{grid-template-columns:1.05fr .95fr;align-items:start}
+  .footer__grid{grid-template-columns:1.4fr 1fr 1fr}
+  .cs-bar__in{flex-wrap:nowrap;justify-content:space-between;text-align:left}
+  .cs-bar__line{font-size:16.5px}
+}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="header__in">
+    <a class="brand" href="#top" aria-label="Family Smiles Dental Care, back to top">
+      <img class="brand-logo-img" src="brand/logo-facebook-profile.jpg" alt="Family Smiles Dental Care logo" width="44" height="44" decoding="async">
+      <span class="brand__txt">
+        <span class="brand__name">Family Smiles</span>
+        <span class="brand__sub">Dental Care &middot; Taguig</span>
+      </span>
+    </a>
+    <a class="btn btn--sky btn--sm header__cta" href="tel:+639152572533">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+      <span>Call clinic</span>
+    </a>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="hero__in">
+      <div>
+        <p class="eyebrow">Bayani Road &middot; Fort Bonifacio, Taguig</p>
+        <h1>One dentist for <em>the whole</em> <b>family</b></h1>
+        <p class="tagline">&ldquo;Where Healthy Smiles Begin&rdquo;</p>
+        <p class="hero__lead">Family Smiles Dental Care is on the 4th floor of Amber Place, 55 Bayani Rd, Fort Bonifacio. Children, parents and grandparents seen in the same clinic &mdash; with a wheelchair-accessible entrance and parking, so nobody gets left in the car.</p>
+
+        <div class="pill-row">
+          <span class="pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="4.5" r="2"/><path d="M12 6.5v7h5M8 13.5l-1 7M12 13.5l4 7"/></svg>Wheelchair accessible</span>
+          <span class="pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M9 10h4a2 2 0 0 1 0 4H9v-4z"/></svg>Parking on site</span>
+          <span class="pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9.5" r="2.2"/><path d="M3.5 19c0-3.3 2.5-5.5 5.5-5.5s5.5 2.2 5.5 5.5M16 19c0-2.2 1-3.6 2.4-4.2"/></svg>Kids &amp; adults</span>
+        </div>
+
+        <div class="idcard">
+          <div class="idcard__row">
+            <svg class="idcard__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <div><p class="idcard__k">Clinic address</p><p class="idcard__v">4th Floor Unit 4-C, Amber Place,<br>55 Bayani Rd, Fort Bonifacio, Taguig City 1630</p></div>
+          </div>
+          <div class="idcard__row">
+            <svg class="idcard__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+            <div><p class="idcard__k">Phone</p><p class="idcard__v"><a href="tel:+639152572533">0915 257 2533</a> &middot; <a href="tel:+639602907633">0960 290 7633</a></p></div>
+          </div>
+          <div class="idcard__row">
+            <svg class="idcard__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="16" rx="2.5"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4"/></svg>
+            <div><p class="idcard__k">Open</p><p class="idcard__v">Tuesday to Saturday &middot; 9:00 AM &ndash; 6:00 PM<br><span style="color:var(--ink-2);font-size:14px">Monday 11:30 AM &ndash; 3:00 PM &middot; Closed Sundays</span></p></div>
+          </div>
+        </div>
+
+        <div class="hero__btns">
+          <a class="btn btn--sky" href="tel:+639152572533">Call 0915 257 2533</a>
+          <a class="btn btn--ghost" href="https://m.me/famsmilesdentalcare12" target="_blank" rel="noopener">Message us on Messenger</a>
+        </div>
+      </div>
+
+      <div class="hero__art" aria-hidden="true">
+        <svg viewBox="0 0 460 390" role="img" aria-hidden="true" focusable="false" style="width:100%;height:auto;filter:drop-shadow(0 18px 42px rgba(34,48,58,.15))">
+          <defs>
+            <linearGradient id="fg1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e5f3fb"/><stop offset="1" stop-color="#eef2e3"/></linearGradient>
+            <linearGradient id="fg2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2e9bd5"/><stop offset="1" stop-color="#1c7fb4"/></linearGradient>
+          </defs>
+          <rect x="10" y="14" width="440" height="362" rx="30" fill="url(#fg1)"/>
+          <circle cx="356" cy="94" r="54" fill="#fff" opacity=".6"/>
+          <!-- cupping hand -->
+          <path d="M96 268c-8-16 4-30 20-24l40 16c8-40 22-64 22-92 0-10 8-16 16-16s16 6 16 16c0 28 14 52 22 92l40-16c16-6 28 8 20 24-18 36-56 66-98 66s-80-30-98-66z" fill="url(#fg2)" opacity=".92"/>
+          <!-- tooth resting in the hand -->
+          <path d="M164 116c18-14 38-14 56 0 16 12 27 7 37 2 8-4 15 2 15 13 0 34-9 66-19 103-5 19-11 31-21 31-10 0-13-14-16-32-2-13-5-22-13-22s-11 9-13 22c-3 18-6 32-16 32-10 0-16-12-21-31-10-37-19-69-19-103 0-11 7-17 15-13 10 5 21 10 37-2z" fill="#fff" stroke="#6d8040" stroke-width="3" stroke-linejoin="round"/>
+          <!-- family figures inside the tooth -->
+          <g fill="#6d8040">
+            <circle cx="192" cy="176" r="9"/><path d="M180 210c0-9 6-16 12-16s12 7 12 16z"/>
+            <circle cx="228" cy="172" r="10"/><path d="M215 210c0-10 6-18 13-18s13 8 13 18z"/>
+            <circle cx="210" cy="200" r="7" fill="#2e9bd5"/><path d="M201 226c0-7 4-12 9-12s9 5 9 12z" fill="#2e9bd5"/>
+          </g>
+          <!-- smile arc -->
+          <path d="M154 300c30 22 68 32 106 26" stroke="#2e9bd5" stroke-width="4" fill="none" stroke-linecap="round" opacity=".9"/>
+          <circle cx="118" cy="120" r="5" fill="#6d8040" opacity=".7"/>
+          <circle cx="336" cy="272" r="4" fill="#2e9bd5" opacity=".7"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY THIS PAGE -->
+  <section class="section section--paper">
+    <div class="wrap" style="max-width:820px">
+      <p class="eyebrow">Why this page exists</p>
+      <h2>A directory profile is currently the whole Google presence</h2>
+      <p style="color:var(--ink-2)">Checked again on 21 August 2026. Search for Family Smiles Dental Care and what answers is a <strong>dentalclinics.care</strong> profile page &mdash; a page the clinic does not control, on a site that lists other Taguig clinics beside it. Google&rsquo;s &ldquo;Website&rdquo; button points at Facebook.</p>
+      <p style="color:var(--ink-2)">Meanwhile the BGC clinics competing for the same families rank on domains they own, and there is another dental clinic on Bayani Road itself. Facebook, Instagram and TikTok are all working hard here; none of that effort lands on a page the clinic owns. This is that page.</p>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section" id="services">
+    <div class="wrap">
+      <p class="eyebrow">What we do</p>
+      <h2>Family and general dentistry</h2>
+      <p style="max-width:60ch;color:var(--ink-2)">The categories below reflect the clinic&rsquo;s stated family and general dentistry practice. The full treatment list is confirmed at your appointment.</p>
+
+      <div class="grid" style="margin-top:26px">
+        <article class="card">
+          <div class="card__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9.5" r="2.2"/><path d="M3.5 19c0-3.3 2.5-5.5 5.5-5.5s5.5 2.2 5.5 5.5M16 19c0-2.2 1-3.6 2.4-4.2"/></svg></div>
+          <h3>Children&rsquo;s dentistry</h3>
+          <p>First visits, cleanings and fillings for children, in a clinic where the adults in the family are patients too.</p>
+        </article>
+        <article class="card">
+          <div class="card__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c4 2.6 6 6 6 9.5C18 17 15.4 21 12 21S6 17 6 12.5C6 9 8 5.6 12 3z"/></svg></div>
+          <h3>Cleaning &amp; oral prophylaxis</h3>
+          <p>Routine cleaning and check-ups for the whole household &mdash; several family members in one trip if you want.</p>
+        </article>
+        <article class="card">
+          <div class="card__ico card__ico--olive"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="3"/><path d="M8 12h8M12 8v8"/></svg></div>
+          <h3>Fillings &amp; restorations</h3>
+          <p>Repair work for decayed, chipped or worn teeth, with the options and costs explained before anything starts.</p>
+        </article>
+        <article class="card">
+          <div class="card__ico card__ico--olive"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h16M4 16h16"/><circle cx="8" cy="8" r="2"/><circle cx="15" cy="16" r="2"/></svg></div>
+          <h3>Braces &amp; orthodontics</h3>
+          <p>Alignment treatment for teenagers and adults, planned around school terms and work schedules.</p>
+        </article>
+        <article class="card">
+          <div class="card__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5l2.3 5.2 5.7.6-4.3 3.8 1.3 5.6L12 14.8 7 17.7l1.3-5.6L4 8.3l5.7-.6z"/></svg></div>
+          <h3>Whitening &amp; cosmetic</h3>
+          <p>Cosmetic treatment for patients who want a visible change, with realistic expectations set beforehand.</p>
+        </article>
+        <article class="card" style="border-style:dashed;background:var(--paper)">
+          <div class="card__ico" style="background:#FFF7DF;color:#6E5410"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></div>
+          <h3>Your full service list &amp; rates</h3>
+          <p class="note note--block" style="margin-top:8px"><b>Placeholder</b>Send Family Smiles&rsquo; complete treatment list and current rates and they replace this card exactly as given. We do not print a price the clinic has not confirmed.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY US -->
+  <section class="section section--sky" id="why">
+    <div class="wrap">
+      <p class="eyebrow">Why families come here</p>
+      <h2>Built around how a family actually books</h2>
+      <div class="why" style="margin-top:24px">
+        <div class="why__item">
+          <span class="why__num">01</span>
+          <div><h3>Everyone in one clinic</h3><p>Children and adults are seen in the same practice, so one trip covers the household instead of three separate appointments across the city.</p></div>
+        </div>
+        <div class="why__item">
+          <span class="why__num">02</span>
+          <div><h3>Wheelchair accessible</h3><p>Accessible entrance and parking. If a grandparent uses a chair or a walker, they come in through the same door as everyone else.</p></div>
+        </div>
+        <div class="why__item">
+          <span class="why__num">03</span>
+          <div><h3>Saturday appointments</h3><p>Open Saturdays 9:00 AM to 6:00 PM &mdash; the day most working parents can actually get children into a chair.</p></div>
+        </div>
+        <div class="why__item">
+          <span class="why__num">04</span>
+          <div><h3>On Bayani Road, Fort Bonifacio</h3><p>Amber Place, 55 Bayani Rd &mdash; a short drive from BGC and the surrounding Taguig barangays, with somewhere to leave the car.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BRANCHES -->
+  <section class="section section--olive" id="branches">
+    <div class="wrap">
+      <p class="eyebrow">Where we are</p>
+      <h2>Taguig, and a second branch</h2>
+      <div class="branches">
+        <div class="branch branch--this">
+          <span class="branch__tag">You are here</span>
+          <h3>Taguig &mdash; Fort Bonifacio</h3>
+          <p>4th Floor Unit 4-C, Amber Place, 55 Bayani Rd, Fort Bonifacio, Taguig City 1630</p>
+          <p><a href="tel:+639152572533">0915 257 2533</a> &middot; <a href="tel:+639602907633">0960 290 7633</a></p>
+          <p>Tue&ndash;Sat 9:00 AM &ndash; 6:00 PM &middot; Mon 11:30 AM &ndash; 3:00 PM</p>
+        </div>
+        <div class="branch">
+          <h3>Cainta branch</h3>
+          <p class="note note--block" style="margin-top:10px"><b>Placeholder &mdash; not yet confirmed</b>A second branch in Cainta was noted in our research but we could not re-confirm its address, number or hours on 21 August 2026. Send the details and this card fills in. We will not publish a branch address we have not verified.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="wrap" style="max-width:760px">
+      <p class="eyebrow">About the clinic</p>
+      <h2>Family Smiles Dental Care</h2>
+      <p>Family Smiles Dental Care is a family and general dental practice on the 4th floor of Amber Place, 55 Bayani Rd, Fort Bonifacio, Taguig City. The clinic sees patients Tuesday to Saturday from 9:00 AM to 6:00 PM, Mondays from 11:30 AM to 3:00 PM, and is closed on Sundays. The entrance and parking are wheelchair accessible.</p>
+      <p>Appointments and enquiries go through 0915 257 2533 or 0960 290 7633, or through the clinic&rsquo;s Facebook, Instagram and TikTok pages.</p>
+      <p class="note note--block" style="max-width:60ch"><b>Placeholder &mdash; needs the clinic&rsquo;s input</b>The dentists&rsquo; names, credentials, years in practice and the clinic&rsquo;s own story are deliberately blank. Send them and they go in as written. This preview carries no invented credentials, prices, ratings or patient reviews &mdash; including star ratings, which currently differ between the platforms that publish them.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section section--paper" id="contact">
+    <div class="wrap">
+      <p class="eyebrow">Book a visit</p>
+      <h2>Contact Family Smiles</h2>
+
+      <div class="contact" style="margin-top:26px">
+        <div>
+          <div class="hours" style="margin-bottom:20px">
+            <div class="hours__row hours__row--short"><span>Monday</span><span>11:30 AM &ndash; 3:00 PM</span></div>
+            <div class="hours__row hours__row--open"><span>Tuesday</span><span>9:00 AM &ndash; 6:00 PM</span></div>
+            <div class="hours__row hours__row--open"><span>Wednesday</span><span>9:00 AM &ndash; 6:00 PM</span></div>
+            <div class="hours__row hours__row--open"><span>Thursday</span><span>9:00 AM &ndash; 6:00 PM</span></div>
+            <div class="hours__row hours__row--open"><span>Friday</span><span>9:00 AM &ndash; 6:00 PM</span></div>
+            <div class="hours__row hours__row--open"><span>Saturday</span><span>9:00 AM &ndash; 6:00 PM</span></div>
+            <div class="hours__row"><span>Sunday</span><span>Closed</span></div>
+          </div>
+
+          <div class="idcard" style="box-shadow:var(--shadow-sm)">
+            <div class="idcard__row">
+              <svg class="idcard__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <div><p class="idcard__k">Address</p><p class="idcard__v">4th Floor Unit 4-C, Amber Place, 55 Bayani Rd, Fort Bonifacio, Taguig City 1630, Philippines</p></div>
+            </div>
+            <div class="idcard__row">
+              <svg class="idcard__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+              <div><p class="idcard__k">Phone</p><p class="idcard__v"><a href="tel:+639152572533">0915 257 2533</a><br><a href="tel:+639602907633">0960 290 7633</a></p></div>
+            </div>
+            <div class="idcard__row">
+              <svg class="idcard__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="4.5" r="2"/><path d="M12 6.5v7h5M8 13.5l-1 7M12 13.5l4 7"/></svg>
+              <div><p class="idcard__k">Accessibility</p><p class="idcard__v">Wheelchair accessible entrance and parking</p></div>
+            </div>
+            <div class="idcard__row">
+              <svg class="idcard__ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5h1.65V3.63A22 22 0 0 0 14.3 3.5c-2.4 0-4 1.46-4 4.15V9.9H7.6V13h2.7v8z"/></svg>
+              <div><p class="idcard__k">Facebook, Instagram &amp; TikTok</p><p class="idcard__v"><a href="https://www.facebook.com/famsmilesdentalcare12/" target="_blank" rel="noopener">facebook.com/famsmilesdentalcare12</a> &middot; <a href="https://www.instagram.com/famsmilesdentalcare/" target="_blank" rel="noopener">@famsmilesdentalcare</a></p></div>
+            </div>
+          </div>
+
+          <div class="map" style="margin-top:20px">
+            <svg viewBox="0 0 600 300" role="img" aria-label="Illustrated map placeholder showing the clinic on Bayani Road, Fort Bonifacio, Taguig" style="width:100%;height:auto;display:block">
+              <rect width="600" height="300" fill="#e9f4fa"/>
+              <path d="M0 198h600M0 90h600M148 0v300M428 0v300" stroke="#fff" stroke-width="16"/>
+              <path d="M0 198h600M0 90h600M148 0v300M428 0v300" stroke="#d9e7ef" stroke-width="2"/>
+              <rect x="172" y="110" width="96" height="64" rx="8" fill="#e5f3fb"/>
+              <rect x="284" y="110" width="120" height="64" rx="8" fill="#eef2e3"/>
+              <rect x="172" y="218" width="120" height="52" rx="8" fill="#e5f3fb"/>
+              <rect x="450" y="110" width="118" height="64" rx="8" fill="#eef2e3"/>
+              <text x="158" y="80" font-family="Inter, Arial, sans-serif" font-size="14" fill="#4d5f6b">Bayani Rd</text>
+              <g transform="translate(308,146)">
+                <circle cx="0" cy="0" r="30" fill="#2e9bd5" opacity=".16"/>
+                <path d="M0-24c8.8 0 16 7.2 16 16 0 12-16 26-16 26S-16 4-16-8c0-8.8 7.2-16 16-16z" fill="#2e9bd5"/>
+                <circle cx="0" cy="-8" r="6" fill="#fff"/>
+              </g>
+            </svg>
+            <p class="map__label"><strong>Illustration, not a live map.</strong> An interactive Google Map pinned to Amber Place, 55 Bayani Rd goes here on the live site.</p>
+          </div>
+        </div>
+
+        <div class="form">
+          <h3>Request an appointment</h3>
+          <p style="font-size:14.5px;color:var(--ink-2)">Tell us who is coming in and when suits you. In this preview the button opens Messenger &mdash; on the live site it sends straight to the clinic&rsquo;s inbox.</p>
+          <form onsubmit="return csSend(event)">
+            <div class="field"><label for="n">Your name</label><input id="n" name="name" type="text" autocomplete="name" placeholder="Juan Dela Cruz"></div>
+            <div class="field"><label for="p">Mobile number</label><input id="p" name="phone" type="tel" autocomplete="tel" placeholder="09XX XXX XXXX"></div>
+            <div class="field"><label for="w">Who is the appointment for?</label>
+              <select id="w" name="who">
+                <option>A child</option>
+                <option>An adult</option>
+                <option>Several of us &mdash; same visit</option>
+              </select>
+            </div>
+            <div class="field"><label for="m">What do you need, and when?</label><textarea id="m" name="message" placeholder="e.g. two cleanings, Saturday morning"></textarea></div>
+            <button class="btn btn--olive btn--block" type="submit">Send via Messenger</button>
+          </form>
+          <p class="formnote">Prefer to talk? Call <a href="tel:+639152572533">0915 257 2533</a>, Tuesday to Saturday, 9:00 AM to 6:00 PM.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <h3>Family Smiles Dental Care</h3>
+        <p class="footer__p">4th Floor Unit 4-C, Amber Place<br>55 Bayani Rd, Fort Bonifacio<br>Taguig City 1630, Philippines<br><a href="tel:+639152572533">0915 257 2533</a></p>
+      </div>
+      <div>
+        <h3>Clinic hours</h3>
+        <p class="footer__p">Tuesday &ndash; Saturday<br>9:00 AM &ndash; 6:00 PM<br>Monday 11:30 AM &ndash; 3:00 PM<br>Closed Sundays</p>
+      </div>
+      <div>
+        <h3>Follow</h3>
+        <p class="footer__p"><a href="https://www.facebook.com/famsmilesdentalcare12/" target="_blank" rel="noopener">Facebook</a><br><a href="https://www.instagram.com/famsmilesdentalcare/" target="_blank" rel="noopener">Instagram &mdash; @famsmilesdentalcare</a><br><a href="https://www.tiktok.com/@family.smiles.den" target="_blank" rel="noopener">TikTok &mdash; @family.smiles.den</a></p>
+      </div>
+    </div>
+    <div class="footer__credit">
+      <span>&copy; 2026 Family Smiles Dental Care &middot; Where Healthy Smiles Begin</span>
+      <span>Website by CloudSpring IT Solutions</span>
+    </div>
+  </div>
+</footer>
+
+<aside class="cs-bar" role="complementary" aria-label="CloudSpring IT Solutions preview notice">
+  <div class="cs-bar__in">
+    <div class="cs-bar__txt">
+      <p class="cs-bar__eyebrow">PREVIEW &middot; CloudSpring IT Solutions</p>
+      <p class="cs-bar__line">Want Taguig families to land here &mdash; instead of on a directory page that lists your neighbours beside you?</p>
+    </div>
+    <a class="cs-bar__btn" href="https://api.leadconnectorhq.com/widget/booking/QRPEnWRw2Kx9rBe0Mj6J" target="_blank" rel="noopener">Book a FREE Discovery Call &rarr;</a>
+  </div>
+</aside>
+
+<script>
+function csSend(e){
+  e.preventDefault();
+  window.open('https://m.me/famsmilesdentalcare12','_blank','noopener');
+  return false;
+}
+</script>
+</body>
+</html>

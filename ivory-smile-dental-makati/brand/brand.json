@@ -4,7 +4,7 @@
   "facebook": "Ivorydentalmakati",
   "capturedAt": "2026-08-19T23:25:50.755Z",
   "source": "headless-http",
-  "name": null,
+  "name": "Ivory Smile Dental Clinic",
   "logo": {
     "file": "logo-facebook-profile.jpg",
     "score": 95,
@@ -20,18 +20,41 @@
     }
   ],
   "colors": {
-    "brand": [],
-    "neutral": [],
-    "themeColor": null,
-    "source": null
+    "brand": [
+      {
+        "hex": "#e8b84b",
+        "weight": 45
+      },
+      {
+        "hex": "#c89a3c",
+        "weight": 30
+      },
+      {
+        "hex": "#f2cc63",
+        "weight": 25
+      }
+    ],
+    "neutral": [
+      {
+        "hex": "#0a0a0a",
+        "weight": 70
+      },
+      {
+        "hex": "#ffffff",
+        "weight": 30
+      }
+    ],
+    "themeColor": "#e8b84b",
+    "source": "vision"
   },
   "fonts": [],
-  "ready": false,
-  "blockedBy": "palette-pending",
-  "confidence": 50,
+  "ready": true,
+  "blockedBy": null,
+  "confidence": 90,
   "notes": [
     "facebook profile picture captured headlessly for \"Ivorydentalmakati\"",
     "no website for this lead — facebook-only capture path",
-    "BLOCKER palette-pending: logo captured (logo-facebook-profile.jpg) but fewer than 2 chromatic colours found. Vision-read the logo, then write the hex values into colors.brand[] with colors.source=\"vision\" and re-run the gate."
+    "BLOCKER palette-pending: logo captured (logo-facebook-profile.jpg) but fewer than 2 chromatic colours found. Vision-read the logo, then write the hex values into colors.brand[] with colors.source=\"vision\" and re-run the gate.",
+    "RESOLVED palette-pending (CLO-44, 2026-08-21): vision-read 2026-08-21: gold-on-black roundel — a gradient gold molar inside a thin gold ring, \"IVORY SMILE / DENTAL CLINIC\" set in gold caps. Gold runs #f2cc63 (highlight) to #c89a3c (shadow), midpoint #e8b84b, on pure black."
   ]
 }

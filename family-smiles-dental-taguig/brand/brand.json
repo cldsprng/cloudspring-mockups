@@ -4,7 +4,7 @@
   "facebook": "famsmilesdentalcare12",
   "capturedAt": "2026-08-19T23:25:54.900Z",
   "source": "headless-http",
-  "name": null,
+  "name": "Family Smiles Dental Care",
   "logo": {
     "file": "logo-facebook-profile.jpg",
     "score": 95,
@@ -20,18 +20,41 @@
     }
   ],
   "colors": {
-    "brand": [],
-    "neutral": [],
-    "themeColor": null,
-    "source": null
+    "brand": [
+      {
+        "hex": "#2e9bd5",
+        "weight": 45
+      },
+      {
+        "hex": "#6d8040",
+        "weight": 35
+      },
+      {
+        "hex": "#1c7fb4",
+        "weight": 20
+      }
+    ],
+    "neutral": [
+      {
+        "hex": "#ffffff",
+        "weight": 70
+      },
+      {
+        "hex": "#3f4a52",
+        "weight": 30
+      }
+    ],
+    "themeColor": "#2e9bd5",
+    "source": "vision"
   },
   "fonts": [],
-  "ready": false,
-  "blockedBy": "palette-pending",
-  "confidence": 50,
+  "ready": true,
+  "blockedBy": null,
+  "confidence": 90,
   "notes": [
     "facebook profile picture captured headlessly for \"famsmilesdentalcare12\"",
     "no website for this lead — facebook-only capture path",
-    "BLOCKER palette-pending: logo captured (logo-facebook-profile.jpg) but fewer than 2 chromatic colours found. Vision-read the logo, then write the hex values into colors.brand[] with colors.source=\"vision\" and re-run the gate."
+    "BLOCKER palette-pending: logo captured (logo-facebook-profile.jpg) but fewer than 2 chromatic colours found. Vision-read the logo, then write the hex values into colors.brand[] with colors.source=\"vision\" and re-run the gate.",
+    "RESOLVED palette-pending (CLO-44, 2026-08-21): vision-read 2026-08-21: two-colour wordmark — \"Family\" in sky blue (#2e9bd5), \"Smiles\" in olive green (#6d8040), \"Dental Care\" in letterspaced caps split across both. Roundel icon shows a tooth cupped by a blue hand with a small family group inside; the hand carries the deeper blue #1c7fb4."
   ]
 }

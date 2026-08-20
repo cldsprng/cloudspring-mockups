@@ -4,7 +4,7 @@
   "facebook": "manigosautorepairshop",
   "capturedAt": "2026-08-20T23:20:00.422Z",
   "source": "headless-http",
-  "name": null,
+  "name": "Manigos Auto Repair Shop",
   "logo": {
     "file": "logo-facebook-profile.jpg",
     "score": 95,
@@ -21,12 +21,30 @@
   ],
   "colors": {
     "brand": [
-      "#0055CC",
-      "#FFB600",
-      "#FFFFFF"
+      {
+        "hex": "#0055cc",
+        "weight": 45
+      },
+      {
+        "hex": "#ffb600",
+        "weight": 35
+      },
+      {
+        "hex": "#ffffff",
+        "weight": 20
+      }
     ],
-    "neutral": [],
-    "themeColor": null,
+    "neutral": [
+      {
+        "hex": "#f4f6fa",
+        "weight": 70
+      },
+      {
+        "hex": "#101418",
+        "weight": 30
+      }
+    ],
+    "themeColor": "#0055cc",
     "source": "vision"
   },
   "fonts": [],
@@ -36,6 +54,7 @@
   "notes": [
     "facebook profile picture captured headlessly for \"manigosautorepairshop\"",
     "site unreachable over plain HTTP(S)",
-    "BLOCKER palette-pending: logo captured (logo-facebook-profile.jpg) but fewer than 2 chromatic colours found. Vision-read the logo, then write the hex values into colors.brand[] with colors.source=\"vision\" and re-run the gate."
+    "BLOCKER palette-pending: logo captured (logo-facebook-profile.jpg) but fewer than 2 chromatic colours found. Vision-read the logo, then write the hex values into colors.brand[] with colors.source=\"vision\" and re-run the gate.",
+    "FIXED shape (CLO-44, 2026-08-21): colors.brand[] arrived from step 3 as bare hex strings (\"#0055CC\"), which makes verify-brand.mjs throw on c.hex.toLowerCase() and exit non-zero. Rewritten as the canonical {hex,weight} objects. Same three vision-read hexes, no palette change."
   ]
 }

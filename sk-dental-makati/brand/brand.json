@@ -4,7 +4,7 @@
   "facebook": "skdentalclinicmakati",
   "capturedAt": "2026-08-19T23:25:53.541Z",
   "source": "headless-http",
-  "name": null,
+  "name": "SK Dental Clinic",
   "logo": {
     "file": "logo-facebook-profile.jpg",
     "score": 95,
@@ -20,18 +20,41 @@
     }
   ],
   "colors": {
-    "brand": [],
-    "neutral": [],
-    "themeColor": null,
-    "source": null
+    "brand": [
+      {
+        "hex": "#1b1b1b",
+        "weight": 50
+      },
+      {
+        "hex": "#8f8f8f",
+        "weight": 30
+      },
+      {
+        "hex": "#e9e6e6",
+        "weight": 20
+      }
+    ],
+    "neutral": [
+      {
+        "hex": "#f4f2f2",
+        "weight": 70
+      },
+      {
+        "hex": "#1b1b1b",
+        "weight": 30
+      }
+    ],
+    "themeColor": "#1b1b1b",
+    "source": "vision"
   },
   "fonts": [],
-  "ready": false,
-  "blockedBy": "palette-pending",
-  "confidence": 50,
+  "ready": true,
+  "blockedBy": null,
+  "confidence": 90,
   "notes": [
     "facebook profile picture captured headlessly for \"skdentalclinicmakati\"",
     "no website for this lead — facebook-only capture path",
-    "BLOCKER palette-pending: logo captured (logo-facebook-profile.jpg) but fewer than 2 chromatic colours found. Vision-read the logo, then write the hex values into colors.brand[] with colors.source=\"vision\" and re-run the gate."
+    "BLOCKER palette-pending: logo captured (logo-facebook-profile.jpg) but fewer than 2 chromatic colours found. Vision-read the logo, then write the hex values into colors.brand[] with colors.source=\"vision\" and re-run the gate.",
+    "RESOLVED palette-pending (CLO-44, 2026-08-21): vision-read 2026-08-21: deliberately achromatic mark — a grey tooth outline (#8f8f8f) with a black serif \"SK\" monogram (#1b1b1b) over it, \"SK DENTAL CLINIC\" in black letterspaced caps with the tagline \"Excellence in dentistry with optimum care.\", on a light greige ground (#e9e6e6). No chromatic hue is present in the logo; the greyscale IS the brand, so it is recorded as such rather than invented into a colour."
   ]
 }
