@@ -1,0 +1,41 @@
+{
+  "slug": "manigos-auto-repair-cebu",
+  "site": "none",
+  "facebook": "manigosautorepairshop",
+  "capturedAt": "2026-08-20T23:20:00.422Z",
+  "source": "headless-http",
+  "name": null,
+  "logo": {
+    "file": "logo-facebook-profile.jpg",
+    "score": 95,
+    "why": "facebook profile picture"
+  },
+  "logoFiles": [
+    {
+      "file": "logo-facebook-profile.jpg",
+      "bytes": 189886,
+      "from": "graph.facebook.com/manigosautorepairshop/picture?width=1200&height=1200",
+      "why": "facebook profile picture",
+      "score": 95
+    }
+  ],
+  "colors": {
+    "brand": [
+      "#0055CC",
+      "#FFB600",
+      "#FFFFFF"
+    ],
+    "neutral": [],
+    "themeColor": null,
+    "source": "vision"
+  },
+  "fonts": [],
+  "ready": true,
+  "blockedBy": null,
+  "confidence": 95,
+  "notes": [
+    "facebook profile picture captured headlessly for \"manigosautorepairshop\"",
+    "site unreachable over plain HTTP(S)",
+    "BLOCKER palette-pending: logo captured (logo-facebook-profile.jpg) but fewer than 2 chromatic colours found. Vision-read the logo, then write the hex values into colors.brand[] with colors.source=\"vision\" and re-run the gate."
+  ]
+}
