@@ -47,8 +47,16 @@ BRAND BLOCKED sits between STRATEGY READY and MOCKUP READY because capture runs
 before the build. It holds leads where capture returned `no-assets` — no logo
 found anywhere, so no mockup may be built. It is a human decision queue, not a
 failure bin: drop real assets into `<slug>/brand/` and the card re-enters at
-MOCKUP READY, or reject the lead. Nothing leaves this list by being built with
-an invented palette.
+**STRATEGY READY**, or reject the lead. Nothing leaves this list by being built
+with an invented palette.
+
+**MOCKUP READY means BUILT, not brand-ready.** A card belongs in MOCKUP READY
+only once `<slug>/index.html` exists and is deployed — that is the entry
+condition, and step 5 relies on it because it drafts copy that points at the
+mockup URL. Fixing a card's branding does not build it: a brand-repaired card
+goes back to STRATEGY READY so step 4's backlog pass picks it up. Anything
+sitting in MOCKUP READY whose description still reads `Mockup URL: (Agent #2
+fills)` is mis-routed and must be moved back, not drafted against.
 
 FOLLOW-UP DUE: Trello has no sequencer, so the later touches need somewhere to
 physically land. A card moves CONTACTED → FOLLOW-UP DUE when its due date comes
@@ -971,3 +979,29 @@ promise, not the diagnosis, that the menu gates.
   while every automation line stays `IN BUILD` per OFFER-MENU.md. No card was
   moved list-wise; QA marks the description in place and APPROVED remains the
   human's call.
+- 2026-08-20 (closeout, MOCKUP READY held 10 cards that were never built): at the
+  end of the run MOCKUP READY showed 10 clinic cards and READY TO SEND showed 22,
+  which reads like a healthy build queue. It was not. All 10 still carried
+  `Mockup URL: (Agent #2 fills)` in their descriptions, and all 10 slugs
+  (`smilehq-dental-makati`, `ivory-smile-dental-makati`, `sk-dental-makati`,
+  `family-smiles-dental-taguig`, `smile-specialist-cebu`, `medika-davao`,
+  `childrens-medical-clinic-davao`, `dr-jewelyn-calimbas-taguig`,
+  `parkview-clinic-makati`, `pioquinto-clinic-pasig`) contain only `brand/` on
+  `origin/main` — no `index.html`, so nothing was ever deployed for them.
+  The cause is this config, not the agent that moved them. The BRAND BLOCKED
+  paragraph used to say a brand-repaired card "re-enters at MOCKUP READY", so a
+  brand-capture sweep that fixes 10 cards correctly follows the written rule and
+  drops 10 unbuilt cards into the built queue. Step 4 then misses them — its
+  backlog source is STRATEGY READY, by definition — and step 5, which drafts
+  from MOCKUP READY, is one careless run away from writing outreach that points
+  at a mockup URL that does not exist. Nobody skipped a step; the graph was
+  wrong.
+  Fixed both ways this run: the 10 cards moved back to STRATEGY READY (MOCKUP
+  READY is now 0, STRATEGY READY 22), and the entry condition is now written
+  down — MOCKUP READY requires a deployed `<slug>/index.html`, and brand repair
+  routes to STRATEGY READY.
+  The general lesson is about queue-depth reporting: a queue count is only
+  evidence if the cards in it satisfy the list's entry condition. Every run
+  report so far has counted cards. From now on, spot-check the *condition* on
+  any queue that grew — for MOCKUP READY that is one `git ls-tree` for
+  `index.html` per slug, which is what caught this.
