@@ -153,7 +153,7 @@ const PALETTES = {
   },
 }
 
-const asColors = (pairs) => pairs.map(([hex, weight]) => ({ hex, weight }))
+const asColors = (pairs) => pairs.map(([hex, weight]) => ({ hex: hex.toLowerCase(), weight }))
 
 let ready = 0
 let stillBlocked = 0

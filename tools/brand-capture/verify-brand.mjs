@@ -56,7 +56,25 @@ else fails.push(`none of the captured logo files appear in index.html (${logoNam
 
 // 2. At least two captured brand colours have to appear in the styling.
 const lower = styling.toLowerCase()
-const hexes = (brand.colors?.brand || []).map((c) => c.hex.toLowerCase())
+const brandArray = brand.colors?.brand || []
+let hexes
+try {
+  hexes = brandArray.map((c) => {
+    if (typeof c === 'string') {
+      console.error(
+        `FAIL: colors.brand[] contains bare hex strings instead of objects.` +
+        `\n  Expected format: {hex, weight}. Example: {hex: "#0055cc", weight: 45}` +
+        `\n  Found: ${c}`
+      )
+      process.exit(1)
+    }
+    if (!c.hex) throw new Error(`missing hex property in colors.brand entry`)
+    return c.hex.toLowerCase()
+  })
+} catch (e) {
+  console.error(`FAIL: malformed colors.brand[]: ${e.message}`)
+  process.exit(1)
+}
 const hexUsed = hexes.filter((h) => lower.includes(h))
 if (hexUsed.length >= 2) passes.push(`brand colours used: ${hexUsed.join(' ')}`)
 else fails.push(`only ${hexUsed.length} of ${hexes.length} captured brand colours used (need 2) — palette is invented, not the prospect's`)
