@@ -309,11 +309,27 @@ is not optional and it is not prose-only. Minimum contents:
   UI: the public API has no create-workflow and no snapshot operation (checked
   2026-08-19 across all 302 registry operations). Add names/IDs here once built.
   STL 7 needs no transcription — it is built and tested in n8n at
-  `automation/n8n/workflows/weekly-owner-report-v1.json`.
+  `automation/n8n/workflows/weekly-owner-report-v1.json`, and as of 2026-08-21
+  it is verified running on the live instance, not just in the local harness.
+- **STL 1–6 have never executed. Do not read "STL 1 first touch" as built.**
+  What runs today is the *n8n intake half* of STL 1: normalise, compose,
+  sandbox-deliver, measure. Everything downstream — qualification, booking,
+  reminders, no-show recovery, reactivation — is a specification with zero
+  execution behind it, and stays that way until a GHL sandbox sub-account
+  exists. The engine is named "Speed-to-Lead + Booking Engine"; the Booking
+  Engine is the unbuilt half.
 - Speed-to-lead intake runs in n8n and is proven without a GHL account:
   `node automation/n8n/test/speed-to-lead-smoke.mjs` (9 scenarios) and
   `node automation/n8n/test/weekly-report-smoke.mjs` (every report figure).
   Both must exit 0 before anyone records a walkthrough or quotes a number.
+- **Run both against the live instance too, and quote only those numbers.**
+  Add `--url http://127.0.0.1:5678/webhook/speed-to-lead` (and
+  `.../weekly-owner-report`). First live run 2026-08-21 on n8n 2.35.3: intake
+  9/9, worst case **241 ms of a 60 000 ms budget**. Local mode proves logic
+  only — it injects a fake `$env` the host does not have, and it cannot see a
+  deactivated workflow. It passed green while the live weekly report was
+  rendering "Your clinic -- week of this week". Both bugs are fixed; the lesson
+  is that a local pass is not evidence a prospect can be shown.
 - **Messenger is drafted, never auto-sent.** A Facebook lead with only a thread
   id is a valid lead — the engine writes the reply and queues it for a human
   with a 60-second deadline. It reports `automated: false` and is excluded from

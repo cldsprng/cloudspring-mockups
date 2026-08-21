@@ -98,7 +98,7 @@
     {
       "parameters": {
         "mode": "runOnceForAllItems",
-        "jsCode": "// The GHL agency API is unconfigured (list_locations -> \"dependencies are not\n// configured\"). Rather than stall the demo, park a replay-ready payload. When\n// the credential is restored, the true branch takes over and this queue is\n// drained -- see automation/n8n/README.md, \"When the GHL credential comes back\".\nconst configured = ($env.GHL_SANDBOX_LOCATION_ID || '').trim().length > 0;\n\nreturn $input.all().map((item) => ({\n  json: {\n    ...item.json,\n    ghl: {\n      configured,\n      pipeline_id: '7yd9fhvPcfz1vqbF3kxN',\n      stage: 'New Lead',\n      tags: ['speed-to-lead', 'source-' + item.json.lead.source],\n      upsert_payload: {\n        firstName: item.json.lead.name,\n        phone: item.json.lead.phone,\n        email: item.json.lead.email,\n        source: item.json.lead.source,\n      },\n    },\n  },\n}));"
+        "jsCode": "// The GHL credential is NOT the thing that is missing. The API works and has\n// since 2026-08-19; the old \"list_locations -> dependencies are not configured\"\n// reading was a broken helper on a single-location connection, not an outage.\n//\n// What is missing is a SANDBOX location. The only connected location is\n// CloudSpring IT Solutions itself, which holds live client pipelines and two\n// published workflows, so a demo contact written there could fire real outbound\n// from the company number. Until a sandbox sub-account exists, park a\n// replay-ready payload rather than stall the demo -- see automation/n8n/README.md.\nconst configured = ($env.GHL_SANDBOX_LOCATION_ID || '').trim().length > 0;\n\nreturn $input.all().map((item) => ({\n  json: {\n    ...item.json,\n    ghl: {\n      configured,\n      // NOT defaulted. 7yd9fhvPcfz1vqbF3kxN is the live CLOUDSPRING WEB LEADS\n      // pipeline in production; baking it in here meant that the moment a\n      // sandbox location id was set, the upsert would aim demo contacts at a\n      // real pipeline. The sandbox supplies its own id or the upsert has none.\n      pipeline_id: $env.GHL_SANDBOX_PIPELINE_ID || null,\n      stage: 'New Lead',\n      tags: ['speed-to-lead', 'source-' + item.json.lead.source],\n      upsert_payload: {\n        firstName: item.json.lead.name,\n        phone: item.json.lead.phone,\n        email: item.json.lead.email,\n        source: item.json.lead.source,\n      },\n    },\n  },\n}));"
       },
       "id": "ghl-gate",
       "name": "GHL Gate",
@@ -161,7 +161,7 @@
     {
       "parameters": {
         "mode": "runOnceForAllItems",
-        "jsCode": "// GHL not configured -- record the contact upsert so nothing is lost.\nreturn $input.all().map((item) => ({\n  json: { ...item.json, crm: { status: 'queued_for_replay', reason: 'ghl_credential_unconfigured' } },\n}));"
+        "jsCode": "// No sandbox location -- record the contact upsert so nothing is lost. The\n// reason string names the actual gap: the credential works, the sandbox does\n// not exist. Four earlier runs stalled on the wrong diagnosis; do not put\n// \"credential\" back in this string.\nreturn $input.all().map((item) => ({\n  json: { ...item.json, crm: { status: 'queued_for_replay', reason: 'ghl_sandbox_location_unset' } },\n}));"
       },
       "id": "queue-for-ghl-replay",
       "name": "Queue For GHL Replay",

@@ -1,8 +1,8 @@
 {
   "snapshot": "cloudspring-speed-to-lead-clinic",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "niche": "clinic",
-  "status": "spec-complete-awaiting-sandbox",
+  "status": "partial -- n8n half runs live, GHL half unbuilt (no sandbox sub-account)",
   "description": "Speed-to-Lead + Booking Engine v1. Inbound (form / Messenger / missed call) -> SMS+email inside 60s, Messenger drafted for a human -> AI qualification -> booked -> reminders -> no-show recovery -> reactivation -> weekly owner report.",
   "buildSurface": {
     "note": "GHL workflows and snapshots are UI-only. The public API exposes no create-workflow and no create-snapshot operation (verified 2026-08-19 against 302 registry operations). Everything in workflows[] below is built by hand in the GHL UI from speed-to-lead-snapshot-v1.md, then exported as a snapshot.",
@@ -214,9 +214,41 @@
   "verification": {
     "commands": [
       "node automation/n8n/test/speed-to-lead-smoke.mjs",
-      "node automation/n8n/test/weekly-report-smoke.mjs"
+      "node automation/n8n/test/weekly-report-smoke.mjs",
+      "node automation/n8n/test/speed-to-lead-smoke.mjs --url http://127.0.0.1:5678/webhook/speed-to-lead",
+      "node automation/n8n/test/weekly-report-smoke.mjs --url http://127.0.0.1:5678/webhook/weekly-owner-report"
     ],
-    "lastRun": "2026-08-19",
-    "result": "intake: 9/9 scenarios passed, 11/12 nodes exercised, worst case 3 ms of a 60000 ms budget. report: every metric matched the hand-computed fixture. Negative tests confirmed both the live-transport swap and a Messenger auto-send are caught."
+    "lastRun": "2026-08-21",
+    "localResult": "intake: 9/9 scenarios, 11/12 nodes exercised, worst case 3 ms of a 60000 ms budget. report: every metric matched.",
+    "remoteResult": "FIRST RUN AGAINST LIVE n8n 2.35.3. intake: 9/9 scenarios, worst case 241 ms of a 60000 ms budget (0.4%). report: every metric matched. These are the numbers to quote -- local-mode figures prove logic only, never transport.",
+    "negativeTests": [
+      "live transport swapped for sandbox-sink -> harness fails, exits non-zero (2026-08-19)",
+      "Messenger action reports delivered -> harness fails both Messenger scenarios (2026-08-19)",
+      "production GoHighLevel id hardcoded in the workflow -> harness refuses to run, names the node (2026-08-21)"
+    ],
+    "foundByRemoteMode": [
+      "Weekly report rendered \"Your clinic -- week of this week\" against live n8n while passing locally: clinic and week_of were read from $env only, and the local harness injects a fake $env the host does not have. Fixed -- payload -> env -> derived.",
+      "n8n import:workflow deactivates workflows and reports success; every webhook 404s until publish:workflow + restart. Local mode reads JSON off disk and cannot see this."
+    ]
+  },
+  "endToEnd": {
+    "runsToday": [
+      "inbound normalise across 4 shapes (web form, Facebook message, missed call, email-only)",
+      "first-touch SMS + email composed and delivered to the sandbox sink",
+      "Messenger drafted, deep-linked and queued for a human with a 60s due_by",
+      "response time measured against the 60s budget",
+      "weekly owner report aggregated and rendered"
+    ],
+    "neverRun": [
+      "STL 2 AI qualification",
+      "STL 3 booking confirmation",
+      "STL 4 reminders",
+      "STL 5 no-show recovery",
+      "STL 6 reactivation",
+      "contact upsert into any CRM (queued_for_replay, ghl_sandbox_location_unset)",
+      "snapshot export",
+      "snapshot restore into a second account"
+    ],
+    "note": "The Speed-to-Lead half runs and is measured. The Booking Engine half has never executed -- it is spec-complete and zero-built, because GHL workflows are UI-only and the only connected location is production. Do not read \"9/9 passing\" as end to end."
   }
 }

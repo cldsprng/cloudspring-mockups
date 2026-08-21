@@ -282,6 +282,12 @@ function checkLocal(scenario, res) {
     if (crmStatus !== expected) {
       problems.push(`expected crm.status="${expected}", got "${crmStatus}"`)
     }
+    // The reason must name the real gap. "credential" is the diagnosis that
+    // stalled four consecutive runs: the GHL API works and has since
+    // 2026-08-19 -- what is missing is a sandbox location to write into.
+    if (crmStatus === 'queued_for_replay' && out.crm?.reason !== 'ghl_sandbox_location_unset') {
+      problems.push(`crm.reason="${out.crm?.reason}" -- must be ghl_sandbox_location_unset`)
+    }
   } else {
     for (const p of scenario.expect.problems ?? []) {
       if (!(out.problems ?? []).includes(p)) {
@@ -320,6 +326,33 @@ async function postRemote(url, body) {
 const wf = JSON.parse(await readFile(WORKFLOW, 'utf8'))
 const byName = loadGraph(wf)
 const remote = typeof args.url === 'string' ? args.url : null
+
+// Structural guard, checked before a single scenario runs. No live CloudSpring
+// id may sit in this workflow as a literal, because every one of them belongs
+// to the production location -- the one holding real client pipelines and two
+// published workflows. A hardcoded id means the day someone sets
+// GHL_SANDBOX_LOCATION_ID, the upsert aims demo contacts at a real pipeline and
+// fires real outbound from the company number. Sandbox ids come from $env only.
+const PRODUCTION_IDS = {
+  AtaR2iB3BL1hlhP4oU26: 'CloudSpring IT Solutions location',
+  '7yd9fhvPcfz1vqbF3kxN': 'CLOUDSPRING WEB LEADS pipeline',
+  iaVwRhCMOnZaxNN9b5Xb: 'EASYCHURCH PH pipeline',
+  irkYOyW3p29hxRyCR4To: 'MYHOMS PH pipeline',
+}
+const leaked = []
+for (const n of wf.nodes) {
+  const src = JSON.stringify(n.parameters ?? {})
+  for (const [id, what] of Object.entries(PRODUCTION_IDS)) {
+    // A comment explaining why the id is banned is fine; a value is not.
+    const asValue = new RegExp(`['"\`]${id}['"\`]`)
+    if (asValue.test(src)) leaked.push(`${n.name}: ${what} (${id})`)
+  }
+}
+if (leaked.length) {
+  console.log('FAILED -- production GoHighLevel ids hardcoded in the workflow:')
+  for (const l of leaked) console.log(`  - ${l}`)
+  process.exit(1)
+}
 
 console.log(`Speed-to-Lead smoke test -- ${remote ? `REMOTE ${remote}` : 'LOCAL (no n8n needed)'}`)
 console.log(`workflow: ${wf.name}   budget: ${BUDGET_MS} ms`)

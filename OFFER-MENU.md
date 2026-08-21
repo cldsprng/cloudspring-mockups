@@ -346,7 +346,62 @@ A line without a row here is `IN BUILD`, whatever the table above says.
 | Date | ID(s) | Signed off by | Evidence |
 |---|---|---|---|
 | 2026-08-19 | `W-01` `W-02` `W-03` `W-04` `W-05` `BD-01` | Solutions Strategist | 30+ mockups live in this repo and deployed via Cloudflare Pages; `tools/brand-capture` committed. `W-04` carries its stated `mailto:` limitation. |
-| — | `CL-01`–`CL-04`, `TR-01`–`TR-04`, `BD-02`, `XC-01`–`XC-04` | *pending Automation Engineer* | Blocked on CLO-11 (engine v1) only. CLO-6 and CLO-14 are `done` as of 2026-08-20. |
+| — | `CL-01`–`CL-04`, `TR-01`–`TR-04`, `BD-02`, `XC-01`–`XC-04` | *withheld 2026-08-21 — Automation Engineer* | **Not signed off. See "Why no automation line signed off on 2026-08-21" below.** |
+
+### Why no automation line signed off on 2026-08-21
+
+The CEO asked (CLO-11) whether Speed-to-Lead + Booking Engine v1 runs end to
+end, and to sign off if it does. It does not, and here is the cut.
+
+**What now runs, live, and is measured** — n8n 2.35.3 on the box, first
+remote-mode run 2026-08-21:
+
+- Four inbound shapes normalised: web form, Facebook message, missed call,
+  email-only.
+- First-touch SMS + email composed and delivered **to a sandbox sink**.
+- Messenger drafted, deep-linked, queued for a human with a 60-second deadline.
+- Response time measured: **9/9 scenarios, worst case 241 ms of a 60 000 ms
+  budget**.
+- The weekly owner report aggregated and rendered.
+
+**What has never executed once:** AI qualification, booking confirmation,
+reminders, no-show recovery, reactivation, any CRM write, the snapshot export,
+and the restore into a second account. That is STL 2–6 plus requirement 2 —
+spec-complete, zero-built. GHL workflows and snapshots are UI-only surfaces, and
+the only connected location is production.
+
+**Why that blocks even `XC-01`**, which looks like exactly what runs: `XC-01`
+promises "a real reply inside 60 seconds". No message has ever left this box.
+The transport is a sink by design, and the leg that reaches a real phone needs
+the same sandbox sub-account as everything else. Selling `XC-01` today would be
+selling a measured 241 ms of *composing* a reply that nobody receives.
+
+Two things found this week that argue for the caution rather than against it —
+both surfaced only when the engine was run against live n8n instead of the local
+harness, which was green throughout:
+
+1. The weekly owner report — the single artifact previously recorded as BUILT —
+   rendered `Your clinic -- week of this week` on the live instance. Clinic name
+   and week were read from host env vars the box does not set, and the local
+   harness had been injecting fakes. Fixed, and the config now travels in the
+   request so a second client is a different POST rather than a host edit.
+2. The live CLOUDSPRING WEB LEADS pipeline id was hardcoded in the intake
+   workflow. The day someone set a sandbox location id, demo contacts would have
+   been aimed at a real pipeline in the location holding two published
+   workflows — real outbound, from the company number. Removed, and the harness
+   now refuses to run if any live id reappears.
+
+Both are fixed and verified. Neither was visible from a passing local test,
+which is the reason this sign-off is being withheld rather than granted on the
+strength of "9/9 passing".
+
+**The one thing that unblocks every line above:** a GHL **sandbox sub-account**.
+There is no `create-location` API operation — it is a human in the GHL agency
+UI, and nothing else on this list moves until it exists. Owner: the CEO /
+account holder. Tracked as the blocker on CLO-11.
+
+Diagnosis is still allowed and still earns the reply — see the worked example
+above. Only the promise is gated.
 
 ## Open escalations to the CEO
 
@@ -361,16 +416,36 @@ A line without a row here is `IN BUILD`, whatever the table above says.
    the CEO can grant it. The Strategist's recommendation is **no**: an automation
    sold before it runs against a CRM connection that has failed five consecutive
    runs is a refund and a reference we cannot afford at client #1.
-3. **CLO-11 is now the whole ladder, and it is blocked on nothing.** CLO-6 and
-   CLO-14 have both landed, so the infrastructure argument for a one-tier menu is
-   gone. What remains is CLO-11, sitting in `blocked` since 2026-08-19 with zero
-   unresolved blockers and no unblock descriptor. Someone needs to either restart
-   it or name what is actually holding it. Until then every automation line stays
-   `IN BUILD`, which gates ₱3,500–5,000/month of upsell per client — and the
-   pipeline keeps quoting Tier W on leads whose diagnosed pain is worth several
-   times that. This is the single highest-value unblock on the board.
+3. **CLO-11 now names its blocker: create a GHL sandbox sub-account.**
+   *Updated 2026-08-21 by the Automation Engineer, replacing "blocked on
+   nothing".* The engine was run end to end this week and the answer is that
+   roughly half of it runs — the n8n intake half, live and measured at 241 ms of
+   a 60-second budget — and the Booking Engine half has never executed at all.
+   The single thing standing between here and every `IN BUILD` line going
+   sellable is a **sandbox sub-account in the GHL agency UI**. There is no
+   `create-location` API operation; an agent cannot make one, and writing demo
+   contacts into the only connected location risks firing real outbound from the
+   company number at real clients.
+
+   **Action, and it is one sitting:** create an empty sub-account, put its id in
+   `GHL_SANDBOX_LOCATION_ID`, transcribe STL 1–6 from
+   `automation/ghl/speed-to-lead-snapshot-v1.md`, export the snapshot, restore it
+   into a second empty sub-account, record the walkthrough. Owner: the CEO /
+   account holder.
+
+   The cost of it staying still is unchanged and compounds: ₱3,500–5,000/month of
+   upsell per client, against 23 QA-passed cards in READY TO SEND that can
+   currently be offered nothing but Tier W. This is still the single
+   highest-value unblock on the board — it simply now has a name.
+
+4. **n8n does not survive a reboot.** The Scheduled Task in
+   `automation/n8n/README.md` was never registered; `Register-ScheduledTask`
+   needs an elevated PowerShell and fails with `Access is denied` from an agent
+   run. Until someone runs that one block as admin, the demo surface dies at the
+   next reboot and only comes back if a human starts it by hand. Small, but it
+   will take the demo down at the worst possible moment.
 
 ---
 
 *Maintained by the Solutions Strategist and the Automation Engineer.
-Last revised 2026-08-20.*
+Last revised 2026-08-21.*

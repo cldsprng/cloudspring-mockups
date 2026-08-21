@@ -52,6 +52,22 @@ node automation/n8n/test/speed-to-lead-smoke.mjs --url https://<host>/webhook/sp
 Local mode proves the logic and the pipeline budget. Only remote mode proves
 network transport — quote remote-mode numbers to prospects, never local ones.
 
+**Remote-mode numbers now exist.** First run against live n8n 2.35.3 on
+2026-08-21: intake **9/9 scenarios, worst case 241 ms of a 60 000 ms budget
+(0.4%)**; weekly report every metric matched. Those are the figures to quote.
+They cover normalise → compose → sandbox delivery → measure. They do **not**
+cover a real SMS or email leaving the box, because nothing does that yet.
+
+Running remote mode is not optional diligence — it is the only mode that finds
+certain bugs. Two examples, both caught on the first remote run and both green
+in local mode at the time:
+
+- The weekly report rendered `Your clinic -- week of this week`. The clinic name
+  and week came from `$env` alone, and the local harness *supplies* a fake `$env`
+  the real host does not have. See "Config resolution" below.
+- `import:workflow` had silently deactivated both workflows. Local mode reads the
+  JSON off disk and never notices.
+
 ## The host
 
 Where n8n actually runs, and how it comes back after a reboot (CLO-14).
@@ -112,6 +128,33 @@ n8n export:workflow --all --pretty --separate --output=automation/n8n/workflows
 Commit the export diff after any UI edit, or the next client deployment ships
 whatever was last committed rather than what was last built.
 
+> **`import:workflow` takes the demo down. Importing is three commands, not one.**
+>
+> On n8n 2.x an import *deactivates* every workflow it touches — it prints
+> `Deactivating workflow "speed-to-lead-intake-v1"` and then reports success, so
+> it reads like it worked. The webhooks are dead from that moment and every call
+> returns **404**, with `Active version not found for workflow with id ...` in
+> the log. Setting `active = 1` in the database does not fix it: 2.x needs a
+> *published version*, and `import` does not create one.
+>
+> `n8n update:workflow --all --active=true` — which the older runbooks reach for
+> — is deprecated and does nothing but print a warning.
+>
+> The sequence that actually works, verified 2026-08-21:
+>
+> ```powershell
+> n8n import:workflow --separate --input=automation/n8n/workflows
+> n8n publish:workflow --id=SpeedToLeadIntakeV1
+> n8n publish:workflow --id=WeeklyOwnerReportV1
+> # then restart n8n -- publish says so itself, and it means it
+> ```
+>
+> Confirm with a real call before you believe it. Webhook registration lags
+> `/healthz` by roughly 30 seconds after a restart: healthz answers `ok` while
+> the webhook still returns 404, then 000, then 200. Poll the webhook, not
+> healthz, or you will conclude the import failed when it merely had not
+> finished. Never demo straight off a restart.
+
 > This repo is public — Cloudflare Pages serves it at
 > `preview.cloudspringitsolutions.com`. n8n exports carry credential
 > *references*, never credential *values*, so nothing here is sensitive. Keep it
@@ -135,6 +178,41 @@ front of it is not something to leave running.
 | `STL_DELIVERY_MODE` | `sandbox` | Only `sandbox` is wired. Any other value makes the transport node throw rather than silently drop messages. |
 | `STL_BOOKING_URL` | CloudSpring discovery call | Booking link in first-touch copy |
 | `GHL_SANDBOX_LOCATION_ID` | *(empty)* | Empty ⇒ leads queue for replay. Set ⇒ upsert path runs. |
+| `GHL_SANDBOX_PIPELINE_ID` | *(empty)* | Pipeline the upsert targets. **No default, deliberately** — see below. |
+| `STL_CLINIC_NAME` | `Your clinic` | Report header. Fallback only; the payload should name the clinic. |
+| `STL_REPORT_WEEK_OF` | *(derived)* | Last-resort fallback. Normally derived from the data. |
+
+### Config resolution
+
+The weekly report resolves its identity **payload → env → default**, and
+`week_of` additionally **derives** from the rows when no caller names it (the
+Monday on or before the earliest lead).
+
+That ordering is not cosmetic. Reading these from `$env` alone had two costs:
+
+1. The live report rendered `Your clinic -- week of this week` — no name, no
+   date — because the host `.env` has neither variable set. The local harness
+   hid this by injecting a fake `$env`.
+2. One n8n instance could only ever report for **one** clinic, and a second
+   client would mean editing the host `.env` and restarting. That is
+   construction, not configuration, which is exactly what requirement 2 of
+   CLO-11 forbids. A second client is now a different POST body.
+
+A static `STL_REPORT_WEEK_OF` also goes stale the week after it is set, which is
+why derivation sits above it: the Monday schedule carries no payload, and a
+report that names the wrong week is worse than one that names none.
+
+### Production ids are banned from the workflow
+
+`GHL_SANDBOX_PIPELINE_ID` has no default. It used to: `7yd9fhvPcfz1vqbF3kxN`,
+the **live CLOUDSPRING WEB LEADS pipeline**, was hardcoded in `GHL Gate`. The
+day someone sets `GHL_SANDBOX_LOCATION_ID`, that would have aimed demo contacts
+at a real pipeline in the location that holds two published workflows — real
+outbound, from the company number, to real people.
+
+`speed-to-lead-smoke.mjs` now refuses to run at all if any live CloudSpring id
+appears as a literal value in the workflow, and names the node. Verified
+2026-08-21 against the pre-fix file: it fails and exits non-zero.
 
 ## The safety boundary
 
@@ -172,16 +250,18 @@ The GHL *credential* is working (confirmed 2026-08-19). What is missing is a
 sandbox sub-account to build in. The connector is bound to a single location —
 CloudSpring IT Solutions itself — which holds live client pipelines.
 
-> **Reachability differs by session.** From the Automation Engineer's run on
-> 2026-08-19, `list_locations` still returned
-> `list_locations dependencies are not configured` — the fifth consecutive
-> failure from that session. Whoever picks up the GHL work should re-check from
-> their own session before assuming either state.
+> **Do not health-check with `list_locations`.** It returns
+> `dependencies are not configured` on this connection and always will — the
+> helper is meaningless when the connector is bound to a single location. It is
+> not an outage signal, and reading it as one is what recorded GHL as broken for
+> four consecutive runs. Use a real read instead:
+> `execute_operation` → `get-pipelines`. Re-confirmed **2026-08-21**: HTTP 200,
+> three live pipelines, location `AtaR2iB3BL1hlhP4oU26`.
 >
 > It changes nothing about the build: with no sandbox sub-account,
 > `GHL_SANDBOX_LOCATION_ID` stays empty and the gate below routes leads to
-> `Queue For GHL Replay` either way. Both readings agree on the next action —
-> get a sandbox sub-account.
+> `Queue For GHL Replay`. The next action is unchanged — get a sandbox
+> sub-account.
 
 Once a sandbox exists:
 
@@ -200,32 +280,47 @@ Once a sandbox exists:
 **Install the intake workflow**
 
 1. n8n → Workflows → Import from File → `workflows/speed-to-lead-intake-v1.json`
+   (importing from the CLI instead? read the `import:workflow` warning above
+   first — it deactivates, and you must `publish:workflow` and restart)
 2. Set the environment variables above on the n8n instance
 3. Activate. Copy the production webhook URL.
-4. Verify: `node automation/n8n/test/speed-to-lead-smoke.mjs --url <that URL>`
+4. Verify against that URL — **not** in local mode, which cannot see a
+   deactivated workflow, a missing env var or a network problem:
+   `node automation/n8n/test/speed-to-lead-smoke.mjs --url <that URL>`
+   Poll until it answers 200; registration lags a restart by ~30s.
+5. Verify the report too:
+   `node automation/n8n/test/weekly-report-smoke.mjs --url <report URL>`
 
 **Point GHL at it**
 
-5. In STL 1 step 8, set the webhook action to the URL from step 3
-6. Set custom value `n8n_webhook_url` to the same URL
+6. In STL 1 step 8, set the webhook action to the URL from step 3
+7. Set custom value `n8n_webhook_url` to the same URL
 
 **Per-client redeploy** (target: under 5 working days)
 
-7. Load the snapshot into the client sub-account
-8. Edit only `configPoints` in `snapshot-manifest.json`, apply as custom values
-9. Swap the sandbox sender for the client's own number — this is the *only*
-   point where live sending is enabled, and it needs CEO sign-off
-10. Run the acceptance test in the build spec
+8. Load the snapshot into the client sub-account
+9. Edit only `configPoints` in `snapshot-manifest.json`, apply as custom values.
+   `clinic_name` and `week_of` go in the report **payload**, not the host `.env`
+   — one n8n instance serves every client.
+10. Swap the sandbox sender for the client's own number — this is the *only*
+    point where live sending is enabled, and it needs CEO sign-off
+11. Run the acceptance test in the build spec
 
 ## Known gaps
 
 - **No sandbox sub-account.** Blocks end-to-end and snapshot-restore proof.
   This is the single blocker on CLO-11 — see "When the sandbox sub-account
   exists" above. It needs a human in the GHL agency UI; there is no API for it.
-- **n8n not currently running.** It is installed and `start-n8n.ps1` is in
-  place, but nothing answered on `:5678` as of 2026-08-19, so no remote-mode
-  numbers exist yet. Start it before quoting a round-trip figure to a prospect.
-  Local mode is unaffected and passes today.
+- ~~**n8n not currently running.**~~ **Closed 2026-08-21.** n8n 2.35.3 is up on
+  `:5678`, both workflows imported, published and active, and remote-mode
+  numbers exist (see "Run the proof").
+- **n8n does not survive a reboot yet.** The Scheduled Task documented above
+  under "Surviving a reboot" **is not registered** — `Get-ScheduledTask` finds
+  nothing, and `Register-ScheduledTask` fails with `Access is denied` from a
+  non-elevated session. Until someone runs that block in an **admin** PowerShell,
+  the demo surface dies at the next reboot and comes back only if a human runs
+  `start-n8n.ps1` by hand. One command, needs elevation, cannot be automated
+  from an agent run.
 - **`Upsert GHL Contact` is a placeholder**, inert by design so the workflow
   imports and runs cleanly either way.
 - **The weekly report runs on supplied rows, not a live GHL fetch.** STL 7 is

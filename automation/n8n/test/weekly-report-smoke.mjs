@@ -137,7 +137,11 @@ if (remote) {
   const res = await fetch(remote, {
     method: 'POST',
     headers: { 'content-type': 'application/json' },
-    body: JSON.stringify({ rows: ROWS }),
+    // Remote names the clinic and the week in the payload -- that is how a real
+    // caller does it, and it is what makes a second client a different POST
+    // rather than a host .env edit. Local (below) deliberately omits both so
+    // the $env fallback the Monday schedule depends on stays covered too.
+    body: JSON.stringify({ rows: ROWS, clinic: ENV.STL_CLINIC_NAME, week_of: ENV.STL_REPORT_WEEK_OF }),
   })
   if (res.status !== 200) problems.push(`HTTP ${res.status}`)
   out = await res.json()
