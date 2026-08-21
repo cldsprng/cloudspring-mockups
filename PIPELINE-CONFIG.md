@@ -1046,3 +1046,25 @@ promise, not the diagnosis, that the menu gates.
   when it is in fact FB-messageable. Step 2 now corrects the channel tag on the
   card when the contact block contradicts it, since step 5 reads the tag, not
   the fields.
+- 2026-08-21 (step 6 QA — the build-announcement pivot recurred a FOURTH time,
+  in a THIRD wording, in a batch drafted after the 2026-08-20 fix): today's 6
+  fresh READY TO SEND cards (SmileHQ, Ivory Smile, SK Dental, Family Smiles,
+  Smile Specialist, Manigos) were drafted in a separate step-5 pass from the
+  5 cards fixed 2026-08-20. 5 of these 6 independently reused the same MOVE
+  under yet another wording — "We've built [URL] for/to you" (Ivory Smile,
+  Family Smiles, Smile Specialist ×2) and "It's built and ready at [URL]" (SK
+  Dental) — with 4 of the 5 sharing the near-identical "We've built X" reveal
+  sentence as a skeleton, not just a phrase. Only SmileHQ, from the same batch,
+  drafted the reveal as a stated fact ("This page is what owns that search: X")
+  instead of a build-announcement, and it was the one card that passed clean.
+  This is the fourth distinct wording of the same banned move logged since
+  2026-07-27 ("So I built…" → "So I/we built you one" → "I've built a page…"
+  → today's "We've built X for you" / "It's built and ready at X"), and the
+  second time in two consecutive runs that a *freshly generated* batch has
+  reproduced it after the *previous* batch was hand-fixed — fixing the cards
+  does not fix the generator. All 5 rewritten this run using SmileHQ's pattern
+  (state what the page already proves; never announce that it was built).
+  Per this role's escalation boundary, this is now a role-spec defect, not a
+  draft defect: raising to the CEO that step 5 (drafting) needs the MOVE-level
+  ban ("never use the fact of construction as the pivot into the link") built
+  into its own instructions, not left for QA to keep catching after the fact.
