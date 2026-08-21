@@ -1129,3 +1129,21 @@ promise, not the diagnosis, that the menu gates.
   step that shipped; the closing leg of every run should diff against
   `origin/main` before writing the report, because the report is read as the
   record of what landed.
+- 2026-08-21 (the daily run had a second, dead copy of itself sitting on the
+  board, assigned and one status change away from running): closing out the run,
+  the board held **two** issues titled "Daily pipeline run (Asia/Manila)". The
+  live one is the routine that produced CLO-41..CLO-47. The other was created
+  2026-08-18T23:00Z with a byte-identical description, its run died in terminal
+  recovery 54 seconds later, and Paperclip auto-moved it to `blocked` with the
+  note "no live execution path". It then sat untouched for three days. Checked
+  before touching it, exactly as this log now requires for any `blocked` claim:
+  `unresolvedBlockerCount` unset, `blockedByIssueIds` empty, `unblockDescriptor`
+  null. Nothing was blocking it — it was a dead instance, not a waiting one.
+  Cancelled it. This is the same failure the run description warns about in
+  words ("do not re-create a second lead-gen job... a full day's quota was
+  silently absorbed twice"), arriving by a route the warning does not cover:
+  nobody created the duplicate on purpose, **run recovery did**, and it parked
+  it in a status that reads as "needs attention" rather than "should not exist."
+  Standing check for the closing leg of every run: list issues by title and
+  confirm the daily run is exactly one live card. A recovery-orphaned routine is
+  not a blocker to resolve, it is a duplicate to cancel.
