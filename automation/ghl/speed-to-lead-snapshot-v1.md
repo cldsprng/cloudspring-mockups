@@ -22,8 +22,23 @@ reference is a config point from the manifest.
    Solutions location (`AtaR2iB3BL1hlhP4oU26`) — that account holds the live
    EASYCHURCH PH, MYHOMS PH and CLOUDSPRING WEB LEADS pipelines and two
    published workflows.
-2. Create the custom fields, custom values and tags from `snapshot-manifest.json`.
-3. Set **every** outbound channel to the sandbox number/sender. No real
+2. Create the **pipeline** by hand, with stage 1 named **New Lead**. This is a UI
+   step, not an API one: the `opportunities` domain has no `create-pipeline`
+   operation (re-verified 2026-08-21 — it can read pipelines and act on a deal
+   inside one, nothing more). STL 1 action 4 cannot be built until it exists.
+   Put its id in `GHL_SANDBOX_PIPELINE_ID` and in the `pipeline_id` custom value.
+3. Create the **booking calendar**, and put its id in `booking_calendar_id`.
+   STL 3 and STL 4 both trigger off it.
+4. Create the custom fields, custom values and tags from `snapshot-manifest.json`.
+   Do not hand-type 29 records — generate the plan and have an agent execute it:
+
+   ```bash
+   node automation/ghl/provision-sandbox.mjs --location <sandboxLocationId>
+   ```
+
+   It refuses to run against any production id. The two ids from steps 2 and 3
+   come back as `[defer]` entries — fill them once those exist.
+5. Set **every** outbound channel to the sandbox number/sender. No real
    recipient numbers, ever.
 
 ---

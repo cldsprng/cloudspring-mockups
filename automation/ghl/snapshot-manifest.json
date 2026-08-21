@@ -5,18 +5,21 @@
   "status": "partial -- n8n half runs live, GHL half unbuilt (no sandbox sub-account)",
   "description": "Speed-to-Lead + Booking Engine v1. Inbound (form / Messenger / missed call) -> SMS+email inside 60s, Messenger drafted for a human -> AI qualification -> booked -> reminders -> no-show recovery -> reactivation -> weekly owner report.",
   "buildSurface": {
-    "note": "GHL workflows and snapshots are UI-only. The public API exposes no create-workflow and no create-snapshot operation (verified 2026-08-19 against 302 registry operations). Everything in workflows[] below is built by hand in the GHL UI from speed-to-lead-snapshot-v1.md, then exported as a snapshot.",
+    "note": "GHL workflows, snapshots, sub-accounts and pipelines are UI-only. The public API exposes no create-workflow, no create-snapshot, no create-location and no create-pipeline operation (re-verified 2026-08-21). Everything in workflows[] below is built by hand in the GHL UI from speed-to-lead-snapshot-v1.md, then exported as a snapshot.",
     "apiBuildable": [
       "customFields",
       "customValues",
       "tags",
-      "pipeline",
       "calendar"
     ],
     "uiOnly": [
+      "location",
+      "pipeline",
       "workflows",
       "snapshot"
-    ]
+    ],
+    "pipelineCorrection": "pipeline was listed as apiBuildable until 2026-08-21. It is not. The opportunities domain exposes exactly 5 operations -- get-pipelines, search-opportunity, create-opportunity, Upsert-opportunity, update-opportunity(+status/followers/delete) -- every one of which reads pipelines or acts on a single deal inside one. Nothing creates a pipeline. This matters because STL 1 action 4 creates an opportunity against custom_values.pipeline_id, and GHL_SANDBOX_PIPELINE_ID cannot be filled until a human makes that pipeline in the UI.",
+    "provisioning": "automation/ghl/provision-sandbox.mjs emits the verified call plan for the apiBuildable list (29 calls). It refuses to target any production id."
   },
   "configPoints": {
     "comment": "Everything a new client changes. Client #2 edits only this block -- that is what makes redeploy configuration, not construction. Set as GHL Custom Values so workflow copy never hardcodes a clinic name.",
