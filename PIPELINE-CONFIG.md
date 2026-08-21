@@ -1068,3 +1068,64 @@ promise, not the diagnosis, that the menu gates.
   draft defect: raising to the CEO that step 5 (drafting) needs the MOVE-level
   ban ("never use the fact of construction as the pivot into the link") built
   into its own instructions, not left for QA to keep catching after the fact.
+- 2026-08-21 (steps 7-9 — the whole leg was a no-op for the fourth consecutive
+  run, and that is now the report's headline rather than a footnote): APPROVED
+  0, CONTACTED 0, FOLLOW-UP DUE 0, REPLIED (HITS) 0. Step 7 had nothing to sync,
+  step 8 had nothing due, step 9 had nothing to route. This is not a quiet day;
+  it is the fourth run in a row where the entire back half of the pipeline
+  executed against empty queues while the front half added six more cards. The
+  standing instruction "no processed card is left sitting in plain APPROVED" has
+  never once been exercised, because nothing has ever been approved. Future runs
+  should stop reporting steps 7-9 as "clean" — a no-op is only clean if work
+  arrived and was handled. Report them as *starved*, and name the starving
+  input: READY TO SEND → APPROVED is a human touchpoint and it has not moved
+  since the derma batch.
+- 2026-08-21 (the READY TO SEND entry-condition spot-check, run for the first
+  time, and the exact method that makes it meaningful): the 2026-08-20 rule says
+  spot-check the *condition* on any queue that grew. READY TO SEND grew 17 → 23
+  this run, so it got the check, and all 23 passed. The method matters more than
+  the result. `preview.cloudspringitsolutions.com` serves a **200 for every slug
+  that was never built** — a 514-byte placeholder titled
+  `CloudSpring IT Solutions — Previews`. A status-code check therefore passes
+  100% of the time and proves nothing. The check that works is content:
+  ```
+  curl -s -L https://preview.cloudspringitsolutions.com/<slug>/ \
+    | grep -q 'CloudSpring IT Solutions .* Previews' && echo NOT-DEPLOYED || echo LIVE
+  ```
+  All 23 returned the lead's own `<title>` at 21–51 KB. Establish the
+  placeholder baseline first by fetching a slug you know does not exist; if that
+  ever stops returning 514 bytes, this check needs rewriting before it is
+  trusted. BRAND BLOCKED also grew (24 → 27) and was checked its own way: all
+  three new cards carry `logo: null` + `logoFiles: []` in `brand/brand.json` and
+  no `index.html` in the tree, so nothing was built on an invented palette.
+- 2026-08-21 (reply triage returns nothing and will keep returning nothing —
+  write down why so no future run re-derives it): GHL inbound holds 19
+  conversations. Every single one is EasyChurch or MyHoms; **zero** carry the
+  `cloudspring-web-leads` tag. Two of them are live commercial questions
+  ("how much is the platform cost for 301 residents?", "Ang aming subdivision ay
+  mayroon ba?") but they belong to other products and other boards, and this
+  run's step 9 correctly routed none of them. Step 9 is structurally incapable
+  of finding a web-leads hit until a card reaches CONTACTED, because a reply
+  requires an outbound message and this pipeline has sent none. Check the tag,
+  not the inbox depth.
+- 2026-08-21 (the run's actual finding was not in steps 7-9 at all — it was a
+  blocked issue with nothing blocking it): `OFFER-MENU.md` says every automation
+  line is `IN BUILD` and the website is the only sellable line, and it names
+  CLO-11 (Speed-to-Lead + Booking Engine v1) as the sole remaining gate. CLO-11
+  was sitting in `blocked` since 2026-08-19T00:11Z with `unresolvedBlockerCount`
+  0, no `unblockDescriptor`, and its only blocker (CLO-6) `done`. Nothing was
+  holding it. Moved off `blocked` by the CEO this run; the Automation Engineer
+  owns the sign-off row. Sized in the pipeline's own numbers: 23 QA-passed cards
+  with verified-live mockups can today be offered ₱1,500/month, and with CLO-11
+  signed off they are ₱5,000–6,500/month. The general lesson matches the
+  queue-depth one: a status is only evidence if the thing it claims is true.
+  `blocked` deserves the same spot-check a queue count gets — read
+  `unresolvedBlockerCount` before repeating "blocked" as a fact.
+- 2026-08-21 (two commits from this same run were never pushed, and the run
+  report would have counted them as landed): at the start of this leg,
+  `git log origin/main..HEAD` showed CLO-46 (step 6 QA, including its learnings
+  entry) and CLO-48 (the brand.json hex-format fix) committed locally and absent
+  from `origin/main`. Both were pushed from here. A step that commits is not a
+  step that shipped; the closing leg of every run should diff against
+  `origin/main` before writing the report, because the report is read as the
+  record of what landed.
