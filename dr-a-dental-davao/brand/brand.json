@@ -4,7 +4,7 @@
   "facebook": "dr.ayannadentalclinic",
   "capturedAt": "2026-08-22T15:53:05.849Z",
   "source": "headless-http",
-  "name": null,
+  "name": "Dr. A Dental Clinic",
   "logo": {
     "file": "logo-facebook-profile.jpg",
     "score": 95,
@@ -27,7 +27,11 @@
       },
       {
         "hex": "#C19A3B",
-        "weight": 45
+        "weight": 40
+      },
+      {
+        "hex": "#FFFFFF",
+        "weight": 10
       }
     ],
     "neutral": [],
@@ -41,6 +45,6 @@
   "notes": [
     "facebook profile picture captured headlessly for \"dr.ayannadentalclinic\"",
     "no website for this lead — facebook-only capture path",
-    "BLOCKER palette-pending: logo captured (logo-facebook-profile.jpg) but fewer than 2 chromatic colours found. Vision-read the logo, then write the hex values into colors.brand[] with colors.source=\"vision\" and re-run the gate."
+    "2026-08-23 CLO-54 builder vision re-read: white \"Dr. A\" tooth monogram on dark chocolate brown with gold numerals. Capture hexes confirmed."
   ]
 }

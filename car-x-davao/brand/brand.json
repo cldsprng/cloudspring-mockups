@@ -4,7 +4,7 @@
   "facebook": "carsandautoshop",
   "capturedAt": "2026-08-22T15:53:15.809Z",
   "source": "headless-http",
-  "name": null,
+  "name": "CAR-X SHOP DAVAO",
   "logo": {
     "file": "logo-facebook-profile.jpg",
     "score": 95,
@@ -22,12 +22,16 @@
   "colors": {
     "brand": [
       {
-        "hex": "#000000",
-        "weight": 50
+        "hex": "#ED1C24",
+        "weight": 45
       },
       {
-        "hex": "#DD0000",
+        "hex": "#000000",
         "weight": 45
+      },
+      {
+        "hex": "#FFFFFF",
+        "weight": 10
       }
     ],
     "neutral": [],
@@ -41,6 +45,6 @@
   "notes": [
     "facebook profile picture captured headlessly for \"carsandautoshop\"",
     "no website for this lead — facebook-only capture path",
-    "BLOCKER palette-pending: logo captured (logo-facebook-profile.jpg) but fewer than 2 chromatic colours found. Vision-read the logo, then write the hex values into colors.brand[] with colors.source=\"vision\" and re-run the gate."
+    "2026-08-23 CLO-54 builder vision re-read: black \"CAR-X SHOP\" wordmark with a red tagline banner reading \"Serbisyong Casa, Presyong Kaya!\". Red refined from #DD0000 to the brighter #ED1C24 in the banner."
   ]
 }

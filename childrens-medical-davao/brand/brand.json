@@ -4,7 +4,7 @@
   "facebook": "CMPediatricClinic",
   "capturedAt": "2026-08-22T15:53:03.286Z",
   "source": "headless-http",
-  "name": null,
+  "name": "Children's Medical Clinic",
   "logo": {
     "file": "logo-facebook-profile.jpg",
     "score": 95,
@@ -22,12 +22,16 @@
   "colors": {
     "brand": [
       {
-        "hex": "#67D5D5",
+        "hex": "#7CD5E2",
         "weight": 50
       },
       {
-        "hex": "#E74285",
-        "weight": 45
+        "hex": "#F2A8C6",
+        "weight": 30
+      },
+      {
+        "hex": "#6E96B8",
+        "weight": 20
       }
     ],
     "neutral": [],
@@ -41,6 +45,6 @@
   "notes": [
     "facebook profile picture captured headlessly for \"CMPediatricClinic\"",
     "no website for this lead — facebook-only capture path",
-    "BLOCKER palette-pending: logo captured (logo-facebook-profile.jpg) but fewer than 2 chromatic colours found. Vision-read the logo, then write the hex values into colors.brand[] with colors.source=\"vision\" and re-run the gate."
+    "2026-08-23 CLO-54 builder vision re-read: line-art baby face in pale cyan, \"CHILDREN'S\" in soft pink, \"MEDICAL CLINIC\" in steel blue. Pink corrected from #E74285 — the logo pink is a pale tint, not a hot magenta."
   ]
 }

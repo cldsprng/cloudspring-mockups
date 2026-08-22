@@ -1,44 +1,50 @@
 {
-    "slug":  "509-family-care",
-    "site":  null,
-    "facebook":  "509FamilyCareClinic2022",
-    "capturedAt":  "2026-08-22T15:58:12.589Z",
-    "source":  "headless-http",
-    "name":  null,
-    "logo":  {
-                 "file":  "logo-facebook-profile.jpg",
-                 "score":  95,
-                 "why":  "facebook profile picture"
-             },
-    "logoFiles":  [
-                      {
-                          "file":  "logo-facebook-profile.jpg",
-                          "bytes":  68365,
-                          "from":  "graph.facebook.com/509FamilyCareClinic2022/picture?width=1200\u0026height=1200",
-                          "why":  "facebook profile picture",
-                          "score":  95
-                      }
-                  ],
-    "colors":  {
-                   "brand":  [
-                                 "#17A2B8",
-                                 "#FF69B4"
-                             ],
-                   "neutral":  [
-
-                               ],
-                   "themeColor":  null,
-                   "source":  "vision"
-               },
-    "fonts":  [
-
-              ],
-    "ready":  true,
-    "blockedBy":  "palette-pending",
-    "confidence":  50,
-    "notes":  [
-                  "facebook profile picture captured headlessly for \"509FamilyCareClinic2022\"",
-                  "no website for this lead — facebook-only capture path",
-                  "BLOCKER palette-pending: logo captured (logo-facebook-profile.jpg) but fewer than 2 chromatic colours found. Vision-read the logo, then write the hex values into colors.brand[] with colors.source=\"vision\" and re-run the gate."
-              ]
+  "slug": "509-family-care",
+  "site": null,
+  "facebook": "509FamilyCareClinic2022",
+  "capturedAt": "2026-08-22T15:58:12.589Z",
+  "source": "headless-http",
+  "name": "509 Family Care Clinic",
+  "logo": {
+    "file": "logo-facebook-profile.jpg",
+    "score": 95,
+    "why": "facebook profile picture"
+  },
+  "logoFiles": [
+    {
+      "file": "logo-facebook-profile.jpg",
+      "bytes": 68365,
+      "from": "graph.facebook.com/509FamilyCareClinic2022/picture?width=1200&height=1200",
+      "why": "facebook profile picture",
+      "score": 95
+    }
+  ],
+  "colors": {
+    "brand": [
+      {
+        "hex": "#2FA39B",
+        "weight": 45
+      },
+      {
+        "hex": "#EE4E68",
+        "weight": 30
+      },
+      {
+        "hex": "#6B3FA0",
+        "weight": 25
+      }
+    ],
+    "neutral": [],
+    "themeColor": null,
+    "source": "vision"
+  },
+  "fonts": [],
+  "ready": true,
+  "blockedBy": null,
+  "confidence": 50,
+  "notes": [
+    "facebook profile picture captured headlessly for \"509FamilyCareClinic2022\"",
+    "no website for this lead — facebook-only capture path",
+    "2026-08-23 CLO-54 builder vision re-read: three-generation family illustration on a teal sofa. Both captured hexes were CSS named colours (#17A2B8 Bootstrap \"info\", #FF69B4 \"hotpink\") — replaced with the sofa teal, dress coral and grandmother's purple actually in the image."
+  ]
 }

@@ -1,44 +1,50 @@
 {
-    "slug":  "dr-mylene-letigio",
-    "site":  null,
-    "facebook":  "letigiocasil.pedia",
-    "capturedAt":  "2026-08-22T15:58:13.020Z",
-    "source":  "headless-http",
-    "name":  null,
-    "logo":  {
-                 "file":  "logo-facebook-profile.jpg",
-                 "score":  95,
-                 "why":  "facebook profile picture"
-             },
-    "logoFiles":  [
-                      {
-                          "file":  "logo-facebook-profile.jpg",
-                          "bytes":  76648,
-                          "from":  "graph.facebook.com/letigiocasil.pedia/picture?width=1200\u0026height=1200",
-                          "why":  "facebook profile picture",
-                          "score":  95
-                      }
-                  ],
-    "colors":  {
-                   "brand":  [
-                                 "#A24C4C",
-                                 "#7BA1D1"
-                             ],
-                   "neutral":  [
-
-                               ],
-                   "themeColor":  null,
-                   "source":  "vision"
-               },
-    "fonts":  [
-
-              ],
-    "ready":  true,
-    "blockedBy":  "palette-pending",
-    "confidence":  50,
-    "notes":  [
-                  "facebook profile picture captured headlessly for \"letigiocasil.pedia\"",
-                  "no website for this lead — facebook-only capture path",
-                  "BLOCKER palette-pending: logo captured (logo-facebook-profile.jpg) but fewer than 2 chromatic colours found. Vision-read the logo, then write the hex values into colors.brand[] with colors.source=\"vision\" and re-run the gate."
-              ]
+  "slug": "dr-mylene-letigio",
+  "site": null,
+  "facebook": "letigiocasil.pedia",
+  "capturedAt": "2026-08-22T15:58:13.020Z",
+  "source": "headless-http",
+  "name": "Dr. Mylene Letigio - Casil Pediatric Clinic",
+  "logo": {
+    "file": "logo-facebook-profile.jpg",
+    "score": 95,
+    "why": "facebook profile picture"
+  },
+  "logoFiles": [
+    {
+      "file": "logo-facebook-profile.jpg",
+      "bytes": 76648,
+      "from": "graph.facebook.com/letigiocasil.pedia/picture?width=1200&height=1200",
+      "why": "facebook profile picture",
+      "score": 95
+    }
+  ],
+  "colors": {
+    "brand": [
+      {
+        "hex": "#D9536A",
+        "weight": 45
+      },
+      {
+        "hex": "#6E6E70",
+        "weight": 35
+      },
+      {
+        "hex": "#FFFFFF",
+        "weight": 20
+      }
+    ],
+    "neutral": [],
+    "themeColor": null,
+    "source": "vision"
+  },
+  "fonts": [],
+  "ready": true,
+  "blockedBy": null,
+  "confidence": 50,
+  "notes": [
+    "facebook profile picture captured headlessly for \"letigiocasil.pedia\"",
+    "no website for this lead — facebook-only capture path",
+    "2026-08-23 CLO-54 builder vision re-read: portrait in a white coat over a coral-red patterned top, grey studio backdrop. Captured #7BA1D1 is a blue that appears nowhere in the image — replaced with the coral top and the grey backdrop."
+  ]
 }

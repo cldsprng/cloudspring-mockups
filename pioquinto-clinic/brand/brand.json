@@ -1,44 +1,50 @@
 {
-    "slug":  "pioquinto-clinic",
-    "site":  null,
-    "facebook":  "PioquintoClinic",
-    "capturedAt":  "2026-08-22T15:58:10.743Z",
-    "source":  "headless-http",
-    "name":  null,
-    "logo":  {
-                 "file":  "logo-facebook-profile.jpg",
-                 "score":  95,
-                 "why":  "facebook profile picture"
-             },
-    "logoFiles":  [
-                      {
-                          "file":  "logo-facebook-profile.jpg",
-                          "bytes":  20267,
-                          "from":  "graph.facebook.com/PioquintoClinic/picture?width=1200\u0026height=1200",
-                          "why":  "facebook profile picture",
-                          "score":  95
-                      }
-                  ],
-    "colors":  {
-                   "brand":  [
-                                 "#2E8BC0",
-                                 "#2EAE4E"
-                             ],
-                   "neutral":  [
-
-                               ],
-                   "themeColor":  null,
-                   "source":  "vision"
-               },
-    "fonts":  [
-
-              ],
-    "ready":  true,
-    "blockedBy":  "palette-pending",
-    "confidence":  50,
-    "notes":  [
-                  "facebook profile picture captured headlessly for \"PioquintoClinic\"",
-                  "no website for this lead — facebook-only capture path",
-                  "BLOCKER palette-pending: logo captured (logo-facebook-profile.jpg) but fewer than 2 chromatic colours found. Vision-read the logo, then write the hex values into colors.brand[] with colors.source=\"vision\" and re-run the gate."
-              ]
+  "slug": "pioquinto-clinic",
+  "site": null,
+  "facebook": "PioquintoClinic",
+  "capturedAt": "2026-08-22T15:58:10.743Z",
+  "source": "headless-http",
+  "name": "Pioquinto Adult and Pediatric Clinic and Pharmacy",
+  "logo": {
+    "file": "logo-facebook-profile.jpg",
+    "score": 95,
+    "why": "facebook profile picture"
+  },
+  "logoFiles": [
+    {
+      "file": "logo-facebook-profile.jpg",
+      "bytes": 20267,
+      "from": "graph.facebook.com/PioquintoClinic/picture?width=1200&height=1200",
+      "why": "facebook profile picture",
+      "score": 95
+    }
+  ],
+  "colors": {
+    "brand": [
+      {
+        "hex": "#2E8BC0",
+        "weight": 45
+      },
+      {
+        "hex": "#2EAE4E",
+        "weight": 35
+      },
+      {
+        "hex": "#1A1A1A",
+        "weight": 20
+      }
+    ],
+    "neutral": [],
+    "themeColor": null,
+    "source": "vision"
+  },
+  "fonts": [],
+  "ready": true,
+  "blockedBy": null,
+  "confidence": 50,
+  "notes": [
+    "facebook profile picture captured headlessly for \"PioquintoClinic\"",
+    "no website for this lead — facebook-only capture path",
+    "2026-08-23 CLO-54 builder vision re-read: blue \"P\" with caduceus, black PIOQUINTO wordmark, green sub-line and cross. Capture hexes confirmed; format normalised."
+  ]
 }

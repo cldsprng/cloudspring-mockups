@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kareha Autoworks — Km.7 Bangkal, Davao City</title>
+<meta name="description" content="Kareha Autoworks — Km.7 Bangkal, McArthur Hwy, fronting MM Marble, Davao City. Heavy PMS, CRDI calibration, turbo rebuild and OBD scanning. Call 0917 701 9097.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* Palette read from brand/logo-facebook-profile.jpg — see brand/brand.json (colors.source) */
+  --brand:#C4202A;
+  --brand-2:#141414;
+  --brand-3:#FFFFFF;
+  --brand-deep:#8d171e;
+  --brand-soft:#f8e4e5;
+  --paper:#ffffff;
+  --ink:#1e1b19;
+  --ink-2:#565049;
+  --line:#f6dbdd;
+  --accent:#141414;
+  --shadow-sm:0 1px 2px rgba(30,27,25,.08), 0 2px 8px rgba(30,27,25,.06);
+  --shadow-md:0 8px 24px rgba(30,27,25,.11);
+  --r-sm:8px; --r-md:16px; --r-lg:24px; --r-pill:999px;
+  --display:'Archivo',system-ui,sans-serif;
+  --body:'Inter',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;font-family:var(--body);color:var(--ink);background:#fff;font-size:16px;line-height:1.6;padding-bottom:172px;overflow-x:hidden}
+img,svg{max-width:100%;display:block}
+h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.15;margin:0 0 12px;letter-spacing:-.006em}
+h1{font-size:34px}h2{font-size:28px}h3{font-size:20px}
+p{margin:0 0 16px}
+a{color:var(--brand-deep)}
+.wrap{width:100%;max-width:1080px;margin:0 auto;padding:0 20px}
+.eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--brand);margin:0 0 8px;font-family:var(--body)}
+.section{padding:56px 0}
+.section--tint{background:var(--brand-soft)}
+.section--paper{background:var(--paper)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+
+.header{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.94);backdrop-filter:saturate(140%) blur(8px);border-bottom:1px solid var(--line)}
+.header__in{display:flex;align-items:center;gap:12px;min-height:64px;padding:8px 20px;max-width:1080px;margin:0 auto}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);min-height:44px}
+.brand-logo-img{width:42px;height:42px;flex:0 0 42px;object-fit:contain;border-radius:10px;background:#fff;border:1px solid var(--line)}
+.brand__txt{display:flex;flex-direction:column;line-height:1.12}
+.brand__name{font-family:var(--display);font-weight:700;font-size:18px}
+.brand__sub{font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2);font-weight:600}
+.header__cta{margin-left:auto}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:11px 18px;border-radius:var(--r-pill);font-family:var(--body);font-weight:600;font-size:15px;text-decoration:none;border:1px solid transparent;cursor:pointer;transition:background-color .18s ease,color .18s ease,border-color .18s ease,transform .18s ease,box-shadow .18s ease}
+.btn--primary{background:var(--brand);color:#fff;box-shadow:var(--shadow-sm)}
+.btn--primary:hover{background:var(--brand-deep);transform:translateY(-1px);box-shadow:var(--shadow-md)}
+.btn--ghost{background:#fff;color:var(--brand-deep);border-color:var(--line)}
+.btn--ghost:hover{border-color:var(--brand);background:var(--brand-soft)}
+.btn--sm{font-size:14px;padding:9px 14px}
+.btn--block{width:100%}
+
+.hero{position:relative;background:linear-gradient(168deg,var(--brand-soft) 0%,#fff 66%);overflow:hidden}
+.hero::after{content:"";position:absolute;right:-150px;top:-130px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle at 35% 35%,rgba(196,32,42,0.14),rgba(196,32,42,0) 70%);pointer-events:none}
+.hero__in{padding:36px 20px 44px;max-width:1080px;margin:0 auto;position:relative;z-index:1}
+.hero h1{font-size:clamp(31px,7.4vw,52px);margin-bottom:14px}
+.hero h1 em{font-style:italic;color:var(--brand)}
+.hero__lead{font-size:17px;color:var(--ink-2);max-width:56ch;margin-bottom:22px}
+.motto{display:inline-block;font-family:var(--display);font-style:italic;font-size:18.5px;color:var(--brand-deep);background:#fff;border:1px solid var(--line);border-radius:var(--r-pill);padding:8px 18px;margin-bottom:18px}
+.idcard{background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:18px;box-shadow:var(--shadow-md);margin-bottom:22px}
+.idcard__row{display:flex;gap:12px;padding:10px 0;align-items:flex-start;border-top:1px solid var(--line)}
+.idcard__row:first-child{border-top:0;padding-top:0}
+.idcard__ico{flex:0 0 22px;width:22px;height:22px;color:var(--brand);margin-top:2px}
+.idcard__k{font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--ink-2);margin:0 0 2px}
+.idcard__v{font-size:15.5px;font-weight:500;margin:0}
+.idcard__v a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--brand-3)}
+.idcard__v a:hover{color:var(--brand);border-bottom-color:var(--brand)}
+.hero__btns{display:flex;flex-direction:column;gap:10px}
+.hero__art{margin-top:32px}
+
+.grid{display:grid;gap:16px;grid-template-columns:1fr}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:22px;box-shadow:var(--shadow-sm);transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow-md);border-color:var(--brand-3)}
+.card__ico{width:44px;height:44px;border-radius:12px;background:var(--brand-soft);color:var(--brand);display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+.card__ico svg{width:24px;height:24px}
+.card p{font-size:15px;color:var(--ink-2);margin:0}
+.note{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;background:#FFF7DF;border:1px dashed #D9BE63;color:#6E5410;padding:6px 12px;border-radius:var(--r-sm)}
+.note--block{display:block;text-transform:none;letter-spacing:0;font-weight:500;font-size:13.5px;line-height:1.55;padding:12px 14px}
+.note--block b{text-transform:uppercase;letter-spacing:.06em;font-size:11.5px;display:block;margin-bottom:4px}
+
+.why{display:grid;gap:14px;grid-template-columns:1fr}
+.why__item{display:flex;gap:14px;align-items:flex-start;background:#fff;border-radius:var(--r-md);padding:18px;box-shadow:var(--shadow-sm)}
+.why__num{font-family:var(--display);font-size:24px;font-weight:700;color:var(--brand);flex:0 0 auto;line-height:1.1}
+.why__item h3{font-size:17px;margin-bottom:4px}
+.why__item p{font-size:14.5px;color:var(--ink-2);margin:0}
+
+.pricing{background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:22px;box-shadow:var(--shadow-sm)}
+.pricing__row{display:flex;justify-content:space-between;gap:14px;padding:12px 0;border-top:1px solid var(--line);font-size:15px}
+.pricing__row:first-of-type{border-top:0}
+.pricing__row span:last-child{color:var(--brand);font-weight:700;text-align:right;white-space:nowrap}
+
+.hours{background:#fff;border:1px solid var(--line);border-radius:var(--r-md);overflow:hidden;box-shadow:var(--shadow-sm)}
+.hours__row{display:flex;justify-content:space-between;gap:12px;padding:13px 18px;border-top:1px solid var(--line);font-size:15px}
+.hours__row:first-child{border-top:0}
+.hours__row--open{background:var(--brand-soft);font-weight:600}
+.hours__row span:last-child{color:var(--ink-2);text-align:right}
+.hours__row--open span:last-child{color:var(--brand-deep)}
+
+.split{display:grid;gap:16px;grid-template-columns:1fr}
+.panel{background:#fff;border:1px solid var(--line);border-left:4px solid var(--brand);border-radius:var(--r-md);padding:20px;box-shadow:var(--shadow-sm)}
+.panel h3{margin-bottom:6px}
+.panel p{font-size:15px;color:var(--ink-2);margin:0 0 8px}
+.panel p:last-child{margin-bottom:0}
+.panel--alt{border-left-color:var(--brand-2)}
+
+.contact{display:grid;gap:20px;grid-template-columns:1fr}
+.map{border-radius:var(--r-md);overflow:hidden;border:1px solid var(--line);background:var(--brand-soft);position:relative;box-shadow:var(--shadow-sm)}
+.map__label{position:absolute;left:12px;bottom:12px;right:12px;background:rgba(255,255,255,.95);border-radius:var(--r-sm);padding:10px 12px;font-size:12.5px;color:var(--ink-2);font-weight:500}
+.form{background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:20px;box-shadow:var(--shadow-sm)}
+.field{margin-bottom:14px}
+.field label{display:block;font-size:13px;font-weight:600;margin-bottom:6px}
+.field input,.field textarea,.field select{width:100%;font-family:var(--body);font-size:16px;color:var(--ink);padding:12px;border:1px solid var(--line);border-radius:var(--r-sm);background:#FDFCFB;min-height:44px;transition:border-color .18s ease,box-shadow .18s ease}
+.field textarea{min-height:110px;resize:vertical}
+.field input:focus,.field textarea:focus,.field select:focus{outline:none;border-color:var(--brand);box-shadow:0 0 0 3px rgba(196,32,42,0.18)}
+.formnote{font-size:12.5px;color:var(--ink-2);margin:10px 0 0}
+
+.footer{background:var(--ink);color:#ddd6cf;padding:40px 0 32px}
+.footer h3{color:#fff;font-size:19px}
+.footer a{color:#7e7e7e;text-decoration:none}
+.footer a:hover{color:#fff;text-decoration:underline}
+.footer__grid{display:grid;gap:24px;grid-template-columns:1fr}
+.footer__p{font-size:14.5px;line-height:1.7;margin:0}
+.footer__credit{margin-top:28px;padding-top:18px;border-top:1px solid rgba(255,255,255,.14);font-size:13px;display:flex;flex-wrap:wrap;gap:6px;justify-content:space-between}
+
+.cs-bar{position:fixed;left:0;right:0;bottom:0;z-index:200;background:rgba(22,19,17,.96);backdrop-filter:saturate(150%) blur(10px);border-top:1px solid rgba(255,255,255,.14);box-shadow:0 -8px 32px rgba(20,18,16,.34);color:#fff;padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px))}
+.cs-bar__in{max-width:1080px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:10px 18px;text-align:center}
+.cs-bar__eyebrow{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:#8a8a8a;margin:0 0 3px}
+.cs-bar__line{font-size:15px;font-weight:600;line-height:1.35;margin:0;color:#fff}
+.cs-bar__btn{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:12px 22px;border-radius:var(--r-pill);background:var(--brand-2);color:#ffffff;font-weight:700;font-size:15px;text-decoration:none;white-space:nowrap;box-shadow:0 4px 18px rgba(20,20,20,0.36);animation:csPulse 2.4s ease-in-out infinite;transition:transform .18s ease,box-shadow .18s ease}
+.cs-bar__btn:hover{transform:translateY(-2px);box-shadow:0 8px 26px rgba(20,20,20,0.5);animation-play-state:paused}
+.cs-bar__btn:focus-visible{outline:3px solid #fff;outline-offset:3px}
+@keyframes csPulse{0%,100%{box-shadow:0 4px 18px rgba(20,20,20,0.3)}50%{box-shadow:0 4px 26px rgba(20,20,20,0.62)}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition-duration:.01ms!important}.cs-bar__btn{animation:none}}
+
+@media (min-width:600px){
+  .hero__btns{flex-direction:row;flex-wrap:wrap}
+  .hero__btns .btn{flex:1 1 auto;min-width:200px}
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .why{grid-template-columns:repeat(2,1fr)}
+  .split{grid-template-columns:repeat(2,1fr)}
+}
+@media (min-width:900px){
+  body{padding-bottom:104px}
+  .section{padding:76px 0}
+  h1{font-size:46px}h2{font-size:36px}
+  .hero__in{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center;padding:60px 20px 72px}
+  .hero__art{margin-top:0}
+  .grid{grid-template-columns:repeat(3,1fr)}
+  .contact{grid-template-columns:1.05fr .95fr;align-items:start}
+  .footer__grid{grid-template-columns:1.4fr 1fr 1fr}
+  .cs-bar__in{flex-wrap:nowrap;justify-content:space-between;text-align:left}
+  .cs-bar__line{font-size:16.5px}
+}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="header__in">
+    <a class="brand" href="#top" aria-label="Kareha Autoworks, back to top">
+      <img class="brand-logo-img" src="brand/logo-facebook-profile.jpg" alt="Kareha Autoworks logo" width="42" height="42" decoding="async">
+      <span class="brand__txt">
+        <span class="brand__name">Kareha Autoworks</span>
+        <span class="brand__sub">Km.7 Bangkal &middot; Davao City</span>
+      </span>
+    </a>
+    <a class="btn btn--primary btn--sm header__cta" href="tel:+639177019097">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+      <span>Call the shop</span>
+    </a>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="hero__in">
+      <div>
+        <p class="eyebrow">Km.7 Bangkal &middot; McArthur Hwy &middot; Davao City</p>
+        <h1>0917 701 9097. <em>That is the number.</em></h1>
+
+        <p class="hero__lead">Fourteen years wrenching at Km.7 Bangkal, fronting MM Marble on McArthur Highway. Heavy PMS, CRDI calibration, turbo rebuilds and OBD scanning. A directory currently publishes a different phone number for the shop, and it is the page that ranks.</p>
+
+        <div class="idcard">
+          <div class="idcard__row">
+            <svg class="idcard__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <div><p class="idcard__k">Address</p><p class="idcard__v">Km.7 Bangkal, McArthur Hwy<br>(fronting MM Marble),<br>Davao City</p></div>
+          </div>
+          <div class="idcard__row">
+            <svg class="idcard__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+            <div><p class="idcard__k">Phone — the correct one</p><p class="idcard__v"><a href="tel:+639177019097">0917 701 9097</a></p></div>
+          </div>
+          <div class="idcard__row">
+            <svg class="idcard__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.2 1.9"/></svg>
+            <div><p class="idcard__k">Open</p><p class="idcard__v">Monday to Saturday &middot; 8:00 AM &ndash; 5:00 PM</p></div>
+          </div>
+        </div>
+
+        <div class="hero__btns">
+          <a class="btn btn--primary" href="tel:+639177019097">Call 0917 701 9097</a>
+          <a class="btn btn--ghost" href="https://m.me/kareha.autoworks" target="_blank" rel="noopener">Message on Facebook</a>
+        </div>
+      </div>
+
+      <div class="hero__art" aria-hidden="true">
+
+<svg viewBox="0 0 460 380" role="img" aria-hidden="true" focusable="false" style="width:100%;height:auto;filter:drop-shadow(0 18px 40px rgba(20,20,20,.18))">
+  <defs><linearGradient id="hg1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#ffffff"/></linearGradient>
+  <linearGradient id="hg2" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#C4202A"/><stop offset="1" stop-color="#141414"/></linearGradient></defs>
+  <rect x="10" y="14" width="440" height="352" rx="28" fill="url(#hg1)"/>
+  <circle cx="360" cy="92" r="56" fill="#fff" opacity=".5"/>
+  <g transform="translate(48,120)">
+    <path d="M22 96V58l18-42a16 16 0 0 1 15-10h116a16 16 0 0 1 15 10l18 42v38z" fill="#fff" stroke="#C4202A" stroke-width="3.5" stroke-linejoin="round"/>
+    <path d="M44 56h140l-13-32a6 6 0 0 0-5.6-4H62.6a6 6 0 0 0-5.6 4z" fill="url(#hg2)" opacity=".22"/>
+    <circle cx="58" cy="98" r="16" fill="#C4202A"/><circle cx="58" cy="98" r="6" fill="#fff"/>
+    <circle cx="170" cy="98" r="16" fill="#C4202A"/><circle cx="170" cy="98" r="6" fill="#fff"/>
+    <rect x="34" y="66" width="26" height="9" rx="4.5" fill="#141414"/><rect x="168" y="66" width="26" height="9" rx="4.5" fill="#141414"/>
+  </g>
+  <g transform="translate(292,214)"><rect x="0" y="0" width="126" height="96" rx="18" fill="#fff" stroke="#FFFFFF" stroke-width="2"/>
+    <g transform="translate(30,34)" stroke="#C4202A" stroke-width="5" fill="none" stroke-linecap="round">
+      <path d="M40 0a13 13 0 0 1-17.4 16.4L2 37a5.7 5.7 0 1 1-8-8l20.6-20.6A13 13 0 0 1 31 .5z"/></g>
+    <rect x="26" y="70" width="74" height="9" rx="4.5" fill="#141414" opacity=".8"/></g>
+  <path d="M58 320h180" stroke="#C4202A" stroke-width="4" fill="none" stroke-linecap="round" opacity=".45"/>
+  <path d="M262 320h44" stroke="#141414" stroke-width="4" fill="none" stroke-linecap="round" opacity=".7"/>
+</svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE PROBLEM THIS PAGE FIXES -->
+  <section class="section section--paper">
+    <div class="wrap" style="max-width:820px">
+      <p class="eyebrow">Why this page exists</p>
+      <h2>Two pages about one shop, and two different phone numbers</h2>
+      <p style="color:var(--ink-2)">Checked 22 August 2026. <strong>davaostart.com/business/kareha-autoworks/</strong> stores the shop&rsquo;s phone as <strong>321-6753</strong>. <strong>ph.polomap.com</strong> and Kareha&rsquo;s own Facebook page both carry <strong>0917 701 9097</strong>. One shop, two pages, two numbers &mdash; and the customer has no way to know which is current.</p>
+      <p style="color:var(--ink-2)">The DavaoStart page does more than get the number wrong. It shows an <em>OPEN</em> badge with <strong>no hours at all</strong>, a rating of <strong>0.00 from 0 reviews</strong> for a shop that has been running fourteen years, and a <strong>&ldquo;Claim this business&rdquo;</strong> button &mdash; which is the page admitting it is not Kareha&rsquo;s. Underneath, it recommends <strong>DCGarage</strong> under &ldquo;You Might Also Consider&rdquo;.</p>
+      <p style="color:var(--ink-2)">And the name is still available: <strong>karehaautoworks.com does not resolve</strong>. Nobody has taken it. The shop can own its own name on the web whenever it decides to.</p>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section" id="services">
+    <div class="wrap">
+      <p class="eyebrow">What the shop does</p>
+      <h2>The jobs that get quoted through Messenger today</h2>
+      <p style="max-width:62ch;color:var(--ink-2)">Every one of these is currently priced in a chat thread, one message at a time. They belong on a page a customer can read before they message.</p>
+
+      <div class="grid" style="margin-top:26px">
+        <article class="card">
+          <div class="card__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 5.5a5 5 0 0 1-6.7 6.3L6 19.1a2.2 2.2 0 0 1-3.1-3.1l7.3-7.3A5 5 0 0 1 16.5 2z"/></svg></div>
+          <h3>Heavy PMS</h3>
+          <p>Full preventive maintenance servicing &mdash; the scheduled work that keeps a fleet or a family car out of trouble.</p>
+        </article>
+        <article class="card">
+          <div class="card__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 17a9 9 0 1 1 17 0"/><path d="M12 17l4-5"/><circle cx="12" cy="17" r="1.6"/></svg></div>
+          <h3>CRDI calibration</h3>
+          <p>Common-rail diesel injection calibration. Specialist work, and not something every Davao shop takes on.</p>
+        </article>
+        <article class="card">
+          <div class="card__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 16v3h3v-3M17 16v3h3v-3"/><path d="M3.5 16v-4l2-5.2A2 2 0 0 1 7.4 5.5h9.2a2 2 0 0 1 1.9 1.3L20.5 12v4z"/><path d="M3.5 12h17M7 15h1.5M15.5 15H17"/></svg></div>
+          <h3>Turbo rebuild</h3>
+          <p>Turbocharger rebuilds &mdash; a job customers currently have to ask about in a message to find out if it is even offered.</p>
+        </article>
+        <article class="card">
+          <div class="card__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 20h12M9 20v-3M8 6.5 12.5 4l3 5.5-4.5 2.5z"/><path d="M11 12c-2.5 1-4 3-4 5M14 9.5c2.5 1.5 3.8 4 3.5 6.5"/></svg></div>
+          <h3>OBD scanning</h3>
+          <p>On-board diagnostics before anything is stripped, so the quote is based on the fault rather than the guess.</p>
+        </article>
+        <article class="card">
+          <div class="card__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="16" rx="2.5"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4"/></svg></div>
+          <h3>14 years at Km.7 Bangkal</h3>
+          <p>Fourteen years in the same spot on McArthur Highway. The directory that ranks for the shop shows zero reviews.</p>
+        </article>
+        <article class="card" style="border-style:dashed;background:var(--paper)">
+          <div class="card__ico" style="background:#FFF7DF;color:#6E5410"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></div>
+          <h3>Your full service list</h3>
+          <p class="note note--block" style="margin-top:8px"><b>Placeholder</b>Send Kareha&rsquo;s complete list and it replaces this card word for word. The four services above come from the shop&rsquo;s own posts &mdash; nothing here is invented.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- RATES -->
+  <section class="section section--tint" id="rates">
+    <div class="wrap" style="max-width:820px">
+      <p class="eyebrow">Straight answers on cost</p>
+      <h2>The rates go here, not in a chat thread</h2>
+      <p style="color:var(--ink-2)">&ldquo;Magkano ang PMS?&rdquo; is the message the shop answers most often. Answered once on a page that ranks, it stops being a message and becomes a booking &mdash; and the customer who asks at 10pm gets the answer at 10pm.</p>
+      <div class="pricing" style="margin-top:22px">
+        <div class="pricing__row"><span>Heavy PMS</span><span>&mdash;</span></div>
+        <div class="pricing__row"><span>CRDI calibration</span><span>&mdash;</span></div>
+        <div class="pricing__row"><span>Turbo rebuild</span><span>&mdash;</span></div>
+        <div class="pricing__row"><span>OBD scan / diagnostic</span><span>&mdash;</span></div>
+      </div>
+      <p class="note note--block" style="margin-top:18px"><b>Placeholder &mdash; needs the shop&rsquo;s numbers</b>These rows are deliberately blank. We will not print a rate Kareha has not confirmed. Send them &mdash; even as &ldquo;from&rdquo; prices &mdash; and they go in exactly as given, with an &ldquo;as of&rdquo; date beside them.</p>
+    </div>
+  </section>
+
+  <!-- WHY -->
+  <section class="section" id="why">
+    <div class="wrap">
+      <p class="eyebrow">Why customers choose Kareha</p>
+      <h2>Fourteen years, specialist work, one number</h2>
+      <div class="why" style="margin-top:24px">
+        <div class="why__item">
+          <span class="why__num">01</span>
+          <div><h3>Fourteen years in the game</h3><p>Same shop, same stretch of McArthur Highway. DavaoStart, the page that ranks for the name, shows 0.00 stars and no reviews.</p></div>
+        </div>
+        <div class="why__item">
+          <span class="why__num">02</span>
+          <div><h3>Specialist diesel and turbo work</h3><p>CRDI calibration and turbo rebuilds are not general-shop jobs. They are the reason people drive across Davao to Km.7.</p></div>
+        </div>
+        <div class="why__item">
+          <span class="why__num">03</span>
+          <div><h3>Easy to find, fronting MM Marble</h3><p>The landmark does more work than the address does &mdash; and it belongs in the first line of the page, which is where it is.</p></div>
+        </div>
+        <div class="why__item">
+          <span class="why__num">04</span>
+          <div><h3>0917 701 9097, and only that</h3><p>One number, tap-to-call on every screen. Not 321-6753, which is what DavaoStart tells people to ring.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section section--paper" id="about">
+    <div class="wrap" style="max-width:760px">
+      <p class="eyebrow">About</p>
+      <h2>Kareha Autoworks</h2>
+      <p>Kareha Autoworks is an auto repair shop at Km.7 Bangkal, McArthur Highway, fronting MM Marble, Davao City. The shop handles heavy preventive maintenance servicing, CRDI calibration, turbo rebuilds and OBD scanning.</p>
+      <p>The shop can be reached on 0917 701 9097 or through its Facebook page at /kareha.autoworks.</p>
+      <p class="note note--block" style="max-width:62ch"><b>Placeholder &mdash; needs Kareha Autoworks&rsquo;s input</b>The shop&rsquo;s full service list, its rates, the technicians&rsquo; certifications and any warranty terms are deliberately blank. Send them and they go in as written. This preview carries no invented prices, credentials or reviews.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section" id="contact">
+    <div class="wrap">
+      <p class="eyebrow">Book the car in</p>
+      <h2>Contact Kareha Autoworks</h2>
+
+      <div class="contact" style="margin-top:26px">
+        <div>
+          <div class="hours" style="margin-bottom:14px">
+        <div class="hours__row hours__row--open"><span>Monday</span><span>8:00 AM – 5:00 PM</span></div>
+        <div class="hours__row hours__row--open"><span>Tuesday</span><span>8:00 AM – 5:00 PM</span></div>
+        <div class="hours__row hours__row--open"><span>Wednesday</span><span>8:00 AM – 5:00 PM</span></div>
+        <div class="hours__row hours__row--open"><span>Thursday</span><span>8:00 AM – 5:00 PM</span></div>
+        <div class="hours__row hours__row--open"><span>Friday</span><span>8:00 AM – 5:00 PM</span></div>
+        <div class="hours__row hours__row--open"><span>Saturday</span><span>8:00 AM – 5:00 PM</span></div>
+        <div class="hours__row"><span>Sunday</span><span>Closed</span></div>
+          </div>
+          <p class="note note--block" style="margin-bottom:20px"><b>Monday to Saturday, 8:00 to 5:00</b>DavaoStart shows an <em>OPEN</em> badge with no hours behind it at all. These are the shop&rsquo;s actual hours. If they change &mdash; or if Saturday runs shorter &mdash; tell us and this grid is the one place that needs editing.</p>
+
+          <div class="idcard" style="box-shadow:var(--shadow-sm)">
+          <div class="idcard__row">
+            <svg class="idcard__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <div><p class="idcard__k">Address</p><p class="idcard__v">Km.7 Bangkal, McArthur Hwy<br>(fronting MM Marble),<br>Davao City</p></div>
+          </div>
+          <div class="idcard__row">
+            <svg class="idcard__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+            <div><p class="idcard__k">Phone — the correct one</p><p class="idcard__v"><a href="tel:+639177019097">0917 701 9097</a></p></div>
+          </div>
+          <div class="idcard__row">
+            <svg class="idcard__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.2 1.9"/></svg>
+            <div><p class="idcard__k">Open</p><p class="idcard__v">Monday to Saturday &middot; 8:00 AM &ndash; 5:00 PM</p></div>
+          </div>
+
+          <div class="idcard__row">
+            <svg class="idcard__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="M16 5.4a3.2 3.2 0 0 1 0 5.2M17.5 20a6.4 6.4 0 0 0-2-4.6"/></svg>
+            <div><p class="idcard__k">Facebook</p><p class="idcard__v"><a href="https://www.facebook.com/kareha.autoworks" target="_blank" rel="noopener">facebook.com/kareha.autoworks</a></p></div>
+          </div>
+          </div>
+
+          <div class="map" style="margin-top:20px">
+<svg viewBox="0 0 600 300" role="img" aria-label="Illustrated map placeholder showing Km.7 Bangkal on McArthur Highway, fronting MM Marble, Davao City" style="width:100%;height:auto;display:block">
+  <rect width="600" height="300" fill="#FFFFFF"/>
+  <path d="M0 200h600M0 92h600M140 0v300M420 0v300" stroke="#fff" stroke-width="16"/>
+  <path d="M0 200h600M0 92h600M140 0v300M420 0v300" stroke="rgba(0,0,0,.07)" stroke-width="2"/>
+  <rect x="164" y="112" width="96" height="64" rx="6" fill="#fff" opacity=".65"/>
+  <rect x="276" y="112" width="120" height="64" rx="6" fill="#fff" opacity=".65"/>
+  <rect x="164" y="220" width="120" height="52" rx="6" fill="#fff" opacity=".65"/>
+  <rect x="446" y="112" width="120" height="64" rx="6" fill="#fff" opacity=".65"/>
+  <g transform="translate(300,146)"><circle cx="0" cy="0" r="30" fill="#C4202A" opacity=".16"/>
+    <path d="M0-24c8.8 0 16 7.2 16 16 0 12-16 26-16 26S-16 4-16-8c0-8.8 7.2-16 16-16z" fill="#C4202A"/>
+    <circle cx="0" cy="-8" r="6" fill="#fff"/></g></svg>
+            <p class="map__label"><strong>Illustration, not a live map.</strong> An interactive Google Map pinned to Km.7 Bangkal, fronting MM Marble, goes here on the live site.</p>
+          </div>
+        </div>
+
+        <div class="form">
+          <h3>Request a quote</h3>
+          <p style="font-size:14.5px;color:var(--ink-2)">Tell the shop what the car needs and it can come back with a price. In this preview the button opens Messenger &mdash; on the live site the request arrives with the vehicle and the job already filled in.</p>
+          <form onsubmit="return csSend(event)">
+            <div class="field"><label for="n">Your name</label><input id="n" name="name" type="text" autocomplete="name" placeholder="Juan Dela Cruz"></div>
+            <div class="field"><label for="p">Contact number</label><input id="p" name="phone" type="tel" autocomplete="tel" placeholder="09XX XXX XXXX"></div>
+            <div class="field"><label for="s">What does the car need?</label>
+              <select id="s" name="topic">
+                <option>Heavy PMS</option>
+                <option>CRDI calibration</option>
+                <option>Turbo rebuild</option>
+                <option>OBD scan / diagnostic</option>
+                <option>Not sure — please advise</option>
+              </select>
+            </div>
+            <div class="field"><label for="m">Vehicle and preferred date</label><textarea id="m" name="message" placeholder="e.g. 2016 Hilux 2.4 diesel, any Saturday"></textarea></div>
+            <button class="btn btn--primary btn--block" type="submit">Send via Messenger</button>
+          </form>
+          <p class="formnote">Prefer to talk? Call <a href="tel:+639177019097">0917 701 9097</a>, Monday to Saturday, 8:00 AM to 5:00 PM.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <h3>Kareha Autoworks</h3>
+        <p class="footer__p">Km.7 Bangkal, McArthur Hwy<br>fronting MM Marble<br>Davao City, Philippines<br><a href="tel:+639177019097">0917 701 9097</a></p>
+      </div>
+      <div>
+        <h3>Workshop hours</h3>
+        <p class="footer__p">Monday &ndash; Saturday<br>8:00 AM &ndash; 5:00 PM<br>Closed Sundays</p>
+      </div>
+      <div>
+        <h3>Find us online</h3>
+        <p class="footer__p"><a href="https://www.facebook.com/kareha.autoworks" target="_blank" rel="noopener">Facebook &mdash; /kareha.autoworks</a></p>
+      </div>
+    </div>
+    <div class="footer__credit">
+      <span>&copy; 2026 Kareha Autoworks &middot; Davao City</span>
+      <span>Website by CloudSpring IT Solutions</span>
+    </div>
+  </div>
+</footer>
+
+<aside class="cs-bar" role="complementary" aria-label="CloudSpring IT Solutions preview notice">
+  <div class="cs-bar__in">
+    <div class="cs-bar__txt">
+      <p class="cs-bar__eyebrow">PREVIEW &middot; CloudSpring IT Solutions</p>
+      <p class="cs-bar__line">DavaoStart publishes 321-6753 for this shop, no hours, and DCGarage underneath. Want a page that gets it right?</p>
+    </div>
+    <a class="cs-bar__btn" href="https://api.leadconnectorhq.com/widget/booking/QRPEnWRw2Kx9rBe0Mj6J" target="_blank" rel="noopener">Book a FREE Discovery Call &rarr;</a>
+  </div>
+</aside>
+
+<script>
+function csSend(e){
+  e.preventDefault();
+  window.open("https://m.me/kareha.autoworks",'_blank','noopener');
+  return false;
+}
+</script>
+</body>
+</html>

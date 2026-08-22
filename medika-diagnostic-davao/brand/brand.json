@@ -4,7 +4,7 @@
   "facebook": "MedikaDavao",
   "capturedAt": "2026-08-22T15:50:50.363Z",
   "source": "headless-http",
-  "name": null,
+  "name": "Medika Diagnostic Clinic",
   "logo": {
     "file": "logo-facebook-profile.jpg",
     "score": 95,
@@ -27,7 +27,11 @@
       },
       {
         "hex": "#D4A056",
-        "weight": 45
+        "weight": 40
+      },
+      {
+        "hex": "#FFFFFF",
+        "weight": 10
       }
     ],
     "neutral": [],
@@ -41,6 +45,6 @@
   "notes": [
     "facebook profile picture captured headlessly for \"MedikaDavao\"",
     "no website for this lead — facebook-only capture path",
-    "BLOCKER palette-pending: logo captured (logo-facebook-profile.jpg) but fewer than 2 chromatic colours found. Vision-read the logo, then write the hex values into colors.brand[] with colors.source=\"vision\" and re-run the gate."
+    "2026-08-23 CLO-54 builder vision re-read: royal-blue \"Medika\" wordmark + gold \"DIAGNOSTICS AND MEDICAL CLINIC\" and caduceus rod, on white. Capture hexes confirmed."
   ]
 }

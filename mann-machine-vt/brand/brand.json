@@ -4,7 +4,7 @@
   "facebook": null,
   "capturedAt": "2026-08-22T15:53:17.301Z",
   "source": "headless-http",
-  "name": "Mann &amp; Machine | Auto Mechanic in Richmond, VT",
+  "name": "Mann & Machine Inc",
   "logo": {
     "file": "logo-1-img-marked-logo.jpg",
     "score": 90,
@@ -29,6 +29,18 @@
   "colors": {
     "brand": [
       {
+        "hex": "#fdca19",
+        "weight": 12
+      },
+      {
+        "hex": "#e09900",
+        "weight": 13
+      },
+      {
+        "hex": "#2ea3f2",
+        "weight": 23
+      },
+      {
         "hex": "#007cba",
         "weight": 41
       },
@@ -39,18 +51,6 @@
       {
         "hex": "#005a87",
         "weight": 41
-      },
-      {
-        "hex": "#2ea3f2",
-        "weight": 23
-      },
-      {
-        "hex": "#e09900",
-        "weight": 13
-      },
-      {
-        "hex": "#fdca19",
-        "weight": 12
       }
     ],
     "neutral": [
@@ -88,6 +88,7 @@
   "blockedBy": null,
   "confidence": 100,
   "notes": [
-    "6 stylesheet(s) fetched, 1023451 bytes of CSS"
+    "6 stylesheet(s) fetched, 1023451 bytes of CSS",
+    "2026-08-23 CLO-54 builder: colors.brand reordered so the hexes visible in the captured logo lead the array. Nothing added or removed — the site CSS ranked WordPress/Divi admin defaults first."
   ]
 }

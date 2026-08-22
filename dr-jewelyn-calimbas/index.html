@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dr. Jewelyn Calimbas Pediatric Clinic — Tuktukan, Taguig City</title>
+<meta name="description" content="Dr. Jewelyn Calimbas Pediatric Clinic — 12 Bagong Calzada St., Tuktukan, Taguig City, and Rm 607 ACE Pateros. Pediatric care from infants to adolescents. Call 0907 821 4639.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* Palette read from brand/logo-facebook-profile.jpg — see brand/brand.json (colors.source) */
+  --brand:#C84451;
+  --brand-2:#8FA07E;
+  --brand-3:#FFFFFF;
+  --brand-deep:#90313a;
+  --brand-soft:#f8e9ea;
+  --paper:#ffffff;
+  --ink:#1e1b19;
+  --ink-2:#565049;
+  --line:#f6e1e3;
+  --accent:#8FA07E;
+  --shadow-sm:0 1px 2px rgba(30,27,25,.08), 0 2px 8px rgba(30,27,25,.06);
+  --shadow-md:0 8px 24px rgba(30,27,25,.11);
+  --r-sm:8px; --r-md:16px; --r-lg:24px; --r-pill:999px;
+  --display:'Nunito',system-ui,sans-serif;
+  --body:'Nunito Sans',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;font-family:var(--body);color:var(--ink);background:#fff;font-size:16px;line-height:1.6;padding-bottom:172px;overflow-x:hidden}
+img,svg{max-width:100%;display:block}
+h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.15;margin:0 0 12px;letter-spacing:-.006em}
+h1{font-size:34px}h2{font-size:28px}h3{font-size:20px}
+p{margin:0 0 16px}
+a{color:var(--brand-deep)}
+.wrap{width:100%;max-width:1080px;margin:0 auto;padding:0 20px}
+.eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--brand);margin:0 0 8px;font-family:var(--body)}
+.section{padding:56px 0}
+.section--tint{background:var(--brand-soft)}
+.section--paper{background:var(--paper)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+
+.header{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.94);backdrop-filter:saturate(140%) blur(8px);border-bottom:1px solid var(--line)}
+.header__in{display:flex;align-items:center;gap:12px;min-height:64px;padding:8px 20px;max-width:1080px;margin:0 auto}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);min-height:44px}
+.brand-logo-img{width:42px;height:42px;flex:0 0 42px;object-fit:contain;border-radius:10px;background:#fff;border:1px solid var(--line)}
+.brand__txt{display:flex;flex-direction:column;line-height:1.12}
+.brand__name{font-family:var(--display);font-weight:700;font-size:18px}
+.brand__sub{font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2);font-weight:600}
+.header__cta{margin-left:auto}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:11px 18px;border-radius:var(--r-pill);font-family:var(--body);font-weight:600;font-size:15px;text-decoration:none;border:1px solid transparent;cursor:pointer;transition:background-color .18s ease,color .18s ease,border-color .18s ease,transform .18s ease,box-shadow .18s ease}
+.btn--primary{background:var(--brand);color:#fff;box-shadow:var(--shadow-sm)}
+.btn--primary:hover{background:var(--brand-deep);transform:translateY(-1px);box-shadow:var(--shadow-md)}
+.btn--ghost{background:#fff;color:var(--brand-deep);border-color:var(--line)}
+.btn--ghost:hover{border-color:var(--brand);background:var(--brand-soft)}
+.btn--sm{font-size:14px;padding:9px 14px}
+.btn--block{width:100%}
+
+.hero{position:relative;background:linear-gradient(168deg,var(--brand-soft) 0%,#fff 66%);overflow:hidden}
+.hero::after{content:"";position:absolute;right:-150px;top:-130px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle at 35% 35%,rgba(200,68,81,0.14),rgba(200,68,81,0) 70%);pointer-events:none}
+.hero__in{padding:36px 20px 44px;max-width:1080px;margin:0 auto;position:relative;z-index:1}
+.hero h1{font-size:clamp(31px,7.4vw,52px);margin-bottom:14px}
+.hero h1 em{font-style:italic;color:var(--brand)}
+.hero__lead{font-size:17px;color:var(--ink-2);max-width:56ch;margin-bottom:22px}
+.motto{display:inline-block;font-family:var(--display);font-style:italic;font-size:18.5px;color:var(--brand-deep);background:#fff;border:1px solid var(--line);border-radius:var(--r-pill);padding:8px 18px;margin-bottom:18px}
+.idcard{background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:18px;box-shadow:var(--shadow-md);margin-bottom:22px}
+.idcard__row{display:flex;gap:12px;padding:10px 0;align-items:flex-start;border-top:1px solid var(--line)}
+.idcard__row:first-child{border-top:0;padding-top:0}
+.idcard__ico{flex:0 0 22px;width:22px;height:22px;color:var(--brand);margin-top:2px}
+.idcard__k{font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--ink-2);margin:0 0 2px}
+.idcard__v{font-size:15.5px;font-weight:500;margin:0}
+.idcard__v a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--brand-3)}
+.idcard__v a:hover{color:var(--brand);border-bottom-color:var(--brand)}
+.hero__btns{display:flex;flex-direction:column;gap:10px}
+.hero__art{margin-top:32px}
+
+.grid{display:grid;gap:16px;grid-template-columns:1fr}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:22px;box-shadow:var(--shadow-sm);transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow-md);border-color:var(--brand-3)}
+.card__ico{width:44px;height:44px;border-radius:12px;background:var(--brand-soft);color:var(--brand);display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+.card__ico svg{width:24px;height:24px}
+.card p{font-size:15px;color:var(--ink-2);margin:0}
+.note{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;background:#FFF7DF;border:1px dashed #D9BE63;color:#6E5410;padding:6px 12px;border-radius:var(--r-sm)}
+.note--block{display:block;text-transform:none;letter-spacing:0;font-weight:500;font-size:13.5px;line-height:1.55;padding:12px 14px}
+.note--block b{text-transform:uppercase;letter-spacing:.06em;font-size:11.5px;display:block;margin-bottom:4px}
+
+.why{display:grid;gap:14px;grid-template-columns:1fr}
+.why__item{display:flex;gap:14px;align-items:flex-start;background:#fff;border-radius:var(--r-md);padding:18px;box-shadow:var(--shadow-sm)}
+.why__num{font-family:var(--display);font-size:24px;font-weight:700;color:var(--brand);flex:0 0 auto;line-height:1.1}
+.why__item h3{font-size:17px;margin-bottom:4px}
+.why__item p{font-size:14.5px;color:var(--ink-2);margin:0}
+
+.pricing{background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:22px;box-shadow:var(--shadow-sm)}
+.pricing__row{display:flex;justify-content:space-between;gap:14px;padding:12px 0;border-top:1px solid var(--line);font-size:15px}
+.pricing__row:first-of-type{border-top:0}
+.pricing__row span:last-child{color:var(--brand);font-weight:700;text-align:right;white-space:nowrap}
+
+.hours{background:#fff;border:1px solid var(--line);border-radius:var(--r-md);overflow:hidden;box-shadow:var(--shadow-sm)}
+.hours__row{display:flex;justify-content:space-between;gap:12px;padding:13px 18px;border-top:1px solid var(--line);font-size:15px}
+.hours__row:first-child{border-top:0}
+.hours__row--open{background:var(--brand-soft);font-weight:600}
+.hours__row span:last-child{color:var(--ink-2);text-align:right}
+.hours__row--open span:last-child{color:var(--brand-deep)}
+
+.split{display:grid;gap:16px;grid-template-columns:1fr}
+.panel{background:#fff;border:1px solid var(--line);border-left:4px solid var(--brand);border-radius:var(--r-md);padding:20px;box-shadow:var(--shadow-sm)}
+.panel h3{margin-bottom:6px}
+.panel p{font-size:15px;color:var(--ink-2);margin:0 0 8px}
+.panel p:last-child{margin-bottom:0}
+.panel--alt{border-left-color:var(--brand-2)}
+
+.contact{display:grid;gap:20px;grid-template-columns:1fr}
+.map{border-radius:var(--r-md);overflow:hidden;border:1px solid var(--line);background:var(--brand-soft);position:relative;box-shadow:var(--shadow-sm)}
+.map__label{position:absolute;left:12px;bottom:12px;right:12px;background:rgba(255,255,255,.95);border-radius:var(--r-sm);padding:10px 12px;font-size:12.5px;color:var(--ink-2);font-weight:500}
+.form{background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:20px;box-shadow:var(--shadow-sm)}
+.field{margin-bottom:14px}
+.field label{display:block;font-size:13px;font-weight:600;margin-bottom:6px}
+.field input,.field textarea,.field select{width:100%;font-family:var(--body);font-size:16px;color:var(--ink);padding:12px;border:1px solid var(--line);border-radius:var(--r-sm);background:#FDFCFB;min-height:44px;transition:border-color .18s ease,box-shadow .18s ease}
+.field textarea{min-height:110px;resize:vertical}
+.field input:focus,.field textarea:focus,.field select:focus{outline:none;border-color:var(--brand);box-shadow:0 0 0 3px rgba(200,68,81,0.18)}
+.formnote{font-size:12.5px;color:var(--ink-2);margin:10px 0 0}
+
+.footer{background:var(--ink);color:#ddd6cf;padding:40px 0 32px}
+.footer h3{color:#fff;font-size:19px}
+.footer a{color:#c1cbb8;text-decoration:none}
+.footer a:hover{color:#fff;text-decoration:underline}
+.footer__grid{display:grid;gap:24px;grid-template-columns:1fr}
+.footer__p{font-size:14.5px;line-height:1.7;margin:0}
+.footer__credit{margin-top:28px;padding-top:18px;border-top:1px solid rgba(255,255,255,.14);font-size:13px;display:flex;flex-wrap:wrap;gap:6px;justify-content:space-between}
+
+.cs-bar{position:fixed;left:0;right:0;bottom:0;z-index:200;background:rgba(22,19,17,.96);backdrop-filter:saturate(150%) blur(10px);border-top:1px solid rgba(255,255,255,.14);box-shadow:0 -8px 32px rgba(20,18,16,.34);color:#fff;padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px))}
+.cs-bar__in{max-width:1080px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:10px 18px;text-align:center}
+.cs-bar__eyebrow{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:#c7d0bf;margin:0 0 3px}
+.cs-bar__line{font-size:15px;font-weight:600;line-height:1.35;margin:0;color:#fff}
+.cs-bar__btn{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:12px 22px;border-radius:var(--r-pill);background:var(--brand-2);color:#1a1405;font-weight:700;font-size:15px;text-decoration:none;white-space:nowrap;box-shadow:0 4px 18px rgba(143,160,126,0.36);animation:csPulse 2.4s ease-in-out infinite;transition:transform .18s ease,box-shadow .18s ease}
+.cs-bar__btn:hover{transform:translateY(-2px);box-shadow:0 8px 26px rgba(143,160,126,0.5);animation-play-state:paused}
+.cs-bar__btn:focus-visible{outline:3px solid #fff;outline-offset:3px}
+@keyframes csPulse{0%,100%{box-shadow:0 4px 18px rgba(143,160,126,0.3)}50%{box-shadow:0 4px 26px rgba(143,160,126,0.62)}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition-duration:.01ms!important}.cs-bar__btn{animation:none}}
+
+@media (min-width:600px){
+  .hero__btns{flex-direction:row;flex-wrap:wrap}
+  .hero__btns .btn{flex:1 1 auto;min-width:200px}
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .why{grid-template-columns:repeat(2,1fr)}
+  .split{grid-template-columns:repeat(2,1fr)}
+}
+@media (min-width:900px){
+  body{padding-bottom:104px}
+  .section{padding:76px 0}
+  h1{font-size:46px}h2{font-size:36px}
+  .hero__in{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center;padding:60px 20px 72px}
+  .hero__art{margin-top:0}
+  .grid{grid-template-columns:repeat(3,1fr)}
+  .contact{grid-template-columns:1.05fr .95fr;align-items:start}
+  .footer__grid{grid-template-columns:1.4fr 1fr 1fr}
+  .cs-bar__in{flex-wrap:nowrap;justify-content:space-between;text-align:left}
+  .cs-bar__line{font-size:16.5px}
+}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="header__in">
+    <a class="brand" href="#top" aria-label="Dr. Jewelyn Calimbas Pediatric Clinic, back to top">
+      <img class="brand-logo-img" src="brand/logo-facebook-profile.jpg" alt="Dr. Jewelyn Calimbas Pediatric Clinic logo" width="42" height="42" decoding="async">
+      <span class="brand__txt">
+        <span class="brand__name">Dr. Jewelyn Calimbas</span>
+        <span class="brand__sub">Pediatric Clinic &middot; Taguig &amp; Pateros</span>
+      </span>
+    </a>
+    <a class="btn btn--primary btn--sm header__cta" href="tel:+639078214639">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+      <span>Call clinic</span>
+    </a>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="hero__in">
+      <div>
+        <p class="eyebrow">Tuktukan, Taguig &middot; and Pateros</p>
+        <h1>The clinic&rsquo;s own schedule, <em>published by the clinic</em></h1>
+
+        <p class="hero__lead">Dr. Jewelyn Calimbas sees infants through adolescents at two clinics &mdash; Bagong Calzada Street in Tuktukan and Room 607 at ACE Pateros. Three different websites currently publish three different Sunday schedules for her. This page is the one that gets to be right.</p>
+
+        <div class="idcard">
+          <div class="idcard__row">
+            <svg class="idcard__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <div><p class="idcard__k">Address</p><p class="idcard__v">12 Bagong Calzada St., Tuktukan,<br>Taguig City 1637<br><span style="opacity:.75">Second clinic: Rm 607, ACE Pateros</span></p></div>
+          </div>
+          <div class="idcard__row">
+            <svg class="idcard__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+            <div><p class="idcard__k">Phone</p><p class="idcard__v"><a href="tel:+639078214639">0907 821 4639</a></p></div>
+          </div>
+          <div class="idcard__row">
+            <svg class="idcard__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.2 1.9"/></svg>
+            <div><p class="idcard__k">Schedule</p><p class="idcard__v">Two clinics &mdash; schedule to be confirmed</p></div>
+          </div>
+        </div>
+
+        <div class="hero__btns">
+          <a class="btn btn--primary" href="tel:+639078214639">Call 0907 821 4639</a>
+          <a class="btn btn--ghost" href="https://m.me/drjewelyn" target="_blank" rel="noopener">Message on Facebook</a>
+        </div>
+      </div>
+
+      <div class="hero__art" aria-hidden="true">
+
+<svg viewBox="0 0 460 380" role="img" aria-hidden="true" focusable="false" style="width:100%;height:auto;filter:drop-shadow(0 18px 40px rgba(20,20,20,.16))">
+  <defs><linearGradient id="hg1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#ffffff"/></linearGradient>
+  <linearGradient id="hg2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#C84451"/><stop offset="1" stop-color="#8FA07E"/></linearGradient></defs>
+  <rect x="10" y="14" width="440" height="352" rx="28" fill="url(#hg1)"/>
+  <circle cx="358" cy="98" r="58" fill="#fff" opacity=".55"/>
+  <rect x="150" y="70" width="170" height="210" rx="20" fill="#fff" stroke="#C84451" stroke-width="2.5"/>
+  <rect x="176" y="102" width="118" height="10" rx="5" fill="#C84451" opacity=".8"/>
+  <rect x="176" y="124" width="86" height="10" rx="5" fill="#8FA07E" opacity=".65"/>
+  <g transform="translate(235,196)"><circle r="46" fill="url(#hg2)" opacity=".14"/>
+    <path d="M-10-26h20v16h16v20h-16v16h-20v-16h-16v-20h16z" fill="url(#hg2)"/></g>
+  <rect x="176" y="252" width="118" height="9" rx="4.5" fill="#C84451" opacity=".35"/>
+  <path d="M60 300c40 26 92 38 150 38" stroke="#C84451" stroke-width="4" fill="none" stroke-linecap="round" opacity=".5"/>
+  <circle cx="86" cy="132" r="26" fill="#fff" opacity=".85"/><circle cx="86" cy="132" r="11" fill="#8FA07E" opacity=".7"/>
+  <rect x="330" y="238" width="94" height="76" rx="16" fill="#fff" stroke="#FFFFFF" stroke-width="2"/>
+  <rect x="348" y="262" width="58" height="8" rx="4" fill="#8FA07E" opacity=".7"/>
+  <rect x="348" y="280" width="38" height="8" rx="4" fill="#C84451" opacity=".45"/>
+</svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE PROBLEM THIS PAGE FIXES -->
+  <section class="section section--paper">
+    <div class="wrap" style="max-width:820px">
+      <p class="eyebrow">Why this page exists</p>
+      <h2>Three websites, three different Sunday schedules &mdash; and none of them is hers to correct</h2>
+      <p style="color:var(--ink-2)">Fetched on 16 August 2026 and re-checked on 23 August: <strong>clinicfinderph.com</strong> publishes Sunday 10:00&ndash;12:00 and 1:30&ndash;5:00, marks Monday closed, places the clinic in <em>&ldquo;Taguig BGC&rdquo;</em>, shows 3 reviews, and offers a <strong>&ldquo;Claim This Clinic&rdquo;</strong> button &mdash; which is the page telling you plainly that it is not hers.</p>
+      <p style="color:var(--ink-2)"><strong>seriousmd.com</strong> gives Sunday 8:00&ndash;11:00 AM for the same doctor. Her own Facebook page says Sunday 10:00 to 5:00. A parent choosing a Sunday to bring in a sick child has three answers and no way to tell which one is current.</p>
+      <p style="color:var(--ink-2)">The ClinicFinderPH page does one more thing: underneath her listing it lists <strong>other pediatricians</strong> &mdash; Dr. Arnel Salud of St. Luke&rsquo;s, Zaira Nina De Leon-Duque MD, and The Natural Child Clinic. The page that ranks for her name is also the page recommending her competitors.</p>
+      <p style="color:var(--ink-2)">Re-checked 23 August 2026: <strong>drjewelyncalimbas.com is unregistered.</strong> There is no owned page for a correction to live on, which is the whole reason the directories get the last word.</p>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section" id="services">
+    <div class="wrap">
+      <p class="eyebrow">Paediatric care</p>
+      <h2>From the first newborn check to the last teenage one</h2>
+      <p style="max-width:62ch;color:var(--ink-2)">Dr. Calimbas&rsquo;s practice covers infants through adolescents. The categories below reflect what the clinic publicly offers.</p>
+
+      <div class="grid" style="margin-top:26px">
+        <article class="card">
+          <div class="card__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M9 11h.01M15 11h.01M9.5 15a4 4 0 0 0 5 0"/></svg></div>
+          <h3>Newborn &amp; infant care</h3>
+          <p>Weight, feeding and growth checks in the first months, when the questions come fastest and the reassurance matters most.</p>
+        </article>
+        <article class="card">
+          <div class="card__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5 20 6v6c0 5-3.4 8.4-8 9.5C7.4 20.4 4 17 4 12V6z"/><path d="m9 12 2 2 4-4"/></svg></div>
+          <h3>Immunisations</h3>
+          <p>Childhood vaccination, worked against the record you already have rather than started from scratch.</p>
+        </article>
+        <article class="card">
+          <div class="card__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3v5a4 4 0 0 0 8 0V3"/><path d="M10 12v3a5 5 0 0 0 10 0v-2"/><circle cx="20" cy="10" r="2.2"/></svg></div>
+          <h3>Sick-child consults</h3>
+          <p>Fever, cough, rashes and the ordinary emergencies of childhood, seen by the same doctor each time.</p>
+        </article>
+        <article class="card">
+          <div class="card__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 17a9 9 0 1 1 17 0"/><path d="M12 17l4-5"/><circle cx="12" cy="17" r="1.6"/></svg></div>
+          <h3>Growth &amp; development checks</h3>
+          <p>Routine monitoring across childhood, so a change is spotted against the child&rsquo;s own history.</p>
+        </article>
+        <article class="card">
+          <div class="card__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="M16 5.4a3.2 3.2 0 0 1 0 5.2M17.5 20a6.4 6.4 0 0 0-2-4.6"/></svg></div>
+          <h3>Adolescent care</h3>
+          <p>Care continues past the toddler years &mdash; the practice sees patients through adolescence.</p>
+        </article>
+        <article class="card" style="border-style:dashed;background:var(--paper)">
+          <div class="card__ico" style="background:#FFF7DF;color:#6E5410"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></div>
+          <h3>Your full service list</h3>
+          <p class="note note--block" style="margin-top:8px"><b>Placeholder</b>Send the clinic&rsquo;s complete list and it replaces this card word for word. Nothing on this page is invented.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- TWO CLINICS -->
+  <section class="section section--tint" id="branches">
+    <div class="wrap">
+      <p class="eyebrow">Two clinics, one doctor</p>
+      <h2>Where Dr. Calimbas is, and when</h2>
+      <p style="max-width:62ch;color:var(--ink-2)">This is the block that settles the question the directories keep answering differently. Confirm the real days and times once, and every parent who searches sees the same thing.</p>
+      <div class="split" style="margin-top:24px">
+        <div class="panel">
+          <h3>Tuktukan, Taguig City</h3>
+          <p>12 Bagong Calzada St., Tuktukan, Taguig City 1637</p>
+          <p class="note note--block"><b>Clinic days &amp; hours &mdash; to be confirmed</b>Her Facebook page currently says Sunday 10:00&nbsp;AM to 5:00&nbsp;PM. ClinicFinderPH says 10:00&ndash;12:00 and 1:30&ndash;5:00. We will publish whichever one is true, not an average of the two.</p>
+        </div>
+        <div class="panel panel--alt">
+          <h3>ACE Pateros</h3>
+          <p>Room 607, ACE Medical Center, Pateros</p>
+          <p class="note note--block"><b>Clinic days &amp; hours &mdash; to be confirmed</b>No directory publishes a schedule for the Pateros clinic at all. Send it and it goes here, next to the Taguig one, where a parent can compare them in a glance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY -->
+  <section class="section" id="why">
+    <div class="wrap">
+      <p class="eyebrow">Why parents choose Dr. Calimbas</p>
+      <h2>The same doctor, at both clinics, every visit</h2>
+      <div class="why" style="margin-top:24px">
+        <div class="why__item">
+          <span class="why__num">01</span>
+          <div><h3>5.0 on Google</h3><p>Every parent who has rated the clinic on Google rated it 5 out of 5. ClinicFinderPH shows only 3 reviews &mdash; another number the directory gets to decide.</p></div>
+        </div>
+        <div class="why__item">
+          <span class="why__num">02</span>
+          <div><h3>Two locations, one practice</h3><p>Tuktukan in Taguig and Room 607 at ACE Pateros. Families who move between the two see the same doctor and the same records.</p></div>
+        </div>
+        <div class="why__item">
+          <span class="why__num">03</span>
+          <div><h3>Infants through adolescents</h3><p>The practice does not hand a child on at five or at twelve. The same paediatrician follows them through.</p></div>
+        </div>
+        <div class="why__item">
+          <span class="why__num">04</span>
+          <div><h3>One number, no middleman</h3><p>0907 821 4639 reaches the clinic directly &mdash; no directory contact form, no third-party booking desk taking the message first.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section section--paper" id="about">
+    <div class="wrap" style="max-width:760px">
+      <p class="eyebrow">About</p>
+      <h2>Dr. Jewelyn Calimbas Pediatric Clinic</h2>
+      <p>Dr. Jewelyn Calimbas Pediatric Clinic provides paediatric care for infants through adolescents at 12 Bagong Calzada St., Tuktukan, Taguig City 1637, and at Room 607, ACE Pateros.</p>
+      <p>Appointments and enquiries go through 0907 821 4639 or the clinic&rsquo;s Facebook page.</p>
+      <p class="note note--block" style="max-width:62ch"><b>Placeholder &mdash; needs Dr. Jewelyn Calimbas&rsquo;s input</b>Dr. Calimbas&rsquo;s credentials and training, the confirmed clinic days at each location, and the consultation fee are deliberately blank. Send them and they go in as written. This preview carries no invented credentials, hours, prices or reviews.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section" id="contact">
+    <div class="wrap">
+      <p class="eyebrow">Book a consult</p>
+      <h2>Contact the clinic</h2>
+
+      <div class="contact" style="margin-top:26px">
+        <div>
+          <div class="hours" style="margin-bottom:14px">
+        <div class="hours__row hours__row--open"><span>Monday</span><span>To be confirmed</span></div>
+        <div class="hours__row hours__row--open"><span>Tuesday</span><span>To be confirmed</span></div>
+        <div class="hours__row hours__row--open"><span>Wednesday</span><span>To be confirmed</span></div>
+        <div class="hours__row hours__row--open"><span>Thursday</span><span>To be confirmed</span></div>
+        <div class="hours__row hours__row--open"><span>Friday</span><span>To be confirmed</span></div>
+        <div class="hours__row hours__row--open"><span>Saturday</span><span>To be confirmed</span></div>
+        <div class="hours__row hours__row--open"><span>Sunday</span><span>To be confirmed</span></div>
+          </div>
+          <p class="note note--block" style="margin-bottom:20px"><b>Deliberately blank &mdash; this is the point of the page</b>ClinicFinderPH, SeriousMD and Facebook publish three different Sunday schedules for this clinic. Rather than pick one and be wrong, this grid stays empty until Dr. Calimbas confirms it &mdash; and then it is the version that ranks.</p>
+
+          <div class="idcard" style="box-shadow:var(--shadow-sm)">
+          <div class="idcard__row">
+            <svg class="idcard__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <div><p class="idcard__k">Address</p><p class="idcard__v">12 Bagong Calzada St., Tuktukan,<br>Taguig City 1637<br><span style="opacity:.75">Second clinic: Rm 607, ACE Pateros</span></p></div>
+          </div>
+          <div class="idcard__row">
+            <svg class="idcard__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+            <div><p class="idcard__k">Phone</p><p class="idcard__v"><a href="tel:+639078214639">0907 821 4639</a></p></div>
+          </div>
+          <div class="idcard__row">
+            <svg class="idcard__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.2 1.9"/></svg>
+            <div><p class="idcard__k">Schedule</p><p class="idcard__v">Two clinics &mdash; schedule to be confirmed</p></div>
+          </div>
+
+          <div class="idcard__row">
+            <svg class="idcard__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="M16 5.4a3.2 3.2 0 0 1 0 5.2M17.5 20a6.4 6.4 0 0 0-2-4.6"/></svg>
+            <div><p class="idcard__k">Facebook</p><p class="idcard__v"><a href="https://www.facebook.com/drjewelyn/" target="_blank" rel="noopener">facebook.com/drjewelyn</a></p></div>
+          </div>
+          </div>
+
+          <div class="map" style="margin-top:20px">
+<svg viewBox="0 0 600 300" role="img" aria-label="Illustrated map placeholder showing Bagong Calzada Street, Tuktukan, Taguig City" style="width:100%;height:auto;display:block">
+  <rect width="600" height="300" fill="#FFFFFF"/>
+  <path d="M0 200h600M0 92h600M140 0v300M420 0v300" stroke="#fff" stroke-width="16"/>
+  <path d="M0 200h600M0 92h600M140 0v300M420 0v300" stroke="rgba(0,0,0,.07)" stroke-width="2"/>
+  <rect x="164" y="112" width="96" height="64" rx="6" fill="#fff" opacity=".65"/>
+  <rect x="276" y="112" width="120" height="64" rx="6" fill="#fff" opacity=".65"/>
+  <rect x="164" y="220" width="120" height="52" rx="6" fill="#fff" opacity=".65"/>
+  <rect x="446" y="112" width="120" height="64" rx="6" fill="#fff" opacity=".65"/>
+  <g transform="translate(300,146)"><circle cx="0" cy="0" r="30" fill="#C84451" opacity=".16"/>
+    <path d="M0-24c8.8 0 16 7.2 16 16 0 12-16 26-16 26S-16 4-16-8c0-8.8 7.2-16 16-16z" fill="#C84451"/>
+    <circle cx="0" cy="-8" r="6" fill="#fff"/></g></svg>
+            <p class="map__label"><strong>Illustration, not a live map.</strong> An interactive Google Map pinned to 12 Bagong Calzada St. goes here on the live site &mdash; in Tuktukan, not in BGC.</p>
+          </div>
+        </div>
+
+        <div class="form">
+          <h3>Request an appointment</h3>
+          <p style="font-size:14.5px;color:var(--ink-2)">Tell the clinic which child, which clinic and when suits you. In this preview the button opens Messenger &mdash; on the live site it sends straight to the clinic&rsquo;s inbox.</p>
+          <form onsubmit="return csSend(event)">
+            <div class="field"><label for="n">Your name</label><input id="n" name="name" type="text" autocomplete="name" placeholder="Juan Dela Cruz"></div>
+            <div class="field"><label for="p">Mobile number</label><input id="p" name="phone" type="tel" autocomplete="tel" placeholder="09XX XXX XXXX"></div>
+            <div class="field"><label for="s">Which clinic?</label>
+              <select id="s" name="topic">
+                <option>Tuktukan, Taguig</option>
+                <option>ACE Pateros</option>
+                <option>Either — whichever is sooner</option>
+              </select>
+            </div>
+            <div class="field"><label for="m">What does your child need, and when?</label><textarea id="m" name="message" placeholder="e.g. 8-month check and vaccine, any Sunday morning"></textarea></div>
+            <button class="btn btn--primary btn--block" type="submit">Send via Messenger</button>
+          </form>
+          <p class="formnote">Prefer to talk? Call <a href="tel:+639078214639">0907 821 4639</a>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <h3>Dr. Jewelyn Calimbas Pediatric Clinic</h3>
+        <p class="footer__p">12 Bagong Calzada St.<br>Tuktukan, Taguig City 1637<br>Rm 607, ACE Pateros<br><a href="tel:+639078214639">0907 821 4639</a></p>
+      </div>
+      <div>
+        <h3>Clinic schedule</h3>
+        <p class="footer__p">To be confirmed<br><span style="opacity:.75">Three directories currently publish three different Sunday schedules.</span></p>
+      </div>
+      <div>
+        <h3>Find us online</h3>
+        <p class="footer__p"><a href="https://www.facebook.com/drjewelyn/" target="_blank" rel="noopener">Facebook &mdash; /drjewelyn</a></p>
+      </div>
+    </div>
+    <div class="footer__credit">
+      <span>&copy; 2026 Dr. Jewelyn Calimbas Pediatric Clinic &middot; Taguig City</span>
+      <span>Website by CloudSpring IT Solutions</span>
+    </div>
+  </div>
+</footer>
+
+<aside class="cs-bar" role="complementary" aria-label="CloudSpring IT Solutions preview notice">
+  <div class="cs-bar__in">
+    <div class="cs-bar__txt">
+      <p class="cs-bar__eyebrow">PREVIEW &middot; CloudSpring IT Solutions</p>
+      <p class="cs-bar__line">Three sites publish three different Sunday schedules for this clinic. Want the correct one to be the one that ranks?</p>
+    </div>
+    <a class="cs-bar__btn" href="https://api.leadconnectorhq.com/widget/booking/QRPEnWRw2Kx9rBe0Mj6J" target="_blank" rel="noopener">Book a FREE Discovery Call &rarr;</a>
+  </div>
+</aside>
+
+<script>
+function csSend(e){
+  e.preventDefault();
+  window.open("https://m.me/drjewelyn",'_blank','noopener');
+  return false;
+}
+</script>
+</body>
+</html>

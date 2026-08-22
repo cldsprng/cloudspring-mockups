@@ -4,7 +4,7 @@
   "facebook": "GMSautocare01",
   "capturedAt": "2026-08-22T15:58:13.461Z",
   "source": "headless-http",
-  "name": "GMS",
+  "name": "GMS Auto Care Center",
   "logo": {
     "file": "logo-2-json-ld-logo-url.png",
     "score": 100,
@@ -36,24 +36,24 @@
   "colors": {
     "brand": [
       {
-        "hex": "#007cba",
-        "weight": 41
-      },
-      {
-        "hex": "#006ba1",
-        "weight": 41
-      },
-      {
-        "hex": "#005a87",
-        "weight": 41
-      },
-      {
         "hex": "#790000",
         "weight": 18
       },
       {
         "hex": "#e6db55",
         "weight": 7
+      },
+      {
+        "hex": "#005a87",
+        "weight": 41
+      },
+      {
+        "hex": "#007cba",
+        "weight": 41
+      },
+      {
+        "hex": "#006ba1",
+        "weight": 41
       },
       {
         "hex": "#dbf2b7",
@@ -95,6 +95,7 @@
   "confidence": 100,
   "notes": [
     "facebook profile picture captured headlessly for \"GMSautocare01\"",
-    "6 stylesheet(s) fetched, 240999 bytes of CSS"
+    "6 stylesheet(s) fetched, 240999 bytes of CSS",
+    "2026-08-23 CLO-54 builder: colors.brand reordered so the hexes visible in the captured logo lead the array. Nothing added or removed — the site CSS ranked WordPress/Divi admin defaults first."
   ]
 }

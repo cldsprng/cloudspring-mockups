@@ -1,44 +1,50 @@
 {
-    "slug":  "dentoq-dental",
-    "site":  null,
-    "facebook":  "SmilePHDentalCenter",
-    "capturedAt":  "2026-08-22T15:58:11.647Z",
-    "source":  "headless-http",
-    "name":  null,
-    "logo":  {
-                 "file":  "logo-facebook-profile.jpg",
-                 "score":  95,
-                 "why":  "facebook profile picture"
-             },
-    "logoFiles":  [
-                      {
-                          "file":  "logo-facebook-profile.jpg",
-                          "bytes":  29848,
-                          "from":  "graph.facebook.com/SmilePHDentalCenter/picture?width=1200\u0026height=1200",
-                          "why":  "facebook profile picture",
-                          "score":  95
-                      }
-                  ],
-    "colors":  {
-                   "brand":  [
-                                 "#3B2B66",
-                                 "#FFFFFF"
-                             ],
-                   "neutral":  [
-
-                               ],
-                   "themeColor":  null,
-                   "source":  "vision"
-               },
-    "fonts":  [
-
-              ],
-    "ready":  true,
-    "blockedBy":  "palette-pending",
-    "confidence":  50,
-    "notes":  [
-                  "facebook profile picture captured headlessly for \"SmilePHDentalCenter\"",
-                  "no website for this lead — facebook-only capture path",
-                  "BLOCKER palette-pending: logo captured (logo-facebook-profile.jpg) but fewer than 2 chromatic colours found. Vision-read the logo, then write the hex values into colors.brand[] with colors.source=\"vision\" and re-run the gate."
-              ]
+  "slug": "dentoq-dental",
+  "site": null,
+  "facebook": "SmilePHDentalCenter",
+  "capturedAt": "2026-08-22T15:58:11.647Z",
+  "source": "headless-http",
+  "name": "Dentoq Dental Collective",
+  "logo": {
+    "file": "logo-facebook-profile.jpg",
+    "score": 95,
+    "why": "facebook profile picture"
+  },
+  "logoFiles": [
+    {
+      "file": "logo-facebook-profile.jpg",
+      "bytes": 29848,
+      "from": "graph.facebook.com/SmilePHDentalCenter/picture?width=1200&height=1200",
+      "why": "facebook profile picture",
+      "score": 95
+    }
+  ],
+  "colors": {
+    "brand": [
+      {
+        "hex": "#3B2B66",
+        "weight": 40
+      },
+      {
+        "hex": "#5A1FE8",
+        "weight": 40
+      },
+      {
+        "hex": "#FFFFFF",
+        "weight": 20
+      }
+    ],
+    "neutral": [],
+    "themeColor": null,
+    "source": "vision"
+  },
+  "fonts": [],
+  "ready": true,
+  "blockedBy": null,
+  "confidence": 50,
+  "notes": [
+    "facebook profile picture captured headlessly for \"SmilePHDentalCenter\"",
+    "no website for this lead — facebook-only capture path",
+    "2026-08-23 CLO-54 builder vision re-read: white tooth-with-braces mark on an indigo-to-violet gradient. Deep indigo #3B2B66 confirmed; vivid violet #5A1FE8 read off the gradient's bright end."
+  ]
 }

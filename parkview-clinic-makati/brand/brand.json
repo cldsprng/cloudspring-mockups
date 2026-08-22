@@ -4,7 +4,7 @@
   "facebook": "ParkviewClinicForChildrenAndBreastfeedingMothers",
   "capturedAt": "2026-08-22T15:53:03.805Z",
   "source": "headless-http",
-  "name": null,
+  "name": "Parkview Clinic for Children & Breastfeeding Mothers",
   "logo": {
     "file": "logo-facebook-profile.jpg",
     "score": 95,
@@ -23,11 +23,15 @@
     "brand": [
       {
         "hex": "#2D8659",
-        "weight": 50
+        "weight": 45
+      },
+      {
+        "hex": "#4CAF50",
+        "weight": 30
       },
       {
         "hex": "#C8E6D9",
-        "weight": 40
+        "weight": 25
       }
     ],
     "neutral": [],
@@ -41,6 +45,6 @@
   "notes": [
     "facebook profile picture captured headlessly for \"ParkviewClinicForChildrenAndBreastfeedingMothers\"",
     "no website for this lead — facebook-only capture path",
-    "BLOCKER palette-pending: logo captured (logo-facebook-profile.jpg) but fewer than 2 chromatic colours found. Vision-read the logo, then write the hex values into colors.brand[] with colors.source=\"vision\" and re-run the gate."
+    "2026-08-23 CLO-54 builder vision re-read: photo against the clinic's green leaf-tree wall. Deep leaf green #2D8659 and pale mint #C8E6D9 confirmed; bright leaf green #4CAF50 added."
   ]
 }
