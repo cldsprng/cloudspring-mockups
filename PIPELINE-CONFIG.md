@@ -1285,3 +1285,30 @@ promise, not the diagnosis, that the menu gates.
   17 the 07:00 measurement showed — step 3 moved 7 to BRAND BLOCKED after the
   count was taken. Re-read the list before trusting a queue depth from earlier
   in the same run.
+- 2026-08-23 (step 6 — em-dash tic RECURRED, generator defect not a draft
+  defect): 4 of the 14 fresh drafts (Medika, Dentoq, Parkview, Dr. Mylene
+  Letigio) shipped with TWO em-dashes each, all four in the identical shape
+  `X—clause—Y` (a parenthetical aside), against the 2026-08-16 ban of "an
+  em-dash as the default clause separator, ~1 per paragraph". This is the
+  second time this exact tell has been caught (first: 2026-08-16, banned
+  explicitly that day) and it reproduced in a batch drafted entirely after
+  the ban existed — not a stale-instruction case. QA fixed all four in place
+  (comma/colon/parens instead of the second dash) rather than blocking the
+  cards, since the fix was mechanical and did not touch the underlying
+  claim. **Escalating per role spec: this is a role-spec/generator defect for
+  the CEO, not something QA fixing the symptom each run actually resolves.**
+- 2026-08-23 (step 6 — two menu-boundary near-misses, routed to CHANGES
+  REQUESTED): GMS Auto Care's draft described the mockup as having "your
+  Gravity Form that captures contact number + plate + date" (reads as TR-02
+  structured intake, IN BUILD) and 509 Family Care's draft offered "a direct
+  booking trigger instead of a DM queue" (reads as CL-01 automated booking,
+  IN BUILD) — both on a website-only (Tier W) product. Neither drafter named
+  an automation ID, which is exactly why these are easy to miss: the OFFER-
+  MENU.md check catches named IDs, not functional claims that imply an
+  automation without naming one. Worth tightening the drafting prompt to
+  forbid verbs like "captures" and "trigger" for anything that is really a
+  W-04 mailto: handoff or a W-03 plain link.
+- 2026-08-23 (step 6 — no recurrence): the "So I built" pivot clause, the
+  opt-out closer, and "[Your name]" placeholders did NOT reappear in this
+  14-card batch. Those three specific bans are holding; the em-dash ban is
+  not.
