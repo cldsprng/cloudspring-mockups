@@ -1312,3 +1312,78 @@ promise, not the diagnosis, that the menu gates.
   opt-out closer, and "[Your name]" placeholders did NOT reappear in this
   14-card batch. Those three specific bans are holding; the em-dash ban is
   not.
+- 2026-08-23 (steps 7-9 — starved for a FIFTH consecutive run; the starving
+  input is now measured, not just named): APPROVED 0, CONTACTED 0, FOLLOW-UP
+  DUE 0, REPLIED (HITS) 0. Step 7 had nothing to sync, step 8 nothing due, step
+  9 nothing to route. GHL was healthy throughout — `get-pipelines` returned 200
+  with all three pipelines including CLOUDSPRING WEB LEADS, so for the first
+  time in this streak the back half was starved by the board alone and not by
+  the CRM. The starving input is READY TO SEND -> APPROVED, a human touchpoint,
+  and it is getting worse rather than holding: 17 -> 23 -> **35** over three
+  runs while APPROVED stayed at 0. All 35 are QA-passed with a verified-live
+  mockup. The front half added 12 more cards to a queue that has never once
+  drained. Reporting this as "clean" was the error the 2026-08-21 entry
+  corrected; reporting it as "starved" without the trend is the next-order
+  version of the same thing.
+- 2026-08-23 (the BRAND BLOCKED entry-condition spot-check earned its place on
+  its first run — duplicate slugs now MIS-ROUTE LEADS, not just litter disk):
+  BRAND BLOCKED grew 27 -> 34, so it got the check the 2026-08-20 rule requires.
+  One of the seven arrivals fails the entry condition outright. **Esmino
+  Pediatric Clinic** moved to BRAND BLOCKED on a `no-assets` verdict from a
+  slug minted today, `esmino-pediatric` — while `esmino-clinic-qc`, captured
+  back on CLO-39, already held `logo-facebook-profile.png` at 192,256 bytes and
+  `blockedBy: palette-pending`. Re-probed live from this surface:
+  `graph.facebook.com/esminoclinic/picture?width=1200&height=1200` returns
+  **200 / 192,256 bytes**, byte-identical to what CLO-39 stored. The assets
+  exist, the endpoint works, and the lead was parked in a human decision queue
+  by a second empty folder. `palette-pending` is not a BRAND BLOCKED state —
+  the config routes it to step 4 in the same run. Moved back to STRATEGY READY
+  with `brand folder: esmino-clinic-qc` written into the card description so
+  step 4 does not re-derive the choice. The 2026-08-23 duplicate-slug entry
+  asked for the orphans to be pruned as housekeeping; this upgrades it: capture
+  minting a second slug for a lead that already has a folder can **cost a lead**,
+  because the fresh empty capture outranks the good one that already exists.
+  Capture must check for an existing folder before minting a slug.
+  **Owner: whoever owns `tools/brand-capture/`.**
+- 2026-08-23 (three BRAND BLOCKED arrivals have no capture artifact at all, so
+  their verdict cannot be checked): of the same seven, **Cliniqa**, **Eusebio
+  Medical Clinic** and **Mother and Child Clinic (Pasig)** have no
+  `<slug>/brand/brand.json` anywhere on `origin/main` — searched all 100 folders
+  that carry one. Mississippi Dentistry, Centapaeds and Dr. Uy Medical each have
+  a committed `no-assets` brand.json and pass. So of seven moves into a human
+  decision queue, three are unverifiable and one is wrong. A card may only enter
+  BRAND BLOCKED with a committed `brand.json` naming the verdict; without one
+  there is nothing for the human to decide against, and the card is
+  indistinguishable from one that capture never reached.
+- 2026-08-23 (a step's own report counted only half its input): CLO-53's report
+  body reads "**Brand-blocked (new): 0** — All 14 leads had extractable assets"
+  while seven cards moved into BRAND BLOCKED in that same step, and the issue
+  title says so plainly ("21 STRATEGY READY cards — 14 ready, 7 no-assets").
+  The body reported the new-lead half of the input and silently dropped the
+  backlog half. Both halves went through the same step. When a step processes
+  backlog and new together, its report must state both counts separately or the
+  queue movement will not reconcile against it — this one only reconciled
+  because the board was re-counted independently.
+- 2026-08-23 (there IS a fourth `brand.json` state in the data, and the config
+  says there is not): the three-state table above ends "There is no fourth
+  state." Four folders on `origin/main` carry `blockedBy: "logo-not-a-mark"` —
+  `powertorq-auto-repair-qc`, `hugoderm-skincare-davao`, `kutis-by-kei-makati`
+  and `rjf-vulcanizing-taguig` — and **three of the four already have a built,
+  deployed `index.html`**. No row in the routing table covers this value, so
+  there is no defined answer to whether such a card builds, blocks or goes to a
+  human, and three of them resolved to "build" without one. Either the state is
+  legitimate and the table needs a fourth row, or capture should not be emitting
+  it. **Owner: whoever owns `tools/brand-capture/`** — this is a config-vs-code
+  disagreement, not a data defect to normalise away run by run.
+- 2026-08-23 (the one live card in the back half carries a due date that step 8
+  can never see): Custom Cakes by Bam, the July pilot and the sole occupant of
+  SYNCED TO GHL (SEND MANUALLY), has `due: 2026-08-21T01:00Z` — two days
+  overdue — with `Sent: —` in its description and its GHL opportunity still at
+  stage **New Lead**, not Outreach Sent. Nothing was ever sent, so the date is
+  measuring nothing. The due-date discipline attaches to CONTACTED and step 8
+  sweeps CONTACTED only, so a stamped date on a SYNCED TO GHL card is invisible
+  to the sweep permanently and just reads as an overdue follow-up on a lead that
+  never got a first touch. Left the date alone rather than clearing it (it is
+  the only visible ageing signal) or re-stamping it (that would imply a send
+  that did not happen). **Owner: Dei** — send the approved draft and drag to
+  CONTACTED, or reject a lead that has now been waiting four weeks.
