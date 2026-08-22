@@ -1213,3 +1213,75 @@ promise, not the diagnosis, that the menu gates.
   `W-01`, but step 1 should weight toward leads with **no** owned site while
   every automation line is `IN BUILD`, or accept that some of the day's quota
   is being spent on leads the menu cannot yet serve.
+- 2026-08-23 (step 4 — a THIRD species of parked domain, and the check that
+  finds it): the 2026-08-21 entry added an NS lookup to spot afternic / sedo /
+  dan / hugedomains parking. Two of today's ten backlog re-verifications turned
+  up a shape that lookup misses. `parkviewclinic.ph` and `dentoq.ph` both
+  **resolve and return 200 with ~4.6KB** — no NS tell available from this
+  surface (`nslookup -type=NS` returned nothing for either `.ph` name), and a
+  size well over the sub-1KB "this is a block page" threshold. The body is a
+  `<title>Redirecting...</title>` stub whose only URL is
+  **`router.parklogic.com`**, an ad-monetisation router. So: a resolving domain
+  is not an owned domain, and neither NS nor size settles it. **Grep the body
+  for the parking router**, which is one command and catches all three species:
+  ```
+  curl -s -L http://<domain> | grep -oiE 'parklogic|afternic|sedoparking|dan\.com|hugedomains|bodis|above\.com'
+  ```
+  This is a *better* angle than plain invisibility, not a footnote: someone else
+  is selling ads against the lead's own name. Dentoq's is the sharpest — they
+  rebranded from "SmilePH Dental Center", directories still rank the old name,
+  and `dentoq.ph` is already parked by a third party.
+- 2026-08-23 (step 4 — `dradentalclinic.com` is a Romanian clinic): the obvious
+  domain for Dr. A Dental Clinic (Davao) resolves, on nsone.net, to "DRA Dental
+  – Stomatologie" and redirects to `/ro/`. A live international name collision
+  on the exact domain the owner would reach for. Worth checking on every lead
+  whose name reduces to a short generic acronym — same family as the CAR-X /
+  carx.com finding from 2026-08-22, found by domain rather than by search.
+- 2026-08-23 (step 4 — the brand.json bare-hex-string bug regressed, and it
+  hard-fails the gate): 7 of the 14 folders built today arrived from the
+  2026-08-22 capture with `colors.brand` as bare strings — `["#C84451","#6B4C41"]`
+  instead of `[{hex,weight}]`. That is the exact defect CLO-48 fixed on
+  2026-08-21. `verify-brand.mjs` does not merely fail those folders, it
+  `process.exit(1)`s at the parse, so the gate output is a format error rather
+  than a brand verdict and the real state of the palette is never reported.
+  Normalised all 7 this run. **The capture path needs the same shape check the
+  gate has**, or this returns a third time — a fix applied to the data and not
+  to the writer is a fix with a shelf life.
+- 2026-08-23 (step 4 — vision-read palettes that were actually CSS named-colour
+  guesses): re-reading all 12 captured logos before building turned up four
+  hexes that are not in the images they came from. Three are CSS *named colours*
+  — `#DC143C` is `crimson` (Kareha), `#FF69B4` is `hotpink` and `#17A2B8` is
+  Bootstrap's `info` (509 Family Care) — and `#7BA1D1` is a blue recorded for
+  Dr. Letigio, whose profile photo is a coral top on a grey studio backdrop with
+  no blue anywhere in frame. A named colour appearing in a "vision" read is the
+  tell: a real read lands on arbitrary values like `#2FA39B`, never on the
+  sixteen colours everyone can name. **Treat a CSS keyword hex in
+  `colors.source: "vision"` as unverified and re-read the logo.**
+- 2026-08-23 (step 4 — two real defects in the gate's business-name check,
+  reported not patched): (a) it compares `brand.name` against raw HTML, so any
+  name containing `&` fails once the page escapes it to `&amp;` — Mann & Machine
+  blocked on this today even though the name was on the page four times. (b) it
+  splits the name on `[|\-–]` and keeps only the first part, so **"CAR-X SHOP
+  DAVAO" is checked as the word "car"**, which any auto-repair page passes by
+  accident. The hyphen split exists to strip site-title suffixes; it should
+  split on ` - ` / ` | ` with surrounding spaces, and decode entities before
+  comparing. Fixed the *data* this run (the name is now written literally on the
+  page, as it already was for the other 13) and left `tools/` alone: editing the
+  enforcement mechanism in the same run it blocked you is the move this config
+  bans, even when the edit would be an improvement. **Owner: whoever owns
+  `tools/brand-capture/`.**
+- 2026-08-23 (step 4 — capture wrote two folders per lead, and the run has to
+  pick): the 2026-08-22 capture created BOTH a short and a geographic slug for
+  most leads (`dentoq-dental` *and* `dentoq-dental-davao`, `medika-davao` *and*
+  `medika-diagnostic-davao`, and so on for 11 leads), with the palette work
+  split unevenly between them — the `-davao` variants of Tooth Doctors and
+  Dentoq hold only ONE hex each and would fail the two-colour check, while their
+  short-slug twins hold two. Chose per folder on "ready, and >=2 usable hexes",
+  wrote the chosen URL into each card so the choice is now recorded rather than
+  re-derived, and left the orphan folders in place (they carry no `index.html`,
+  so the hook does not gate them and nothing deploys). **Someone should prune
+  them**, and capture should not mint a second slug for a lead that already has
+  a folder. Board note: STRATEGY READY held **14** cards at build time, not the
+  17 the 07:00 measurement showed — step 3 moved 7 to BRAND BLOCKED after the
+  count was taken. Re-read the list before trusting a queue depth from earlier
+  in the same run.
