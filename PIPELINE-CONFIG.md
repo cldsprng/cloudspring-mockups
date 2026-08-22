@@ -1163,3 +1163,53 @@ promise, not the diagnosis, that the menu gates.
   Standing check for the closing leg of every run: list issues by title and
   confirm the daily run is exactly one live card. A recovery-orphaned routine is
   not a blocker to resolve, it is a duplicate to cancel.
+- 2026-08-22 (step 2 — a new cheapest-PH contradictory-listings source, and the
+  403 map that made it necessary): the 2026-08-21 pick, `ph.near-place.com`,
+  **403s from this surface**, and so do `ph.polomap.com` and `directmap.ph`,
+  browser UA or not. What works from here is `davaostart.com/business/<slug>/`
+  and `ph.onsono.com/<slug>/`. DavaoStart is the better of the two: one fetch
+  returns the phone *as the directory stores it*, an `OPEN` badge with **no
+  hours grid at all**, the rating and review count, a **"Claim this business"**
+  button — which is the proof the listing is not the owner's — and one named
+  rival underneath. For Kareha Autoworks it stored the phone as `321-6753`
+  while `ph.polomap.com` and their own Facebook both carry `0917 701 9097`:
+  two pages about one shop, two different numbers, found in two fetches.
+  Onsono adds a tell of its own — it runs its **own enquiry form** on the
+  listing page, so a lead typed into the page that ranks for the shop's name
+  goes to the directory, not the shop.
+- 2026-08-22 (a 200 that is not content, second species): `all-opening-hours.ph`
+  answers **200 with 565 bytes** — an "Are you human? What is: 4 plus 1 =" form
+  plus the caller's IP. Same class as the `pages.dev` root placeholder logged
+  2026-08-21: status code proves nothing, size and content do. Any directory
+  probe should print `%{http_code} %{size_download}` together and treat a
+  sub-1KB 200 as a block, not a page.
+- 2026-08-22 (NEW EVIDENCE TYPE — the `tel:` audit, for leads that already own a
+  site): grep the fetched HTML of each page for `tel:`. Mann & Machine (VT) has
+  click-to-call on `/about-us/` and `/services/` and **none on the homepage or
+  `/contact-us/`**, where `802-434-7054` sits as plain text in an H1 that reads
+  "Call us today" and an H4. The two pages a customer actually lands on are the
+  two they cannot tap. This is `W-03`, it is `SELLABLE TODAY`, and it is
+  checkable on the owner's own phone in ten seconds. Note the near-miss: a
+  homepage-only check would have produced "no click-to-call anywhere", which is
+  **false** — audit every page before making a whole-site claim.
+- 2026-08-22 (the domain check inverts for a lead that already has a good site):
+  GMS Auto Care Center runs a live 135KB WordPress site, so blank-domain does
+  not apply — but the *second* domain does. Google still indexes
+  `gmsautocare.com/contact/` for their name and that domain is **NXDOMAIN**: a
+  dead click on a page ranking for the business. Add three Facebook pages for
+  the one name (`/GMSautocare01`, `/gms.autocare`, and "GMS Autocare Center &
+  Auto Supply Davao") and the angle is name collision, not invisibility.
+  The other half came from their own footer rather than any directory: five
+  contact numbers on four networks (PLDT, 2× Smart, Globe, TM). Grep the lead's
+  own site for phone numbers — the contradiction is sometimes theirs, not the
+  directory's, and it is the honest way into the `TR-01` diagnosis.
+- 2026-08-22 (worth the CEO's attention — 2 of today's 4 leads already own a
+  real site): GMS Auto Care Center and Mann & Machine both run live,
+  content-bearing WordPress sites. The website tier is a weak fit for them and
+  their pain is entirely automation-shaped — GMS already collects appointment
+  requests via a Gravity Form (contact number, plate #, requested date) that
+  emails a Gmail inbox with nothing behind it. Both cards were strategised
+  honestly against `W-02`/`W-03` and flagged rather than force-fitted to
+  `W-01`, but step 1 should weight toward leads with **no** owned site while
+  every automation line is `IN BUILD`, or accept that some of the day's quota
+  is being spent on leads the menu cannot yet serve.
