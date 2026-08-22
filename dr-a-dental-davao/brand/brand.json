@@ -2,7 +2,7 @@
   "slug": "dr-a-dental-davao",
   "site": null,
   "facebook": "dr.ayannadentalclinic",
-  "capturedAt": "2026-08-19T23:25:59.135Z",
+  "capturedAt": "2026-08-22T15:53:05.849Z",
   "source": "headless-http",
   "name": null,
   "logo": {
@@ -20,15 +20,24 @@
     }
   ],
   "colors": {
-    "brand": [],
+    "brand": [
+      {
+        "hex": "#4A3728",
+        "weight": 50
+      },
+      {
+        "hex": "#C19A3B",
+        "weight": 45
+      }
+    ],
     "neutral": [],
     "themeColor": null,
-    "source": null
+    "source": "vision"
   },
   "fonts": [],
-  "ready": false,
-  "blockedBy": "palette-pending",
-  "confidence": 50,
+  "ready": true,
+  "blockedBy": null,
+  "confidence": 85,
   "notes": [
     "facebook profile picture captured headlessly for \"dr.ayannadentalclinic\"",
     "no website for this lead — facebook-only capture path",

@@ -1,8 +1,8 @@
 {
-  "slug": "parkview-clinic-makati",
+  "slug": "dr-jewelyn-calimbas",
   "site": null,
-  "facebook": "ParkviewClinicForChildrenAndBreastfeedingMothers",
-  "capturedAt": "2026-08-22T15:53:03.805Z",
+  "facebook": "drjewelyn",
+  "capturedAt": "2026-08-22T15:53:02.741Z",
   "source": "headless-http",
   "name": null,
   "logo": {
@@ -13,8 +13,8 @@
   "logoFiles": [
     {
       "file": "logo-facebook-profile.jpg",
-      "bytes": 163312,
-      "from": "graph.facebook.com/ParkviewClinicForChildrenAndBreastfeedingMothers/picture?width=1200&height=1200",
+      "bytes": 201907,
+      "from": "graph.facebook.com/drjewelyn/picture?width=1200&height=1200",
       "why": "facebook profile picture",
       "score": 95
     }
@@ -22,12 +22,12 @@
   "colors": {
     "brand": [
       {
-        "hex": "#2D8659",
+        "hex": "#C94554",
         "weight": 50
       },
       {
-        "hex": "#C8E6D9",
-        "weight": 40
+        "hex": "#7FA89C",
+        "weight": 45
       }
     ],
     "neutral": [],
@@ -39,7 +39,7 @@
   "blockedBy": null,
   "confidence": 85,
   "notes": [
-    "facebook profile picture captured headlessly for \"ParkviewClinicForChildrenAndBreastfeedingMothers\"",
+    "facebook profile picture captured headlessly for \"drjewelyn\"",
     "no website for this lead — facebook-only capture path",
     "BLOCKER palette-pending: logo captured (logo-facebook-profile.jpg) but fewer than 2 chromatic colours found. Vision-read the logo, then write the hex values into colors.brand[] with colors.source=\"vision\" and re-run the gate."
   ]

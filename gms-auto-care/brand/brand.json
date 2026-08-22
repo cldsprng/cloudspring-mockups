@@ -1,0 +1,99 @@
+{
+  "slug": "gms-auto-care",
+  "site": "https://gmsautocarecenter.com/",
+  "facebook": null,
+  "capturedAt": "2026-08-22T15:53:08.859Z",
+  "source": "headless-http",
+  "name": "GMS",
+  "logo": {
+    "file": "logo-1-json-ld-logo-url.png",
+    "score": 100,
+    "why": "json-ld logo.url"
+  },
+  "logoFiles": [
+    {
+      "file": "logo-1-json-ld-logo-url.png",
+      "bytes": 48728,
+      "from": "https://gmsautocarecenter.com/wp-content/uploads/2022/01/Lgogo-2.png",
+      "why": "json-ld logo.url",
+      "score": 100
+    },
+    {
+      "file": "logo-2-og-image.png",
+      "bytes": 42379,
+      "from": "https://gmsautocarecenter.com/wp-content/uploads/2022/01/clients-150x150.png",
+      "why": "og:image",
+      "score": 60
+    },
+    {
+      "file": "logo-3-favicon.png",
+      "bytes": 38115,
+      "from": "https://gmsautocarecenter.com/wp-content/uploads/2022/01/FAVI-ICON-GMS.png",
+      "why": "favicon",
+      "score": 50
+    }
+  ],
+  "colors": {
+    "brand": [
+      {
+        "hex": "#007cba",
+        "weight": 41
+      },
+      {
+        "hex": "#006ba1",
+        "weight": 41
+      },
+      {
+        "hex": "#005a87",
+        "weight": 41
+      },
+      {
+        "hex": "#790000",
+        "weight": 18
+      },
+      {
+        "hex": "#e6db55",
+        "weight": 7
+      },
+      {
+        "hex": "#dbf2b7",
+        "weight": 7
+      }
+    ],
+    "neutral": [
+      {
+        "hex": "#000000",
+        "weight": 47
+      },
+      {
+        "hex": "#ffffff",
+        "weight": 43
+      },
+      {
+        "hex": "#eeeeee",
+        "weight": 30
+      },
+      {
+        "hex": "#dddddd",
+        "weight": 19
+      }
+    ],
+    "themeColor": null,
+    "source": "site-css"
+  },
+  "fonts": [
+    "Poppins",
+    "z-index:6",
+    "z-index:7",
+    "width: 100%",
+    "Inconsolata",
+    "helvetica",
+    "arial"
+  ],
+  "ready": true,
+  "blockedBy": null,
+  "confidence": 100,
+  "notes": [
+    "6 stylesheet(s) fetched, 240999 bytes of CSS"
+  ]
+}

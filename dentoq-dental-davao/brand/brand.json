@@ -2,7 +2,7 @@
   "slug": "dentoq-dental-davao",
   "site": null,
   "facebook": "SmilePHDentalCenter",
-  "capturedAt": "2026-08-19T23:25:58.653Z",
+  "capturedAt": "2026-08-22T15:53:05.341Z",
   "source": "headless-http",
   "name": null,
   "logo": {
@@ -20,15 +20,20 @@
     }
   ],
   "colors": {
-    "brand": [],
+    "brand": [
+      {
+        "hex": "#3D1E99",
+        "weight": 95
+      }
+    ],
     "neutral": [],
     "themeColor": null,
-    "source": null
+    "source": "vision"
   },
   "fonts": [],
-  "ready": false,
-  "blockedBy": "palette-pending",
-  "confidence": 50,
+  "ready": true,
+  "blockedBy": null,
+  "confidence": 85,
   "notes": [
     "facebook profile picture captured headlessly for \"SmilePHDentalCenter\"",
     "no website for this lead — facebook-only capture path",

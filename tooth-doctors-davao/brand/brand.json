@@ -2,7 +2,7 @@
   "slug": "tooth-doctors-davao",
   "site": null,
   "facebook": "toothdoctorsdavao",
-  "capturedAt": "2026-08-19T23:26:52.368Z",
+  "capturedAt": "2026-08-22T15:53:04.823Z",
   "source": "headless-http",
   "name": null,
   "logo": {
@@ -20,15 +20,20 @@
     }
   ],
   "colors": {
-    "brand": [],
+    "brand": [
+      {
+        "hex": "#D4AF37",
+        "weight": 95
+      }
+    ],
     "neutral": [],
     "themeColor": null,
-    "source": null
+    "source": "vision"
   },
   "fonts": [],
-  "ready": false,
-  "blockedBy": "palette-pending",
-  "confidence": 50,
+  "ready": true,
+  "blockedBy": null,
+  "confidence": 85,
   "notes": [
     "facebook profile picture captured headlessly for \"toothdoctorsdavao\"",
     "no website for this lead — facebook-only capture path",

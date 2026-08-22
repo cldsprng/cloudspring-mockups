@@ -1,8 +1,8 @@
 {
-  "slug": "mississippi-dentistry",
-  "site": "https://msdent4kids.com/",
-  "facebook": null,
-  "capturedAt": "2026-08-22T15:53:06.354Z",
+  "slug": "dr-uy-medical",
+  "site": null,
+  "facebook": "Uy-Medical-Clinic-100063710333249",
+  "capturedAt": "2026-08-22T15:54:33.097Z",
   "source": "headless-http",
   "name": null,
   "logo": null,
@@ -18,7 +18,8 @@
   "blockedBy": "no-assets",
   "confidence": 0,
   "notes": [
-    "0 stylesheet(s) fetched, 1 bytes of CSS",
+    "facebook profile picture unavailable for \"Uy-Medical-Clinic-100063710333249\" (page may be renamed, unpublished, or ID-only)",
+    "no website for this lead — facebook-only capture path",
     "BLOCKER no-assets: no usable logo file (need >=1KB from a logo/icon/FB signal)"
   ]
 }

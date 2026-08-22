@@ -1,0 +1,93 @@
+{
+  "slug": "mann-machine-vt",
+  "site": "https://mannandmachinevt.com/",
+  "facebook": null,
+  "capturedAt": "2026-08-22T15:53:17.301Z",
+  "source": "headless-http",
+  "name": "Mann &amp; Machine | Auto Mechanic in Richmond, VT",
+  "logo": {
+    "file": "logo-1-img-marked-logo.jpg",
+    "score": 90,
+    "why": "img marked logo"
+  },
+  "logoFiles": [
+    {
+      "file": "logo-1-img-marked-logo.jpg",
+      "bytes": 20037,
+      "from": "https://mannandmachinevt.com/wp-content/uploads/logo-2-sm.jpg",
+      "why": "img marked logo",
+      "score": 90
+    },
+    {
+      "file": "logo-2-default-favicon.ico",
+      "bytes": 3241,
+      "from": "https://mannandmachinevt.com/favicon.ico",
+      "why": "default favicon",
+      "score": 10
+    }
+  ],
+  "colors": {
+    "brand": [
+      {
+        "hex": "#007cba",
+        "weight": 41
+      },
+      {
+        "hex": "#006ba1",
+        "weight": 41
+      },
+      {
+        "hex": "#005a87",
+        "weight": 41
+      },
+      {
+        "hex": "#2ea3f2",
+        "weight": 23
+      },
+      {
+        "hex": "#e09900",
+        "weight": 13
+      },
+      {
+        "hex": "#fdca19",
+        "weight": 12
+      }
+    ],
+    "neutral": [
+      {
+        "hex": "#ffffff",
+        "weight": 223
+      },
+      {
+        "hex": "#000000",
+        "weight": 164
+      },
+      {
+        "hex": "#666666",
+        "weight": 59
+      },
+      {
+        "hex": "#333333",
+        "weight": 33
+      }
+    ],
+    "themeColor": null,
+    "source": "site-css"
+  },
+  "fonts": [
+    "Open Sans",
+    "Montserrat",
+    "Courier New",
+    "ETmodules",
+    "ETmodules!important",
+    "Century Gothic",
+    "Georgia",
+    "Arial"
+  ],
+  "ready": true,
+  "blockedBy": null,
+  "confidence": 100,
+  "notes": [
+    "6 stylesheet(s) fetched, 1023451 bytes of CSS"
+  ]
+}

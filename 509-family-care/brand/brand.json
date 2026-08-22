@@ -1,8 +1,8 @@
 {
-  "slug": "parkview-clinic-makati",
+  "slug": "509-family-care",
   "site": null,
-  "facebook": "ParkviewClinicForChildrenAndBreastfeedingMothers",
-  "capturedAt": "2026-08-22T15:53:03.805Z",
+  "facebook": "509FamilyCareClinic2022",
+  "capturedAt": "2026-08-22T15:53:07.645Z",
   "source": "headless-http",
   "name": null,
   "logo": {
@@ -13,8 +13,8 @@
   "logoFiles": [
     {
       "file": "logo-facebook-profile.jpg",
-      "bytes": 163312,
-      "from": "graph.facebook.com/ParkviewClinicForChildrenAndBreastfeedingMothers/picture?width=1200&height=1200",
+      "bytes": 68365,
+      "from": "graph.facebook.com/509FamilyCareClinic2022/picture?width=1200&height=1200",
       "why": "facebook profile picture",
       "score": 95
     }
@@ -22,12 +22,12 @@
   "colors": {
     "brand": [
       {
-        "hex": "#2D8659",
+        "hex": "#3C9999",
         "weight": 50
       },
       {
-        "hex": "#C8E6D9",
-        "weight": 40
+        "hex": "#E8B459",
+        "weight": 35
       }
     ],
     "neutral": [],
@@ -39,7 +39,7 @@
   "blockedBy": null,
   "confidence": 85,
   "notes": [
-    "facebook profile picture captured headlessly for \"ParkviewClinicForChildrenAndBreastfeedingMothers\"",
+    "facebook profile picture captured headlessly for \"509FamilyCareClinic2022\"",
     "no website for this lead — facebook-only capture path",
     "BLOCKER palette-pending: logo captured (logo-facebook-profile.jpg) but fewer than 2 chromatic colours found. Vision-read the logo, then write the hex values into colors.brand[] with colors.source=\"vision\" and re-run the gate."
   ]
