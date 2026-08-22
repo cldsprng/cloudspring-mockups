@@ -152,7 +152,7 @@ promised — see the template and worked example in that file.
 For every card step 2 moved into STRATEGY READY, run
 `tools/brand-capture/capture.mjs` and write `<slug>/brand/brand.json`. Nothing
 reaches the builder unbranded. This step is headless — see "Brand assets
-convention" below for the invocation and the three `brand.json` states.
+convention" below for the invocation and the `brand.json` states.
 
 Routing, which is the part that belongs to the run order:
 
@@ -160,6 +160,11 @@ Routing, which is the part that belongs to the run order:
 - `palette-pending` → vision-read the logo, complete `colors.brand[]`, then
   continue to step 4 in the same run. This is the common Facebook-only case, not
   an exception.
+- `logo-not-a-mark` → palette is recoverable, but the captured file is not a
+  usable logo (typically a photo or graphic). If `colors.brand` has >=2 colours,
+  treat it like `palette-pending` (the palette is valid, the file needs
+  alternative sourcing). If `colors.brand` is empty, the card moves to **BRAND
+  BLOCKED** and stops — there is nothing to build with.
 - `no-assets` → the card moves to **BRAND BLOCKED** and stops. It does not
   consume today's build capacity and it is never built anyway.
 

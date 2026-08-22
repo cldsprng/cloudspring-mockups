@@ -8,7 +8,7 @@
 // brand.json.ready === false means the mockup builder MUST NOT build. That is
 // the whole point: no more silently shipping a generic design.
 
-import { writeFile, mkdir } from 'node:fs/promises'
+import { writeFile, mkdir, readFile } from 'node:fs/promises'
 import { basename, extname, join } from 'node:path'
 
 const UA =
@@ -217,15 +217,30 @@ const fbSlug = fbArg
   ? fbArg.replace(/^https?:\/\/(www\.|m\.|mbasic\.)?facebook\.com\//i, '').replace(/[/?#].*$/, '')
   : null
 
-const slug =
+let slug =
   args.slug ||
   (site ? new URL(site.startsWith('http') ? site : 'https://' + site).hostname.replace(/^www\./, '') : fbSlug) ||
   'unknown'
-const outDir = args.out || join(process.cwd(), slug, 'brand')
+let outDir = args.out || join(process.cwd(), slug, 'brand')
 
 if (!site && !fbSlug) {
   console.error('usage: capture.mjs [--site <url>] [--facebook <page-slug>] [--slug <slug>] [--out <dir>]')
   process.exit(2)
+}
+
+// Check for an existing slug/brand/ folder. If one exists, re-capture into it
+// rather than minting a new slug. This prevents duplicate folders with empty
+// captures from mis-routing leads that already have brand assets.
+if (!args.out && !args.slug) {
+  try {
+    const existing = await readFile(join(process.cwd(), slug, 'brand', 'brand.json'), 'utf8')
+    const existingBrand = JSON.parse(existing)
+    // If there's an existing brand.json, use its slug and outDir path
+    slug = existingBrand.slug
+    outDir = join(process.cwd(), slug, 'brand')
+  } catch {
+    // No existing brand.json, continue with the computed slug
+  }
 }
 
 const notes = []
@@ -350,11 +365,11 @@ if (!site) {
   brand.colors.brand = ranked
     .filter(([hex]) => classify(hexToRgb(hex)) === 'brand')
     .slice(0, 6)
-    .map(([hex, weight]) => ({ hex, weight }))
+    .map(([hex, weight]) => ({ hex: hex.toLowerCase(), weight }))
   brand.colors.neutral = ranked
     .filter(([hex]) => classify(hexToRgb(hex)) === 'neutral')
     .slice(0, 4)
-    .map(([hex, weight]) => ({ hex, weight }))
+    .map(([hex, weight]) => ({ hex: hex.toLowerCase(), weight }))
 
   brand.fonts = fontFamilies(html, css)
 

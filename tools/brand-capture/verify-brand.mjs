@@ -10,6 +10,15 @@
 import { readFile, readdir } from 'node:fs/promises'
 import { join } from 'node:path'
 
+const decodeHtmlEntities = (str) => {
+  return str
+    .replace(/&amp;/g, '&')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+}
+
 const folder = process.argv[2]
 if (!folder) {
   console.error('usage: verify-brand.mjs <mockup-folder>')
@@ -98,8 +107,13 @@ if (/GENERIC BRANDING/i.test(html)) {
 }
 
 // 5. Real business name, not a placeholder.
-if (brand.name && !html.toLowerCase().includes(brand.name.toLowerCase().split(/[|\-–]/)[0].trim())) {
-  fails.push(`business name "${brand.name}" not present in the page`)
+if (brand.name) {
+  const decodedName = decodeHtmlEntities(brand.name)
+  const namePart = decodedName.split(/\s+[-|]\s+/)[0].trim().toLowerCase()
+  const decodedHtml = decodeHtmlEntities(html).toLowerCase()
+  if (!decodedHtml.includes(namePart)) {
+    fails.push(`business name "${brand.name}" not present in the page`)
+  }
 }
 
 console.log(passes.map((p) => '  PASS  ' + p).join('\n'))
