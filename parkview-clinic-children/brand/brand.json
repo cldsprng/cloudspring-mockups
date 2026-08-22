@@ -1,8 +1,8 @@
 {
-    "slug":  "kareha-autoworks",
+    "slug":  "parkview-clinic-children",
     "site":  null,
-    "facebook":  "kareha.autoworks",
-    "capturedAt":  "2026-08-22T15:58:17.203Z",
+    "facebook":  "ParkviewClinicForChildrenAndBreastfeedingMothers",
+    "capturedAt":  "2026-08-22T15:58:10.256Z",
     "source":  "headless-http",
     "name":  null,
     "logo":  {
@@ -13,16 +13,16 @@
     "logoFiles":  [
                       {
                           "file":  "logo-facebook-profile.jpg",
-                          "bytes":  120723,
-                          "from":  "graph.facebook.com/kareha.autoworks/picture?width=1200\u0026height=1200",
+                          "bytes":  163312,
+                          "from":  "graph.facebook.com/ParkviewClinicForChildrenAndBreastfeedingMothers/picture?width=1200\u0026height=1200",
                           "why":  "facebook profile picture",
                           "score":  95
                       }
                   ],
     "colors":  {
                    "brand":  [
-                                 "#DC143C",
-                                 "#FFFFFF"
+                                 "#00A859",
+                                 "#B8E6D5"
                              ],
                    "neutral":  [
 
@@ -37,7 +37,7 @@
     "blockedBy":  "palette-pending",
     "confidence":  50,
     "notes":  [
-                  "facebook profile picture captured headlessly for \"kareha.autoworks\"",
+                  "facebook profile picture captured headlessly for \"ParkviewClinicForChildrenAndBreastfeedingMothers\"",
                   "no website for this lead — facebook-only capture path",
                   "BLOCKER palette-pending: logo captured (logo-facebook-profile.jpg) but fewer than 2 chromatic colours found. Vision-read the logo, then write the hex values into colors.brand[] with colors.source=\"vision\" and re-run the gate."
               ]

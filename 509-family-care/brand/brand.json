@@ -1,46 +1,44 @@
 {
-  "slug": "509-family-care",
-  "site": null,
-  "facebook": "509FamilyCareClinic2022",
-  "capturedAt": "2026-08-22T15:53:07.645Z",
-  "source": "headless-http",
-  "name": null,
-  "logo": {
-    "file": "logo-facebook-profile.jpg",
-    "score": 95,
-    "why": "facebook profile picture"
-  },
-  "logoFiles": [
-    {
-      "file": "logo-facebook-profile.jpg",
-      "bytes": 68365,
-      "from": "graph.facebook.com/509FamilyCareClinic2022/picture?width=1200&height=1200",
-      "why": "facebook profile picture",
-      "score": 95
-    }
-  ],
-  "colors": {
-    "brand": [
-      {
-        "hex": "#3C9999",
-        "weight": 50
-      },
-      {
-        "hex": "#E8B459",
-        "weight": 35
-      }
-    ],
-    "neutral": [],
-    "themeColor": null,
-    "source": "vision"
-  },
-  "fonts": [],
-  "ready": true,
-  "blockedBy": null,
-  "confidence": 85,
-  "notes": [
-    "facebook profile picture captured headlessly for \"509FamilyCareClinic2022\"",
-    "no website for this lead — facebook-only capture path",
-    "BLOCKER palette-pending: logo captured (logo-facebook-profile.jpg) but fewer than 2 chromatic colours found. Vision-read the logo, then write the hex values into colors.brand[] with colors.source=\"vision\" and re-run the gate."
-  ]
+    "slug":  "509-family-care",
+    "site":  null,
+    "facebook":  "509FamilyCareClinic2022",
+    "capturedAt":  "2026-08-22T15:58:12.589Z",
+    "source":  "headless-http",
+    "name":  null,
+    "logo":  {
+                 "file":  "logo-facebook-profile.jpg",
+                 "score":  95,
+                 "why":  "facebook profile picture"
+             },
+    "logoFiles":  [
+                      {
+                          "file":  "logo-facebook-profile.jpg",
+                          "bytes":  68365,
+                          "from":  "graph.facebook.com/509FamilyCareClinic2022/picture?width=1200\u0026height=1200",
+                          "why":  "facebook profile picture",
+                          "score":  95
+                      }
+                  ],
+    "colors":  {
+                   "brand":  [
+                                 "#17A2B8",
+                                 "#FF69B4"
+                             ],
+                   "neutral":  [
+
+                               ],
+                   "themeColor":  null,
+                   "source":  "vision"
+               },
+    "fonts":  [
+
+              ],
+    "ready":  true,
+    "blockedBy":  "palette-pending",
+    "confidence":  50,
+    "notes":  [
+                  "facebook profile picture captured headlessly for \"509FamilyCareClinic2022\"",
+                  "no website for this lead — facebook-only capture path",
+                  "BLOCKER palette-pending: logo captured (logo-facebook-profile.jpg) but fewer than 2 chromatic colours found. Vision-read the logo, then write the hex values into colors.brand[] with colors.source=\"vision\" and re-run the gate."
+              ]
 }

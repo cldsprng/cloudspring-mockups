@@ -1,36 +1,36 @@
 {
   "slug": "gms-auto-care",
   "site": "https://gmsautocarecenter.com/",
-  "facebook": null,
-  "capturedAt": "2026-08-22T15:53:08.859Z",
+  "facebook": "GMSautocare01",
+  "capturedAt": "2026-08-22T15:58:13.461Z",
   "source": "headless-http",
   "name": "GMS",
   "logo": {
-    "file": "logo-1-json-ld-logo-url.png",
+    "file": "logo-2-json-ld-logo-url.png",
     "score": 100,
     "why": "json-ld logo.url"
   },
   "logoFiles": [
     {
-      "file": "logo-1-json-ld-logo-url.png",
+      "file": "logo-facebook-profile.jpg",
+      "bytes": 320469,
+      "from": "graph.facebook.com/GMSautocare01/picture?width=1200&height=1200",
+      "why": "facebook profile picture",
+      "score": 95
+    },
+    {
+      "file": "logo-2-json-ld-logo-url.png",
       "bytes": 48728,
       "from": "https://gmsautocarecenter.com/wp-content/uploads/2022/01/Lgogo-2.png",
       "why": "json-ld logo.url",
       "score": 100
     },
     {
-      "file": "logo-2-og-image.png",
+      "file": "logo-3-og-image.png",
       "bytes": 42379,
       "from": "https://gmsautocarecenter.com/wp-content/uploads/2022/01/clients-150x150.png",
       "why": "og:image",
       "score": 60
-    },
-    {
-      "file": "logo-3-favicon.png",
-      "bytes": 38115,
-      "from": "https://gmsautocarecenter.com/wp-content/uploads/2022/01/FAVI-ICON-GMS.png",
-      "why": "favicon",
-      "score": 50
     }
   ],
   "colors": {
@@ -94,6 +94,7 @@
   "blockedBy": null,
   "confidence": 100,
   "notes": [
+    "facebook profile picture captured headlessly for \"GMSautocare01\"",
     "6 stylesheet(s) fetched, 240999 bytes of CSS"
   ]
 }

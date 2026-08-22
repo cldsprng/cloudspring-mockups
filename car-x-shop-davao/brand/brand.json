@@ -1,8 +1,8 @@
 {
-    "slug":  "kareha-autoworks",
+    "slug":  "car-x-shop-davao",
     "site":  null,
-    "facebook":  "kareha.autoworks",
-    "capturedAt":  "2026-08-22T15:58:17.203Z",
+    "facebook":  "carsandautoshop",
+    "capturedAt":  "2026-08-22T15:58:17.637Z",
     "source":  "headless-http",
     "name":  null,
     "logo":  {
@@ -13,8 +13,8 @@
     "logoFiles":  [
                       {
                           "file":  "logo-facebook-profile.jpg",
-                          "bytes":  120723,
-                          "from":  "graph.facebook.com/kareha.autoworks/picture?width=1200\u0026height=1200",
+                          "bytes":  74764,
+                          "from":  "graph.facebook.com/carsandautoshop/picture?width=1200\u0026height=1200",
                           "why":  "facebook profile picture",
                           "score":  95
                       }
@@ -22,7 +22,7 @@
     "colors":  {
                    "brand":  [
                                  "#DC143C",
-                                 "#FFFFFF"
+                                 "#000000"
                              ],
                    "neutral":  [
 
@@ -37,7 +37,7 @@
     "blockedBy":  "palette-pending",
     "confidence":  50,
     "notes":  [
-                  "facebook profile picture captured headlessly for \"kareha.autoworks\"",
+                  "facebook profile picture captured headlessly for \"carsandautoshop\"",
                   "no website for this lead — facebook-only capture path",
                   "BLOCKER palette-pending: logo captured (logo-facebook-profile.jpg) but fewer than 2 chromatic colours found. Vision-read the logo, then write the hex values into colors.brand[] with colors.source=\"vision\" and re-run the gate."
               ]

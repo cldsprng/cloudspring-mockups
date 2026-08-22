@@ -1,46 +1,44 @@
 {
-  "slug": "dr-jewelyn-calimbas",
-  "site": null,
-  "facebook": "drjewelyn",
-  "capturedAt": "2026-08-22T15:53:02.741Z",
-  "source": "headless-http",
-  "name": null,
-  "logo": {
-    "file": "logo-facebook-profile.jpg",
-    "score": 95,
-    "why": "facebook profile picture"
-  },
-  "logoFiles": [
-    {
-      "file": "logo-facebook-profile.jpg",
-      "bytes": 201907,
-      "from": "graph.facebook.com/drjewelyn/picture?width=1200&height=1200",
-      "why": "facebook profile picture",
-      "score": 95
-    }
-  ],
-  "colors": {
-    "brand": [
-      {
-        "hex": "#C94554",
-        "weight": 50
-      },
-      {
-        "hex": "#7FA89C",
-        "weight": 45
-      }
-    ],
-    "neutral": [],
-    "themeColor": null,
-    "source": "vision"
-  },
-  "fonts": [],
-  "ready": true,
-  "blockedBy": null,
-  "confidence": 85,
-  "notes": [
-    "facebook profile picture captured headlessly for \"drjewelyn\"",
-    "no website for this lead — facebook-only capture path",
-    "BLOCKER palette-pending: logo captured (logo-facebook-profile.jpg) but fewer than 2 chromatic colours found. Vision-read the logo, then write the hex values into colors.brand[] with colors.source=\"vision\" and re-run the gate."
-  ]
+    "slug":  "dr-jewelyn-calimbas",
+    "site":  null,
+    "facebook":  "drjewelyn",
+    "capturedAt":  "2026-08-22T15:58:09.175Z",
+    "source":  "headless-http",
+    "name":  null,
+    "logo":  {
+                 "file":  "logo-facebook-profile.jpg",
+                 "score":  95,
+                 "why":  "facebook profile picture"
+             },
+    "logoFiles":  [
+                      {
+                          "file":  "logo-facebook-profile.jpg",
+                          "bytes":  201907,
+                          "from":  "graph.facebook.com/drjewelyn/picture?width=1200\u0026height=1200",
+                          "why":  "facebook profile picture",
+                          "score":  95
+                      }
+                  ],
+    "colors":  {
+                   "brand":  [
+                                 "#C84451",
+                                 "#6B4C41"
+                             ],
+                   "neutral":  [
+
+                               ],
+                   "themeColor":  null,
+                   "source":  "vision"
+               },
+    "fonts":  [
+
+              ],
+    "ready":  true,
+    "blockedBy":  "palette-pending",
+    "confidence":  50,
+    "notes":  [
+                  "facebook profile picture captured headlessly for \"drjewelyn\"",
+                  "no website for this lead — facebook-only capture path",
+                  "BLOCKER palette-pending: logo captured (logo-facebook-profile.jpg) but fewer than 2 chromatic colours found. Vision-read the logo, then write the hex values into colors.brand[] with colors.source=\"vision\" and re-run the gate."
+              ]
 }
