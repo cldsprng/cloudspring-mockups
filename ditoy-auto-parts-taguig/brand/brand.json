@@ -21,9 +21,10 @@
   ],
   "colors": {
     "brand": [
-      { "hex": "#D32F2F", "weight": 70 },
-      { "hex": "#003366", "weight": 60 },
-      { "hex": "#FFD700", "weight": 50 }
+      { "hex": "#F8EE14", "weight": 70 },
+      { "hex": "#05315F", "weight": 60 },
+      { "hex": "#D42828", "weight": 50 },
+      { "hex": "#0864A7", "weight": 30 }
     ],
     "neutral": [],
     "themeColor": null,
@@ -36,6 +37,8 @@
   "notes": [
     "facebook profile picture captured headlessly for \"ditoyservices\"",
     "no website for this lead — facebook-only capture path",
-    "BLOCKER palette-pending: logo captured (logo-facebook-profile.jpg) but fewer than 2 chromatic colours found. Vision-read the logo, then write the hex values into colors.brand[] with colors.source=\"vision\" and re-run the gate."
+    "BLOCKER palette-pending: logo captured (logo-facebook-profile.jpg) but fewer than 2 chromatic colours found. Vision-read the logo, then write the hex values into colors.brand[] with colors.source=\"vision\" and re-run the gate.",
+    "CLO-71 step 4: palette re-read from the logo pixels before build. #FFD700 was a CSS keyword (gold) and is NOT in the image; the wordmark measures #F8EE14, a lemon yellow. #003366 -> #05315F and #D32F2F -> #D42828 (measured swoosh navy and rule red). Added #0864A7, the mid-blue in the swoosh gradient.",
+    "CLO-71 step 4 CAVEAT: this file is a composite Facebook profile GRAPHIC, not a drawn logo. It is a stock/AI dealership-forecourt photo carrying BMW, Mercedes and Ford vehicles plus a Chevrolet bowtie badge, with the shop name set over it in yellow. It is used on the mockup as the brand mark because it is genuinely the lead's own profile picture, which is the pipeline's convention for a Facebook-only lead. Flagging it because the imagery is borrowed and the bowtie is a third-party trademark: an owner-supplied logo should replace it before this ever becomes a live site, and the borrowed-imagery point is worth raising with the owner rather than hiding."
   ]
 }

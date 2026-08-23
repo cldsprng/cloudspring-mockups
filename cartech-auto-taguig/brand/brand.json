@@ -22,7 +22,7 @@
   "colors": {
     "brand": [
       { "hex": "#D32F2F", "weight": 95 },
-      { "hex": "#757575", "weight": 30 }
+      { "hex": "#5C5C5C", "weight": 30 }
     ],
     "neutral": [],
     "themeColor": null,
@@ -35,6 +35,7 @@
   "notes": [
     "facebook profile picture captured headlessly for \"cartechtaguig\"",
     "no website for this lead — facebook-only capture path",
-    "BLOCKER palette-pending: logo captured (logo-facebook-profile.jpg) but fewer than 2 chromatic colours found. Vision-read the logo, then write the hex values into colors.brand[] with colors.source=\"vision\" and re-run the gate."
+    "BLOCKER palette-pending: logo captured (logo-facebook-profile.jpg) but fewer than 2 chromatic colours found. Vision-read the logo, then write the hex values into colors.brand[] with colors.source=\"vision\" and re-run the gate.",
+    "CLO-71 step 4: palette re-read from the logo pixels before build, per the 2026-08-23 learning on canned-value vision reads. #D32F2F CONFIRMED (measured #D32F30/#DB2D30 across the pin, wrench and \"CAR\"). #757575 was NOT in the image (Material Grey 600); the wordmark grey measures #5C5C5C, corrected here."
   ]
 }

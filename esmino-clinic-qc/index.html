@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Esmino Pediatric Clinic — Batasan Hills, Quezon City</title>
+<meta name="description" content="Esmino Pediatric Clinic — Block 1, Lot 19 Batasan-San Mateo Rd, Batasan Hills, Quezon City. Checkups, vaccinations and health education with Dr. Noreen Esmino. Call 0928 968 8619.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* Palette read from brand/logo-facebook-profile.png — see brand/brand.json (colors.source: "vision") */
+  --brand:#2e3192;
+  --brand-2:#00aeef;
+  --brand-deep:#20236b;
+  --brand-soft:#d7eadb;
+  --paper:#f3f7f4;
+  --ink:#1a1c2e;
+  --ink-2:#565a72;
+  --line:#e0e8e3;
+  --accent:#00aeef;
+  --shadow-sm:0 1px 2px rgba(26,28,46,.08), 0 2px 8px rgba(26,28,46,.06);
+  --shadow-md:0 8px 24px rgba(26,28,46,.11);
+  --r-sm:8px; --r-md:16px; --r-lg:24px; --r-pill:999px;
+  --display:'Poppins',system-ui,sans-serif;
+  --body:'Poppins',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;font-family:var(--body);color:var(--ink);background:#fff;font-size:16px;line-height:1.6;padding-bottom:172px;overflow-x:hidden}
+img,svg{max-width:100%;display:block}
+h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.15;margin:0 0 12px;letter-spacing:-.006em}
+h1{font-size:34px}h2{font-size:28px}h3{font-size:20px}
+p{margin:0 0 16px}
+a{color:var(--brand-deep)}
+.wrap{width:100%;max-width:1080px;margin:0 auto;padding:0 20px}
+.eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--brand);margin:0 0 8px;font-family:var(--body)}
+.section{padding:56px 0}
+.section--tint{background:var(--brand-soft)}
+.section--paper{background:var(--paper)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+
+.header{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.94);backdrop-filter:saturate(140%) blur(8px);border-bottom:1px solid var(--line)}
+.header__in{display:flex;align-items:center;gap:12px;min-height:64px;padding:8px 20px;max-width:1080px;margin:0 auto}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);min-height:44px}
+.brand-logo-img{width:42px;height:42px;flex:0 0 42px;object-fit:contain;border-radius:10px;background:#fff;border:1px solid var(--line)}
+.brand__txt{display:flex;flex-direction:column;line-height:1.12}
+.brand__name{font-family:var(--display);font-weight:700;font-size:18px}
+.brand__sub{font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2);font-weight:600}
+.header__cta{margin-left:auto}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:11px 18px;border-radius:var(--r-pill);font-family:var(--body);font-weight:600;font-size:15px;text-decoration:none;border:1px solid transparent;cursor:pointer;transition:background-color .18s ease,color .18s ease,border-color .18s ease,transform .18s ease,box-shadow .18s ease}
+.btn--primary{background:var(--brand);color:#fff;box-shadow:var(--shadow-sm)}
+.btn--primary:hover{background:var(--brand-deep);transform:translateY(-1px);box-shadow:var(--shadow-md)}
+.btn--ghost{background:#fff;color:var(--brand-deep);border-color:var(--line)}
+.btn--ghost:hover{border-color:var(--brand);background:var(--brand-soft)}
+.btn--sm{font-size:14px;padding:9px 14px}
+
+.hero{position:relative;background:linear-gradient(168deg,var(--brand-soft) 0%,#fff 66%);overflow:hidden}
+.hero::after{content:"";position:absolute;right:-150px;top:-130px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle at 35% 35%,rgba(0,174,239,0.16),rgba(0,174,239,0) 70%);pointer-events:none}
+.hero__in{padding:36px 20px 44px;max-width:1080px;margin:0 auto;position:relative;z-index:1}
+.hero h1{font-size:clamp(31px,7.4vw,52px);margin-bottom:14px}
+.hero h1 em{font-style:italic;color:var(--brand)}
+.hero__lead{font-size:17px;color:var(--ink-2);max-width:56ch;margin-bottom:22px}
+.idcard{background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:18px;box-shadow:var(--shadow-md);margin-bottom:22px}
+.idcard__row{display:flex;gap:12px;padding:10px 0;align-items:flex-start;border-top:1px solid var(--line)}
+.idcard__row:first-child{border-top:0;padding-top:0}
+.idcard__ico{flex:0 0 22px;width:22px;height:22px;color:var(--brand);margin-top:2px}
+.idcard__k{font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--ink-2);margin:0 0 2px}
+.idcard__v{font-size:15.5px;font-weight:500;margin:0}
+.idcard__v a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--brand)}
+.idcard__v a:hover{color:var(--brand);border-bottom-color:var(--brand)}
+.hero__btns{display:flex;flex-direction:column;gap:10px}
+.hero__art{margin-top:32px}
+
+.grid{display:grid;gap:16px;grid-template-columns:1fr}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:22px;box-shadow:var(--shadow-sm);transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow-md);border-color:var(--brand)}
+.card__ico{width:44px;height:44px;border-radius:12px;background:var(--brand-soft);color:var(--brand);display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+.card__ico svg{width:24px;height:24px}
+.card p{font-size:15px;color:var(--ink-2);margin:0}
+.card__tag{display:inline-block;font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--brand-2);margin-bottom:6px}
+.note{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;background:#FFF7DF;border:1px dashed #D9BE63;color:#6E5410;padding:6px 12px;border-radius:var(--r-sm)}
+.note--block{display:block;text-transform:none;letter-spacing:0;font-weight:500;font-size:13.5px;line-height:1.55;padding:12px 14px}
+.note--block b{text-transform:uppercase;letter-spacing:.06em;font-size:11.5px;display:block;margin-bottom:4px}
+
+.why{display:grid;gap:14px;grid-template-columns:1fr}
+.why__item{display:flex;gap:14px;align-items:flex-start;background:#fff;border-radius:var(--r-md);padding:18px;box-shadow:var(--shadow-sm)}
+.why__num{font-family:var(--display);font-size:24px;font-weight:700;color:var(--brand);flex:0 0 auto;line-height:1.1}
+.why__item h3{font-size:17px;margin-bottom:4px}
+.why__item p{font-size:14.5px;color:var(--ink-2);margin:0}
+
+.pricing{background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:22px;box-shadow:var(--shadow-sm)}
+.pricing__row{display:flex;justify-content:space-between;gap:14px;padding:12px 0;border-top:1px solid var(--line);font-size:15px}
+.pricing__row:first-of-type{border-top:0}
+.pricing__row span:last-child{color:var(--brand);font-weight:700;text-align:right;white-space:nowrap}
+.pricing__row--muted span:last-child{color:var(--ink-2);font-weight:500}
+
+.hours{background:#fff;border:1px solid var(--line);border-radius:var(--r-md);overflow:hidden;box-shadow:var(--shadow-sm)}
+.hours__row{display:flex;justify-content:space-between;gap:12px;padding:13px 18px;border-top:1px solid var(--line);font-size:15px}
+.hours__row:first-child{border-top:0}
+.hours__row span:last-child{color:var(--ink-2);text-align:right}
+
+.contact{display:grid;gap:20px;grid-template-columns:1fr}
+.map{border-radius:var(--r-md);overflow:hidden;border:1px solid var(--line);background:var(--brand-soft);position:relative;box-shadow:var(--shadow-sm)}
+.map__label{position:absolute;left:12px;bottom:12px;right:12px;background:rgba(255,255,255,.95);border-radius:var(--r-sm);padding:10px 12px;font-size:12.5px;color:var(--ink-2);font-weight:500}
+.reach{background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:20px;box-shadow:var(--shadow-sm)}
+.reach .btn{width:100%;margin-bottom:10px}
+
+.footer{background:var(--ink);color:#cfd3e4;padding:40px 0 32px}
+.footer h3{color:#fff;font-size:19px}
+.footer a{color:#8fdcf7;text-decoration:none}
+.footer a:hover{color:#fff;text-decoration:underline}
+.footer__grid{display:grid;gap:24px;grid-template-columns:1fr}
+.footer__p{font-size:14.5px;line-height:1.7;margin:0}
+.footer__credit{margin-top:28px;padding-top:18px;border-top:1px solid rgba(255,255,255,.14);font-size:13px;display:flex;flex-wrap:wrap;gap:6px;justify-content:space-between}
+
+.cs-bar{position:fixed;left:0;right:0;bottom:0;z-index:200;background:rgba(18,20,34,.96);backdrop-filter:saturate(150%) blur(10px);border-top:1px solid rgba(255,255,255,.14);box-shadow:0 -8px 32px rgba(18,20,34,.34);color:#fff;padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px))}
+.cs-bar__in{max-width:1080px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:10px 18px;text-align:center}
+.cs-bar__eyebrow{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:#8fdcf7;margin:0 0 3px}
+.cs-bar__line{font-size:15px;font-weight:600;line-height:1.35;margin:0;color:#fff}
+.cs-bar__btn{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:12px 22px;border-radius:var(--r-pill);background:var(--brand-2);color:#0e2436;font-weight:700;font-size:15px;text-decoration:none;white-space:nowrap;box-shadow:0 4px 18px rgba(0,174,239,0.38);animation:csPulse 2.4s ease-in-out infinite;transition:transform .18s ease,box-shadow .18s ease}
+.cs-bar__btn:hover{transform:translateY(-2px);box-shadow:0 8px 26px rgba(0,174,239,0.55);animation-play-state:paused}
+.cs-bar__btn:focus-visible{outline:3px solid #fff;outline-offset:3px}
+@keyframes csPulse{0%,100%{box-shadow:0 4px 18px rgba(0,174,239,0.32)}50%{box-shadow:0 4px 26px rgba(0,174,239,0.64)}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition-duration:.01ms!important}.cs-bar__btn{animation:none}}
+
+@media (min-width:600px){
+  .hero__btns{flex-direction:row;flex-wrap:wrap}
+  .hero__btns .btn{flex:1 1 auto;min-width:200px}
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .why{grid-template-columns:repeat(2,1fr)}
+}
+@media (min-width:900px){
+  body{padding-bottom:104px}
+  .section{padding:76px 0}
+  h1{font-size:46px}h2{font-size:36px}
+  .hero__in{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center;padding:60px 20px 72px}
+  .hero__art{margin-top:0}
+  .grid{grid-template-columns:repeat(3,1fr)}
+  .contact{grid-template-columns:1.05fr .95fr;align-items:start}
+  .footer__grid{grid-template-columns:1.4fr 1fr 1fr}
+  .cs-bar__in{flex-wrap:nowrap;justify-content:space-between;text-align:left}
+  .cs-bar__line{font-size:16.5px}
+}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="header__in">
+    <a class="brand" href="#top" aria-label="Esmino Pediatric Clinic, back to top">
+      <img class="brand-logo-img" src="brand/logo-facebook-profile.png" alt="Esmino Pediatric Clinic logo" width="42" height="42" decoding="async">
+      <span class="brand__txt">
+        <span class="brand__name">Esmino Pediatric Clinic</span>
+        <span class="brand__sub">Batasan Hills &middot; Quezon City</span>
+      </span>
+    </a>
+    <a class="btn btn--primary btn--sm header__cta" href="tel:+639289688619">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+      <span>Call the clinic</span>
+    </a>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="hero__in">
+      <div>
+        <p class="eyebrow">Batasan Hills &middot; Quezon City &middot; three branches</p>
+        <h1>Esmino Pediatric Clinic. <em>Three branches, one address online.</em></h1>
+
+        <p class="hero__lead">A pediatric clinic in Batasan Hills run by Dr. Noreen Esmino, with sister branches at Northview and Montalban. Today the only place a parent can find any of them is Facebook &mdash; the clinic&rsquo;s own domain has lapsed, and searches have nowhere of the clinic&rsquo;s own to land.</p>
+
+        <div class="idcard">
+          <div class="idcard__row">
+            <svg class="idcard__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <div><p class="idcard__k">Batasan branch</p><p class="idcard__v">Block 1, Lot 19 Batasan-San Mateo Rd,<br>Batasan Hills, Quezon City</p></div>
+          </div>
+          <div class="idcard__row">
+            <svg class="idcard__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+            <div><p class="idcard__k">Phone</p><p class="idcard__v"><a href="tel:+639289688619">0928 968 8619</a></p></div>
+          </div>
+          <div class="idcard__row">
+            <svg class="idcard__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 0-10.4 8.9v-6.3H8.3V12h2.3V10c0-2.3 1.4-3.6 3.4-3.6 1 0 2 .2 2 .2v2.2h-1.1c-1.1 0-1.5.7-1.5 1.4V12h2.5l-.4 2.6h-2.1v6.3A9 9 0 0 0 21 12z"/></svg>
+            <div><p class="idcard__k">Facebook</p><p class="idcard__v"><a href="https://www.facebook.com/esminoclinic/" target="_blank" rel="noopener">facebook.com/esminoclinic</a></p></div>
+          </div>
+          <div class="idcard__row">
+            <svg class="idcard__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.2 1.9"/></svg>
+            <div><p class="idcard__k">Clinic hours</p><p class="idcard__v">Clinic hours &mdash; to be confirmed</p></div>
+          </div>
+        </div>
+
+        <div class="hero__btns">
+          <a class="btn btn--primary" href="tel:+639289688619">Call 0928 968 8619</a>
+          <a class="btn btn--ghost" href="https://www.facebook.com/esminoclinic/" target="_blank" rel="noopener">Message on Facebook</a>
+        </div>
+      </div>
+
+      <div class="hero__art" aria-hidden="true">
+<svg viewBox="0 0 460 380" role="img" aria-hidden="true" focusable="false" style="width:100%;height:auto;filter:drop-shadow(0 18px 40px rgba(26,28,46,.18))">
+  <defs>
+    <linearGradient id="eg1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d7eadb"/><stop offset="1" stop-color="#ffffff"/></linearGradient>
+    <linearGradient id="eg2" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#2e3192"/><stop offset="1" stop-color="#00aeef"/></linearGradient>
+  </defs>
+  <rect x="10" y="14" width="440" height="352" rx="28" fill="url(#eg1)"/>
+  <circle cx="352" cy="96" r="60" fill="#00aeef" opacity=".16"/>
+  <!-- mint disc echoing the clinic logo -->
+  <circle cx="164" cy="176" r="104" fill="#d7eadb"/>
+  <circle cx="164" cy="176" r="104" fill="none" stroke="#2e3192" stroke-width="5" opacity=".55"/>
+  <!-- stethoscope -->
+  <g transform="translate(164,176)" fill="none" stroke="#2e3192" stroke-width="9" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M-46-56v26a30 30 0 0 0 60 0v-26"/>
+    <path d="M-46-56h-12M14-56h12"/>
+    <path d="M-16 0v14a30 30 0 0 0 60 0V-6"/>
+  </g>
+  <circle cx="208" cy="170" r="17" fill="#00aeef"/>
+  <circle cx="208" cy="170" r="7" fill="#fff"/>
+  <!-- heart, health-education motif -->
+  <g transform="translate(348,214)">
+    <path d="M0 34C0 34-38 8-38-16A21 21 0 0 1 0-26a21 21 0 0 1 38 10c0 24-38 50-38 50z" fill="url(#eg2)"/>
+    <path d="M-24-4h13l6-13 9 25 6-12h14" fill="none" stroke="#fff" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <path d="M52 330h150" stroke="#2e3192" stroke-width="5" fill="none" stroke-linecap="round" opacity=".5"/>
+  <path d="M226 330h58" stroke="#00aeef" stroke-width="5" fill="none" stroke-linecap="round" opacity=".7"/>
+</svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY THIS PAGE EXISTS -->
+  <section class="section section--paper">
+    <div class="wrap" style="max-width:820px">
+      <p class="eyebrow">Why this page exists</p>
+      <h2>The clinic&rsquo;s own domain has stopped resolving</h2>
+      <p style="color:var(--ink-2)">Checked 23 August 2026. <strong>esminoclinic.com no longer resolves at all.</strong> A public DNS lookup against 8.8.8.8 returns <strong>NXDOMAIN</strong> &mdash; the name is not registered to anything a browser can reach. Typing it in gets an error page, not a clinic.</p>
+      <p style="color:var(--ink-2)">This is a change worth knowing about. On <strong>10 August 2026</strong> that same address still answered, serving an &ldquo;under maintenance &mdash; message us on Facebook&rdquo; notice. Somewhere in the fortnight between then and now it went from a holding page to nothing. If the clinic did not intend that, the registration is the thing to check first, and it is cheap to check.</p>
+      <p style="color:var(--ink-2)">What it means day to day: <strong>Facebook is now the clinic&rsquo;s only address online.</strong> A parent searching for a pediatrician in Batasan Hills finds directory entries and other clinics before they find Esmino, and the three branches have no single page that names all three. Nothing on Facebook can be made to rank, and nothing on it can be corrected by anyone but Facebook.</p>
+      <p style="color:var(--ink-2)">This preview is what one owned page would carry instead: the branches, the services, the number, and the clinic&rsquo;s own name at the top. None of it is a criticism of the practice &mdash; it is a signposting problem, and it is fixable.</p>
+      <p class="note note--block" style="margin-top:18px"><b>Every dated claim on this page was re-checked on 23 August 2026</b>The DNS result above was measured today. Anything this page cannot verify &mdash; hours, branch addresses beyond Batasan, the full service list &mdash; is left visibly blank rather than filled with a plausible guess.</p>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section" id="services">
+    <div class="wrap">
+      <p class="eyebrow">What the clinic does</p>
+      <h2>Pediatric care, vaccinations and health education</h2>
+      <p style="max-width:62ch;color:var(--ink-2)">These categories follow what Esmino Pediatric Clinic already presents publicly on its Facebook page. The full list of what the clinic takes is confirmed by the clinic, not by us.</p>
+
+      <div class="grid" style="margin-top:26px">
+        <article class="card">
+          <div class="card__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3v4a4 4 0 0 0 8 0V3"/><path d="M12 11v3a5 5 0 0 0 10 0v-2"/><circle cx="22" cy="10.5" r="1.6"/></svg></div>
+          <h3>Well-child checkups</h3>
+          <p>Routine consultations and growth checks &mdash; the visits that bring a family back year after year.</p>
+        </article>
+        <article class="card">
+          <div class="card__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18.5 2.5 21.5 5.5"/><path d="m16 5 3 3"/><path d="M19 8 9.5 17.5a3 3 0 0 1-1.5.8l-3.6.8.8-3.6a3 3 0 0 1 .8-1.5L15.5 4.5z"/><path d="m11 9 4 4"/></svg></div>
+          <h3>Vaccinations</h3>
+          <p>Childhood immunisations, the part of pediatric care most tied to a schedule and most easily missed.</p>
+        </article>
+        <article class="card">
+          <div class="card__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H12v17H6.5A2.5 2.5 0 0 0 4 22.5z"/><path d="M20 5.5A2.5 2.5 0 0 0 17.5 3H12v17h5.5a2.5 2.5 0 0 1 2.5 2.5z"/></svg></div>
+          <h3>Health education</h3>
+          <p>Dr. Esmino posts health-education videos on the clinic&rsquo;s Facebook page &mdash; lead-poisoning awareness among them. That work currently lives only inside a feed.</p>
+        </article>
+        <article class="card">
+          <div class="card__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-8-4.6-8-10.4A4.6 4.6 0 0 1 12 7a4.6 4.6 0 0 1 8 3.6C20 16.4 12 21 12 21z"/></svg></div>
+          <h3>Lifestyle medicine</h3>
+          <p>The preventive side of the practice, listed on the clinic&rsquo;s own page alongside general pediatrics.</p>
+        </article>
+        <article class="card">
+          <div class="card__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 20.5a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"/><path d="M15.3 16.5l1.2 1.2 2.2-2.4"/><path d="M9 3.5H4.5a1.5 1.5 0 0 0-1.5 1.5v14a1.5 1.5 0 0 0 1.5 1.5H10"/><path d="M9 3.5a1.5 1.5 0 0 1 3 0h1.5A1.5 1.5 0 0 1 15 5v4"/></svg></div>
+          <h3>Free health &amp; vaccination drives</h3>
+          <p>The clinic runs free drives at the Batasan branch. A page it owns can announce the next one to people who are not already following it.</p>
+        </article>
+        <article class="card" style="border-style:dashed;background:var(--paper)">
+          <div class="card__ico" style="background:#FFF7DF;color:#6E5410"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></div>
+          <h3>Your full service list</h3>
+          <p class="note note--block" style="margin-top:8px"><b>Placeholder</b>Send the clinic&rsquo;s complete list of services and it replaces this card word for word. Nothing on this page is invented &mdash; the categories above follow what the clinic already publishes.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- BRANCHES -->
+  <section class="section section--tint" id="branches">
+    <div class="wrap">
+      <p class="eyebrow">Three branches, one page</p>
+      <h2>Batasan, Northview and Montalban</h2>
+      <p style="max-width:64ch;color:var(--ink-2)">A parent who finds one branch has no way to discover the other two. On a page the clinic owns, all three sit together and a family picks whichever is closer.</p>
+
+      <div class="grid" style="margin-top:26px">
+        <article class="card">
+          <span class="card__tag">Branch 1</span>
+          <h3>Batasan</h3>
+          <p>Block 1, Lot 19 Batasan-San Mateo Rd, Batasan Hills, Quezon City. The branch that runs the free health and vaccination drives.</p>
+        </article>
+        <article class="card" style="border-style:dashed">
+          <span class="card__tag">Branch 2</span>
+          <h3>Northview</h3>
+          <p class="note note--block" style="margin-top:8px"><b>Address &mdash; to be confirmed</b>The Northview branch is named publicly, but no source we can verify publishes its street address, number or clinic days. Send them and they appear here exactly as written.</p>
+        </article>
+        <article class="card" style="border-style:dashed">
+          <span class="card__tag">Branch 3</span>
+          <h3>Montalban</h3>
+          <p class="note note--block" style="margin-top:8px"><b>Address &mdash; to be confirmed</b>Same for Montalban. A branch nobody can find the address of is, for search purposes, a branch that is not there.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY -->
+  <section class="section" id="why">
+    <div class="wrap">
+      <p class="eyebrow">Why families choose Esmino</p>
+      <h2>A well-reviewed clinic that search cannot find</h2>
+      <div class="why" style="margin-top:24px">
+        <div class="why__item">
+          <span class="why__num">01</span>
+          <div><h3>5.0 on Google, from 11 reviews</h3><p>Recorded 10 August 2026. A perfect rating on a modest review count &mdash; and it sits on Google&rsquo;s listing, not on anything the clinic owns.</p></div>
+        </div>
+        <div class="why__item">
+          <span class="why__num">02</span>
+          <div><h3>The doctor is the brand</h3><p>Dr. Noreen Esmino personally records the health-education videos. That is unusual, and it is the clearest reason a parent picks this clinic over the next one.</p></div>
+        </div>
+        <div class="why__item">
+          <span class="why__num">03</span>
+          <div><h3>Free drives, run at the clinic</h3><p>Free health and vaccination drives at Batasan. Community work that currently reaches only people already following the page.</p></div>
+        </div>
+        <div class="why__item">
+          <span class="why__num">04</span>
+          <div><h3>Three branches across the north-east</h3><p>Batasan, Northview and Montalban. Three chances to be the nearest clinic, presented today as though there were one.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section section--paper" id="about">
+    <div class="wrap" style="max-width:760px">
+      <p class="eyebrow">About</p>
+      <h2>Esmino Pediatric Clinic</h2>
+      <p>Esmino Pediatric Clinic is a pediatric practice at Block 1, Lot 19 Batasan-San Mateo Road, Batasan Hills, Quezon City, with branches at Northview and Montalban. It offers checkups, vaccinations, lifestyle medicine and health education, and is led by Dr. Noreen Esmino.</p>
+      <p>The clinic can be reached on 0928 968 8619 or through facebook.com/esminoclinic.</p>
+      <p class="note note--block" style="max-width:62ch"><b>Placeholder &mdash; needs the clinic&rsquo;s input</b>Clinic hours, consultation fees, the Northview and Montalban addresses, Dr. Esmino&rsquo;s full credentials and how long the clinic has been open are deliberately blank. Send them and they go in as written. This preview carries no invented hours, fees or credentials.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section" id="contact">
+    <div class="wrap">
+      <p class="eyebrow">Get in touch</p>
+      <h2>Contact the clinic</h2>
+
+      <div class="contact" style="margin-top:26px">
+        <div>
+          <div class="hours" style="margin-bottom:14px">
+            <div class="hours__row"><span>Monday</span><span>To be confirmed</span></div>
+            <div class="hours__row"><span>Tuesday</span><span>To be confirmed</span></div>
+            <div class="hours__row"><span>Wednesday</span><span>To be confirmed</span></div>
+            <div class="hours__row"><span>Thursday</span><span>To be confirmed</span></div>
+            <div class="hours__row"><span>Friday</span><span>To be confirmed</span></div>
+            <div class="hours__row"><span>Saturday</span><span>To be confirmed</span></div>
+            <div class="hours__row"><span>Sunday</span><span>To be confirmed</span></div>
+          </div>
+          <p class="note note--block" style="margin-bottom:20px"><b>Clinic hours &mdash; to be confirmed</b>No source we can verify publishes Esmino&rsquo;s clinic days or consultation hours, so this grid stays empty rather than carrying a guess. For a pediatric clinic it is the question that decides whether a parent brings a child in today. Confirm it once and it appears here, in the header and in the footer.</p>
+
+          <div class="map">
+<svg viewBox="0 0 600 300" role="img" aria-label="Illustrated map placeholder showing Batasan-San Mateo Road, Batasan Hills, Quezon City" style="width:100%;height:auto;display:block">
+  <rect width="600" height="300" fill="#d7eadb"/>
+  <path d="M0 196h600M0 88h600M148 0v300M424 0v300" stroke="#fff" stroke-width="16"/>
+  <path d="M0 196h600M0 88h600M148 0v300M424 0v300" stroke="rgba(0,0,0,.06)" stroke-width="2"/>
+  <rect x="170" y="110" width="96" height="62" rx="6" fill="#fff" opacity=".75"/>
+  <rect x="282" y="110" width="118" height="62" rx="6" fill="#fff" opacity=".75"/>
+  <rect x="170" y="216" width="118" height="52" rx="6" fill="#fff" opacity=".75"/>
+  <rect x="448" y="110" width="118" height="62" rx="6" fill="#fff" opacity=".75"/>
+  <g transform="translate(300,142)"><circle cx="0" cy="0" r="30" fill="#00aeef" opacity=".2"/>
+    <path d="M0-24c8.8 0 16 7.2 16 16 0 12-16 26-16 26S-16 4-16-8c0-8.8 7.2-16 16-16z" fill="#2e3192"/>
+    <circle cx="0" cy="-8" r="6" fill="#fff"/></g></svg>
+            <p class="map__label"><strong>Illustration, not a live map.</strong> An interactive Google Map pinned to the Batasan-San Mateo Road clinic goes here on the live site, with pins for Northview and Montalban once those addresses are confirmed.</p>
+          </div>
+        </div>
+
+        <div class="reach">
+          <h3>Two ways to reach the clinic</h3>
+          <p style="font-size:14.5px;color:var(--ink-2)">Each button below opens the channel directly. There is nothing on this page that takes a message on the clinic&rsquo;s behalf, and nothing here stores what you type.</p>
+          <a class="btn btn--primary" href="tel:+639289688619">Call 0928 968 8619</a>
+          <a class="btn btn--ghost" href="https://www.facebook.com/esminoclinic/" target="_blank" rel="noopener">Message on Facebook</a>
+          <p class="note note--block" style="margin-top:16px"><b>What these buttons do</b>The first dials 0928 968 8619 on your phone. The second opens Messenger, and opening Messenger is all it does &mdash; it does not hold an appointment, book a time or put anything in a queue. Someone at the clinic reads the message and replies by hand, exactly as now.</p>
+          <p class="note note--block" style="margin-top:12px"><b>No email address published</b>We could not find a published email for the clinic. If one exists, it becomes a third button here.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <h3>Esmino Pediatric Clinic</h3>
+        <p class="footer__p">Block 1, Lot 19 Batasan-San Mateo Rd<br>Batasan Hills, Quezon City<br>Philippines<br><a href="tel:+639289688619">0928 968 8619</a></p>
+      </div>
+      <div>
+        <h3>Clinic hours</h3>
+        <p class="footer__p">To be confirmed</p>
+      </div>
+      <div>
+        <h3>Find us online</h3>
+        <p class="footer__p"><a href="https://www.facebook.com/esminoclinic/" target="_blank" rel="noopener">Facebook &mdash; /esminoclinic</a><br>Branches: Batasan &middot; Northview &middot; Montalban</p>
+      </div>
+    </div>
+    <div class="footer__credit">
+      <span>&copy; 2026 Esmino Pediatric Clinic &middot; Quezon City</span>
+      <span>Website by CloudSpring IT Solutions</span>
+    </div>
+  </div>
+</footer>
+
+<aside class="cs-bar" role="complementary" aria-label="CloudSpring IT Solutions preview notice">
+  <div class="cs-bar__in">
+    <div class="cs-bar__txt">
+      <p class="cs-bar__eyebrow">PREVIEW &middot; CloudSpring IT Solutions</p>
+      <p class="cs-bar__line">esminoclinic.com stopped resolving, so Facebook is the clinic&rsquo;s only address online. Want a page that carries all three branches?</p>
+    </div>
+    <a class="cs-bar__btn" href="https://api.leadconnectorhq.com/widget/booking/QRPEnWRw2Kx9rBe0Mj6J" target="_blank" rel="noopener">Book a FREE Discovery Call &rarr;</a>
+  </div>
+</aside>
+
+</body>
+</html>

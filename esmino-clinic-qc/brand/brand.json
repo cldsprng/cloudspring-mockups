@@ -21,8 +21,9 @@
   ],
   "colors": {
     "brand": [
-      { "hex": "#1A3B8F", "weight": 85 },
-      { "hex": "#C8E6C9", "weight": 40 }
+      { "hex": "#2E3192", "weight": 85 },
+      { "hex": "#D7EADB", "weight": 40 },
+      { "hex": "#00AEEF", "weight": 25 }
     ],
     "neutral": [],
     "themeColor": null,
@@ -35,6 +36,8 @@
   "notes": [
     "facebook profile picture captured headlessly for \"esminoclinic\"",
     "site unreachable over plain HTTP(S)",
-    "BLOCKER palette-pending: logo captured (logo-facebook-profile.png) but fewer than 2 chromatic colours found. Vision-read the logo, then write the hex values into colors.brand[] with colors.source=\"vision\" and re-run the gate."
+    "BLOCKER palette-pending: logo captured (logo-facebook-profile.png) but fewer than 2 chromatic colours found. Vision-read the logo, then write the hex values into colors.brand[] with colors.source=\"vision\" and re-run the gate.",
+    "CLO-71 step 4: palette re-read from the logo pixels before build. #1A3B8F is not in the image; the wordmark plate measures #2E3192 and is 11.7% of all pixels. #C8E6C9 was Material Green 100; the mint disc behind the illustration measures #D7EADB and is 48.2% of all pixels. Added #00AEEF, the cyan on the boy's shirt.",
+    "CLO-71 step 4: esminoclinic.com is now NXDOMAIN (confirmed against 8.8.8.8, and capture's own 'site unreachable' note agrees). The card's 2026-08-10 angle -- an owned domain serving a maintenance page plus an indexed spam path -- no longer holds. The mockup asserts nothing about the domain; the outreach draft must not reuse that evidence."
   ]
 }
