@@ -286,8 +286,8 @@ a{color:var(--brand-deep)}
       <p class="eyebrow">How booking works today</p>
       <h2>Strictly by appointment, one to three days ahead</h2>
       <p style="color:var(--ink-2)">That rule is the clinic&rsquo;s, and it is a sensible one for a suite running four services and a laboratory. The problem is where it is written: on findhealthclinics.com, a page 509 does not control, with no way to act on it except opening Messenger and hoping somebody is there.</p>
-      <p style="color:var(--ink-2)">The request form on this page is the first step towards fixing that: a patient states what they need and when, in a structured form, on a page the clinic owns.</p>
-      <p class="note note--block" style="margin-top:18px"><b>What this preview form does &mdash; and does not do</b>In this preview the button opens Messenger, because that is genuinely the clinic&rsquo;s only channel today. On a live site it becomes a real appointment request that lands in one place, in order, with the date and service already filled in.</p>
+      <p style="color:var(--ink-2)">This page fixes the first half of that: the appointment rule is stated on a page the clinic owns, next to the clinic&rsquo;s own Messenger link, rather than on a directory listing it cannot edit.</p>
+      <p class="note note--block" style="margin-top:18px"><b>What this preview form does &mdash; and does not do</b>The button opens Messenger, because that is genuinely the clinic&rsquo;s only channel today, and opening Messenger is all it does. It does not hold a slot, book a time or put anything in a queue, and it does not send what you typed &mdash; a member of staff still reads the message and replies by hand, exactly as now.</p>
     </div>
   </section>
 
@@ -380,8 +380,8 @@ a{color:var(--brand-deep)}
         </div>
 
         <div class="form">
-          <h3>Request an appointment</h3>
-          <p style="font-size:14.5px;color:var(--ink-2)">The clinic books one to three days in advance. Tell it which service and which day, and it can come back to you with a slot.</p>
+          <h3>Message the clinic</h3>
+          <p style="font-size:14.5px;color:var(--ink-2)">The clinic books one to three days in advance. Note down which service and which day, then send it over on Messenger and the clinic can come back to you.</p>
           <form onsubmit="return csSend(event)">
             <div class="field"><label for="n">Your name</label><input id="n" name="name" type="text" autocomplete="name" placeholder="Juan Dela Cruz"></div>
             <div class="field"><label for="p">Mobile number (so the clinic can reply)</label><input id="p" name="phone" type="tel" autocomplete="tel" placeholder="09XX XXX XXXX"></div>
@@ -398,7 +398,7 @@ a{color:var(--brand-deep)}
             <div class="field"><label for="m">Which day would suit you?</label><textarea id="m" name="message" placeholder="e.g. Thursday or Friday next week, morning if possible"></textarea></div>
             <button class="btn btn--primary btn--block" type="submit">Send via Messenger</button>
           </form>
-          <p class="formnote">Messenger is currently the clinic&rsquo;s only published channel. A phone line on this page would give patients a second way in.</p>
+          <p class="formnote">The button opens Messenger and nothing on this page stores or forwards what you type. Messenger is currently the clinic&rsquo;s only published channel. A phone line on this page would give patients a second way in.</p>
         </div>
       </div>
     </div>
