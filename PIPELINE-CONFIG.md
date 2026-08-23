@@ -1392,3 +1392,44 @@ promise, not the diagnosis, that the menu gates.
   the only visible ageing signal) or re-stamping it (that would imply a send
   that did not happen). **Owner: Dei** — send the approved draft and drag to
   CONTACTED, or reject a lead that has now been waiting four weeks.
+- 2026-08-23 (step 6 QA, CLO-73 — a new shared skeleton across a WHOLE batch,
+  not a recurring phrase: three of eight cards shipped before it was caught):
+  every one of the eight CLO-54/71 drafts built today (Medika, Children's
+  Medical, Dr. Jewelyn, 509 Family Care, GMS Auto Care, Cartech, Ditoy, Esmino)
+  used the identical closer "— Dei" and the identical reveal-sentence template
+  "The page at [URL] owns/wins/lists [claims]", and all eight used the same
+  rigid CTA formula "Cost: [price], first month free, [N]-month term.
+  [Question]?". This is the same class of defect as the banned build-pivot and
+  opt-out closer — a shared template the generator produces by default — but
+  at batch scope: not one phrase reused, the whole reveal/CTA/closer shape.
+  Medika, Children's Medical and Dr. Jewelyn were marked QA'd & humanized
+  *before* this pattern was checked against the full batch and already carry
+  it. The remaining five (509 Family Care, GMS Auto Care, Cartech, Ditoy,
+  Esmino) were rewritten in place to break the shared shape — five different
+  closers, five different reveal constructions, no two sharing CTA sentence
+  order. Separately, Cartech and Ditoy shared one verbatim sentence outside
+  the template ("We measure that when you're ready.") — cut from both.
+  Ditoy also carried 4 em-dashes (incl. an X—clause—Y opener) and Esmino 5
+  (also X—clause—Y), the same tic flagged twice already this week; both cut
+  to 0. **Escalating per role spec — three consecutive QA runs now (08-16,
+  08-23 em-dash entry, this one) have caught the same generator producing a
+  shared template at increasing scope (phrase -> paragraph tic -> whole-draft
+  skeleton). Fixing the symptom per run is not closing the gap; the drafting
+  prompt itself needs a rule against a fixed reveal/CTA/closer shape, not
+  just a fixed phrase.**
+- 2026-08-23 (step 6 QA, CLO-73 — fabricated rival claim, routed to CHANGES
+  REQUESTED not fixed in place): Esmino Pediatric Clinic's draft (Batasan
+  Hills, QC) claimed ClinicFinderPH lists "CentroMed FC and Guadalupe Health
+  Center" as rivals on its listing. Those are the exact two rival names used
+  on the unrelated 509 Family Care Clinic card (Guadalupe, Cebu City) — a
+  different lead, a different city, geographically implausible as Batasan
+  Hills rivals. Esmino's own ANGLE section names no rivals at all, so the
+  claim has no support anywhere on the card and reads as copy-paste
+  contamination between two same-day drafts rather than researched evidence.
+  QA does not have the source evidence to correct this (what, if anything,
+  Esmino's real ClinicFinderPH listing actually shows), so per role boundary
+  ("a draft resting on a bad angle goes back to the Strategist") it went to
+  CHANGES REQUESTED with a named blocking issue rather than being polished
+  and shipped. Worth checking whether other same-day drafts share evidence
+  fragments the same way — this was caught by inspection, not by a
+  systematic cross-draft check.
