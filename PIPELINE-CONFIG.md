@@ -87,6 +87,26 @@ Human touchpoints: READY TO SEND → APPROVED authorizes sending · revisions
 via CHANGES REQUESTED with "## CHANGES" in the card DESCRIPTION (comments are
 invisible to agents) · REPLIED (HITS) is human territory.
 
+**Card description budget — 2048 chars, and the eviction order is fixed.**
+Every step appends to the same description and comments are invisible to
+agents, so the cap falls on whoever writes last. It has now cost real
+information: on 2026-08-23 the builder could not record a page fix on the GMS
+card (1,999 of 2,048 used) and stopped rather than cut a human's revision
+block. Silent overrun and silent abandonment are both wrong. Measure before
+writing, and when a write would exceed the cap, evict in this order until it
+fits:
+
+1. the ROI/guidance line (advice to the next agent, not evidence)
+2. Lead Details prose — keep business name, address, phone, email, FB; cut
+   the rest
+3. older Evidence sentences, oldest first, keeping the one the current draft
+   actually rests on
+
+**Never evict, at any budget:** a `## CHANGES` block (human-authored), the
+current draft, the mockup URL, the brand-verified marker, or the channel tag.
+If it still does not fit with everything evictable gone, write what fits, and
+say plainly in the step report which card and which fact did not land.
+
 Agent order: see "Daily run — order of operations" below. That section is the
 canonical order; nothing runs outside it.
 
@@ -176,9 +196,15 @@ empty BRAND BLOCKED list and an unreported one look identical otherwise.
 
 Mockup Builder works this order and does not reorder it:
 
-1. **Revisions** — every CHANGES REQUESTED card carrying `## CHANGES` in its
-   DESCRIPTION. A revision is a prospect already engaged; it outranks a new
-   lead every time.
+1. **Revisions** — every CHANGES REQUESTED card carrying a `## CHANGES`
+   **heading at the start of a line** in its DESCRIPTION. A revision is a
+   prospect already engaged; it outranks a new lead every time.
+   **Match line-initial, never anywhere-in-the-text.** The standing annotation
+   for a card that lacks a revision block quotes the token itself, so a
+   substring search matches the note that says the block is missing and
+   reports a phantom revision. On 2026-08-23 that made 5 stalled cards look
+   like 7 actionable ones. Line-initial matching separates them cleanly:
+   a real block starts its own line, the annotation never does.
 2. **Backlog** — oldest branded, ready STRATEGY READY cards, up to remaining
    capacity. A card older than 7 days must have its evidence re-verified before
    build; rankings, competitor claims and directory data go stale.
@@ -208,6 +234,28 @@ condense the Sales Angle first, dropping the Stack/Mockup directive now the
 build is done. Sign as Dei. No two drafts in one day may share an opener, a
 closer or a skeleton.
 
+**"Skeleton" is now defined, because the generic wording did not hold.** Three
+consecutive QA runs (08-16, 08-23 em-dash, 08-23 batch skeleton) caught the same
+generator emitting one fixed shape at growing scope — phrase, then paragraph
+tic, then whole draft. Banning phrases one at a time has not worked, because the
+generator's default is a *template*, not a phrase. So the rule is now positive
+and per-axis. Across every draft written in one day, these four must vary — not
+be reworded, actually differ in construction:
+
+1. **The reveal sentence** — the line that introduces the mockup URL. Not every
+   draft may run "The page at [URL] owns/wins/lists [claims]".
+2. **The CTA formula** — price, free month and term may not appear in the same
+   sentence order in two drafts. "Cost: [price], first month free, [N]-month
+   term. [Question]?" is one shape among many, not the shape.
+3. **The closer** — the sign-off line. Eight drafts closing "— Dei" on the same
+   day is the defect, even though signing as Dei is correct.
+4. **The opener** — as before.
+
+Write the drafts for a day as a set, not one at a time and never in isolation:
+before writing, read every draft already written today, including ones another
+step has already marked QA'd. A draft is only diverse against the batch it
+ships with.
+
 **Reports:** drafts written · send channel per lead.
 
 ### 6 — QA
@@ -219,6 +267,15 @@ sales-qa-humanizer. Four checks, all must pass before the card is marked
    any "So I built …" opening clause; the "<positive ask>? If not, <opt-out>
    and I'll leave you be" closer; the em-dash used as a default clause
    separator.
+   **This check runs batch-wide, not card-by-card.** Reading one draft cannot
+   catch a shared skeleton — that is why three of eight drafts shipped carrying
+   one on 2026-08-23. Before marking anything, collect every draft written
+   today, *including cards already marked `✅ QA'd & humanized` earlier in the
+   same day*, and compare them against the four varying axes in step 5. Two
+   drafts sharing a reveal sentence, a CTA sentence order or a closer is a FAIL
+   for both, even if each reads well alone. A card already marked cannot be
+   re-marked, so say so in the report and route it back rather than leaving the
+   batch half-fixed.
 2. **Brand gate, independently.** QA re-runs `verify-brand.mjs` itself rather
    than trusting the builder's report. Same script, second pair of eyes — the
    Dental Hive miss happened because one agent both built and judged.
@@ -1433,3 +1490,49 @@ promise, not the diagnosis, that the menu gates.
   and shipped. Worth checking whether other same-day drafts share evidence
   fragments the same way — this was caught by inspection, not by a
   systematic cross-draft check.
+- 2026-08-23 (CEO run report, CLO-67 — the board had ZERO open issues while
+  five consecutive run reports named the same blocker): steps 7-9 have now
+  reported STARVED five runs running, and every one of those reports named the
+  READY TO SEND -> APPROVED human gate as the cause. Checked the issue tracker
+  at the end of this run: **0 open issues.** Nothing on the board was tracking
+  the gate, nobody was assigned it, and no wake would ever fire for it. Five
+  reports, each correct, each read once, each creating no work — the reporting
+  discipline this config asks for was satisfied in full and still produced
+  nothing, because a finding written into a run report is a record, not a task.
+  Raised as a first-class tracked issue this run with a named owner and a
+  pending question rather than a sixth paragraph. **Standing rule from here:
+  a blocker that appears in three consecutive run reports must be opened as
+  its own issue with an owner; the run report then links to it instead of
+  restating it.**
+- 2026-08-23 (queue depths, measured card-by-card off the board rather than
+  inherited from the step reports): INCOMING LEADS 0 · STRATEGY READY 0 ·
+  BRAND BLOCKED **35** · MOCKUP READY 0 · READY TO SEND **39** (39/39 carry
+  `✅ QA'd & humanized`, no unmarked card left behind) · CHANGES REQUESTED 6 ·
+  APPROVED 0 · SYNCED TO GHL 1 · CONTACTED 0 · FOLLOW-UP DUE 0 · REPLIED 0.
+  Two queues flagged for sustained growth: **READY TO SEND 17 -> 23 -> 35 ->
+  39, four runs**, and **BRAND BLOCKED 27 -> 34 -> 35**. The working section
+  of the pipeline (INCOMING -> STRATEGY -> MOCKUP READY) drained to zero
+  cleanly, which is the tell: the front half is healthy and every card it
+  produces lands in a queue that has never drained once.
+- 2026-08-23 (the `## CHANGES` search was matching the note that says there is
+  no `## CHANGES` block — a self-poisoning heuristic): CHANGES REQUESTED
+  presented as 7 actionable revisions and was actually 2. The standing stale
+  annotation reads "no `## CHANGES` block. Step 4 cannot act. Dei to add one."
+  and contains the literal token, so any substring search for the marker
+  matches five cards that exist precisely *because* they lack it. Two runs
+  have now had to re-read all seven descriptions by hand to find the two real
+  ones. Fixed in the step 4 rule above: match `## CHANGES` **line-initial**
+  only. A real block starts its own line; the annotation never does, so the
+  two separate without touching a single card.
+- 2026-08-23 (QA's escalation is closed in config, not re-escalated): step 6
+  escalated that three consecutive runs caught the same generator producing a
+  fixed template at growing scope, and that banning phrases one at a time was
+  not closing the gap. Acting on it rather than logging it again: step 5 now
+  names the four axes that must actually vary (reveal sentence, CTA sentence
+  order, closer, opener) and requires the day's drafts to be written as a set
+  against everything already drafted today; step 6's humanize check now runs
+  **batch-wide including cards already marked QA'd earlier the same day**,
+  which is the exact gap that let Medika, Children's Medical and Dr. Jewelyn
+  ship carrying the shared skeleton. If the same shape recurs after this, the
+  defect is the generator and not the rule, and the next escalation should say
+  so.
