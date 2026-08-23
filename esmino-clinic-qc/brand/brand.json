@@ -2,7 +2,7 @@
   "slug": "esmino-clinic-qc",
   "site": "esminoclinic.com",
   "facebook": "esminoclinic",
-  "capturedAt": "2026-08-19T23:25:59.584Z",
+  "capturedAt": "2026-08-23T08:46:25.185Z",
   "source": "headless-http",
   "name": null,
   "logo": {
@@ -20,14 +20,17 @@
     }
   ],
   "colors": {
-    "brand": [],
+    "brand": [
+      { "hex": "#1A3B8F", "weight": 85 },
+      { "hex": "#C8E6C9", "weight": 40 }
+    ],
     "neutral": [],
     "themeColor": null,
-    "source": null
+    "source": "vision"
   },
   "fonts": [],
-  "ready": false,
-  "blockedBy": "palette-pending",
+  "ready": true,
+  "blockedBy": null,
   "confidence": 50,
   "notes": [
     "facebook profile picture captured headlessly for \"esminoclinic\"",

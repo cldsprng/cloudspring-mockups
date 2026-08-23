@@ -1,0 +1,73 @@
+{
+  "slug": "small-town-auto-earlville",
+  "site": "https://smalltownautorepair.com/",
+  "facebook": "p",
+  "capturedAt": "2026-08-23T08:46:42.660Z",
+  "source": "headless-http",
+  "name": "Small Town Auto Repair",
+  "logo": {
+    "file": "logo-1-apple-touch-icon.img",
+    "score": 70,
+    "why": "apple-touch-icon"
+  },
+  "logoFiles": [
+    {
+      "file": "logo-1-apple-touch-icon.img",
+      "bytes": 794,
+      "from": "https://img1.wsimg.com/isteam/ip/static/pwa-app/logo-default.png/:/rs=w:57,h:57,m",
+      "why": "apple-touch-icon",
+      "score": 70
+    },
+    {
+      "file": "logo-2-apple-touch-icon.img",
+      "bytes": 846,
+      "from": "https://img1.wsimg.com/isteam/ip/static/pwa-app/logo-default.png/:/rs=w:60,h:60,m",
+      "why": "apple-touch-icon",
+      "score": 70
+    },
+    {
+      "file": "logo-3-apple-touch-icon.img",
+      "bytes": 981,
+      "from": "https://img1.wsimg.com/isteam/ip/static/pwa-app/logo-default.png/:/rs=w:72,h:72,m",
+      "why": "apple-touch-icon",
+      "score": 70
+    }
+  ],
+  "colors": {
+    "brand": [
+      {
+        "hex": "#ffff00",
+        "weight": 1
+      }
+    ],
+    "neutral": [
+      {
+        "hex": "#6f6f6f",
+        "weight": 68
+      },
+      {
+        "hex": "#000000",
+        "weight": 47
+      },
+      {
+        "hex": "#ffffff",
+        "weight": 4
+      },
+      {
+        "hex": "#161616",
+        "weight": 2
+      }
+    ],
+    "themeColor": "#6F6F6F",
+    "source": "site-css"
+  },
+  "fonts": [],
+  "ready": false,
+  "blockedBy": "no-assets",
+  "confidence": 30,
+  "notes": [
+    "facebook profile picture unavailable for \"p\" (page may be renamed, unpublished, or ID-only)",
+    "0 stylesheet(s) fetched, 49784 bytes of CSS",
+    "BLOCKER no-assets: no usable logo file (need >=1KB from a logo/icon/FB signal)"
+  ]
+}

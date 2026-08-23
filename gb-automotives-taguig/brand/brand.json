@@ -1,0 +1,37 @@
+{
+  "slug": "gb-automotives-taguig",
+  "site": null,
+  "facebook": "ngcautocarecenter",
+  "capturedAt": "2026-08-23T08:46:32.709Z",
+  "source": "headless-http",
+  "name": null,
+  "logo": {
+    "file": "logo-facebook-profile.jpg",
+    "score": 95,
+    "why": "facebook profile picture"
+  },
+  "logoFiles": [
+    {
+      "file": "logo-facebook-profile.jpg",
+      "bytes": 30772,
+      "from": "graph.facebook.com/ngcautocarecenter/picture?width=1200&height=1200",
+      "why": "facebook profile picture",
+      "score": 95
+    }
+  ],
+  "colors": {
+    "brand": [],
+    "neutral": [],
+    "themeColor": null,
+    "source": null
+  },
+  "fonts": [],
+  "ready": false,
+  "blockedBy": "logo-not-a-mark",
+  "confidence": 95,
+  "notes": [
+    "facebook profile picture captured headlessly for \"ngcautocarecenter\"",
+    "no website for this lead — facebook-only capture path",
+    "BLOCKER logo-not-a-mark: logo file exists but is purely monochrome (black and white only). No chromatic colours to extract. Vision read confirms no usable palette — recommend cropping a brand element from a storefront photo or requesting vector logo from owner."
+  ]
+}

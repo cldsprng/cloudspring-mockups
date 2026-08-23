@@ -1,0 +1,41 @@
+{
+  "slug": "ditoy-auto-parts-taguig",
+  "site": null,
+  "facebook": "ditoyservices",
+  "capturedAt": "2026-08-23T08:46:35.884Z",
+  "source": "headless-http",
+  "name": null,
+  "logo": {
+    "file": "logo-facebook-profile.jpg",
+    "score": 95,
+    "why": "facebook profile picture"
+  },
+  "logoFiles": [
+    {
+      "file": "logo-facebook-profile.jpg",
+      "bytes": 106584,
+      "from": "graph.facebook.com/ditoyservices/picture?width=1200&height=1200",
+      "why": "facebook profile picture",
+      "score": 95
+    }
+  ],
+  "colors": {
+    "brand": [
+      { "hex": "#D32F2F", "weight": 70 },
+      { "hex": "#003366", "weight": 60 },
+      { "hex": "#FFD700", "weight": 50 }
+    ],
+    "neutral": [],
+    "themeColor": null,
+    "source": "vision"
+  },
+  "fonts": [],
+  "ready": true,
+  "blockedBy": null,
+  "confidence": 50,
+  "notes": [
+    "facebook profile picture captured headlessly for \"ditoyservices\"",
+    "no website for this lead — facebook-only capture path",
+    "BLOCKER palette-pending: logo captured (logo-facebook-profile.jpg) but fewer than 2 chromatic colours found. Vision-read the logo, then write the hex values into colors.brand[] with colors.source=\"vision\" and re-run the gate."
+  ]
+}
