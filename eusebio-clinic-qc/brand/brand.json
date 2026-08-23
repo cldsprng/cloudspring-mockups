@@ -1,0 +1,25 @@
+{
+  "slug": "eusebio-clinic-qc",
+  "site": null,
+  "facebook": null,
+  "capturedAt": "2026-08-23T13:57:43.000Z",
+  "source": "none",
+  "name": "Eusebio Medical Clinic (Quezon City)",
+  "logo": null,
+  "logoFiles": [],
+  "colors": {
+    "brand": [],
+    "neutral": [],
+    "themeColor": null,
+    "source": null
+  },
+  "fonts": [],
+  "ready": false,
+  "blockedBy": "no-assets",
+  "confidence": 0,
+  "notes": [
+    "no website for this lead — no assets to capture",
+    "no Facebook page — no assets to capture",
+    "BLOCKER no-assets: no captured assets and no usable online profile. Card goes to BRAND BLOCKED for a human decision: hand-drop assets into eusebio-clinic-qc/brand/, or drop the lead."
+  ]
+}

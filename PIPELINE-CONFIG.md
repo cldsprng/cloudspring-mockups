@@ -50,6 +50,12 @@ failure bin: drop real assets into `<slug>/brand/` and the card re-enters at
 **STRATEGY READY**, or reject the lead. Nothing leaves this list by being built
 with an invented palette.
 
+**Entry condition: a card may only enter BRAND BLOCKED with a committed
+`<slug>/brand/brand.json` file naming the verdict.** Without a captured or
+manually-created brand.json, the card is indistinguishable from one that capture
+never reached, and it cannot be verified or acted on. Enforced by the same
+verifier that gates deploy: a card with no brand/brand.json is a blocker.
+
 **MOCKUP READY means BUILT, not brand-ready.** A card belongs in MOCKUP READY
 only once `<slug>/index.html` exists and is deployed — that is the entry
 condition, and step 5 relies on it because it drafts copy that points at the
@@ -421,15 +427,16 @@ profile picture. For a Facebook-only lead, which is most of this pipeline by
 definition of the qualifier, that image *is* the brand. (Verified 2026-08-19:
 returns the Fast Autoworks logo as a 5.5KB JPEG from an unauthenticated run.)
 
-### The three states of `brand.json`
+### The four states of `brand.json`
 
 | `ready` | `blockedBy` | What the builder does |
 |---|---|---|
 | `true` | `null` | **Build.** Use the captured logo file, the `colors.brand` hexes, and the captured typeface. |
 | `false` | `palette-pending` | Logo exists, no CSS to read colour from — the Facebook-only case. **Vision-read the logo**, write the hexes into `colors.brand[]` with `colors.source: "vision"`, set `ready: true`, then build. |
 | `false` | `no-assets` | **Do not build.** No usable logo anywhere. Card goes to `BRAND BLOCKED` for a human call: hand-drop assets into `<slug>/brand/`, or drop the lead. |
+| `false` | `logo-not-a-mark` | The Facebook profile picture or captured image is a photograph, promo graphic, or storefront photo — not a logo mark. **The palette is recoverable and valid**, but the file itself cannot be used as a logo in a mockup. Card goes to `BRAND BLOCKED`: find a cropped or alternative logo source, or drop the lead. The `colors.brand[]` is already filled from signage/visible branding in the image. |
 
-There is no fourth state. There is no build-anyway path, no placeholder palette
+There is no build-anyway path, no placeholder palette
 and no warning-label flag — a design the builder invented is not the prospect's
 brand, and labelling it as such does not make it sendable.
 
