@@ -1724,3 +1724,59 @@ promise, not the diagnosis, that the menu gates.
   long-standing, not a regression. It is now pure ASCII and parses. A script
   nobody has run is not the same as a script that works; the `.mjs` sweep is
   what has actually been executing.
+- 2026-08-25 (step 4, CLO-91 — step 3 reported an empty queue two minutes after
+  step 2 reported filling it, and nobody reconciled the two): CLO-89 posted at
+  23:25:33Z that it had strategised 4 of 4 cards and that "INCOMING LEADS is now
+  0, STRATEGY READY is 4". CLO-90 posted at 23:27:40Z that "STRATEGY READY board
+  state: 0 cards, no new captures to run today", closed itself `done`, and woke
+  step 4. Both reports are in the same issue chain, 127 seconds apart, and they
+  contradict each other on a number each one measured. Step 4 found no
+  `brand/brand.json` for any of today's four leads and no folder for them on
+  `origin/main` at all. **The chain does not reconcile step reports against each
+  other, so a step that silently mis-reads a queue costs the whole day and the
+  only signal is a downstream agent noticing an empty repo.** Rule from here: a
+  step that measures its input queue as EMPTY when the immediately preceding
+  step reported filling it must re-read before concluding "nothing to do", and
+  must say in its report which count it is contradicting. An empty read is a
+  claim about the board; two adjacent steps disagreeing about the same list is a
+  defect in one of them, never a quiet skip. (The same shape as the 2026-08-19
+  false-blocker lesson: an empty result presented as a confident finding.)
+- 2026-08-25 (step 4, CLO-91 — what step 4 did about it, and the boundary it did
+  not cross): the config's "no step covers for a skipped earlier step" rule
+  forbids building unbranded to keep the day moving. It does not forbid making a
+  lead genuinely ready. Step 4 ran `capture.mjs` for the four leads itself, then
+  built only what passed the gate. Egress was probed first on a known-good slug
+  (`graph.facebook.com/cocacola/picture` -> 200, 28,874-byte PNG) exactly as the
+  2026-08-20 rule requires, so a `no-assets` verdict this run means the page has
+  no logo and not that the run could not look. Two built, two routed to BRAND
+  BLOCKED. What step 4 did NOT do is treat a missing capture as licence to
+  invent a palette; the distinction worth keeping is between *doing the skipped
+  work properly* and *shipping around it*.
+- 2026-08-25 (step 4, CLO-91 — a Facebook page can return HTTP 200 and still be
+  `no-assets`, and the byte count will not tell you): Makati Animal Medical
+  Center is carried on the card as `facebook.com/p/Makati-Animal-Medical-Center-
+  Inc-61552034393721/`, the numeric-ID URL form. The readable slug returns the
+  documented 400-with-JSON ("object does not exist"), which the 2026-08-20 entry
+  already covers. The numeric id `61552034393721` returns **HTTP 200 with a
+  1,876-byte JPEG** — the anonymous silhouette, flagged `is_silhouette: true`.
+  There is now a third outcome on this endpoint alongside 200-real-logo and
+  400-wrong-slug, and a size heuristic cannot separate it: the silhouette is
+  1,876 bytes and the *real* Nike mark quoted in the 2026-08-20 probe is 1,852.
+  `capture.mjs` already reads `is_silhouette` and got this right; the point is
+  that a hand-rolled curl check would not. **Never conclude "logo captured" from
+  a 200 and a plausible byte count on this endpoint — read the silhouette flag.**
+- 2026-08-25 (step 4, CLO-91 — the OTHER branch of `logo-not-a-mark`, which the
+  step-3 routing table describes but no run had hit): the routing rule says
+  `logo-not-a-mark` with >=2 colours is treated like `palette-pending` and
+  builds, and with an empty `colors.brand` it goes to BRAND BLOCKED. Every prior
+  case took the first branch, because the captured photo was a *storefront* —
+  the 2026-08-20 automotive-1 rescue worked precisely because the shop's signage
+  was in frame, so the palette was the business's own. Happy Pawz (Greencastle,
+  IN) is the second branch: the profile picture is a customer-grade photo of a
+  terrier on a garden bench captioned "Ralphie Dog". Every colour in it is
+  grass, plumbago and fur. **The test that separates the branches is not "is it
+  a photograph" but "is any of the business's own branding inside the frame".**
+  A palette sampled from a photo with no signage in it is an invented palette
+  wearing a `colors.source: "vision"` label, which is worse than no palette,
+  because the label is the thing the gate trusts. `colors.brand[]` was left
+  deliberately empty and the card went to BRAND BLOCKED with a named remedy.
