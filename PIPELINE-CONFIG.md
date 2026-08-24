@@ -1698,3 +1698,29 @@ promise, not the diagnosis, that the menu gates.
   capture/move scratch JSON. Step artifacts belong on the Trello card and in
   the issue thread; if a step needs a file, write it to
   `PAPERCLIP_RUN_SCRATCH_DIR`, never the repo root.
+- 2026-08-25 (CLO-95 — the entry above overstated its own fix, and a
+  `.gitignore` was the wrong tool for the job): that `.gitignore` did **not**
+  cover "the capture/move scratch JSON" — it contained only the first two
+  patterns. Four sweep scratch files were **already tracked** at the repo root
+  and therefore public: `CLO-39-cards.json` (9 prospect email addresses),
+  `CLO-39-capture-results.json`, `move-instructions.json` and
+  `trello-move-map.json` (internal Trello card IDs). Ignoring an
+  already-tracked path has no effect, so no `.gitignore` edit could have fixed
+  this; and the tooling wrote two of them back to the repo root on every sweep,
+  so it recurred by design. Fixed at the root: `tools/brand-capture/scratch.mjs`
+  resolves scratch paths against `PAPERCLIP_RUN_SCRATCH_DIR` (falling back to
+  cwd for interactive use), `run-sweep.mjs` and `run-clo39-captures.ps1` write
+  there, `move-cards.mjs` reads there, and all four files are `git rm --cached`.
+  History was **not** rewritten: these are business contact addresses already
+  published in directories, so it is repo hygiene, not a disclosure of private
+  data. The CLO-39 card list stays recoverable from history at `fef5f9c`.
+  Two things worth carrying forward. **A `.gitignore` entry is evidence of
+  intent, not of effect** — check `git ls-files` before claiming a file is
+  excluded, because the ignore is silently inert on anything already tracked.
+  And **`run-clo39-captures.ps1` had never run on this host**: it held raw
+  UTF-8 glyphs (`•`, `✓`, `⚠`, `✗`) in a BOM-less file, which Windows
+  PowerShell 5.1 decodes as cp1252, and it failed to parse with 10 errors. The
+  pre-change file was verified to produce the identical 10 errors, so this was
+  long-standing, not a regression. It is now pure ASCII and parses. A script
+  nobody has run is not the same as a script that works; the `.mjs` sweep is
+  what has actually been executing.
