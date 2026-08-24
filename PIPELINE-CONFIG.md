@@ -1620,3 +1620,35 @@ promise, not the diagnosis, that the menu gates.
   catch. Backlog is defined by the STRATEGY READY list, never by a repo scan.
   The cleanup itself is CLO-77's; what is new is that leaving it has acquired a
   way to cause a wrong build rather than just clutter.
+- 2026-08-24 (step 6 QA, CLO-84 — the step-5 self-report's own quality checks
+  were wrong on two axes, not just missing a check): CLO-83's run report
+  (2026-08-24, 6 drafts: 4 new vet cards + 2 redrafts) certified "No
+  contractions — all drafts use full forms" as a batch-wide **pass**. That is
+  backwards — contractions are the hard rule (this section, check 1) — and
+  all six drafts had zero contractions, the same defect on every single card
+  in the batch, not a one-off. The same report also certified "No em-dash
+  abuse — X—clause—Y pattern eliminated" as a pass; Petvet's draft had two
+  X—clause—Y pairs (four em-dashes) in the opener and the reveal sentence.
+  Both false-pass claims came from checking each draft in isolation rather
+  than re-reading the actual sentence against the rule text. Separately, the
+  report's four-axis comparison table only cross-checked the 4 new cards
+  against each other — the 2 same-day redrafts were compared to nothing.
+  That gap produced two skeleton collisions the table couldn't have caught:
+  Blessed and Esmino shipped the *verbatim identical* CTA sentence ("Cost:
+  [price], first month free, [N]-month term."), and Animal House and Esmino
+  shared the "This page [verb]s [claim]: [URL]" reveal skeleton — exactly the
+  generic shape banned by name in step 5. A third collision (Williams River
+  and ZP Smiles both opening "Your page is live at [URL]") shows the same
+  redraft-blind-spot in reverse: a new card collided with a redraft. All six
+  cards also closed "— Dei" identically, reproducing the 08-23 CLO-73 defect
+  this section already names as resolved. Fixed all six in place (added
+  contractions; cut Petvet's em-dashes; reworded the three colliding reveal/
+  CTA constructions; varied all six closers) rather than routing back — no
+  fact or angle needed to change, only phrasing. **Rule going forward: the
+  batch-wide axis check (reveal, CTA, closer) must run across every draft
+  written that day regardless of whether it is a new card or a same-day
+  redraft** — the axis table has to be one list, not "new cards" and
+  "redrafts" checked separately. And a report's own pass/fail claims are not
+  evidence QA can skip re-deriving; this is the second run (after 08-23's
+  Esmino fabrication) where the defect was exactly what an upstream
+  self-report said had been checked and passed.
