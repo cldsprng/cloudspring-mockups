@@ -7,8 +7,10 @@
 // Exit 1 = it does not. Do not push. Do not flag "GENERIC BRANDING" and send
 //          anyway — that flag is what let 18+ unbranded mockups ship.
 
-import { readFile, readdir } from 'node:fs/promises'
+import { readFile, readdir, access } from 'node:fs/promises'
 import { join } from 'node:path'
+
+const exists = async (p) => access(p).then(() => true, () => false)
 
 const decodeHtmlEntities = (str) => {
   return str
@@ -57,11 +59,23 @@ for (const f of await readdir(folder).catch(() => [])) {
   if (f.endsWith('.css')) styling += '\n' + (await readFile(join(folder, f), 'utf8'))
 }
 
-// 1. The real logo file has to actually appear in the markup.
+// 1. The real logo file has to actually appear in the markup...
 const logoNames = (brand.logoFiles || []).map((f) => f.file)
 const logoUsed = logoNames.find((n) => html.includes(n))
 if (logoUsed) passes.push(`logo referenced: ${logoUsed}`)
 else fails.push(`none of the captured logo files appear in index.html (${logoNames.join(', ') || 'no files captured'})`)
+
+// 1b. ...and it has to be a file that is actually there.
+// A filename-substring test cannot tell a present image from a missing one, so
+// a mockup whose logo was never committed passed every check, deployed, and
+// served a broken image to the prospect (2026-08-24, CLO-82 — four folders).
+if (logoUsed) {
+  const candidates = [join(folder, 'brand', logoUsed), join(folder, logoUsed)]
+  const found = []
+  for (const c of candidates) if (await exists(c)) found.push(c)
+  if (found.length) passes.push(`logo file present: ${found[0]}`)
+  else fails.push(`index.html references "${logoUsed}" but no such file exists (looked in ${candidates.join(', ')}) — the page would deploy with a broken image`)
+}
 
 // 2. At least two captured brand colours have to appear in the styling.
 const lower = styling.toLowerCase()
