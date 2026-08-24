@@ -1543,3 +1543,40 @@ promise, not the diagnosis, that the menu gates.
   ship carrying the shared skeleton. If the same shape recurs after this, the
   defect is the generator and not the rule, and the next escalation should say
   so.
+- 2026-08-24 (step 2, CLO-80 — NEW ANGLE: "placeholder site", and it beat every
+  other check in the batch): Blessed Veterinary Clinic (QC) owns a live, real,
+  364KB WordPress site — so the blank/parked-domain check passes it and the
+  directory-capture default would have been the fallback. Reading the site
+  instead: `/our-team/` presents four of the theme's demo people as clinic
+  staff (Alissa Silva, Cindey Harris and Layla Victoria as "Veterinarian",
+  Lucas Tony as "Animal Caretaker") beside their one real vet; `/about-us/`
+  has two click-to-call buttons that dial `(+44) 123 456 789` and
+  `+880-123-456`; the homepage runs 4x "Lorem ipsum"; and the phone prints as
+  "(2) 892 19634" / "+289-219-634", neither of which dials. A site can be live,
+  owned and substantial and still be evidence AGAINST its owner. **Add to the
+  cheap-check list: on any lead that owns a site, grep the fetched pages for
+  `lorem ipsum` and for placeholder `tel:` values (`123456`, `+44 123`,
+  `+880`) before defaulting to directory capture.** The existing `tel:` audit
+  already says grep every page, not just the homepage — that is what surfaced
+  the +44/+880 buttons, which are on `/about-us/` and nowhere else.
+- 2026-08-24 (step 2, CLO-80 — a parked domain is only a BD lead if the lead
+  owns it): `petvet.ph` serves a ParkLogic router (`router.parklogic.com`,
+  tenant `dotph-nxd`) for Petvet Animal Health Clinic. The parking-router grep
+  fires exactly as documented, but the domain is unregistered inventory, not
+  something they pay for. `BD-01` is "the site goes live on the domain they are
+  already paying for" — it does not apply, and pitching it would be a
+  fabricated premise. **The parked-domain check has two outcomes, not one:
+  parked-and-theirs is the BD angle; parked-and-unclaimed is only supporting
+  colour for name collision.** Confirm ownership before the domain enters the
+  offer half.
+- 2026-08-24 (step 2, CLO-80 — directory reachability, current as of this run):
+  `ph.99nearby.com/place/<slug>/<id>` works with a Chrome UA and is the best PH
+  surface found this run — it carried the Animal House contradiction (clinic at
+  737 Aurora Blvd / QC 1112, its three named vets at 704 Aurora Boulevard /
+  QC 1100, "0.50 KM away", on the same page). `topvet.net` publishes
+  schema.org `openingHoursSpecification` in the page source, which is how the
+  Williams River contradiction was measured rather than eyeballed — worth
+  reaching for first on AU/UK/US leads. Still blocked with a Chrome UA:
+  `ph.onsono.com` (403). New this run: `www.pinoylisting.com` returns an
+  expired TLS certificate, and `www.yellow-pages.ph` fails to connect (000,
+  not 403) — neither is a UA block and neither is worth retrying.
