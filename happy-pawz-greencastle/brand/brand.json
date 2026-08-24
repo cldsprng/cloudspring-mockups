@@ -1,0 +1,39 @@
+{
+  "slug": "happy-pawz-greencastle",
+  "site": null,
+  "facebook": "happypawzgroomingandboarding",
+  "capturedAt": "2026-08-24T23:31:03.745Z",
+  "source": "headless-http",
+  "name": "Happy Pawz Animal Boarding & Grooming",
+  "logo": {
+    "file": "logo-facebook-profile.jpg",
+    "score": 95,
+    "why": "facebook profile picture"
+  },
+  "logoFiles": [
+    {
+      "file": "logo-facebook-profile.jpg",
+      "bytes": 233527,
+      "from": "graph.facebook.com/happypawzgroomingandboarding/picture?width=1200&height=1200",
+      "why": "facebook profile picture",
+      "score": 95
+    }
+  ],
+  "colors": {
+    "brand": [],
+    "neutral": [],
+    "themeColor": null,
+    "source": null
+  },
+  "fonts": [],
+  "ready": false,
+  "blockedBy": "logo-not-a-mark",
+  "confidence": 20,
+  "notes": [
+    "facebook profile picture captured headlessly for \"happypawzgroomingandboarding\"",
+    "no website for this lead — facebook-only capture path",
+    "BLOCKER palette-pending: logo captured (logo-facebook-profile.jpg) but fewer than 2 chromatic colours found. Vision-read the logo, then write the hex values into colors.brand[] with colors.source=\"vision\" and re-run the gate.",
+    "2026-08-25 (step 4, CLO-91): NOT palette-pending. Vision-read and re-routed. brand/logo-facebook-profile.jpg is a photograph of a wire-haired terrier licking its nose on a garden bench, captioned \"Ralphie Dog\" in pale blue type. It is a pet photo, not a logo mark: no wordmark, no badge, no brand device anywhere in the frame. colors.brand[] is deliberately left EMPTY, because every colour in it is photographic (grass green, plumbago blue, fur tan) and belongs to a garden rather than to this business. Recording those as a palette would be inventing branding, which is the exact failure BRAND BLOCKED exists to stop.",
+    "2026-08-25 (step 4, CLO-91): BLOCKER logo-not-a-mark with colors.brand empty, so the card routes to BRAND BLOCKED and is not built. Named remedy for the human: source a real mark from the page cover photo, the shop-front sign, or the owner directly (lscarter2010@gmail.com / (765) 653-2460), drop it into happy-pawz-greencastle/brand/, and the card re-enters at STRATEGY READY. There is nothing to crop out of this file."
+  ]
+}

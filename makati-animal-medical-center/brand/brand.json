@@ -1,0 +1,27 @@
+{
+  "slug": "makati-animal-medical-center",
+  "site": null,
+  "facebook": "61552034393721",
+  "capturedAt": "2026-08-24T23:31:01.254Z",
+  "source": "headless-http",
+  "name": "Makati Animal Medical Center Inc.",
+  "logo": null,
+  "logoFiles": [],
+  "colors": {
+    "brand": [],
+    "neutral": [],
+    "themeColor": null,
+    "source": null
+  },
+  "fonts": [],
+  "ready": false,
+  "blockedBy": "no-assets",
+  "confidence": 0,
+  "notes": [
+    "facebook page \"61552034393721\" has no profile picture — the graph endpoint returns the anonymous silhouette (is_silhouette: true). Common for pages reachable only by numeric ID. Not recoverable headlessly.",
+    "no website for this lead — facebook-only capture path",
+    "BLOCKER no-assets: no usable logo file (need >=1KB from a logo/icon/FB signal)",
+    "2026-08-25 (step 4, CLO-91): the no-assets verdict is real, not an egress failure. Egress was probed first on a known-good slug (graph.facebook.com/cocacola/picture -> 200, 28,874-byte PNG) and three sibling leads captured logos from the same endpoint in the same run. The card names the page as facebook.com/p/Makati-Animal-Medical-Center-Inc-61552034393721/, which is the numeric-ID form: the readable slug Makati-Animal-Medical-Center-Inc returns HTTP 400 with a JSON body (object does not exist), and the numeric id 61552034393721 returns HTTP 200 with the 1,876-byte anonymous silhouette at is_silhouette: true. That is the page having no profile picture at all, not us failing to reach it.",
+    "2026-08-25 (step 4, CLO-91): BLOCKER no-assets -> BRAND BLOCKED, no build. This lead also has no domain, so there is no second source to try headlessly. Named remedy for the human: ask the clinic for a logo, or lift a mark from their signage or a Facebook post image, drop it into makati-animal-medical-center/brand/, and the card re-enters at STRATEGY READY. Contact on the card: makatiamc2023@gmail.com / +63 917 549 6262."
+  ]
+}

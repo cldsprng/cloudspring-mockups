@@ -1,0 +1,65 @@
+{
+  "slug": "ruffhouse-pet-grooming-makati",
+  "site": null,
+  "facebook": "ruffhouseph",
+  "capturedAt": "2026-08-24T23:31:02.840Z",
+  "source": "headless-http",
+  "name": "RUFFhouse Pet Grooming Services",
+  "logo": {
+    "file": "logo-facebook-profile.jpg",
+    "score": 95,
+    "why": "facebook profile picture"
+  },
+  "logoFiles": [
+    {
+      "file": "logo-facebook-profile.jpg",
+      "bytes": 112955,
+      "from": "graph.facebook.com/ruffhouseph/picture?width=1200&height=1200",
+      "why": "facebook profile picture",
+      "score": 95
+    }
+  ],
+  "colors": {
+    "brand": [
+      {
+        "hex": "#13376c",
+        "weight": 55
+      },
+      {
+        "hex": "#a9dcd9",
+        "weight": 25
+      },
+      {
+        "hex": "#c8a884",
+        "weight": 20
+      },
+      {
+        "hex": "#f2a03e",
+        "weight": 15
+      }
+    ],
+    "neutral": [
+      {
+        "hex": "#ffffff",
+        "weight": 90
+      },
+      {
+        "hex": "#8e9aa6",
+        "weight": 25
+      }
+    ],
+    "themeColor": null,
+    "source": "vision"
+  },
+  "fonts": [],
+  "ready": true,
+  "blockedBy": null,
+  "confidence": 90,
+  "notes": [
+    "facebook profile picture captured headlessly for \"ruffhouseph\"",
+    "no website for this lead — facebook-only capture path",
+    "BLOCKER palette-pending: logo captured (logo-facebook-profile.jpg) but fewer than 2 chromatic colours found. Vision-read the logo, then write the hex values into colors.brand[] with colors.source=\"vision\" and re-run the gate.",
+    "2026-08-25 (step 4, CLO-91): palette-pending resolved by vision-reading brand/logo-facebook-profile.jpg. The mark is a circular badge: RUFFHOUSE arced in navy serif capitals over a gabled house, four dog faces along the bottom, and a navy ribbon reading PET GROOMING SERVICES. Read off the artwork itself: #13376c = the arc lettering and the ribbon, #a9dcd9 = the house siding, #c8a884 = the roof and gable, #f2a03e = the pomeranian. Grey #8e9aa6 is the husky. No hex is invented and none is sampled from anything but the lead own logo.",
+    "2026-08-25 (step 4, CLO-91): no typeface captured. The only web address any directory carries for this lead, ruffhouse-pet-grooming-services.business.site, is a 404, so there is no CSS to read a typeface from; fonts[] stays empty and verify-brand.mjs check 3 skips accordingly."
+  ]
+}

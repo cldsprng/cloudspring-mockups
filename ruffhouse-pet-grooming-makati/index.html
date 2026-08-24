@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RUFFhouse Pet Grooming Services — Don Chino Roces Ave, Makati</title>
+<meta name="description" content="RUFFhouse Pet Grooming Services — 1147 Don Chino Roces Ave, Brgy San Antonio, Makati City. Grooming, boarding and pet supplies. Call +63 905 501 6781.">
+<style>
+:root{
+  /* Palette vision-read off the shop's own Facebook badge — see brand/brand.json
+     (colors.source: "vision"). #13376c is the arced RUFFHOUSE lettering and the
+     ribbon, #a9dcd9 the house siding, #c8a884 the roof and gable, #f2a03e the
+     pomeranian at the right of the badge. #8e9aa6 is the husky. */
+  --navy:#13376c;
+  --aqua:#a9dcd9;
+  --tan:#c8a884;
+  --amber:#f2a03e;
+  --grey:#8e9aa6;
+  --navy-deep:#0c2449;
+  --navy-soft:#eaeff7;
+  --aqua-soft:#eef8f7;
+  --ink:#101c30;
+  --ink-2:#5b6779;
+  --line:#dde4ee;
+  --shadow-sm:0 1px 2px rgba(16,28,48,.07), 0 3px 10px rgba(16,28,48,.06);
+  --shadow-md:0 10px 28px rgba(16,28,48,.14);
+  --r-sm:8px; --r-md:14px; --r-lg:22px; --r-pill:999px;
+  --display:Georgia,"Times New Roman",serif;
+  --body:system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;font-family:var(--body);color:var(--ink);background:#fff;font-size:16px;line-height:1.62;padding-bottom:184px;overflow-x:hidden}
+img,svg{max-width:100%;display:block}
+h1,h2,h3{font-family:var(--display);font-weight:700;line-height:1.16;margin:0 0 12px;letter-spacing:-.005em}
+h1{font-size:33px}h2{font-size:27px}h3{font-size:19px}
+p{margin:0 0 16px}
+a{color:var(--navy)}
+.wrap{width:100%;max-width:1060px;margin:0 auto;padding:0 20px}
+.eyebrow{font-size:11.5px;letter-spacing:.17em;text-transform:uppercase;font-weight:700;color:var(--navy);margin:0 0 9px;font-family:var(--body)}
+.section{padding:56px 0}
+.section--navy{background:var(--navy-soft)}
+.section--aqua{background:var(--aqua-soft)}
+:focus-visible{outline:3px solid var(--amber);outline-offset:3px;border-radius:4px}
+
+.header{position:sticky;top:0;z-index:60;background:var(--navy);color:#fff;box-shadow:var(--shadow-sm)}
+.header__in{display:flex;align-items:center;gap:12px;min-height:66px;padding:8px 20px;max-width:1060px;margin:0 auto}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none;color:#fff;min-height:44px}
+.brand-logo-img{width:50px;height:50px;flex:0 0 50px;object-fit:contain;border-radius:50%;background:#fff;border:2px solid var(--aqua)}
+.brand__txt{display:flex;flex-direction:column;line-height:1.16}
+.brand__name{font-family:var(--display);font-weight:700;font-size:17.5px;letter-spacing:.02em}
+.brand__sub{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--aqua);font-weight:700}
+.header__cta{margin-left:auto}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:46px;padding:12px 19px;border-radius:var(--r-sm);font-family:var(--body);font-weight:700;font-size:15px;text-decoration:none;border:2px solid transparent;cursor:pointer;transition:background-color .18s ease,color .18s ease,border-color .18s ease,transform .18s ease,box-shadow .18s ease}
+.btn--amber{background:var(--amber);color:#3d2503;box-shadow:var(--shadow-sm)}
+.btn--amber:hover{background:#dd8a26;color:#fff;transform:translateY(-2px);box-shadow:var(--shadow-md)}
+.btn--navy{background:var(--navy);color:#fff;box-shadow:var(--shadow-sm)}
+.btn--navy:hover{background:var(--navy-deep);transform:translateY(-2px);box-shadow:var(--shadow-md)}
+.btn--aqua{background:var(--aqua);color:#0a3b38;box-shadow:var(--shadow-sm)}
+.btn--aqua:hover{background:#8fcdc9;transform:translateY(-2px);box-shadow:var(--shadow-md)}
+.btn--outline{background:transparent;color:var(--navy);border-color:var(--navy)}
+.btn--outline:hover{background:var(--navy);color:#fff}
+.btn--sm{font-size:14px;padding:9px 15px;min-height:44px}
+
+.hero{position:relative;background:linear-gradient(180deg,var(--navy) 0%,var(--navy) 46%,#fff 46%,#fff 100%)}
+.hero__in{padding:34px 20px 44px;max-width:1060px;margin:0 auto;position:relative;z-index:1}
+.hero__copy{color:#fff}
+.hero h1{font-size:clamp(29px,6.8vw,46px);margin-bottom:14px;color:#fff}
+.hero h1 em{font-style:normal;color:var(--amber)}
+.hero__lead{font-size:17px;color:#c9d5e8;max-width:56ch;margin-bottom:22px}
+.hero__eyebrow{color:var(--aqua)}
+.chip{display:inline-flex;align-items:center;gap:8px;background:rgba(169,220,217,.16);border:1px solid var(--aqua);color:var(--aqua);font-weight:700;font-size:12px;letter-spacing:.11em;text-transform:uppercase;padding:6px 14px;border-radius:var(--r-pill);margin-bottom:15px}
+.chip svg{width:15px;height:15px}
+.idcard{background:#fff;border:1px solid var(--line);border-left:6px solid var(--amber);border-radius:var(--r-md);padding:19px;box-shadow:var(--shadow-md)}
+.idcard__row{display:flex;gap:13px;padding:11px 0;align-items:flex-start;border-top:1px solid var(--line)}
+.idcard__row:first-child{border-top:0;padding-top:0}
+.idcard__ico{flex:0 0 22px;width:22px;height:22px;color:var(--navy);margin-top:3px}
+.idcard__k{font-size:11px;letter-spacing:.11em;text-transform:uppercase;font-weight:700;color:var(--ink-2);margin:0 0 3px}
+.idcard__v{font-size:15.5px;font-weight:500;margin:0}
+.idcard__v a{color:var(--ink);text-decoration:none;border-bottom:2px solid var(--amber)}
+.idcard__v a:hover{color:var(--navy);border-bottom-color:var(--navy)}
+.hero__btns{display:flex;flex-direction:column;gap:10px;margin-bottom:26px}
+.hero__art{background:#fff;border-radius:var(--r-lg);padding:22px;box-shadow:var(--shadow-md);margin-bottom:22px}
+.badge{width:100%;max-width:300px;margin:0 auto}
+
+.grid{display:grid;gap:16px;grid-template-columns:1fr}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:22px;box-shadow:var(--shadow-sm);transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+.card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);border-color:var(--amber)}
+.card__ico{width:46px;height:46px;border-radius:var(--r-sm);background:var(--navy);color:var(--aqua);display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+.card__ico svg{width:25px;height:25px}
+.card p{font-size:15px;color:var(--ink-2);margin:0}
+.card__tag{display:inline-block;font-size:11px;letter-spacing:.11em;text-transform:uppercase;font-weight:700;color:var(--tan);margin-bottom:6px}
+
+.note{display:block;font-size:13.5px;line-height:1.62;background:#fdf6ec;border:2px dashed var(--tan);color:#5b431d;padding:13px 15px;border-radius:var(--r-sm)}
+.note b{text-transform:uppercase;letter-spacing:.07em;font-size:11.5px;display:block;margin-bottom:5px;color:#8a5a12}
+
+.statusbox{background:#fff;border:2px solid var(--amber);border-radius:var(--r-md);padding:20px;box-shadow:var(--shadow-md)}
+.statusbox h3{margin-bottom:8px}
+.statusbox p{font-size:14.5px;color:var(--ink-2);margin:0 0 12px}
+.statusbox p:last-child{margin-bottom:0}
+.statusline{display:flex;align-items:center;gap:10px;font-family:var(--body);font-weight:700;font-size:15px;background:var(--navy-soft);border-radius:var(--r-sm);padding:12px 14px;color:var(--navy)}
+.statusline svg{width:20px;height:20px;flex:0 0 20px}
+
+.steps{display:grid;gap:14px;grid-template-columns:1fr;counter-reset:s}
+.step{background:#fff;border-radius:var(--r-md);padding:19px 19px 19px 60px;position:relative;box-shadow:var(--shadow-sm)}
+.step::before{counter-increment:s;content:counter(s);position:absolute;left:18px;top:19px;width:28px;height:28px;border-radius:50%;background:var(--navy);color:#fff;font-family:var(--display);font-weight:700;font-size:14px;display:flex;align-items:center;justify-content:center}
+.step h3{font-size:17px;margin-bottom:4px}
+.step p{font-size:14.5px;color:var(--ink-2);margin:0}
+
+.hours{background:#fff;border:1px solid var(--line);border-radius:var(--r-md);overflow:hidden;box-shadow:var(--shadow-sm)}
+.hours__row{display:flex;justify-content:space-between;gap:12px;padding:13px 18px;border-top:1px solid var(--line);font-size:15px}
+.hours__row:first-child{border-top:0}
+.hours__row span:last-child{text-align:right;font-weight:700;color:var(--ink-2)}
+
+.contact{display:grid;gap:20px;grid-template-columns:1fr}
+.reach{background:var(--navy);color:#fff;border-radius:var(--r-md);padding:22px;box-shadow:var(--shadow-md)}
+.reach h3{color:#fff}
+.reach .btn{width:100%;margin-bottom:10px}
+.reach__addr{font-size:14px;color:#c9d5e8;margin:14px 0 0}
+
+.footer{background:var(--navy-deep);color:#c4d0e2;padding:42px 0 32px}
+.footer h3{color:#fff;font-size:19px}
+.footer a{color:var(--aqua);text-decoration:none}
+.footer a:hover{color:#fff;text-decoration:underline}
+.footer__grid{display:grid;gap:24px;grid-template-columns:1fr}
+.footer__p{font-size:14.5px;line-height:1.75;margin:0}
+.footer__credit{margin-top:28px;padding-top:18px;border-top:1px solid rgba(255,255,255,.15);font-size:13px;display:flex;flex-wrap:wrap;gap:6px;justify-content:space-between}
+
+.cs-bar{position:fixed;left:0;right:0;bottom:0;z-index:200;background:rgba(12,36,73,.97);backdrop-filter:saturate(150%) blur(10px);border-top:3px solid var(--amber);box-shadow:0 -8px 32px rgba(12,36,73,.42);color:#fff;padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px))}
+.cs-bar__in{max-width:1060px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:10px 18px;text-align:center}
+.cs-bar__eyebrow{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--aqua);margin:0 0 3px}
+.cs-bar__line{font-size:15px;font-weight:600;line-height:1.35;margin:0;color:#fff}
+.cs-bar__btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 23px;border-radius:var(--r-sm);background:var(--amber);color:#3d2503;font-weight:700;font-size:15px;text-decoration:none;white-space:nowrap;box-shadow:0 4px 18px rgba(242,160,62,.44);animation:csPulse 2.4s ease-in-out infinite;transition:transform .18s ease,box-shadow .18s ease}
+.cs-bar__btn:hover{transform:translateY(-2px);box-shadow:0 8px 26px rgba(242,160,62,.66);animation-play-state:paused}
+.cs-bar__btn:focus-visible{outline:3px solid #fff;outline-offset:3px}
+@keyframes csPulse{0%,100%{box-shadow:0 4px 18px rgba(242,160,62,.36)}50%{box-shadow:0 4px 27px rgba(242,160,62,.68)}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition-duration:.01ms!important}.cs-bar__btn{animation:none}}
+
+@media (min-width:600px){
+  .hero__btns{flex-direction:row;flex-wrap:wrap}
+  .hero__btns .btn{flex:1 1 auto;min-width:196px}
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .steps{grid-template-columns:repeat(2,1fr)}
+}
+@media (min-width:900px){
+  body{padding-bottom:106px}
+  .section{padding:74px 0}
+  h1{font-size:45px}h2{font-size:34px}
+  .hero{background:linear-gradient(180deg,var(--navy) 0%,var(--navy) 58%,#fff 58%,#fff 100%)}
+  .hero__in{display:grid;grid-template-columns:1.06fr .94fr;gap:44px;align-items:start;padding:58px 20px 68px}
+  .grid{grid-template-columns:repeat(3,1fr)}
+  .steps{grid-template-columns:repeat(4,1fr)}
+  .contact{grid-template-columns:1.05fr .95fr;align-items:start}
+  .footer__grid{grid-template-columns:1.4fr 1fr 1fr}
+  .cs-bar__in{flex-wrap:nowrap;justify-content:space-between;text-align:left}
+  .cs-bar__line{font-size:16.5px}
+}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="header__in">
+    <a class="brand" href="#top">
+      <img class="brand-logo-img" src="brand/logo-facebook-profile.jpg" alt="RUFFhouse Pet Grooming Services badge">
+      <span class="brand__txt">
+        <span class="brand__name">RUFFhouse</span>
+        <span class="brand__sub">Pet Grooming &middot; Makati</span>
+      </span>
+    </a>
+    <a class="btn btn--amber btn--sm header__cta" href="tel:+639055016781">Call 0905 501 6781</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="hero__in">
+      <div class="hero__copy">
+        <p class="eyebrow hero__eyebrow">1147 Don Chino Roces Ave &middot; Brgy San Antonio &middot; Makati City</p>
+        <p class="chip">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>
+          Grooming &middot; Boarding &middot; Supplies
+        </p>
+        <h1>RUFFhouse Pet Grooming Services. <em>The page you control, on Don Chino Roces Ave.</em></h1>
+        <p class="hero__lead">Everything a customer needs before they hand over a dog: where you are, what you do, which number reaches you, and who is answering it today.</p>
+        <div class="hero__btns">
+          <a class="btn btn--amber" href="tel:+639055016781">Call 0905 501 6781</a>
+          <a class="btn btn--aqua" href="https://www.facebook.com/ruffhouseph/" target="_blank" rel="noopener">Message on Facebook</a>
+        </div>
+      </div>
+
+      <div>
+        <div class="hero__art">
+          <img class="badge" src="brand/logo-facebook-profile.jpg" alt="RUFFhouse Pet Grooming Services badge &mdash; four dogs in front of a house, with a navy ribbon reading Pet Grooming Services" width="420" height="420">
+        </div>
+        <div class="idcard">
+          <div class="idcard__row">
+            <svg class="idcard__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            <div><p class="idcard__k">Salon</p><p class="idcard__v">1147 Don Chino Roces Ave,<br>Brgy San Antonio, Makati City</p></div>
+          </div>
+          <div class="idcard__row">
+            <svg class="idcard__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"></path></svg>
+            <div><p class="idcard__k">Phone &mdash; tap to call</p><p class="idcard__v"><a href="tel:+639055016781">+63 905 501 6781</a></p></div>
+          </div>
+          <div class="idcard__row">
+            <svg class="idcard__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3Z"></path></svg>
+            <div><p class="idcard__k">Facebook</p><p class="idcard__v"><a href="https://www.facebook.com/ruffhouseph/" target="_blank" rel="noopener">facebook.com/ruffhouseph</a></p></div>
+          </div>
+          <div class="idcard__row">
+            <svg class="idcard__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>
+            <div><p class="idcard__k">Opening hours</p><p class="idcard__v">To be confirmed by the salon</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--navy">
+    <div class="wrap">
+      <p class="eyebrow">Why this page exists</p>
+      <h2>The web address on your listings is a dead page</h2>
+      <p style="max-width:62ch;color:var(--ink-2)">Every directory that carries RUFFhouse points its <em>website</em> link at ruffhouse-pet-grooming-services.business.site. That address returns a 404. So the free Google page the listings were built around is gone, and the directory entries are now the only record of the salon &mdash; on Waze, on Sulit.ph, on Zaubee and on pilipinas.worldorgs, all of them somebody else&rsquo;s page.</p>
+      <p style="max-width:62ch;color:var(--ink-2)">One of those pages has a single customer review on it, left by someone who travelled to Don Chino Roces Ave and could not find the salon. It is the first thing a person searching your name reads, and there is no reply under it, because the page is not yours to reply on.</p>
+
+      <div class="statusbox">
+        <h3>The one thing this page should say first</h3>
+        <p>A customer&rsquo;s only question is whether you are open today, at this address, on this number. A page you own answers it in one line and can be changed the same afternoon.</p>
+        <p class="statusline">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 8v5"></path><path d="M12 16h.01"></path></svg>
+          Current trading status &mdash; to be confirmed by the salon
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="services">
+    <div class="wrap">
+      <p class="eyebrow">What the salon does</p>
+      <h2>Three services, one address</h2>
+      <div class="grid">
+        <div class="card">
+          <div class="card__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="15" r="4"></circle><circle cx="6" cy="9" r="2"></circle><circle cx="18" cy="9" r="2"></circle><circle cx="9.5" cy="5.5" r="1.8"></circle><circle cx="14.5" cy="5.5" r="1.8"></circle></svg></div>
+          <span class="card__tag">Grooming</span>
+          <h3>Bath, trim and full groom</h3>
+          <p>The core service, for the small breeds, the doubles coats and the terriers on the badge above.</p>
+        </div>
+        <div class="card">
+          <div class="card__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11 12 3l9 8"></path><path d="M5 10v10h14V10"></path><path d="M10 20v-5h4v5"></path></svg></div>
+          <span class="card__tag">Boarding</span>
+          <h3>Overnight stays</h3>
+          <p>Boarding at the same Makati address, so a groom before pick-up needs no second trip across the city.</p>
+        </div>
+        <div class="card">
+          <div class="card__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path><path d="M3 6h18"></path><path d="M16 10a4 4 0 0 1-8 0"></path></svg></div>
+          <span class="card__tag">Supplies</span>
+          <h3>Food, shampoo and kit</h3>
+          <p>The retail shelf, listed here rather than left to a directory that has never seen it.</p>
+        </div>
+      </div>
+      <p class="note" style="margin-top:20px"><b>Prices, breeds and package list &mdash; to be confirmed</b>Groom prices by size, boarding rates per night and the supply range are not published anywhere we can verify, so none are printed here. Send the real list and it replaces this section word for word.</p>
+    </div>
+  </section>
+
+  <section class="section section--aqua" id="how">
+    <div class="wrap">
+      <p class="eyebrow">How a booking would run</p>
+      <h2>From finding you to picking the dog up</h2>
+      <div class="steps">
+        <div class="step"><h3>They find this page</h3><p>Your name, your address and your number on a page you own, instead of a listing that ends at a 404.</p></div>
+        <div class="step"><h3>They tap the number</h3><p>0905 501 6781 dials straight from the phone. No copying, no wondering whether the line is still live.</p></div>
+        <div class="step"><h3>You confirm the slot</h3><p>Over the phone or on Messenger, whichever you already use. Nothing changes about how you take bookings.</p></div>
+        <div class="step"><h3>They come to 1147</h3><p>One address, spelled the same way here as on the sign, so nobody pays for a ride to the wrong block.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <div class="wrap">
+      <p class="eyebrow">Get in touch</p>
+      <h2>Contact the salon</h2>
+      <div class="contact">
+        <div>
+          <div class="hours">
+            <div class="hours__row"><span>Monday &ndash; Friday</span><span>To be confirmed</span></div>
+            <div class="hours__row"><span>Saturday</span><span>To be confirmed</span></div>
+            <div class="hours__row"><span>Sunday</span><span>To be confirmed</span></div>
+            <div class="hours__row"><span>Boarding drop-off / pick-up</span><span>To be confirmed</span></div>
+          </div>
+          <p class="note" style="margin-top:16px"><b>Hours &mdash; blank on purpose</b>No directory publishes opening hours for RUFFhouse, and inventing a set would put a wrong time under your name in the one place a customer is meant to trust. Give us the real hours once and they appear here, in the footer, and in the answer a searcher gets.</p>
+        </div>
+        <div class="reach">
+          <h3>Reach us</h3>
+          <a class="btn btn--amber" href="tel:+639055016781">Call +63 905 501 6781</a>
+          <a class="btn btn--aqua" href="https://www.facebook.com/ruffhouseph/" target="_blank" rel="noopener">Message on Facebook</a>
+          <a class="btn btn--outline" style="background:#fff" href="https://www.facebook.com/ruffhouseph/" target="_blank" rel="noopener">See recent work</a>
+          <p class="reach__addr">1147 Don Chino Roces Ave, Brgy San Antonio, Makati City</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <h3>RUFFhouse Pet Grooming Services</h3>
+        <p class="footer__p">Grooming, boarding and pet supplies<br>1147 Don Chino Roces Ave<br>Brgy San Antonio, Makati City</p>
+      </div>
+      <div>
+        <h3>Call the salon</h3>
+        <p class="footer__p"><a href="tel:+639055016781">+63 905 501 6781</a><br>Hours to be confirmed</p>
+      </div>
+      <div>
+        <h3>Find us online</h3>
+        <p class="footer__p"><a href="https://www.facebook.com/ruffhouseph/" target="_blank" rel="noopener">Facebook &mdash; RUFFhouse PH</a></p>
+      </div>
+    </div>
+    <div class="footer__credit">
+      <span>&copy; 2026 RUFFhouse Pet Grooming Services &middot; Makati City</span>
+      <span>Website by CloudSpring IT Solutions</span>
+    </div>
+  </div>
+</footer>
+
+<aside class="cs-bar" role="complementary" aria-label="CloudSpring IT Solutions preview notice">
+  <div class="cs-bar__in">
+    <div class="cs-bar__txt">
+      <p class="cs-bar__eyebrow">PREVIEW &middot; CloudSpring IT Solutions</p>
+      <p class="cs-bar__line">Your listings link to a 404, and a stranger&rsquo;s review is answering for you. Want the reply to come from your own page?</p>
+    </div>
+    <a class="cs-bar__btn" href="https://api.leadconnectorhq.com/widget/booking/QRPEnWRw2Kx9rBe0Mj6J" target="_blank" rel="noopener">Book a FREE Discovery Call &rarr;</a>
+  </div>
+</aside>
+
+</body>
+</html>
