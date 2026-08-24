@@ -1,0 +1,95 @@
+{
+  "slug": "williams-river-veterinary-au",
+  "site": "https://williamsrivervetclinic.com.au/",
+  "facebook": "WilliamsRiverVeterinaryClinic",
+  "capturedAt": "2026-08-24T00:55:11.548Z",
+  "source": "headless-http",
+  "name": "Williams River Veterinary Clinic | Clarence Town | Hunter | Dungog",
+  "logo": {
+    "file": "logo-facebook-profile.png",
+    "score": 95,
+    "why": "facebook profile picture"
+  },
+  "logoFiles": [
+    {
+      "file": "logo-facebook-profile.png",
+      "bytes": 11125,
+      "from": "graph.facebook.com/WilliamsRiverVeterinaryClinic/picture?width=1200&height=1200",
+      "why": "facebook profile picture",
+      "score": 95
+    },
+    {
+      "file": "logo-2-img-marked-logo.png",
+      "bytes": 16891,
+      "from": "https://williamsrivervetclinic.com.au/images/logo_williams_header.png",
+      "why": "img marked logo",
+      "score": 90
+    },
+    {
+      "file": "logo-3-apple-touch-icon.png",
+      "bytes": 13753,
+      "from": "https://williamsrivervetclinic.com.au/apple-touch-icon.png",
+      "why": "apple-touch-icon",
+      "score": 70
+    }
+  ],
+  "colors": {
+    "brand": [
+      {
+        "hex": "#007bff",
+        "weight": 90
+      },
+      {
+        "hex": "#dc3545",
+        "weight": 36
+      },
+      {
+        "hex": "#28a745",
+        "weight": 36
+      },
+      {
+        "hex": "#212529",
+        "weight": 30
+      },
+      {
+        "hex": "#343a40",
+        "weight": 25
+      },
+      {
+        "hex": "#ffc107",
+        "weight": 20
+      }
+    ],
+    "neutral": [
+      {
+        "hex": "#ffffff",
+        "weight": 146
+      },
+      {
+        "hex": "#6c757d",
+        "weight": 82
+      },
+      {
+        "hex": "#000000",
+        "weight": 48
+      },
+      {
+        "hex": "#dee2e6",
+        "weight": 28
+      }
+    ],
+    "themeColor": null,
+    "source": "site-css"
+  },
+  "fonts": [
+    "Montserrat",
+    "SFMono-Regular"
+  ],
+  "ready": true,
+  "blockedBy": null,
+  "confidence": 100,
+  "notes": [
+    "facebook profile picture captured headlessly for \"WilliamsRiverVeterinaryClinic\"",
+    "4 stylesheet(s) fetched, 233941 bytes of CSS"
+  ]
+}

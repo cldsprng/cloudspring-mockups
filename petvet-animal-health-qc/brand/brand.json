@@ -1,0 +1,55 @@
+{
+  "slug": "petvet-animal-health-qc",
+  "site": null,
+  "facebook": "PetvetAnimalHealthClinicAndGroomingCenter",
+  "capturedAt": "2026-08-24T00:55:10.307Z",
+  "source": "headless-http",
+  "name": null,
+  "logo": {
+    "file": "logo-facebook-profile.jpg",
+    "score": 95,
+    "why": "facebook profile picture"
+  },
+  "logoFiles": [
+    {
+      "file": "logo-facebook-profile.jpg",
+      "bytes": 15212,
+      "from": "graph.facebook.com/PetvetAnimalHealthClinicAndGroomingCenter/picture?width=1200&height=1200",
+      "why": "facebook profile picture",
+      "score": 95
+    }
+  ],
+  "colors": {
+    "brand": [
+      {
+        "hex": "#D32F2F",
+        "weight": 40
+      },
+      {
+        "hex": "#52C77A",
+        "weight": 40
+      }
+    ],
+    "neutral": [
+      {
+        "hex": "#ffffff",
+        "weight": 100
+      },
+      {
+        "hex": "#000000",
+        "weight": 40
+      }
+    ],
+    "themeColor": null,
+    "source": "vision"
+  },
+  "fonts": [],
+  "ready": true,
+  "blockedBy": null,
+  "confidence": 90,
+  "notes": [
+    "facebook profile picture captured headlessly for \"PetvetAnimalHealthClinicAndGroomingCenter\"",
+    "no website for this lead — facebook-only capture path",
+    "palette-pending resolved via vision-read: red dog + green cat logo → #D32F2F (red) + #52C77A (green), ready for build"
+  ]
+}

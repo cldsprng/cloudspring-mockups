@@ -1,0 +1,51 @@
+{
+  "slug": "animal-house-veterinary-qc",
+  "site": null,
+  "facebook": "AnimalHousePH",
+  "capturedAt": "2026-08-24T00:55:10.873Z",
+  "source": "headless-http",
+  "name": null,
+  "logo": {
+    "file": "logo-facebook-profile.jpg",
+    "score": 95,
+    "why": "facebook profile picture"
+  },
+  "logoFiles": [
+    {
+      "file": "logo-facebook-profile.jpg",
+      "bytes": 145516,
+      "from": "graph.facebook.com/AnimalHousePH/picture?width=1200&height=1200",
+      "why": "facebook profile picture",
+      "score": 95
+    }
+  ],
+  "colors": {
+    "brand": [
+      {
+        "hex": "#1a3a5c",
+        "weight": 50
+      },
+      {
+        "hex": "#C1262A",
+        "weight": 35
+      }
+    ],
+    "neutral": [
+      {
+        "hex": "#ffffff",
+        "weight": 120
+      }
+    ],
+    "themeColor": null,
+    "source": "vision"
+  },
+  "fonts": [],
+  "ready": true,
+  "blockedBy": null,
+  "confidence": 90,
+  "notes": [
+    "facebook profile picture captured headlessly for \"AnimalHousePH\"",
+    "no website for this lead — facebook-only capture path",
+    "palette-pending resolved via vision-read: navy + red + white logo → #1a3a5c (navy) + #C1262A (red), ready for build"
+  ]
+}

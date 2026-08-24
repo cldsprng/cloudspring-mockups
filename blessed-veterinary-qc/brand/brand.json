@@ -1,0 +1,101 @@
+{
+  "slug": "blessed-veterinary-qc",
+  "site": "https://blessedvet.com/",
+  "facebook": "AnimalVeterinaryPetClinicOpen24Hours",
+  "capturedAt": "2026-08-24T00:55:07.836Z",
+  "source": "headless-http",
+  "name": "Blessed Veterinary Clinic &amp; Grooming Center &#8211; animal Clinic",
+  "logo": {
+    "file": "logo-facebook-profile.jpg",
+    "score": 95,
+    "why": "facebook profile picture"
+  },
+  "logoFiles": [
+    {
+      "file": "logo-facebook-profile.jpg",
+      "bytes": 125369,
+      "from": "graph.facebook.com/AnimalVeterinaryPetClinicOpen24Hours/picture?width=1200&height=1200",
+      "why": "facebook profile picture",
+      "score": 95
+    },
+    {
+      "file": "logo-2-img-marked-logo.png",
+      "bytes": 29799,
+      "from": "https://blessedvet.com/wp-content/uploads/2020/07/brand_01.png",
+      "why": "img marked logo",
+      "score": 90
+    },
+    {
+      "file": "logo-3-img-marked-logo.png",
+      "bytes": 21951,
+      "from": "https://blessedvet.com/wp-content/uploads/2020/07/brand_02.png",
+      "why": "img marked logo",
+      "score": 90
+    }
+  ],
+  "colors": {
+    "brand": [
+      {
+        "hex": "#a46497",
+        "weight": 42
+      },
+      {
+        "hex": "#cc1818",
+        "weight": 19
+      },
+      {
+        "hex": "#39599e",
+        "weight": 12
+      },
+      {
+        "hex": "#4ab866",
+        "weight": 5
+      },
+      {
+        "hex": "#0675c4",
+        "weight": 4
+      },
+      {
+        "hex": "#f18c8c",
+        "weight": 4
+      }
+    ],
+    "neutral": [
+      {
+        "hex": "#ffffff",
+        "weight": 153
+      },
+      {
+        "hex": "#000000",
+        "weight": 87
+      },
+      {
+        "hex": "#ebe9eb",
+        "weight": 41
+      },
+      {
+        "hex": "#515151",
+        "weight": 41
+      }
+    ],
+    "themeColor": null,
+    "source": "site-css"
+  },
+  "fonts": [
+    "Changa:0,500;0,600;0,700;1,500;1,600;1,700|Karla:0,400;0,700;1,400;1,700",
+    "Roboto:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic|Roboto Slab:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic|Karla:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic",
+    "Roboto",
+    "Changa:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic",
+    "z-index:10",
+    "z-index:9",
+    "z-index:8",
+    "position: absolute"
+  ],
+  "ready": true,
+  "blockedBy": null,
+  "confidence": 100,
+  "notes": [
+    "facebook profile picture captured headlessly for \"AnimalVeterinaryPetClinicOpen24Hours\"",
+    "6 stylesheet(s) fetched, 511829 bytes of CSS"
+  ]
+}
