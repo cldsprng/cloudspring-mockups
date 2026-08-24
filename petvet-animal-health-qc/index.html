@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Petvet Animal Health Clinic and Grooming Center — San Bartolome, Talipapa &amp; Zabarte, Quezon City</title>
+<meta name="description" content="Petvet Animal Health Clinic and Grooming Center — three Quezon City branches: San Bartolome, Talipapa and Zabarte Town Center. Address and number for each, on one page.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* Palette vision-read from brand/logo-facebook-profile.jpg — the red dog and the
+     green cat of the PetVet mark. See brand/brand.json (colors.source: "vision"). */
+  --brand:#D32F2F;
+  --brand-2:#52C77A;
+  --brand-deep:#a51f1f;
+  --green-deep:#2f8c52;
+  --brand-soft:#fdecec;
+  --green-soft:#e8f7ee;
+  --paper:#f7f5f4;
+  --ink:#22181a;
+  --ink-2:#5f5457;
+  --line:#ebe2e2;
+  --shadow-sm:0 1px 2px rgba(34,24,26,.08), 0 2px 8px rgba(34,24,26,.06);
+  --shadow-md:0 8px 24px rgba(34,24,26,.11);
+  --r-sm:8px; --r-md:16px; --r-lg:24px; --r-pill:999px;
+  --display:'Nunito',system-ui,sans-serif;
+  --body:'Nunito',-apple-system,BlinkMacSystemFont,'Helvetica Neue',sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;font-family:var(--body);color:var(--ink);background:#fff;font-size:16px;line-height:1.6;padding-bottom:176px;overflow-x:hidden}
+img,svg{max-width:100%;display:block}
+h1,h2,h3{font-family:var(--display);font-weight:800;line-height:1.15;margin:0 0 12px;letter-spacing:-.012em}
+h1{font-size:34px}h2{font-size:28px}h3{font-size:20px}
+p{margin:0 0 16px}
+a{color:var(--brand-deep)}
+.wrap{width:100%;max-width:1080px;margin:0 auto;padding:0 20px}
+.eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:800;color:var(--brand);margin:0 0 8px}
+.section{padding:56px 0}
+.section--tint{background:var(--green-soft)}
+.section--paper{background:var(--paper)}
+:focus-visible{outline:3px solid var(--brand-2);outline-offset:3px;border-radius:4px}
+
+.header{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.95);backdrop-filter:saturate(140%) blur(8px);border-bottom:1px solid var(--line)}
+.header__in{display:flex;align-items:center;gap:12px;min-height:64px;padding:8px 20px;max-width:1080px;margin:0 auto}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);min-height:44px}
+.brand-logo-img{width:48px;height:48px;flex:0 0 48px;object-fit:contain;border-radius:10px;background:#fff;border:1px solid var(--line)}
+.brand__txt{display:flex;flex-direction:column;line-height:1.14}
+.brand__name{font-family:var(--display);font-weight:900;font-size:17px}
+.brand__sub{font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-2);font-weight:800}
+.header__cta{margin-left:auto}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:11px 18px;border-radius:var(--r-pill);font-family:var(--body);font-weight:800;font-size:15px;text-decoration:none;border:1px solid transparent;cursor:pointer;transition:background-color .18s ease,color .18s ease,border-color .18s ease,transform .18s ease,box-shadow .18s ease}
+.btn--primary{background:var(--brand);color:#fff;box-shadow:var(--shadow-sm)}
+.btn--primary:hover{background:var(--brand-deep);transform:translateY(-1px);box-shadow:var(--shadow-md)}
+.btn--green{background:var(--brand-2);color:#0f3a20;box-shadow:var(--shadow-sm)}
+.btn--green:hover{background:#43b56b;transform:translateY(-1px);box-shadow:var(--shadow-md)}
+.btn--ghost{background:#fff;color:var(--brand-deep);border-color:var(--line)}
+.btn--ghost:hover{border-color:var(--brand);background:var(--brand-soft)}
+.btn--sm{font-size:14px;padding:9px 14px}
+
+.hero{position:relative;background:linear-gradient(166deg,var(--brand-soft) 0%,#fff 60%);overflow:hidden}
+.hero::after{content:"";position:absolute;right:-150px;top:-140px;width:430px;height:430px;border-radius:50%;background:radial-gradient(circle at 35% 35%,rgba(82,199,122,0.22),rgba(82,199,122,0) 70%);pointer-events:none}
+.hero__in{padding:36px 20px 44px;max-width:1080px;margin:0 auto;position:relative;z-index:1}
+.hero h1{font-size:clamp(30px,7.2vw,50px);margin-bottom:14px}
+.hero h1 em{font-style:normal;color:var(--brand)}
+.hero__lead{font-size:17px;color:var(--ink-2);max-width:56ch;margin-bottom:20px}
+.tagline{font-family:var(--display);font-weight:700;font-size:15px;color:var(--green-deep);letter-spacing:.02em;margin:0 0 14px}
+.hero__btns{display:flex;flex-direction:column;gap:10px}
+.hero__art{margin-top:32px}
+.mark{width:100%;max-width:330px;margin:0 auto;filter:drop-shadow(0 14px 30px rgba(34,24,26,.16))}
+
+.count{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:20px}
+.count__pill{display:inline-flex;align-items:center;gap:7px;background:#fff;border:1px solid var(--line);border-radius:var(--r-pill);padding:8px 15px;font-size:13.5px;font-weight:700;box-shadow:var(--shadow-sm)}
+.count__dot{width:9px;height:9px;border-radius:50%;background:var(--brand-2);flex:0 0 9px}
+
+.branches{display:grid;gap:16px;grid-template-columns:1fr}
+.branch{background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:22px;box-shadow:var(--shadow-sm);display:flex;flex-direction:column;transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+.branch:hover{transform:translateY(-3px);box-shadow:var(--shadow-md);border-color:var(--brand-2)}
+.branch__tag{display:inline-block;align-self:flex-start;font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:800;color:#fff;background:var(--brand);padding:4px 10px;border-radius:var(--r-pill);margin-bottom:12px}
+.branch__tag--green{background:var(--brand-2);color:#0f3a20}
+.branch h3{font-size:19px;margin-bottom:6px}
+.branch__addr{font-size:14.5px;color:var(--ink-2);margin:0 0 14px}
+.branch__tel{display:inline-flex;align-items:center;gap:8px;font-weight:800;font-size:16px;text-decoration:none;color:var(--ink);border-bottom:2px solid var(--brand-2);align-self:flex-start;padding-bottom:2px}
+.branch__tel:hover{color:var(--brand)}
+.branch__hours{font-size:13px;color:var(--ink-2);margin:14px 0 0;padding-top:12px;border-top:1px solid var(--line)}
+
+.grid{display:grid;gap:16px;grid-template-columns:1fr}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:22px;box-shadow:var(--shadow-sm);transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow-md);border-color:var(--brand)}
+.card__ico{width:44px;height:44px;border-radius:12px;background:var(--green-soft);color:var(--green-deep);display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+.card__ico svg{width:24px;height:24px}
+.card p{font-size:15px;color:var(--ink-2);margin:0}
+.card__tag{display:inline-block;font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:800;color:var(--brand);margin-bottom:6px}
+.note{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;background:#FFF7DF;border:1px dashed #D9BE63;color:#6E5410;padding:6px 12px;border-radius:var(--r-sm)}
+.note--block{display:block;text-transform:none;letter-spacing:0;font-weight:500;font-size:13.5px;line-height:1.55;padding:12px 14px}
+.note--block b{text-transform:uppercase;letter-spacing:.06em;font-size:11.5px;display:block;margin-bottom:4px}
+
+.why{display:grid;gap:14px;grid-template-columns:1fr}
+.why__item{display:flex;gap:14px;align-items:flex-start;background:#fff;border-radius:var(--r-md);padding:18px;box-shadow:var(--shadow-sm)}
+.why__num{font-family:var(--display);font-size:24px;font-weight:900;color:var(--brand);flex:0 0 auto;line-height:1.1}
+.why__item h3{font-size:17px;margin-bottom:4px}
+.why__item p{font-size:14.5px;color:var(--ink-2);margin:0}
+
+.reach{background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:20px;box-shadow:var(--shadow-sm)}
+.reach .btn{width:100%;margin-bottom:10px}
+.contact{display:grid;gap:20px;grid-template-columns:1fr}
+
+.footer{background:var(--ink);color:#e0d3d6;padding:40px 0 32px}
+.footer h3{color:#fff;font-size:19px}
+.footer a{color:#8fdcab;text-decoration:none}
+.footer a:hover{color:#fff;text-decoration:underline}
+.footer__grid{display:grid;gap:24px;grid-template-columns:1fr}
+.footer__p{font-size:14.5px;line-height:1.7;margin:0}
+.footer__credit{margin-top:28px;padding-top:18px;border-top:1px solid rgba(255,255,255,.14);font-size:13px;display:flex;flex-wrap:wrap;gap:6px;justify-content:space-between}
+
+.cs-bar{position:fixed;left:0;right:0;bottom:0;z-index:200;background:rgba(28,18,20,.96);backdrop-filter:saturate(150%) blur(10px);border-top:1px solid rgba(255,255,255,.14);box-shadow:0 -8px 32px rgba(28,18,20,.34);color:#fff;padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px))}
+.cs-bar__in{max-width:1080px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:10px 18px;text-align:center}
+.cs-bar__eyebrow{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:800;color:#8fdcab;margin:0 0 3px}
+.cs-bar__line{font-size:15px;font-weight:700;line-height:1.35;margin:0;color:#fff}
+.cs-bar__btn{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:12px 22px;border-radius:var(--r-pill);background:var(--brand-2);color:#0f3a20;font-weight:800;font-size:15px;text-decoration:none;white-space:nowrap;box-shadow:0 4px 18px rgba(82,199,122,0.38);animation:csPulse 2.4s ease-in-out infinite;transition:transform .18s ease,box-shadow .18s ease}
+.cs-bar__btn:hover{transform:translateY(-2px);box-shadow:0 8px 26px rgba(82,199,122,0.55);animation-play-state:paused}
+.cs-bar__btn:focus-visible{outline:3px solid #fff;outline-offset:3px}
+@keyframes csPulse{0%,100%{box-shadow:0 4px 18px rgba(82,199,122,0.32)}50%{box-shadow:0 4px 26px rgba(82,199,122,0.64)}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition-duration:.01ms!important}.cs-bar__btn{animation:none}}
+
+@media (min-width:600px){
+  .hero__btns{flex-direction:row;flex-wrap:wrap}
+  .hero__btns .btn{flex:1 1 auto;min-width:200px}
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .why{grid-template-columns:repeat(2,1fr)}
+}
+@media (min-width:900px){
+  body{padding-bottom:104px}
+  .section{padding:76px 0}
+  h1{font-size:46px}h2{font-size:36px}
+  .hero__in{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center;padding:60px 20px 72px}
+  .hero__art{margin-top:0}
+  .branches{grid-template-columns:repeat(3,1fr)}
+  .grid{grid-template-columns:repeat(3,1fr)}
+  .contact{grid-template-columns:1.05fr .95fr;align-items:start}
+  .footer__grid{grid-template-columns:1.4fr 1fr 1fr}
+  .cs-bar__in{flex-wrap:nowrap;justify-content:space-between;text-align:left}
+  .cs-bar__line{font-size:16.5px}
+}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="header__in">
+    <a class="brand" href="#top">
+      <img class="brand-logo-img" src="brand/logo-facebook-profile.jpg" alt="PetVet Animal Health Clinic and Grooming Center logo">
+      <span class="brand__txt">
+        <span class="brand__name">PetVet</span>
+        <span class="brand__sub">Animal Health &amp; Grooming &middot; QC</span>
+      </span>
+    </a>
+    <a class="btn btn--primary btn--sm header__cta" href="#branches">Find your branch</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="hero__in">
+      <div>
+        <p class="eyebrow">San Bartolome &middot; Talipapa &middot; Zabarte Town Center</p>
+        <h1>Petvet Animal Health Clinic and Grooming Center. <em>Three branches, one page.</em></h1>
+        <p class="tagline">Where Every Paws Matters</p>
+        <p class="hero__lead">Every branch, with its own address, its own number and its own hours &mdash; in one place, so an owner in Novaliches never has to work out which PetVet is the near one.</p>
+
+        <div class="count">
+          <span class="count__pill"><span class="count__dot"></span>San Bartolome</span>
+          <span class="count__pill"><span class="count__dot"></span>Talipapa</span>
+          <span class="count__pill"><span class="count__dot"></span>Zabarte Town Center</span>
+        </div>
+
+        <div class="hero__btns">
+          <a class="btn btn--primary" href="#branches">See all three branches</a>
+          <a class="btn btn--ghost" href="https://www.facebook.com/PetvetAnimalHealthClinicAndGroomingCenter" target="_blank" rel="noopener">Message on Facebook</a>
+        </div>
+      </div>
+
+      <div class="hero__art">
+        <img class="mark" src="brand/logo-facebook-profile.jpg" alt="PetVet logo &mdash; a red dog and a green cat above the words Where Every Paws Matters" width="500" height="500">
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="branches">
+    <div class="wrap">
+      <p class="eyebrow">All three, equally</p>
+      <h2>Find the branch nearest you</h2>
+      <div class="branches">
+
+        <div class="branch">
+          <span class="branch__tag">Branch</span>
+          <h3>San Bartolome</h3>
+          <p class="branch__addr">2/F Nova Square,<br>San Bartolome, Quezon City</p>
+          <a class="branch__tel" href="tel:+639176251405">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"></path></svg>
+            0917 625 1405
+          </a>
+          <p class="branch__hours"><b>Hours &mdash; to be confirmed</b></p>
+        </div>
+
+        <div class="branch">
+          <span class="branch__tag">Branch</span>
+          <h3>Talipapa</h3>
+          <p class="branch__addr">490 Quirino Highway,<br>Talipapa, Quezon City</p>
+          <a class="branch__tel" href="tel:+639338101881">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"></path></svg>
+            0933 810 1881
+          </a>
+          <p class="branch__hours"><b>Hours &mdash; to be confirmed</b></p>
+        </div>
+
+        <div class="branch">
+          <span class="branch__tag branch__tag--green">Branch</span>
+          <h3>Zabarte Town Center</h3>
+          <p class="branch__addr">Zabarte Town Center,<br>Novaliches, Quezon City</p>
+          <a class="branch__tel" href="tel:+639228947956">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"></path></svg>
+            0922 894 7956
+          </a>
+          <p class="branch__hours"><b>Hours &mdash; to be confirmed</b></p>
+        </div>
+
+      </div>
+      <p class="note note--block" style="margin-top:18px"><b>Opening hours &mdash; to be confirmed, all three branches</b>The only PetVet hours published anywhere we can check are the reduced ones printed on a April&nbsp;2020 lockdown listing, still live six years later. Rather than repeat those, each branch keeps a blank line. Send the current hours and they appear here, per branch, exactly as written.</p>
+    </div>
+  </section>
+
+  <section class="section section--paper">
+    <div class="wrap">
+      <p class="eyebrow">Why this page exists</p>
+      <h2>Right now, one 2020 article is doing the introducing</h2>
+      <p style="max-width:62ch;color:var(--ink-2)">Search the clinic&rsquo;s name today and the page that answers is a newspaper round-up of vets open during the April&nbsp;2020 lockdown. On that single page the business appears twice under two different names &mdash; &ldquo;PetVet Jr. Animal Clinic &amp; Grooming Center&rdquo; at Talipapa and &ldquo;PetVet Animal Health Clinic &amp; Grooming Center&rdquo; at San Bartolome &mdash; as though they were two companies. Zabarte is not on it at all. The hours are the lockdown ones. Three other clinics are listed on the same page, one scroll away.</p>
+      <p style="max-width:62ch;color:var(--ink-2)">None of that is anyone&rsquo;s fault; it is simply the only page there is. This one names all three branches, spells the business one way, and belongs to PetVet.</p>
+      <p class="note note--block" style="max-width:62ch"><b>A note on petvet.ph</b>The domain petvet.ph is not the clinic&rsquo;s &mdash; it currently serves a parking router and is not registered to this business. It is mentioned here only so nobody assumes otherwise.</p>
+    </div>
+  </section>
+
+  <section class="section" id="services">
+    <div class="wrap">
+      <p class="eyebrow">What PetVet does</p>
+      <h2>Animal health and grooming, at every branch</h2>
+      <div class="grid">
+        <div class="card">
+          <div class="card__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3v4M16 3v4M3 9h18"></path><rect x="3" y="5" width="18" height="16" rx="2"></rect></svg></div>
+          <span class="card__tag">Clinic</span>
+          <h3>Consultation &amp; check-ups</h3>
+          <p>General veterinary consultation for dogs and cats, at whichever branch is nearest.</p>
+        </div>
+        <div class="card">
+          <div class="card__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m18 2 4 4-9.5 9.5-4 1.5 1.5-4L18 2Z"></path><path d="M4 20h8"></path></svg></div>
+          <span class="card__tag">Preventive</span>
+          <h3>Vaccination &amp; deworming</h3>
+          <p>Puppy and kitten series, annual boosters, anti-rabies and deworming.</p>
+        </div>
+        <div class="card">
+          <div class="card__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="14" r="4"></circle><circle cx="6" cy="8" r="2"></circle><circle cx="18" cy="8" r="2"></circle><circle cx="9" cy="4.5" r="1.8"></circle><circle cx="15" cy="4.5" r="1.8"></circle></svg></div>
+          <span class="card__tag">Grooming centre</span>
+          <h3>Bath, groom &amp; trim</h3>
+          <p>The grooming half of the name &mdash; same building as the clinic, so one trip covers both.</p>
+        </div>
+      </div>
+      <p class="note note--block" style="margin-top:18px"><b>Full service list &mdash; to be confirmed</b>These three are what the business name and Facebook page state publicly. Surgery, confinement, laboratory work, pet supplies and grooming packages are left off until PetVet confirms which branches offer what &mdash; services that differ by branch are exactly the kind of detail a shared page gets wrong.</p>
+    </div>
+  </section>
+
+  <section class="section section--tint" id="why">
+    <div class="wrap">
+      <p class="eyebrow">Why owners choose PetVet</p>
+      <h2>Three doors, one clinic</h2>
+      <div class="why">
+        <div class="why__item"><span class="why__num">01</span><div><h3>Wherever you are in Novaliches</h3><p>San Bartolome, Talipapa and Zabarte cover the corridor. Whichever is closest, it is the same clinic.</p></div></div>
+        <div class="why__item"><span class="why__num">02</span><div><h3>Every branch has a number that dials</h3><p>Three numbers, each tappable, each next to the address it belongs to. No ringing the wrong branch.</p></div></div>
+        <div class="why__item"><span class="why__num">03</span><div><h3>Clinic and grooming together</h3><p>A check-up and a groom in the same visit, rather than two trips across Quirino Highway.</p></div></div>
+        <div class="why__item"><span class="why__num">04</span><div><h3>One name, spelled one way</h3><p>Petvet Animal Health Clinic and Grooming Center &mdash; the same on every branch, on this page, and anywhere else it should appear.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <div class="wrap">
+      <p class="eyebrow">Get in touch</p>
+      <h2>Contact PetVet</h2>
+      <div class="contact">
+        <div>
+          <p style="color:var(--ink-2);max-width:56ch">Call the branch you need directly, or send one message and the clinic will point you to the right one.</p>
+          <p class="note note--block"><b>Shared enquiry line &mdash; to be confirmed</b>Three branch numbers exist; whether one of them takes enquiries for all three is not published. If PetVet nominates a main line, it goes at the top of this page and in the header.</p>
+        </div>
+        <div class="reach">
+          <h3>Reach us</h3>
+          <a class="btn btn--primary" href="tel:+639176251405">San Bartolome &mdash; 0917 625 1405</a>
+          <a class="btn btn--primary" href="tel:+639338101881">Talipapa &mdash; 0933 810 1881</a>
+          <a class="btn btn--primary" href="tel:+639228947956">Zabarte &mdash; 0922 894 7956</a>
+          <a class="btn btn--green" href="https://www.facebook.com/PetvetAnimalHealthClinicAndGroomingCenter" target="_blank" rel="noopener">Message on Facebook</a>
+          <a class="btn btn--ghost" href="mailto:xpetvetx@gmail.com">Email PetVet</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <h3>Petvet Animal Health Clinic and Grooming Center</h3>
+        <p class="footer__p">San Bartolome &mdash; 2/F Nova Square<br>Talipapa &mdash; 490 Quirino Highway<br>Zabarte &mdash; Zabarte Town Center<br>Quezon City</p>
+      </div>
+      <div>
+        <h3>Call a branch</h3>
+        <p class="footer__p"><a href="tel:+639176251405">0917 625 1405</a> &middot; San Bartolome<br><a href="tel:+639338101881">0933 810 1881</a> &middot; Talipapa<br><a href="tel:+639228947956">0922 894 7956</a> &middot; Zabarte</p>
+      </div>
+      <div>
+        <h3>Find us online</h3>
+        <p class="footer__p"><a href="https://www.facebook.com/PetvetAnimalHealthClinicAndGroomingCenter" target="_blank" rel="noopener">Facebook &mdash; PetVet Animal Health Clinic</a><br><a href="mailto:xpetvetx@gmail.com">xpetvetx@gmail.com</a></p>
+      </div>
+    </div>
+    <div class="footer__credit">
+      <span>&copy; 2026 Petvet Animal Health Clinic and Grooming Center &middot; Quezon City</span>
+      <span>Website by CloudSpring IT Solutions</span>
+    </div>
+  </div>
+</footer>
+
+<aside class="cs-bar" role="complementary" aria-label="CloudSpring IT Solutions preview notice">
+  <div class="cs-bar__in">
+    <div class="cs-bar__txt">
+      <p class="cs-bar__eyebrow">PREVIEW &middot; CloudSpring IT Solutions</p>
+      <p class="cs-bar__line">A 2020 article splits PetVet into two businesses and leaves Zabarte off entirely. Ready to have all three branches on one page?</p>
+    </div>
+    <a class="cs-bar__btn" href="https://api.leadconnectorhq.com/widget/booking/QRPEnWRw2Kx9rBe0Mj6J" target="_blank" rel="noopener">Book a FREE Discovery Call &rarr;</a>
+  </div>
+</aside>
+
+</body>
+</html>

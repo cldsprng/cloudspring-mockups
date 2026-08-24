@@ -4,7 +4,7 @@
   "facebook": "AnimalHousePH",
   "capturedAt": "2026-08-24T00:55:10.873Z",
   "source": "headless-http",
-  "name": null,
+  "name": "Animal House Veterinary Hospital",
   "logo": {
     "file": "logo-facebook-profile.jpg",
     "score": 95,
@@ -46,6 +46,7 @@
   "notes": [
     "facebook profile picture captured headlessly for \"AnimalHousePH\"",
     "no website for this lead — facebook-only capture path",
-    "palette-pending resolved via vision-read: navy + red + white logo → #1a3a5c (navy) + #C1262A (red), ready for build"
+    "palette-pending resolved via vision-read: navy + red + white logo → #1a3a5c (navy) + #C1262A (red), ready for build",
+    "2026-08-24 (step 4, CLO-82): name filled from the Trello lead card — capture returned null because this is a facebook-only lead with no site <title> to read. Logo re-checked by vision: navy roundel (cat, dog, kennel) over a heavy ANIMAL HOUSE wordmark, EST.1986, on a red VETERINARY HOSPITAL bar; the vision palette is confirmed accurate and EST.1986 is legible in the mark. No typeface captured, so the build uses Archivo and does not claim it as the brand face."
   ]
 }

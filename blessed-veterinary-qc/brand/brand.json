@@ -4,7 +4,7 @@
   "facebook": "AnimalVeterinaryPetClinicOpen24Hours",
   "capturedAt": "2026-08-24T00:55:07.836Z",
   "source": "headless-http",
-  "name": "Blessed Veterinary Clinic &amp; Grooming Center &#8211; animal Clinic",
+  "name": "Blessed Veterinary Clinic & Grooming Center",
   "logo": {
     "file": "logo-facebook-profile.jpg",
     "score": 95,
@@ -96,6 +96,8 @@
   "confidence": 100,
   "notes": [
     "facebook profile picture captured headlessly for \"AnimalVeterinaryPetClinicOpen24Hours\"",
-    "6 stylesheet(s) fetched, 511829 bytes of CSS"
+    "6 stylesheet(s) fetched, 511829 bytes of CSS",
+    "2026-08-24 (step 4, CLO-82): name corrected from the raw WordPress <title> \"Blessed Veterinary Clinic &amp; Grooming Center &#8211; animal Clinic\" to the real business name. The captured value was the theme's title tag, carried HTML entities, and the trailing \"– animal Clinic\" is theme boilerplate, not part of the name.",
+    "2026-08-24 (step 4, CLO-82): logo-2-img-marked-logo.png (\"CUTEDOGS ESTD 2018\") and logo-3-img-marked-logo.png (\"THE HORSE\") are WordPress theme DEMO assets, not this clinic's marks — vision-checked. Do not use either as the logo. The real mark is logo-facebook-profile.jpg, which brand.logo already selects. The site-CSS palette is likewise theme-derived; #39599e and #4ab866 are the two captured hexes that match the real seal's blue dog and green cat, and the build anchors on those."
   ]
 }

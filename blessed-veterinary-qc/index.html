@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blessed Veterinary Clinic &amp; Grooming Center — Roosevelt Ave, Quezon City — Open 24 Hours</title>
+<meta name="description" content="Blessed Veterinary Clinic &amp; Grooming Center — 281-C Roosevelt Ave, Brgy San Antonio, Quezon City 1100. Open 24 hours. Call (02) 8921-9634.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Changa:wght@500;600;700;800&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* Palette + typefaces captured from blessedvet.com stylesheets and the clinic's
+     Facebook seal — see brand/brand.json (colors.source: "site-css").
+     #39599e and #4ab866 are the two captured hexes that match the seal's blue dog
+     and green cat; the seal's gold ring supplies the accent rule only. */
+  --brand:#39599e;
+  --brand-2:#4ab866;
+  --brand-deep:#28407a;
+  --brand-soft:#e6ecf7;
+  --gold:#f2c800;
+  --paper:#f4f7f3;
+  --ink:#16203a;
+  --ink-2:#565f78;
+  --line:#dfe5ee;
+  --accent:#4ab866;
+  --shadow-sm:0 1px 2px rgba(22,32,58,.08), 0 2px 8px rgba(22,32,58,.06);
+  --shadow-md:0 8px 24px rgba(22,32,58,.11);
+  --r-sm:8px; --r-md:16px; --r-lg:24px; --r-pill:999px;
+  --display:'Changa',system-ui,sans-serif;
+  --body:'Karla',-apple-system,BlinkMacSystemFont,'Helvetica Neue',sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;font-family:var(--body);color:var(--ink);background:#fff;font-size:16px;line-height:1.6;padding-bottom:176px;overflow-x:hidden}
+img,svg{max-width:100%;display:block}
+h1,h2,h3{font-family:var(--display);font-weight:700;line-height:1.15;margin:0 0 12px;letter-spacing:-.004em}
+h1{font-size:34px}h2{font-size:28px}h3{font-size:20px}
+p{margin:0 0 16px}
+a{color:var(--brand-deep)}
+.wrap{width:100%;max-width:1080px;margin:0 auto;padding:0 20px}
+.eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--brand);margin:0 0 8px;font-family:var(--body)}
+.section{padding:56px 0}
+.section--tint{background:var(--brand-soft)}
+.section--paper{background:var(--paper)}
+:focus-visible{outline:3px solid var(--brand-2);outline-offset:3px;border-radius:4px}
+
+.header{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.94);backdrop-filter:saturate(140%) blur(8px);border-bottom:1px solid var(--line)}
+.header__in{display:flex;align-items:center;gap:12px;min-height:64px;padding:8px 20px;max-width:1080px;margin:0 auto}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);min-height:44px}
+.brand-logo-img{width:46px;height:46px;flex:0 0 46px;object-fit:contain;border-radius:50%;background:#fff;border:1px solid var(--line)}
+.brand__txt{display:flex;flex-direction:column;line-height:1.14}
+.brand__name{font-family:var(--display);font-weight:700;font-size:16.5px}
+.brand__sub{font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2);font-weight:700}
+.header__cta{margin-left:auto}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:11px 18px;border-radius:var(--r-pill);font-family:var(--body);font-weight:700;font-size:15px;text-decoration:none;border:1px solid transparent;cursor:pointer;transition:background-color .18s ease,color .18s ease,border-color .18s ease,transform .18s ease,box-shadow .18s ease}
+.btn--primary{background:var(--brand);color:#fff;box-shadow:var(--shadow-sm)}
+.btn--primary:hover{background:var(--brand-deep);transform:translateY(-1px);box-shadow:var(--shadow-md)}
+.btn--green{background:var(--brand-2);color:#0d2a17;box-shadow:var(--shadow-sm)}
+.btn--green:hover{background:#3ea457;transform:translateY(-1px);box-shadow:var(--shadow-md)}
+.btn--ghost{background:#fff;color:var(--brand-deep);border-color:var(--line)}
+.btn--ghost:hover{border-color:var(--brand);background:var(--brand-soft)}
+.btn--sm{font-size:14px;padding:9px 14px}
+
+.hero{position:relative;background:linear-gradient(168deg,var(--brand-soft) 0%,#fff 66%);overflow:hidden}
+.hero::after{content:"";position:absolute;right:-150px;top:-130px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle at 35% 35%,rgba(74,184,102,0.18),rgba(74,184,102,0) 70%);pointer-events:none}
+.hero__in{padding:36px 20px 44px;max-width:1080px;margin:0 auto;position:relative;z-index:1}
+.hero h1{font-size:clamp(30px,7.2vw,50px);margin-bottom:14px}
+.hero h1 em{font-style:normal;color:var(--brand-2)}
+.hero__lead{font-size:17px;color:var(--ink-2);max-width:56ch;margin-bottom:20px}
+.badge24{display:inline-flex;align-items:center;gap:8px;background:var(--gold);color:#3d3000;font-weight:700;font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;padding:7px 14px;border-radius:var(--r-pill);margin-bottom:16px}
+.badge24 svg{width:16px;height:16px}
+.idcard{background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:18px;box-shadow:var(--shadow-md);margin-bottom:22px}
+.idcard__row{display:flex;gap:12px;padding:10px 0;align-items:flex-start;border-top:1px solid var(--line)}
+.idcard__row:first-child{border-top:0;padding-top:0}
+.idcard__ico{flex:0 0 22px;width:22px;height:22px;color:var(--brand);margin-top:2px}
+.idcard__k{font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--ink-2);margin:0 0 2px}
+.idcard__v{font-size:15.5px;font-weight:500;margin:0}
+.idcard__v a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--brand)}
+.idcard__v a:hover{color:var(--brand);border-bottom-color:var(--brand)}
+.hero__btns{display:flex;flex-direction:column;gap:10px}
+.hero__art{margin-top:32px}
+.seal{width:100%;max-width:340px;margin:0 auto;filter:drop-shadow(0 14px 30px rgba(22,32,58,.18))}
+
+.grid{display:grid;gap:16px;grid-template-columns:1fr}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:22px;box-shadow:var(--shadow-sm);transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow-md);border-color:var(--brand-2)}
+.card__ico{width:44px;height:44px;border-radius:12px;background:var(--brand-soft);color:var(--brand);display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+.card__ico svg{width:24px;height:24px}
+.card p{font-size:15px;color:var(--ink-2);margin:0}
+.card__tag{display:inline-block;font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--brand-2);margin-bottom:6px}
+.note{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;background:#FFF7DF;border:1px dashed #D9BE63;color:#6E5410;padding:6px 12px;border-radius:var(--r-sm)}
+.note--block{display:block;text-transform:none;letter-spacing:0;font-weight:500;font-size:13.5px;line-height:1.55;padding:12px 14px}
+.note--block b{text-transform:uppercase;letter-spacing:.06em;font-size:11.5px;display:block;margin-bottom:4px}
+
+.why{display:grid;gap:14px;grid-template-columns:1fr}
+.why__item{display:flex;gap:14px;align-items:flex-start;background:#fff;border-radius:var(--r-md);padding:18px;box-shadow:var(--shadow-sm)}
+.why__num{font-family:var(--display);font-size:24px;font-weight:700;color:var(--brand);flex:0 0 auto;line-height:1.1}
+.why__item h3{font-size:17px;margin-bottom:4px}
+.why__item p{font-size:14.5px;color:var(--ink-2);margin:0}
+
+.team{display:grid;gap:16px;grid-template-columns:1fr}
+.vet{background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:20px;box-shadow:var(--shadow-sm);display:flex;gap:16px;align-items:center}
+.vet__av{flex:0 0 60px;width:60px;height:60px;border-radius:50%;background:linear-gradient(140deg,var(--brand),var(--brand-2));color:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--display);font-weight:700;font-size:21px}
+.vet h3{margin-bottom:2px;font-size:18px}
+.vet p{margin:0;font-size:14.5px;color:var(--ink-2)}
+
+.hours{background:#fff;border:1px solid var(--line);border-radius:var(--r-md);overflow:hidden;box-shadow:var(--shadow-sm)}
+.hours__row{display:flex;justify-content:space-between;gap:12px;padding:13px 18px;border-top:1px solid var(--line);font-size:15px}
+.hours__row:first-child{border-top:0}
+.hours__row span:last-child{color:var(--brand-2);text-align:right;font-weight:700}
+.hours__row--muted span:last-child{color:var(--ink-2);font-weight:500}
+
+.contact{display:grid;gap:20px;grid-template-columns:1fr}
+.map{border-radius:var(--r-md);overflow:hidden;border:1px solid var(--line);background:var(--brand-soft);position:relative;box-shadow:var(--shadow-sm)}
+.map__label{position:absolute;left:12px;bottom:12px;right:12px;background:rgba(255,255,255,.95);border-radius:var(--r-sm);padding:10px 12px;font-size:12.5px;color:var(--ink-2);font-weight:500}
+.reach{background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:20px;box-shadow:var(--shadow-sm)}
+.reach .btn{width:100%;margin-bottom:10px}
+
+.footer{background:var(--ink);color:#ccd4e6;padding:40px 0 32px}
+.footer h3{color:#fff;font-size:19px}
+.footer a{color:#8fd6a6;text-decoration:none}
+.footer a:hover{color:#fff;text-decoration:underline}
+.footer__grid{display:grid;gap:24px;grid-template-columns:1fr}
+.footer__p{font-size:14.5px;line-height:1.7;margin:0}
+.footer__credit{margin-top:28px;padding-top:18px;border-top:1px solid rgba(255,255,255,.14);font-size:13px;display:flex;flex-wrap:wrap;gap:6px;justify-content:space-between}
+
+.cs-bar{position:fixed;left:0;right:0;bottom:0;z-index:200;background:rgba(16,24,44,.96);backdrop-filter:saturate(150%) blur(10px);border-top:1px solid rgba(255,255,255,.14);box-shadow:0 -8px 32px rgba(16,24,44,.34);color:#fff;padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px))}
+.cs-bar__in{max-width:1080px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:10px 18px;text-align:center}
+.cs-bar__eyebrow{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:#8fd6a6;margin:0 0 3px}
+.cs-bar__line{font-size:15px;font-weight:600;line-height:1.35;margin:0;color:#fff}
+.cs-bar__btn{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:12px 22px;border-radius:var(--r-pill);background:var(--brand-2);color:#0d2a17;font-weight:700;font-size:15px;text-decoration:none;white-space:nowrap;box-shadow:0 4px 18px rgba(74,184,102,0.38);animation:csPulse 2.4s ease-in-out infinite;transition:transform .18s ease,box-shadow .18s ease}
+.cs-bar__btn:hover{transform:translateY(-2px);box-shadow:0 8px 26px rgba(74,184,102,0.55);animation-play-state:paused}
+.cs-bar__btn:focus-visible{outline:3px solid #fff;outline-offset:3px}
+@keyframes csPulse{0%,100%{box-shadow:0 4px 18px rgba(74,184,102,0.32)}50%{box-shadow:0 4px 26px rgba(74,184,102,0.64)}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition-duration:.01ms!important}.cs-bar__btn{animation:none}}
+
+@media (min-width:600px){
+  .hero__btns{flex-direction:row;flex-wrap:wrap}
+  .hero__btns .btn{flex:1 1 auto;min-width:200px}
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .why{grid-template-columns:repeat(2,1fr)}
+  .team{grid-template-columns:repeat(2,1fr)}
+}
+@media (min-width:900px){
+  body{padding-bottom:104px}
+  .section{padding:76px 0}
+  h1{font-size:46px}h2{font-size:36px}
+  .hero__in{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center;padding:60px 20px 72px}
+  .hero__art{margin-top:0}
+  .grid{grid-template-columns:repeat(3,1fr)}
+  .contact{grid-template-columns:1.05fr .95fr;align-items:start}
+  .footer__grid{grid-template-columns:1.4fr 1fr 1fr}
+  .cs-bar__in{flex-wrap:nowrap;justify-content:space-between;text-align:left}
+  .cs-bar__line{font-size:16.5px}
+}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="header__in">
+    <a class="brand" href="#top">
+      <img class="brand-logo-img" src="brand/logo-facebook-profile.jpg" alt="Blessed Veterinary Clinic &amp; Grooming Center seal">
+      <span class="brand__txt">
+        <span class="brand__name">Blessed Veterinary Clinic</span>
+        <span class="brand__sub">&amp; Grooming Center &middot; QC</span>
+      </span>
+    </a>
+    <a class="btn btn--primary btn--sm header__cta" href="tel:+63289219634">Call (02) 8921-9634</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="hero__in">
+      <div>
+        <p class="eyebrow">281-C Roosevelt Ave &middot; Brgy San Antonio &middot; Quezon City</p>
+        <p class="badge24">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>
+          Open 24 hours
+        </p>
+        <h1>Blessed Veterinary Clinic &amp; Grooming Center. <em>Open at 3am, and the number dials.</em></h1>
+        <p class="hero__lead">A 24-hour veterinary clinic and grooming centre on Roosevelt Avenue, Quezon City. One address, one number, one team &mdash; on a page an owner can reach at any hour without guessing which listing is current.</p>
+
+        <div class="idcard">
+          <div class="idcard__row">
+            <svg class="idcard__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            <div><p class="idcard__k">Clinic</p><p class="idcard__v">281-C Roosevelt Ave, Brgy San Antonio,<br>Quezon City 1100</p></div>
+          </div>
+          <div class="idcard__row">
+            <svg class="idcard__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"></path></svg>
+            <div><p class="idcard__k">Phone &mdash; click to call</p><p class="idcard__v"><a href="tel:+63289219634">(02) 8921-9634</a></p></div>
+          </div>
+          <div class="idcard__row">
+            <svg class="idcard__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m2 7 10 6 10-6"></path></svg>
+            <div><p class="idcard__k">Email</p><p class="idcard__v"><a href="mailto:blessedveterinaryclinic@gmail.com">blessedveterinaryclinic@gmail.com</a></p></div>
+          </div>
+          <div class="idcard__row">
+            <svg class="idcard__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>
+            <div><p class="idcard__k">Hours</p><p class="idcard__v">Open 24 hours, 7 days</p></div>
+          </div>
+        </div>
+
+        <div class="hero__btns">
+          <a class="btn btn--primary" href="tel:+63289219634">Call the clinic now</a>
+          <a class="btn btn--ghost" href="https://www.facebook.com/AnimalVeterinaryPetClinicOpen24Hours" target="_blank" rel="noopener">Message on Facebook</a>
+        </div>
+      </div>
+
+      <div class="hero__art">
+        <img class="seal" src="brand/logo-facebook-profile.jpg" alt="Blessed Veterinary Clinic &amp; Grooming Center &mdash; clinic seal showing a dog and a cat" width="480" height="480">
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--paper">
+    <div class="wrap">
+      <p class="eyebrow">Why this page exists</p>
+      <h2>Everything on it can be checked against the clinic</h2>
+      <p style="max-width:62ch;color:var(--ink-2)">The clinic already has a website. On 24 August 2026 it still carried its theme&rsquo;s demo content: a team page naming four people who do not work here beside Dr.&nbsp;Joseph De Guzman, two <em>call us</em> buttons that dial <b>(+44) 123 456 789</b> and <b>+880-123-456</b>, four blocks of <em>Lorem ipsum</em> on the homepage, and the clinic&rsquo;s number printed as &ldquo;(2) 892 19634&rdquo; and &ldquo;+289-219-634&rdquo; &mdash; neither of which connects.</p>
+      <p style="max-width:62ch;color:var(--ink-2)">For a clinic whose whole promise is <em>open 24 hours</em>, a number that does not dial at 3am is the expensive one. This page carries one address, one working number, one real vet, and nothing that has not been confirmed.</p>
+    </div>
+  </section>
+
+  <section class="section" id="services">
+    <div class="wrap">
+      <p class="eyebrow">What the clinic does</p>
+      <h2>Veterinary care and grooming, around the clock</h2>
+      <div class="grid">
+        <div class="card">
+          <div class="card__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18M3 12h18"></path><circle cx="12" cy="12" r="9"></circle></svg></div>
+          <span class="card__tag">24 hours</span>
+          <h3>Emergency &amp; walk-in</h3>
+          <p>The clinic is staffed overnight and on weekends. If something is wrong at 2am, the door is open and the phone is answered.</p>
+        </div>
+        <div class="card">
+          <div class="card__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3v4M16 3v4M3 9h18"></path><rect x="3" y="5" width="18" height="16" rx="2"></rect></svg></div>
+          <span class="card__tag">Routine</span>
+          <h3>Consultation &amp; check-ups</h3>
+          <p>General consultation and diagnostics for dogs and cats, with the results explained in plain language before you leave.</p>
+        </div>
+        <div class="card">
+          <div class="card__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m18 2 4 4-9.5 9.5-4 1.5 1.5-4L18 2Z"></path><path d="M4 20h8"></path></svg></div>
+          <span class="card__tag">Preventive</span>
+          <h3>Vaccination &amp; deworming</h3>
+          <p>Puppy and kitten series, annual boosters, anti-rabies and deworming &mdash; on a schedule the clinic keeps for you.</p>
+        </div>
+        <div class="card">
+          <div class="card__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="14" r="4"></circle><circle cx="6" cy="8" r="2"></circle><circle cx="18" cy="8" r="2"></circle><circle cx="9" cy="4.5" r="1.8"></circle><circle cx="15" cy="4.5" r="1.8"></circle></svg></div>
+          <span class="card__tag">Grooming centre</span>
+          <h3>Bath, groom &amp; trim</h3>
+          <p>The grooming side of the business, in the same building as the clinic &mdash; so a groom and a check-up can happen in one trip.</p>
+        </div>
+      </div>
+      <p class="note note--block" style="margin-top:18px"><b>Service list &mdash; to be confirmed</b>These four are what the clinic&rsquo;s own name and Facebook page state publicly. Surgery, confinement, laboratory work, house calls and grooming packages are not listed here because no source we can verify names them. Send the real list and it replaces this section exactly as written.</p>
+    </div>
+  </section>
+
+  <section class="section section--tint" id="team">
+    <div class="wrap">
+      <p class="eyebrow">Who you will actually see</p>
+      <h2>Real names only</h2>
+      <div class="team">
+        <div class="vet">
+          <div class="vet__av">JD</div>
+          <div>
+            <h3>Dr. Joseph De Guzman, DVM</h3>
+            <p>Veterinarian</p>
+          </div>
+        </div>
+      </div>
+      <p class="note note--block" style="margin-top:18px"><b>Rest of the team &mdash; to be confirmed</b>Dr. De Guzman is the one veterinarian we can confirm from the clinic&rsquo;s own material. A 24-hour clinic runs on more than one person, so this section is built to hold the full roster &mdash; vets, technicians and groomers. It stays at one name until the clinic supplies the others, because a stranger&rsquo;s name on a vet&rsquo;s page costs more trust than a short list does.</p>
+    </div>
+  </section>
+
+  <section class="section" id="why">
+    <div class="wrap">
+      <p class="eyebrow">Why owners come here</p>
+      <h2>The things a 24-hour clinic has to get right</h2>
+      <div class="why">
+        <div class="why__item"><span class="why__num">01</span><div><h3>Someone is awake</h3><p>Most clinics in Quezon City close at 6 or 7pm. This one does not, and that is the entire reason an owner saves the number.</p></div></div>
+        <div class="why__item"><span class="why__num">02</span><div><h3>One number, and it works</h3><p>(02) 8921-9634 &mdash; tappable on a phone, correct on this page, and the same number in every place the clinic appears.</p></div></div>
+        <div class="why__item"><span class="why__num">03</span><div><h3>Clinic and grooming in one place</h3><p>The grooming centre is part of the business, not a referral. One address covers both.</p></div></div>
+        <div class="why__item"><span class="why__num">04</span><div><h3>On Roosevelt Avenue</h3><p>A main road in Brgy San Antonio, reachable at night without navigating side streets you do not know.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--paper" id="contact">
+    <div class="wrap">
+      <p class="eyebrow">Get in touch</p>
+      <h2>Contact the clinic</h2>
+      <div class="contact">
+        <div>
+          <div class="hours">
+            <div class="hours__row"><span>Monday &ndash; Sunday</span><span>Open 24 hours</span></div>
+            <div class="hours__row hours__row--muted"><span>Grooming hours</span><span>To be confirmed</span></div>
+            <div class="hours__row hours__row--muted"><span>Public holidays</span><span>To be confirmed</span></div>
+          </div>
+          <p class="note note--block" style="margin-top:16px"><b>Grooming and holiday hours &mdash; to be confirmed</b>The clinic side is 24 hours; whether the grooming centre keeps the same hours is not published anywhere we can check, and neither is the holiday schedule. Confirm both once and they appear here and in the footer.</p>
+        </div>
+        <div class="reach">
+          <h3>Reach us</h3>
+          <a class="btn btn--primary" href="tel:+63289219634">Call (02) 8921-9634</a>
+          <a class="btn btn--green" href="https://www.facebook.com/AnimalVeterinaryPetClinicOpen24Hours" target="_blank" rel="noopener">Message on Facebook</a>
+          <a class="btn btn--ghost" href="mailto:blessedveterinaryclinic@gmail.com">Email the clinic</a>
+          <p style="font-size:14px;color:var(--ink-2);margin:14px 0 0">281-C Roosevelt Ave, Brgy San Antonio, Quezon City 1100</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <h3>Blessed Veterinary Clinic &amp; Grooming Center</h3>
+        <p class="footer__p">281-C Roosevelt Ave, Brgy San Antonio<br>Quezon City 1100<br>Open 24 hours, 7 days</p>
+      </div>
+      <div>
+        <h3>Call or email</h3>
+        <p class="footer__p"><a href="tel:+63289219634">(02) 8921-9634</a><br><a href="mailto:blessedveterinaryclinic@gmail.com">blessedveterinaryclinic@gmail.com</a></p>
+      </div>
+      <div>
+        <h3>Find us online</h3>
+        <p class="footer__p"><a href="https://www.facebook.com/AnimalVeterinaryPetClinicOpen24Hours" target="_blank" rel="noopener">Facebook &mdash; Animal Veterinary Pet Clinic (Open 24 Hours)</a></p>
+      </div>
+    </div>
+    <div class="footer__credit">
+      <span>&copy; 2026 Blessed Veterinary Clinic &amp; Grooming Center &middot; Quezon City</span>
+      <span>Website by CloudSpring IT Solutions</span>
+    </div>
+  </div>
+</footer>
+
+<aside class="cs-bar" role="complementary" aria-label="CloudSpring IT Solutions preview notice">
+  <div class="cs-bar__in">
+    <div class="cs-bar__txt">
+      <p class="cs-bar__eyebrow">PREVIEW &middot; CloudSpring IT Solutions</p>
+      <p class="cs-bar__line">Your site&rsquo;s call buttons dial the UK and Bangladesh. Shall we fix the number a 3am caller sees?</p>
+    </div>
+    <a class="cs-bar__btn" href="https://api.leadconnectorhq.com/widget/booking/QRPEnWRw2Kx9rBe0Mj6J" target="_blank" rel="noopener">Book a FREE Discovery Call &rarr;</a>
+  </div>
+</aside>
+
+</body>
+</html>

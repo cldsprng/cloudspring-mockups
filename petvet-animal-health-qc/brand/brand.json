@@ -4,7 +4,7 @@
   "facebook": "PetvetAnimalHealthClinicAndGroomingCenter",
   "capturedAt": "2026-08-24T00:55:10.307Z",
   "source": "headless-http",
-  "name": null,
+  "name": "Petvet Animal Health Clinic and Grooming Center",
   "logo": {
     "file": "logo-facebook-profile.jpg",
     "score": 95,
@@ -50,6 +50,7 @@
   "notes": [
     "facebook profile picture captured headlessly for \"PetvetAnimalHealthClinicAndGroomingCenter\"",
     "no website for this lead — facebook-only capture path",
-    "palette-pending resolved via vision-read: red dog + green cat logo → #D32F2F (red) + #52C77A (green), ready for build"
+    "palette-pending resolved via vision-read: red dog + green cat logo → #D32F2F (red) + #52C77A (green), ready for build",
+    "2026-08-24 (step 4, CLO-82): name filled from the Trello lead card — capture returned null because this is a facebook-only lead with no site <title> to read. Logo re-checked by vision: red dog + green cat over the wordmark \"PetVet\" and the tagline \"Where Every Paws Matters\"; the vision palette is confirmed accurate. No typeface captured, so the build uses Nunito and does not claim it as the brand face."
   ]
 }

@@ -90,6 +90,7 @@
   "confidence": 100,
   "notes": [
     "facebook profile picture captured headlessly for \"WilliamsRiverVeterinaryClinic\"",
-    "4 stylesheet(s) fetched, 233941 bytes of CSS"
+    "4 stylesheet(s) fetched, 233941 bytes of CSS",
+    "2026-08-24 (step 4, CLO-82): the build uses logo-2-img-marked-logo.png, not the higher-scored logo-facebook-profile.png. Vision-checked: logo-2 is the clinic's actual horizontal wordmark — a red panel holding a dog, cat, horse and cow above WILLIAMS RIVER / VETERINARY CLINIC — which reads correctly in a site header. The captured #dc3545 and #212529 are the red of that panel and the black of the wordmark, so the site-CSS palette and the mark agree."
   ]
 }
