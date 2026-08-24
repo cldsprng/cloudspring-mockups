@@ -1652,3 +1652,49 @@ promise, not the diagnosis, that the menu gates.
   evidence QA can skip re-deriving; this is the second run (after 08-23's
   Esmino fabrication) where the defect was exactly what an upstream
   self-report said had been checked and passed.
+- 2026-08-24 (CEO closing leg, CLO-78 — the queue-depth measurement this
+  section asks for cannot be taken with the tool the last runs used): the
+  Trello MCP read path silently truncates, and it does not say so.
+  `trelloReadList` action `get` embeds **at most 25 cards** with no cursor
+  parameter and no truncation flag — READY TO SEND and BRAND BLOCKED both
+  came back as exactly 25 and looked like complete lists. `trelloReadCard`
+  action `list_by_list` paginates properly, but its `totalCount` is
+  **page-scoped, not list-scoped**: called with `limit=1` it returns
+  `totalCount: 1` for a 35-card list, so totalCount must never be read as a
+  queue depth either. **The only correct depth measurement is
+  `trelloReadCard` / `list_by_list` with `limit=50`, counting `nodes` and
+  confirming `pageInfo.hasNextPage` is false.** Measured that way today:
+  READY TO SEND **48**, BRAND BLOCKED **35**. Both exceed 25, so both are in
+  the range where the old method silently under-reports — and these are
+  precisely the two queues this config asks every run to watch for growth.
+  Yesterday's report put READY TO SEND at 39; reconciling card-by-card, the
+  48 is today's 6 drafts plus the 4 cards CLO-76 returned from CHANGES
+  REQUESTED late on 08-23 (after that report was written), which accounts for
+  47 — the remaining 1 is an off-by-one in the inherited 39, not a card that
+  moved. Do not carry a queue depth forward from a previous report; re-measure.
+- 2026-08-24 (CEO closing leg, CLO-78 — CHANGES REQUESTED 6 -> 1 looked like
+  four cards silently escaping a human gate, and was not): DermQuest, Gulfan,
+  LimDerm and Midwest Skin Care left CHANGES REQUESTED with no step report
+  claiming the move, which reads exactly like drafts re-entering the send
+  queue without their revision. Reading the card description settled it in one
+  fetch: each carries `↩️ 2026-08-23 (CLO-76): back to READY TO SEND. QA
+  RE-CHECK resolved 2026-08-20 with 7 siblings; 4 of 8 moved back that run,
+  this one did not.` It was the sanctioned repair of an incomplete agent move,
+  not a bypass. **Before reporting a card as having skipped a gate, fetch its
+  description — the audit trail lives there, not in the step reports**, and a
+  move made after the previous run's report was written will never appear in
+  any step report. Consequence for the tracked issue: CLO-75 ("5 CHANGES
+  REQUESTED cards have no `## CHANGES` block") is now stale — 4 of the 5 are
+  resolved and only One World Skin & Wellness still needs Dei.
+- 2026-08-24 (CEO closing leg, CLO-78 — step 5 wrote outreach drafts into the
+  working tree of a PUBLIC repo, and nothing was ignoring them): the run left
+  `CLO-83_STEP5_REPORT.md` and `drafts_2026-08-24.txt` untracked at the repo
+  root, the second containing the full send-ready copy for four leads. No step
+  report or draft file has ever been committed here (checked with
+  `--diff-filter=A` across all history), so they are scratch — but the repo had
+  **no `.gitignore` at all**, so a single `git add -A` by any agent in the
+  chain would have published prospect outreach copy to a public repository.
+  Added a `.gitignore` covering `*STEP*REPORT*.md`, `drafts_*.txt` and the
+  capture/move scratch JSON. Step artifacts belong on the Trello card and in
+  the issue thread; if a step needs a file, write it to
+  `PAPERCLIP_RUN_SCRATCH_DIR`, never the repo root.
