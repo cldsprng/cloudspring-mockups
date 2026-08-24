@@ -4,17 +4,23 @@
 // Usage:
 //   TRELLO_API_KEY=... TRELLO_API_TOKEN=... node move-cards.mjs <results-json>
 //
-// Reads CLO-39-capture-results.json and moves cards to:
+// Reads the results JSON written by run-sweep.mjs and moves cards to:
 // - MOCKUP READY if ready:true
 // - BRAND BLOCKED if ready:false (palette-pending or no-assets)
+//
+// A bare filename resolves against PAPERCLIP_RUN_SCRATCH_DIR first, then cwd.
+// The results file is run scratch and is not kept in this (public) repo.
 
 import { readFile } from 'node:fs/promises'
+import { resolveScratchInput } from './scratch.mjs'
 
-const resultsFile = process.argv[2]
-if (!resultsFile) {
+const resultsArg = process.argv[2]
+if (!resultsArg) {
   console.error('usage: move-cards.mjs <results-json>')
   process.exit(1)
 }
+
+const resultsFile = resolveScratchInput(resultsArg)
 
 const apiKey = process.env.TRELLO_API_KEY
 const apiToken = process.env.TRELLO_API_TOKEN
@@ -23,7 +29,14 @@ if (!apiKey || !apiToken) {
   process.exit(1)
 }
 
-const results = JSON.parse(await readFile(resultsFile, 'utf8'))
+let results
+try {
+  results = JSON.parse(await readFile(resultsFile, 'utf8'))
+} catch (err) {
+  console.error(`cannot read results JSON at ${resultsFile}: ${err.message}`)
+  console.error('Run run-sweep.mjs first; it prints the path it wrote.')
+  process.exit(1)
+}
 const boardId = '69f38821edbd4dfbc39bc091'
 const listIds = {
   strategyReady: '6a65168d383ae05055e34909',

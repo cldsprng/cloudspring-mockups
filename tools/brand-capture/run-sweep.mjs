@@ -3,21 +3,35 @@
 // based on results.
 //
 // Usage:
-//   node tools/brand-capture/run-sweep.mjs <cards-json-file>
+//   node tools/brand-capture/run-sweep.mjs <cards-json-file> [results-json-out]
 //
 // Cards JSON format: array of {name, slug, site?, facebook?, email?}
 // Reads brand.json output and moves cards via Trello API
+//
+// Both files are per-run scratch and are resolved against
+// PAPERCLIP_RUN_SCRATCH_DIR, never written to the repo root (CLO-95).
 
 import { readFile, writeFile } from 'node:fs/promises'
 import { execSync } from 'node:child_process'
+import { scratchPath, resolveScratchInput } from './scratch.mjs'
 
-const cardsFile = process.argv[2]
-if (!cardsFile) {
-  console.error('usage: run-sweep.mjs <cards-json>')
+const cardsArg = process.argv[2]
+if (!cardsArg) {
+  console.error('usage: run-sweep.mjs <cards-json> [results-json-out]')
   process.exit(1)
 }
 
-const cardData = JSON.parse(await readFile(cardsFile, 'utf8'))
+const cardsFile = resolveScratchInput(cardsArg)
+const resultsFile = scratchPath(process.argv[3] || 'CLO-39-capture-results.json')
+
+let cardData
+try {
+  cardData = JSON.parse(await readFile(cardsFile, 'utf8'))
+} catch (err) {
+  console.error(`cannot read cards JSON at ${cardsFile}: ${err.message}`)
+  console.error('This file is run scratch, not repo source — put it in PAPERCLIP_RUN_SCRATCH_DIR.')
+  process.exit(1)
+}
 const results = { ready: [], palettePending: [], noAssets: [], errors: [] }
 
 console.log(`Processing ${cardData.length} cards...`)
@@ -69,7 +83,8 @@ if (results.errors.length) console.log(`Errors: ${results.errors.length}`)
 
 // Write results for Trello move automation
 await writeFile(
-  'CLO-39-capture-results.json',
+  resultsFile,
   JSON.stringify({ timestamp: new Date().toISOString(), ...results }, null, 2)
 )
-console.log('\nResults saved to CLO-39-capture-results.json')
+console.log(`\nResults saved to ${resultsFile}`)
+console.log(`Next: node tools/brand-capture/move-cards.mjs "${resultsFile}"`)

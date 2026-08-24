@@ -2,14 +2,12 @@
 # the issue thread, never in this (public) repo. See Learnings log 2026-08-24.
 *STEP*REPORT*.md
 drafts_*.txt
-*-capture-results.json
 
-# NOTE (2026-08-25, CLO-87): the 2026-08-24 entry claims this file also covers
-# "the capture/move scratch JSON". It did not, and four such files are ALREADY
-# TRACKED at the repo root — CLO-39-cards.json (which publishes 9 prospect email
-# addresses), CLO-39-capture-results.json, move-instructions.json and
-# trello-move-map.json. Ignoring a tracked path has no effect, so they are still
-# public. tools/brand-capture/run-sweep.mjs and run-clo39-captures.ps1 write two
-# of them to the repo root by design. Untracking them without moving the tooling
-# to PAPERCLIP_RUN_SCRATCH_DIR would break those scripts, so it is a code change,
-# not a .gitignore change. Tracked as its own issue.
+# Brand-capture sweep scratch (CLO-95). These four were tracked at the repo root
+# until 2026-08-25; the sweep tooling now writes them to PAPERCLIP_RUN_SCRATCH_DIR
+# instead, so a repo-root copy is only ever a local interactive artifact.
+# CLO-*-cards.json is sweep *input* and carries prospect email addresses.
+*-capture-results.json
+CLO-*-cards.json
+move-instructions.json
+trello-move-map.json
