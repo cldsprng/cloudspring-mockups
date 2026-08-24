@@ -1580,3 +1580,43 @@ promise, not the diagnosis, that the menu gates.
   `ph.onsono.com` (403). New this run: `www.pinoylisting.com` returns an
   expired TLS certificate, and `www.yellow-pages.ph` fails to connect (000,
   not 403) — neither is a UA block and neither is worth retrying.
+- 2026-08-24 (step 4, CLO-82 — capture committed `brand.json` without the logo
+  files, and the deploy gate cannot see it): CLO-81 committed four brand.json
+  files whose `logoFiles[]` named images that were never `git add`ed — all eight
+  images sat untracked in the working tree while the JSON that references them
+  was on `origin/main`. Step 4 found them only because `git status` was read
+  before committing. **The gate would have passed all four folders anyway:**
+  check #1 asks whether the logo *filename appears in index.html*, not whether
+  the file exists on disk or in the commit. A mockup can therefore satisfy every
+  one of the six checks, pass the pre-push hook, deploy, and serve a broken
+  image to the prospect — which is the exact outcome the gate exists to prevent.
+  Two rules from this: **capture commits the images in the same commit as the
+  brand.json that names them**, and the next person in `tools/brand-capture/`
+  should add an existence check on `logoFiles[]` — cheap, and it closes a hole
+  that a filename-substring test structurally cannot.
+- 2026-08-24 (step 4, CLO-82 — a captured logo is not automatically the lead's
+  logo): Blessed Veterinary Clinic's site-scraped "logos" are `brand_01.png` and
+  `brand_02.png`, both scored 90 as `img marked logo`. Vision-read, one is
+  **"CUTEDOGS ESTD 2018"** and the other **"THE HORSE"** — WordPress theme demo
+  assets sitting in the theme's own upload folder. The scoring heuristic cannot
+  tell a demo asset from a brand asset, because on a placeholder site they
+  occupy the same markup position. The same folder's site-CSS palette is
+  theme-derived for the same reason. **On any lead already flagged
+  `placeholder site`, treat every site-scraped asset as suspect and vision-check
+  it against the Facebook mark before using it or its colours.** Here the FB seal
+  was the real mark and two of the six captured hexes (`#39599e`, `#4ab866`)
+  matched its blue dog and green cat; the build anchored on those two and
+  ignored the rest. This is a narrower cousin of `logo-not-a-mark`: the file IS
+  a logo mark, just somebody else's.
+- 2026-08-24 (step 4, CLO-82 — orphan slug folders now look like backlog): 15
+  top-level folders hold a `brand/brand.json` with no `index.html`, and 13 are
+  duplicate slugs for leads that already have a live mockup (`509-family-care-cebu`
+  vs the built `509-family-care`, `fast-autoworks` vs `fast-autoworks-pasig`,
+  `mann-machine` vs `mann-machine-vt`, `tooth-doctors-davao` vs
+  `tooth-doctors-dental`, and nine more). Two of them sit at `ready: true`. A run
+  that scans the repo for "branded but unbuilt" folders — a reasonable way to
+  look for backlog — reads those two as work, and building either would create a
+  **second URL for a lead that already has one**, which no rule downstream would
+  catch. Backlog is defined by the STRATEGY READY list, never by a repo scan.
+  The cleanup itself is CLO-77's; what is new is that leaving it has acquired a
+  way to cause a wrong build rather than just clutter.
