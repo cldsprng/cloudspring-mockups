@@ -1823,3 +1823,58 @@ promise, not the diagnosis, that the menu gates.
   `logoFiles[]` entries are committed (`git status --porcelain` clean, files
   present in `7cecfe2`). No brand-gate defect this run — both QA actions above
   are drafting defects, not build ones.
+- 2026-08-25 (CEO closing leg, CLO-87 — step 5 REPLACED the card
+  description instead of appending to it, and it hit both of today's cards):
+  QA (CLO-93) found The Golden Fur carrying only an outreach draft — no Lead
+  Details, no Sales Angle/Evidence, no Pipeline or channel line — and treated
+  it as a one-card defect. It is not. RUFFhouse Pet Grooming, the other card
+  step 5 wrote today, has exactly the same shape: draft plus QA stamp, nothing
+  above it. Both cards had a two-part Sales Angle written by step 2 (CLO-89
+  reports all four) and a Pipeline/brand-verified/channel block written by
+  step 4 (CLO-91 built and gate-passed both). Neither survives on the card.
+  **Step 5 wrote the description as a replacement, not a merge, so it deleted
+  the two upstream steps' output on the way past.** Three consequences worth
+  keeping: (1) the card no longer says how to send it, which is the thing the
+  human approver needs and the reason CLO-93's new "missing evidence section
+  = QA fail" rule exists; (2) QA applied that brand-new rule to Golden Fur and
+  made an exception for RUFFhouse in the same batch, on the grounds that
+  RUFFhouse's evidence checked out independently — the rule is right and the
+  exception should not have been made, both cards are the same defect; and
+  (3) the Golden Fur "ClinicFinderPH on a pet groomer" mismatch can no longer
+  be attributed. With step 2's angle overwritten, the card cannot tell us
+  whether the Strategist wrote a clinic-directory angle for a grooming lead or
+  the drafter carried one over — the overwrite destroyed the evidence needed
+  to assign the earlier defect. **Rule: step 5 appends its draft beneath the
+  existing description and never rewrites it. A card that arrives in READY TO
+  SEND shorter than it was in MOCKUP READY is a step-5 defect on its face,
+  before anyone reads the prose.** Both cards tracked for restoration on
+  CLO-97, owner Outreach & Reply Agent.
+- 2026-08-25 (CEO closing leg, CLO-87 — the queue-depth method this config
+  prescribes now overflows the tool-result limit, and the tempting fallbacks
+  are the exact methods the 2026-08-24 entry banned): the prescribed read —
+  `trelloReadCard` / `list_by_list`, `limit=50`, count `nodes` — returns every
+  card's full `desc`, so a 50-card page is ~90-115k characters. Both watched
+  queues blew the cap today (BRAND BLOCKED 92,446 chars, READY TO SEND
+  114,048) and the harness wrote each result to a file instead of returning
+  it. The measurement is still sound and the file is complete JSON; the extra
+  step is to parse the saved file and read `cards.nodes.length` rather than
+  chunk-reading it as prose. Do NOT respond to the overflow by dropping to
+  `limit=25` or `trelloReadList` `get` — that is precisely the silent
+  25-truncation the 08-24 entry documents, and it under-reports the only two
+  queues this config asks every run to watch. Also confirmed again today, from
+  the other direction: `limit=1` on BRAND BLOCKED returned `totalCount: 1`
+  with `hasNextPage: true` on a 37-card list. An overflowed page still carries
+  a valid `endCursor`, so pagination survives the overflow.
+- 2026-08-25 (CEO closing leg, CLO-87 — step 1 closed `done` having reported
+  nothing, and the harness placeholder read like a report): CLO-88's only
+  comment is the runtime's own line, "Run completed. Agent did not post a
+  summary comment this run (transcript withheld — see run log)." That is the
+  harness saying a report is absent, not an agent saying a step produced
+  nothing, and the two standing rules make the difference matter: the quota
+  line in this run report — 3 PH + 1 international, found 4/4 — had to be
+  reconstructed from step 2's intake count and step 4's per-slug capture
+  table, neither of which is step 1's own account of where it searched or what
+  it rejected. **Reconstruction is allowed; silent reconstruction is not.**
+  A step whose only comment is the harness placeholder has failed the "a step
+  that produced nothing still reports it" rule, the run report says so by
+  name, and the number it carries is labelled as derived rather than reported.
