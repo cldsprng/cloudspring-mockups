@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jessi&rsquo;s In-Home Grooming — mobile dog &amp; cat grooming, NW Calgary</title>
+<meta name="description" content="Jessi's In-Home Grooming — in-home dog and cat grooming in NW Calgary, around 6th Ave &amp; 15th St NW. Grooming in your own home since 1996. Call 403-702-3038.">
+<style>
+:root{
+  /* Palette vision-read off Jessi's own Facebook mark — see brand/brand.json
+     (colors.source: "vision"). #FF9B8A is the coral sunset the mascot stands
+     in; #4A9FB5 is the teal in the shirt and the water; #E85B8A the hibiscus;
+     #FFD700 the gold chain and paw tag. Nothing here was invented. */
+  --coral:#FF9B8A;
+  --teal:#4A9FB5;
+  --magenta:#E85B8A;
+  --gold:#FFD700;
+  --coral-deep:#e2624c;
+  --teal-dark:#2c7186;
+  --magenta-deep:#c33c6c;
+  --coral-soft:#fff2ef;
+  --teal-soft:#eef7fa;
+  --sand:#fffaf6;
+  --ink:#2b2124;
+  --ink-2:#6d5f63;
+  --line:#f0e3de;
+  --shadow-sm:0 1px 2px rgba(43,33,36,.06), 0 3px 10px rgba(43,33,36,.07);
+  --shadow-md:0 12px 30px rgba(43,33,36,.14);
+  --r-sm:10px; --r-md:20px; --r-lg:30px; --r-pill:999px;
+  --display:"Trebuchet MS","Segoe UI",system-ui,-apple-system,sans-serif;
+  --body:system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;font-family:var(--body);color:var(--ink);background:#fff;font-size:16px;line-height:1.62;padding-bottom:194px;overflow-x:hidden}
+img,svg{max-width:100%;display:block}
+h1,h2,h3{font-family:var(--display);font-weight:700;line-height:1.14;margin:0 0 12px;letter-spacing:-.01em}
+h1{font-size:34px}h2{font-size:28px}h3{font-size:20px}
+p{margin:0 0 16px}
+a{color:var(--magenta-deep)}
+.wrap{width:100%;max-width:1050px;margin:0 auto;padding:0 20px}
+.eyebrow{font-size:12px;letter-spacing:.15em;text-transform:uppercase;font-weight:700;color:var(--magenta);margin:0 0 8px}
+.section{padding:56px 0}
+.section--sand{background:var(--sand)}
+.section--teal{background:var(--teal-soft)}
+.section--coral{background:var(--coral-soft)}
+.section--dark{background:var(--teal-dark);color:#dff0f5}
+.section--dark h2,.section--dark h3{color:#fff}
+.section--dark .eyebrow{color:var(--gold)}
+:focus-visible{outline:3px solid var(--teal);outline-offset:3px;border-radius:4px}
+
+.header{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.96);backdrop-filter:saturate(150%) blur(8px);border-bottom:3px solid var(--coral)}
+.header__in{display:flex;align-items:center;gap:12px;min-height:66px;padding:8px 20px;max-width:1050px;margin:0 auto}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none;color:var(--ink);min-height:44px}
+.brand-logo-img{width:52px;height:52px;flex:0 0 52px;object-fit:cover;border-radius:14px;border:2px solid var(--gold)}
+.brand__txt{display:flex;flex-direction:column;line-height:1.15}
+.brand__name{font-family:var(--display);font-weight:700;font-size:16.5px}
+.brand__sub{font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:var(--teal-dark);font-weight:700}
+.header__cta{margin-left:auto}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:46px;padding:12px 19px;border-radius:var(--r-pill);font-family:var(--body);font-weight:700;font-size:15px;text-decoration:none;border:2px solid transparent;cursor:pointer;transition:background-color .18s ease,color .18s ease,border-color .18s ease,transform .18s ease,box-shadow .18s ease}
+.btn--coral{background:var(--coral);color:#40160d;box-shadow:var(--shadow-sm)}
+.btn--coral:hover{background:var(--coral-deep);color:#fff;transform:translateY(-2px);box-shadow:var(--shadow-md)}
+.btn--teal{background:var(--teal);color:#04303c;box-shadow:var(--shadow-sm)}
+.btn--teal:hover{background:var(--teal-dark);color:#fff;transform:translateY(-2px);box-shadow:var(--shadow-md)}
+.btn--magenta{background:var(--magenta);color:#fff;box-shadow:var(--shadow-sm)}
+.btn--magenta:hover{background:var(--magenta-deep);transform:translateY(-2px);box-shadow:var(--shadow-md)}
+.btn--gold{background:var(--gold);color:#3d3000;box-shadow:var(--shadow-sm)}
+.btn--gold:hover{background:#e6c200;transform:translateY(-2px);box-shadow:var(--shadow-md)}
+.btn--sm{font-size:14px;padding:9px 15px;min-height:44px}
+
+.hero{position:relative;background:linear-gradient(168deg,var(--coral-soft) 0%,#fff 62%);overflow:hidden}
+.hero::after{content:"";position:absolute;left:-160px;bottom:-200px;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle at 50% 50%,rgba(74,159,181,.20),rgba(74,159,181,0) 70%);pointer-events:none}
+.hero__in{padding:34px 20px 46px;max-width:1050px;margin:0 auto;position:relative;z-index:1}
+.hero h1{font-size:clamp(30px,7vw,47px);margin-bottom:14px}
+.hero h1 em{font-style:normal;color:var(--magenta)}
+.hero__lead{font-size:17px;color:var(--ink-2);max-width:56ch;margin-bottom:22px}
+.pill{display:inline-flex;align-items:center;gap:8px;background:var(--gold);color:#3d3000;font-weight:700;font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;padding:7px 15px;border-radius:var(--r-pill);margin-bottom:15px}
+.pill svg{width:16px;height:16px}
+.idcard{background:#fff;border:2px solid var(--coral);border-radius:var(--r-md);padding:19px;box-shadow:var(--shadow-md);margin-bottom:22px}
+.idcard__row{display:flex;gap:13px;padding:11px 0;align-items:flex-start;border-top:1px solid var(--line)}
+.idcard__row:first-child{border-top:0;padding-top:0}
+.idcard__ico{flex:0 0 22px;width:22px;height:22px;color:var(--magenta);margin-top:3px}
+.idcard__k{font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--ink-2);margin:0 0 3px}
+.idcard__v{font-size:15.5px;font-weight:500;margin:0}
+.idcard__v a{color:var(--ink);text-decoration:none;border-bottom:2px solid var(--gold)}
+.idcard__v a:hover{color:var(--magenta-deep);border-bottom-color:var(--magenta)}
+.hero__btns{display:flex;flex-direction:column;gap:10px}
+.hero__art{margin-top:34px}
+.mark{width:100%;max-width:370px;margin:0 auto;border-radius:var(--r-lg);border:5px solid var(--gold);box-shadow:0 18px 40px rgba(43,33,36,.24)}
+
+.stat{display:flex;flex-wrap:wrap;gap:12px;margin:0 0 22px}
+.stat__item{flex:1 1 140px;background:#fff;border:1px solid var(--line);border-bottom:4px solid var(--teal);border-radius:var(--r-sm);padding:15px 17px}
+.stat__n{font-family:var(--display);font-size:27px;font-weight:700;color:var(--teal-dark);line-height:1;margin:0 0 4px}
+.stat__l{font-size:13px;color:var(--ink-2);margin:0}
+
+.rivals{display:grid;gap:10px;margin-top:22px}
+.rival{display:flex;gap:13px;align-items:center;background:rgba(255,255,255,.08);border-radius:var(--r-sm);padding:12px 15px}
+.rival__d{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:13.5px;color:#fff;font-weight:600}
+.rival__n{font-size:13.5px;color:#b3d4de;margin-left:auto;text-align:right}
+.rival--you{background:var(--gold);color:#3d3000}
+.rival--you .rival__d{color:#3d3000}
+.rival--you .rival__n{color:#5c4a00;font-weight:700}
+
+.grid{display:grid;gap:16px;grid-template-columns:1fr}
+.card{background:#fff;border:1px solid var(--line);border-top:5px solid var(--coral);border-radius:var(--r-md);padding:22px;box-shadow:var(--shadow-sm);transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+.card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);border-top-color:var(--teal)}
+.card__ico{width:46px;height:46px;border-radius:15px;background:var(--teal-soft);color:var(--teal-dark);display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+.card__ico svg{width:25px;height:25px}
+.card p{font-size:15px;color:var(--ink-2);margin:0}
+
+.why{display:grid;gap:20px;grid-template-columns:1fr}
+.why__item{display:flex;gap:15px;align-items:flex-start}
+.why__num{flex:0 0 44px;width:44px;height:44px;border-radius:50%;background:var(--magenta);color:#fff;font-family:var(--display);font-weight:700;font-size:16px;display:flex;align-items:center;justify-content:center}
+.why__item p{font-size:15px;color:var(--ink-2);margin:0}
+
+.quote{background:#fff;border:1px solid var(--line);border-left:6px solid var(--gold);border-radius:0 var(--r-md) var(--r-md) 0;padding:20px 22px;box-shadow:var(--shadow-sm);margin:0 0 16px}
+.quote p{margin:0;font-size:16px}
+.quote__src{display:block;margin-top:9px;font-size:13px;color:var(--ink-2);font-weight:600}
+
+.contact{display:grid;gap:24px;grid-template-columns:1fr}
+.hours{background:#fff;border:1px solid var(--line);border-radius:var(--r-md);overflow:hidden;box-shadow:var(--shadow-sm)}
+.hours__row{display:flex;justify-content:space-between;gap:14px;padding:13px 18px;border-top:1px solid var(--line);font-size:15px}
+.hours__row:first-child{border-top:0}
+.hours__row span:last-child{color:var(--ink-2);font-weight:600;text-align:right}
+.note{background:var(--coral-soft);border:1px dashed var(--coral-deep);border-radius:var(--r-md);padding:17px;font-size:14.5px;color:var(--ink-2);margin:0}
+.note b{display:block;color:var(--ink);margin-bottom:5px;font-size:15px}
+.reach{background:#fff;border:2px solid var(--teal);border-radius:var(--r-md);padding:22px;box-shadow:var(--shadow-md);display:flex;flex-direction:column;gap:10px}
+
+.footer{background:var(--teal-dark);color:#c6dfe7;padding:44px 0 34px}
+.footer h3{color:#fff;font-size:16px;margin-bottom:9px}
+.footer__grid{display:grid;gap:26px;grid-template-columns:1fr}
+.footer__p{font-size:14.5px;margin:0;line-height:1.75}
+.footer a{color:var(--gold);text-decoration:none}
+.footer a:hover{text-decoration:underline}
+.footer__credit{border-top:1px solid rgba(255,255,255,.17);margin-top:28px;padding-top:18px;display:flex;flex-wrap:wrap;gap:8px 18px;justify-content:space-between;font-size:13px;color:#9fc2cd}
+
+.cs-bar{position:fixed;left:0;right:0;bottom:0;z-index:200;background:rgba(30,20,22,.97);backdrop-filter:saturate(150%) blur(10px);border-top:3px solid var(--gold);box-shadow:0 -8px 32px rgba(30,20,22,.4);color:#fff;padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px))}
+.cs-bar__in{max-width:1050px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:10px 18px;text-align:center}
+.cs-bar__eyebrow{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--gold);margin:0 0 3px}
+.cs-bar__line{font-size:15px;font-weight:600;line-height:1.35;margin:0;color:#fff}
+.cs-bar__btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 23px;border-radius:var(--r-pill);background:var(--magenta);color:#fff;font-weight:700;font-size:15px;text-decoration:none;white-space:nowrap;box-shadow:0 4px 18px rgba(232,91,138,.46);animation:csPulse 2.4s ease-in-out infinite;transition:transform .18s ease,box-shadow .18s ease}
+.cs-bar__btn:hover{transform:translateY(-2px);box-shadow:0 8px 26px rgba(232,91,138,.68);animation-play-state:paused}
+.cs-bar__btn:focus-visible{outline:3px solid #fff;outline-offset:3px}
+@keyframes csPulse{0%,100%{box-shadow:0 4px 18px rgba(232,91,138,.36)}50%{box-shadow:0 4px 27px rgba(232,91,138,.68)}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition-duration:.01ms!important}.cs-bar__btn{animation:none}}
+
+@media (min-width:600px){
+  .hero__btns{flex-direction:row;flex-wrap:wrap}
+  .hero__btns .btn{flex:1 1 auto;min-width:196px}
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .why{grid-template-columns:repeat(2,1fr)}
+}
+@media (min-width:900px){
+  body{padding-bottom:106px}
+  .section{padding:74px 0}
+  h1{font-size:45px}h2{font-size:34px}
+  .hero__in{display:grid;grid-template-columns:1.06fr .94fr;gap:44px;align-items:center;padding:58px 20px 70px}
+  .hero__art{margin-top:0}
+  .grid{grid-template-columns:repeat(3,1fr)}
+  .contact{grid-template-columns:1.05fr .95fr;align-items:start}
+  .footer__grid{grid-template-columns:1.4fr 1fr 1fr}
+  .cs-bar__in{flex-wrap:nowrap;justify-content:space-between;text-align:left}
+  .cs-bar__line{font-size:16.5px}
+}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="header__in">
+    <a class="brand" href="#top">
+      <img class="brand-logo-img" src="brand/logo-facebook-profile.jpg" alt="Jessi&rsquo;s In-Home Grooming logo">
+      <span class="brand__txt">
+        <span class="brand__name">Jessi&rsquo;s In-Home Grooming</span>
+        <span class="brand__sub">NW Calgary &middot; since 1996</span>
+      </span>
+    </a>
+    <a class="btn btn--magenta btn--sm header__cta" href="tel:+14037023038">Call 403-702-3038</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="hero__in">
+      <div>
+        <p class="eyebrow">6th Ave &amp; 15th St NW &middot; Calgary, Alberta</p>
+        <p class="pill">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21V9l8-6 8 6v12"></path><path d="M9 21v-7h6v7"></path></svg>
+          Groomed at home, not in a van
+        </p>
+        <h1>Jessi&rsquo;s In-Home Grooming. <em>Your dog stays home. I come to you.</em></h1>
+        <p class="hero__lead">In-home dog and cat grooming across northwest Calgary since 1996. No carrier, no car ride, no crate in a strange room &mdash; the groom happens in the house your pet already lives in.</p>
+
+        <div class="stat">
+          <div class="stat__item"><p class="stat__n">1996</p><p class="stat__l">Grooming in Calgary homes since</p></div>
+          <div class="stat__item"><p class="stat__n">96%</p><p class="stat__l">Recommended, across 20 reviews</p></div>
+          <div class="stat__item"><p class="stat__n">NW</p><p class="stat__l">Calgary &mdash; my service area</p></div>
+        </div>
+
+        <div class="idcard">
+          <div class="idcard__row">
+            <svg class="idcard__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            <div><p class="idcard__k">Service area</p><p class="idcard__v">Northwest Calgary, based around<br>6th Ave &amp; 15th St NW</p></div>
+          </div>
+          <div class="idcard__row">
+            <svg class="idcard__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"></path></svg>
+            <div><p class="idcard__k">Phone &mdash; tap to call</p><p class="idcard__v"><a href="tel:+14037023038">403-702-3038</a></p></div>
+          </div>
+          <div class="idcard__row">
+            <svg class="idcard__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Z"></path><path d="m3.4 6.3 8.6 6 8.6-6"></path></svg>
+            <div><p class="idcard__k">Email</p><p class="idcard__v"><a href="mailto:JessiFairholm@live.com">JessiFairholm@live.com</a></p></div>
+          </div>
+          <div class="idcard__row">
+            <svg class="idcard__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3Z"></path></svg>
+            <div><p class="idcard__k">Facebook</p><p class="idcard__v"><a href="https://www.facebook.com/jessisinhomegrooming/" target="_blank" rel="noopener">facebook.com/jessisinhomegrooming</a></p></div>
+          </div>
+          <div class="idcard__row">
+            <svg class="idcard__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>
+            <div><p class="idcard__k">Appointment hours</p><p class="idcard__v">To be confirmed &mdash; tell me and they go here</p></div>
+          </div>
+        </div>
+
+        <div class="hero__btns">
+          <a class="btn btn--magenta" href="tel:+14037023038">Call Jessi</a>
+          <a class="btn btn--teal" href="https://www.facebook.com/jessisinhomegrooming/" target="_blank" rel="noopener">Message on Facebook</a>
+        </div>
+      </div>
+
+      <div class="hero__art">
+        <img class="mark" src="brand/logo-facebook-profile.jpg" alt="Jessi&rsquo;s Home Grooming logo &mdash; an illustrated doodle in sunglasses and a tropical shirt with a gold paw pendant, against a sunset" width="440" height="440">
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--dark">
+    <div class="wrap">
+      <p class="eyebrow">Why this page exists</p>
+      <h2>A shop a block away owns your corner of Calgary online</h2>
+      <p style="max-width:64ch;color:#b8d6e0">Pawsitively Pooched runs a page called <b style="color:#fff">/dog-grooming-nw-calgary</b> from #206, 3400 14 St NW &mdash; about a block from where you work. Search that neighbourhood and a business you can walk to is the answer, because it has a page with the neighbourhood&rsquo;s name in the address.</p>
+      <p style="max-width:64ch;color:#b8d6e0">Every mobile groomer competing with you owns one. You are the only one who does not.</p>
+
+      <div class="rivals">
+        <div class="rival"><span class="rival__d">thek-9unit.ca</span><span class="rival__n">competitor &mdash; owns a domain</span></div>
+        <div class="rival"><span class="rival__d">mobiledoggroomingcalgary.ca</span><span class="rival__n">competitor &mdash; owns a domain</span></div>
+        <div class="rival"><span class="rival__d">goodsniffcalgary.com</span><span class="rival__n">competitor &mdash; owns a domain</span></div>
+        <div class="rival"><span class="rival__d">pawsitivelypooched.com/dog-grooming-nw-calgary</span><span class="rival__n">a block from you</span></div>
+        <div class="rival"><span class="rival__d">tinkletime.ca</span><span class="rival__n">&ldquo;mobile in-home dog and cat grooming&rdquo; &mdash; your exact words</span></div>
+        <div class="rival rival--you"><span class="rival__d">this page &mdash; Jessi&rsquo;s In-Home Grooming, NW Calgary</span><span class="rival__n">yours</span></div>
+      </div>
+
+      <p style="max-width:64ch;color:#b8d6e0;margin:22px 0 0">And the number one result for mobile grooming in this city is not a groomer at all. It is Yelp&rsquo;s &ldquo;Top 10 Best Mobile Dog Groomers in Calgary&rdquo; &mdash; a list that ranks you, sells against you, and takes a cut either way.</p>
+    </div>
+  </section>
+
+  <section class="section section--coral">
+    <div class="wrap">
+      <p class="eyebrow">Search your own name</p>
+      <h2>Right now, it returns two closed shops in California</h2>
+      <p style="max-width:63ch;color:var(--ink-2)">Page one for your business name brings back Yelp pages for <b>Jessi&rsquo;s Mobile Pet Grooming</b> in Santa Clarita and <b>Jessica&rsquo;s Pet Grooming</b> in Tracy &mdash; both in California, both closed. Someone who was handed your name by a neighbour and typed it in gets those, and a dead end.</p>
+      <div class="quote">
+        <p>&ldquo;96% recommended, 20 reviews.&rdquo;</p>
+        <span class="quote__src">Thirty years of goodwill &mdash; currently readable only if you already found her Facebook page.</span>
+      </div>
+      <p style="max-width:63ch;color:var(--ink-2);margin:0">A page like this one is where that name lands instead: your service, your area, your number, and reviews that belong to you rather than to a directory.</p>
+    </div>
+  </section>
+
+  <section class="section" id="services">
+    <div class="wrap">
+      <p class="eyebrow">What in-home grooming means</p>
+      <h2>The dog never leaves the house</h2>
+      <div class="grid">
+        <div class="card">
+          <div class="card__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21V9l8-6 8 6v12"></path><path d="M9 21v-7h6v7"></path></svg></div>
+          <h3>In your home, not a van</h3>
+          <p>No carrier, no drive across town, no waiting in a kennel until a table frees up. For an anxious or elderly dog that is the whole difference.</p>
+        </div>
+        <div class="card">
+          <div class="card__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="16" rx="4.4" ry="3.6"></ellipse><ellipse cx="5.6" cy="10.4" rx="2.1" ry="2.7"></ellipse><ellipse cx="18.4" cy="10.4" rx="2.1" ry="2.7"></ellipse><ellipse cx="9.2" cy="6.2" rx="2" ry="2.6"></ellipse><ellipse cx="14.8" cy="6.2" rx="2" ry="2.6"></ellipse></svg></div>
+          <h3>Dogs and cats</h3>
+          <p>Cat owners in Calgary have almost nowhere to look. Saying it plainly on a page of your own is how they find you.</p>
+        </div>
+        <div class="card">
+          <div class="card__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg></div>
+          <h3>Since 1996</h3>
+          <p>Thirty years of Calgary homes. Not one of the domains listed above can put a date like that at the top of their page.</p>
+        </div>
+        <div class="card">
+          <div class="card__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h4l2.4-6 3.6 12 2.4-6H21"></path></svg></div>
+          <h3>Services &amp; pricing</h3>
+          <p><b style="color:var(--ink)">To be confirmed.</b> Full groom, bath and tidy, nail trims, de-shedding &mdash; whichever you offer and at your prices. Nothing here is invented.</p>
+        </div>
+        <div class="card">
+          <div class="card__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
+          <h3>Which neighbourhoods</h3>
+          <p><b style="color:var(--ink)">To be confirmed.</b> Name the NW communities you cover and they get listed here &mdash; the exact words people search with.</p>
+        </div>
+        <div class="card">
+          <div class="card__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.6 14.6 9l5.9.8-4.3 4.1 1 5.9-5.2-2.8L6.8 19.8l1-5.9L3.5 9.8 9.4 9Z"></path></svg></div>
+          <h3>Your reviews, on your page</h3>
+          <p>Twenty reviews at 96% recommended sit inside Facebook today. They can be quoted here, with names, where a first-time caller will see them.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--teal" id="why">
+    <div class="wrap">
+      <p class="eyebrow">What a page like this fixes</p>
+      <h2>Four things standing between you and the next booking</h2>
+      <div class="why">
+        <div class="why__item"><span class="why__num">01</span><div><h3>Your name returns you</h3><p>Not two closed California shops. That is the single cheapest thing on this list to fix, and the one costing you referrals today.</p></div></div>
+        <div class="why__item"><span class="why__num">02</span><div><h3>NW Calgary, claimed</h3><p>A competitor a block away has a page named after your neighbourhood. There is no rule saying only one business gets one.</p></div></div>
+        <div class="why__item"><span class="why__num">03</span><div><h3>Thirty years, stated once</h3><p>Since 1996, in-home, in this city. It is the strongest sentence you own and it is currently buried in a Facebook About tab.</p></div></div>
+        <div class="why__item"><span class="why__num">04</span><div><h3>Past the aggregator</h3><p>Yelp ranks you next to fifteen rivals and earns either way. A page of your own is the one result on the page with nobody else on it.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <div class="wrap">
+      <p class="eyebrow">Get in touch</p>
+      <h2>Book an in-home groom</h2>
+      <div class="contact">
+        <div>
+          <div class="hours">
+            <div class="hours__row"><span>Monday &ndash; Friday</span><span>To be confirmed</span></div>
+            <div class="hours__row"><span>Saturday</span><span>To be confirmed</span></div>
+            <div class="hours__row"><span>Sunday</span><span>To be confirmed</span></div>
+            <div class="hours__row"><span>How far in advance to book</span><span>To be confirmed</span></div>
+          </div>
+          <p class="note" style="margin-top:16px"><b>Hours &mdash; deliberately blank until you say</b>Mobile grooming runs on an appointment book, not a shopfront, and we are not going to publish times we guessed. Tell me once and they go here &mdash; along with how far ahead people should call.</p>
+        </div>
+        <div class="reach">
+          <h3>Reach Jessi</h3>
+          <a class="btn btn--magenta" href="tel:+14037023038">Call 403-702-3038</a>
+          <a class="btn btn--teal" href="https://www.facebook.com/jessisinhomegrooming/" target="_blank" rel="noopener">Message on Facebook</a>
+          <a class="btn btn--gold" href="mailto:JessiFairholm@live.com">Email JessiFairholm@live.com</a>
+          <p style="font-size:14px;color:var(--ink-2);margin:14px 0 0">In-home grooming across northwest Calgary, Alberta &mdash; based around 6th Ave &amp; 15th St NW</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <h3>Jessi&rsquo;s In-Home Grooming</h3>
+        <p class="footer__p">In-home dog &amp; cat grooming since 1996<br>Northwest Calgary, Alberta<br>Based around 6th Ave &amp; 15th St NW</p>
+      </div>
+      <div>
+        <h3>Call or email</h3>
+        <p class="footer__p"><a href="tel:+14037023038">403-702-3038</a><br><a href="mailto:JessiFairholm@live.com">JessiFairholm@live.com</a></p>
+      </div>
+      <div>
+        <h3>Find me online</h3>
+        <p class="footer__p"><a href="https://www.facebook.com/jessisinhomegrooming/" target="_blank" rel="noopener">Facebook &mdash; Jessi&rsquo;s In-Home Grooming</a></p>
+      </div>
+    </div>
+    <div class="footer__credit">
+      <span>&copy; 2026 Jessi&rsquo;s In-Home Grooming &middot; Calgary, Alberta</span>
+      <span>Website by CloudSpring IT Solutions</span>
+    </div>
+  </div>
+</footer>
+
+<aside class="cs-bar" role="complementary" aria-label="CloudSpring IT Solutions preview notice">
+  <div class="cs-bar__in">
+    <div class="cs-bar__txt">
+      <p class="cs-bar__eyebrow">PREVIEW &middot; CloudSpring IT Solutions</p>
+      <p class="cs-bar__line">Thirty years in NW Calgary, and searching your name returns two closed shops in California. Shall we change what it returns?</p>
+    </div>
+    <a class="cs-bar__btn" href="https://api.leadconnectorhq.com/widget/booking/QRPEnWRw2Kx9rBe0Mj6J" target="_blank" rel="noopener">Book a FREE Discovery Call &rarr;</a>
+  </div>
+</aside>
+
+</body>
+</html>

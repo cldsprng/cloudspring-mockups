@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Serbisyo Beterinaryo Animal Hospital Pasig — 24/7 emergency vet on Mercedes Avenue</title>
+<meta name="description" content="Serbisyo Beterinaryo Animal Hospital Pasig — Mercedes Avenue, San Miguel, Pasig City. Open 24 hours, 7 days a week. Emergency hotline 0917 315 0775. Diagnostics, imaging, surgery, rehabilitation and emergency care.">
+<style>
+:root{
+  /* Palette vision-read off the hospital's own Facebook mark — see
+     brand/brand.json (colors.source: "vision"). #E0193E is the ring and the
+     medical cross; #1B5E75 is the dog silhouette; #FFC107 is the cat. The
+     site config's #800020/#D4AF37 pair did not match the actual mark, so the
+     mark won. Typeface Jost is the one the hospital's own site declares. */
+  --rose:#E0193E;
+  --teal:#1B5E75;
+  --gold:#FFC107;
+  --rose-deep:#a5102c;
+  --teal-deep:#0f4152;
+  --rose-soft:#fdf0f3;
+  --teal-soft:#eaf3f6;
+  --gold-soft:#fff8e4;
+  --ink:#16262c;
+  --ink-2:#55686f;
+  --line:#dde7ea;
+  --shadow-sm:0 1px 2px rgba(22,38,44,.07), 0 3px 10px rgba(22,38,44,.07);
+  --shadow-md:0 12px 30px rgba(22,38,44,.15);
+  --r-sm:9px; --r-md:16px; --r-lg:26px; --r-pill:999px;
+  /* Jost is the hospital's own typeface. Declared, never hotlinked — this page
+     ships no third-party requests. */
+  --display:"Jost","Century Gothic",system-ui,-apple-system,sans-serif;
+  --body:"Jost",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;font-family:var(--body);color:var(--ink);background:#fff;font-size:16px;line-height:1.62;padding-bottom:198px;overflow-x:hidden}
+img,svg{max-width:100%;display:block}
+h1,h2,h3{font-family:var(--display);font-weight:700;line-height:1.15;margin:0 0 12px;letter-spacing:-.005em}
+h1{font-size:34px}h2{font-size:28px}h3{font-size:20px}
+p{margin:0 0 16px}
+a{color:var(--rose-deep)}
+.wrap{width:100%;max-width:1060px;margin:0 auto;padding:0 20px}
+.eyebrow{font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--rose);margin:0 0 8px}
+.section{padding:56px 0}
+.section--teal{background:var(--teal-soft)}
+.section--gold{background:var(--gold-soft)}
+.section--deep{background:var(--teal);color:#dceaef}
+.section--deep h2,.section--deep h3{color:#fff}
+.section--deep .eyebrow{color:var(--gold)}
+:focus-visible{outline:3px solid var(--rose);outline-offset:3px;border-radius:4px}
+
+.emergency{background:var(--rose);color:#fff;text-align:center;padding:9px 16px;font-size:14px;font-weight:700;letter-spacing:.03em}
+.emergency a{color:#fff;text-decoration:none;border-bottom:2px solid rgba(255,255,255,.6)}
+.emergency a:hover{border-bottom-color:#fff}
+
+.header{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.96);backdrop-filter:saturate(150%) blur(8px);border-bottom:3px solid var(--rose)}
+.header__in{display:flex;align-items:center;gap:12px;min-height:68px;padding:8px 20px;max-width:1060px;margin:0 auto}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none;color:var(--ink);min-height:44px}
+.brand-logo-img{width:52px;height:52px;flex:0 0 52px;object-fit:contain;background:#fff;border-radius:9px;border:2px solid var(--line)}
+.brand__txt{display:flex;flex-direction:column;line-height:1.14}
+.brand__name{font-family:var(--display);font-weight:700;font-size:16.5px}
+.brand__sub{font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:var(--teal);font-weight:700}
+.header__cta{margin-left:auto}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:46px;padding:12px 19px;border-radius:var(--r-pill);font-family:var(--body);font-weight:700;font-size:15px;text-decoration:none;border:2px solid transparent;cursor:pointer;transition:background-color .18s ease,color .18s ease,border-color .18s ease,transform .18s ease,box-shadow .18s ease}
+.btn--rose{background:var(--rose);color:#fff;box-shadow:var(--shadow-sm)}
+.btn--rose:hover{background:var(--rose-deep);transform:translateY(-2px);box-shadow:var(--shadow-md)}
+.btn--teal{background:var(--teal);color:#fff;box-shadow:var(--shadow-sm)}
+.btn--teal:hover{background:var(--teal-deep);transform:translateY(-2px);box-shadow:var(--shadow-md)}
+.btn--gold{background:var(--gold);color:#3d2c00;box-shadow:var(--shadow-sm)}
+.btn--gold:hover{background:#e5ac00;transform:translateY(-2px);box-shadow:var(--shadow-md)}
+.btn--ghost{background:#fff;color:var(--ink);border-color:var(--line)}
+.btn--ghost:hover{border-color:var(--teal);background:var(--teal-soft)}
+.btn--sm{font-size:14px;padding:9px 15px;min-height:44px}
+.btn--big{min-height:58px;font-size:18px;padding:15px 26px}
+
+.hero{position:relative;background:linear-gradient(168deg,var(--teal-soft) 0%,#fff 60%);overflow:hidden}
+.hero::after{content:"";position:absolute;right:-170px;bottom:-190px;width:470px;height:470px;border-radius:50%;background:radial-gradient(circle at 50% 50%,rgba(224,25,62,.14),rgba(224,25,62,0) 70%);pointer-events:none}
+.hero__in{padding:34px 20px 46px;max-width:1060px;margin:0 auto;position:relative;z-index:1}
+.hero h1{font-size:clamp(30px,7vw,47px);margin-bottom:14px}
+.hero h1 em{font-style:normal;color:var(--rose)}
+.hero__lead{font-size:17px;color:var(--ink-2);max-width:56ch;margin-bottom:22px}
+.pill{display:inline-flex;align-items:center;gap:8px;background:var(--gold);color:#3d2c00;font-weight:700;font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;padding:7px 15px;border-radius:var(--r-pill);margin-bottom:15px}
+.pill svg{width:16px;height:16px}
+
+.hotline{background:var(--rose);color:#fff;border-radius:var(--r-md);padding:22px;box-shadow:0 14px 34px rgba(224,25,62,.32);margin-bottom:20px;text-align:center}
+.hotline__k{font-size:11px;letter-spacing:.19em;text-transform:uppercase;font-weight:700;margin:0 0 7px;color:#ffd4dc}
+.hotline__n{font-family:var(--display);font-size:clamp(30px,8vw,42px);font-weight:700;letter-spacing:.01em;margin:0 0 10px;line-height:1.05}
+.hotline__n a{color:#fff;text-decoration:none}
+.hotline__sub{font-size:13.5px;margin:0;color:#ffdbe2}
+
+.idcard{background:#fff;border:1px solid var(--line);border-left:5px solid var(--teal);border-radius:var(--r-md);padding:19px;box-shadow:var(--shadow-md);margin-bottom:22px}
+.idcard__row{display:flex;gap:13px;padding:11px 0;align-items:flex-start;border-top:1px solid var(--line)}
+.idcard__row:first-child{border-top:0;padding-top:0}
+.idcard__ico{flex:0 0 22px;width:22px;height:22px;color:var(--teal);margin-top:3px}
+.idcard__k{font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--ink-2);margin:0 0 3px}
+.idcard__v{font-size:15.5px;font-weight:500;margin:0}
+.idcard__v a{color:var(--ink);text-decoration:none;border-bottom:2px solid var(--gold)}
+.idcard__v a:hover{color:var(--rose-deep);border-bottom-color:var(--rose)}
+.hero__btns{display:flex;flex-direction:column;gap:10px}
+.hero__art{margin-top:34px}
+.mark{width:100%;max-width:370px;margin:0 auto;background:#fff;border-radius:var(--r-lg);border:3px solid var(--line);padding:14px;filter:drop-shadow(0 16px 34px rgba(22,38,44,.16))}
+
+.dialbox{background:#fff;border:2px dashed var(--rose);border-radius:var(--r-md);padding:20px;margin-top:22px}
+.dial{display:flex;gap:14px;align-items:flex-start;padding:14px 0;border-top:1px solid var(--line)}
+.dial:first-of-type{border-top:0;padding-top:0}
+.dial__ico{flex:0 0 34px;width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff}
+.dial__ico svg{width:19px;height:19px}
+.dial__ico--bad{background:#9aa4a8}
+.dial__ico--good{background:var(--rose)}
+.dial__t{margin:0;font-size:11px;letter-spacing:.13em;text-transform:uppercase;font-weight:700;color:var(--ink-2)}
+.dial__n{margin:3px 0 0;font-family:var(--display);font-size:23px;font-weight:700;letter-spacing:.02em}
+.dial__n--bad{color:#8c979b;text-decoration:line-through}
+.dial__n--good{color:var(--rose)}
+.dial__d{margin:4px 0 0;font-size:14px;color:var(--ink-2)}
+
+.grid{display:grid;gap:16px;grid-template-columns:1fr}
+.card{background:#fff;border:1px solid var(--line);border-top:5px solid var(--teal);border-radius:var(--r-md);padding:22px;box-shadow:var(--shadow-sm);transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+.card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);border-top-color:var(--rose)}
+.card__ico{width:46px;height:46px;border-radius:14px;background:var(--rose-soft);color:var(--rose);display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+.card__ico svg{width:25px;height:25px}
+.card p{font-size:15px;color:var(--ink-2);margin:0}
+
+.why{display:grid;gap:20px;grid-template-columns:1fr}
+.why__item{display:flex;gap:15px;align-items:flex-start}
+.why__num{flex:0 0 44px;width:44px;height:44px;border-radius:12px;background:var(--gold);color:#3d2c00;font-family:var(--display);font-weight:700;font-size:16px;display:flex;align-items:center;justify-content:center}
+.why__item p{font-size:15px;color:var(--ink-2);margin:0}
+.section--deep .why__item p{color:#c2d7de}
+
+.clock{display:flex;align-items:center;gap:16px;background:#fff;border:2px solid var(--gold);border-radius:var(--r-md);padding:20px;box-shadow:var(--shadow-sm);margin-bottom:20px}
+.clock__big{font-family:var(--display);font-size:44px;font-weight:700;color:var(--rose);line-height:1}
+.clock p{margin:0;font-size:15px;color:var(--ink-2)}
+
+.contact{display:grid;gap:24px;grid-template-columns:1fr}
+.note{background:var(--gold-soft);border:1px solid var(--gold);border-radius:var(--r-md);padding:17px;font-size:14.5px;color:var(--ink-2);margin:0}
+.note b{display:block;color:var(--ink);margin-bottom:5px;font-size:15px}
+.reach{background:#fff;border:2px solid var(--rose);border-radius:var(--r-md);padding:22px;box-shadow:var(--shadow-md);display:flex;flex-direction:column;gap:10px}
+
+.footer{background:var(--teal);color:#c4dae1;padding:44px 0 34px}
+.footer h3{color:#fff;font-size:16px;margin-bottom:9px}
+.footer__grid{display:grid;gap:26px;grid-template-columns:1fr}
+.footer__p{font-size:14.5px;margin:0;line-height:1.75}
+.footer a{color:var(--gold);text-decoration:none}
+.footer a:hover{text-decoration:underline}
+.footer__credit{border-top:1px solid rgba(255,255,255,.17);margin-top:28px;padding-top:18px;display:flex;flex-wrap:wrap;gap:8px 18px;justify-content:space-between;font-size:13px;color:#9dbcc6}
+
+.cs-bar{position:fixed;left:0;right:0;bottom:0;z-index:200;background:rgba(11,32,40,.97);backdrop-filter:saturate(150%) blur(10px);border-top:3px solid var(--gold);box-shadow:0 -8px 32px rgba(11,32,40,.4);color:#fff;padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px))}
+.cs-bar__in{max-width:1060px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:10px 18px;text-align:center}
+.cs-bar__eyebrow{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--gold);margin:0 0 3px}
+.cs-bar__line{font-size:15px;font-weight:600;line-height:1.35;margin:0;color:#fff}
+.cs-bar__btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 23px;border-radius:var(--r-pill);background:var(--rose);color:#fff;font-weight:700;font-size:15px;text-decoration:none;white-space:nowrap;box-shadow:0 4px 18px rgba(224,25,62,.44);animation:csPulse 2.4s ease-in-out infinite;transition:transform .18s ease,box-shadow .18s ease}
+.cs-bar__btn:hover{transform:translateY(-2px);box-shadow:0 8px 26px rgba(224,25,62,.66);animation-play-state:paused}
+.cs-bar__btn:focus-visible{outline:3px solid #fff;outline-offset:3px}
+@keyframes csPulse{0%,100%{box-shadow:0 4px 18px rgba(224,25,62,.36)}50%{box-shadow:0 4px 27px rgba(224,25,62,.68)}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition-duration:.01ms!important}.cs-bar__btn{animation:none}}
+
+@media (min-width:600px){
+  .hero__btns{flex-direction:row;flex-wrap:wrap}
+  .hero__btns .btn{flex:1 1 auto;min-width:196px}
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .why{grid-template-columns:repeat(2,1fr)}
+}
+@media (min-width:900px){
+  body{padding-bottom:106px}
+  .section{padding:74px 0}
+  h1{font-size:45px}h2{font-size:34px}
+  .hero__in{display:grid;grid-template-columns:1.06fr .94fr;gap:44px;align-items:center;padding:56px 20px 70px}
+  .hero__art{margin-top:0}
+  .grid{grid-template-columns:repeat(3,1fr)}
+  .contact{grid-template-columns:1.05fr .95fr;align-items:start}
+  .footer__grid{grid-template-columns:1.4fr 1fr 1fr}
+  .cs-bar__in{flex-wrap:nowrap;justify-content:space-between;text-align:left}
+  .cs-bar__line{font-size:16.5px}
+}
+</style>
+</head>
+<body>
+
+<div class="emergency">Open 24 hours, 7 days a week &mdash; emergency hotline <a href="tel:+639173150775">0917 315 0775</a></div>
+
+<header class="header">
+  <div class="header__in">
+    <a class="brand" href="#top">
+      <img class="brand-logo-img" src="brand/logo-facebook-profile.jpg" alt="Serbisyo Beterinaryo Animal Hospital Pasig logo">
+      <span class="brand__txt">
+        <span class="brand__name">Serbisyo Beterinaryo</span>
+        <span class="brand__sub">Animal Hospital &middot; Pasig</span>
+      </span>
+    </a>
+    <a class="btn btn--rose btn--sm header__cta" href="tel:+639173150775">Call 0917 315 0775</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="hero__in">
+      <div>
+        <p class="eyebrow">Mercedes Avenue &middot; San Miguel &middot; Pasig City</p>
+        <p class="pill">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>
+          Open 24 hours, every day
+        </p>
+        <h1>Serbisyo Beterinaryo Animal Hospital Pasig. <em>The number that actually rings.</em></h1>
+        <p class="hero__lead">A full-service veterinary hospital on Mercedes Avenue &mdash; diagnostics, imaging, surgery, rehabilitation and emergency care, staffed around the clock. This page exists so that at 2am, one tap connects.</p>
+
+        <div class="hotline">
+          <p class="hotline__k">24/7 Emergency Hotline</p>
+          <p class="hotline__n"><a href="tel:+639173150775">0917 315 0775</a></p>
+          <p class="hotline__sub">Tap to call. This is the hospital&rsquo;s real number.</p>
+        </div>
+
+        <div class="idcard">
+          <div class="idcard__row">
+            <svg class="idcard__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            <div><p class="idcard__k">Hospital</p><p class="idcard__v">Mercedes Avenue, San Miguel,<br>Pasig City</p></div>
+          </div>
+          <div class="idcard__row">
+            <svg class="idcard__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>
+            <div><p class="idcard__k">Hours</p><p class="idcard__v">24 hours a day, 7 days a week</p></div>
+          </div>
+          <div class="idcard__row">
+            <svg class="idcard__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Z"></path><path d="m3.4 6.3 8.6 6 8.6-6"></path></svg>
+            <div><p class="idcard__k">Email</p><p class="idcard__v"><a href="mailto:sbahpasig@gmail.com">sbahpasig@gmail.com</a></p></div>
+          </div>
+          <div class="idcard__row">
+            <svg class="idcard__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3Z"></path></svg>
+            <div><p class="idcard__k">Facebook &amp; Instagram</p><p class="idcard__v"><a href="https://www.facebook.com/sbahpasig/" target="_blank" rel="noopener">facebook.com/sbahpasig</a></p></div>
+          </div>
+        </div>
+
+        <div class="hero__btns">
+          <a class="btn btn--rose btn--big" href="tel:+639173150775">Call the hospital now</a>
+          <a class="btn btn--teal" href="https://www.facebook.com/sbahpasig/" target="_blank" rel="noopener">Message on Facebook</a>
+        </div>
+      </div>
+
+      <div class="hero__art">
+        <img class="mark" src="brand/logo-facebook-profile.jpg" alt="Serbisyo Beterinaryo Animal Hospital Pasig logo &mdash; a medical cross in a ring with a dog and a cat, above a banner reading Serbisyo Beterinaryo Pasig" width="440" height="440">
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--deep">
+    <div class="wrap">
+      <p class="eyebrow">Why this page exists</p>
+      <h2>Your emergency hotline dials a number that is not yours</h2>
+      <p style="max-width:64ch;color:#c2d7de">On serbisyobeterinaryo.com there is a clearly labelled <b style="color:#fff">24/7 Emergency Hotline</b>. It is a working tap-to-call link. The number behind it is <b style="color:#fff">+63 917 123 4567</b> &mdash; a builder&rsquo;s placeholder that was never replaced.</p>
+      <p style="max-width:64ch;color:#c2d7de">Your real number, 0917 315 0775, does not appear anywhere in that site&rsquo;s code. Not once. And there is no server behind the page that could be supplying a different one at run time, so the placeholder is what every visitor gets.</p>
+
+      <div class="dialbox" style="background:rgba(255,255,255,.06);border-color:var(--gold)">
+        <div class="dial">
+          <span class="dial__ico dial__ico--bad"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"></path></svg></span>
+          <div>
+            <p class="dial__t" style="color:#9dbcc6">What your website dials today</p>
+            <p class="dial__n dial__n--bad" style="color:#8ea8b0">+63 917 123 4567</p>
+            <p class="dial__d" style="color:#9dbcc6">A placeholder. 1-2-3-4-5-6-7 in sequence. At 2am it reaches nobody at this hospital.</p>
+          </div>
+        </div>
+        <div class="dial" style="border-top-color:rgba(255,255,255,.16)">
+          <span class="dial__ico dial__ico--good"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 7"></path></svg></span>
+          <div>
+            <p class="dial__t" style="color:#ffd9a0">What this page dials</p>
+            <p class="dial__n dial__n--good" style="color:var(--gold)">0917 315 0775</p>
+            <p class="dial__d" style="color:#c2d7de">Your hotline, tappable, at the top of the page and in the bar above it.</p>
+          </div>
+        </div>
+      </div>
+
+      <p style="max-width:64ch;color:#c2d7de;margin:22px 0 0">Two more things that site does not do: its logo tag points at a file that returns &ldquo;not found&rdquo;, so the mark never loads &mdash; and its Facebook and Instagram fields are empty, so it never sends anyone to the page where your clients actually talk to you.</p>
+    </div>
+  </section>
+
+  <section class="section section--gold">
+    <div class="wrap">
+      <p class="eyebrow">What 24/7 has to mean online</p>
+      <h2>The call comes when nothing else is open</h2>
+      <div class="clock">
+        <span class="clock__big">2am</span>
+        <p>A dog is fitting. The owner searches &ldquo;24 hour vet Pasig&rdquo; on a phone, finds a hospital that says it never closes, and taps the emergency number. Everything after that tap is decided by whether the number is right.</p>
+      </div>
+      <p style="max-width:62ch;color:var(--ink-2);margin:0">You already run the hardest part &mdash; a hospital with a vet awake at 2am. The page just has to not lose the call. This one is one screen: hours, hotline, address, and a tap target big enough to hit in the dark.</p>
+    </div>
+  </section>
+
+  <section class="section" id="services">
+    <div class="wrap">
+      <p class="eyebrow">What the hospital does</p>
+      <h2>Full-service veterinary care in Pasig</h2>
+      <div class="grid">
+        <div class="card">
+          <div class="card__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h3.6l1.9-5 3 10 2.2-5H21"></path></svg></div>
+          <h3>Emergency &amp; critical care</h3>
+          <p>Open 24 hours, seven days a week, holidays included. The reason to have this page at all.</p>
+        </div>
+        <div class="card">
+          <div class="card__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3v4a4 4 0 0 0 8 0V3"></path><path d="M10 11h4l2.4 8.2a1.4 1.4 0 0 1-1.3 1.8H8.9a1.4 1.4 0 0 1-1.3-1.8Z"></path></svg></div>
+          <h3>In-house diagnostics</h3>
+          <p>Bloodwork and lab results read in the building, so treatment decisions are not waiting on a courier.</p>
+        </div>
+        <div class="card">
+          <div class="card__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"></rect><path d="M8 4v16M16 4v16M3 12h18"></path></svg></div>
+          <h3>Imaging</h3>
+          <p>On-site imaging for the cases where a physical exam is not enough to say what is wrong.</p>
+        </div>
+        <div class="card">
+          <div class="card__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 3.5 20.5 9.5"></path><path d="m3 21 3.6-.7L20.1 6.8a2 2 0 0 0 0-2.8l-1.1-1.1a2 2 0 0 0-2.8 0L2.7 16.4Z"></path></svg></div>
+          <h3>Surgery</h3>
+          <p>Surgical care with the diagnostics and imaging that inform it under the same roof.</p>
+        </div>
+        <div class="card">
+          <div class="card__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7-4.6-7-9.6A4.4 4.4 0 0 1 12 7a4.4 4.4 0 0 1 7 3.4c0 5-7 9.6-7 9.6Z"></path></svg></div>
+          <h3>Rehabilitation</h3>
+          <p>Recovery care after surgery or injury &mdash; the part of veterinary work owners rarely know is available locally.</p>
+        </div>
+        <div class="card">
+          <div class="card__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 8v8M8 12h8"></path></svg></div>
+          <h3>Consultations &amp; wellness</h3>
+          <p><b style="color:var(--ink)">Consult fees and package details &mdash; to be confirmed.</b> We will not publish a price we invented. Send yours and it goes here as written.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--teal" id="why">
+    <div class="wrap">
+      <p class="eyebrow">What a page like this fixes</p>
+      <h2>Four things, in order of what they cost you</h2>
+      <div class="why">
+        <div class="why__item"><span class="why__num">01</span><div><h3>A hotline that connects</h3><p>0917 315 0775, tappable, above the fold and in a fixed bar at the top of every screen. No sequence-of-digits placeholder anywhere on the page.</p></div></div>
+        <div class="why__item"><span class="why__num">02</span><div><h3>Your mark, actually loading</h3><p>The logo on this page is your Facebook mark, served from this site. It cannot 404, because it is not fetched from anywhere else.</p></div></div>
+        <div class="why__item"><span class="why__num">03</span><div><h3>Content a search engine can read</h3><p>The address, the 24/7 hours and the services are in the page itself &mdash; not assembled afterwards by five megabytes of script.</p></div></div>
+        <div class="why__item"><span class="why__num">04</span><div><h3>A path to your Facebook</h3><p>Linked twice. That is where your clients already message you, and right now your website never points at it.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <div class="wrap">
+      <p class="eyebrow">Get in touch</p>
+      <h2>Contact the hospital</h2>
+      <div class="contact">
+        <div>
+          <div class="clock" style="margin-bottom:16px">
+            <span class="clock__big" style="font-size:34px;color:var(--teal)">24/7</span>
+            <p><b style="color:var(--ink)">Always open.</b> Monday to Sunday, holidays included, day and night. There is no closing time to publish, which is exactly what a worried owner at 2am needs to read first.</p>
+          </div>
+          <p class="note"><b>Consult fees &mdash; deliberately blank until you say</b>Emergency consult, routine consult, imaging, surgery: we have not printed a single figure, because we do not know yours and we are not going to guess on a hospital&rsquo;s page. Tell us once and they appear here exactly as you set them.</p>
+        </div>
+        <div class="reach">
+          <h3>Reach us</h3>
+          <a class="btn btn--rose btn--big" href="tel:+639173150775">Call 0917 315 0775</a>
+          <a class="btn btn--teal" href="https://www.facebook.com/sbahpasig/" target="_blank" rel="noopener">Message on Facebook</a>
+          <a class="btn btn--gold" href="mailto:sbahpasig@gmail.com">Email sbahpasig@gmail.com</a>
+          <p style="font-size:14px;color:var(--ink-2);margin:14px 0 0">Mercedes Avenue, San Miguel, Pasig City &mdash; open 24 hours</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <h3>Serbisyo Beterinaryo Animal Hospital Pasig</h3>
+        <p class="footer__p">24-hour veterinary hospital<br>Diagnostics &middot; imaging &middot; surgery &middot; rehabilitation &middot; emergency care<br>Mercedes Avenue, San Miguel, Pasig City</p>
+      </div>
+      <div>
+        <h3>Emergency hotline</h3>
+        <p class="footer__p"><a href="tel:+639173150775">0917 315 0775</a><br><a href="mailto:sbahpasig@gmail.com">sbahpasig@gmail.com</a></p>
+      </div>
+      <div>
+        <h3>Find us online</h3>
+        <p class="footer__p"><a href="https://www.facebook.com/sbahpasig/" target="_blank" rel="noopener">Facebook &mdash; Serbisyo Beterinaryo Pasig</a></p>
+      </div>
+    </div>
+    <div class="footer__credit">
+      <span>&copy; 2026 Serbisyo Beterinaryo Animal Hospital Pasig &middot; Open 24/7</span>
+      <span>Website by CloudSpring IT Solutions</span>
+    </div>
+  </div>
+</footer>
+
+<aside class="cs-bar" role="complementary" aria-label="CloudSpring IT Solutions preview notice">
+  <div class="cs-bar__in">
+    <div class="cs-bar__txt">
+      <p class="cs-bar__eyebrow">PREVIEW &middot; CloudSpring IT Solutions</p>
+      <p class="cs-bar__line">Your live site&rsquo;s 24/7 emergency hotline dials +63 917 123 4567. Worth ten minutes to talk about?</p>
+    </div>
+    <a class="cs-bar__btn" href="https://api.leadconnectorhq.com/widget/booking/QRPEnWRw2Kx9rBe0Mj6J" target="_blank" rel="noopener">Book a FREE Discovery Call &rarr;</a>
+  </div>
+</aside>
+
+</body>
+</html>
