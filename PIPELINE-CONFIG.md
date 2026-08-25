@@ -1780,3 +1780,46 @@ promise, not the diagnosis, that the menu gates.
   wearing a `colors.source: "vision"` label, which is worse than no palette,
   because the label is the thing the gate trusts. `colors.brand[]` was left
   deliberately empty and the card went to BRAND BLOCKED with a named remedy.
+- 2026-08-25 (step 6 QA, CLO-93 — a new slop pattern: the recipient-name
+  placeholder, not just the sender one): both of today's two new drafts (The
+  Golden Fur, RUFFhouse Pet Grooming) opened with the literal, unfilled text
+  "Hi [name],". The banned-list entry for `[Your name]` only covers the
+  sender placeholder (fixed by always signing Dei); nobody had written a rule
+  for the greeting placeholder because no earlier batch shipped one. Add it
+  explicitly: **no unfilled bracket placeholder of any kind ships**, sender or
+  recipient. Since no lead in this pipeline carries a contact person's name on
+  the card, the fix is not to fill the bracket but to drop the name-dependent
+  greeting entirely ("Hi there," or leading straight into the evidence).
+  Because it was the exact same string in both of today's drafts, it was also
+  a batch-wide shared-opener collision — one defect, two failure modes.
+  RUFFhouse was fixed in place (opener, plus both em-dashes including a
+  reintroduced "— Dei" closer — the same retired 08-23/08-24 pattern). Golden
+  Fur was routed back to MOCKUP READY instead of patched, for a second,
+  separate reason below.
+- 2026-08-25 (step 6 QA, CLO-93 — a card with no Lead Details/Evidence/
+  Pipeline section at all, and what it hid): The Golden Fur's card carried
+  *only* the outreach draft — no business/contact block, no Sales Angle or
+  Evidence, no brand-verified line, no send channel. Every other card in
+  READY TO SEND, however short, has at least a one-line lead identifier and a
+  built/verified/channel line; this one had none, so QA could not check the
+  draft's claim against anything, and the human approver would not know how
+  to send it if approved. The draft's angle cited ClinicFinderPH and called
+  the lead "clinics" — every prior ClinicFinderPH mention in this log is a
+  dental/derma/pedia lead, and The Golden Fur is pet grooming/hotel/
+  accessories per its own captured logo tagline. With no Lead Details to
+  check the claim against, that reads as a mismatched angle carried over from
+  a clinic-niche draft rather than a verified finding for this lead. QA does
+  not invent or re-verify evidence to patch that — routed back to MOCKUP
+  READY for step 5 to redraft with a real Lead Details/Evidence/channel
+  section, rather than fixed in place. **Rule going forward: a READY TO SEND
+  card missing a Lead Details/Evidence/channel section is itself a QA fail,
+  independent of what the draft text reads like** — QA cannot honesty-check a
+  claim it cannot trace, and cannot pass a card the human won't know how to
+  send.
+- 2026-08-25 (step 6 QA, CLO-93 — brand gate re-run, both new Makati leads):
+  independently re-ran `verify-brand.mjs` on both of today's builds. Both
+  PASS: `the-golden-fur-makati` (#f5c242/#ec5a26/#3bb8d8) and
+  `ruffhouse-pet-grooming-makati` (#13376c/#a9dcd9/#c8a884/#f2a03e), and both
+  `logoFiles[]` entries are committed (`git status --porcelain` clean, files
+  present in `7cecfe2`). No brand-gate defect this run — both QA actions above
+  are drafting defects, not build ones.
