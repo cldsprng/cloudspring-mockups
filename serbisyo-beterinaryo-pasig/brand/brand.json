@@ -1,0 +1,56 @@
+{
+  "slug": "serbisyo-beterinaryo-pasig",
+  "site": "https://serbisyobeterinaryo.com/",
+  "facebook": "sbahpasig",
+  "capturedAt": "2026-08-26T07:32:00.000Z",
+  "source": "headless-http + vision",
+  "name": "Serbisyo Beterinaryo - Veterinary Clinic",
+  "logo": {
+    "file": "logo-facebook-profile.jpg",
+    "score": 95,
+    "why": "facebook profile picture with medical cross and branded animals"
+  },
+  "logoFiles": [
+    {
+      "file": "logo-facebook-profile.jpg",
+      "bytes": 55463,
+      "from": "graph.facebook.com/sbahpasig/picture?width=1200&height=1200",
+      "why": "facebook profile picture",
+      "score": 95
+    }
+  ],
+  "colors": {
+    "brand": [
+      {
+        "hex": "#E0193E",
+        "weight": 55,
+        "name": "hot pink cross"
+      },
+      {
+        "hex": "#1B5E75",
+        "weight": 30,
+        "name": "teal animal"
+      },
+      {
+        "hex": "#FFC107",
+        "weight": 15,
+        "name": "gold accent"
+      }
+    ],
+    "neutral": [],
+    "themeColor": null,
+    "source": "vision"
+  },
+  "fonts": [
+    "Jost"
+  ],
+  "ready": true,
+  "blockedBy": null,
+  "confidence": 85,
+  "notes": [
+    "facebook profile picture: medical cross symbol with dog silhouettes",
+    "hot pink circle and cross, teal dog with gold/yellow highlight",
+    "professional veterinary clinic branding, PASIG identifier",
+    "card noted site config references #800020 + #D4AF37; actual logo uses brighter pink and teal"
+  ]
+}

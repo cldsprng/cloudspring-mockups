@@ -1,0 +1,59 @@
+{
+  "slug": "jessi-calgary",
+  "site": null,
+  "facebook": "jessisinhomegrooming",
+  "capturedAt": "2026-08-26T07:33:00.000Z",
+  "source": "headless-http + vision",
+  "name": null,
+  "logo": {
+    "file": "logo-facebook-profile.jpg",
+    "score": 95,
+    "why": "facebook profile picture with illustrated brand mascot"
+  },
+  "logoFiles": [
+    {
+      "file": "logo-facebook-profile.jpg",
+      "bytes": 547399,
+      "from": "graph.facebook.com/jessisinhomegrooming/picture?width=1200&height=1200",
+      "why": "facebook profile picture",
+      "score": 95
+    }
+  ],
+  "colors": {
+    "brand": [
+      {
+        "hex": "#FF9B8A",
+        "weight": 40,
+        "name": "coral pink"
+      },
+      {
+        "hex": "#4A9FB5",
+        "weight": 30,
+        "name": "teal"
+      },
+      {
+        "hex": "#E85B8A",
+        "weight": 15,
+        "name": "magenta flower"
+      },
+      {
+        "hex": "#FFD700",
+        "weight": 15,
+        "name": "gold"
+      }
+    ],
+    "neutral": [],
+    "themeColor": null,
+    "source": "vision"
+  },
+  "fonts": [],
+  "ready": true,
+  "blockedBy": null,
+  "confidence": 80,
+  "notes": [
+    "facebook profile picture: illustrated mascot character with sunglasses and Hawaiian shirt",
+    "golden doodle wearing tropical colors against sunset background",
+    "brand contains business mark (character logo), not a customer photo",
+    "colorful tropical theme with coral sunset, teal flowers, gold accents"
+  ]
+}

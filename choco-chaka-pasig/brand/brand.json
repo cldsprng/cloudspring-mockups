@@ -1,0 +1,49 @@
+{
+  "slug": "choco-chaka-pasig",
+  "site": null,
+  "facebook": "choconchaka",
+  "capturedAt": "2026-08-26T07:31:00.000Z",
+  "source": "headless-http + vision",
+  "name": null,
+  "logo": {
+    "file": "logo-facebook-profile.jpg",
+    "score": 95,
+    "why": "facebook profile picture with professional red and charcoal design"
+  },
+  "logoFiles": [
+    {
+      "file": "logo-facebook-profile.jpg",
+      "bytes": 128929,
+      "from": "graph.facebook.com/choconchaka/picture?width=1200&height=1200",
+      "why": "facebook profile picture",
+      "score": 95
+    }
+  ],
+  "colors": {
+    "brand": [
+      {
+        "hex": "#C41E3A",
+        "weight": 65,
+        "name": "crimson red"
+      },
+      {
+        "hex": "#2C2C2C",
+        "weight": 35,
+        "name": "charcoal"
+      }
+    ],
+    "neutral": [],
+    "themeColor": null,
+    "source": "vision"
+  },
+  "fonts": [],
+  "ready": true,
+  "blockedBy": null,
+  "confidence": 90,
+  "notes": [
+    "facebook profile picture: 'CHOCO + CHAKA' logo on circular background",
+    "established 2020, metro manila branding in decorative banners",
+    "crimson red text is primary brand color, charcoal decorative elements",
+    "professional logo with clear brand hierarchy"
+  ]
+}

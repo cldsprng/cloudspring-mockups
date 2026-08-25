@@ -1,0 +1,54 @@
+{
+  "slug": "bark-go-pasig",
+  "site": null,
+  "facebook": "barkngo",
+  "capturedAt": "2026-08-26T07:30:00.000Z",
+  "source": "headless-http + vision",
+  "name": null,
+  "logo": {
+    "file": "logo-facebook-profile.jpg",
+    "score": 95,
+    "why": "facebook profile picture with bright pink and navy branding"
+  },
+  "logoFiles": [
+    {
+      "file": "logo-facebook-profile.jpg",
+      "bytes": 51081,
+      "from": "graph.facebook.com/barkngo/picture?width=1200&height=1200",
+      "why": "facebook profile picture",
+      "score": 95
+    }
+  ],
+  "colors": {
+    "brand": [
+      {
+        "hex": "#FF1493",
+        "weight": 60,
+        "name": "hot pink"
+      },
+      {
+        "hex": "#1a1a3e",
+        "weight": 35,
+        "name": "navy"
+      },
+      {
+        "hex": "#000000",
+        "weight": 5,
+        "name": "black accent"
+      }
+    ],
+    "neutral": [],
+    "themeColor": null,
+    "source": "vision"
+  },
+  "fonts": [],
+  "ready": true,
+  "blockedBy": null,
+  "confidence": 85,
+  "notes": [
+    "facebook profile picture: dog silhouette with 'BARK & GO' logotype",
+    "bright hot pink outline on navy-outlined letterforms, cream background",
+    "vision-read: hot pink is the dominant brand color, navy provides structure",
+    "logo captured headlessly, colors verified by vision"
+  ]
+}
