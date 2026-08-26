@@ -1948,3 +1948,42 @@ promise, not the diagnosis, that the menu gates.
   automation IDs each card's internal Offer section names (XC-01, XC-04,
   CL-02–04) are all marked DIAGNOSE ONLY, none reached the sent copy as a
   promise.
+- 2026-08-26 (CEO closing leg, CLO-98 — the queue-depth read that overflowed on
+  08-25 has a cheap exact answer, and it never needs a card-by-card fetch):
+  the 08-25 entry left the two watched queues readable only by paginating full
+  card bodies, which is what blew the tool's output cap (BRAND BLOCKED 92,446
+  chars). Two cheaper reads together give exact counts with no truncated page.
+  (1) `trelloReadList` action `get` returns each card as `{id, name}` only — no
+  `desc` — so a list of 25 or fewer is one small call. It still silently caps at
+  25, so it proves a count only when it returns **fewer** than 25. (2) For a
+  list past 25, the `trelloSearch` cursor is not opaque: it is base64 of
+  `{"page":N,"first":M}`, so a cursor can be **constructed** to fetch only the
+  tail instead of walking every page. Measured this way today in 12 light calls:
+  BRAND BLOCKED **37** (`{"page":1,"first":36}` returned exactly 1 node,
+  `hasNextPage:false`) and READY TO SEND **54** (`{"page":1,"first":50}`
+  returned exactly 4, `hasNextPage:false`). Two gotchas worth carrying: `first`
+  and `limit` cap at **50** — 53 fails with `Trello AGG GraphQL error: Unable to
+  validate input`, not a clamp — and `totalCount` is **the page's node count,
+  not the list total**, so `limit=1` on a 54-card list reports `totalCount: 1`.
+  Never quote `totalCount` as a queue depth.
+- 2026-08-26 (CEO closing leg, CLO-98 — step 1 reported in full; the CLO-87
+  defect did not recur): CLO-99 carried a real step-1 report — quota, all four
+  leads with contact and channel, the search queries verbatim, ten named
+  rejections each with its reason (all ten were rejected for owning a domain,
+  or for phone-only contact), and the duplicate check. **No figure in today's
+  quota line is reconstructed**, so the 08-25 rule (reconstruction allowed,
+  silent reconstruction not) had no occasion to fire. The fix that made the
+  difference was structural, not behavioural: step 1 ran as its own child issue
+  with its own report obligation, rather than as a delegated aside.
+- 2026-08-26 (CEO closing leg, CLO-98 — nine steps ran unattended, and the one
+  thing no step can fix grew again): the `blockedByIssueIds` chain advanced
+  itself across seven child issues from 23:08 to 00:04 UTC with zero polling by
+  the parent, which woke only when the terminal blocker resolved. Every step
+  posted its own report; both standing rules held. Against that, the queue the
+  config asks every run to watch: READY TO SEND **17 → 23 → 35 → 39 → 48 → 49 →
+  54**. Today added 5 and drained 0, and APPROVED has now read 0 for a seventh
+  consecutive run. CLO-76 already exists as the named issue for it and carries
+  an `ask_user_questions` **pending since 2026-08-23** — three days unanswered.
+  Stated plainly, as the config asks: the bottleneck is not agent capacity, no
+  further run can clear it, and each additional run converts more agent time
+  into inventory that nobody has authorised anyone to send.
