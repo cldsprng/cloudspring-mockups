@@ -1878,3 +1878,73 @@ promise, not the diagnosis, that the menu gates.
   A step whose only comment is the harness placeholder has failed the "a step
   that produced nothing still reports it" rule, the run report says so by
   name, and the number it carries is labelled as derived rather than reported.
+- 2026-08-26 (step 6 QA, CLO-104 — the reveal sentence acquired its own
+  live-announcement skeleton, distinct from the "So I built" pivot family):
+  3 of today's 5 drafts (Bark & Go, The Golden Fur redraft, Jessi's In-Home
+  Grooming) independently opened the reveal with "Your [site/page] is/'s
+  live: [URL]" — not the banned pivot clause (none of the three announce
+  construction), but the exact same failure shape the 2026-08-20/21 entries
+  logged for the pivot: one generator default, reworded three ways, in one
+  batch. Rewrote all three to state what the page proves instead of
+  announcing that it exists (matching the SmileHQ pattern from 2026-08-21):
+  "One page now settles which Sunday is real" (Golden Fur), "Here's your
+  page" (Jessi's), reveal kept on Bark & Go and the other two diverged
+  against it. **The reveal-sentence axis needs the same MOVE-level framing
+  as the pivot ban: never announce the page is live, state the fact it
+  proves.**
+- 2026-08-26 (step 6 QA, CLO-104 — the CTA axis collapsed to two buckets
+  across four drafts, not caught by reading any single draft): all four PH
+  drafts (Bark & Go, Choco & Chaka's, Golden Fur, Serbisyo Beterinaryo)
+  quote price + free-month + term, and laid end to end they fell into
+  exactly two sentence orders — free→price→term (Bark & Go, Serbisyo) and
+  price→free→term (Choco & Chaka's, Golden Fur). Each pair reads fine in
+  isolation; side by side the order is the shared skeleton the batch rule
+  bans. Rewrote to four distinct orders (free/price/term ·
+  price/free/term · term/price/free · price/term/free) so no two share a
+  sequence. Checking CTA order needs the same batch-wide, one-list
+  treatment already required for the reveal and closer axes — a per-card
+  read cannot see a shared order across cards.
+- 2026-08-26 (step 6 QA, CLO-104 — the bare "Dei" closer is the same CLO-84
+  defect in its fifth wording): 4 of today's 5 drafts signed off with a bare
+  "Dei" and nothing before it — no em-dash this time (that tic was banned
+  2026-08-16), just the identical closing line. This is the exact defect
+  named on 2026-08-24 ("eight drafts closing '— Dei' identically... the
+  defect is the identical wording, not the em-dash"), recurring without the
+  dash. Varied all four: "Best, Dei" / "Talk soon, Dei" (kept, already
+  distinct) / "Thanks, Dei" / "Cheers, Dei", one card ("Dei" alone) left as
+  the sole unmodified instance. **The closer axis check has to include the
+  bare sign-off line itself, not just the question preceding it** — four
+  different questions followed by one identical sign-off is still a
+  collision.
+- 2026-08-26 (step 6 QA, CLO-104 — the em-dash tic recurred at 3-per-draft on
+  two of five cards, in the sent copy only): Bark & Go and The Golden Fur
+  redraft each shipped 3 em-dashes in the actual outreach text (well past
+  "zero, or at most one"), while their internal Lead Details/Evidence/Offer
+  notes carry several more each — those don't count, they are never sent.
+  **Count em-dashes only in the text after the brand-verified line**, the
+  internal notes are working-agent scratch and routinely use the dash for
+  clause-dense evidence sentences. Cut both drafts to 1 em-dash each without
+  touching any fact, price or URL.
+- 2026-08-26 (step 6 QA, CLO-104 — two items previously flagged came back
+  clean): (1) no unfilled greeting placeholder in any of today's 5 drafts —
+  the 2026-08-25 fix (drop the name-dependent "Hi [name]," greeting
+  entirely) held across a fresh batch. (2) The Golden Fur redraft (tracked
+  on CLO-97 after step 5 overwrote its Lead Details/Evidence/Pipeline
+  section on 2026-08-25) now carries a full evidence trail, cites CLO-89 as
+  the source of its re-verified angle, and its ClinicFinderPH citation is no
+  longer a bare mismatch call — its own FB handle (`TGFvetcenterMakati`)
+  confirms it operates as a vet clinic, so a clinic-directory angle applies
+  to this lead after all. Both closed without a route-back.
+- 2026-08-26 (step 6 QA, CLO-104 — brand gate, pricing, menu boundary, all
+  clean on this batch): independently re-ran `verify-brand.mjs` on all 5
+  slugs (bark-go-pasig, choco-chaka-pasig, the-golden-fur-makati,
+  serbisyo-beterinaryo-pasig, jessi-calgary) — **5/5 PASS**, all six checks
+  each, `git status --porcelain` clean and every `logoFiles[]` entry present
+  in the commit. Pricing: 4 PH cards inside ₱1,000–1,500/mo; Jessi's CAD
+  450–690 build + CAD 75–140/mo copied verbatim from the OFFER-MENU.md FX
+  table (dated 2026-08-18, 8 days old, inside the 30-day refresh window) —
+  not converted, and correctly carries no free month (PH-only structure).
+  Menu boundary: every card's sent draft stays on the website tier; the
+  automation IDs each card's internal Offer section names (XC-01, XC-04,
+  CL-02–04) are all marked DIAGNOSE ONLY, none reached the sent copy as a
+  promise.
