@@ -1987,3 +1987,97 @@ promise, not the diagnosis, that the menu gates.
   Stated plainly, as the config asks: the bottleneck is not agent capacity, no
   further run can clear it, and each additional run converts more agent time
   into inventory that nobody has authorised anyone to send.
+- 2026-08-29 (step 4, CLO-110 — step 3 reported "0 cards" while STRATEGY READY
+  held 3, because it inferred the list instead of reading it): CLO-109 closed
+  `done` with a full, well-argued report concluding there was nothing to
+  capture. Its reasoning: the CEO's pre-run depths showed STRATEGY READY 0 and
+  INCOMING LEADS 0, step 2 left no comment and no commits, and "the Trello
+  board's STRATEGY READY column could not be accessed directly from this
+  environment". Every one of those is true and the conclusion is still wrong —
+  step 2 had moved three Davao pet/vet leads in, each with a full two-part
+  Sales Angle. **Pre-run depths measured before any step ran describe the board
+  the run started with, not the board the previous step left.** A step that
+  cannot read its input list has not found an empty list; it has found a broken
+  tool, and those are opposite reports. Step 4 re-ran capture on all three
+  rather than lose the day, and named the gap rather than absorb it — the
+  standing rule bans covering *silently*, and the 2026-08-25 entry already
+  settled that reconstruction is allowed where it is labelled. Worth noting the
+  board was readable from step 4's environment on the same host minutes later,
+  so the access failure was not environmental either.
+- 2026-08-29 (step 4, CLO-110 — six BRAND BLOCKED records carried `facebook:
+  "p"`, so their no-assets verdicts were reached without ever querying the
+  page): Trello cards record Facebook pages in the modern URL form
+  `facebook.com/p/Some-Page-Name-100057137753475/`. Whatever ran capture on
+  those leads passed the path and kept only the first segment, so
+  `capture.mjs --facebook p` queried `graph.facebook.com/p/picture`, got
+  nothing, and wrote a confident `no-assets`. Dra. Rona, Smile Solutions
+  Taguig, Drs. Beall & Beall, Prestige Dental and Doc Neneth Pedia all carry
+  it; Mississippi Dentistry carries the `/pages/` variant as `"pages"`, and
+  Almario Dental carries a guessed vanity slug that does not resolve. **The
+  numeric id at the end of a `/p/` or `/people/` URL is the page id — pass
+  that, never the path.** Re-running all six properly did not change any
+  verdict, but that is luck: the verdicts were unfalsifiable before and are
+  evidence now.
+- 2026-08-29 (step 4, CLO-110 — the Facebook silhouette has a fingerprint, and
+  capture.mjs already knows it): `graph.facebook.com/<id>/picture` returns HTTP
+  200 with a real JPEG for a page that has no profile picture — the anonymous
+  silhouette, byte-identical at **19,030 bytes** across eight of the fifteen
+  pages swept today. Status code and content-type prove nothing; the size does.
+  capture.mjs reads `is_silhouette: true` and records "not recoverable
+  headlessly", which is correct and needs no change. The entry is here so the
+  next agent that sees eight identical no-assets results does not assume the
+  tool is broken. A 400 from the graph endpoint is a different failure — a
+  renamed, unpublished or id-only page, which is what Near Dental now returns.
+- 2026-08-29 (step 4, CLO-110 — BRAND BLOCKED list order is not age order, and
+  "sweep the oldest N" silently sweeps the wrong cards if you trust it): the
+  list's card positions and the cards' creation dates disagree badly — the
+  oldest card on the list sits ninth, and three cards from 2026-08-18 to 08-20
+  sit at positions 0, 1 and 2. Taking the first 15 rows would have swept eight
+  cards that are not among the fifteen oldest. Trello card ids are Mongo
+  ObjectIds, so the first 8 hex characters are the creation time in Unix
+  seconds: `parseInt(id.slice(0,8),16)*1000`. Sort on that. It needs no extra
+  API call, because the id is already in every card a list read returns.
+- 2026-08-29 (step 4, CLO-110 — NEW CAPTURE SOURCE: a directory listing's own
+  image, when the Facebook picture is `logo-not-a-mark`): The Ark Veterinary
+  Clinic's Facebook profile picture is a "CELEBRATING 25 YEARS" anniversary
+  illustration — a promo graphic, exactly the state the config sends to BRAND
+  BLOCKED. Their real mark was published on their own Davao Portal listing
+  (`davaoportal.com/wp-content/uploads/2021/04/901720.jpg`), and it is provably
+  theirs: the partial "THE ark" wordmark and blue paw visible behind the staff
+  in the Facebook illustration are the same mark. Downloaded, self-hosted,
+  palette read off it, gate passed. **Before sending a `logo-not-a-mark` card
+  to BRAND BLOCKED, fetch the images off the directory listings the card
+  already cites** — a WordPress directory serves them at predictable
+  `/wp-content/uploads/` paths, and the listing that ranks for the lead usually
+  has the logo the lead gave it. Fetch with a Chrome UA; davaoportal.com 403s
+  a default agent, exactly as the directory-403 learning predicts.
+- 2026-08-29 (step 4, CLO-110 — the lead's trading name had changed under the
+  card, and only the captured logo showed it): the card, and the Petagon
+  listing behind it, both read "Wags and Whiskers Pet Hotel, Supplies and
+  Grooming". The profile picture captured from their own page reads **TAILS &
+  WHISKERS — BAJADA BRANCH**, and the Ma-a page the card cites by numeric id
+  (100075935842546) now titles itself "Tails & Whiskers Ma-a". Same page ids,
+  new trading name; the directory has not caught up. Building the mockup under
+  the card's name would have put a name the shop no longer uses beside their
+  own logo. **Read the captured logo's wordmark against the card's business
+  name before writing a line of HTML** — a mismatch is either the wrong page or
+  a rebrand, and both change the build. Caught before first deploy, so the slug
+  shipped as `tails-whiskers-davao` and no URL has to move. It sharpens the
+  angle rather than blunting it: the listing that ranks for them advertises a
+  name their signage has dropped.
+- 2026-08-29 (step 4, CLO-110 — a swept lead's own domain had lapsed since
+  capture): centapaeds.com.au is NXDOMAIN — no A or AAAA record, curl exits
+  000. It resolved on 2026-08-03 when the lead was captured. The card is
+  blocked on branding, but the more important thing is that its evidence is now
+  false, which no brand sweep would have surfaced if it had only checked
+  Facebook. Confirms the >7-day re-verification rule from the other direction:
+  what goes stale is not only a ranking claim, it can be the whole premise.
+- 2026-08-29 (step 4, CLO-110 — preview.cloudspringitsolutions.com 403s the
+  fetch tool, and that is not a failed deploy): all three of today's builds
+  returned HTTP 403 Forbidden from `web_fetch` on the branded domain while
+  serving correctly on `cloudspring-mockups.pages.dev`. Re-fetched with curl
+  and a Chrome user-agent: 200, correct `<title>` and `<h1>` on all three. It
+  is the same user-agent block the directory-403 learning documents, now on our
+  own domain. **Verify the branded URL with curl and a Chrome UA; a 403 from
+  the fetch tool is a client block, not a deploy state** — and per the standing
+  rule, verify on page content either way, never on the status code.
