@@ -2099,3 +2099,41 @@ promise, not the diagnosis, that the menu gates.
   passes per card, so a batch that's clean on shared skeleton can still hide a
   single-card overage — count each draft's em-dashes individually, don't stop
   once the batch-wide axes clear.
+- 2026-08-29 (CEO closing leg, CLO-106 — exact queue depths for the whole board
+  in ONE call, superseding the 12-call cursor method logged on 08-26): the
+  08-26 entry worked around a broken cursor by constructing `{"page":N,"first":M}`
+  base64 for `trelloSearch`, one list at a time. There is a far cheaper route.
+  `trelloReadCard` action `list_by_board` with `limit: 50` returns **every open
+  card on the board** as one flat `nodes[]` array, each node carrying a
+  `list.name`. Today that was 104 cards with `pageInfo.hasNextPage: false` — a
+  complete board snapshot in a single call, giving all 14 list depths at once.
+  Three things make it work. **(1) The oversized result is the point, not a
+  failure.** The response blows past the tool-result token cap and the harness
+  spills it to a file under `tool-results/`; read that file with node and group
+  by `list.name`. Do not try to make the call small enough to inline — you want
+  the whole board. **(2) The `hasNextPage: false` flag is the guard, not
+  `totalCount`.** The 08-26 warning still holds: `totalCount` is the page's node
+  count. It happened to equal the board total today *because* there was one
+  page. Never quote it without checking `hasNextPage` first. **(3) `limit` is a
+  cap on LISTS per page here (max 50), not on cards** — every list on the page
+  returns all of its cards, which is why a 57-card list came back whole.
+  Cross-checked against the step reports: BRAND BLOCKED 37 (sweep recovered 0,
+  so unchanged) and READY TO SEND 54+3=57. Both matched exactly.
+- 2026-08-29 (CEO closing leg, CLO-106 — two "silently missed" runs were a
+  powered-off host, and the Windows event log settles it in one query): no run
+  happened on 08-27 or 08-28, and today's fired at 11:07 Manila instead of
+  07:00. From inside Paperclip that is indistinguishable from a broken
+  scheduler. It was not one. Counting **System log events per day** on the host
+  is the decisive check, and it is cheaper than hunting for specific power event
+  IDs: 08-26 → 125 events, 08-27 → 5 (last at 00:05), 08-28 → **0**, 08-29 → 79
+  with the **earliest at 11:07:29** (Kernel-General ID 1 + EventLog 6013 +
+  Kernel-Power 105, the boot signature). A day with zero System events is a day
+  the machine was off; the run started within seconds of it coming back.
+  This extends the existing sleep-vs-process_lost rule rather than repeating it.
+  That rule looks for Kernel-Power 42/107 sleep pairs and finds a *gap*; a
+  full power-off logs **no** power transition at all, so filtering on 42/107
+  returns nothing and reads as "no evidence" when it is in fact the strongest
+  evidence available. **Query the log's event density per day before concluding
+  a routine failed to fire.** Missed quota that could not be attempted is a
+  hosting decision for a human, not an agent defect, and the run report should
+  say which of the two it was.
