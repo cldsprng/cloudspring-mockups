@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yana's Dog Salon and Spa — the first dog salon and spa in Davao City</title>
+<meta name="description" content="Yana's Dog Salon and Spa — Plaza Del Carmen, Loyola Street, Bo. Obrero, Davao City. Grooming, bathing and spa care. Love. Care. Groom.">
+<style>
+:root{
+  /* Palette vision-read off the salon's own Facebook mark — see
+     brand/brand.json (colors.source: "vision"). #ee2a7b is the YANA'S
+     wordmark, both circle rules, the paws, the hearts and the tool line art;
+     #8dc63f is the "dog salon and spa" lozenge lettering; #d9b489 is the Shih
+     Tzu's coat; the badge field itself is #101010. */
+  --pink:#ee2a7b;
+  --lime:#8dc63f;
+  --coat:#d9b489;
+  --coal:#101010;
+  --pink-deep:#c4165e;
+  --lime-deep:#679520;
+  --pink-soft:#fdeaf3;
+  --lime-soft:#f2f9e6;
+  --coal-2:#1e1e22;
+  --ink:#17151a;
+  --ink-2:#5d5865;
+  --line:#e9e2ec;
+  --shadow-sm:0 1px 2px rgba(23,21,26,.07), 0 3px 12px rgba(23,21,26,.08);
+  --shadow-md:0 14px 34px rgba(238,42,123,.2);
+  --r-sm:10px; --r-md:18px; --r-lg:50%; --r-pill:999px;
+  /* Facebook-only lead: no site, so no CSS to read a typeface from. No webfont
+     is guessed and nothing is hotlinked. */
+  --display:system-ui,-apple-system,"Segoe UI",sans-serif;
+  --body:system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;font-family:var(--body);color:var(--ink);background:#fff;font-size:16px;line-height:1.62;padding-bottom:200px;overflow-x:hidden}
+img,svg{max-width:100%;display:block}
+h1,h2,h3{font-family:var(--display);font-weight:800;line-height:1.14;margin:0 0 12px;letter-spacing:-.015em}
+h1{font-size:34px}h2{font-size:28px}h3{font-size:19px}
+p{margin:0 0 16px}
+a{color:var(--pink-deep)}
+.wrap{width:100%;max-width:1040px;margin:0 auto;padding:0 20px}
+.eyebrow{font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:800;color:var(--pink);margin:0 0 8px}
+.section{padding:56px 0}
+.section--pink{background:var(--pink-soft)}
+.section--lime{background:var(--lime-soft)}
+.section--coal{background:var(--coal);color:#ded9e2}
+.section--coal h2,.section--coal h3{color:#fff}
+.section--coal .eyebrow{color:var(--lime)}
+:focus-visible{outline:3px solid var(--pink);outline-offset:3px;border-radius:5px}
+
+.strip{background:var(--coal);color:#fff;text-align:center;padding:9px 16px;font-size:12.5px;font-weight:800;letter-spacing:.19em;text-transform:uppercase}
+.strip span{color:var(--pink)}
+.strip i{font-style:normal;color:var(--lime)}
+
+.header{position:sticky;top:0;z-index:60;background:rgba(16,16,16,.97);backdrop-filter:saturate(150%) blur(8px);border-bottom:3px solid var(--pink)}
+.header__in{display:flex;align-items:center;gap:12px;min-height:70px;padding:8px 20px;max-width:1040px;margin:0 auto}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none;color:#fff;min-height:44px}
+.brand-logo-img{width:56px;height:56px;flex:0 0 56px;object-fit:contain;border-radius:var(--r-lg)}
+.brand__txt{display:flex;flex-direction:column;line-height:1.15}
+.brand__name{font-family:var(--display);font-weight:800;font-size:16.5px;color:#fff}
+.brand__sub{font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:var(--lime);font-weight:800}
+.header__cta{margin-left:auto}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:46px;padding:12px 19px;border-radius:var(--r-pill);font-family:var(--body);font-weight:700;font-size:15px;text-decoration:none;border:2px solid transparent;cursor:pointer;transition:background-color .18s ease,color .18s ease,border-color .18s ease,transform .18s ease,box-shadow .18s ease}
+.btn--pink{background:var(--pink);color:#fff;box-shadow:var(--shadow-sm)}
+.btn--pink:hover{background:var(--pink-deep);transform:translateY(-2px);box-shadow:var(--shadow-md)}
+.btn--lime{background:var(--lime);color:#22300a;box-shadow:var(--shadow-sm)}
+.btn--lime:hover{background:var(--lime-deep);color:#fff;transform:translateY(-2px);box-shadow:var(--shadow-md)}
+.btn--coal{background:var(--coal);color:#fff;box-shadow:var(--shadow-sm)}
+.btn--coal:hover{background:var(--coal-2);transform:translateY(-2px);box-shadow:var(--shadow-md)}
+.btn--ghost{background:#fff;color:var(--ink);border-color:var(--line)}
+.btn--ghost:hover{border-color:var(--pink);background:var(--pink-soft)}
+.btn--sm{font-size:14px;padding:9px 15px;min-height:44px}
+.btn--big{min-height:58px;font-size:18px;padding:15px 26px}
+
+.hero{position:relative;background:var(--coal);color:#e7e2ea;overflow:hidden}
+.hero::after{content:"";position:absolute;left:-180px;bottom:-220px;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle at 50% 50%,rgba(238,42,123,.22),rgba(238,42,123,0) 70%);pointer-events:none}
+.hero__in{padding:38px 20px 50px;max-width:1040px;margin:0 auto;position:relative;z-index:1}
+.hero h1{font-size:clamp(30px,7vw,48px);margin-bottom:14px;color:#fff}
+.hero h1 em{font-style:normal;color:var(--pink)}
+.hero__lead{font-size:17px;color:#c6bfcc;max-width:56ch;margin-bottom:22px}
+.claim{border-left:5px solid var(--lime);padding:4px 0 4px 18px;margin:0 0 24px}
+.claim__q{font-family:var(--display);font-size:clamp(19px,4.6vw,25px);font-weight:800;color:#fff;margin:0 0 7px;line-height:1.3}
+.claim__s{font-size:13.5px;color:#a89fae;margin:0}
+.hero__btns{display:flex;flex-direction:column;gap:10px}
+.hero__art{margin-top:36px}
+.mark{width:100%;max-width:380px;margin:0 auto;border-radius:var(--r-lg);filter:drop-shadow(0 20px 44px rgba(238,42,123,.34))}
+
+.split{display:grid;gap:18px;grid-template-columns:1fr;margin-top:24px}
+.sp{border-radius:var(--r-md);padding:22px}
+.sp--now{background:#fff;border:1px solid var(--line);box-shadow:var(--shadow-sm)}
+.sp--next{background:var(--pink);color:#fff;box-shadow:var(--shadow-md)}
+.sp__k{font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:800;margin:0 0 9px}
+.sp--now .sp__k{color:var(--ink-2)}
+.sp--next .sp__k{color:#ffd0e4}
+.sp__url{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:14.5px;font-weight:700;word-break:break-all;margin:0 0 10px}
+.sp--now .sp__url{color:#8e8796;text-decoration:line-through}
+.sp--next .sp__url{color:#fff}
+.sp__body{font-size:14.5px;margin:0}
+.sp--now .sp__body{color:var(--ink-2)}
+.sp--next .sp__body{color:#ffe2ee}
+.sp__quote{background:#f5f3f6;border-radius:var(--r-sm);padding:13px;font-size:14.5px;color:#6d6675;margin:0 0 12px;font-style:italic}
+
+.rank{display:flex;align-items:center;gap:18px;background:#fff;border:2px solid var(--lime);border-radius:var(--r-md);padding:20px;box-shadow:var(--shadow-sm);margin-bottom:20px}
+.rank__n{font-family:var(--display);font-size:46px;font-weight:800;color:var(--pink);line-height:1;white-space:nowrap}
+.rank__n small{font-size:19px;color:var(--ink-2);font-weight:700}
+.rank p{margin:0;font-size:15px;color:var(--ink-2)}
+
+.grid{display:grid;gap:16px;grid-template-columns:1fr}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:22px;box-shadow:var(--shadow-sm);transition:transform .2s ease,box-shadow .2s ease}
+.card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md)}
+.card__ico{width:52px;height:52px;border-radius:50%;border:2px solid var(--pink);color:var(--pink);display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+.card__ico svg{width:26px;height:26px}
+.card h3{margin-bottom:8px}
+.card p{font-size:15px;color:var(--ink-2);margin:0}
+
+.numbers{background:#fff;border:2px dashed var(--pink);border-radius:var(--r-md);padding:22px}
+.num{display:flex;gap:14px;align-items:flex-start;padding:14px 0;border-top:1px solid var(--line)}
+.num:first-of-type{border-top:0;padding-top:0}
+.num__b{flex:0 0 36px;width:36px;height:36px;border-radius:50%;background:var(--pink-soft);color:var(--pink);display:flex;align-items:center;justify-content:center;font-weight:800}
+.num__v{font-family:var(--display);font-size:21px;font-weight:800;margin:0;letter-spacing:.02em}
+.num__v a{color:var(--ink);text-decoration:none;border-bottom:3px solid var(--lime)}
+.num__v a:hover{color:var(--pink-deep);border-bottom-color:var(--pink)}
+.num__d{font-size:14px;color:var(--ink-2);margin:4px 0 0}
+
+.rates{display:grid;gap:12px;grid-template-columns:1fr}
+.rate{background:#fff;border:1px solid var(--line);border-left:5px solid var(--lime);border-radius:var(--r-sm);padding:16px 18px;display:flex;justify-content:space-between;gap:14px;align-items:baseline}
+.rate p{margin:0}
+.rate__k{font-weight:700;font-size:15.5px}
+.rate__v{font-family:var(--display);font-weight:800;font-size:19px;color:var(--pink);white-space:nowrap}
+
+.contact{display:grid;gap:24px;grid-template-columns:1fr}
+.note{background:var(--lime-soft);border:1px solid #c9e29a;border-radius:var(--r-md);padding:17px;font-size:14.5px;color:var(--ink-2);margin:0}
+.note b{display:block;color:var(--ink);margin-bottom:5px;font-size:15px}
+.reach{background:var(--coal);border-radius:var(--r-md);padding:22px;box-shadow:var(--shadow-md);display:flex;flex-direction:column;gap:10px}
+.reach h3{color:#fff}
+.reach p{color:#a89fae}
+
+.footer{background:var(--coal);color:#b8b0be;padding:44px 0 34px;border-top:3px solid var(--pink)}
+.footer h3{color:#fff;font-size:16px;margin-bottom:9px}
+.footer__grid{display:grid;gap:26px;grid-template-columns:1fr}
+.footer__p{font-size:14.5px;margin:0;line-height:1.75}
+.footer a{color:var(--lime);text-decoration:none}
+.footer a:hover{text-decoration:underline}
+.footer__credit{border-top:1px solid rgba(255,255,255,.15);margin-top:28px;padding-top:18px;display:flex;flex-wrap:wrap;gap:8px 18px;justify-content:space-between;font-size:13px;color:#8d8494}
+
+.cs-bar{position:fixed;left:0;right:0;bottom:0;z-index:200;background:rgba(10,10,12,.97);backdrop-filter:saturate(150%) blur(10px);border-top:3px solid var(--lime);box-shadow:0 -8px 32px rgba(0,0,0,.5);color:#fff;padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px))}
+.cs-bar__in{max-width:1040px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:10px 18px;text-align:center}
+.cs-bar__eyebrow{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:800;color:var(--lime);margin:0 0 3px}
+.cs-bar__line{font-size:15px;font-weight:600;line-height:1.35;margin:0;color:#fff}
+.cs-bar__btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 23px;border-radius:var(--r-pill);background:var(--pink);color:#fff;font-weight:700;font-size:15px;text-decoration:none;white-space:nowrap;box-shadow:0 4px 18px rgba(238,42,123,.5);animation:csPulse 2.4s ease-in-out infinite;transition:transform .18s ease,box-shadow .18s ease}
+.cs-bar__btn:hover{transform:translateY(-2px);box-shadow:0 8px 26px rgba(238,42,123,.75);animation-play-state:paused}
+.cs-bar__btn:focus-visible{outline:3px solid #fff;outline-offset:3px}
+@keyframes csPulse{0%,100%{box-shadow:0 4px 18px rgba(238,42,123,.4)}50%{box-shadow:0 4px 27px rgba(238,42,123,.76)}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition-duration:.01ms!important}.cs-bar__btn{animation:none}}
+
+@media (min-width:600px){
+  .hero__btns{flex-direction:row;flex-wrap:wrap}
+  .hero__btns .btn{flex:1 1 auto;min-width:200px}
+  .split{grid-template-columns:1fr 1fr}
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .rates{grid-template-columns:1fr 1fr}
+}
+@media (min-width:900px){
+  body{padding-bottom:108px}
+  .section{padding:74px 0}
+  h1{font-size:46px}h2{font-size:34px}
+  .hero__in{display:grid;grid-template-columns:1.04fr .96fr;gap:44px;align-items:center;padding:60px 20px 74px}
+  .hero__art{margin-top:0}
+  .grid{grid-template-columns:repeat(4,1fr)}
+  .contact{grid-template-columns:1.05fr .95fr;align-items:start}
+  .footer__grid{grid-template-columns:1.4fr 1fr 1fr}
+  .cs-bar__in{flex-wrap:nowrap;justify-content:space-between;text-align:left}
+  .cs-bar__line{font-size:16.5px}
+}
+</style>
+</head>
+<body>
+
+<div class="strip">Love<span>.</span> Care<i>.</i> Groom<span>.</span></div>
+
+<header class="header">
+  <div class="header__in">
+    <a class="brand" href="#top">
+      <img class="brand-logo-img" src="brand/logo-facebook-profile.jpg" alt="Yana's Dog Salon and Spa logo">
+      <span class="brand__txt">
+        <span class="brand__name">Yana's Dog Salon and Spa</span>
+        <span class="brand__sub">Bo. Obrero &middot; Davao City</span>
+      </span>
+    </a>
+    <a class="btn btn--pink btn--sm header__cta" href="#book">Book a groom</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="hero__in">
+      <div>
+        <p class="eyebrow">Plaza Del Carmen &middot; Loyola Street &middot; Bo. Obrero</p>
+        <div class="claim">
+          <p class="claim__q">&ldquo;The first Dog Salon and Spa in Davao City.&rdquo;</p>
+          <p class="claim__s">That line is already published about Yana's &mdash; on a directory page, not on anything of hers.</p>
+        </div>
+        <h1>Yana's Dog Salon and Spa. <em>The line, on her own page.</em></h1>
+        <p class="hero__lead">Grooming, bathing and spa care in Bo. Obrero, Davao City. First in the city to do it. This page carries that claim, the address, and one number that rings &mdash; instead of leaving all three on somebody else's website.</p>
+
+        <div class="hero__btns">
+          <a class="btn btn--pink btn--big" href="#book">Book a groom</a>
+          <a class="btn btn--lime" href="https://www.facebook.com/YanasDogSalonandSpa/" target="_blank" rel="noopener">Message on Facebook</a>
+        </div>
+      </div>
+
+      <div class="hero__art">
+        <img class="mark" src="brand/logo-facebook-profile.jpg" alt="Yana's Dog Salon and Spa logo &mdash; a black circular badge with a pink double rule, a Shih Tzu wearing a bow, the pink YANA'S wordmark, a lime dog salon and spa lozenge, scissors, dryer and comb roundels, and the footer LOVE. CARE. GROOM." width="420" height="420">
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="domain">
+    <div class="wrap">
+      <p class="eyebrow">The reason for this page</p>
+      <h2>The web address with your name on it is for sale</h2>
+      <p style="max-width:64ch;color:var(--ink-2)">Search for Yana's Dog Salon and Spa and one result carries the salon's name in the address itself. Open it and the entire page is one sentence. No services, no prices, no hours, no address, no number. Eleven hundred bytes of nothing, sitting on the name.</p>
+
+      <div class="split">
+        <div class="sp sp--now">
+          <p class="sp__k">What that address serves today</p>
+          <p class="sp__url">yanasdogsalonspa.placeweb.site</p>
+          <p class="sp__quote">&ldquo;This domain may be for sale.&rdquo;</p>
+          <p class="sp__body">Answers in full, so it is not broken &mdash; it is a parking page. Nobody who lands there learns that you groom dogs, where you are, or how to reach you.</p>
+        </div>
+        <div class="sp sp--next">
+          <p class="sp__k">What this address serves</p>
+          <p class="sp__url">Your own page</p>
+          <p class="sp__body">The Plaza Del Carmen address, one number to call, Messenger one tap away, the services you actually offer, and the line about being first in Davao &mdash; on a page that belongs to you.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--coal" id="rank">
+    <div class="wrap">
+      <p class="eyebrow">Where the directory puts you</p>
+      <h2>Nineteenth of nineteen</h2>
+      <p style="max-width:64ch;color:#c6bfcc">Petagon's &ldquo;Pet Grooming in Davao City: 19 Spots&rdquo; is the roundup that ranks for grooming in this city. Yana's is on it &mdash; in last place, under all eighteen others. Its &ldquo;Website&rdquo; button for you points at Facebook, because there is nothing else to point at.</p>
+      <p style="max-width:64ch;color:#c6bfcc">The same page is where &ldquo;the first Dog Salon and Spa in Davao City&rdquo; is written down. Being first in the city is doing its work on a page that sells ad space beside eighteen of your competitors.</p>
+      <div class="split" style="margin-top:26px">
+        <div class="sp sp--now" style="background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.2)">
+          <p class="sp__k" style="color:#a89fae">Your position on that roundup</p>
+          <p class="sp__url" style="color:#8e8796;text-decoration:none">19 of 19</p>
+          <p class="sp__body" style="color:#c6bfcc">Below eighteen shops, on a page that is not yours, next to their names.</p>
+        </div>
+        <div class="sp sp--next" style="background:var(--lime);color:#22300a">
+          <p class="sp__k" style="color:#3f5613">Your position on this page</p>
+          <p class="sp__url" style="color:#22300a;text-decoration:none">First and only</p>
+          <p class="sp__body" style="color:#3a4f13">One salon on it. Yours.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--pink" id="services">
+    <div class="wrap">
+      <p class="eyebrow">What Yana's does</p>
+      <h2>Love. Care. Groom.</h2>
+      <p style="max-width:60ch;color:var(--ink-2)">The three words on the badge, and the three tools drawn under it &mdash; scissors, dryer and comb.</p>
+      <div class="grid">
+        <div class="card">
+          <div class="card__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="3"></circle><circle cx="6" cy="18" r="3"></circle><path d="M20 4 8.1 15.9M14.5 14.5 20 20M8.1 8.1 12 12"></path></svg></div>
+          <h3>Full groom</h3>
+          <p>Cut, trim and finish. The scissors on the badge, doing what they say.</p>
+        </div>
+        <div class="card">
+          <div class="card__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h10a4 4 0 0 1 0 8H4Z"></path><path d="M14 12h6"></path><path d="M9 16v4"></path></svg></div>
+          <h3>Bath &amp; blow-dry</h3>
+          <p>Washed, dried and brushed out &mdash; the dryer roundel on the mark.</p>
+        </div>
+        <div class="card">
+          <div class="card__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v5H4Z"></path><path d="M6 9v11M10 9v11M14 9v11M18 9v11"></path></svg></div>
+          <h3>Brush-out &amp; de-matting</h3>
+          <p>The comb roundel. The slow work a long-coated dog needs before anything else.</p>
+        </div>
+        <div class="card">
+          <div class="card__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7-4.6-7-9.6A4.4 4.4 0 0 1 12 7a4.4 4.4 0 0 1 7 3.4c0 5-7 9.6-7 9.6Z"></path></svg></div>
+          <h3>Spa care</h3>
+          <p><b style="color:var(--ink)">Treatments and add-ons &mdash; to be confirmed.</b> Your list goes here as you write it.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="book">
+    <div class="wrap">
+      <p class="eyebrow">Booking</p>
+      <h2>One number, not two</h2>
+      <p style="max-width:62ch;color:var(--ink-2)">Two mobile numbers circulate for Yana's. Somebody choosing between them is somebody deciding whether to bother. Say which one is the booking line and this page will carry that one, on its own, at the top.</p>
+
+      <div class="numbers">
+        <div class="num">
+          <span class="num__b">1</span>
+          <div>
+            <p class="num__v"><a href="tel:+639328469798">0932 846 9798</a></p>
+            <p class="num__d">Listed for Yana's Dog Salon and Spa.</p>
+          </div>
+        </div>
+        <div class="num">
+          <span class="num__b">2</span>
+          <div>
+            <p class="num__v"><a href="tel:+639303416631">0930 341 6631</a></p>
+            <p class="num__d">Also listed for Yana's Dog Salon and Spa.</p>
+          </div>
+        </div>
+        <p class="num__d" style="margin-top:16px"><b style="color:var(--ink)">Which one is the booking line?</b> One message and the other comes off this page.</p>
+      </div>
+
+      <h3 style="margin-top:34px">Rates</h3>
+      <div class="rates">
+        <div class="rate"><p class="rate__k">Full groom &mdash; small breed</p><p class="rate__v">&#8369; ___</p></div>
+        <div class="rate"><p class="rate__k">Full groom &mdash; large breed</p><p class="rate__v">&#8369; ___</p></div>
+        <div class="rate"><p class="rate__k">Bath &amp; blow-dry</p><p class="rate__v">&#8369; ___</p></div>
+        <div class="rate"><p class="rate__k">Salon hours</p><p class="rate__v">To be confirmed</p></div>
+      </div>
+      <p style="font-size:14px;color:var(--ink-2);margin-top:16px">Sample layout &mdash; your actual rates go here. Not one figure on this page was guessed, and none will be.</p>
+    </div>
+  </section>
+
+  <section class="section section--lime" id="contact">
+    <div class="wrap">
+      <p class="eyebrow">Find us</p>
+      <h2>Plaza Del Carmen, Loyola Street</h2>
+      <div class="contact">
+        <div>
+          <p class="note"><b>Address, as published</b>Plaza Del Carmen, Loyola Street, Bo. Obrero, Davao City. If a unit or door number belongs on the end of that, tell us and it goes on. A groomer's address has to be exact &mdash; people arrive holding a dog.</p>
+          <p style="font-size:15px;color:var(--ink-2);margin-top:16px">Home-service grooming books by message. That is the part a page like this protects: a missed message is a missed booking, and the message only arrives if the person could find you in the first place.</p>
+        </div>
+        <div class="reach">
+          <h3>Reach Yana's</h3>
+          <a class="btn btn--pink btn--big" href="https://www.facebook.com/YanasDogSalonandSpa/" target="_blank" rel="noopener">Message on Facebook</a>
+          <a class="btn btn--lime" href="tel:+639328469798">Call 0932 846 9798</a>
+          <a class="btn" style="background:#fff;color:var(--ink)" href="tel:+639303416631">Call 0930 341 6631</a>
+          <p style="font-size:14px;margin:14px 0 0">Plaza Del Carmen, Loyola Street, Bo. Obrero, Davao City</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <h3>Yana's Dog Salon and Spa</h3>
+        <p class="footer__p">Grooming, bathing and spa care<br>Plaza Del Carmen, Loyola Street<br>Bo. Obrero, Davao City</p>
+      </div>
+      <div>
+        <h3>Book</h3>
+        <p class="footer__p"><a href="tel:+639328469798">0932 846 9798</a><br><a href="tel:+639303416631">0930 341 6631</a><br><a href="https://www.facebook.com/YanasDogSalonandSpa/" target="_blank" rel="noopener">Message on Facebook</a></p>
+      </div>
+      <div>
+        <h3>Love. Care. Groom.</h3>
+        <p class="footer__p">The first dog salon and spa in Davao City.</p>
+      </div>
+    </div>
+    <div class="footer__credit">
+      <span>&copy; 2026 Yana's Dog Salon and Spa, Davao City</span>
+      <span>Website by CloudSpring IT Solutions</span>
+    </div>
+  </div>
+</footer>
+
+<aside class="cs-bar" role="complementary" aria-label="CloudSpring IT Solutions preview notice">
+  <div class="cs-bar__in">
+    <div class="cs-bar__txt">
+      <p class="cs-bar__eyebrow">PREVIEW &middot; CloudSpring IT Solutions</p>
+      <p class="cs-bar__line">The address carrying your salon's name says &ldquo;this domain may be for sale&rdquo;. Ten minutes to talk about taking the name back?</p>
+    </div>
+    <a class="cs-bar__btn" href="https://api.leadconnectorhq.com/widget/booking/QRPEnWRw2Kx9rBe0Mj6J" target="_blank" rel="noopener">Book a FREE Discovery Call &rarr;</a>
+  </div>
+</aside>
+
+</body>
+</html>

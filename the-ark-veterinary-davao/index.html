@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Ark Veterinary Clinic Davao — Jacinto Extension and Lanang, one set of hours</title>
+<meta name="description" content="The Ark Veterinary Clinic, Davao City — Doors 1 &amp; 2 JDS Building, Jacinto Extension, and Door 11 K7 Strip Building, KM 7 J.P. Laurel Avenue, Lanang. Phone 0922 821 5121.">
+<style>
+:root{
+  /* Palette vision-read off the clinic's own mark — see brand/brand.json
+     (colors.source: "vision"). #1479ec is the whole "THE ark" wordmark, the
+     roof over the E, the ark hull and the three paw prints; #f2a8cd is the ear
+     on the r, and it is the only second colour in the mark. Nothing else is
+     added, because nothing else is there. */
+  --ark:#1479ec;
+  --ear:#f2a8cd;
+  --ark-deep:#0d55ab;
+  --ark-soft:#eaf3fe;
+  --ear-soft:#fdf1f7;
+  --ink:#12202e;
+  --ink-2:#54677a;
+  --line:#dbe6f2;
+  --warn:#b3541e;
+  --warn-soft:#fdf3ec;
+  --shadow-sm:0 1px 2px rgba(18,32,46,.07), 0 3px 12px rgba(18,32,46,.08);
+  --shadow-md:0 14px 34px rgba(20,121,236,.2);
+  --r-sm:9px; --r-md:16px; --r-lg:26px; --r-pill:999px;
+  /* No website for this lead, so there is no CSS to read a typeface from. No
+     webfont is guessed and nothing is hotlinked. */
+  --display:system-ui,-apple-system,"Segoe UI",sans-serif;
+  --body:system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;font-family:var(--body);color:var(--ink);background:#fff;font-size:16px;line-height:1.62;padding-bottom:200px;overflow-x:hidden}
+img,svg{max-width:100%;display:block}
+h1,h2,h3{font-family:var(--display);font-weight:800;line-height:1.14;margin:0 0 12px;letter-spacing:-.015em}
+h1{font-size:34px}h2{font-size:28px}h3{font-size:19px}
+p{margin:0 0 16px}
+a{color:var(--ark-deep)}
+.wrap{width:100%;max-width:1060px;margin:0 auto;padding:0 20px}
+.eyebrow{font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:800;color:var(--ark);margin:0 0 8px}
+.section{padding:56px 0}
+.section--soft{background:var(--ark-soft)}
+.section--ear{background:var(--ear-soft)}
+.section--deep{background:var(--ark);color:#dcebfd}
+.section--deep h2,.section--deep h3{color:#fff}
+.section--deep .eyebrow{color:var(--ear)}
+:focus-visible{outline:3px solid var(--ark);outline-offset:3px;border-radius:5px}
+
+.callbar{background:var(--ark);color:#fff;text-align:center;padding:9px 16px;font-size:14px;font-weight:700}
+.callbar a{color:#fff;text-decoration:none;border-bottom:2px solid rgba(255,255,255,.6)}
+.callbar a:hover{border-bottom-color:#fff}
+
+.header{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.96);backdrop-filter:saturate(150%) blur(8px);border-bottom:1px solid var(--line)}
+.header__in{display:flex;align-items:center;gap:12px;min-height:70px;padding:8px 20px;max-width:1060px;margin:0 auto}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none;color:var(--ink);min-height:44px}
+.brand-logo-img{width:60px;height:60px;flex:0 0 60px;object-fit:contain;background:#fff;border-radius:9px}
+.brand__txt{display:flex;flex-direction:column;line-height:1.15}
+.brand__name{font-family:var(--display);font-weight:800;font-size:16.5px}
+.brand__sub{font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:var(--ark);font-weight:800}
+.header__cta{margin-left:auto}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:46px;padding:12px 19px;border-radius:var(--r-pill);font-family:var(--body);font-weight:700;font-size:15px;text-decoration:none;border:2px solid transparent;cursor:pointer;transition:background-color .18s ease,color .18s ease,border-color .18s ease,transform .18s ease,box-shadow .18s ease}
+.btn--ark{background:var(--ark);color:#fff;box-shadow:var(--shadow-sm)}
+.btn--ark:hover{background:var(--ark-deep);transform:translateY(-2px);box-shadow:var(--shadow-md)}
+.btn--ear{background:var(--ear);color:#5b1c3c;box-shadow:var(--shadow-sm)}
+.btn--ear:hover{background:#e992bb;transform:translateY(-2px);box-shadow:var(--shadow-md)}
+.btn--ghost{background:#fff;color:var(--ink);border-color:var(--line)}
+.btn--ghost:hover{border-color:var(--ark);background:var(--ark-soft)}
+.btn--sm{font-size:14px;padding:9px 15px;min-height:44px}
+.btn--big{min-height:58px;font-size:18px;padding:15px 26px}
+
+.hero{position:relative;background:linear-gradient(168deg,var(--ark-soft) 0%,#fff 60%);overflow:hidden}
+.hero::after{content:"";position:absolute;right:-170px;bottom:-200px;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle at 50% 50%,rgba(242,168,205,.28),rgba(242,168,205,0) 70%);pointer-events:none}
+.hero__in{padding:34px 20px 48px;max-width:1060px;margin:0 auto;position:relative;z-index:1}
+.hero h1{font-size:clamp(30px,7vw,47px);margin-bottom:14px}
+.hero h1 em{font-style:normal;color:var(--ark)}
+.hero__lead{font-size:17px;color:var(--ink-2);max-width:56ch;margin-bottom:22px}
+.pill{display:inline-flex;align-items:center;gap:8px;background:var(--ear);color:#5b1c3c;font-weight:800;font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;padding:7px 15px;border-radius:var(--r-pill);margin-bottom:15px}
+.pill svg{width:16px;height:16px}
+.hero__btns{display:flex;flex-direction:column;gap:10px}
+.hero__art{margin-top:34px}
+.mark{width:100%;max-width:390px;margin:0 auto;background:#fff;border-radius:var(--r-lg);border:3px solid var(--line);padding:18px;filter:drop-shadow(0 16px 34px rgba(20,121,236,.2))}
+
+.hours{background:#fff;border:1px solid var(--line);border-left:6px solid var(--ark);border-radius:var(--r-md);padding:20px;box-shadow:var(--shadow-md);margin-bottom:20px}
+.hours__k{font-size:11px;letter-spacing:.15em;text-transform:uppercase;font-weight:800;color:var(--ink-2);margin:0 0 8px}
+.hours__v{font-family:var(--display);font-size:clamp(22px,5vw,28px);font-weight:800;margin:0 0 6px;line-height:1.2}
+.hours__s{font-size:14px;color:var(--ink-2);margin:0}
+
+.sites{display:grid;gap:16px;grid-template-columns:1fr;margin-top:24px}
+.site{border-radius:var(--r-md);padding:22px}
+.site--a{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.24)}
+.site--b{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.24)}
+.site__k{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:800;color:#a9cdf7;margin:0 0 8px}
+.site__n{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:14px;font-weight:700;color:#fff;margin:0 0 12px;word-break:break-all}
+.site__l{display:flex;gap:9px;padding:9px 0;border-top:1px solid rgba(255,255,255,.14);font-size:14.5px;color:#cfe4fb}
+.site__l:first-of-type{border-top:0;padding-top:0}
+.site__l b{color:#fff;flex:0 0 92px}
+.site__tag{display:inline-block;background:var(--ear);color:#5b1c3c;font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:800;padding:4px 11px;border-radius:var(--r-pill);margin-bottom:12px}
+
+.branches{display:grid;gap:16px;grid-template-columns:1fr}
+.br{background:#fff;border:1px solid var(--line);border-top:6px solid var(--ark);border-radius:var(--r-md);padding:24px;box-shadow:var(--shadow-sm);transition:transform .2s ease,box-shadow .2s ease}
+.br:hover{transform:translateY(-4px);box-shadow:var(--shadow-md)}
+.br--lanang{border-top-color:var(--ear)}
+.br__tag{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:800;color:var(--ink-2);margin:0 0 6px}
+.br__n{font-family:var(--display);font-size:23px;font-weight:800;margin:0 0 10px}
+.br__a{font-size:15.5px;color:var(--ink-2);margin:0 0 16px}
+.br__flag{background:var(--warn-soft);border:1px dashed var(--warn);border-radius:var(--r-sm);padding:12px 14px;font-size:13.5px;color:#7c3b15;margin:0 0 16px}
+.br__flag b{display:block;color:var(--warn);font-size:12px;letter-spacing:.09em;text-transform:uppercase;margin-bottom:3px}
+
+.grid{display:grid;gap:16px;grid-template-columns:1fr}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:22px;box-shadow:var(--shadow-sm)}
+.card__ico{width:46px;height:46px;border-radius:14px;background:var(--ark-soft);color:var(--ark);display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+.card__ico svg{width:25px;height:25px}
+.card h3{margin-bottom:8px}
+.card p{font-size:15px;color:var(--ink-2);margin:0}
+
+.years{display:flex;align-items:center;gap:20px;background:#fff;border:2px solid var(--ear);border-radius:var(--r-md);padding:22px;box-shadow:var(--shadow-sm)}
+.years__n{font-family:var(--display);font-size:52px;font-weight:800;color:var(--ark);line-height:1}
+.years p{margin:0;font-size:15px;color:var(--ink-2)}
+
+.fees{background:#fff;border:2px dashed var(--ark);border-radius:var(--r-md);padding:22px}
+.fee{display:flex;justify-content:space-between;gap:14px;align-items:baseline;padding:12px 0;border-top:1px solid var(--line)}
+.fee:first-of-type{border-top:0;padding-top:0}
+.fee p{margin:0}
+.fee__k{font-weight:700;font-size:15.5px}
+.fee__v{font-family:var(--display);font-weight:800;font-size:19px;color:var(--ark);white-space:nowrap}
+
+.contact{display:grid;gap:24px;grid-template-columns:1fr}
+.note{background:var(--ear-soft);border:1px solid #f0c6dc;border-radius:var(--r-md);padding:17px;font-size:14.5px;color:var(--ink-2);margin:0}
+.note b{display:block;color:var(--ink);margin-bottom:5px;font-size:15px}
+.reach{background:#fff;border:2px solid var(--ark);border-radius:var(--r-md);padding:22px;box-shadow:var(--shadow-md);display:flex;flex-direction:column;gap:10px}
+
+.footer{background:#0e2438;color:#a9c2d8;padding:44px 0 34px}
+.footer h3{color:#fff;font-size:16px;margin-bottom:9px}
+.footer__grid{display:grid;gap:26px;grid-template-columns:1fr}
+.footer__p{font-size:14.5px;margin:0;line-height:1.75}
+.footer a{color:var(--ear);text-decoration:none}
+.footer a:hover{text-decoration:underline}
+.footer__credit{border-top:1px solid rgba(255,255,255,.16);margin-top:28px;padding-top:18px;display:flex;flex-wrap:wrap;gap:8px 18px;justify-content:space-between;font-size:13px;color:#7f9ab2}
+
+.cs-bar{position:fixed;left:0;right:0;bottom:0;z-index:200;background:rgba(9,26,42,.97);backdrop-filter:saturate(150%) blur(10px);border-top:3px solid var(--ear);box-shadow:0 -8px 32px rgba(9,26,42,.44);color:#fff;padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px))}
+.cs-bar__in{max-width:1060px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:10px 18px;text-align:center}
+.cs-bar__eyebrow{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:800;color:var(--ear);margin:0 0 3px}
+.cs-bar__line{font-size:15px;font-weight:600;line-height:1.35;margin:0;color:#fff}
+.cs-bar__btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 23px;border-radius:var(--r-pill);background:var(--ark);color:#fff;font-weight:700;font-size:15px;text-decoration:none;white-space:nowrap;box-shadow:0 4px 18px rgba(20,121,236,.5);animation:csPulse 2.4s ease-in-out infinite;transition:transform .18s ease,box-shadow .18s ease}
+.cs-bar__btn:hover{transform:translateY(-2px);box-shadow:0 8px 26px rgba(20,121,236,.74);animation-play-state:paused}
+.cs-bar__btn:focus-visible{outline:3px solid #fff;outline-offset:3px}
+@keyframes csPulse{0%,100%{box-shadow:0 4px 18px rgba(20,121,236,.4)}50%{box-shadow:0 4px 27px rgba(20,121,236,.74)}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition-duration:.01ms!important}.cs-bar__btn{animation:none}}
+
+@media (min-width:600px){
+  .hero__btns{flex-direction:row;flex-wrap:wrap}
+  .hero__btns .btn{flex:1 1 auto;min-width:200px}
+  .sites{grid-template-columns:1fr 1fr}
+  .branches{grid-template-columns:1fr 1fr}
+  .grid{grid-template-columns:repeat(2,1fr)}
+}
+@media (min-width:900px){
+  body{padding-bottom:108px}
+  .section{padding:74px 0}
+  h1{font-size:45px}h2{font-size:34px}
+  .hero__in{display:grid;grid-template-columns:1.06fr .94fr;gap:44px;align-items:center;padding:56px 20px 70px}
+  .hero__art{margin-top:0}
+  .grid{grid-template-columns:repeat(3,1fr)}
+  .contact{grid-template-columns:1.05fr .95fr;align-items:start}
+  .footer__grid{grid-template-columns:1.4fr 1fr 1fr}
+  .cs-bar__in{flex-wrap:nowrap;justify-content:space-between;text-align:left}
+  .cs-bar__line{font-size:16.5px}
+}
+</style>
+</head>
+<body>
+
+<div class="callbar">Two clinics in Davao City &mdash; call <a href="tel:+639228215121">0922 821 5121</a></div>
+
+<header class="header">
+  <div class="header__in">
+    <a class="brand" href="#top">
+      <img class="brand-logo-img" src="brand/logo-davaoportal-listing.jpg" alt="The Ark Veterinary Clinic logo">
+      <span class="brand__txt">
+        <span class="brand__name">The Ark Veterinary Clinic</span>
+        <span class="brand__sub">Davao City &middot; Jacinto &amp; Lanang</span>
+      </span>
+    </a>
+    <a class="btn btn--ark btn--sm header__cta" href="tel:+639228215121">Call 0922 821 5121</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="hero__in">
+      <div>
+        <p class="eyebrow">Jacinto Extension &middot; Lanang &middot; Davao City</p>
+        <p class="pill">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>
+          One set of hours, both clinics
+        </p>
+        <h1>The Ark Veterinary Clinic, Davao. <em>Two clinics, one page, one answer.</em></h1>
+        <p class="hero__lead">A small-animal practice on Jacinto Extension with a second clinic in Lanang. UP-trained vets, surgery, dentistry, confinement, boarding, microchipping and vaccination. This page exists because the pages that currently rank for The Ark do not agree with each other &mdash; and one of them leaves the Lanang clinic out entirely.</p>
+
+        <div class="hours">
+          <p class="hours__k">Opening hours</p>
+          <p class="hours__v">Monday to Saturday, 8:00am &ndash; 7:00pm</p>
+          <p class="hours__s">Sundays by appointment. <b style="color:var(--ink)">Confirm this and it is the only version anywhere.</b></p>
+        </div>
+
+        <div class="hero__btns">
+          <a class="btn btn--ark btn--big" href="tel:+639228215121">Call 0922 821 5121</a>
+          <a class="btn btn--ghost" href="#clinics">Both addresses</a>
+        </div>
+      </div>
+
+      <div class="hero__art">
+        <img class="mark" src="brand/logo-davaoportal-listing.jpg" alt="The Ark Veterinary Clinic logo &mdash; a blue THE ark wordmark, the E of THE set inside a roof, a pink ear on the r, the whole sitting in a blue ark hull with three paw prints trailing beneath" width="420" height="420">
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--deep" id="conflict">
+    <div class="wrap">
+      <p class="eyebrow">The reason for this page</p>
+      <h2>Two pages about you. They disagree.</h2>
+      <p style="max-width:64ch;color:#cfe4fb">Search The Ark Veterinary Clinic in Davao and you get two write-ups, neither of them yours. They do not say the same thing about when you are open, and only one of them knows the Lanang clinic exists.</p>
+
+      <div class="sites">
+        <div class="site site--a">
+          <p class="site__k">Directory one</p>
+          <p class="site__n">davaoportal.com</p>
+          <span class="site__tag">Marked expired</span>
+          <p class="site__l"><b>Hours</b><span>&ldquo;Always open&rdquo;</span></p>
+          <p class="site__l"><b>Address</b><span>Jacinto Extension only</span></p>
+          <p class="site__l"><b>Lanang</b><span>Not mentioned</span></p>
+          <p class="site__l"><b>Status</b><span>Stamped &ldquo;this ad listing is expired&rdquo; &mdash; and still serving, still counting views</span></p>
+        </div>
+        <div class="site site--b">
+          <p class="site__k">Directory two</p>
+          <p class="site__n">clinicfinderph.com</p>
+          <span class="site__tag" style="background:#fff;color:var(--ark)">Ranks 3rd of 10</span>
+          <p class="site__l"><b>Hours</b><span>Mon&ndash;Sat, 8:00am &ndash; 7:00pm</span></p>
+          <p class="site__l"><b>Address</b><span>Jacinto Extension and Lanang</span></p>
+          <p class="site__l"><b>Lanang</b><span>Listed</span></p>
+          <p class="site__l"><b>Beside you</b><span>Nine other Davao clinics on the same page</span></p>
+        </div>
+      </div>
+
+      <p style="max-width:64ch;color:#cfe4fb;margin:24px 0 0">An owner who reads &ldquo;always open&rdquo; and arrives at 9pm has been told something you did not tell them. An owner nearer Lanang who reads the expired listing drives to Jacinto. Neither page is yours to correct, and the expired one is still being read.</p>
+    </div>
+  </section>
+
+  <section class="section" id="clinics">
+    <div class="wrap">
+      <p class="eyebrow">Where to find The Ark</p>
+      <h2>Both clinics, both addresses</h2>
+      <div class="branches">
+        <div class="br">
+          <p class="br__tag">Main clinic</p>
+          <p class="br__n">Jacinto Extension</p>
+          <p class="br__a">Doors 1 &amp; 2, JDS Building,<br>Jacinto Extension, Poblacion District,<br>Davao City</p>
+          <a class="btn btn--ark" href="tel:+639228215121">Call 0922 821 5121</a>
+        </div>
+        <div class="br br--lanang">
+          <p class="br__tag">Second clinic</p>
+          <p class="br__n">Lanang</p>
+          <p class="br__a">Door 11, K7 Strip Building,<br>KM 7, J.P. Laurel Avenue, Lanang,<br>Davao City</p>
+          <p class="br__flag"><b>Missing from one directory</b>The listing stamped &ldquo;expired&rdquo; shows Jacinto Extension only. A whole clinic, invisible on a page that is still being served.</p>
+          <a class="btn btn--ear" href="tel:+639228215121">Call 0922 821 5121</a>
+        </div>
+      </div>
+      <p style="font-size:14.5px;color:var(--ink-2);margin-top:20px"><b style="color:var(--ink)">Separate line for Lanang?</b> If the second clinic has its own number, send it and it goes on that card. Until then both cards carry the number you publish.</p>
+    </div>
+  </section>
+
+  <section class="section section--soft" id="services">
+    <div class="wrap">
+      <p class="eyebrow">What the clinic does</p>
+      <h2>Small-animal practice, Davao City</h2>
+      <div class="grid">
+        <div class="card">
+          <div class="card__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h3.6l1.9-5 3 10 2.2-5H21"></path></svg></div>
+          <h3>Consultations &amp; check-ups</h3>
+          <p>The everyday work &mdash; the reason most owners find a clinic in the first place.</p>
+        </div>
+        <div class="card">
+          <div class="card__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 3.5 20.5 9.5"></path><path d="m3 21 3.6-.7L20.1 6.8a2 2 0 0 0 0-2.8l-1.1-1.1a2 2 0 0 0-2.8 0L2.7 16.4Z"></path></svg></div>
+          <h3>Surgery</h3>
+          <p>Surgical cases handled in-house by UP-trained vets. The thing owners drive across a city for.</p>
+        </div>
+        <div class="card">
+          <div class="card__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c2.5 0 3 2 3 4v3c0 3 1 4 1 7 0 2-1 4-2 4s-1.4-2-2-2-1 2-2 2-2-2-2-4c0-3 1-4 1-7V7c0-2 .5-4 3-4Z"></path></svg></div>
+          <h3>Dental care</h3>
+          <p>Scaling and extractions. Rarely the reason for the first visit, often the reason for the second.</p>
+        </div>
+        <div class="card">
+          <div class="card__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"></rect><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg></div>
+          <h3>Confinement</h3>
+          <p>Animals that need to stay in, staying in, with the clinic that operated on them.</p>
+        </div>
+        <div class="card">
+          <div class="card__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11 12 4l9 7"></path><path d="M5 10v10h14V10"></path><path d="M9 20v-6h6v6"></path></svg></div>
+          <h3>Boarding &amp; daycare</h3>
+          <p>Somewhere to leave a pet, run by the people who already hold its records.</p>
+        </div>
+        <div class="card">
+          <div class="card__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 8v8M8 12h8"></path></svg></div>
+          <h3>Vaccination &amp; microchipping</h3>
+          <p>The scheduled work &mdash; the appointments most worth reminding an owner about.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--ear" id="fees">
+    <div class="wrap">
+      <p class="eyebrow">Fees</p>
+      <h2>Nothing here is a number we invented</h2>
+      <p style="max-width:62ch;color:var(--ink-2)">A directory publishes a consultation range for The Ark. We have not copied it onto this page, because a fee you did not set is not a fee. Send yours and they appear here exactly as written.</p>
+      <div class="fees">
+        <div class="fee"><p class="fee__k">Consultation</p><p class="fee__v">&#8369; ___</p></div>
+        <div class="fee"><p class="fee__k">Vaccination</p><p class="fee__v">&#8369; ___</p></div>
+        <div class="fee"><p class="fee__k">Dental scaling</p><p class="fee__v">&#8369; ___</p></div>
+        <div class="fee"><p class="fee__k">Boarding, per night</p><p class="fee__v">&#8369; ___</p></div>
+        <div class="fee"><p class="fee__k">Sunday appointments</p><p class="fee__v">To be confirmed</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <div class="wrap">
+      <p class="eyebrow">Get in touch</p>
+      <h2>Contact the clinic</h2>
+      <div class="contact">
+        <div>
+          <div class="years">
+            <span class="years__n">25</span>
+            <p><b style="color:var(--ink)">Twenty-five years in Davao City</b>, marked on the clinic's own Facebook page in July 2025. Neither directory write-up mentions it. It is the strongest thing about the practice and it appears nowhere a prospective client would look.</p>
+          </div>
+          <p class="note" style="margin-top:18px"><b>One more thing worth knowing</b>There is a clinic called The Ark Veterinary Clinic in Cavite, and it owns the domain that carries the name. Someone searching your name and clicking the first real website reaches a practice a thousand kilometres away. The fix is not a fight over the name &mdash; it is having a Davao page that says Davao.</p>
+        </div>
+        <div class="reach">
+          <h3>Reach The Ark</h3>
+          <a class="btn btn--ark btn--big" href="tel:+639228215121">Call 0922 821 5121</a>
+          <a class="btn btn--ear" href="https://www.facebook.com/156984581034773" target="_blank" rel="noopener">Message on Facebook</a>
+          <p style="font-size:14px;color:var(--ink-2);margin:14px 0 0">Jacinto Extension &mdash; Doors 1 &amp; 2, JDS Building<br>Lanang &mdash; Door 11, K7 Strip Building, KM 7 J.P. Laurel Ave<br>Mon&ndash;Sat 8:00am&ndash;7:00pm</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <h3>The Ark Veterinary Clinic</h3>
+        <p class="footer__p">Small-animal practice, Davao City<br>Consultations &middot; surgery &middot; dentistry &middot; confinement &middot; boarding &middot; vaccination &middot; microchipping</p>
+      </div>
+      <div>
+        <h3>Clinics</h3>
+        <p class="footer__p">Doors 1 &amp; 2, JDS Building, Jacinto Extension<br>Door 11, K7 Strip Building, KM 7 J.P. Laurel Avenue, Lanang</p>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <p class="footer__p"><a href="tel:+639228215121">0922 821 5121</a><br><a href="https://www.facebook.com/156984581034773" target="_blank" rel="noopener">The Ark on Facebook</a><br>Mon&ndash;Sat 8:00am&ndash;7:00pm</p>
+      </div>
+    </div>
+    <div class="footer__credit">
+      <span>&copy; 2026 The Ark Veterinary Clinic, Davao City</span>
+      <span>Website by CloudSpring IT Solutions</span>
+    </div>
+  </div>
+</footer>
+
+<aside class="cs-bar" role="complementary" aria-label="CloudSpring IT Solutions preview notice">
+  <div class="cs-bar__in">
+    <div class="cs-bar__txt">
+      <p class="cs-bar__eyebrow">PREVIEW &middot; CloudSpring IT Solutions</p>
+      <p class="cs-bar__line">One listing says you never close and skips Lanang. Ten minutes to settle which hours are the real ones?</p>
+    </div>
+    <a class="cs-bar__btn" href="https://api.leadconnectorhq.com/widget/booking/QRPEnWRw2Kx9rBe0Mj6J" target="_blank" rel="noopener">Book a FREE Discovery Call &rarr;</a>
+  </div>
+</aside>
+
+</body>
+</html>

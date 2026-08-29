@@ -1,0 +1,46 @@
+{
+  "slug": "yanas-dog-salon-davao",
+  "site": null,
+  "facebook": "YanasDogSalonandSpa",
+  "capturedAt": "2026-08-29T03:38:38.289Z",
+  "source": "headless-http",
+  "name": "Yana's Dog Salon and Spa",
+  "logo": {
+    "file": "logo-facebook-profile.jpg",
+    "score": 95,
+    "why": "facebook profile picture"
+  },
+  "logoFiles": [
+    {
+      "file": "logo-facebook-profile.jpg",
+      "bytes": 222379,
+      "from": "graph.facebook.com/YanasDogSalonandSpa/picture?width=1200&height=1200",
+      "why": "facebook profile picture",
+      "score": 95
+    }
+  ],
+  "colors": {
+    "brand": [
+      { "hex": "#ee2a7b", "weight": 60 },
+      { "hex": "#8dc63f", "weight": 30 },
+      { "hex": "#d9b489", "weight": 15 }
+    ],
+    "neutral": [
+      { "hex": "#101010", "weight": 85 },
+      { "hex": "#ffffff", "weight": 45 }
+    ],
+    "themeColor": null,
+    "source": "vision"
+  },
+  "fonts": [],
+  "ready": true,
+  "blockedBy": null,
+  "confidence": 90,
+  "notes": [
+    "facebook profile picture captured headlessly for \"YanasDogSalonandSpa\"",
+    "no website for this lead — facebook-only capture path",
+    "BLOCKER palette-pending: logo captured (logo-facebook-profile.jpg) but fewer than 2 chromatic colours found. Vision-read the logo, then write the hex values into colors.brand[] with colors.source=\"vision\" and re-run the gate.",
+    "2026-08-29 (step 4, CLO-110): palette-pending resolved by vision-reading brand/logo-facebook-profile.jpg. The mark is a black circular badge with a pink double rule, a bow-wearing Shih Tzu at the top, a heavy pink 'YANA'S' wordmark, a lime 'dog salon and spa' lozenge, three outlined tool roundels (scissors, dryer, comb) and a 'LOVE. CARE. GROOM.' footer. Read off the artwork itself: #ee2a7b = the YANA'S wordmark, both circle rules, the paw prints, the hearts, the bow and the tool line art; #8dc63f = the 'dog salon and spa' lettering, the two plus signs and the footer dots; #d9b489 = the dog's coat. #101010 is the badge field and #ffffff the wordmark outline and footer text. No hex is invented and none is sampled from anything but the lead's own logo.",
+    "2026-08-29 (step 4, CLO-110): no typeface captured. Facebook-only lead, no CSS to read a font from; fonts[] stays empty rather than guessing a webfont name off hand-lettered logo type, and verify-brand.mjs check 3 skips accordingly."
+  ]
+}

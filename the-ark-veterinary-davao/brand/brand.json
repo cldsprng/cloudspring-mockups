@@ -1,0 +1,53 @@
+{
+  "slug": "the-ark-veterinary-davao",
+  "site": null,
+  "facebook": "156984581034773",
+  "capturedAt": "2026-08-29T03:40:13.013Z",
+  "source": "headless-http",
+  "name": "The Ark Veterinary Clinic",
+  "logo": {
+    "file": "logo-davaoportal-listing.jpg",
+    "score": 90,
+    "why": "business's own logo mark, published on its Davao Portal listing"
+  },
+  "logoFiles": [
+    {
+      "file": "logo-davaoportal-listing.jpg",
+      "bytes": 30695,
+      "from": "davaoportal.com/wp-content/uploads/2021/04/901720.jpg (the listing image on davaoportal.com/business/the-ark-veterinary-clinic/)",
+      "why": "business's own logo mark, published on its Davao Portal listing",
+      "score": 90
+    },
+    {
+      "file": "logo-facebook-profile.jpg",
+      "bytes": 86376,
+      "from": "graph.facebook.com/156984581034773/picture?width=1200&height=1200",
+      "why": "facebook profile picture — a 25th-anniversary promo illustration, NOT a logo mark",
+      "score": 20
+    }
+  ],
+  "colors": {
+    "brand": [
+      { "hex": "#1479ec", "weight": 80 },
+      { "hex": "#f2a8cd", "weight": 15 }
+    ],
+    "neutral": [
+      { "hex": "#ffffff", "weight": 90 }
+    ],
+    "themeColor": null,
+    "source": "vision"
+  },
+  "fonts": [],
+  "ready": true,
+  "blockedBy": null,
+  "confidence": 85,
+  "notes": [
+    "facebook profile picture captured headlessly for \"156984581034773\"",
+    "no website for this lead — facebook-only capture path",
+    "BLOCKER palette-pending: logo captured (logo-facebook-profile.jpg) but fewer than 2 chromatic colours found. Vision-read the logo, then write the hex values into colors.brand[] with colors.source=\"vision\" and re-run the gate.",
+    "2026-08-29 (step 4, CLO-110): the Trello card records this lead as phone-only with 'No public Facebook page found'. That is wrong. The Davao practice runs Facebook page id 156984581034773 (9,282 likes), which is a separate business from thearkanimalhealth / thearkvetclinic.com — that is The Ark Animal Health in Cavite, and it is why the card's domain check returned nothing for the Davao clinic. Captured against the numeric page id.",
+    "2026-08-29 (step 4, CLO-110): logo-not-a-mark on the Facebook file, resolved by finding the real mark rather than blocking. graph.facebook.com/156984581034773/picture returns a 'CELEBRATING 25 YEARS — JULY 8, 2025' anniversary illustration of three staff, a dog and a cat — a promo graphic, not a logo, so it is recorded at score 20 and is not used as the site logo. The business's actual mark is published on its own Davao Portal listing: a blue 'THE ark' wordmark, the E of THE set inside a roof, a pink ear on the r, the whole sitting in a blue ark hull with three paw prints trailing beneath. The partial wordmark and blue paw visible behind the staff in the Facebook illustration are the same mark, which is what ties the file to this business. Saved as logo-davaoportal-listing.jpg and self-hosted; nothing is hotlinked.",
+    "2026-08-29 (step 4, CLO-110): palette vision-read off logo-davaoportal-listing.jpg. #1479ec = the entire wordmark, the roof, the ark hull and the paw prints; #f2a8cd = the ear on the r, the only second colour in the mark. Two chromatic colours is the whole palette — the mark is otherwise blue on white, so no third hex is added rather than invented.",
+    "2026-08-29 (step 4, CLO-110): no typeface captured. No website, so no CSS to read a font from; fonts[] stays empty and verify-brand.mjs check 3 skips accordingly."
+  ]
+}

@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tails &amp; Whiskers Davao — pet hotel, supplies and grooming, four branches on one page</title>
+<meta name="description" content="Tails &amp; Whiskers Pet Hotel, Supplies and Grooming — Bajada, Ma-a, Mamay and Tulip Drive, Davao City. Every branch with its own address and its own way to reach it.">
+<style>
+:root{
+  /* Palette vision-read off the shop's own Facebook mark — see brand/brand.json
+     (colors.source: "vision"). The wordmark gives one letter per colour; the
+     BAJADA BRANCH rule and both paw prints are #4c2a86, so purple anchors the
+     page and the rest of the letters become the branch colours. */
+  --grape:#4c2a86;
+  --magenta:#ec008c;
+  --orange:#f7941e;
+  --green:#00a651;
+  --blue:#2e3192;
+  --red:#ed1c24;
+  --yellow:#ffe800;
+  --cyan:#00aeef;
+  --grape-deep:#361d5f;
+  --grape-soft:#f2edfa;
+  --magenta-soft:#fdeaf5;
+  --yellow-soft:#fffce0;
+  --ink:#1d1626;
+  --ink-2:#5f5670;
+  --line:#e4dced;
+  --shadow-sm:0 1px 2px rgba(29,22,38,.07), 0 3px 12px rgba(29,22,38,.08);
+  --shadow-md:0 14px 34px rgba(76,42,134,.18);
+  --r-sm:10px; --r-md:18px; --r-lg:28px; --r-pill:999px;
+  /* Facebook-only lead: no CSS anywhere to read a typeface from, so no webfont
+     is guessed and none is hotlinked. System stack only. */
+  --display:system-ui,-apple-system,"Segoe UI",sans-serif;
+  --body:system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;font-family:var(--body);color:var(--ink);background:#fff;font-size:16px;line-height:1.62;padding-bottom:200px;overflow-x:hidden}
+img,svg{max-width:100%;display:block}
+h1,h2,h3{font-family:var(--display);font-weight:800;line-height:1.14;margin:0 0 12px;letter-spacing:-.015em}
+h1{font-size:34px}h2{font-size:28px}h3{font-size:19px}
+p{margin:0 0 16px}
+a{color:var(--grape-deep)}
+.wrap{width:100%;max-width:1060px;margin:0 auto;padding:0 20px}
+.eyebrow{font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:800;color:var(--magenta);margin:0 0 8px}
+.section{padding:56px 0}
+.section--soft{background:var(--grape-soft)}
+.section--sun{background:var(--yellow-soft)}
+.section--deep{background:var(--grape);color:#e2d8f2}
+.section--deep h2,.section--deep h3{color:#fff}
+.section--deep .eyebrow{color:var(--yellow)}
+:focus-visible{outline:3px solid var(--magenta);outline-offset:3px;border-radius:5px}
+
+.ribbon{display:flex;height:7px}
+.ribbon span{flex:1}
+
+.header{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.96);backdrop-filter:saturate(150%) blur(8px);border-bottom:1px solid var(--line)}
+.header__in{display:flex;align-items:center;gap:12px;min-height:70px;padding:8px 20px;max-width:1060px;margin:0 auto}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none;color:var(--ink);min-height:44px}
+.brand-logo-img{width:64px;height:64px;flex:0 0 64px;object-fit:contain;background:#fff;border-radius:10px}
+.brand__txt{display:flex;flex-direction:column;line-height:1.15}
+.brand__name{font-family:var(--display);font-weight:800;font-size:16.5px}
+.brand__sub{font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:var(--grape);font-weight:800}
+.header__cta{margin-left:auto}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:46px;padding:12px 19px;border-radius:var(--r-pill);font-family:var(--body);font-weight:700;font-size:15px;text-decoration:none;border:2px solid transparent;cursor:pointer;transition:background-color .18s ease,color .18s ease,border-color .18s ease,transform .18s ease,box-shadow .18s ease}
+.btn--grape{background:var(--grape);color:#fff;box-shadow:var(--shadow-sm)}
+.btn--grape:hover{background:var(--grape-deep);transform:translateY(-2px);box-shadow:var(--shadow-md)}
+.btn--magenta{background:var(--magenta);color:#fff;box-shadow:var(--shadow-sm)}
+.btn--magenta:hover{background:#c00074;transform:translateY(-2px);box-shadow:var(--shadow-md)}
+.btn--orange{background:var(--orange);color:#40230a;box-shadow:var(--shadow-sm)}
+.btn--orange:hover{background:#dd7d0c;transform:translateY(-2px);box-shadow:var(--shadow-md)}
+.btn--ghost{background:#fff;color:var(--ink);border-color:var(--line)}
+.btn--ghost:hover{border-color:var(--grape);background:var(--grape-soft)}
+.btn--sm{font-size:14px;padding:9px 15px;min-height:44px}
+.btn--big{min-height:58px;font-size:18px;padding:15px 26px}
+
+.hero{position:relative;background:linear-gradient(170deg,var(--grape-soft) 0%,#fff 62%);overflow:hidden}
+.hero::after{content:"";position:absolute;right:-160px;top:-160px;width:440px;height:440px;border-radius:50%;background:radial-gradient(circle at 50% 50%,rgba(236,0,140,.13),rgba(236,0,140,0) 70%);pointer-events:none}
+.hero__in{padding:34px 20px 48px;max-width:1060px;margin:0 auto;position:relative;z-index:1}
+.hero h1{font-size:clamp(30px,7vw,47px);margin-bottom:14px}
+.hero h1 em{font-style:normal;color:var(--magenta)}
+.hero__lead{font-size:17px;color:var(--ink-2);max-width:56ch;margin-bottom:22px}
+.pill{display:inline-flex;align-items:center;gap:8px;background:var(--yellow);color:#4a4200;font-weight:800;font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;padding:7px 15px;border-radius:var(--r-pill);margin-bottom:15px}
+.pill svg{width:16px;height:16px}
+.hero__btns{display:flex;flex-direction:column;gap:10px}
+.hero__art{margin-top:34px}
+.mark{width:100%;max-width:400px;margin:0 auto;background:#fff;border-radius:var(--r-lg);border:3px solid var(--line);padding:16px;filter:drop-shadow(0 18px 36px rgba(76,42,134,.2))}
+
+.count{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:20px}
+.count__c{flex:1 1 120px;background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:14px;box-shadow:var(--shadow-sm);text-align:center}
+.count__n{font-family:var(--display);font-size:30px;font-weight:800;line-height:1;margin:0 0 4px}
+.count__l{font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--ink-2);margin:0}
+
+.branches{display:grid;gap:16px;grid-template-columns:1fr}
+.br{background:#fff;border:1px solid var(--line);border-top:6px solid var(--grape);border-radius:var(--r-md);padding:22px;box-shadow:var(--shadow-sm);display:flex;flex-direction:column;transition:transform .2s ease,box-shadow .2s ease}
+.br:hover{transform:translateY(-4px);box-shadow:var(--shadow-md)}
+.br--bajada{border-top-color:var(--magenta)}
+.br--maa{border-top-color:var(--green)}
+.br--mamay{border-top-color:var(--orange)}
+.br--tulip{border-top-color:var(--cyan)}
+.br__tag{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:800;color:var(--ink-2);margin:0 0 6px}
+.br__n{font-family:var(--display);font-size:22px;font-weight:800;margin:0 0 10px}
+.br__a{font-size:15px;color:var(--ink-2);margin:0 0 14px;flex:1}
+.br__links{display:flex;flex-direction:column;gap:8px}
+.br__flag{background:var(--magenta-soft);border:1px dashed var(--magenta);border-radius:var(--r-sm);padding:11px 13px;font-size:13.5px;color:#7d0049;margin:0 0 12px}
+.br__flag b{display:block;color:var(--magenta);font-size:12px;letter-spacing:.09em;text-transform:uppercase;margin-bottom:3px}
+
+.swap{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.22);border-radius:var(--r-md);padding:20px;margin:22px 0 0}
+.swap__row{display:flex;gap:14px;align-items:flex-start;padding:14px 0;border-top:1px solid rgba(255,255,255,.16)}
+.swap__row:first-child{border-top:0;padding-top:0}
+.swap__ico{flex:0 0 34px;width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff}
+.swap__ico svg{width:19px;height:19px}
+.swap__ico--bad{background:#8a7aa8}
+.swap__ico--good{background:var(--green)}
+.swap__t{margin:0;font-size:11px;letter-spacing:.13em;text-transform:uppercase;font-weight:800;color:#c3b3e0}
+.swap__v{margin:3px 0 0;font-family:var(--display);font-size:18px;font-weight:800;color:#fff;line-height:1.3}
+.swap__d{margin:5px 0 0;font-size:14px;color:#c9bce2}
+
+.grid{display:grid;gap:16px;grid-template-columns:1fr}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:22px;box-shadow:var(--shadow-sm)}
+.card__ico{width:46px;height:46px;border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:14px;color:#fff}
+.card__ico svg{width:25px;height:25px}
+.card__ico--a{background:var(--magenta)}
+.card__ico--b{background:var(--green)}
+.card__ico--c{background:var(--orange)}
+.card p{font-size:15px;color:var(--ink-2);margin:0}
+.card h3{margin-bottom:8px}
+
+.rates{background:#fff;border:2px dashed var(--grape);border-radius:var(--r-md);padding:22px}
+.rates__row{display:flex;justify-content:space-between;gap:14px;align-items:baseline;padding:12px 0;border-top:1px solid var(--line)}
+.rates__row:first-of-type{border-top:0;padding-top:0}
+.rates__k{font-weight:700;font-size:15.5px;margin:0}
+.rates__v{font-family:var(--display);font-weight:800;font-size:19px;color:var(--grape);margin:0;white-space:nowrap}
+.rates__note{font-size:14px;color:var(--ink-2);margin:16px 0 0}
+
+.contact{display:grid;gap:24px;grid-template-columns:1fr}
+.note{background:var(--yellow-soft);border:1px solid #f0dc6a;border-radius:var(--r-md);padding:17px;font-size:14.5px;color:var(--ink-2);margin:0}
+.note b{display:block;color:var(--ink);margin-bottom:5px;font-size:15px}
+.reach{background:#fff;border:2px solid var(--magenta);border-radius:var(--r-md);padding:22px;box-shadow:var(--shadow-md);display:flex;flex-direction:column;gap:10px}
+
+.footer{background:var(--grape);color:#cdbfe6;padding:44px 0 34px}
+.footer h3{color:#fff;font-size:16px;margin-bottom:9px}
+.footer__grid{display:grid;gap:26px;grid-template-columns:1fr}
+.footer__p{font-size:14.5px;margin:0;line-height:1.75}
+.footer a{color:var(--yellow);text-decoration:none}
+.footer a:hover{text-decoration:underline}
+.footer__credit{border-top:1px solid rgba(255,255,255,.17);margin-top:28px;padding-top:18px;display:flex;flex-wrap:wrap;gap:8px 18px;justify-content:space-between;font-size:13px;color:#a996c9}
+
+.cs-bar{position:fixed;left:0;right:0;bottom:0;z-index:200;background:rgba(28,14,52,.97);backdrop-filter:saturate(150%) blur(10px);border-top:3px solid var(--yellow);box-shadow:0 -8px 32px rgba(28,14,52,.42);color:#fff;padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px))}
+.cs-bar__in{max-width:1060px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:10px 18px;text-align:center}
+.cs-bar__eyebrow{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:800;color:var(--yellow);margin:0 0 3px}
+.cs-bar__line{font-size:15px;font-weight:600;line-height:1.35;margin:0;color:#fff}
+.cs-bar__btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 23px;border-radius:var(--r-pill);background:var(--magenta);color:#fff;font-weight:700;font-size:15px;text-decoration:none;white-space:nowrap;box-shadow:0 4px 18px rgba(236,0,140,.46);animation:csPulse 2.4s ease-in-out infinite;transition:transform .18s ease,box-shadow .18s ease}
+.cs-bar__btn:hover{transform:translateY(-2px);box-shadow:0 8px 26px rgba(236,0,140,.7);animation-play-state:paused}
+.cs-bar__btn:focus-visible{outline:3px solid #fff;outline-offset:3px}
+@keyframes csPulse{0%,100%{box-shadow:0 4px 18px rgba(236,0,140,.38)}50%{box-shadow:0 4px 27px rgba(236,0,140,.7)}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition-duration:.01ms!important}.cs-bar__btn{animation:none}}
+
+@media (min-width:600px){
+  .hero__btns{flex-direction:row;flex-wrap:wrap}
+  .hero__btns .btn{flex:1 1 auto;min-width:200px}
+  .branches{grid-template-columns:repeat(2,1fr)}
+  .grid{grid-template-columns:repeat(3,1fr)}
+}
+@media (min-width:900px){
+  body{padding-bottom:108px}
+  .section{padding:74px 0}
+  h1{font-size:45px}h2{font-size:34px}
+  .hero__in{display:grid;grid-template-columns:1.06fr .94fr;gap:44px;align-items:center;padding:56px 20px 70px}
+  .hero__art{margin-top:0}
+  .branches{grid-template-columns:repeat(4,1fr)}
+  .contact{grid-template-columns:1.05fr .95fr;align-items:start}
+  .footer__grid{grid-template-columns:1.4fr 1fr 1fr}
+  .cs-bar__in{flex-wrap:nowrap;justify-content:space-between;text-align:left}
+  .cs-bar__line{font-size:16.5px}
+}
+</style>
+</head>
+<body>
+
+<div class="ribbon" aria-hidden="true">
+  <span style="background:#ed1c24"></span>
+  <span style="background:#ffe800"></span>
+  <span style="background:#ec008c"></span>
+  <span style="background:#2e3192"></span>
+  <span style="background:#f7941e"></span>
+  <span style="background:#00a651"></span>
+  <span style="background:#00aeef"></span>
+  <span style="background:#4c2a86"></span>
+</div>
+
+<header class="header">
+  <div class="header__in">
+    <a class="brand" href="#top">
+      <img class="brand-logo-img" src="brand/logo-facebook-profile.jpg" alt="Tails &amp; Whiskers logo">
+      <span class="brand__txt">
+        <span class="brand__name">Tails &amp; Whiskers</span>
+        <span class="brand__sub">Davao City &middot; 4 branches</span>
+      </span>
+    </a>
+    <a class="btn btn--magenta btn--sm header__cta" href="#branches">Find your branch</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="hero__in">
+      <div>
+        <p class="eyebrow">Bajada &middot; Ma-a &middot; Mamay &middot; Tulip Drive</p>
+        <p class="pill">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          Four branches, four addresses
+        </p>
+        <h1>Tails &amp; Whiskers. <em>All four branches, on one page.</em></h1>
+        <p class="hero__lead">Pet hotel, supplies and grooming across Davao City. Right now each branch lives on a different Facebook page, and one of them has none at all. This page puts every address, every way to reach you and every branch in one place &mdash; including the one the directories keep sending somewhere else.</p>
+
+        <div class="count">
+          <div class="count__c"><p class="count__n" style="color:var(--magenta)">4</p><p class="count__l">Branches</p></div>
+          <div class="count__c"><p class="count__n" style="color:var(--green)">3</p><p class="count__l">Facebook pages</p></div>
+          <div class="count__c"><p class="count__n" style="color:var(--orange)">1</p><p class="count__l">Branch with none</p></div>
+        </div>
+
+        <div class="hero__btns">
+          <a class="btn btn--magenta btn--big" href="#branches">See all four branches</a>
+          <a class="btn btn--ghost" href="#services">What we do</a>
+        </div>
+      </div>
+
+      <div class="hero__art">
+        <img class="mark" src="brand/logo-facebook-profile.jpg" alt="Tails &amp; Whiskers logo &mdash; the words TAILS &amp; WHISKERS hand-drawn with every letter a different colour, above a purple rule reading BAJADA BRANCH between two paw prints" width="440" height="440">
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--deep" id="mamay">
+    <div class="wrap">
+      <p class="eyebrow">The reason for this page</p>
+      <h2>Mamay is listed. Mamay's buttons go to Ma-a.</h2>
+      <p style="max-width:64ch;color:#c9bce2">Petagon's &ldquo;Pet Grooming in Davao City: 19 Spots&rdquo; carries all four of your branches, at positions 15 to 18. On the Mamay entry, the <b style="color:#fff">Website</b> button and the <b style="color:#fff">Facebook</b> button both open the Ma-a page. Someone who searched, found Mamay, read the Mamay address and tapped through is now looking at a shop on the other side of the city.</p>
+      <p style="max-width:64ch;color:#c9bce2">The same listing sends every other branch's &ldquo;Website&rdquo; button to Facebook too, because there is no website to send them to. That is the whole of the fix: give the four branches one address of their own, and let the directory point at it.</p>
+
+      <div class="swap">
+        <div class="swap__row">
+          <span class="swap__ico swap__ico--bad"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"></path></svg></span>
+          <div>
+            <p class="swap__t">Where Mamay's buttons land today</p>
+            <p class="swap__v">The Ma-a page &mdash; a different branch</p>
+            <p class="swap__d">Doors 32&ndash;33, D3G Y10 Complex on Mamay Road is what they read. Door 5, GB Prime Place is where they end up.</p>
+          </div>
+        </div>
+        <div class="swap__row">
+          <span class="swap__ico swap__ico--good"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 7"></path></svg></span>
+          <div>
+            <p class="swap__t">Where they land from this page</p>
+            <p class="swap__v">The Mamay section, with the Mamay address</p>
+            <p class="swap__d">Every branch gets its own block, its own address and its own tap target. Mamay is not a redirect to somewhere else.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="branches">
+    <div class="wrap">
+      <p class="eyebrow">Where to find you</p>
+      <h2>Four branches across Davao City</h2>
+      <p style="max-width:62ch;color:var(--ink-2)">Addresses as they appear on your own pages and on the Petagon listing. Hours and services per branch are left blank on purpose &mdash; tell us and they go in exactly as you say them.</p>
+      <div class="branches">
+
+        <div class="br br--bajada">
+          <p class="br__tag">Branch 01</p>
+          <p class="br__n">Bajada</p>
+          <p class="br__a">Door 3, ARGACO Building,<br>J.P. Laurel Avenue,<br>Davao City</p>
+          <div class="br__links">
+            <a class="btn btn--magenta btn--sm" href="https://www.facebook.com/wagsandwhiskersbajada/" target="_blank" rel="noopener">Message Bajada</a>
+          </div>
+        </div>
+
+        <div class="br br--maa">
+          <p class="br__tag">Branch 02</p>
+          <p class="br__n">Ma-a</p>
+          <p class="br__a">Door 5, GB Prime Place Building,<br>Ma-a,<br>Davao City</p>
+          <div class="br__links">
+            <a class="btn btn--sm" style="background:var(--green);color:#fff" href="https://www.facebook.com/profile.php?id=100075935842546" target="_blank" rel="noopener">Message Ma-a</a>
+          </div>
+        </div>
+
+        <div class="br br--mamay">
+          <p class="br__tag">Branch 03</p>
+          <p class="br__n">Mamay</p>
+          <p class="br__a">Doors 32&ndash;33, D3G Y10 Complex,<br>Mamay Road,<br>Davao City</p>
+          <p class="br__flag"><b>No page of its own</b>Mamay is the branch the directory redirects. Once it has a contact number or a page, it goes here and the redirect stops mattering.</p>
+          <div class="br__links">
+            <a class="btn btn--ghost btn--sm" href="#contact">Contact &mdash; to be confirmed</a>
+          </div>
+        </div>
+
+        <div class="br br--tulip">
+          <p class="br__tag">Branch 04</p>
+          <p class="br__n">Tulip Drive</p>
+          <p class="br__a">Tulip Drive,<br>Talomo,<br>Davao City</p>
+          <div class="br__links">
+            <a class="btn btn--sm" style="background:var(--cyan);color:#04303f" href="https://www.facebook.com/wags.whiskers.tulip/" target="_blank" rel="noopener">Message Tulip Drive</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--soft" id="services">
+    <div class="wrap">
+      <p class="eyebrow">What Tails &amp; Whiskers does</p>
+      <h2>Hotel, supplies and grooming</h2>
+      <div class="grid">
+        <div class="card">
+          <div class="card__ico card__ico--a"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11 12 4l9 7"></path><path d="M5 10v10h14V10"></path><path d="M9 20v-6h6v6"></path></svg></div>
+          <h3>Pet hotel</h3>
+          <p>Boarding at four locations across the city, so an owner can pick the branch nearest to where they actually live.</p>
+        </div>
+        <div class="card">
+          <div class="card__ico card__ico--b"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2h12l-1 6H7Z"></path><path d="M7 8h10l1.4 11.6a1.5 1.5 0 0 1-1.5 1.7H7.1a1.5 1.5 0 0 1-1.5-1.7Z"></path></svg></div>
+          <h3>Pet supplies</h3>
+          <p>Food, treats and gear on the shelf. <b style="color:var(--ink)">Stocked brands &mdash; to be confirmed.</b> We are not going to list brands we have not seen in your store.</p>
+        </div>
+        <div class="card">
+          <div class="card__ico card__ico--c"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="3"></circle><circle cx="6" cy="18" r="3"></circle><path d="M20 4 8.1 15.9M14.5 14.5 20 20M8.1 8.1 12 12"></path></svg></div>
+          <h3>Grooming</h3>
+          <p>Baths, trims and full grooms. Listed on Petagon under all four branches &mdash; and now under one address you own.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="rates">
+    <div class="wrap">
+      <p class="eyebrow">Prices</p>
+      <h2>Blank until you fill them in</h2>
+      <div class="rates">
+        <div class="rates__row"><p class="rates__k">Full groom</p><p class="rates__v">&#8369; ___</p></div>
+        <div class="rates__row"><p class="rates__k">Bath &amp; blow-dry</p><p class="rates__v">&#8369; ___</p></div>
+        <div class="rates__row"><p class="rates__k">Overnight boarding</p><p class="rates__v">&#8369; ___ / night</p></div>
+        <div class="rates__row"><p class="rates__k">Opening hours</p><p class="rates__v">To be confirmed</p></div>
+        <p class="rates__note">Sample layout &mdash; your actual rates go here. Nothing on this page is a price we made up, and nothing will be. Send one message with your groom prices, your board rate and your hours per branch, and this table stops being a placeholder.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--sun" id="contact">
+    <div class="wrap">
+      <p class="eyebrow">Get in touch</p>
+      <h2>Message the branch you need</h2>
+      <div class="contact">
+        <div>
+          <p class="note"><b>One thing worth checking on your listings</b>Petagon still trades under your old name. Your own artwork, and the Ma-a page, both read <b style="color:var(--ink)">Tails &amp; Whiskers</b> &mdash; the directory entry that ranks for you does not. A customer searching the name on your signage does not find the listing, and a customer who finds the listing sees a name your shop no longer uses.</p>
+        </div>
+        <div class="reach">
+          <h3>Reach us</h3>
+          <a class="btn btn--magenta btn--big" href="https://www.facebook.com/wagsandwhiskersbajada/" target="_blank" rel="noopener">Message Bajada</a>
+          <a class="btn btn--sm" style="background:var(--green);color:#fff;min-height:46px" href="https://www.facebook.com/profile.php?id=100075935842546" target="_blank" rel="noopener">Message Ma-a</a>
+          <a class="btn btn--sm" style="background:var(--cyan);color:#04303f;min-height:46px" href="https://www.facebook.com/wags.whiskers.tulip/" target="_blank" rel="noopener">Message Tulip Drive</a>
+          <p style="font-size:14px;color:var(--ink-2);margin:14px 0 0">Mamay has no page yet. Give us a number for it and it joins the list.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <h3>Tails &amp; Whiskers</h3>
+        <p class="footer__p">Pet hotel, supplies and grooming<br>Bajada &middot; Ma-a &middot; Mamay &middot; Tulip Drive<br>Davao City</p>
+      </div>
+      <div>
+        <h3>Branches online</h3>
+        <p class="footer__p"><a href="https://www.facebook.com/wagsandwhiskersbajada/" target="_blank" rel="noopener">Bajada on Facebook</a><br><a href="https://www.facebook.com/profile.php?id=100075935842546" target="_blank" rel="noopener">Ma-a on Facebook</a><br><a href="https://www.facebook.com/wags.whiskers.tulip/" target="_blank" rel="noopener">Tulip Drive on Facebook</a></p>
+      </div>
+      <div>
+        <h3>Mamay</h3>
+        <p class="footer__p">Doors 32&ndash;33, D3G Y10 Complex, Mamay Road. Contact details to be confirmed.</p>
+      </div>
+    </div>
+    <div class="footer__credit">
+      <span>&copy; 2026 Tails &amp; Whiskers, Davao City</span>
+      <span>Website by CloudSpring IT Solutions</span>
+    </div>
+  </div>
+</footer>
+
+<aside class="cs-bar" role="complementary" aria-label="CloudSpring IT Solutions preview notice">
+  <div class="cs-bar__in">
+    <div class="cs-bar__txt">
+      <p class="cs-bar__eyebrow">PREVIEW &middot; CloudSpring IT Solutions</p>
+      <p class="cs-bar__line">Mamay's listing buttons open the Ma-a page. Ten minutes to talk about giving all four branches one address?</p>
+    </div>
+    <a class="cs-bar__btn" href="https://api.leadconnectorhq.com/widget/booking/QRPEnWRw2Kx9rBe0Mj6J" target="_blank" rel="noopener">Book a FREE Discovery Call &rarr;</a>
+  </div>
+</aside>
+
+</body>
+</html>

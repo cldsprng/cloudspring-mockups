@@ -1,0 +1,52 @@
+{
+  "slug": "tails-whiskers-davao",
+  "site": null,
+  "facebook": "wagsandwhiskersbajada",
+  "capturedAt": "2026-08-29T03:38:37.812Z",
+  "source": "headless-http",
+  "name": "Tails & Whiskers",
+  "logo": {
+    "file": "logo-facebook-profile.jpg",
+    "score": 95,
+    "why": "facebook profile picture"
+  },
+  "logoFiles": [
+    {
+      "file": "logo-facebook-profile.jpg",
+      "bytes": 98024,
+      "from": "graph.facebook.com/wagsandwhiskersbajada/picture?width=1200&height=1200",
+      "why": "facebook profile picture",
+      "score": 95
+    }
+  ],
+  "colors": {
+    "brand": [
+      { "hex": "#4c2a86", "weight": 45 },
+      { "hex": "#ec008c", "weight": 40 },
+      { "hex": "#f7941e", "weight": 30 },
+      { "hex": "#00a651", "weight": 25 },
+      { "hex": "#2e3192", "weight": 25 },
+      { "hex": "#ed1c24", "weight": 20 },
+      { "hex": "#ffe800", "weight": 20 },
+      { "hex": "#00aeef", "weight": 15 }
+    ],
+    "neutral": [
+      { "hex": "#ffffff", "weight": 90 },
+      { "hex": "#111111", "weight": 30 }
+    ],
+    "themeColor": null,
+    "source": "vision"
+  },
+  "fonts": [],
+  "ready": true,
+  "blockedBy": null,
+  "confidence": 90,
+  "notes": [
+    "facebook profile picture captured headlessly for \"wagsandwhiskersbajada\"",
+    "no website for this lead — facebook-only capture path",
+    "BLOCKER palette-pending: logo captured (logo-facebook-profile.jpg) but fewer than 2 chromatic colours found. Vision-read the logo, then write the hex values into colors.brand[] with colors.source=\"vision\" and re-run the gate.",
+    "2026-08-29 (step 4, CLO-110): palette-pending resolved by vision-reading brand/logo-facebook-profile.jpg. The mark is a two-line hand-drawn wordmark, every letter a different colour with a heavy black outline, over a purple rule reading '— 🐾 BAJADA BRANCH 🐾 —'. Read off the artwork itself: #4c2a86 = the BAJADA BRANCH line, both paw prints and the two rules; #ec008c = the W and S of WHISKERS and the I of TAILS; #f7941e = the S of TAILS and the E of WHISKERS; #00a651 = the & and the H of WHISKERS; #2e3192 = the L of TAILS and the R of WHISKERS; #ed1c24 = the T of TAILS and the K of WHISKERS; #ffe800 = the A of TAILS and the S of WHISKERS; #00aeef = the I of WHISKERS. No hex is invented and none is sampled from anything but the lead's own logo.",
+    "2026-08-29 (step 4, CLO-110): NAME CORRECTION. The Trello card, and the Petagon directory it cites, call this business 'Wags and Whiskers Pet Hotel, Supplies and Grooming'. Their own artwork does not: the profile picture behind graph.facebook.com/wagsandwhiskersbajada reads 'TAILS & WHISKERS — BAJADA BRANCH', and the Ma-a page the card cites by numeric id (100075935842546) now titles itself 'Tails & Whiskers Ma-a Pet Hotel, Supplies, and Grooming'. Same page ids, new trading name. brand.name is recorded as the name they use, not the one the directory still prints, and the slug was set to tails-whiskers-davao before first deploy so the URL never has to move.",
+    "2026-08-29 (step 4, CLO-110): no typeface captured. Facebook-only lead, no CSS to read a font from; fonts[] stays empty rather than guessing a webfont name off hand-lettered logo type, and verify-brand.mjs check 3 skips accordingly."
+  ]
+}
