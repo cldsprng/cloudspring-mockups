@@ -2081,3 +2081,21 @@ promise, not the diagnosis, that the menu gates.
   own domain. **Verify the branded URL with curl and a Chrome UA; a 403 from
   the fetch tool is a client block, not a deploy state** — and per the standing
   rule, verify on page content either way, never on the status code.
+- 2026-08-29 (step 6, CLO-112 — the "Hi there," greeting is the new opener
+  tell): all three of today's drafts (The Ark Veterinary, Tails & Whiskers,
+  Yana's Dog Salon) opened with the literal words "Hi there,". Batch-wide
+  check caught it because none of the three drafts read as a template alone —
+  the shared opener only shows up laid side by side, exactly why step 6 reads
+  the whole day's batch and not one card at a time. Rewrote all three to open
+  with a distinct construction (a direct factual claim, a narrative anecdote, a
+  concessive statement) instead of a greeting. Add "Hi there," to the banned
+  default-opener watchlist alongside "So I built …" — a greeting is as much a
+  template shape as a pivot clause.
+- 2026-08-29 (step 6, CLO-112 — em-dash count is a per-draft check, not a
+  batch one): Yana's Dog Salon's draft carried two em-dashes in the sent copy,
+  over the one-per-draft limit, while the other two cards in the same batch
+  were each within budget. Trimmed both to plain sentence breaks. Worth
+  stating separately from the opener catch above: the em-dash rule fails or
+  passes per card, so a batch that's clean on shared skeleton can still hide a
+  single-card overage — count each draft's em-dashes individually, don't stop
+  once the batch-wide axes clear.
