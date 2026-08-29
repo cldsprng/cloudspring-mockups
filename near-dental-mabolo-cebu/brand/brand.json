@@ -20,6 +20,7 @@
   "notes": [
     "facebook profile picture unavailable for \"neardentalclinics\" (page may be renamed, unpublished, or ID-only)",
     "no website for this lead — facebook-only capture path",
-    "BLOCKER no-assets: no usable logo file (need >=1KB from a logo/icon/FB signal)"
+    "BLOCKER no-assets: no usable logo file (need >=1KB from a logo/icon/FB signal)",
+    "2026-08-29 (step 4 re-capture sweep, CLO-110): re-captured against the Facebook slug neardentalclinics. graph.facebook.com returns HTTP 400 for it — the page has been renamed, unpublished, or is reachable only by numeric id, and the card does not carry that id. Still no-assets."
   ]
 }

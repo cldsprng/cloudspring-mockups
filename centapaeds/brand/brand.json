@@ -1,6 +1,6 @@
 {
   "slug": "centapaeds",
-  "site": "centapaeds.com.au",
+  "site": "https://centapaeds.com.au",
   "facebook": null,
   "capturedAt": "2026-08-19T23:26:55.794Z",
   "source": "headless-http",
@@ -19,6 +19,7 @@
   "confidence": 0,
   "notes": [
     "site unreachable over plain HTTP(S)",
-    "BLOCKER no-assets: no usable logo file (need >=1KB from a logo/icon/FB signal)"
+    "BLOCKER no-assets: no usable logo file (need >=1KB from a logo/icon/FB signal)",
+    "2026-08-29 (step 4 re-capture sweep, CLO-110): re-captured against centapaeds.com.au. The domain no longer resolves — NXDOMAIN, no A or AAAA record, curl exits 000. It was reachable when this lead was captured on 2026-08-03. The practice's own domain has lapsed since, which makes the card's evidence stale as well as its branding blocked: any angle written against that site is now false. Still no-assets, and the lead needs re-qualifying before it is worth anything."
   ]
 }

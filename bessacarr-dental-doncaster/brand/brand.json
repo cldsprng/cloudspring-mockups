@@ -20,6 +20,7 @@
   "notes": [
     "facebook page \"100064013286702\" has no profile picture — the graph endpoint returns the anonymous silhouette (is_silhouette: true). Common for pages reachable only by numeric ID. Not recoverable headlessly.",
     "no website for this lead — facebook-only capture path",
-    "BLOCKER no-assets: no usable logo file (need >=1KB from a logo/icon/FB signal)"
+    "BLOCKER no-assets: no usable logo file (need >=1KB from a logo/icon/FB signal)",
+    "2026-08-29 (step 4 re-capture sweep, CLO-110): re-captured against Facebook page id 100064013286702. graph.facebook.com serves the anonymous silhouette for this page id (is_silhouette: true) — the identical 19,030-byte default file that eight of the fifteen swept pages return. There is no profile picture to capture, so the no-assets verdict stands."
   ]
 }

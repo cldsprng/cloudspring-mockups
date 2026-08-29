@@ -1,7 +1,7 @@
 {
   "slug": "dra-rona",
   "site": null,
-  "facebook": "p",
+  "facebook": "100057137753475",
   "capturedAt": "2026-08-19T23:27:17.914Z",
   "source": "headless-http",
   "name": null,
@@ -20,6 +20,7 @@
   "notes": [
     "facebook profile picture unavailable for \"p\" (page may be renamed, unpublished, or ID-only)",
     "no website for this lead — facebook-only capture path",
-    "BLOCKER no-assets: no usable logo file (need >=1KB from a logo/icon/FB signal)"
+    "BLOCKER no-assets: no usable logo file (need >=1KB from a logo/icon/FB signal)",
+    "2026-08-29 (step 4 re-capture sweep, CLO-110): re-captured against Facebook page id 100057137753475. The stored facebook field read \"p\" — the original capture was handed the path fragment \"p/DRA-RONA-Ortho-Dental-Clinic-100057137753475/\" and kept only the first segment, so the recorded no-assets verdict was reached without ever querying the real page. Corrected here and re-run properly. graph.facebook.com serves the anonymous silhouette for this page id (is_silhouette: true) — the identical 19,030-byte default file that eight of the fifteen swept pages return. There is no profile picture to capture, so the no-assets verdict stands. The verdict is unchanged, but it is now evidence rather than an artefact of a bad argument."
   ]
 }

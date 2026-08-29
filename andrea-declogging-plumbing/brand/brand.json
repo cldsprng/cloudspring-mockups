@@ -19,6 +19,7 @@
   "confidence": 0,
   "notes": [
     "no website or facebook page provided for this lead",
-    "BLOCKER no-assets: no usable logo file or brand signal available"
+    "BLOCKER no-assets: no usable logo file or brand signal available",
+    "2026-08-29 (step 4 re-capture sweep, CLO-110): re-checked. The card carries no Facebook page and no candidate domain, so capture has no input to run against — this is not a capture that failed, it is a lead with nothing to capture from. Unblocking it needs a human or a fresh step-1 pass to find a page or a domain. Still no-assets."
   ]
 }

@@ -1,7 +1,7 @@
 {
   "slug": "smile-solutions-taguig",
   "site": null,
-  "facebook": "p",
+  "facebook": "100064028413159",
   "capturedAt": "2026-08-19T23:25:52.226Z",
   "source": "headless-http",
   "name": null,
@@ -20,6 +20,7 @@
   "notes": [
     "facebook profile picture unavailable for \"p\" (page may be renamed, unpublished, or ID-only)",
     "no website for this lead — facebook-only capture path",
-    "BLOCKER no-assets: no usable logo file (need >=1KB from a logo/icon/FB signal)"
+    "BLOCKER no-assets: no usable logo file (need >=1KB from a logo/icon/FB signal)",
+    "2026-08-29 (step 4 re-capture sweep, CLO-110): re-captured against Facebook page id 100064028413159. The stored facebook field read \"p\" — same truncated-path defect as Dra. Rona; the original verdict never queried the page. graph.facebook.com serves the anonymous silhouette for this page id (is_silhouette: true) — the identical 19,030-byte default file that eight of the fifteen swept pages return. There is no profile picture to capture, so the no-assets verdict stands."
   ]
 }

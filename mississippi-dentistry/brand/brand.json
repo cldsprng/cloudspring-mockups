@@ -1,7 +1,7 @@
 {
   "slug": "mississippi-dentistry",
   "site": "https://msdent4kids.com/",
-  "facebook": null,
+  "facebook": "162271787125256",
   "capturedAt": "2026-08-22T15:53:06.354Z",
   "source": "headless-http",
   "name": null,
@@ -19,6 +19,7 @@
   "confidence": 0,
   "notes": [
     "0 stylesheet(s) fetched, 1 bytes of CSS",
-    "BLOCKER no-assets: no usable logo file (need >=1KB from a logo/icon/FB signal)"
+    "BLOCKER no-assets: no usable logo file (need >=1KB from a logo/icon/FB signal)",
+    "2026-08-29 (step 4 re-capture sweep, CLO-110): re-captured on both halves. Facebook page id 162271787125256 (the stored field read \"pages\") returns a 5,337-byte PNG that the graph endpoint flags is_silhouette: true — a default avatar, not a mark. msdent4kids.com answers 200 in 114 bytes with no stylesheet, so there is no CSS palette and no logo tag either. Both channels checked, neither yields an asset. Still no-assets — and the 114-byte body is the blank-domain angle holding a year on."
   ]
 }
