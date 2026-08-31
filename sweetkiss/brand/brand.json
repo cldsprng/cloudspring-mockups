@@ -1,0 +1,43 @@
+{
+  "slug": "sweetkiss",
+  "site": null,
+  "facebook": "SweetKissPh",
+  "capturedAt": "2026-08-31T01:10:22.387Z",
+  "source": "headless-http",
+  "name": "Michelle's Sweet Kiss",
+  "logo": {
+    "file": "logo-facebook-profile.jpg",
+    "score": 95,
+    "why": "facebook profile picture"
+  },
+  "logoFiles": [
+    {
+      "file": "logo-facebook-profile.jpg",
+      "bytes": 130574,
+      "from": "graph.facebook.com/SweetKissPh/picture?width=1200&height=1200",
+      "why": "facebook profile picture",
+      "score": 95
+    }
+  ],
+  "colors": {
+    "brand": [
+      {"hex": "#1a3a6d", "weight": 80},
+      {"hex": "#d4af37", "weight": 60},
+      {"hex": "#f5f5f5", "weight": 40}
+    ],
+    "neutral": [
+      {"hex": "#ffffff", "weight": 30}
+    ],
+    "themeColor": null,
+    "source": "vision"
+  },
+  "fonts": ["script serif"],
+  "ready": true,
+  "blockedBy": null,
+  "confidence": 95,
+  "notes": [
+    "facebook profile picture captured headlessly for \"SweetKissPh\"",
+    "Vision-read palette: royal blue (#1a3a6d), gold (#d4af37), cream (#f5f5f5)",
+    "⚠️ REBRAND ALERT: Logo wordmark reads \"Michelle's Sweet Kiss\", card name is \"Sweet Kiss Custom Cakes\" - verify business name before build"
+  ]
+}

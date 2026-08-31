@@ -1,0 +1,52 @@
+{
+  "slug": "fillathome",
+  "site": "https://fillathome.com/",
+  "facebook": "fillathome",
+  "capturedAt": "2026-08-31T01:10:24.035Z",
+  "source": "headless-http",
+  "name": "Fill At Home Catering Services",
+  "logo": {
+    "file": "logo-facebook-profile.jpg",
+    "score": 95,
+    "why": "facebook profile picture"
+  },
+  "logoFiles": [
+    {
+      "file": "logo-facebook-profile.jpg",
+      "bytes": 32498,
+      "from": "graph.facebook.com/fillathome/picture?width=1200&height=1200",
+      "why": "facebook profile picture",
+      "score": 95
+    },
+    {
+      "file": "logo-2-img-marked-logo.svg",
+      "bytes": 1354,
+      "from": "https://assets.squarespace.com/universal/images-v6/damask/logo-light.svg",
+      "why": "img marked logo",
+      "score": 90
+    }
+  ],
+  "colors": {
+    "brand": [
+      {"hex": "#f0ad4e", "weight": 60},
+      {"hex": "#5db3b3", "weight": 60},
+      {"hex": "#ff6b6b", "weight": 60},
+      {"hex": "#1a1a1a", "weight": 40}
+    ],
+    "neutral": [
+      {"hex": "#ffffff", "weight": 80}
+    ],
+    "themeColor": null,
+    "source": "vision"
+  },
+  "fonts": ["sans-serif"],
+  "ready": true,
+  "blockedBy": null,
+  "confidence": 95,
+  "notes": [
+    "facebook profile picture captured headlessly for \"fillathome\"",
+    "Also found Squarespace placeholder logo (generic, not used for brand)",
+    "Vision-read palette: gold fork (#f0ad4e), teal spoon (#5db3b3), coral knife (#ff6b6b), black text (#1a1a1a)",
+    "Logo is a strong mark - three utensils in circles with clear color identity"
+  ]
+}

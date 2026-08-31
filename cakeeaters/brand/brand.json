@@ -1,0 +1,25 @@
+{
+  "slug": "cakeeaters",
+  "site": null,
+  "facebook": "CakeEatersBakery",
+  "capturedAt": "2026-08-31T01:10:25.519Z",
+  "source": "headless-http",
+  "name": null,
+  "logo": null,
+  "logoFiles": [],
+  "colors": {
+    "brand": [],
+    "neutral": [],
+    "themeColor": null,
+    "source": null
+  },
+  "fonts": [],
+  "ready": false,
+  "blockedBy": "no-assets",
+  "confidence": 0,
+  "notes": [
+    "facebook profile picture unavailable for \"CakeEatersBakery\" (page may be renamed, unpublished, or ID-only)",
+    "no website for this lead — facebook-only capture path",
+    "BLOCKER no-assets: no usable logo file (need >=1KB from a logo/icon/FB signal)"
+  ]
+}
