@@ -1,8 +1,8 @@
 {
   "slug": "small-town-auto-earlville",
   "site": "https://smalltownautorepair.com/",
-  "facebook": "p",
-  "capturedAt": "2026-08-23T08:46:42.660Z",
+  "facebook": "100083031904485",
+  "capturedAt": "2026-08-31T23:36:47.178Z",
   "source": "headless-http",
   "name": "Small Town Auto Repair",
   "logo": {
@@ -66,7 +66,7 @@
   "blockedBy": "no-assets",
   "confidence": 30,
   "notes": [
-    "facebook profile picture unavailable for \"p\" (page may be renamed, unpublished, or ID-only)",
+    "facebook page \"100083031904485\" has no profile picture — the graph endpoint returns the anonymous silhouette (is_silhouette: true). Common for pages reachable only by numeric ID. Not recoverable headlessly.",
     "0 stylesheet(s) fetched, 49784 bytes of CSS",
     "BLOCKER no-assets: no usable logo file (need >=1KB from a logo/icon/FB signal)"
   ]

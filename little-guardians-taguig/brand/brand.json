@@ -1,8 +1,8 @@
 {
   "slug": "little-guardians-taguig",
   "site": null,
-  "facebook": "p",
-  "capturedAt": "2026-08-19T23:25:48.198Z",
+  "facebook": "61564193106467",
+  "capturedAt": "2026-08-31T23:36:44.502Z",
   "source": "headless-http",
   "name": null,
   "logo": null,
@@ -18,7 +18,7 @@
   "blockedBy": "no-assets",
   "confidence": 0,
   "notes": [
-    "facebook profile picture unavailable for \"p\" (page may be renamed, unpublished, or ID-only)",
+    "facebook page \"61564193106467\" has no profile picture — the graph endpoint returns the anonymous silhouette (is_silhouette: true). Common for pages reachable only by numeric ID. Not recoverable headlessly.",
     "no website for this lead — facebook-only capture path",
     "BLOCKER no-assets: no usable logo file (need >=1KB from a logo/icon/FB signal)"
   ]
