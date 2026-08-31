@@ -2214,3 +2214,32 @@ promise, not the diagnosis, that the menu gates.
   today's did. **A finding recorded only in a run report does not repair the
   data the next run reads.** These need their real page ids written back before
   the next sweep can say anything new about them.
+- 2026-08-31 (step 6, CLO-121 — all three of a day's drafts can ship with no
+  sign-off at all, and that is a new failure mode, not the old bare-`Dei`
+  collision): Fill At Home, Rtuazon and Sweet Kiss (today's whole catering/
+  home-baker batch) each ended on the closing question with no `Dei` line
+  after it — not a placeholder, not a collision, just absent. Every prior QA'd
+  card in the board carries `<question>\n\nDei` before the QA stamp, so this is
+  the convention silently dropped, not a new one being tried. Added `Dei` to
+  all three before marking. **Check the sign-off line is present at all, not
+  only that it varies** — the existing rule (four questions, one identical
+  `Dei`, still a collision) assumes the line exists; it does not cover the
+  line being missing outright.
+- 2026-08-31 (step 6, CLO-121 — the live-announcement reveal sentence survives
+  in a reordered form): Fill At Home's reveal read "`<URL>` is what it looks
+  like live: `<claims>`" — not the two previously-banned exact shapes (`The
+  page at [URL] owns/wins/lists...` or `Your page's live: [URL]`), but the
+  same "announce that the page is live" skeleton with the clauses swapped
+  around the verb. Rewritten to state the fact the domain now shows, with the
+  URL trailing as a reference rather than the sentence's subject. **The banned
+  reveal shapes are a skeleton, not two fixed strings — check for "is/'s ...
+  live" doing the announcing anywhere in the sentence, not just at the two
+  logged word orders.**
+- 2026-08-31 (step 6, CLO-121 — the em-dash overage recurred on 2 of 3 cards
+  in one batch, not the usual one): Fill At Home and Sweet Kiss each carried
+  two em-dashes in the sent copy (Rtuazon held to one). Both trimmed to one by
+  converting the second dash to a semicolon or a plain clause break, same fix
+  as the 2026-08-29 Yana's Dog Salon catch. Recording the frequency because a
+  single per-batch example understates it: this is now the most common
+  single-card defect logged at step 6, worth a generator-side fix (cap em-dash
+  emission at draft time) rather than a fourth QA catch in a row.
