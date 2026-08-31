@@ -2243,3 +2243,45 @@ promise, not the diagnosis, that the menu gates.
   single per-batch example understates it: this is now the most common
   single-card defect logged at step 6, worth a generator-side fix (cap em-dash
   emission at draft time) rather than a fourth QA catch in a row.
+- 2026-08-31 (CEO closing leg, CLO-115 - a child step can lose the Trello MCP
+  while the parent still has it, and "no cards" from run-start depths is a guess
+  even when it turns out right): CLO-122 (steps 7-9) reported APPROVED 0,
+  CONTACTED 0, FOLLOW-UP DUE 0 and REPLIED 0 and stated plainly that it could
+  not re-read the board - "Trello board access requires authentication via MCP
+  server connection (not available in this non-interactive run)". It then closed
+  `done`. I re-read the board live in the closing leg and all four were in fact
+  0, so its conclusion holds. It holds by luck, not by evidence: this is exactly
+  the 2026-08-29 CLO-109 failure mode (step 3 reported "0 cards" while STRATEGY
+  READY held 3) with a favourable draw. Two things follow. **(1) MCP tool
+  availability is per-run, not per-company** - the same connector was available
+  to this parent run minutes later, so a child reporting the connector missing
+  is not a company-wide outage and must not be recorded as one. **(2) A step
+  that cannot read its own queue has not measured it**; it should say so and
+  hand the measurement to the closing leg, which re-reads the whole board in one
+  call anyway. Steps 7-9 cost nothing here because the queues were genuinely
+  empty; on a day APPROVED is non-zero the same shortcut silently skips the send.
+- 2026-08-31 (CEO closing leg, CLO-115 - `list_by_board` returns no node for an
+  empty list, so a depth table built from its output omits every zero-depth
+  queue *and* any list the reader forgot existed): today's grouped read returned
+  108 nodes across only 6 lists - NICHE 1, BRAND BLOCKED 38, READY TO SEND 60,
+  CHANGES REQUESTED 1, SYNCED TO GHL 1, REJECTED 7. The board actually has
+  **14** lists (`trelloReadList` `list_by_board`, `hasNextPage:false`); the other
+  8 are empty. The run-start table this run enumerated a remembered roster and
+  lost two real lists that way: REJECTED (7 cards) and NICHE (1) were on the
+  board and absent from the table, while CLIENTS - which is 0, and is the number
+  the whole pipeline exists to move - was never listed at all. **Take the list
+  roster from `trelloReadList`, not from the card grouping, and reconcile: sum
+  of per-list counts must equal the node total** (108 = 1+38+60+1+1+7 today).
+  Zeros are reported because the roster says the list exists, never because the
+  reader remembered it.
+- 2026-08-31 (CEO closing leg, CLO-115 - the bottleneck issue's *title* went
+  stale while its body stayed current, and the title is the only part a human
+  sees in a list view): CLO-76 is titled "Approval gate: 48 QA-passed drafts, 0
+  approved for 6 consecutive runs". As of today it is **60 drafts, 0 approved
+  for 9 consecutive runs** - the title understates the queue by 12 cards and the
+  drought by 3 runs, and it has been `in_review` with an `ask_user_questions`
+  pending since 2026-08-23, now **8 days** unanswered. An escalation that
+  quietly ages its own headline downward argues against itself. **When a run
+  flags a queue for sustained growth, update the count in the tracking issue's
+  title in the same heartbeat, not only in the run report** - the report is read
+  once, the title is read every time the board is opened.
