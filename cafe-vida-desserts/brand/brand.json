@@ -1,0 +1,96 @@
+{
+  "slug": "cafe-vida-desserts",
+  "site": "https://www.cafevidadesserts.com/",
+  "facebook": "CafeVidaDesserts",
+  "capturedAt": "2026-08-31T23:30:39.559Z",
+  "source": "headless-http",
+  "name": "Cafe Vida Custom Cakes",
+  "logo": {
+    "file": "logo-2-json-ld-logo.png",
+    "score": 100,
+    "why": "json-ld logo"
+  },
+  "logoFiles": [
+    {
+      "file": "logo-facebook-profile.png",
+      "bytes": 34700,
+      "from": "graph.facebook.com/CafeVidaDesserts/picture?width=1200&height=1200",
+      "why": "facebook profile picture",
+      "score": 95
+    },
+    {
+      "file": "logo-2-json-ld-logo.png",
+      "bytes": 3316828,
+      "from": "https://www.cafevidadesserts.com/cdn/shop/files/Horizontal_Logo_-_Cafe_Vida_1.png?v=1755702577",
+      "why": "json-ld logo",
+      "score": 100
+    },
+    {
+      "file": "logo-3-img-marked-logo.png",
+      "bytes": 5942,
+      "from": "https://www.cafevidadesserts.com/cdn/shop/files/Horizontal_Logo_-_Cafe_Vida_1.png?height=48&v=1755702577",
+      "why": "img marked logo",
+      "score": 90
+    }
+  ],
+  "colors": {
+    "brand": [
+      {
+        "hex": "#44c0dd",
+        "weight": 13
+      },
+      {
+        "hex": "#ff8235",
+        "weight": 7
+      },
+      {
+        "hex": "#f9af11",
+        "weight": 6
+      },
+      {
+        "hex": "#ef436a",
+        "weight": 3
+      },
+      {
+        "hex": "#0e1320",
+        "weight": 3
+      },
+      {
+        "hex": "#72d112",
+        "weight": 3
+      }
+    ],
+    "neutral": [
+      {
+        "hex": "#ffffff",
+        "weight": 108
+      },
+      {
+        "hex": "#000000",
+        "weight": 82
+      },
+      {
+        "hex": "#191919",
+        "weight": 45
+      },
+      {
+        "hex": "#f2f2f2",
+        "weight": 22
+      }
+    ],
+    "themeColor": null,
+    "source": "site-css"
+  },
+  "fonts": [
+    "i",
+    "i!important",
+    "Inter"
+  ],
+  "ready": true,
+  "blockedBy": null,
+  "confidence": 100,
+  "notes": [
+    "facebook profile picture captured headlessly for \"CafeVidaDesserts\"",
+    "3 stylesheet(s) fetched, 421705 bytes of CSS"
+  ]
+}
