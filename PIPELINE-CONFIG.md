@@ -2137,3 +2137,80 @@ promise, not the diagnosis, that the menu gates.
   a routine failed to fire.** Missed quota that could not be attempted is a
   hosting decision for a human, not an agent defect, and the run report should
   say which of the two it was.
+- 2026-08-31 (step 4, CLO-119 — the BRAND BLOCKED sweep has a decisive test that
+  is cheaper than re-running capture: compare today's bytes against the bytes
+  capture already recorded): `brand.json.logoFiles[].bytes` stores the size of
+  the file capture downloaded. Re-fetch the profile picture and compare. Today
+  six of the seven blocked leads with a live picture came back **byte-identical**
+  to their captured file — kutis-by-kei-makati 626,288 · hugoderm-skincare-davao
+  66,319 · powertorq-auto-repair-qc 265,433 · gb-automotives-taguig 30,772 ·
+  happy-pawz-greencastle 233,527 · childrens-medical-clinic-davao 13,234. That
+  is proof the asset has not changed since capture, not an inference from the
+  verdict still reading the same. It converts "swept, recovered 0" from an
+  assertion into evidence, and it costs one fetch per lead. Note the gap it also
+  exposes: `rjf-vulcanizing-taguig` recorded **no** `bytes` at all, so no
+  comparison was possible there and it had to be vision-read (a tire-shop
+  interior, still `logo-not-a-mark`).
+- 2026-08-31 (step 4, CLO-119 — sweep the whole blocked queue without
+  downloading a single image): `graph.facebook.com/<id>/picture?redirect=false`
+  returns JSON metadata including `is_silhouette` instead of the image bytes.
+  capture.mjs already uses it (see the `redirect=false` branch), but a sweep can
+  use it standalone: 22 leads probed in one script, each resolving to exactly one
+  of four states — HAS-PICTURE, SILHOUETTE (9 today, all 1290x1290), HTTP 400
+  (renamed / unpublished / ID-only, 4 today), or NO-HANDLE. Only the HAS-PICTURE
+  rows need an image fetched or a vision read. Do the JSON probe first and the
+  expensive steps only on what it flags.
+- 2026-08-31 (step 4, CLO-119 — a SECOND blocked lead's own domain has lapsed,
+  and the 08-29 centapaeds finding is a pattern, not a one-off):
+  `hugoderm.com`, recorded as the site on hugoderm-skincare-davao's capture of
+  2026-08-19, is now **NXDOMAIN** — `dns.resolve4` fails ENOTFOUND, curl exits
+  000 with no remote IP. It was reached for a good reason: their Facebook
+  picture is a staff photo taken in front of their own signage, so their owned
+  domain was the obvious place to find the real mark. It no longer exists.
+  **When a `logo-not-a-mark` lead records a site, check the domain still
+  resolves before treating it as a logo source** — and log the lapse, because a
+  dead domain changes the lead's whole premise, not just its branding. Related
+  and worth knowing: `smalltownautorepair.com` DOES resolve and serves a real
+  200 page, but its only logo asset is GoDaddy's platform default
+  (`img1.wsimg.com/isteam/ip/static/pwa-app/logo-default.png`) — a live site is
+  not the same as a site with a mark on it.
+- 2026-08-31 (step 4, CLO-119 — a strategist's numeric claim did not survive one
+  fetch, and it was headed for the hero): the Sales Angle for Rtuazon Food-
+  Catering instructed the W-02 hero to carry "the 94%/23-review rating". The
+  live Placedigger listing's `schema.org/AggregateRating` block shows **all five
+  stars `deactive` and no review count at all** — there is no 94%, no 23
+  reviews, no rating of any kind on the page. The rest of that angle verified
+  exactly (postcode 3004, the orphan landline 7941996 ×4, `00:00` ×14 for seven
+  days, OTHER PLACES NEAR). Dropped the rating and built on the blank rating
+  instead, which is the stronger line anyway: fifteen years of trading and the
+  page that ranks for their name shows no score. **Re-verify the specific number
+  an angle asks you to print, even when the angle is one day old and the rest of
+  it holds** — the >7-day rule is a floor, and a figure going into a hero is
+  exactly where a wrong one does damage. Flagged on the card so step 5/6 cannot
+  reintroduce it.
+- 2026-08-31 (step 4, CLO-119 — verify-brand's font check is a literal substring
+  test, and capture now records typeface *classifications* rather than family
+  names): today's three ready records carried `fonts: ["sans-serif"]`,
+  `["serif script"]` and `["script serif"]`. Those are descriptions of the
+  wordmark, not CSS families, and none is in the GENERIC_FONTS filter, so the
+  gate demanded each literal string appear in the styling. "sans-serif" lands
+  free in any system stack; "serif script" and "script serif" do not. Resolved
+  by recording the captured classification verbatim in a documented custom
+  property (`--captured-typeface:"serif script";`) next to a real system stack
+  that implements it — a script/serif display face for both — and saying so in
+  the report rather than letting a substring quietly satisfy the check. These
+  are Facebook-only leads with no stylesheet to read a family name from, and
+  self-hosted-assets-only rules out a webfont, so no family name can honestly be
+  named. **If capture starts recording classifications routinely, the font check
+  wants amending to match a classification against the stack it implies** —
+  until then, document the mapping in the CSS where the next agent will see it.
+- 2026-08-31 (step 4, CLO-119 — the malformed `facebook: "p"` records were never
+  repaired at source): five brand.json files still carry `"facebook": "p"` —
+  `little-guardians`, `little-guardians-taguig`, `mcjt-tire`, `mcjt-tire-taguig`
+  and `small-town-auto-earlville`. The 08-29 entry says those verdicts were
+  re-decided and are "now evidence rather than guesses", which is true of the
+  verdicts but not of the stored records: any future sweep that reads the file
+  and probes `"p"` gets HTTP 400 and re-derives the same non-answer, exactly as
+  today's did. **A finding recorded only in a run report does not repair the
+  data the next run reads.** These need their real page ids written back before
+  the next sweep can say anything new about them.
