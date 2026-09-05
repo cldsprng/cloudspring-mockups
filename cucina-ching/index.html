@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cucina Ching Catering Services &mdash; Javier St., Pio del Pilar, Makati &middot; catering you can actually find</title>
+<meta name="description" content="Cucina Ching Catering Services &mdash; catering in Makati City. Javier St., Pio del Pilar, Makati. Call or Viber +63 916 743 3059. Email cucinaching@gmail.com.">
+<style>
+:root{
+  /* Palette read off the shop's own Facebook mark - see brand/brand.json
+     (colors.source: "vision"). #f5a623 is the amber silhouette and the
+     "Cucina Ching" wordmark; #fff8dc is the pale cream of the chef's hat.
+     Two colours, both from the logo. Nothing here was invented. */
+  --amber:#f5a623;
+  --cream:#fff8dc;
+  --amber-deep:#b9761a;
+  --amber-soft:#fdf1dc;
+  --ink:#241c11;
+  --ink-2:#5f5443;
+  --bone:#faf7f1;
+  --line:#e8e0d3;
+  --green:#1c6b3a;
+  --shadow-sm:0 1px 2px rgba(36,28,17,.07), 0 3px 10px rgba(36,28,17,.06);
+  --shadow-md:0 12px 30px rgba(36,28,17,.15);
+  --r-sm:8px; --r-md:14px; --r-lg:22px; --r-pill:999px;
+  /* brand.json records fonts: [] for this lead - a Facebook-only capture with
+     no stylesheet to read a family name from. No typeface is claimed as
+     theirs; this is an honest system stack, and verify-brand skips the font
+     check because nothing was captured to check against. */
+  --display:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --body:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;font-family:var(--body);color:var(--ink);background:#fff;font-size:16px;line-height:1.62;padding-bottom:196px;overflow-x:hidden}
+img,svg{max-width:100%;display:block}
+h1,h2,h3{font-family:var(--display);font-weight:800;line-height:1.16;margin:0 0 12px;letter-spacing:-.01em}
+h1{font-size:34px}h2{font-size:28px}h3{font-size:19px}
+p{margin:0 0 16px}
+a{color:var(--amber-deep)}
+.wrap{width:100%;max-width:1040px;margin:0 auto;padding:0 20px}
+.eyebrow{font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:var(--amber-deep);margin:0 0 10px;font-family:var(--body)}
+.rule{width:64px;height:3px;background:var(--amber);margin:0 0 18px}
+.section{padding:56px 0}
+.section--bone{background:var(--bone)}
+.section--cream{background:var(--cream)}
+.section--amber{background:var(--amber-soft)}
+:focus-visible{outline:3px solid var(--amber-deep);outline-offset:3px;border-radius:4px}
+
+.header{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.96);backdrop-filter:saturate(150%) blur(8px);border-bottom:1px solid var(--line);box-shadow:0 1px 0 var(--amber)}
+.header__in{display:flex;align-items:center;gap:12px;min-height:66px;padding:8px 20px;max-width:1040px;margin:0 auto}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none;color:var(--ink);min-height:44px}
+.brand-logo-img{width:50px;height:50px;flex:0 0 50px;object-fit:contain;border-radius:50%;border:2px solid var(--amber);background:#fff}
+.brand__txt{display:flex;flex-direction:column;line-height:1.16}
+.brand__name{font-family:var(--display);font-weight:800;font-size:16px}
+.brand__sub{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--amber-deep);font-weight:700}
+.header__cta{margin-left:auto}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:46px;padding:12px 19px;border-radius:var(--r-sm);font-family:var(--body);font-weight:700;font-size:15px;text-decoration:none;border:2px solid transparent;cursor:pointer;transition:background-color .18s ease,color .18s ease,border-color .18s ease,transform .18s ease,box-shadow .18s ease}
+.btn--amber{background:var(--amber);color:#3a2a08;box-shadow:var(--shadow-sm)}
+.btn--amber:hover{background:var(--amber-deep);color:#fff;transform:translateY(-2px);box-shadow:var(--shadow-md)}
+.btn--outline{background:#fff;color:var(--ink);border-color:var(--ink)}
+.btn--outline:hover{background:var(--bone);transform:translateY(-2px);box-shadow:var(--shadow-md)}
+.btn--sm{font-size:14px;padding:9px 15px;min-height:44px}
+
+.hero{position:relative;background:linear-gradient(180deg,var(--cream) 0%,#fff 74%);overflow:hidden;border-bottom:1px solid var(--line)}
+.hero__in{padding:34px 20px 46px;max-width:1040px;margin:0 auto;position:relative;z-index:1}
+.hero h1{font-size:clamp(28px,6.4vw,44px);margin-bottom:14px}
+.hero h1 em{font-style:normal;color:var(--amber-deep)}
+.hero__lead{font-size:17px;color:var(--ink-2);max-width:56ch;margin-bottom:22px}
+.pill{display:inline-flex;align-items:center;gap:8px;background:var(--amber);color:#3a2a08;font-weight:700;font-size:12.5px;letter-spacing:.11em;text-transform:uppercase;padding:7px 15px;border-radius:var(--r-pill);margin-bottom:15px}
+.pill svg{width:16px;height:16px}
+.idcard{background:#fff;border:1px solid var(--line);border-top:4px solid var(--amber);border-radius:var(--r-md);padding:20px;box-shadow:var(--shadow-md);margin-bottom:22px}
+.idcard__row{display:flex;gap:13px;padding:12px 0;align-items:flex-start;border-top:1px solid var(--line)}
+.idcard__row:first-child{border-top:0;padding-top:0}
+.idcard__ico{flex:0 0 22px;width:22px;height:22px;color:var(--amber-deep);margin-top:3px}
+.idcard__k{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--ink-2);margin:0 0 3px}
+.idcard__v{font-size:15.5px;font-weight:500;margin:0}
+.idcard__v a{color:var(--ink);text-decoration:none;border-bottom:2px solid var(--amber)}
+.idcard__v a:hover{color:var(--amber-deep)}
+.idcard__note{display:block;font-size:12.5px;color:var(--ink-2);font-weight:600;margin-top:5px}
+.hero__btns{display:flex;flex-direction:column;gap:10px}
+.hero__art{margin-top:34px}
+.mark{width:100%;max-width:360px;margin:0 auto;border-radius:50%;border:5px solid var(--amber);background:#fff;box-shadow:0 18px 40px rgba(36,28,17,.22)}
+
+.vs{display:grid;gap:16px;grid-template-columns:1fr;margin-top:24px}
+.vs__col{border-radius:var(--r-md);padding:22px;border:1px solid var(--line);background:#fff}
+.vs__col--bad{border-color:#dcc6a4}
+.vs__col--good{border-color:var(--amber);border-width:2px;box-shadow:var(--shadow-md)}
+.vs__tag{display:inline-flex;align-items:center;gap:7px;font-size:11px;letter-spacing:.15em;text-transform:uppercase;font-weight:700;padding:5px 11px;border-radius:var(--r-pill);margin-bottom:13px}
+.vs__tag--bad{background:var(--amber-soft);color:var(--amber-deep)}
+.vs__tag--good{background:var(--amber);color:#3a2a08}
+.vs dl{margin:0;font-size:14.8px}
+.vs dt{font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-2);font-weight:700;margin-top:12px}
+.vs dt:first-child{margin-top:0}
+.vs dd{margin:2px 0 0;font-weight:600}
+.wrong{color:#a3271f;font-weight:700}
+.wrong::after{content:" \2717";font-weight:700}
+.right{color:var(--green);font-weight:700}
+.right::after{content:" \2713";font-weight:700}
+.urlbox{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:13px;background:var(--ink);color:#ffe6b3;padding:10px 13px;border-radius:var(--r-sm);word-break:break-all;margin:14px 0 0}
+.urlbox b{color:var(--amber)}
+
+.grid{display:grid;gap:16px;grid-template-columns:1fr}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:22px;box-shadow:var(--shadow-sm);transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+.card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);border-color:var(--amber)}
+.card__ico{width:46px;height:46px;border-radius:50%;background:var(--cream);color:var(--amber-deep);display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+.card__ico svg{width:24px;height:24px}
+.card p{font-size:15px;color:var(--ink-2);margin:0}
+
+.roster{background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:20px;box-shadow:var(--shadow-sm);margin-top:20px}
+.roster__k{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--ink-2);margin:0 0 10px}
+.roster__names{display:flex;flex-wrap:wrap;gap:7px;margin:0}
+.name-chip{font-size:13.5px;font-weight:600;background:var(--bone);border:1px solid var(--line);border-radius:var(--r-pill);padding:5px 12px;color:var(--ink-2)}
+.name-chip--you{background:var(--amber);border-color:var(--amber-deep);color:#3a2a08;font-weight:800}
+
+.why{display:grid;gap:20px;grid-template-columns:1fr}
+.why__item{display:flex;gap:15px;align-items:flex-start}
+.why__num{flex:0 0 42px;width:42px;height:42px;border-radius:50%;background:var(--amber);color:#3a2a08;font-family:var(--display);font-weight:800;font-size:16px;display:flex;align-items:center;justify-content:center}
+.why__item p{font-size:15px;color:var(--ink-2);margin:0}
+
+.contact{display:grid;gap:24px;grid-template-columns:1fr}
+.note{background:var(--bone);border-left:4px solid var(--amber);border-radius:0 var(--r-sm) var(--r-sm) 0;padding:17px;font-size:14.5px;color:var(--ink-2);margin:0}
+.note b{display:block;color:var(--ink);margin-bottom:5px;font-size:15px}
+.note + .note{margin-top:14px}
+.reach{background:var(--ink);color:#fff;border-radius:var(--r-md);padding:22px;box-shadow:var(--shadow-md);display:flex;flex-direction:column;gap:10px}
+.reach h3{color:#fff}
+.reach a{color:var(--amber)}
+
+.footer{background:#fff;border-top:4px solid var(--amber);color:var(--ink-2);padding:44px 0 34px}
+.footer h3{color:var(--ink);font-size:16px;margin-bottom:9px}
+.footer__grid{display:grid;gap:26px;grid-template-columns:1fr}
+.footer__p{font-size:14.5px;margin:0;line-height:1.75}
+.footer a{color:var(--amber-deep);text-decoration:none}
+.footer a:hover{text-decoration:underline}
+.footer__credit{border-top:1px solid var(--line);margin-top:28px;padding-top:18px;display:flex;flex-wrap:wrap;gap:8px 18px;justify-content:space-between;font-size:13px}
+
+.cs-bar{position:fixed;left:0;right:0;bottom:0;z-index:200;background:rgba(36,28,17,.97);backdrop-filter:saturate(150%) blur(10px);border-top:3px solid var(--amber);box-shadow:0 -8px 32px rgba(36,28,17,.38);color:#fff;padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px))}
+.cs-bar__in{max-width:1040px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:10px 18px;text-align:center}
+.cs-bar__eyebrow{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--amber);margin:0 0 3px}
+.cs-bar__line{font-size:15px;font-weight:600;line-height:1.35;margin:0;color:#fff}
+.cs-bar__btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 23px;border-radius:var(--r-sm);background:var(--amber);color:#3a2a08;font-weight:700;font-size:15px;text-decoration:none;white-space:nowrap;box-shadow:0 4px 18px rgba(245,166,35,.45);animation:csPulse 2.4s ease-in-out infinite;transition:transform .18s ease,box-shadow .18s ease}
+.cs-bar__btn:hover{transform:translateY(-2px);box-shadow:0 8px 26px rgba(245,166,35,.66);animation-play-state:paused}
+.cs-bar__btn:focus-visible{outline:3px solid #fff;outline-offset:3px}
+@keyframes csPulse{0%,100%{box-shadow:0 4px 18px rgba(245,166,35,.36)}50%{box-shadow:0 4px 27px rgba(245,166,35,.68)}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition-duration:.01ms!important}.cs-bar__btn{animation:none}}
+
+@media (min-width:600px){
+  .hero__btns{flex-direction:row;flex-wrap:wrap}
+  .hero__btns .btn{flex:1 1 auto;min-width:196px}
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .why{grid-template-columns:repeat(2,1fr)}
+  .vs{grid-template-columns:repeat(2,1fr)}
+}
+@media (min-width:900px){
+  .hero__in{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center;padding:52px 20px 62px}
+  .hero__art{margin-top:0}
+  .contact{grid-template-columns:1.1fr .9fr}
+  .footer__grid{grid-template-columns:1.3fr 1fr 1fr}
+  .cs-bar__in{flex-wrap:nowrap;justify-content:space-between;text-align:left}
+  .cs-bar__line{font-size:16.5px}
+}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="header__in">
+    <a class="brand" href="#top">
+      <img class="brand-logo-img" src="brand/logo-facebook-profile.jpg" alt="Cucina Ching Catering Services logo">
+      <span class="brand__txt">
+        <span class="brand__name">Cucina Ching Catering Services</span>
+        <span class="brand__sub">Pio del Pilar &middot; Makati</span>
+      </span>
+    </a>
+    <a class="btn btn--amber btn--sm header__cta" href="tel:+639167433059">Call 0916 743 3059</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="hero__in">
+      <div>
+        <p class="eyebrow">Catering &middot; Makati City</p>
+        <p class="pill">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 8v5"></path><path d="M12 16h.01"></path></svg>
+          An address on the open web, not just a Messenger thread
+        </p>
+        <h1>Cucina Ching Catering Services. <em>Javier St., Pio del Pilar, Makati.</em></h1>
+        <p class="hero__lead">Catering for Makati events and offices. Right now every enquiry you get arrives through Facebook. This page gives the same enquiry somewhere to land that you own.</p>
+
+        <div class="idcard">
+          <div class="idcard__row">
+            <svg class="idcard__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21V8l8-5 8 5v13"></path><path d="M9 21v-6h6v6"></path></svg>
+            <div><p class="idcard__k">Address</p><p class="idcard__v">Javier St., Pio del Pilar<br><b>Makati City, Philippines</b><span class="idcard__note">Building and unit number &mdash; to be confirmed with you before this goes live.</span></p></div>
+          </div>
+          <div class="idcard__row">
+            <svg class="idcard__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"></path></svg>
+            <div><p class="idcard__k">Call or Viber &mdash; tap to call</p><p class="idcard__v"><a href="tel:+639167433059">+63 916 743 3059</a></p></div>
+          </div>
+          <div class="idcard__row">
+            <svg class="idcard__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg>
+            <div><p class="idcard__k">Enquiries</p><p class="idcard__v"><a href="mailto:cucinaching@gmail.com">cucinaching@gmail.com</a><br><a href="https://www.facebook.com/cucinaching/" target="_blank" rel="noopener">facebook.com/cucinaching</a></p></div>
+          </div>
+          <div class="idcard__row">
+            <svg class="idcard__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>
+            <div><p class="idcard__k">Opening hours</p><p class="idcard__v">To be confirmed<span class="idcard__note">No hours are published on your Facebook page, so none are printed here. Tell us the real ones and they go in.</span></p></div>
+          </div>
+        </div>
+
+        <div class="hero__btns">
+          <a class="btn btn--amber" href="tel:+639167433059">Call about an event</a>
+          <a class="btn btn--outline" href="mailto:cucinaching@gmail.com">Email cucinaching@gmail.com</a>
+        </div>
+      </div>
+
+      <div class="hero__art">
+        <img class="mark" src="brand/logo-facebook-profile.jpg" alt="Cucina Ching Catering Services logo &mdash; an amber profile silhouette in a pale cream chef's hat, above the Cucina Ching wordmark" width="420" height="420">
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--bone">
+    <div class="wrap">
+      <p class="eyebrow">What we checked</p>
+      <div class="rule"></div>
+      <h2>Nobody else has taken your name yet.</h2>
+      <p style="max-width:62ch;color:var(--ink-2)">We looked this up on <b>6 September 2026</b>. <b>cucinaching.com</b> does not exist &mdash; it returns no DNS record at all. That is not a competitor sitting on it, and it is not parked by a squatter. It is simply unregistered. For a business that has been trading under that name, that is an open door that will not stay open forever.</p>
+
+      <div class="vs">
+        <div class="vs__col vs__col--bad">
+          <span class="vs__tag vs__tag--bad">Today</span>
+          <dl>
+            <dt>cucinaching.com</dt>
+            <dd class="wrong">Does not resolve. Nobody owns it</dd>
+            <dt>Where enquiries arrive</dt>
+            <dd class="wrong">Facebook Messenger only</dd>
+            <dt>Record of an enquiry</dt>
+            <dd class="wrong">A chat thread, and whoever read it</dd>
+            <dt>Menu and prices</dt>
+            <dd>Not published anywhere we could find</dd>
+          </dl>
+          <p class="urlbox">$ dig cucinaching.com A<br><b>;; status: NXDOMAIN</b></p>
+        </div>
+        <div class="vs__col vs__col--good">
+          <span class="vs__tag vs__tag--good">This page</span>
+          <dl>
+            <dt>cucinaching.com</dt>
+            <dd class="right">Yours, with this page on it</dd>
+            <dt>Where enquiries arrive</dt>
+            <dd class="right">Phone, email and Facebook, all on one page</dd>
+            <dt>Record of an enquiry</dt>
+            <dd class="right">An address a customer can come back to</dd>
+            <dt>Menu and prices</dt>
+            <dd>Ready to publish the moment you send them</dd>
+          </dl>
+          <p class="urlbox">$ dig cucinaching.com A<br><b>;; ANSWER SECTION: this page</b></p>
+        </div>
+      </div>
+
+      <p class="note" style="margin-top:22px"><b>To be clear about what this needs</b>Registering <b>cucinaching.com</b> is a separate step and it is yours to own, not ours &mdash; we would only point it at this page once you hold it. Nothing here depends on it: the page works on the preview address you are reading it on right now.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <p class="eyebrow">The list that ranks for &ldquo;catering, Makati&rdquo;</p>
+      <div class="rule"></div>
+      <h2>Twenty-five caterers on that page. You are not one of them.</h2>
+      <p style="max-width:62ch;color:var(--ink-2)">Search for catering in Makati and one of the pages that comes back is InfoIsInfo's <i>&ldquo;The 10 Best Catering Companies in Makati City.&rdquo;</i> Despite the title, we counted <b>25 Makati businesses</b> listed on it on <b>6 September 2026</b> &mdash; the ten ranked, plus fifteen more underneath. Cucina Ching does not appear in any of them.</p>
+
+      <div class="roster">
+        <p class="roster__k">Named on that page &middot; counted 6 September 2026</p>
+        <p class="roster__names">
+          <span class="name-chip">Shanghai Bistro</span>
+          <span class="name-chip">Catering By Claudias Kitchen</span>
+          <span class="name-chip">Chimara Neo-Vegan Cafe</span>
+          <span class="name-chip">Sta. Ana Import Export</span>
+          <span class="name-chip">Mgas</span>
+          <span class="name-chip">Mediamonsters Productions</span>
+          <span class="name-chip">Inbento</span>
+          <span class="name-chip">Bizu Private Caterer</span>
+          <span class="name-chip">Coquina Cafe &amp; Deli</span>
+          <span class="name-chip">Karen's Kitchen</span>
+          <span class="name-chip">Cafe Mediterranean</span>
+          <span class="name-chip">Cravings</span>
+          <span class="name-chip">the Foyer Restaurant</span>
+          <span class="name-chip">Alba Restaurante Espanol</span>
+          <span class="name-chip">Cafe Via Mare</span>
+          <span class="name-chip">Metro Chef</span>
+          <span class="name-chip">Amber's Best</span>
+          <span class="name-chip">Paella Express</span>
+          <span class="name-chip">Quido's Grill &amp; Cafe</span>
+          <span class="name-chip">Kulinarya</span>
+          <span class="name-chip">German Club Manila Catering</span>
+          <span class="name-chip">David's Tea House</span>
+          <span class="name-chip">Sugi</span>
+          <span class="name-chip">Quick Delivery</span>
+          <span class="name-chip">&hellip; and one more</span>
+          <span class="name-chip name-chip--you">Cucina Ching &mdash; absent</span>
+        </p>
+      </div>
+
+      <p class="note" style="margin-top:20px"><b>Why we are showing you a list you are not on</b>Not to say those caterers are better. Several of them are restaurants that also cater. The point is narrower: the page a Makati event planner actually lands on has twenty-five names on it and yours is not one, and a business with no site of its own is much harder for that kind of page to pick up in the first place.</p>
+    </div>
+  </section>
+
+  <section class="section section--cream">
+    <div class="wrap">
+      <p class="eyebrow">What you cater</p>
+      <div class="rule"></div>
+      <h2>The menu goes here, in your words.</h2>
+      <p style="max-width:62ch;color:var(--ink-2)">We could not find a published menu or a price list anywhere online, so we have not made any up. These are the sections waiting for what you send us.</p>
+
+      <div class="grid" style="margin-top:24px">
+        <div class="card">
+          <div class="card__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11h18"></path><path d="M12 11a9 9 0 0 0-9 0"></path><path d="M4 15h16"></path><path d="M6 19h12"></path></svg></div>
+          <h3>Packages &mdash; to be confirmed</h3>
+          <p>Per-head packages, minimum orders and what each one includes. Send us the tiers you actually sell and they go here as written.</p>
+        </div>
+        <div class="card">
+          <div class="card__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18"></path><path d="M8 7c0 2 1 3 4 3s4-1 4-3"></path><circle cx="12" cy="17" r="3"></circle></svg></div>
+          <h3>Prices &mdash; to be confirmed</h3>
+          <p>Nothing is published today, so nothing is printed here. A caterer who states a starting price gets fewer time-wasting enquiries, not more.</p>
+        </div>
+        <div class="card">
+          <div class="card__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="17" rx="2"></rect><path d="M8 2v4"></path><path d="M16 2v4"></path><path d="M3 10h18"></path></svg></div>
+          <h3>Lead time and deposit &mdash; to be confirmed</h3>
+          <p>How far ahead you need an order, and what you take up front. Two questions every enquiry asks; answering them once here saves you asking twice.</p>
+        </div>
+        <div class="card">
+          <div class="card__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1" y="3" width="15" height="13" rx="2"></rect><path d="M16 8h4l3 3v5h-7z"></path><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg></div>
+          <h3>Areas you deliver to &mdash; to be confirmed</h3>
+          <p>We will only publish the parts of Metro Manila you genuinely cover, and any delivery fee, exactly as you set it.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <p class="eyebrow">Why this page</p>
+      <div class="rule"></div>
+      <h2>Three things it changes on the day it goes live.</h2>
+      <div class="why" style="margin-top:24px">
+        <div class="why__item"><span class="why__num">1</span><p><b>You have an address to give out.</b> On a quote, on a tarpaulin, over the phone &mdash; something shorter than &ldquo;search Cucina Ching on Facebook.&rdquo;</p></div>
+        <div class="why__item"><span class="why__num">2</span><p><b>An enquiry can arrive as an email.</b> Not only as a chat message that scrolls away behind twenty others.</p></div>
+        <div class="why__item"><span class="why__num">3</span><p><b>It looks like you, not like a template.</b> The amber and the cream on this page are the two colours of your own chef's-hat mark.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--amber">
+    <div class="wrap">
+      <p class="eyebrow">Reach us</p>
+      <div class="rule"></div>
+      <h2>Booking an event with Cucina Ching.</h2>
+      <div class="contact" style="margin-top:24px">
+        <div>
+          <p class="note"><b>Enquiries today</b>Call or Viber <b>+63 916 743 3059</b>, email <b>cucinaching@gmail.com</b>, or message the Facebook page. All three reach the same people; this page just puts them in one place.</p>
+          <p class="note"><b>What is not on this page, and why</b>No menu, no prices, no opening hours and no customer reviews &mdash; because none of those are published anywhere we could verify. Every one of them is a blank we would fill in from you, not a number we would guess.</p>
+        </div>
+        <div class="reach">
+          <h3>Talk to us</h3>
+          <p style="margin:0"><b>Call or Viber</b><br><a href="tel:+639167433059">+63 916 743 3059</a></p>
+          <p style="margin:0"><b>Email</b><br><a href="mailto:cucinaching@gmail.com">cucinaching@gmail.com</a></p>
+          <p style="margin:0"><b>Facebook</b><br><a href="https://www.facebook.com/cucinaching/" target="_blank" rel="noopener">facebook.com/cucinaching</a></p>
+          <p style="margin:0;font-size:14px;color:#c8bfae">Javier St., Pio del Pilar, Makati City</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <h3>Cucina Ching Catering Services</h3>
+        <p class="footer__p">Catering for events and offices in Makati City. Javier St., Pio del Pilar, Makati.</p>
+      </div>
+      <div>
+        <h3>Enquiries</h3>
+        <p class="footer__p"><a href="tel:+639167433059">+63 916 743 3059</a><br><a href="mailto:cucinaching@gmail.com">cucinaching@gmail.com</a><br><a href="https://www.facebook.com/cucinaching/" target="_blank" rel="noopener">Facebook</a></p>
+      </div>
+      <div>
+        <h3>This preview</h3>
+        <p class="footer__p">A working draft built for Cucina Ching by CloudSpring IT Solutions. Every fact on it was checked on 6 September 2026. Anything marked &ldquo;to be confirmed&rdquo; is waiting on you, not invented.</p>
+      </div>
+    </div>
+    <div class="footer__credit">
+      <span>&copy; 2026 Cucina Ching Catering Services &middot; Makati City</span>
+      <span>Website by CloudSpring IT Solutions</span>
+    </div>
+  </div>
+</footer>
+
+<aside class="cs-bar" role="complementary" aria-label="CloudSpring IT Solutions preview notice">
+  <div class="cs-bar__in">
+    <div class="cs-bar__txt">
+      <p class="cs-bar__eyebrow">PREVIEW &middot; CloudSpring IT Solutions</p>
+      <p class="cs-bar__line">cucinaching.com is still unregistered, and the Makati catering list that ranks names 25 businesses without you. Shall we fix both?</p>
+    </div>
+    <a class="cs-bar__btn" href="https://api.leadconnectorhq.com/widget/booking/QRPEnWRw2Kx9rBe0Mj6J" target="_blank" rel="noopener">Book a FREE Discovery Call &rarr;</a>
+  </div>
+</aside>
+
+</body>
+</html>

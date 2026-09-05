@@ -4,7 +4,7 @@
   "facebook": "eraacatering",
   "capturedAt": "2026-08-31T23:31:17.271Z",
   "source": "headless-http",
-  "name": null,
+  "name": "ERAA Catering and Bakery",
   "logo": {
     "file": "logo-facebook-profile.png",
     "score": 95,
@@ -41,6 +41,7 @@
   "notes": [
     "facebook profile picture captured headlessly for \"eraacatering\"",
     "no website for this lead — facebook-only capture path",
-    "BLOCKER palette-pending: logo captured (logo-facebook-profile.png) but fewer than 2 chromatic colours found. Vision-read the logo, then write the hex values into colors.brand[] with colors.source=\"vision\" and re-run the gate."
+    "BLOCKER palette-pending: logo captured (logo-facebook-profile.png) but fewer than 2 chromatic colours found. Vision-read the logo, then write the hex values into colors.brand[] with colors.source=\"vision\" and re-run the gate.",
+    "name set to \"ERAA Catering and Bakery\" by the Mockup Builder (CLO-127) from the Trello card and the logo wordmark. Capture left it null, which makes verify-brand skip check 5 entirely; setting it turns that check back on rather than off."
   ]
 }

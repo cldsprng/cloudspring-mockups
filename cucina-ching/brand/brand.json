@@ -4,7 +4,7 @@
   "facebook": "cucinaching",
   "capturedAt": "2026-08-31T23:30:47.800Z",
   "source": "headless-http",
-  "name": null,
+  "name": "Cucina Ching Catering Services",
   "logo": {
     "file": "logo-facebook-profile.jpg",
     "score": 95,
@@ -41,6 +41,7 @@
   "notes": [
     "facebook profile picture captured headlessly for \"cucinaching\"",
     "no website for this lead — facebook-only capture path",
-    "BLOCKER palette-pending: logo captured (logo-facebook-profile.jpg) but fewer than 2 chromatic colours found. Vision-read the logo, then write the hex values into colors.brand[] with colors.source=\"vision\" and re-run the gate."
+    "BLOCKER palette-pending: logo captured (logo-facebook-profile.jpg) but fewer than 2 chromatic colours found. Vision-read the logo, then write the hex values into colors.brand[] with colors.source=\"vision\" and re-run the gate.",
+    "name set to \"Cucina Ching Catering Services\" by the Mockup Builder (CLO-127) from the Trello card and the logo wordmark. Capture left it null, which makes verify-brand skip check 5 entirely; setting it turns that check back on rather than off."
   ]
 }
