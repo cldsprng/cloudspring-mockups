@@ -2581,3 +2581,57 @@ promise, not the diagnosis, that the menu gates.
   reaches the pipeline one run later, not the same day** - a run report that
   counts recovered leads as the same day's build capacity is counting them a run
   early.
+- 2026-09-06 (CLO-123 close, CEO - a run instance can THAW and finish against a
+  different calendar day than the one it is named for, with a second chain live
+  on the same board): CLO-123 is the **2026-09-01** run. Steps 1-3 (CLO-124/125/
+  126) executed on 09-01; the host slept 2026-08-31 23:41 UTC and stayed down
+  through 09-04; the watchdog retried on 09-05 and steps 4-9 (CLO-127 through
+  CLO-130) executed on **09-06**, concurrently with the 09-06 run CLO-132 and its
+  own children CLO-133-CLO-140. Two nine-step chains were live on one board at
+  once. This is not the two-lead-gen-routines failure the order-of-operations
+  section bans - `skip_if_active`/`skip_missed` worked exactly as specified, and
+  a missed day did NOT arrive as two days of quota - but it produces the same
+  surface symptom, so the report has to settle it with evidence rather than
+  reassurance.
+- 2026-09-06 (CLO-123 close, CEO - **settle "did today spend two days of quota"
+  from Trello card IDs, not from which chain reported the leads**): a Trello
+  object id is a 24-char hex MongoDB id whose first 8 hex chars are the creation
+  time in Unix seconds, so
+  `new Date(parseInt(id.slice(0,8),16)*1000)` dates every card with **zero extra
+  API calls** off the board dump already fetched for the depth count. Applied
+  here: CLO-124's four Makati catering cards were created `2026-08-31T23:11Z`
+  = **09-01 07:11 Manila**, and CLO-140's four recovery cards `2026-09-05T16:32Z`
+  = **09-06 00:32 Manila**. One day's quota each, correctly booked - which the
+  card *reports* alone could not have proved, because both chains reported "4/4"
+  on days that both landed inside the same 24 hours of wall clock.
+- 2026-09-06 (CLO-123 close, CEO - `verify-brand.mjs` takes a POSITIONAL folder
+  and a `--slug` flag produces a FALSE FAIL that reads exactly like a real
+  capture gap): the script is `verify-brand.mjs <mockup-folder>` and reads
+  `process.argv[2]` directly. Passing the capture.mjs-style
+  `--slug cafe-vida-desserts` makes it stat `./--slug/brand/brand.json`, miss,
+  and exit 1 with **"FAIL: no brand/brand.json - brand capture never ran for this
+  lead"** - the exact wording of the most alarming real failure the gate has. It
+  reported that for all four of today's slugs at CEO close; re-run positionally
+  (`node tools/brand-capture/verify-brand.mjs ./cafe-vida-desserts`) all four
+  exit **0**. `capture.mjs` and `verify-brand.mjs` do not share a flag grammar.
+  **Copy the invocation from the target script's own usage line, and treat a
+  whole batch failing on the same message as an invocation bug until proven
+  otherwise** - a real capture gap does not usually hit 4 of 4 folders that were
+  captured, built and gated an hour earlier.
+- 2026-09-06 (CLO-123 close, CEO - the font-check repair from CLO-136 is
+  confirmed working from outside the run that made it): re-gated at close,
+  `cafe-vida-desserts` now certifies on **`Inter`** rather than the one-letter
+  artefact `i`, and the other three report "no distinctive typeface captured -
+  font check skipped" honestly rather than passing on a CSS-declaration
+  fragment. 4/4 exit 0.
+- 2026-09-06 (CLO-123 close, CEO - READY TO SEND has now grown for an **eleventh
+  consecutive run** and has never once drained): 17 -> 23 -> 35 -> 39 -> 42 ->
+  48 -> 49 -> 54 -> 57 -> 60 -> **64**. APPROVED has read **0 on every run since
+  2026-08-19**; the only card past the gate is still Custom Cakes by Bam, synced
+  2026-07-27 and unsent for 41 days. CLO-76 carries the `ask_user_questions` and
+  it has been pending **14 days** (since 2026-08-23). Restating it per run has not
+  moved it, so the standing entry is now this: **the front seven steps are
+  healthy and the only bottleneck in this pipeline is a human touchpoint no agent
+  is permitted to cross.** Every further run converts agent time into inventory
+  nobody has authorised anyone to send. Nothing in the agent-owned half of the
+  pipeline can fix this, and no future run report should imply otherwise.
