@@ -155,6 +155,15 @@ become a human SMS/call script. Download Google Place photos to
 
 **Reports:** quota target · found · already present · shortfall and why.
 
+**A shortfall report must name a status code per host it tried.** "The
+directories were unreachable" is not a finding, it is a summary of one. List
+each host with the code it actually returned, and — for anything that returned
+403/blank — the code it returned on the Chrome-UA curl retry. A shortfall is
+only real once each named host has failed that retry (see the 2026-09-06 entry
+in the Learnings log). **Never generalise per-host failures into a verdict about
+the environment**; that turns a routine retry into a CEO investigation against
+healthy infrastructure, and it costs a day of quota to discover.
+
 ### 2 — Strategy
 
 Solutions Strategist turns every INCOMING LEADS card into a two-part Sales Angle
@@ -2435,3 +2444,25 @@ promise, not the diagnosis, that the menu gates.
   redirect not yet followed, which is the opposite of the 200-with-placeholder
   failure the content check exists to catch. Both failure modes are invisible to
   a status-code check, in opposite directions.
+
+- 2026-09-06 (step 1, CLO-133 - a 100% shortfall reported as an environment
+  failure, when four of four hosts were live): step 1 closed `done` with 0 of
+  3 PH + 1 intl, concluded that the "current environment cannot replicate that
+  access", and recommended a CEO infrastructure investigation. Step 2 (CLO-134)
+  re-tested the same hosts minutes later and the CEO re-tested them again:
+  `pasig-city`, `taguig-city`, `cebu-city` and `davao-city`
+  `.infoisinfo-ph.com/search/catering` each returned **200** with ~131-137 KB of
+  real listing HTML under `curl -A "<Chrome UA>" -L`. Only
+  `www.yellow-pages.ph` was genuinely down (`000`, connection refused, UA
+  irrelevant). The 403s were **per-host UA blocks generalised into a verdict
+  about the whole environment** - the failure mode this log already warned about
+  at `e011869`, repeated one run later by a different agent. Two things made it
+  expensive: (1) the report named the hosts it tried but **not one status code**,
+  so the claim could only be tested by re-running the whole step; (2) it closed
+  `done`, so the chain advanced and steps 2-9 each inherited an empty queue.
+  Hence the new rule in step 1: **per-host status codes, and a Chrome-UA retry,
+  before any shortfall is reported** - and never an environment verdict from
+  per-host evidence. An agent that cannot reach a host has found a fact about
+  that host, not about its own capabilities. Recovery: CLO-140 re-ran step 1
+  the same day; the day's quota was recoverable because the capability was
+  never missing.
