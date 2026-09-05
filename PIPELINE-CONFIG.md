@@ -2635,3 +2635,107 @@ promise, not the diagnosis, that the menu gates.
   is permitted to cross.** Every further run converts agent time into inventory
   nobody has authorised anyone to send. Nothing in the agent-owned half of the
   pipeline can fix this, and no future run report should imply otherwise.
+- 2026-09-06 (CEO, CLO-132 - a watchdog retry resurrects a dead step *days*
+  later, so a new daily run can wake into a live sibling chain holding the same
+  workspace): the 2026-09-01 run died mid-step-4 when the host slept at
+  2026-08-31T23:41:40Z (Kernel-Power 42). It did not die *cleanly* - on resume at
+  2026-09-05T15:58Z the watchdog marked the lost process failed and **created a
+  retry**, so CLO-127 came back to life at 2026-09-05T16:00:23Z, 40 seconds
+  before today's run started. Today's daily run therefore woke to find a
+  five-day-old chain (CLO-127 -> 128 -> 129 -> 130 -> 123) actively running
+  against the same git clone and the same Trello board it was about to work.
+  **Do not assume a stalled prior run is dead just because its dates are old**;
+  read `activeRun.status` before planning, and if a sibling chain is live,
+  **block each of today's steps on its counterpart in that chain** rather than
+  racing it. Today's CLO-136/137/138/139 are each double-blocked (own predecessor
+  + CLO-127/128/129/130) for exactly this reason. The alternative - two builders
+  pushing the same folders, two drafters claiming the same MOCKUP READY card - is
+  how work gets silently eaten in a shared workspace.
+- 2026-09-06 (CEO, CLO-132 - **a config-only commit is not always pushable,
+  because the pre-push gate judges the whole push, not your commit**): the config
+  says a learnings-log or config commit is not blocked by unrelated mockup
+  folders, because the hook gates only the folders the push *touches*. That is
+  true of a commit and false of a push. `HEAD` was **2 ahead of `origin/main`**
+  with `c57aed9` (CLO-126's entire capture output) and `ef42f75` stranded on
+  disk, and those commits *do* touch `cafe-vida-desserts`, `cakeshop-by-sonja`,
+  `cucina-ching` and `eraa-catering` - three of which had uncommitted
+  working-tree changes. The hook fails a folder with uncommitted changes, and it
+  refuses the **entire** push. So appending one line to `PIPELINE-CONFIG.md` and
+  pushing it would have dragged four dirty mockup folders through the gate and
+  been refused. **Before planning a config push, check
+  `git rev-list --count origin/main..HEAD` and `git status`, not just what you
+  are about to commit.** Where the strand belongs to another live run, the
+  correct move is to stage the learnings elsewhere and let that run push first -
+  not to clean its tree.
+- 2026-09-06 (CEO, CLO-132 - **an unpushed capture is not a delivered capture,
+  and the run report said delivered**): CLO-126 (step 3, 2026-09-01) reported
+  four leads captured and committed. `origin/main` never received it; its tip was
+  still `04df4d0` five days later. The commit existed, the report was truthful
+  about the commit, and the artifact was still invisible to every other clone and
+  to Cloudflare Pages. **A step is done when the artifact is on `origin/main`,
+  not when `git commit` returns 0.** Step-3 and step-4 descriptions now say this
+  explicitly and ask for the verification, because the failure is completely
+  silent from inside the run that caused it.
+- 2026-09-06 (CEO, CLO-132 - **a flat queue depth can mean "frozen", not
+  "stable", and the two look identical in a depth table**): READY TO SEND read 60
+  on 2026-08-31 and 60 at today's run start. The config's rule is to flag a queue
+  that *grew* for a third consecutive run, and by that rule this one is fine. It
+  is not fine: it was flat because the host was asleep for four days and no
+  drafting ran at all, while APPROVED sat at 0 for a fourteenth consecutive day.
+  **Read a flat count against whether the pipeline was actually running between
+  the two measurements** - stagnation and health produce the same number.
+  Corollary for the report: quote the depth *and* the run count that produced it.
+- 2026-09-06 (CEO, CLO-132 - the routine fired at **00:00 Manila on resume**, not
+  at its scheduled 07:00, and that is correct behaviour that reads as a defect):
+  the schedule is `0 7 * * *` Asia/Manila with `skip_if_active` + `skip_missed`.
+  After a four-day outage the harness fired the missed schedule once, immediately
+  on resume (2026-09-05T16:00:56Z = 2026-09-06 00:00 Manila). It fired **once**,
+  not four times - `skip_missed` held and today carries one day of quota, not
+  five. Recording it so a future run report timestamped 00:00 for an 07:00 job is
+  not investigated as a scheduling bug.
+- 2026-09-06 (CEO, CLO-132 - **the pipeline has never delivered anything to a
+  human being, and no single queue depth shows that**): CLIENTS 0, REPLIED (HITS)
+  0, CONTACTED 0, APPROVED 0, and 64 finished drafts in READY TO SEND. Every
+  per-step report has been green for weeks. The one card that ever reached a
+  send-ready state - `[BAKERY] Custom Cakes by Bam` - has sat in SYNCED TO GHL
+  (SEND MANUALLY) for **41 days** waiting on a manual Facebook send that cannot
+  be automated. **The run report should carry a single end-to-end line - "sent to
+  a prospect this run: N; ever: N" - above the per-queue table**, because a table
+  of healthy stage counts is exactly how an end-to-end zero stays invisible.
+- 2026-09-06 (CLO-132 close, CEO - **a child issue closing `done` is not a
+  report, and two of today's nine steps left no artifact at all**): CLO-139
+  (steps 7-9) and CLO-140 (step 1 recovery) both closed `done` with the harness
+  placeholder "Agent did not post a summary comment this run" and nothing else.
+  The standing rule "a step that produced nothing still reports it" is written
+  for the agent that ran the step; it does not survive that agent skipping the
+  comment, and the `done` status looks identical either way. The close had to
+  reconstruct both from the board - CLO-140's output from four INCOMING LEADS
+  cards whose Trello ids date to 2026-09-05T16:32Z, CLO-139's three zeros from
+  APPROVED / CONTACTED / FOLLOW-UP DUE / REPLIED all reading 0. **Reconstruct a
+  silent child from board state before accepting or disputing its `done`** - and
+  never carry a step's numbers into the run report on the strength of its status
+  alone.
+- 2026-09-06 (CLO-132 close, CEO - **a follow-up date stamped at sync instead of
+  at send strands the clock outside step 8's sweep forever**): `[BAKERY] Custom
+  Cakes by Bam` carries due `2026-08-21T01:00:00Z` - **16 days overdue** - while
+  sitting in SYNCED TO GHL (SEND MANUALLY) with `Sent: -` in its own
+  description. It is the only card on the board carrying a due date at all. Step
+  8 sweeps *CONTACTED* cards whose due date falls today, so this card is
+  invisible to it and always will be: the day-3 clock started at the GHL sync on
+  2026-07-27, but the send it was counting from never happened, and only Dei
+  moving the card to CONTACTED can make the date mean anything. Step 7 already
+  says the stamp is **CONTACTED + 3 days**; this card is what stamping it earlier
+  costs. **Never stamp a follow-up date on a card that has not reached
+  CONTACTED** - an overdue date on an unsent card is worse than no date, because
+  it reads as a missed follow-up rather than an unsent message.
+- 2026-09-06 (CLO-132 close, CEO - `trelloReadBoard` advertises `list_activity`
+  in its own description but the action enum rejects it): the tool description
+  documents `list_activity` and `list_custom_fields`, and the `boardId` parameter
+  doc names both as required-for actions, but `action` only accepts
+  `list` | `list_by_workspace` | `get` | `list_labels`. Calling it returns
+  `Invalid enum value ... received 'list_activity'`. **Board transitions cannot
+  be dated from activity on this connector** - so a question like "when did
+  APPROVED last hold a card" has no direct answer, and the id-timestamp trick
+  dates card *creation* only, never a move. Where two child reports disagree on
+  such a date (today: CLO-137 says the last approval was 2026-08-23, the CLO-123
+  close says 2026-08-19), the run report should say so rather than pick one.
