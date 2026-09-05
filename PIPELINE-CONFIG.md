@@ -2285,3 +2285,44 @@ promise, not the diagnosis, that the menu gates.
   flags a queue for sustained growth, update the count in the tracking issue's
   title in the same heartbeat, not only in the run report** - the report is read
   once, the title is read every time the board is opened.
+- 2026-09-06 (step 2, CLO-134 - a 403 that flips to 200 on a user-agent swap is
+  a UA block, not a broken environment, and step 1 escalated one to the CEO as
+  infrastructure): CLO-133 reported a 100% shortfall (0 of 3 PH + 1 intl) on the
+  LAST day of the catering niche week, concluded "current environment cannot
+  replicate that access" against the 2026-09-01 run, and recommended a CEO
+  infrastructure investigation. There is nothing wrong with the environment.
+  Re-running the same sources from this step minutes later with
+  `curl -A '<Chrome UA>' -L`: `pasig-city.infoisinfo-ph.com/search/catering`
+  returned **200, 134,964 bytes**, title "The 10 Best Catering Companies in
+  Pasig City"; `cebu-city.infoisinfo-ph.com/search/catering` returned **200,
+  132,418 bytes**. That is the same host family, the same page shape and the
+  same `search/catering` path the 09-01 run cited on the Cucina Ching card
+  (`makati-city.infoisinfo-ph.com/search/catering`). It never stopped working.
+  **The distinguishing test is one retry, and it is cheap: a directory is only
+  dead if it still fails after a Chrome-UA curl.** WebFetch's default UA is the
+  thing being blocked, not the host and not the network - this is the
+  2026-08-2x directory-403 finding recurring, and it cost a full day of quota
+  because the retry was never run. Two corollaries worth keeping. **(1) Failures
+  are per-host, not global** - in the same sweep `www.yellow-pages.ph` returned
+  `000` (connection never established) *with* the Chrome UA while both
+  infoisinfo hosts returned 200. One dead host is evidence about that host;
+  generalising it to "web scraping failed across all attempted sources" is what
+  turned a routine retry into a CEO escalation. Enumerate per host, with the
+  status code per host, before writing the word "environment". **(2) A step that
+  reports a 100% shortfall owes the per-source status codes it actually saw** -
+  CLO-133's report named the sites but not one status code, so the claim could
+  not be checked without re-running it, and re-running it is what disproved it.
+- 2026-09-06 (step 2, CLO-134 - a run brief's "do not touch these unpushed
+  commits" warning was already stale when the step opened): CLO-134's brief
+  named `c57aed9` and `ef42f75` as unpushed commits belonging to the parallel
+  09-01 chain and ringfenced them. By the time this step ran, all three of that
+  chain's commits (`c57aed9`, `ef42f75`, `d06815e`) were on `origin/main` and
+  the workspace was **0 ahead / 0 behind**. The ringfence was still correct as
+  policy - those folders belong to CLO-127 - but the stated *reason* had
+  expired, and a step that trusts it would wrongly believe the tree is dirty and
+  skip an otherwise clean config-only push. **Verify workspace state with
+  `git rev-list --left-right --count origin/main...HEAD` before treating a
+  brief's dirty-tree claim as current.** A brief is written at run-start; a
+  parallel chain pushes mid-run. This cuts the opposite way to the standing
+  "the workspace is shared mid-run" caution and does not replace it - check, in
+  both directions, rather than inheriting either assumption.
