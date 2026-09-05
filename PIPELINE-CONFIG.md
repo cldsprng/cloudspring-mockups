@@ -2326,3 +2326,100 @@ promise, not the diagnosis, that the menu gates.
   parallel chain pushes mid-run. This cuts the opposite way to the standing
   "the workspace is shared mid-run" caution and does not replace it - check, in
   both directions, rather than inheriting either assumption.
+- 2026-09-06 (step 4, CLO-127 - the pages.dev root placeholder is served by the
+  EDGE CACHE, so "check pages.dev first, then the branded domain" is not enough
+  on its own): today's four folders were verified across both hosts, eight
+  host/slug fetches in all. Three came back **HTTP 200 carrying the root
+  placeholder** - `<title>CloudSpring IT Solutions - Previews</title>` - and
+  they were not the same host each time: `cafe-vida-desserts` served the
+  placeholder on the *branded* domain while pages.dev served the real page, and
+  `cucina-ching` and `cakeshop-by-sonja` did the exact reverse. A status-code
+  check would have passed all eight and shipped three dead URLs; the existing
+  rule of falling back from branded to pages.dev would have caught two of the
+  three and missed the first. Re-fetching with `Cache-Control: no-cache` and a
+  `?cb=` query buster returned the real title on all three within seconds, so
+  this is stale edge cache, not a failed build. **Check BOTH hosts, on content,
+  and bust the cache on any miss** - the placeholder is not a property of one
+  host, it is whatever that edge node last cached for the slug.
+- 2026-09-06 (step 4, CLO-127 - `verify-brand`'s font check can be satisfied by
+  a CSS-parser artefact, and GENERIC_FONTS does not filter it): capture recorded
+  `fonts: ["i", "i!important", "Inter"]` for cafe-vida-desserts. Only `Inter` is
+  a real family; `i` and `i!important` are noise from parsing the stylesheet.
+  None matches the GENERIC_FONTS regex, so the check ran, and it passed on
+  **`typeface used: i`** - a single letter that lands free in `width`, `right`,
+  `inherit` and a hundred other tokens in any stylesheet. The page does honestly
+  declare `'Inter'` first in both stacks, so today's pass is real, but it was
+  granted by the noise entry, not by the real one. **GENERIC_FONTS wants
+  extending to drop single-character entries and anything carrying
+  `!important`** - as written, a page that never asked for the captured face
+  would pass this check whenever capture emits a one-letter artefact.
+- 2026-09-06 (step 4, CLO-127 - two strategist figures failed re-fetch on a
+  one-day-old angle, in two different ways): the >7-day rule is a floor and this
+  is the second consecutive run to prove it. (1) Cucina Ching's angle said the
+  InfoIsInfo Makati catering page "names 26 caterers"; counting the `h2`/`h3`
+  business headings today gives **25**. Off by one, and it was headed for an
+  H2. (2) Cakeshop by Sonja's ROI line cites posted cakes at P1,100-1,800 - that
+  range is **on no page reachable today** (their live storefront shows only
+  `P0.00` placeholders), so it was dropped entirely and the mockup prints no
+  prices at all. Note the difference in failure mode: the first was a wrong
+  number on a page that exists, the second a right-sounding number with no
+  source at all. **Re-fetch counts as well as ratings** - a count is exactly the
+  kind of figure that reads as verified because it is oddly specific.
+- 2026-09-06 (step 4, CLO-127 - a directory's "website" field can point at a
+  different company, and that beats the angle it replaces): ERAA Catering's
+  huddlemarkets.ca listing is accurate on address, phone and hours, then links
+  `eraa.ca` as their website. Opened today, `eraa.ca` is "Tamil & Indian
+  Groceries Online in Canada - Eraa Supermarket", a Shopify grocery store with
+  no catering on it and no occurrence of the word "Finch" anywhere. The
+  strategist's angle was the two-postcode clash on the wheree page (real, and
+  confirmed: M1B 6B2 x2, Eraa Supermarket's M1B 5P8 x4). The grocery-store link
+  is sharper and became the hero and CTA instead. **On a directory-capture
+  angle, open the listing's outbound website link, not just its NAP fields** -
+  a wrong postcode misroutes a courier, a wrong website link hands the click to
+  another business entirely.
+- 2026-09-06 (step 4, CLO-127 - a killed run leaves a 0-byte `.git/index.lock`
+  AND unpushed commits, and the unpushed set can include the PREVIOUS step's
+  work): this heartbeat was a `process_lost_retry`. `git status` looked ordinary
+  - three modified files and an untracked page - but `git log origin/main..HEAD`
+  showed **two** unpushed commits, and the older one was `c57aed9`, step 3's own
+  brand-capture commit. Step 3 reported done; its assets had never reached
+  origin. A 0-byte `index.lock` written 4.7 days earlier, with no `git` process
+  alive, then blocked every `git add` until removed. **On any retry wake, run
+  `git log origin/main..HEAD` before `git status`** - a step that reports done
+  has not necessarily pushed, and the next step inherits the gap silently. And
+  clear a stale lock on evidence (zero bytes, age, no live process), not on
+  impatience.
+- 2026-09-06 (step 4, CLO-127 - the host slept ~5 days mid-run, so the nominal
+  run date was about to become false provenance on prospect-facing copy): the
+  run is "daily run 2026-09-01" and step 3's capture timestamps are that
+  morning, but this retry executed on **2026-09-06**. The pages carried "checked
+  on 1 September 2026" against facts I re-fetched on the 6th. Corrected all four
+  to the date the evidence was actually gathered. **A page that dates its own
+  evidence must date it from the fetch, not from the run's title** - on a
+  slept-through run those are different days, and the date is a claim the
+  prospect can check.
+- 2026-09-06 (step 4, CLO-127 - the five `facebook: "p"` records are repaired at
+  source; verdicts unchanged, evidence now provable): real page ids written into
+  all five - `little-guardians` and `little-guardians-taguig` -> 61564193106467,
+  `mcjt-tire` and `mcjt-tire-taguig` -> 100063992972413,
+  `small-town-auto-earlville` -> 100083031904485. No `null` fallback was needed.
+  All three ids return HTTP 200 with `is_silhouette: true` and the **byte-
+  identical** Facebook default-avatar asset (`84628273_176159830277856_97...`),
+  while the literal `"p"` and a bogus 15-digit id both return
+  GraphMethodException code 100 - so a 200 proves the id resolves, and three
+  identical silhouettes prove the pages genuinely have no picture. Verdict stays
+  `no-assets` for all five, but the stored reason is now readable instead of an
+  unreadable `"p"` that every sweep re-derived as a 400. **The 2026-08-31 entry
+  above is now closed** - future sweeps get a real answer here.
+- 2026-09-06 (step 4, CLO-127 - `rjf-vulcanizing-taguig` has no `bytes` on
+  purpose, and should leave the sweep denominator): flagged for measurement
+  only, and the measurement has a shape worth recording. `logoFiles: []`, so no
+  byte comparison is possible - but the record is `blockedBy: "logo-not-a-mark"`,
+  not `no-assets`. Its logo was deliberately cleared on 2026-08-20 (CLO-36)
+  because the captured FB picture was a photo of the shop interior and a prior
+  run had built a palette out of wall paint and plastic chairs. The empty array
+  is the correct end state, not a gap. **A byte-comparison sweep can never say
+  anything new about a `logo-not-a-mark` record** - it needs a human to supply a
+  real mark, so counting it as an unresolved record each run overstates what a
+  sweep could ever recover. Recommend excluding `logo-not-a-mark` records from
+  sweep denominators and reporting them as their own category.
