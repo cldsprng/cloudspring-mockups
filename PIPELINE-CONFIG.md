@@ -2466,6 +2466,57 @@ promise, not the diagnosis, that the menu gates.
   that host, not about its own capabilities. Recovery: CLO-140 re-ran step 1
   the same day; the day's quota was recoverable because the capability was
   never missing.
+- 2026-09-06 (step 6, CLO-129 - the reveal-sentence skeleton is "is/lives ... at
+  [URL]", not the literal word "live", and 3 of 4 drafts shared it): today's
+  batch read, card by card, as four different sentences - "Find it at [URL]",
+  "It's at [URL]", "This one lives at [URL]", "Your site is here: [URL]" - and
+  each passed alone. Read side by side, three of the four ("It's at", "lives
+  at", "is here:") are the same construction with the verb swapped: subject +
+  to-be-or-equivalent copula + locating preposition + URL. Only "Find it at"
+  (an imperative, not a copula) was genuinely different. This is the same
+  finding as the 2026-08-31 CLO-121 entry ("the live-announcement reveal
+  sentence survives in a reordered form") one layer further down: that entry
+  already showed the banned shape has no fixed wording, and this run shows the
+  skeleton is not anchored to the word "live" either - "lives at" and "is
+  here" do the identical announcing job with neither word present. Rewrote
+  Cucina Ching, Cakeshop by Sonja and ERAA to remove the copula-plus-locator
+  shape entirely (verb-first commands or a trailing "that's what X shows"
+  construction); left Cafe Vida's imperative alone. **Check the reveal
+  sentence for the grammatical role a verb plays (does it just assert the
+  page's existence at a location?), not for which verb or preposition it
+  uses** - a synonym swap defeats a phrase-list check every time.
+- 2026-09-06 (step 6, CLO-129 - two drafts shared a CTA order the axis-3 rule
+  is supposed to catch, and it was found only by writing out the order per
+  draft): Cafe Vida and Cucina Ching both ran PRICE, then FREE MONTH, then
+  TERM ("₱1,500 monthly... First month free on a six-month term" /
+  "₱1,200/month, first month's free, 6-month agreement minimum") - different
+  numbers, identical sentence-order skeleton, which is exactly what "price /
+  free month / term may not appear in the same order in two drafts" bans.
+  Reworded Cucina Ching's CTA to TERM, FREE MONTH, PRICE ("Six months
+  minimum, first month free, then ₱1,200 a month after that") so the two
+  PH-priced drafts in the batch no longer collide; Cakeshop's FREE, TERM,
+  PRICE order and ERAA's four-part intl structure (build fee, monthly, free
+  month, term) were already distinct. **List the three CTA elements in the
+  order each draft states them before comparing across the batch** - "read
+  each draft and see if it sounds similar" missed this collision on a first
+  pass; writing the three-word order out caught it immediately.
+- 2026-09-06 (step 6, CLO-129 - the em-dash overage did not recur a fourth
+  time): all four drafts (Cafe Vida, Cucina Ching, Cakeshop by Sonja, ERAA)
+  carried exactly one em-dash each, in the "— Dei" sign-off only, breaking the
+  three-consecutive-run streak logged at 2026-08-29 and 2026-08-31 x2. No
+  generator-side fix needed yet on this evidence; keep counting per draft
+  before closing the pattern out.
+- 2026-09-06 (step 6, CLO-129 - brand gate re-run independently, all four
+  pass): `verify-brand.mjs` run fresh (not read from the builder's report) on
+  cafe-vida-desserts, cucina-ching, cakeshop-by-sonja, eraa-catering - all
+  exit 0, all >=2 captured hexes in the styling, all real business names and
+  no generic-branding marker on the page. Pricing checked against
+  `OFFER-MENU.md`: three PH quotes inside ₱1,000-1,500/mo, ERAA's CAD 600
+  build + CAD 100/mo inside the dated CAD band (475-700 equiv n/a, CAD table
+  is 450-690 build / 75-140 monthly) with no head conversion. No automation
+  promised in any sent copy (XC-01/XC-04 named only in the internal Sales
+  Angle section, correctly marked IN BUILD and never quoted in the outreach
+  text). All four marked `✅ QA'd & humanized`.
 - 2026-09-06 (step 4, CLO-136 - the font-check artefact class is wider than the
   one letter CLO-127 logged, and it is now repaired at source): the entry above
   recommends dropping single-character and `!important`-suffixed entries from
