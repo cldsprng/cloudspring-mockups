@@ -2466,3 +2466,67 @@ promise, not the diagnosis, that the menu gates.
   that host, not about its own capabilities. Recovery: CLO-140 re-ran step 1
   the same day; the day's quota was recoverable because the capability was
   never missing.
+- 2026-09-06 (step 4, CLO-136 - the font-check artefact class is wider than the
+  one letter CLO-127 logged, and it is now repaired at source): the entry above
+  recommends dropping single-character and `!important`-suffixed entries from
+  `GENERIC_FONTS`. Surveying all 123 `brand.json` records showed a third and
+  worse species: capture's family-name regex also swallows **whole CSS
+  declarations**. `blessed-veterinary-qc` records `"z-index:10"`, `"z-index:9"`,
+  `"z-index:8"`, `"position: absolute"`; `gms-auto-care` records `"z-index:6"`,
+  `"z-index:7"`, `"width: 100%"`. Because the check did `f.split(':')[0]`, those
+  were matched as `z-index`, `position` and `width` - tokens present in
+  essentially every stylesheet, so each was a **guaranteed pass**. They were not
+  firing today only because a real family name happened to sit earlier in the
+  array; nothing made that ordering reliable. Fixed in `verify-brand.mjs`: a
+  `fontName()` helper strips the `!important` tail and the weight spec, entries
+  under 3 characters are dropped, and a `CSS_PROPERTIES` blocklist drops the
+  declaration fragments. **The evidence that it is safe:** the gate was run
+  across all 123 folders before and after - **65 PASS / 58 FAIL, unchanged, with
+  zero folders changing state**. Exactly two reason strings moved, both
+  improvements: `cafe-vida-desserts` now certifies on **`Inter`** (the family
+  the page actually declares) instead of **`i`**, and `blessed-veterinary-qc`
+  reports `Changa` instead of the entire `Changa:0,500;...|Karla:...` spec. A
+  gate defect found by one run and logged as a recommendation is not fixed; the
+  next run inherits it. This one is now closed in code, not in prose.
+- 2026-09-06 (step 4, CLO-136 - what the font check still cannot do, named so it
+  is not mistaken for solved): it remains a **literal substring test against the
+  whole document**, so a short family name still matches incidental text -
+  `Inter` matches "interior", "internet", "winter"; `Jost` would match "Jostens".
+  The artefact fix removes the guaranteed passes, it does not make the check a
+  font-family-declaration match. Tightening it properly means matching inside a
+  `font-family` declaration rather than anywhere in the HTML, which changes the
+  result for every folder at once and wants its own run with a full
+  before/after. Recorded as known-remaining, not as a defect to rediscover.
+- 2026-09-06 (step 4, CLO-136 - a step 4 with nothing in all three passes, and
+  the cause was entirely upstream): revisions 0, backlog 0, new 0. Worth logging
+  because each zero has a different and checkable reason, and a bare "built 0"
+  hides that. Revisions: the line-initial `/^## CHANGES/m` test was run against
+  **all 112 cards on the board**, not just the one card the brief names - zero
+  matches board-wide, which is a stronger statement than confirming the known
+  card. Backlog: STRATEGY READY measured **0** by this step. New: step 3 output
+  **0**, because step 2 had no input, because step 1 found no leads. **Test the
+  revision predicate board-wide rather than on the card the brief points at** -
+  the brief's count is a claim to verify, and verifying it costs one pass over
+  cards already fetched for the depth count.
+- 2026-09-06 (step 4, CLO-136 - MOCKUP READY reading 0 does not mean the
+  previous build failed, and step 4 must not conclude that it did): at run start
+  the CEO measured MOCKUP READY 0 / READY TO SEND 60; CLO-127 then built and
+  moved four cards in, and by the time this step measured, MOCKUP READY was
+  **0 again** and READY TO SEND was **64**. The 09-01 chain's step 5 (CLO-128)
+  had drained the list mid-flight. The arithmetic is what settles it - 60 + 4 =
+  64, and all four catering slugs were found by name in READY TO SEND. **On a
+  list a concurrent chain is draining, reconcile the depth against where the
+  cards went, not against the run-start number** - an empty MOCKUP READY is
+  equally consistent with "nothing was built" and "everything built was already
+  drafted", and only naming the cards separates them.
+- 2026-09-06 (step 4, CLO-136 - a recovery re-run of step 1 does not retroactively
+  feed the same run's step 4): CLO-140 re-ran today's lead generation while this
+  step was live, and recovering the quota does not give step 4 anything to build.
+  Its output lands in INCOMING LEADS, and today's step 2 (CLO-134) and step 3
+  (CLO-135) are both closed `done` - so the leads have no strategy and no brand
+  capture behind them, and the standing rule forbids step 4 supplying either.
+  CLO-140's own brief says so explicitly: its cards are picked up by the **next**
+  run's step 2. **When an early step is re-run out of sequence, the recovery
+  reaches the pipeline one run later, not the same day** - a run report that
+  counts recovered leads as the same day's build capacity is counting them a run
+  early.

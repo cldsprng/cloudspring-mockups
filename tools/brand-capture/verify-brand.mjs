@@ -106,10 +106,31 @@ else fails.push(`only ${hexUsed.length} of ${hexes.length} captured brand colour
 // Web-safe fallbacks appear in almost any font stack, so matching one proves
 // nothing about whether the mockup used the prospect's actual typeface.
 const GENERIC_FONTS = /^(arial|helvetica|verdana|tahoma|georgia|times|times new roman|courier|courier new|segoe ui|roboto)$/i
-const fonts = (brand.fonts || []).filter((f) => !GENERIC_FONTS.test(f.split(':')[0].trim()))
+
+// capture.mjs scrapes family names out of stylesheets with a regex, and that
+// regex also swallows fragments that are not families at all: bare CSS
+// declarations ("z-index:10", "position: absolute", "width: 100%"),
+// `!important` suffixes ("ETmodules!important") and one-letter parser noise
+// ("i"). Each of those is a free pass here, because this check is a literal
+// substring test against a whole HTML document — "i" and "z-index" appear in
+// essentially any page. Drop them before matching, or the gate certifies a
+// typeface the mockup never asked for: cafe-vida-desserts shipped on
+// `typeface used: i` (CLO-127, 2026-09-06).
+const CSS_PROPERTIES = /^(z-index|position|width|height|top|left|right|bottom|margin|padding|display|color|background|border|opacity|overflow|float|clear|content|transform|transition|flex|grid|gap|order|cursor|visibility|white-space|line-height|letter-spacing|text-align|vertical-align)$/i
+
+// A captured entry may be "Family:weights" (a webfont spec) or carry an
+// `!important` tail; the family name is what we match on.
+const fontName = (f) => String(f).split(':')[0].replace(/!important/gi, '').trim()
+
+const fonts = (brand.fonts || []).filter((f) => {
+  const name = fontName(f)
+  if (name.length < 3) return false // "i" — matches any document
+  if (GENERIC_FONTS.test(name)) return false
+  return !CSS_PROPERTIES.test(name) // "z-index:10", "position: absolute"
+})
 if (fonts.length) {
-  const fontUsed = fonts.find((f) => lower.includes(f.toLowerCase().split(':')[0]))
-  if (fontUsed) passes.push(`typeface used: ${fontUsed}`)
+  const fontUsed = fonts.find((f) => lower.includes(fontName(f).toLowerCase()))
+  if (fontUsed) passes.push(`typeface used: ${fontName(fontUsed)}`)
   else fails.push(`captured typeface not used (${fonts.slice(0, 3).join(', ')})`)
 } else {
   passes.push('no distinctive typeface captured — font check skipped')
