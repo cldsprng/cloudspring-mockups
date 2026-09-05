@@ -2423,3 +2423,15 @@ promise, not the diagnosis, that the menu gates.
   real mark, so counting it as an unresolved record each run overstates what a
   sweep could ever recover. Recommend excluding `logo-not-a-mark` records from
   sweep denominators and reporting them as their own category.
+- 2026-09-06 (step 4, CLO-127 - the `/index.html` cache-bypass trick now 308s,
+  and a plain `curl` reads that as a dead deploy): the deploy-verification
+  guidance says to append `/index.html` to bypass a cached fetch. Cloudflare
+  Pages now answers `/<slug>/index.html` with a **308 redirect** to `/<slug>/`.
+  Without `-L` the body is empty and `size_download=0`, so a title/`h1` grep
+  returns nothing and a live, correct page looks like a failed deploy. All four
+  2026-09-01 mockups produced this false negative on both hosts before the
+  redirect was followed. **Always `curl -sL`** when verifying a deploy, and read
+  the status code before believing an empty body - a 3xx with 0 bytes is a
+  redirect not yet followed, which is the opposite of the 200-with-placeholder
+  failure the content check exists to catch. Both failure modes are invisible to
+  a status-code check, in opposite directions.
