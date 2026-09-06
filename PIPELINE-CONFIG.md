@@ -2827,3 +2827,56 @@ promise, not the diagnosis, that the menu gates.
   with Friday-to-Sunday marked "not published anywhere" — which is truthful,
   makes the problem legible to the prospect, and is a better reply-hook than
   silently picking a winner would have been.
+- 2026-09-07 (step 6, QA — **a "closers all distinct" report can be true sentence-
+  by-sentence and still hide the exact batch-skeleton defect it exists to catch**):
+  CLO-146's step-5 report listed all 7 closers as different, and by the words
+  before the sign-off they were. But 6 of the 7 ended in the literal shape
+  `<question>? — Dei` — the em-dash-then-name construction the config already
+  names as the defect ("eight drafts closing '— Dei' … is the defect, even
+  though signing as Dei is correct"). Comparing whole sentences missed a
+  skeleton that only shows up in the last four characters. **Check the sign-off
+  construction as its own token, separately from the sentence it follows.**
+  Rewrote 5 of the 6 to distinct sign-offs (`Talk soon, Dei` / `Dei` bare /
+  `Thanks, Dei` / `Reach out anytime, Dei` / `Let's talk, Dei`), left one
+  `— Dei` standing (Oana) since a single instance is not the defect, and left
+  Villa Salud's `Best, Dei` untouched.
+- 2026-09-07 (step 6, QA — the em-dash rule is "zero, or at most one," and 6 of
+  7 drafts ran 2-4): three drafts used a dash as a parenthetical aside
+  (`cebudentalimplants.com—a Cebu implant aggregator—and`), the rest as the
+  default clause separator the config already bans. None were caught at step 5
+  because reading a single draft in isolation reads fine at 2 dashes; the
+  violation is a per-draft-count rule, not a readability judgement call. Cut
+  every extra dash to a comma or a full stop; one draft (Oana) was left with
+  exactly one, which is inside the rule.
+- 2026-09-07 (step 6, QA — **stating a contract total while also claiming a free
+  month is an arithmetic contradiction, and it shipped on 3 of 7 drafts**):
+  Romualdo's said "Six months costs ₱9,000 with the first month free"; Oana
+  said "One year is ₱18,000 with the first month at no charge"; Smile and
+  Health said "Twelve months, ₱18,000 total—the first free." Each total is
+  `term × ₱1,500` with no deduction for the stated free month — the real
+  6-month total with one free month is ₱7,500, not ₱9,000. This is not the FX
+  floor check (all three are PHP, all above floor); it is a plain multiplication
+  a prospect can do themselves, and it would read as a bait number the moment
+  they did. Fix used here: drop the computed total entirely and state
+  price + free-month + term as three separate facts, the pattern the other 4
+  drafts already used safely. Rule for next time: **never let a draft state a
+  contract total when a free period is also named in the same sentence** —
+  either compute it correctly or don't compute it at all.
+- 2026-09-07 (step 6, QA — dropping the totals also fixed the CTA-order axis for
+  free): with the total gone, all 6 PH drafts reduced to permutations of
+  {price, free-month, term} in one sentence, and 6 drafts against 3 elements is
+  exactly the 3! = 6 distinct orderings available — used one each, so no two PH
+  drafts share a CTA order by construction rather than by manual check.
+  KingTown (INTL, no free-month clause) is structurally exempt from this axis.
+- 2026-09-07 (step 6, QA — batch result): 7/7 READY TO SEND cards from today's
+  step 5 (Auffrance, Villa Salud, Romualdo's, Oana, City Dental, Smile and
+  Health, KingTown) all failed humanize on first pass (closer skeleton and/or
+  em-dash count and/or pricing arithmetic); all 7 were rewritten in place and
+  marked `✅ QA'd & humanized`. Brand gate independently re-run positionally on
+  all 7 slugs: 7/7 PASS, including a visual spot-check of the three logos
+  flagged in the 2026-09-07 step-4 learning (Romualdo's, Oana, Smile and
+  Health) against their recorded hexes — all three genuinely match. Pricing
+  floor: all PH at ₱1,500/mo (top of band, compliant), KingTown CAD 600 + 110
+  correctly read off the OFFER-MENU CAD table (450-690 + 75-140), not
+  converted by hand. Menu boundary: 0/7 drafts named an automation ID or
+  promised an `IN BUILD` capability — all correctly Tier-W-only.
