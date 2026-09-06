@@ -2739,3 +2739,51 @@ promise, not the diagnosis, that the menu gates.
   dates card *creation* only, never a move. Where two child reports disagree on
   such a date (today: CLO-137 says the last approval was 2026-08-23, the CLO-123
   close says 2026-08-19), the run report should say so rather than pick one.
+- 2026-09-07 (step 2, dental W / catering carry-over): **a blank domain has a
+  FIFTH state, and it is a trap: the registry wildcard.** Every `.ph` name
+  resolves to 45.79.222.138 and serves a ParkLogic ad page with a
+  `<title>Redirecting...</title>` - including names nobody has registered.
+  `zzqx7nonsense12345.ph` and `totallyfakebiz98765.com.ph` both answer 200 from
+  that IP. So `oanadental.ph` "resolving with a parked page" is NOT evidence the
+  clinic owns a domain, and a `.ph` blank-domain angle built on a curl alone is
+  fabricated. **Rule: before calling any `.ph` name a blank domain, resolve one
+  invented `.ph` name. Same IP means you have found the wildcard, not the lead.**
+  This bites hardest on exactly the leads that look best, because the FB slug
+  usually matches the domain (oanadental.ph, romualdoscatering.ph).
+- 2026-09-07: the check that DOES settle ownership is RDAP plus a record-type
+  sweep, not a fetch. `romualdoscatering.com` is the real blank domain of the
+  batch: RDAP says registered 2024-04-04, paid to 2027, locked, NS at Google
+  Domains; `-type=MX` shows live Google Workspace mail; but the apex has no A
+  record and `www` is NXDOMAIN. A plain `curl -sL` returns 000 there and reads
+  identical to a domain that was never registered. Query A, MX and NS
+  separately - "nothing listens" and "does not exist" are opposite sales angles.
+  `.ph` has no RDAP service at all (rdap.org 404s), which is why the wildcard
+  test above is the only cheap check for that TLD.
+- 2026-09-07: the strongest evidence this run was a domain that does not exist.
+  Yelp and Yellow Pages PH both publish `auffrance.com` as Auffrance Catering's
+  website and `info@auffrance.com` as their email; Verisign RDAP 404s and DNS
+  is NXDOMAIN. Every directory is sending customers to a browser error and every
+  mail to that address bounces. **A lead card's "Website:" field is a claim, not
+  a fact - resolve it.** Yellow Pages PH also files them under a different legal
+  name (Donair Foods Asia Inc) on a different street, so one lead carried both a
+  dead address and a contradictory-listing angle.
+- 2026-09-07: two lead cards were wrong in ways that cost or nearly cost a
+  channel. CITY DENTAL QC was logged "Email: Not found"; the aggregator page
+  `cebudentalimplants.com/content/city-dental-quezon-city` publishes
+  `citydentalqc@gmail.com` in plain text - the aggregator that captures the lead
+  is also the cheapest place to recover their contact details. Oana's card
+  asserted "no owned site" from a check that had actually hit the wildcard.
+  Step 2 should re-derive contactability rather than inherit it.
+- 2026-09-07 (INTL): for a lead that already has a site, the angle is usually
+  contradictory listings, and hours contradict more often than addresses.
+  KingTown Dental posts Mon 9-6 / Tue 9-6 / Wed 10-7 / Thu 10-7 on
+  kingtowndental.ca while YellowPages.ca carries Mon 10-6 / Tue 10-8 / Wed 9-5 /
+  Thu 11-7 - every single day disagrees - plus Oshawa (FB) vs Courtice (Yelp,
+  own site) and "1414 Highway 2" vs "1414 King St E" for one building. Their
+  published email is on a second, older domain (kingtowndental.com, reg 2010)
+  that does not serve the site (reg 2024). Check hours day-by-day, not just the
+  address, and RDAP both domains when the email host differs from the site host.
+- 2026-09-07: an existing "Request Appointment" form is not a booking and does
+  not retire CL-01. KingTown's form says a "scheduling coordinator will contact
+  you to confirm" - it creates a callback obligation, which is the pain, not the
+  fix. Read what the form promises before recording the site as having booking.
