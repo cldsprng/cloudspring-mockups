@@ -2880,3 +2880,45 @@ promise, not the diagnosis, that the menu gates.
   correctly read off the OFFER-MENU CAD table (450-690 + 75-140), not
   converted by hand. Menu boundary: 0/7 drafts named an automation ID or
   promised an `IN BUILD` capability — all correctly Tier-W-only.
+- 2026-09-07 (CLO-141 close, CEO — **the Cloudflare placeholder is exactly 514
+  bytes, which turns the deploy check into one line per slug**): the standing
+  rule is "a 200 is not a deploy" and the fix was `curl -sL` plus reading the
+  content. There is a cheaper discriminator: every unbuilt slug — a name that
+  was never created (`this-slug-does-not-exist-9x7`) and a real lead that was
+  correctly *not* built (`hometown-bakery-oh`, today's BRAND BLOCKED card) —
+  answers 200 with a body of **exactly 514 bytes**. A real mockup is 24–28 KB.
+  So `curl -sL <url> | wc -c` is a per-slug deploy verdict that needs no
+  knowledge of the page's content: 514 means not deployed, tens of thousands
+  means deployed. Verified 7/7 today (auffrance 24 419, villa-salud 24 907,
+  romualdos 25 138, oana 25 081, city-dental 24 711, smile-health 25 329,
+  kingtown 27 921), each with a distinct per-business `<title>` — so the check
+  was confirmed against titles too, not trusted on size alone the first time.
+- 2026-09-07 (CLO-141 close, CEO — **`list_by_board` returns the whole board
+  flat, not grouped by list, and its own tool description says otherwise**):
+  `trelloReadCard action="list_by_board"` documents the response as
+  `{lists: [{id, name, cards: [...]}]}`. It actually returns
+  `{cards: {totalCount, nodes: [...], pageInfo}}` — a flat array of every card,
+  each carrying its own `list: {id, name}`. Grouping is client-side. The good
+  news is that the 25-cap workaround is obsolete: one call with `limit=50`
+  returned all **120** cards with `hasNextPage:false`, no per-list paging. The
+  cost is that full `desc` on 120 cards is **310 709 characters**, over the
+  tool's output cap, so the result is written to a `tool-results/*.txt` file
+  instead of returned — read that path and group with node. Iterating what
+  looks like a list array (`for (const l of lists) l.name`) silently prints 120
+  *card* names and reads as a 120-list board; check for `.cards.nodes` first.
+- 2026-09-07 (CLO-141 close, CEO — **the escalation remedy in this file is now
+  exhausted, and the run report should stop implying otherwise**): the rule at
+  2026-08-23 says a blocker seen in three consecutive reports must be opened as
+  its own issue with an owner, after which the report links instead of
+  repeating. That has been done for both standing human blockers — CLO-76
+  (approval gate, `in_review`, opened 2026-08-23, **15 days**) and CLO-75 (Dei /
+  One World Skin & Wellness stuck in CHANGES REQUESTED with no `## CHANGES`
+  block, `todo`, opened 2026-08-24, **14 days**). Both exist, both have owners,
+  neither has moved. READY TO SEND has now grown for a **twelfth consecutive
+  run**: 17 → 23 → 35 → 39 → 42 → 48 → 49 → 54 → 57 → 60 → 64 → **71**, and the
+  end-to-end line is still *sent this run 0, ever 0*. Opening a further issue
+  would be a third copy of a question already asked, so the correct close-level
+  action is neither escalation nor silence: state plainly that the next run's
+  agent capacity buys nothing until a human answers CLO-76, and put that choice
+  — keep drafting, or pause steps 1–6 — in front of the founder as a decision
+  rather than as another green report.
