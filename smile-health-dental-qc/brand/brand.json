@@ -1,0 +1,46 @@
+{
+  "slug": "smile-health-dental-qc",
+  "site": "smileandhealthdentalclinic.com",
+  "facebook": "smileandhealthdentalclinic",
+  "capturedAt": "2026-09-06T16:26:20.469Z",
+  "source": "headless-http",
+  "name": null,
+  "logo": {
+    "file": "logo-facebook-profile.jpg",
+    "score": 95,
+    "why": "facebook profile picture"
+  },
+  "logoFiles": [
+    {
+      "file": "logo-facebook-profile.jpg",
+      "bytes": 44049,
+      "from": "graph.facebook.com/smileandhealthdentalclinic/picture?width=1200&height=1200",
+      "why": "facebook profile picture",
+      "score": 95
+    }
+  ],
+  "colors": {
+    "brand": [
+      {
+        "hex": "#FF6B9D",
+        "weight": 50
+      },
+      {
+        "hex": "#FFFFFF",
+        "weight": 50
+      }
+    ],
+    "neutral": [],
+    "themeColor": null,
+    "source": "vision"
+  },
+  "fonts": [],
+  "ready": true,
+  "blockedBy": null,
+  "confidence": 50,
+  "notes": [
+    "facebook profile picture captured headlessly for \"smileandhealthdentalclinic\"",
+    "site unreachable over plain HTTP(S)",
+    "BLOCKER palette-pending: logo captured (logo-facebook-profile.jpg) but fewer than 2 chromatic colours found. Vision-read the logo, then write the hex values into colors.brand[] with colors.source=\"vision\" and re-run the gate."
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "slug": "kingtown-dental-oshawa",
+  "site": "https://kingtowndental.ca/",
+  "facebook": "KingTownDentalOffice",
+  "capturedAt": "2026-09-06T16:26:21.237Z",
+  "source": "headless-http",
+  "name": "King Town Dental - Family Dentistry Serving Courtice, Oshawa &amp; Durham Region",
+  "logo": {
+    "file": "logo-2-json-ld-logo-url.png",
+    "score": 100,
+    "why": "json-ld logo.url"
+  },
+  "logoFiles": [
+    {
+      "file": "logo-facebook-profile.jpg",
+      "bytes": 17762,
+      "from": "graph.facebook.com/KingTownDentalOffice/picture?width=1200&height=1200",
+      "why": "facebook profile picture",
+      "score": 95
+    },
+    {
+      "file": "logo-2-json-ld-logo-url.png",
+      "bytes": 54528,
+      "from": "https://kingtowndental.ca/wp-content/uploads/2024/10/KINGTOWN_LOGO_1500px.png",
+      "why": "json-ld logo.url",
+      "score": 100
+    },
+    {
+      "file": "logo-3-img-marked-logo.png",
+      "bytes": 17175,
+      "from": "https://kingtowndental.ca/wp-content/uploads/2024/10/KINGTOWN_DETAL_LOGO_500px.png",
+      "why": "img marked logo",
+      "score": 90
+    }
+  ],
+  "colors": {
+    "brand": [
+      {
+        "hex": "#00b4db",
+        "weight": 49
+      },
+      {
+        "hex": "#0083b0",
+        "weight": 49
+      },
+      {
+        "hex": "#007aff",
+        "weight": 41
+      },
+      {
+        "hex": "#2ea3f2",
+        "weight": 24
+      },
+      {
+        "hex": "#428bca",
+        "weight": 13
+      },
+      {
+        "hex": "#0038f0",
+        "weight": 10
+      }
+    ],
+    "neutral": [
+      {
+        "hex": "#ffffff",
+        "weight": 237
+      },
+      {
+        "hex": "#000000",
+        "weight": 154
+      },
+      {
+        "hex": "#333333",
+        "weight": 104
+      },
+      {
+        "hex": "#666666",
+        "weight": 22
+      }
+    ],
+    "themeColor": null,
+    "source": "site-css"
+  },
+  "fonts": [
+    "Quattrocento Sans",
+    "Open Sans",
+    "Courier New",
+    "ETmodules!important",
+    "ETmodules",
+    "Arial",
+    "lg",
+    "Segoe UI"
+  ],
+  "ready": true,
+  "blockedBy": null,
+  "confidence": 100,
+  "notes": [
+    "facebook profile picture captured headlessly for \"KingTownDentalOffice\"",
+    "6 stylesheet(s) fetched, 731544 bytes of CSS"
+  ]
+}

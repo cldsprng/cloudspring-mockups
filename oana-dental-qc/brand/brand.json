@@ -1,0 +1,46 @@
+{
+  "slug": "oana-dental-qc",
+  "site": "http://oanadental.ph/",
+  "facebook": "oanadental.ph",
+  "capturedAt": "2026-09-06T16:26:17.866Z",
+  "source": "headless-http",
+  "name": "Redirecting...",
+  "logo": {
+    "file": "logo-facebook-profile.jpg",
+    "score": 95,
+    "why": "facebook profile picture"
+  },
+  "logoFiles": [
+    {
+      "file": "logo-facebook-profile.jpg",
+      "bytes": 180906,
+      "from": "graph.facebook.com/oanadental.ph/picture?width=1200&height=1200",
+      "why": "facebook profile picture",
+      "score": 95
+    }
+  ],
+  "colors": {
+    "brand": [
+      {
+        "hex": "#0099CC",
+        "weight": 50
+      },
+      {
+        "hex": "#FFFFFF",
+        "weight": 50
+      }
+    ],
+    "neutral": [],
+    "themeColor": null,
+    "source": "vision"
+  },
+  "fonts": [],
+  "ready": true,
+  "blockedBy": null,
+  "confidence": 50,
+  "notes": [
+    "facebook profile picture captured headlessly for \"oanadental.ph\"",
+    "0 stylesheet(s) fetched, 1 bytes of CSS",
+    "BLOCKER palette-pending: logo captured (logo-facebook-profile.jpg) but fewer than 2 chromatic colours found. Vision-read the logo, then write the hex values into colors.brand[] with colors.source=\"vision\" and re-run the gate."
+  ]
+}
