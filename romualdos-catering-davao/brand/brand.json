@@ -22,11 +22,11 @@
   "colors": {
     "brand": [
       {
-        "hex": "#C41E3A",
+        "hex": "#1F2E5C",
         "weight": 50
       },
       {
-        "hex": "#FFD700",
+        "hex": "#E89A22",
         "weight": 50
       }
     ],
@@ -41,6 +41,8 @@
   "notes": [
     "facebook profile picture captured headlessly for \"romualdoscatering\"",
     "site unreachable over plain HTTP(S)",
-    "BLOCKER palette-pending: logo captured (logo-facebook-profile.jpg) but fewer than 2 chromatic colours found. Vision-read the logo, then write the hex values into colors.brand[] with colors.source=\"vision\" and re-run the gate."
-  ]
+    "BLOCKER palette-pending: logo captured (logo-facebook-profile.jpg) but fewer than 2 chromatic colours found. Vision-read the logo, then write the hex values into colors.brand[] with colors.source=\"vision\" and re-run the gate.",
+    "2026-09-07 builder (CLO-145): CORRECTION — #C41E3A (crimson) was not in the logo. logo-facebook-profile.jpg is a navy field (#1F2E5C) with an amber-gold serif wordmark (#E89A22); re-read by the builder before build."
+  ],
+  "reviewedBy": "mockup-builder 2026-09-07 (CLO-145) — logo vision-checked before build"
 }

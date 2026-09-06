@@ -26,8 +26,12 @@
         "weight": 50
       },
       {
-        "hex": "#F5F5F5",
-        "weight": 50
+        "hex": "#14599B",
+        "weight": 40
+      },
+      {
+        "hex": "#111111",
+        "weight": 30
       }
     ],
     "neutral": [],
@@ -41,6 +45,8 @@
   "notes": [
     "facebook profile picture captured headlessly for \"citydentalqc\"",
     "site unreachable over plain HTTP(S)",
-    "BLOCKER palette-pending: logo captured (logo-facebook-profile.jpg) but fewer than 2 chromatic colours found. Vision-read the logo, then write the hex values into colors.brand[] with colors.source=\"vision\" and re-run the gate."
-  ]
+    "BLOCKER palette-pending: logo captured (logo-facebook-profile.jpg) but fewer than 2 chromatic colours found. Vision-read the logo, then write the hex values into colors.brand[] with colors.source=\"vision\" and re-run the gate.",
+    "2026-09-07 builder (CLO-145): palette re-read from logo-facebook-profile.jpg by the builder: #1E88E5 confirmed as the mid blue; the deeper blue of the tooth gradient (#14599B) and the black \"DENTAL\" (#111111) added. #F5F5F5 dropped as a neutral, not a brand colour."
+  ],
+  "reviewedBy": "mockup-builder 2026-09-07 (CLO-145) — logo vision-checked before build"
 }

@@ -22,12 +22,16 @@
   "colors": {
     "brand": [
       {
-        "hex": "#FF6B9D",
+        "hex": "#1B69B8",
         "weight": 50
       },
       {
-        "hex": "#FFFFFF",
-        "weight": 50
+        "hex": "#29B6E8",
+        "weight": 45
+      },
+      {
+        "hex": "#16A79B",
+        "weight": 30
       }
     ],
     "neutral": [],
@@ -41,6 +45,8 @@
   "notes": [
     "facebook profile picture captured headlessly for \"smileandhealthdentalclinic\"",
     "site unreachable over plain HTTP(S)",
-    "BLOCKER palette-pending: logo captured (logo-facebook-profile.jpg) but fewer than 2 chromatic colours found. Vision-read the logo, then write the hex values into colors.brand[] with colors.source=\"vision\" and re-run the gate."
-  ]
+    "BLOCKER palette-pending: logo captured (logo-facebook-profile.jpg) but fewer than 2 chromatic colours found. Vision-read the logo, then write the hex values into colors.brand[] with colors.source=\"vision\" and re-run the gate.",
+    "2026-09-07 builder (CLO-145): CORRECTION — #FF6B9D (pink) was not in the logo. logo-facebook-profile.jpg is entirely blue and teal: deep blue wordmark and figure (#1B69B8), light blue (#29B6E8), teal foot of the tooth (#16A79B); re-read by the builder."
+  ],
+  "reviewedBy": "mockup-builder 2026-09-07 (CLO-145) — logo vision-checked before build"
 }

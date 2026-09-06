@@ -35,12 +35,14 @@
     "source": "vision"
   },
   "fonts": [],
-  "ready": true,
-  "blockedBy": null,
+  "ready": false,
+  "blockedBy": "logo-not-a-mark",
   "confidence": 50,
   "notes": [
     "facebook profile picture captured headlessly for \"theHometownBakeryOhio\"",
     "site unreachable over plain HTTP(S)",
-    "BLOCKER palette-pending: logo captured (logo-facebook-profile.jpg) but fewer than 2 chromatic colours found. Vision-read the logo, then write the hex values into colors.brand[] with colors.source=\"vision\" and re-run the gate."
-  ]
+    "BLOCKER palette-pending: logo captured (logo-facebook-profile.jpg) but fewer than 2 chromatic colours found. Vision-read the logo, then write the hex values into colors.brand[] with colors.source=\"vision\" and re-run the gate.",
+    "2026-09-07 builder (CLO-145): BLOCKER logo-not-a-mark: logo-facebook-profile.jpg is a photograph of a tiered wedding cake on a banquet table, not a logo mark. It cannot be used as a logo in a mockup. The captured palette (#8B4513 saddle brown / #F5DEB3 wheat) matches nothing in that photograph either — the image is white icing, purple and white flowers, and a beige function room — so it was not read from this asset and is not usable. Do not build. Needs a real mark hand-dropped into hometown-bakery-oh/brand/, or the lead is dropped."
+  ],
+  "reviewedBy": "mockup-builder 2026-09-07 (CLO-145) — logo vision-checked before build"
 }

@@ -4,7 +4,7 @@
   "facebook": "oanadental.ph",
   "capturedAt": "2026-09-06T16:26:17.866Z",
   "source": "headless-http",
-  "name": "Redirecting...",
+  "name": "Oana Dental Specialist",
   "logo": {
     "file": "logo-facebook-profile.jpg",
     "score": 95,
@@ -22,12 +22,16 @@
   "colors": {
     "brand": [
       {
-        "hex": "#0099CC",
+        "hex": "#C7A249",
         "weight": 50
       },
       {
-        "hex": "#FFFFFF",
-        "weight": 50
+        "hex": "#8C6B2F",
+        "weight": 40
+      },
+      {
+        "hex": "#111111",
+        "weight": 35
       }
     ],
     "neutral": [],
@@ -41,6 +45,8 @@
   "notes": [
     "facebook profile picture captured headlessly for \"oanadental.ph\"",
     "0 stylesheet(s) fetched, 1 bytes of CSS",
-    "BLOCKER palette-pending: logo captured (logo-facebook-profile.jpg) but fewer than 2 chromatic colours found. Vision-read the logo, then write the hex values into colors.brand[] with colors.source=\"vision\" and re-run the gate."
-  ]
+    "BLOCKER palette-pending: logo captured (logo-facebook-profile.jpg) but fewer than 2 chromatic colours found. Vision-read the logo, then write the hex values into colors.brand[] with colors.source=\"vision\" and re-run the gate.",
+    "2026-09-07 builder (CLO-145): CORRECTION — #0099CC (cyan) was not in the logo. logo-facebook-profile.jpg is a gold/bronze coin (#C7A249 into #8C6B2F) carrying a black tooth glyph (#111111); re-read by the builder. Captured name \"Redirecting...\" was the title of the .ph registry-wildcard page at oanadental.ph, which the lead card confirms is NOT their domain; replaced with the real business name."
+  ],
+  "reviewedBy": "mockup-builder 2026-09-07 (CLO-145) — logo vision-checked before build"
 }

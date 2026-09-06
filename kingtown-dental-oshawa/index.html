@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KingTown Dental &mdash; 5-1414 King Street East, Courtice, Ontario</title>
+<meta name="description" content="KingTown Dental (King Town Dental), Unit 5, 1414 King Street East, Courtice, Ontario, in Townline Centre. Call +1 905-434-5500.">
+<meta name="robots" content="noindex, nofollow">
+<style>
+/* Palette below is read straight out of kingtown-dental-oshawa/brand/brand.json at build
+   time (colors.source: "site-css") - every hex is one that appears in the
+   business's own captured mark, logo-2-json-ld-logo-url.png. Nothing here was chosen for looks. */
+:root{
+  --p:#00b4db;
+  --s:#0083b0;
+  --a:#007aff;
+  --p-deep:#0089a6;
+  --s-deep:#006486;
+  --p-soft:#e6f8fb;
+  --s-soft:#e6f3f7;
+  --a-soft:#e0efff;
+  --on-p:#ffffff;
+  --on-s:#ffffff;
+  --ink:#16181d;
+  --ink-2:#585d68;
+  --bone:#f6fcfe;
+  --line:#d6f3f9;
+  --shadow-sm:0 1px 2px rgba(16,18,22,.07),0 3px 10px rgba(16,18,22,.06);
+  --shadow-md:0 12px 30px rgba(16,18,22,.15);
+  --r-sm:8px;--r-md:14px;--r-lg:22px;--r-pill:999px;
+  --display:'Quattrocento Sans','Open Sans','ETmodules',system-ui,-apple-system,"Segoe UI",sans-serif;
+  --body:'Quattrocento Sans','Open Sans','ETmodules',system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;font-family:var(--body);color:var(--ink);background:#fff;font-size:16px;line-height:1.62;padding-bottom:200px;overflow-x:hidden}
+img,svg{max-width:100%;display:block}
+h1,h2,h3{font-family:var(--display);font-weight:800;line-height:1.16;margin:0 0 12px;letter-spacing:-.01em}
+h1{font-size:34px}h2{font-size:28px}h3{font-size:19px}
+p{margin:0 0 16px}
+a{color:var(--p-deep)}
+.wrap{width:100%;max-width:1040px;margin:0 auto;padding:0 20px}
+.eyebrow{font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:var(--p-deep);margin:0 0 10px}
+.rule{width:64px;height:3px;background:var(--s);margin:0 0 18px}
+.lede{font-size:17px;color:var(--ink-2);max-width:62ch}
+.section{padding:56px 0}
+.section--bone{background:var(--bone)}
+.section--tintA{background:var(--p-soft)}
+.section--tintB{background:var(--s-soft)}
+.section--dark{background:var(--ink);color:#dfe2ea}
+.section--dark h2,.section--dark h3{color:#fff}
+:focus-visible{outline:3px solid var(--p);outline-offset:3px;border-radius:4px}
+
+.header{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.96);backdrop-filter:saturate(150%) blur(8px);border-bottom:1px solid var(--line);box-shadow:0 1px 0 rgba(0,180,219,0.35)}
+.header__in{display:flex;align-items:center;gap:12px;min-height:66px;padding:8px 20px;max-width:1040px;margin:0 auto}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none;color:var(--ink);min-height:44px}
+.brand-logo-img{width:50px;height:50px;flex:0 0 50px;object-fit:contain;background:#fff;border-radius:6px;padding:2px;}
+.brand__txt{display:flex;flex-direction:column;line-height:1.16}
+.brand__name{font-family:var(--display);font-weight:800;font-size:16.5px}
+.brand__sub{font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--ink-2);font-weight:700}
+.header__cta{margin-left:auto}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:46px;padding:12px 19px;border-radius:var(--r-sm);font-family:var(--body);font-weight:700;font-size:15px;text-decoration:none;border:2px solid transparent;cursor:pointer;transition:background-color .18s,color .18s,border-color .18s,transform .18s,box-shadow .18s}
+.btn--p{background:var(--p);color:var(--on-p);box-shadow:var(--shadow-sm)}
+.btn--p:hover{background:var(--p-deep);color:#fff;transform:translateY(-2px);box-shadow:var(--shadow-md)}
+.btn--outline{background:#fff;color:var(--ink);border-color:var(--ink)}
+.btn--outline:hover{background:var(--bone);transform:translateY(-2px);box-shadow:var(--shadow-md)}
+.btn--sm{font-size:14px;padding:9px 15px;min-height:44px}
+
+.hero{position:relative;background:linear-gradient(180deg,var(--s-soft) 0%,#fff 74%);overflow:hidden;border-bottom:1px solid var(--line)}
+.hero__in{padding:34px 20px 46px;max-width:1040px;margin:0 auto;position:relative;z-index:1}
+.hero h1{font-size:clamp(29px,6.6vw,45px);margin-bottom:14px}
+.hero h1 em{font-style:normal;color:var(--p-deep)}
+.hero__lead{font-size:17px;color:var(--ink-2);max-width:56ch;margin-bottom:22px}
+.pill{display:inline-flex;align-items:center;gap:8px;background:var(--p);color:var(--on-p);font-weight:700;font-size:12px;letter-spacing:.1em;text-transform:uppercase;padding:7px 15px;border-radius:var(--r-pill);margin-bottom:15px}
+.idcard{background:#fff;border:1px solid var(--line);border-top:4px solid var(--p);border-radius:var(--r-md);padding:20px;box-shadow:var(--shadow-md);margin-bottom:22px}
+.idcard__row{display:flex;gap:13px;padding:12px 0;align-items:flex-start;border-top:1px solid var(--line)}
+.idcard__row:first-child{border-top:0;padding-top:0}
+.idcard__ico{flex:0 0 22px;width:22px;height:22px;color:var(--p-deep);margin-top:3px}
+.idcard__k{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--ink-2);margin:0 0 3px}
+.idcard__v{font-size:15.5px;font-weight:500;margin:0}
+.idcard__v a{color:var(--ink);text-decoration:none;border-bottom:2px solid var(--p)}
+.idcard__v a:hover{color:var(--p-deep)}
+.idcard__note{display:block;font-size:12.5px;color:var(--ink-2);font-weight:600;margin-top:5px}
+.hero__btns{display:flex;flex-direction:column;gap:10px}
+.hero__art{margin-top:34px}
+.mark{width:100%;max-width:340px;margin:0 auto;background:#fff;border-radius:var(--r-md);border:1px solid var(--line);padding:18px;box-shadow:0 18px 40px rgba(16,18,22,.16)}
+
+.vs{display:grid;gap:16px;grid-template-columns:1fr;margin-top:24px}
+.vs__col{border-radius:var(--r-md);padding:22px;border:1px solid var(--line);background:#fff}
+.vs__col--good{border-color:var(--p);border-width:2px;box-shadow:var(--shadow-md)}
+.vs__tag{display:inline-flex;align-items:center;gap:7px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;padding:5px 11px;border-radius:var(--r-pill);margin-bottom:13px}
+.vs__tag--bad{background:var(--bone);color:var(--ink-2);border:1px solid var(--line)}
+.vs__tag--good{background:var(--p);color:var(--on-p)}
+.vs dl{margin:0;font-size:14.6px}
+.vs dt{font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-2);font-weight:700;margin-top:13px}
+.vs dt:first-child{margin-top:0}
+.vs dd{margin:2px 0 0;font-weight:700}
+.vs__n{display:block;font-weight:600;font-size:12.5px;color:var(--ink-2);margin-top:2px}
+.vs__col--bad dd{color:var(--ink)}
+.vs__col--bad dd::after{content:" \2717";color:#b3243c;font-weight:800}
+.vs__col--good dd::after{content:" \2713";color:#1c6b3a;font-weight:800}
+.urlbox{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:13px;background:var(--ink);color:#9ed0e1;padding:12px 14px;border-radius:var(--r-sm);word-break:break-word;margin:22px 0 0;line-height:1.7}
+.urlbox b{color:#80bdff}
+.urlnote{font-size:14.5px;color:var(--ink-2);margin:14px 0 0;max-width:70ch}
+
+.grid{display:grid;gap:16px;grid-template-columns:1fr;margin-top:24px}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:22px;box-shadow:var(--shadow-sm);transition:transform .2s,box-shadow .2s,border-color .2s}
+.card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);border-color:var(--p)}
+.card__ico{width:46px;height:46px;border-radius:50%;background:var(--p-soft);color:var(--p-deep);display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+.card__ico svg{width:24px;height:24px}
+.card p{font-size:15px;color:var(--ink-2);margin:0}
+
+.pricerow{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0 0}
+.chip{display:inline-flex;align-items:center;gap:7px;background:#fff;border:1px solid var(--line);border-left:4px solid var(--a);border-radius:var(--r-sm);padding:10px 14px;font-size:14.5px;font-weight:600;box-shadow:var(--shadow-sm)}
+.chip b{color:var(--p-deep)}
+.chipnote{font-size:14.5px;color:var(--ink-2);margin:14px 0 0;max-width:70ch}
+
+.why{display:grid;gap:20px;grid-template-columns:1fr;margin-top:24px}
+.why__item{display:flex;gap:15px;align-items:flex-start}
+.why__num{flex:0 0 42px;width:42px;height:42px;border-radius:50%;background:var(--p);color:var(--on-p);font-family:var(--display);font-weight:800;font-size:16px;display:flex;align-items:center;justify-content:center}
+.why__item p{font-size:15px;color:var(--ink-2);margin:0}
+
+.conflict{background:#fff;border:1px solid var(--line);border-radius:var(--r-md);overflow:hidden;box-shadow:var(--shadow-sm);margin-top:24px}
+.conflict__head,.conflict__row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;padding:12px 16px;font-size:14.5px;align-items:center}
+.conflict__head{background:var(--ink);color:#fff;font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;font-weight:700}
+.conflict__row{border-top:1px solid var(--line)}
+.conflict__row span:first-child{font-weight:700}
+.c-a{color:var(--p-deep);font-weight:700}
+.c-b{color:var(--s-deep);font-weight:700}
+.c-x{color:var(--ink-2);font-weight:600;font-style:italic}
+.conflict__row--gap{background:var(--bone)}
+
+.contact{display:grid;gap:24px;grid-template-columns:1fr;margin-top:24px}
+.hours{background:#fff;border:1px solid var(--line);border-radius:var(--r-md);overflow:hidden;box-shadow:var(--shadow-sm)}
+.hours__row{display:flex;justify-content:space-between;gap:14px;padding:13px 18px;border-top:1px solid var(--line);font-size:15px}
+.hours__row:first-child{border-top:0}
+.hours__row span:last-child{color:var(--ink-2);font-weight:600;text-align:right}
+.hours__row--open{background:var(--p-soft)}
+.hours__row--open span:last-child{color:var(--p-deep);font-weight:700}
+.note{background:var(--bone);border-left:4px solid var(--a);border-radius:0 var(--r-sm) var(--r-sm) 0;padding:17px;font-size:14.5px;color:var(--ink-2);margin:0}
+.note b{display:block;color:var(--ink);margin-bottom:5px;font-size:15px}
+.note + .note{margin-top:14px}
+.reach{background:var(--ink);color:#fff;border-radius:var(--r-md);padding:22px;box-shadow:var(--shadow-md);display:flex;flex-direction:column;gap:8px;margin-top:14px}
+.reach h3{color:#fff}
+.reach p{margin:0;font-size:15px;color:#c9ccd4}
+.reach a{color:#80c1d8;font-weight:700}
+
+.footer{background:#fff;border-top:4px solid var(--p);color:var(--ink-2);padding:44px 0 34px}
+.footer h3{color:var(--ink);font-size:16px;margin-bottom:9px}
+.footer__grid{display:grid;gap:26px;grid-template-columns:1fr}
+.footer__p{font-size:14.5px;margin:0;line-height:1.75}
+.footer a{color:var(--p-deep);text-decoration:none}
+.footer a:hover{text-decoration:underline}
+.footer__credit{border-top:1px solid var(--line);margin-top:28px;padding-top:18px;display:flex;flex-wrap:wrap;gap:8px 18px;justify-content:space-between;font-size:13px}
+
+.cs-bar{position:fixed;left:0;right:0;bottom:0;z-index:200;background:rgba(16,18,22,.97);backdrop-filter:saturate(150%) blur(10px);border-top:3px solid var(--p);box-shadow:0 -8px 32px rgba(16,18,22,.38);color:#fff;padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px))}
+.cs-bar__in{max-width:1040px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:10px 18px;text-align:center}
+.cs-bar__eyebrow{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:#73bbd4;margin:0 0 3px}
+.cs-bar__line{font-size:15px;font-weight:600;line-height:1.35;margin:0;color:#fff}
+.cs-bar__line b{color:#6bb2ff}
+.cs-bar__btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 23px;border-radius:var(--r-sm);background:var(--p);color:var(--on-p);font-weight:700;font-size:15px;text-decoration:none;white-space:nowrap;box-shadow:0 4px 18px rgba(0,180,219,0.45);animation:csPulse 2.4s ease-in-out infinite;transition:transform .18s,box-shadow .18s}
+.cs-bar__btn:hover{transform:translateY(-2px);box-shadow:0 8px 26px rgba(0,180,219,0.66);animation-play-state:paused}
+.cs-bar__btn:focus-visible{outline:3px solid #fff;outline-offset:3px}
+@keyframes csPulse{0%,100%{box-shadow:0 4px 18px rgba(0,180,219,0.36)}50%{box-shadow:0 4px 27px rgba(0,180,219,0.68)}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition-duration:.01ms!important}}
+
+@media (min-width:600px){
+  .hero__btns{flex-direction:row;flex-wrap:wrap}
+  .hero__btns .btn{flex:1 1 auto;min-width:200px}
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .why{grid-template-columns:repeat(2,1fr)}
+  .vs{grid-template-columns:repeat(2,1fr)}
+}
+@media (min-width:900px){
+  .hero__in{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center;padding:52px 20px 62px}
+  .hero__art{margin-top:0}
+  .grid{grid-template-columns:repeat(3,1fr)}
+  .contact{grid-template-columns:1.05fr .95fr}
+  .footer__grid{grid-template-columns:1.3fr 1fr 1fr}
+  .cs-bar__in{flex-wrap:nowrap;justify-content:space-between;text-align:left}
+  .cs-bar__line{font-size:16.5px}
+}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="header__in">
+    <a class="brand" href="#top">
+      <img class="brand-logo-img" src="brand/logo-2-json-ld-logo-url.png" alt="KingTown Dental logo" width="50" height="50">
+      <span class="brand__txt">
+        <span class="brand__name">KingTown Dental</span>
+        <span class="brand__sub">Courtice, Ontario</span>
+      </span>
+    </a>
+    <a class="btn btn--p btn--sm header__cta" href="tel:+19054345500">Call +1 905-434-5500</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="hero__in">
+      <div>
+        <p class="pill">Four listings &middot; four addresses &middot; no two agree</p>
+        <h1>A patient with an emergency has to <em>guess where you are</em>.</h1>
+        <p class="hero__lead">Your website, your Facebook page, Yelp and YellowPages.ca each give a different answer for where KingTown Dental is &mdash; and no two published sources agree on your opening hours on any day of the week. This page settles all of it in one place.</p>
+        <div class="idcard">
+        <div class="idcard__row">
+          <svg class="idcard__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>
+          <div>
+            <p class="idcard__k">Address</p>
+            <p class="idcard__v">Unit 5, 1414 King Street East, Courtice, Ontario<span class="idcard__note">Townline Centre. This is the address your own website gives.</span></p>
+          </div>
+        </div>
+        <div class="idcard__row">
+          <svg class="idcard__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.6 3.5 9 3.9l1.2 3.4-1.9 1.5a12 12 0 0 0 5.9 5.9l1.5-1.9 3.4 1.2.4 2.4a2 2 0 0 1-2.1 2.3A16.5 16.5 0 0 1 4.3 5.6 2 2 0 0 1 6.6 3.5z"/></svg>
+          <div>
+            <p class="idcard__k">Telephone</p>
+            <p class="idcard__v"><a href="tel:+19054345500">+1 905-434-5500</a></p>
+          </div>
+        </div>
+        <div class="idcard__row">
+          <svg class="idcard__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="2"/><path d="m3.6 6.8 8.4 6 8.4-6"/></svg>
+          <div>
+            <p class="idcard__k">Email</p>
+            <p class="idcard__v"><a href="mailto:info@kingtowndental.com">info@kingtowndental.com</a><span class="idcard__note">On kingtowndental.com &mdash; a different domain to your website.</span></p>
+          </div>
+        </div>
+        <div class="idcard__row">
+          <svg class="idcard__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.6"/><path d="M3.4 12h17.2M12 3.4a15 15 0 0 1 0 17.2 15 15 0 0 1 0-17.2"/></svg>
+          <div>
+            <p class="idcard__k">Website</p>
+            <p class="idcard__v">kingtowndental.ca<span class="idcard__note">Registered 2024-09-23, on a different host to your mail domain.</span></p>
+          </div>
+        </div>
+        <div class="idcard__row">
+          <svg class="idcard__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 12c0 4-3.8 7.2-8.5 7.2a10 10 0 0 1-2.6-.33L4.4 20.4l1.2-3.2A6.8 6.8 0 0 1 3.5 12c0-4 3.8-7.2 8.5-7.2s8.5 3.2 8.5 7.2z"/></svg>
+          <div>
+            <p class="idcard__k">Facebook</p>
+            <p class="idcard__v"><a href="https://www.facebook.com/KingTownDentalOffice" target="_blank" rel="noopener">KingTownDentalOffice</a><span class="idcard__note">Which gives the location as Oshawa.</span></p>
+          </div>
+        </div>
+        </div>
+        <div class="hero__btns">
+        <a class="btn btn--p" href="tel:+19054345500">Call +1 905-434-5500</a>
+        <a class="btn btn--outline" href="mailto:info@kingtowndental.com">Email the practice</a>
+        </div>
+      </div>
+      <div class="hero__art">
+        <img class="mark" src="brand/logo-2-json-ld-logo-url.png" alt="KingTown Dental logo">
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--bone">
+    <div class="wrap">
+      <p class="eyebrow">What is online right now</p>
+      <div class="rule"></div>
+      <h2>Four public records. Four different addresses.</h2>
+      <p class="lede">Same building, four descriptions of it. A patient checking two sources before driving over gets two different answers &mdash; and one of them names a different street entirely.</p>
+      <div class="vs">
+        <div class="vs__col vs__col--bad">
+          <span class="vs__tag vs__tag--bad">Today</span>
+          <dl>
+          <dt>kingtowndental.ca</dt>
+          <dd>5-1414 King St E, Courtice<span class="vs__n">Your own site</span></dd>
+          <dt>Facebook</dt>
+          <dd>Oshawa<span class="vs__n">A different town</span></dd>
+          <dt>Yelp</dt>
+          <dd>1414 King Street E, Courtice<span class="vs__n">No unit number</span></dd>
+          <dt>YellowPages.ca</dt>
+          <dd>1414 <b>Highway 2</b><span class="vs__n">A different street name</span></dd>
+          <dt>Your name</dt>
+          <dd>KingTown / King Town<span class="vs__n">Written both ways, by you</span></dd>
+          <dt>Email domain</dt>
+          <dd>kingtowndental.com<span class="vs__n">Reg. 2010 &mdash; not your site&rsquo;s domain</span></dd>
+          <dt>Site domain</dt>
+          <dd>kingtowndental.ca<span class="vs__n">Reg. 2024 &mdash; different host</span></dd>
+          </dl>
+        </div>
+        <div class="vs__col vs__col--good">
+          <span class="vs__tag vs__tag--good">This page</span>
+          <dl>
+          <dt>Address</dt>
+          <dd>Unit 5, 1414 King St E<span class="vs__n">Once</span></dd>
+          <dt>Town</dt>
+          <dd>Courtice<span class="vs__n">Once</span></dd>
+          <dt>Landmark</dt>
+          <dd>Townline Centre<span class="vs__n">So it can be found</span></dd>
+          <dt>Street</dt>
+          <dd>King Street East<span class="vs__n">One name</span></dd>
+          <dt>Practice name</dt>
+          <dd>Stated once<span class="vs__n">Your choice which</span></dd>
+          <dt>Phone</dt>
+          <dd>+1 905-434-5500<span class="vs__n">One number</span></dd>
+          <dt>Hours</dt>
+          <dd>One published set<span class="vs__n">Once you confirm them</span></dd>
+          </dl>
+        </div>
+      </div>
+      <p class="urlbox">kingtowndental.ca reg. <b>2024-09-23</b> &middot; kingtowndental.com reg. <b>2010-06-22</b>, different host &middot; checked 2026-09-07</p>
+      <p class="urlnote">The domain split matters more than it looks: the address you ask patients to email is on a domain that does not serve your website. Anyone checking whether info@kingtowndental.com is really you has no way to confirm it.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <p class="eyebrow">KingTown Dental</p>
+      <div class="rule"></div>
+      <h2>One practice, written two ways.</h2>
+      <p class="lede">Even the name is split. Your logo reads KingTown Dental; the title of your own website reads King Town Dental. It is a small thing that makes both harder to search for.</p>
+      <div class="grid">
+      <div class="card">
+        <div class="card__ico"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg></div>
+        <h3>Townline Centre, Courtice</h3>
+        <p>Unit 5 at 1414 King Street East &mdash; the address your own website gives, with the landmark that makes it findable.</p>
+      </div>
+      <div class="card">
+        <div class="card__ico"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8.5" r="3.2"/><path d="M3.4 19.4c.5-3 2.8-4.7 5.6-4.7s5.1 1.7 5.6 4.7"/><path d="M16.2 6.1a3.2 3.2 0 0 1 0 6.1M17.4 14.9c2.2.4 3.8 2 4.2 4.5"/></svg></div>
+        <h3>Family dentistry, Durham Region</h3>
+        <p>Serving Courtice, Oshawa and the wider Durham Region, as your website says.</p>
+      </div>
+      <div class="card">
+        <div class="card__ico"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.4 19 6v5.4c0 4.2-2.8 7.4-7 9.2-4.2-1.8-7-5-7-9.2V6z"/></svg></div>
+        <h3>Same-day emergencies</h3>
+        <p>Your site accommodates them. It just does not publish a Friday, Saturday or Sunday hour to do it in.</p>
+      </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section section--tintB">
+    <div class="wrap">
+      <p class="eyebrow">Opening hours</p>
+      <div class="rule"></div>
+      <h2>No two sources agree on when you are open.</h2>
+      <p class="lede">These are the two published sets, side by side. They disagree on every single day that either one covers.</p>
+      <div class="conflict">
+        <div class="conflict__head">
+          <span>Day</span><span>Your website</span><span>The directory</span>
+        </div>
+        <div class="conflict__row"><span>Monday</span><span class="c-a">09:00 &ndash; 18:00</span><span class="c-b">10:00 &ndash; 18:00</span></div>
+        <div class="conflict__row"><span>Tuesday</span><span class="c-a">09:00 &ndash; 18:00</span><span class="c-b">10:00 &ndash; 20:00</span></div>
+        <div class="conflict__row"><span>Wednesday</span><span class="c-a">10:00 &ndash; 19:00</span><span class="c-b">09:00 &ndash; 17:00</span></div>
+        <div class="conflict__row"><span>Thursday</span><span class="c-a">10:00 &ndash; 19:00</span><span class="c-b">11:00 &ndash; 19:00</span></div>
+        <div class="conflict__row conflict__row--gap"><span>Friday</span><span class="c-x">Not published</span><span class="c-x">Not published</span></div>
+        <div class="conflict__row conflict__row--gap"><span>Saturday</span><span class="c-x">Not published</span><span class="c-x">Not published</span></div>
+        <div class="conflict__row conflict__row--gap"><span>Sunday</span><span class="c-x">Not published</span><span class="c-x">Not published</span></div>
+      </div>
+      <p class="note"><b>Neither set is presented as correct</b>Friday, Saturday and Sunday are not published anywhere &mdash; while your website promises &ldquo;Same Day Emergencies Accommodated&rdquo;. A patient in pain on a Friday has nothing to go on. We have not picked a winner between these two columns, because only you know which is right.</p>
+    </div>
+  </section>
+
+  <section class="section section--tintA">
+    <div class="wrap">
+      <p class="eyebrow">Day one</p>
+      <div class="rule"></div>
+      <h2>What one settled page fixes.</h2>
+      <div class="why">
+      <div class="why__item"><div class="why__num">1</div><p>A patient stops choosing between Courtice, Oshawa and Highway 2 and just drives to one address.</p></div>
+      <div class="why__item"><div class="why__num">2</div><p>Your published hours stop contradicting themselves on every day of the week.</p></div>
+      <div class="why__item"><div class="why__num">3</div><p>The same-day emergency promise gets a Friday-to-Sunday answer next to it instead of silence.</p></div>
+      <div class="why__item"><div class="why__num">4</div><p>The name appears one way, so both spellings stop competing with each other in search.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <p class="eyebrow">Reach KingTown Dental</p>
+      <div class="rule"></div>
+      <h2>Everything a client needs, in one place.</h2>
+      <p class="lede">Where a fact has not been published anywhere public, this page says so rather than guessing. Those gaps are the fastest thing to fix.</p>
+      <div class="contact">
+        <div>
+        <p class="note"><b>Friday to Sunday hours &mdash; not published anywhere</b>Neither your website nor the directory lists them, so this page does not either. Given the same-day emergency promise, it is the single most valuable line you could add.</p>
+        <p class="note"><b>Which address is correct &mdash; to be confirmed</b>This page uses Unit 5, 1414 King Street East, Courtice, because that is what your own website says. If a different one is right, tell us and it changes everywhere at once.</p>
+        <p class="note"><b>Fees &mdash; to be confirmed</b>No hygiene or exam fee is published. Nothing is shown rather than a figure a patient might arrive expecting.</p>
+        </div>
+        <div>
+          <div class="reach">
+            <h3>KingTown Dental</h3>
+            <p>Unit 5, 1414 King Street East, Courtice, Ontario</p>
+            <p>+1 905-434-5500 &middot; <a href="tel:+19054345500">tap to call</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <h3>KingTown Dental</h3>
+        <p class="footer__p">Townline Centre, Courtice, Ontario<br>Unit 5, 1414 King Street East, Courtice, Ontario</p>
+      </div>
+      <div>
+        <h3>Reach us</h3>
+        <p class="footer__p"><a href="tel:+19054345500">+1 905-434-5500</a></p>
+      </div>
+      <div>
+        <h3>About this page</h3>
+        <p class="footer__p">A live preview built by CloudSpring IT Solutions from KingTown Dental&rsquo;s own public listings. Every detail on it comes from a published source; anything unpublished is labelled, not invented.</p>
+      </div>
+    </div>
+    <div class="footer__credit">
+      <span>&copy; 2026 KingTown Dental &middot; Courtice, Ontario</span>
+      <span>Preview by CloudSpring IT Solutions</span>
+    </div>
+  </div>
+</footer>
+
+<aside class="cs-bar" role="complementary" aria-label="CloudSpring IT Solutions preview notice">
+  <div class="cs-bar__in">
+    <div class="cs-bar__txt">
+      <p class="cs-bar__eyebrow">Preview &middot; CloudSpring IT Solutions</p>
+      <p class="cs-bar__line">Your site says <b>Courtice</b>, your Facebook says <b>Oshawa</b>, and YellowPages says <b>Highway 2</b>. No two sources agree on your hours on any day. Shall we settle it?</p>
+    </div>
+    <a class="cs-bar__btn" href="https://api.leadconnectorhq.com/widget/booking/QRPEnWRw2Kx9rBe0Mj6J" target="_blank" rel="noopener">Book a FREE Discovery Call &rarr;</a>
+  </div>
+</aside>
+
+</body>
+</html>

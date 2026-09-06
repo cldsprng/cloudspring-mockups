@@ -22,12 +22,16 @@
   "colors": {
     "brand": [
       {
-        "hex": "#D4A574",
+        "hex": "#C87941",
         "weight": 50
       },
       {
-        "hex": "#8B4513",
-        "weight": 50
+        "hex": "#D4A574",
+        "weight": 45
+      },
+      {
+        "hex": "#22304E",
+        "weight": 30
       }
     ],
     "neutral": [],
@@ -41,6 +45,8 @@
   "notes": [
     "facebook profile picture captured headlessly for \"auffrancegourmetmanila\"",
     "site unreachable over plain HTTP(S)",
-    "BLOCKER palette-pending: logo captured (logo-facebook-profile.jpg) but fewer than 2 chromatic colours found. Vision-read the logo, then write the hex values into colors.brand[] with colors.source=\"vision\" and re-run the gate."
-  ]
+    "BLOCKER palette-pending: logo captured (logo-facebook-profile.jpg) but fewer than 2 chromatic colours found. Vision-read the logo, then write the hex values into colors.brand[] with colors.source=\"vision\" and re-run the gate.",
+    "2026-09-07 builder (CLO-145): palette re-read from logo-facebook-profile.jpg by the builder: #8B4513 replaced with the terracotta actually in the mark (#C87941), navy lettering (#22304E) added. #D4A574 confirmed."
+  ],
+  "reviewedBy": "mockup-builder 2026-09-07 (CLO-145) — logo vision-checked before build"
 }
