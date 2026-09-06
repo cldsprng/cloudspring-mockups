@@ -2787,3 +2787,43 @@ promise, not the diagnosis, that the menu gates.
   not retire CL-01. KingTown's form says a "scheduling coordinator will contact
   you to confirm" - it creates a callback obligation, which is the pain, not the
   fix. Read what the form promises before recording the site as having booking.
+- 2026-09-07 (step 4, the gate's two blind spots): `verify-brand.mjs` compares
+  the PAGE against `brand.json`. It cannot audit `brand.json` itself, so a wrong
+  capture passes cleanly. Three of that day's eight captures carried a hex that
+  appears nowhere in the logo it was recorded against: `#C41E3A` crimson for
+  Romualdo's navy-and-gold wordmark, `#0099CC` cyan for Oana's gold-and-black
+  coin, `#FF6B9D` pink for Smile and Health's all-blue mark. Building to those
+  would have passed the ">=2 captured hexes" check while shipping exactly the
+  invented palette that check exists to catch. **The builder vision-checks the
+  captured logo before building, not just when `blockedBy: palette-pending`** —
+  a `ready:true` palette can still be wrong, and the only way to know is to open
+  the image. Corrections go into `brand.json` with `colors.source: "vision"` and
+  the reason in `notes[]`; the fix is never in the HTML.
+- 2026-09-07 (step 4): the gate cannot see `logo-not-a-mark` at all. It checks
+  that a captured logo file is referenced and present — a photograph satisfies
+  both. hometown-bakery-oh captured a photo of a tiered wedding cake on a
+  banquet table as its logo, `ready:true`, and would have deployed as a header
+  mark. Its palette (`#8B4513` / `#F5DEB3`) matched nothing in that photo either,
+  which is the tell: **when the recorded hexes are absent from the image, the
+  capture did not read that image.** Demoted to `ready:false`, card to BRAND
+  BLOCKED. Facebook profile pictures are a photo about as often as they are a
+  logo, so this check belongs in every run.
+- 2026-09-07 (step 4): build the page FROM `brand.json` at build time rather
+  than transcribing hexes into the template. `tools/build-mockups-2026-09-07.mjs`
+  reads `colors.brand[]` and `logoFiles[]` out of the file it is gated against,
+  which makes a palette mismatch structurally impossible instead of merely
+  checked for. It also means a corrected hex reaches the page by re-running the
+  build, with no chance of the two drifting apart.
+- 2026-09-07 (step 4): `palette-pending` is BUILDABLE, not blocked — but 12
+  leads had been parked in BRAND BLOCKED under it since 2026-08-19 with a logo
+  on disk, no hexes and no `index.html`. BRAND BLOCKED is only for `no-assets`
+  and `logo-not-a-mark`. Raised as CLO-149. Note when scanning: ~16 other
+  folders carry `ready:true` with a stale `blockedBy: "palette-pending"` string
+  from the 2026-08-19 retrofit, so **filter on `ready`, not on `blockedBy`**, or
+  the scan reports built-and-deployed mockups as blocked.
+- 2026-09-07 (step 4, honest placeholders): where two published sources
+  contradict each other, show BOTH and declare neither correct. KingTown
+  Dental's page carries its website hours and the directory hours side by side
+  with Friday-to-Sunday marked "not published anywhere" — which is truthful,
+  makes the problem legible to the prospect, and is a better reply-hook than
+  silently picking a winner would have been.
