@@ -88,6 +88,8 @@
   "blockedBy": null,
   "confidence": 100,
   "notes": [
-    "6 stylesheet(s) fetched, 179520 bytes of CSS"
-  ]
+    "6 stylesheet(s) fetched, 179520 bytes of CSS",
+    "Vision-checked 2026-09-08 (CLO-154): logo-1 is the real horizontal wordmark. Captured #0654c4 sits 25.5 (RGB distance) from a blue actually inside the mark, so the capture read this business."
+  ],
+  "logoPick": "logo-1-json-ld-logo.png"
 }

@@ -90,6 +90,8 @@
   "blockedBy": null,
   "confidence": 100,
   "notes": [
-    "2 stylesheet(s) fetched, 76161 bytes of CSS"
-  ]
+    "2 stylesheet(s) fetched, 76161 bytes of CSS",
+    "Vision-checked 2026-09-08 (CLO-154): logo-1-og-image.png is a STOCK PHOTOGRAPH of a family, not a mark, and it is logoFiles[0] — the default pick. Do not build from it. logo-2-favicon.png is metrodental-logo.png, the real tooth-outline mark; captured #00b8ff and #00d0e7 both sit inside it (53.6 / 47.9)."
+  ],
+  "logoPick": "logo-2-favicon.png"
 }
