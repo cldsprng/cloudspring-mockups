@@ -91,11 +91,13 @@
     "Georgia",
     "Arial"
   ],
-  "ready": true,
-  "blockedBy": null,
+  "ready": false,
+  "blockedBy": "duplicate-slug",
   "confidence": 100,
   "notes": [
     "facebook profile picture captured headlessly for \"mannandmachineinc\"",
-    "6 stylesheet(s) fetched, 1023451 bytes of CSS"
-  ]
+    "6 stylesheet(s) fetched, 1023451 bytes of CSS",
+    "CLO-149 (2026-09-08): duplicate capture of \"mann-machine-vt\" — same site https://mannandmachinevt.com/ as the canonical folder. This slug has never had an index.html, so nothing is deployed at it. Do not build; the prospect's live mockup is /mann-machine-vt/."
+  ],
+  "supersededBy": "mann-machine-vt"
 }

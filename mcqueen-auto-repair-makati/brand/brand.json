@@ -45,11 +45,12 @@
   },
   "fonts": [],
   "ready": true,
-  "blockedBy": "palette-pending",
+  "blockedBy": null,
   "confidence": 90,
   "notes": [
     "facebook profile picture captured headlessly for \"MCqueenAutoRepairShop\"",
     "no website for this lead — facebook-only capture path",
-    "vision-read of logo-facebook-profile.jpg: red collegiate \"MCQUEEN\", gold crown, chequered flags"
+    "vision-read of logo-facebook-profile.jpg: red collegiate \"MCQUEEN\", gold crown, chequered flags",
+    "CLO-149 (2026-09-08): cleared stale blockedBy:\"palette-pending\" — the folder is ready:true, built and live, and the palette is recorded. The string was a leftover from the 2026-08-19 retrofit and made blockedBy scans misreport."
   ]
 }

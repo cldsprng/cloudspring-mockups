@@ -27,11 +27,14 @@
   },
   "fonts": [],
   "ready": false,
-  "blockedBy": "palette-pending",
+  "blockedBy": "logo-not-a-mark",
   "confidence": 50,
   "notes": [
     "facebook profile picture captured headlessly for \"RJFVShop\"",
     "no website for this lead — facebook-only capture path",
-    "BLOCKER palette-pending: logo captured (logo-facebook-profile.jpg) but fewer than 2 chromatic colours found. Vision-read the logo, then write the hex values into colors.brand[] with colors.source=\"vision\" and re-run the gate."
-  ]
+    "BLOCKER palette-pending: logo captured (logo-facebook-profile.jpg) but fewer than 2 chromatic colours found. Vision-read the logo, then write the hex values into colors.brand[] with colors.source=\"vision\" and re-run the gate.",
+    "CLO-149 (2026-09-08): duplicate capture of \"rjf-vulcanizing-taguig\" — facebook handle \"RJFVShop\" and logo file md5 d4f56e9726c38d5b727c78b19d76c597 both identical. This slug has never had an index.html, so nothing is deployed at it. Do not build; the prospect's live mockup is /rjf-vulcanizing-taguig/.",
+    "CLO-149 (2026-09-08): vision-checked — the captured file is a photograph of the shop interior, not a mark. Not a palette-pending case; a vision palette read here would invent a brand out of a snapshot. Stays BRAND BLOCKED, matching \"rjf-vulcanizing-taguig\"."
+  ],
+  "supersededBy": "rjf-vulcanizing-taguig"
 }

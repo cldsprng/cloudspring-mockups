@@ -27,11 +27,13 @@
   },
   "fonts": [],
   "ready": false,
-  "blockedBy": "palette-pending",
+  "blockedBy": "duplicate-slug",
   "confidence": 50,
   "notes": [
     "facebook profile picture captured headlessly for \"PioquintoClinic\"",
     "no website for this lead — facebook-only capture path",
-    "BLOCKER palette-pending: logo captured (logo-facebook-profile.jpg) but fewer than 2 chromatic colours found. Vision-read the logo, then write the hex values into colors.brand[] with colors.source=\"vision\" and re-run the gate."
-  ]
+    "BLOCKER palette-pending: logo captured (logo-facebook-profile.jpg) but fewer than 2 chromatic colours found. Vision-read the logo, then write the hex values into colors.brand[] with colors.source=\"vision\" and re-run the gate.",
+    "CLO-149 (2026-09-08): duplicate capture of \"pioquinto-clinic\" — facebook handle \"PioquintoClinic\" and logo file md5 4406b368ef2f05a709ffae185ea09201 both identical. This slug has never had an index.html, so nothing is deployed at it. Do not build; the prospect's live mockup is /pioquinto-clinic/."
+  ],
+  "supersededBy": "pioquinto-clinic"
 }

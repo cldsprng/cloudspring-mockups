@@ -27,11 +27,13 @@
   },
   "fonts": [],
   "ready": false,
-  "blockedBy": "palette-pending",
+  "blockedBy": "duplicate-slug",
   "confidence": 50,
   "notes": [
     "facebook profile picture captured headlessly for \"MedikaDavao\"",
     "no website for this lead — facebook-only capture path",
-    "BLOCKER palette-pending: logo captured (logo-facebook-profile.jpg) but fewer than 2 chromatic colours found. Vision-read the logo, then write the hex values into colors.brand[] with colors.source=\"vision\" and re-run the gate."
-  ]
+    "BLOCKER palette-pending: logo captured (logo-facebook-profile.jpg) but fewer than 2 chromatic colours found. Vision-read the logo, then write the hex values into colors.brand[] with colors.source=\"vision\" and re-run the gate.",
+    "CLO-149 (2026-09-08): duplicate capture of \"medika-diagnostic-davao\" — facebook handle \"MedikaDavao\" and logo file md5 0bb8dc588675cba8c5ddb577db625f32 both identical. This slug has never had an index.html, so nothing is deployed at it. Do not build; the prospect's live mockup is /medika-diagnostic-davao/."
+  ],
+  "supersededBy": "medika-diagnostic-davao"
 }

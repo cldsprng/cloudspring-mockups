@@ -49,12 +49,13 @@
   },
   "fonts": [],
   "ready": true,
-  "blockedBy": "palette-pending",
+  "blockedBy": null,
   "confidence": 85,
   "notes": [
     "facebook profile picture captured headlessly for \"dr.mechanicautocare\"",
     "no website for this lead — facebook-only capture path",
     "vision-read of logo-facebook-profile.jpg: greyscale gear-and-spanner tile on a warm near-black workshop photo",
-    "monochrome brand: the mark is black-on-white by design, so capture.mjs's \">=2 chromatic colours\" heuristic can never be satisfied. The recorded palette is the prospect's actual one, not a substitute."
+    "monochrome brand: the mark is black-on-white by design, so capture.mjs's \">=2 chromatic colours\" heuristic can never be satisfied. The recorded palette is the prospect's actual one, not a substitute.",
+    "CLO-149 (2026-09-08): cleared stale blockedBy:\"palette-pending\" — the folder is ready:true, built and live, and the palette is recorded. The string was a leftover from the 2026-08-19 retrofit and made blockedBy scans misreport."
   ]
 }
