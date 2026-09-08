@@ -1,0 +1,95 @@
+{
+  "slug": "metro-dental-makati",
+  "site": "https://www.metrodental.com.ph/",
+  "facebook": null,
+  "capturedAt": "2026-09-08T03:37:58.339Z",
+  "source": "headless-http",
+  "name": "MetroDental",
+  "logo": {
+    "file": "logo-1-og-image.png",
+    "score": 60,
+    "why": "og:image"
+  },
+  "logoFiles": [
+    {
+      "file": "logo-1-og-image.png",
+      "bytes": 42468,
+      "from": "https://metrodental.vercel.app/og/og-default.png",
+      "why": "og:image",
+      "score": 60
+    },
+    {
+      "file": "logo-2-favicon.png",
+      "bytes": 88886,
+      "from": "https://www.metrodental.com.ph/metrodental-logo.png",
+      "why": "favicon",
+      "score": 50
+    },
+    {
+      "file": "logo-3-default-favicon.ico",
+      "bytes": 45620,
+      "from": "https://www.metrodental.com.ph/favicon.ico",
+      "why": "default favicon",
+      "score": 10
+    }
+  ],
+  "colors": {
+    "brand": [
+      {
+        "hex": "#00b8ff",
+        "weight": 24
+      },
+      {
+        "hex": "#273e6a",
+        "weight": 11
+      },
+      {
+        "hex": "#00d0e7",
+        "weight": 9
+      },
+      {
+        "hex": "#1a2f52",
+        "weight": 4
+      },
+      {
+        "hex": "#7dd3e7",
+        "weight": 4
+      },
+      {
+        "hex": "#4b5563",
+        "weight": 2
+      }
+    ],
+    "neutral": [
+      {
+        "hex": "#c1d2df",
+        "weight": 5
+      },
+      {
+        "hex": "#ebf7fa",
+        "weight": 4
+      },
+      {
+        "hex": "#ffffff",
+        "weight": 3
+      },
+      {
+        "hex": "#cbd5e1",
+        "weight": 2
+      }
+    ],
+    "themeColor": null,
+    "source": "site-css"
+  },
+  "fonts": [
+    "Instrument Serif",
+    "Montserrat",
+    "Plus Jakarta Sans"
+  ],
+  "ready": true,
+  "blockedBy": null,
+  "confidence": 100,
+  "notes": [
+    "2 stylesheet(s) fetched, 76161 bytes of CSS"
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "slug": "doncaster-dental",
+  "site": "https://carholmedentalgroup.co.uk/",
+  "facebook": null,
+  "capturedAt": "2026-09-08T03:38:11.623Z",
+  "source": "headless-http",
+  "name": "Carholme Dental Group",
+  "logo": {
+    "file": "logo-1-json-ld-logo-url.png",
+    "score": 100,
+    "why": "json-ld logo.url"
+  },
+  "logoFiles": [
+    {
+      "file": "logo-1-json-ld-logo-url.png",
+      "bytes": 6248,
+      "from": "https://cdn-carholmedental.b-cdn.net/wp-content/uploads/2021/10/Carholme-Dental-Group.png",
+      "why": "json-ld logo.url",
+      "score": 100
+    },
+    {
+      "file": "logo-2-img-marked-logo.png",
+      "bytes": 6248,
+      "from": "https://cdn-carholmedental.b-cdn.net/wp-content/uploads/2021/08/Carholme-Dental-Group.png",
+      "why": "img marked logo",
+      "score": 90
+    },
+    {
+      "file": "logo-3-img-marked-logo.jpg",
+      "bytes": 29803,
+      "from": "https://cdn-carholmedental.b-cdn.net/wp-content/uploads/2022/02/Invisalign-with-logo.jpg",
+      "why": "img marked logo",
+      "score": 90
+    }
+  ],
+  "colors": {
+    "brand": [
+      {
+        "hex": "#02d4a5",
+        "weight": 6
+      },
+      {
+        "hex": "#32373c",
+        "weight": 3
+      },
+      {
+        "hex": "#ff6900",
+        "weight": 3
+      },
+      {
+        "hex": "#cf2e2e",
+        "weight": 2
+      },
+      {
+        "hex": "#fcb900",
+        "weight": 2
+      },
+      {
+        "hex": "#0693e3",
+        "weight": 2
+      }
+    ],
+    "neutral": [
+      {
+        "hex": "#ffffff",
+        "weight": 15
+      },
+      {
+        "hex": "#000000",
+        "weight": 10
+      },
+      {
+        "hex": "#686868",
+        "weight": 4
+      },
+      {
+        "hex": "#eeeeee",
+        "weight": 3
+      }
+    ],
+    "themeColor": null,
+    "source": "site-css"
+  },
+  "fonts": [
+    "Arsenal",
+    "groovy-28328",
+    "groovy-69018",
+    "crane-font",
+    "crane-font!important"
+  ],
+  "ready": false,
+  "blockedBy": "no-assets",
+  "confidence": 0,
+  "notes": [
+    "Primary domain (doncasterdental.co.uk) is a GoDaddy parking lander.",
+    "Alternative (doncasterdentalcentre.co.uk) redirects to parent group (carholmedentalgroup.co.uk).",
+    "Lead has no independent branding — neither domain yields a dedicated Doncaster Dental Centre site."
+  ]
+}

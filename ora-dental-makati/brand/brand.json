@@ -1,0 +1,94 @@
+{
+  "slug": "ora-dental-makati",
+  "site": "https://www.theoradental.com/",
+  "facebook": null,
+  "capturedAt": "2026-09-08T03:37:51.792Z",
+  "source": "headless-http",
+  "name": "Ora Dental | Premier Dental Clinic in Makati",
+  "logo": {
+    "file": "logo-1-apple-touch-icon.png",
+    "score": 70,
+    "why": "apple-touch-icon"
+  },
+  "logoFiles": [
+    {
+      "file": "logo-1-apple-touch-icon.png",
+      "bytes": 14128,
+      "from": "https://framerusercontent.com/images/aRBdAYNWATqKnXd5pdRIerZ0f4.png",
+      "why": "apple-touch-icon",
+      "score": 70
+    },
+    {
+      "file": "logo-2-og-image.png",
+      "bytes": 313930,
+      "from": "https://framerusercontent.com/assets/hLhm6WfkREfodsJ5B4IdaHU6gw.png",
+      "why": "og:image",
+      "score": 60
+    },
+    {
+      "file": "logo-3-favicon.png",
+      "bytes": 12724,
+      "from": "https://framerusercontent.com/images/7EvLDKbvMAoatd5gtd177wTUHZk.png",
+      "why": "favicon",
+      "score": 50
+    }
+  ],
+  "colors": {
+    "brand": [
+      {
+        "hex": "#d7a86a",
+        "weight": 9
+      },
+      {
+        "hex": "#e8ba7a",
+        "weight": 5
+      },
+      {
+        "hex": "#0099ff",
+        "weight": 3
+      },
+      {
+        "hex": "#d5a668",
+        "weight": 3
+      },
+      {
+        "hex": "#0c0f1f",
+        "weight": 1
+      },
+      {
+        "hex": "#191f3f",
+        "weight": 1
+      }
+    ],
+    "neutral": [
+      {
+        "hex": "#ffffff",
+        "weight": 414
+      },
+      {
+        "hex": "#000000",
+        "weight": 142
+      },
+      {
+        "hex": "#999999",
+        "weight": 14
+      },
+      {
+        "hex": "#0d0d0d",
+        "weight": 10
+      }
+    ],
+    "themeColor": null,
+    "source": "site-css"
+  },
+  "fonts": [
+    "Inter",
+    "&quot"
+  ],
+  "ready": true,
+  "blockedBy": null,
+  "confidence": 100,
+  "notes": [
+    "0 stylesheet(s) fetched, 330955 bytes of CSS"
+  ]
+}

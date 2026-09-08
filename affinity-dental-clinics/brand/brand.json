@@ -1,0 +1,93 @@
+{
+  "slug": "affinity-dental-clinics",
+  "site": "https://affinitydentalclinics.com/",
+  "facebook": null,
+  "capturedAt": "2026-09-08T03:37:39.496Z",
+  "source": "headless-http",
+  "name": "Affinity Dental Clinics",
+  "logo": {
+    "file": "logo-1-json-ld-logo.png",
+    "score": 100,
+    "why": "json-ld logo"
+  },
+  "logoFiles": [
+    {
+      "file": "logo-1-json-ld-logo.png",
+      "bytes": 23534,
+      "from": "https://affinitydentalclinics.com/wp-content/uploads/AD-Logo-H.png",
+      "why": "json-ld logo",
+      "score": 100
+    },
+    {
+      "file": "logo-2-json-ld-logo-url.webp",
+      "bytes": 124744,
+      "from": "https://affinitydentalclinics.com/wp-content/uploads/affinitydental-featuredimage-scaled.webp",
+      "why": "json-ld logo.url",
+      "score": 100
+    },
+    {
+      "file": "logo-3-apple-touch-icon.png",
+      "bytes": 3218,
+      "from": "https://affinitydentalclinics.com/wp-content/uploads/affinitydental-favicon.png",
+      "why": "apple-touch-icon",
+      "score": 70
+    }
+  ],
+  "colors": {
+    "brand": [
+      {
+        "hex": "#0d6efd",
+        "weight": 41
+      },
+      {
+        "hex": "#0654c4",
+        "weight": 41
+      },
+      {
+        "hex": "#c4d0ff",
+        "weight": 41
+      },
+      {
+        "hex": "#2bbfc4",
+        "weight": 11
+      },
+      {
+        "hex": "#007bff",
+        "weight": 10
+      },
+      {
+        "hex": "#dc3545",
+        "weight": 8
+      }
+    ],
+    "neutral": [
+      {
+        "hex": "#ffffff",
+        "weight": 113
+      },
+      {
+        "hex": "#000000",
+        "weight": 81
+      },
+      {
+        "hex": "#333333",
+        "weight": 15
+      },
+      {
+        "hex": "#cccccc",
+        "weight": 12
+      }
+    ],
+    "themeColor": null,
+    "source": "site-css"
+  },
+  "fonts": [
+    "Open Sans"
+  ],
+  "ready": true,
+  "blockedBy": null,
+  "confidence": 100,
+  "notes": [
+    "6 stylesheet(s) fetched, 179520 bytes of CSS"
+  ]
+}
