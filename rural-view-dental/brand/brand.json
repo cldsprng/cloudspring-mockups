@@ -4,12 +4,14 @@
   "facebook": "Rural.View.Dental",
   "capturedAt": "2026-09-12T12:06:13.374Z",
   "source": "headless-http",
-  "name": "Rural View Dental &#8211; Great dental health starts here",
+  "name": "Rural View Dental",
+  "siteTitle": "Rural View Dental &#8211; Great dental health starts here",
   "logo": {
     "file": "logo-facebook-profile.jpg",
     "score": 95,
     "why": "facebook profile picture"
   },
+  "logoPick": "logo-2-img-marked-logo.png",
   "logoFiles": [
     {
       "file": "logo-facebook-profile.jpg",
@@ -38,6 +40,10 @@
       {
         "hex": "#6abd44",
         "weight": 41
+      },
+      {
+        "hex": "#2c3691",
+        "weight": 35
       },
       {
         "hex": "#69727d",
@@ -79,7 +85,7 @@
       }
     ],
     "themeColor": null,
-    "source": "site-css"
+    "source": "site-css+vision"
   },
   "fonts": [
     "Lato",
@@ -91,6 +97,9 @@
   "confidence": 100,
   "notes": [
     "facebook profile picture captured headlessly for \"Rural.View.Dental\"",
-    "6 stylesheet(s) fetched, 97753 bytes of CSS"
+    "6 stylesheet(s) fetched, 97753 bytes of CSS",
+    "CORRECTED 2026-09-12 (step 4) name: was the raw <title> \"Rural View Dental &#8211; Great dental health starts here\", moved to siteTitle. Gate check 5 splits name on /\\s+[-|]\\s+/ and requires the first part verbatim in index.html; an en-dash entity is not a hyphen, so the whole tagline became the required substring and the folder would have failed on a business name that IS on the page. name is now the business name.",
+    "vision-verified: logo-2-img-marked-logo.png IS a mark (green/navy script 'Rural View' under a tooth-and-leaf device, 'DENTAL' beneath) — not a photograph. logoPick set to it rather than the FB profile picture.",
+    "CORRECTED 2026-09-12 (step 4) colors.brand[]: added #2c3691 at slot 2 and demoted the framework defaults. Decoded logo-2-img-marked-logo.png pixel-by-pixel (zlib inflate + PNG unfilter, 800x364, 38804 opaque px): #69bd45 green is 48.4% and #2c3691 navy is 35.1% — over a third of the mark, and the site-CSS sweep missed it entirely because Elementor never emits it as a literal hex. The captured #6abd44 is the site's own green and is within 1/255 of the logo green, so it is kept as slot 1. What the sweep DID return below it — #d9534f, #5cb85c (Bootstrap danger/success), #cc3366, #ff6900 (Elementor defaults) — are framework boilerplate, not this practice's brand, and would have rendered a Bootstrap-red accent on a green-and-navy clinic."
   ]
 }

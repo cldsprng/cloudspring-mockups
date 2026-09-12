@@ -4,7 +4,7 @@
   "facebook": "cebusmilesdentistry",
   "capturedAt": "2026-09-12T12:05:55.385Z",
   "source": "headless-http",
-  "name": null,
+  "name": "Cebu Smiles Dentistry",
   "logo": {
     "file": "logo-facebook-profile.jpg",
     "score": 95,
@@ -22,11 +22,11 @@
   "colors": {
     "brand": [
       {
-        "hex": "#7030a0",
+        "hex": "#672d91",
         "weight": 45
       },
       {
-        "hex": "#ff1493",
+        "hex": "#ed008b",
         "weight": 35
       }
     ],
@@ -50,6 +50,8 @@
   "notes": [
     "facebook profile picture captured headlessly for \"cebusmilesdentistry\"",
     "no website for this lead — facebook-only capture path",
-    "vision-verified: purple border #7030a0 and magenta accent #ff1493 distinctly visible in mark"
+    "CORRECTED 2026-09-12 (step 4) name: was null, because there is no site and so no <title> to scrape. A null name makes gate check 5 skip silently, so the one check that proves the prospect's own name reached the page was not running for this lead at all. Set from the wordmark in logo-facebook-profile.jpg and the Trello card, which agree.",
+    "vision-verified: logo IS a mark (rotated rounded-square badge, 'CEBU SMILES DENTISTRY' wordmark) — not a photograph",
+    "CORRECTED 2026-09-12 (step 4, colors.source stays \"vision\"): step 3's #7030a0 / #ff1493 were eyeball estimates and #ff1493 is exactly the CSS keyword 'deeppink'. Sampled the actual JPEG pixels (System.Drawing, every 2nd px, 1914x1914): the frame clusters on #672d91 and the accent on #ed008b — a clean CMYK magenta, not deeppink. Both replaced with the sampled values."
   ]
 }

@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bright Smiles Oral Care Center &mdash; V. Ranudo St., Cebu City</title>
+<meta name="description" content="Bright Smiles Oral Care Center, Rm. 415, 4F Velez Medical Arts Bldg., V. Ranudo St., Cebu City 6000. Call +63 32 234 5633. Mon-Fri 9am-6pm, Sat 9am-5pm.">
+<meta name="robots" content="noindex, nofollow">
+<style>
+/* Palette below is read straight out of bright-smiles-oral-care-center/brand/brand.json at build
+   time (colors.source: "site-css") - every hex is one that appears in the
+   business's own captured mark, logo-1-img-marked-logo.png. Nothing here was chosen for looks. */
+:root{
+  --p:#0db14b;
+  --s:#f9a124;
+  --a:#2d7091;
+  --p-deep:#0a8739;
+  --s-deep:#bd7a1b;
+  --p-soft:#e7f7ed;
+  --s-soft:#fef6e9;
+  --a-soft:#e6eef2;
+  --on-p:#ffffff;
+  --on-s:#111111;
+  --ink:#16181d;
+  --ink-2:#585d68;
+  --bone:#f7fcf9;
+  --line:#d8f3e2;
+  --shadow-sm:0 1px 2px rgba(16,18,22,.07),0 3px 10px rgba(16,18,22,.06);
+  --shadow-md:0 12px 30px rgba(16,18,22,.15);
+  --r-sm:8px;--r-md:14px;--r-lg:22px;--r-pill:999px;
+  --display:'Istok Web','Open Sans',system-ui,-apple-system,"Segoe UI",sans-serif;
+  --body:'Istok Web','Open Sans',system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;font-family:var(--body);color:var(--ink);background:#fff;font-size:16px;line-height:1.62;padding-bottom:200px;overflow-x:hidden}
+img,svg{max-width:100%;display:block}
+h1,h2,h3{font-family:var(--display);font-weight:800;line-height:1.16;margin:0 0 12px;letter-spacing:-.01em}
+h1{font-size:34px}h2{font-size:28px}h3{font-size:19px}
+p{margin:0 0 16px}
+a{color:var(--p-deep)}
+.wrap{width:100%;max-width:1040px;margin:0 auto;padding:0 20px}
+.eyebrow{font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:var(--p-deep);margin:0 0 10px}
+.rule{width:64px;height:3px;background:var(--s);margin:0 0 18px}
+.lede{font-size:17px;color:var(--ink-2);max-width:62ch}
+.section{padding:56px 0}
+.section--bone{background:var(--bone)}
+.section--tintA{background:var(--p-soft)}
+.section--tintB{background:var(--s-soft)}
+.section--dark{background:var(--ink);color:#dfe2ea}
+.section--dark h2,.section--dark h3{color:#fff}
+:focus-visible{outline:3px solid var(--p);outline-offset:3px;border-radius:4px}
+
+.header{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.96);backdrop-filter:saturate(150%) blur(8px);border-bottom:1px solid var(--line);box-shadow:0 1px 0 rgba(13,177,75,0.35)}
+.header__in{display:flex;align-items:center;gap:12px;min-height:66px;padding:8px 20px;max-width:1040px;margin:0 auto}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none;color:var(--ink);min-height:44px}
+.brand-logo-img{width:50px;height:50px;flex:0 0 50px;object-fit:contain;background:#fff;border-radius:6px;padding:2px;}
+.brand__txt{display:flex;flex-direction:column;line-height:1.16}
+.brand__name{font-family:var(--display);font-weight:800;font-size:16.5px}
+.brand__sub{font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--ink-2);font-weight:700}
+.header__cta{margin-left:auto}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:46px;padding:12px 19px;border-radius:var(--r-sm);font-family:var(--body);font-weight:700;font-size:15px;text-decoration:none;border:2px solid transparent;cursor:pointer;transition:background-color .18s,color .18s,border-color .18s,transform .18s,box-shadow .18s}
+.btn--p{background:var(--p);color:var(--on-p);box-shadow:var(--shadow-sm)}
+.btn--p:hover{background:var(--p-deep);color:#fff;transform:translateY(-2px);box-shadow:var(--shadow-md)}
+.btn--outline{background:#fff;color:var(--ink);border-color:var(--ink)}
+.btn--outline:hover{background:var(--bone);transform:translateY(-2px);box-shadow:var(--shadow-md)}
+.btn--sm{font-size:14px;padding:9px 15px;min-height:44px}
+
+.hero{position:relative;background:linear-gradient(180deg,var(--s-soft) 0%,#fff 74%);overflow:hidden;border-bottom:1px solid var(--line)}
+.hero__in{padding:34px 20px 46px;max-width:1040px;margin:0 auto;position:relative;z-index:1}
+.hero h1{font-size:clamp(29px,6.6vw,45px);margin-bottom:14px}
+.hero h1 em{font-style:normal;color:var(--p-deep)}
+.hero__lead{font-size:17px;color:var(--ink-2);max-width:56ch;margin-bottom:22px}
+.pill{display:inline-flex;align-items:center;gap:8px;background:var(--p);color:var(--on-p);font-weight:700;font-size:12px;letter-spacing:.1em;text-transform:uppercase;padding:7px 15px;border-radius:var(--r-pill);margin-bottom:15px}
+.idcard{background:#fff;border:1px solid var(--line);border-top:4px solid var(--p);border-radius:var(--r-md);padding:20px;box-shadow:var(--shadow-md);margin-bottom:22px}
+.idcard__row{display:flex;gap:13px;padding:12px 0;align-items:flex-start;border-top:1px solid var(--line)}
+.idcard__row:first-child{border-top:0;padding-top:0}
+.idcard__ico{flex:0 0 22px;width:22px;height:22px;color:var(--p-deep);margin-top:3px}
+.idcard__k{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--ink-2);margin:0 0 3px}
+.idcard__v{font-size:15.5px;font-weight:500;margin:0}
+.idcard__v a{color:var(--ink);text-decoration:none;border-bottom:2px solid var(--p)}
+.idcard__v a:hover{color:var(--p-deep)}
+.idcard__note{display:block;font-size:12.5px;color:var(--ink-2);font-weight:600;margin-top:5px}
+.hero__btns{display:flex;flex-direction:column;gap:10px}
+.hero__art{margin-top:34px}
+.mark{width:100%;max-width:340px;margin:0 auto;background:#fff;border-radius:var(--r-md);border:1px solid var(--line);padding:18px;box-shadow:0 18px 40px rgba(16,18,22,.16)}
+
+.vs{display:grid;gap:16px;grid-template-columns:1fr;margin-top:24px}
+.vs__col{border-radius:var(--r-md);padding:22px;border:1px solid var(--line);background:#fff}
+.vs__col--good{border-color:var(--p);border-width:2px;box-shadow:var(--shadow-md)}
+.vs__tag{display:inline-flex;align-items:center;gap:7px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;padding:5px 11px;border-radius:var(--r-pill);margin-bottom:13px}
+.vs__tag--bad{background:var(--bone);color:var(--ink-2);border:1px solid var(--line)}
+.vs__tag--good{background:var(--p);color:var(--on-p)}
+.vs dl{margin:0;font-size:14.6px}
+.vs dt{font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-2);font-weight:700;margin-top:13px}
+.vs dt:first-child{margin-top:0}
+.vs dd{margin:2px 0 0;font-weight:700}
+.vs__n{display:block;font-weight:600;font-size:12.5px;color:var(--ink-2);margin-top:2px}
+.vs__col--bad dd{color:var(--ink)}
+.vs__col--bad dd::after{content:" \2717";color:#b3243c;font-weight:800}
+.vs__col--good dd::after{content:" \2713";color:#1c6b3a;font-weight:800}
+.urlbox{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:13px;background:var(--ink);color:#fddbac;padding:12px 14px;border-radius:var(--r-sm);word-break:break-word;margin:22px 0 0;line-height:1.7}
+.urlbox b{color:#96b8c8}
+.urlnote{font-size:14.5px;color:var(--ink-2);margin:14px 0 0;max-width:70ch}
+
+.grid{display:grid;gap:16px;grid-template-columns:1fr;margin-top:24px}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:22px;box-shadow:var(--shadow-sm);transition:transform .2s,box-shadow .2s,border-color .2s}
+.card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);border-color:var(--p)}
+.card__ico{width:46px;height:46px;border-radius:50%;background:var(--p-soft);color:var(--p-deep);display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+.card__ico svg{width:24px;height:24px}
+.card p{font-size:15px;color:var(--ink-2);margin:0}
+
+.why{display:grid;gap:20px;grid-template-columns:1fr;margin-top:24px}
+.why__item{display:flex;gap:15px;align-items:flex-start}
+.why__num{flex:0 0 42px;width:42px;height:42px;border-radius:50%;background:var(--p);color:var(--on-p);font-family:var(--display);font-weight:800;font-size:16px;display:flex;align-items:center;justify-content:center}
+.why__item p{font-size:15px;color:var(--ink-2);margin:0}
+
+/* --cols is set per page from the data, so two published addresses and three
+   circulating phone numbers use the same markup. */
+.conflict{background:#fff;border:1px solid var(--line);border-radius:var(--r-md);overflow:hidden;box-shadow:var(--shadow-sm);margin-top:24px}
+.conflict__head,.conflict__row{display:grid;grid-template-columns:repeat(var(--cols,3),minmax(0,1fr));gap:8px;padding:12px 16px;font-size:14.5px;align-items:start}
+.conflict__head{background:var(--ink);color:#fff;font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;font-weight:700;align-items:end}
+.conflict__row{border-top:1px solid var(--line)}
+.conflict__row span:first-child{font-weight:700}
+.c-a{color:var(--p-deep);font-weight:700}
+.c-b{color:var(--s-deep);font-weight:700}
+.c-c{color:var(--ink-2);font-weight:700}
+.conflict__row--gap{background:var(--bone)}
+
+.contact{display:grid;gap:24px;grid-template-columns:1fr;margin-top:24px}
+.hours{background:#fff;border:1px solid var(--line);border-radius:var(--r-md);overflow:hidden;box-shadow:var(--shadow-sm);margin-top:24px}
+.hours__row{display:flex;justify-content:space-between;gap:14px;padding:13px 18px;border-top:1px solid var(--line);font-size:15px}
+.hours__row:first-child{border-top:0}
+.hours__row span:first-child{font-weight:700}
+.hours__row span:last-child{color:var(--ink-2);font-weight:600;text-align:right;font-style:italic}
+.hours__row--open{background:var(--p-soft)}
+.hours__row--open span:last-child{color:var(--p-deep);font-weight:700;font-style:normal}
+.note{background:var(--bone);border-left:4px solid var(--a);border-radius:0 var(--r-sm) var(--r-sm) 0;padding:17px;font-size:14.5px;color:var(--ink-2);margin:0}
+.note b{display:block;color:var(--ink);margin-bottom:5px;font-size:15px}
+.note + .note{margin-top:14px}
+.reach{background:var(--ink);color:#fff;border-radius:var(--r-md);padding:22px;box-shadow:var(--shadow-md);display:flex;flex-direction:column;gap:8px;margin-top:14px}
+.reach h3{color:#fff}
+.reach p{margin:0;font-size:15px;color:#c9ccd4}
+.reach a{color:#fcd092;font-weight:700}
+
+.footer{background:#fff;border-top:4px solid var(--p);color:var(--ink-2);padding:44px 0 34px}
+.footer h3{color:var(--ink);font-size:16px;margin-bottom:9px}
+.footer__grid{display:grid;gap:26px;grid-template-columns:1fr}
+.footer__p{font-size:14.5px;margin:0;line-height:1.75}
+.footer a{color:var(--p-deep);text-decoration:none}
+.footer a:hover{text-decoration:underline}
+.footer__credit{border-top:1px solid var(--line);margin-top:28px;padding-top:18px;display:flex;flex-wrap:wrap;gap:8px 18px;justify-content:space-between;font-size:13px}
+
+.cs-bar{position:fixed;left:0;right:0;bottom:0;z-index:200;background:rgba(16,18,22,.97);backdrop-filter:saturate(150%) blur(10px);border-top:3px solid var(--p);box-shadow:0 -8px 32px rgba(16,18,22,.38);color:#fff;padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px))}
+.cs-bar__in{max-width:1040px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:10px 18px;text-align:center}
+.cs-bar__eyebrow{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:#fccb87;margin:0 0 3px}
+.cs-bar__line{font-size:15px;font-weight:600;line-height:1.35;margin:0;color:#fff}
+.cs-bar__line b{color:#85acbf}
+.cs-bar__btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 23px;border-radius:var(--r-sm);background:var(--p);color:var(--on-p);font-weight:700;font-size:15px;text-decoration:none;white-space:nowrap;box-shadow:0 4px 18px rgba(13,177,75,0.45);animation:csPulse 2.4s ease-in-out infinite;transition:transform .18s,box-shadow .18s}
+.cs-bar__btn:hover{transform:translateY(-2px);box-shadow:0 8px 26px rgba(13,177,75,0.66);animation-play-state:paused}
+.cs-bar__btn:focus-visible{outline:3px solid #fff;outline-offset:3px}
+@keyframes csPulse{0%,100%{box-shadow:0 4px 18px rgba(13,177,75,0.36)}50%{box-shadow:0 4px 27px rgba(13,177,75,0.68)}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition-duration:.01ms!important}}
+
+@media (max-width:599px){
+  .conflict__head,.conflict__row{grid-template-columns:1fr;gap:2px}
+  .conflict__head span:first-child{display:none}
+  .conflict__head{font-size:10px}
+  .conflict__row{padding:14px 16px}
+}
+@media (min-width:600px){
+  .hero__btns{flex-direction:row;flex-wrap:wrap}
+  .hero__btns .btn{flex:1 1 auto;min-width:200px}
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .why{grid-template-columns:repeat(2,1fr)}
+  .vs{grid-template-columns:repeat(2,1fr)}
+}
+@media (min-width:900px){
+  .hero__in{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center;padding:52px 20px 62px}
+  .hero__art{margin-top:0}
+  .grid{grid-template-columns:repeat(3,1fr)}
+  .contact{grid-template-columns:1.05fr .95fr}
+  .footer__grid{grid-template-columns:1.3fr 1fr 1fr}
+  .cs-bar__in{flex-wrap:nowrap;justify-content:space-between;text-align:left}
+  .cs-bar__line{font-size:16.5px}
+}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="header__in">
+    <a class="brand" href="#top">
+      <img class="brand-logo-img" src="brand/logo-1-img-marked-logo.png" alt="Bright Smiles Oral Care Center logo" width="50" height="50">
+      <span class="brand__txt">
+        <span class="brand__name">Bright Smiles Oral Care Center</span>
+        <span class="brand__sub">Cebu City, Philippines</span>
+      </span>
+    </a>
+    <a class="btn btn--p btn--sm header__cta" href="tel:+63322345633">Call +63 32 234 5633</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="hero__in">
+      <div>
+        <p class="pill">One address &middot; one dialable number &middot; one set of hours</p>
+        <h1>Two directories send your patients <em>to a different street.</em></h1>
+        <p class="hero__lead">Your own contact page says V. Ranudo Street. <b>infoisinfo-ph.com</b> and <b>phl.databasesets.com</b> both say Gen. Maxilom Avenue, and print a phone number six digits long that no handset will dial. This page carries one address and one number that works.</p>
+        <div class="idcard">
+        <div class="idcard__row">
+          <svg class="idcard__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>
+          <div>
+            <p class="idcard__k">Address</p>
+            <p class="idcard__v">Rm. 415, 4F Velez Medical Arts Bldg., V. Ranudo St., Cebu City 6000</p>
+          </div>
+        </div>
+        <div class="idcard__row">
+          <svg class="idcard__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.6 3.5 9 3.9l1.2 3.4-1.9 1.5a12 12 0 0 0 5.9 5.9l1.5-1.9 3.4 1.2.4 2.4a2 2 0 0 1-2.1 2.3A16.5 16.5 0 0 1 4.3 5.6 2 2 0 0 1 6.6 3.5z"/></svg>
+          <div>
+            <p class="idcard__k">Telephone</p>
+            <p class="idcard__v"><a href="tel:+63322345633">+63 32 234 5633</a><span class="idcard__note">From your own /contact-us.html. infoisinfo prints +63(32)412355 &mdash; six digits, undialable.</span></p>
+          </div>
+        </div>
+        <div class="idcard__row">
+          <svg class="idcard__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.6 3.5 9 3.9l1.2 3.4-1.9 1.5a12 12 0 0 0 5.9 5.9l1.5-1.9 3.4 1.2.4 2.4a2 2 0 0 1-2.1 2.3A16.5 16.5 0 0 1 4.3 5.6 2 2 0 0 1 6.6 3.5z"/></svg>
+          <div>
+            <p class="idcard__k">Mobile</p>
+            <p class="idcard__v"><a href="tel:+639234188996">+63 923 418 8996</a></p>
+          </div>
+        </div>
+        <div class="idcard__row">
+          <svg class="idcard__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="2"/><path d="m3.6 6.8 8.4 6 8.4-6"/></svg>
+          <div>
+            <p class="idcard__k">Email</p>
+            <p class="idcard__v"><a href="mailto:2008brightsmiles@gmail.com">2008brightsmiles@gmail.com</a></p>
+          </div>
+        </div>
+        <div class="idcard__row">
+          <svg class="idcard__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.6"/><path d="M3.4 12h17.2M12 3.4a15 15 0 0 1 0 17.2 15 15 0 0 1 0-17.2"/></svg>
+          <div>
+            <p class="idcard__k">Website</p>
+            <p class="idcard__v"><a href="https://www.dentalclinic-cebu.com/" target="_blank" rel="noopener">dentalclinic-cebu.com</a></p>
+          </div>
+        </div>
+        </div>
+        <div class="hero__btns">
+        <a class="btn btn--p" href="tel:+63322345633">Call +63 32 234 5633</a>
+        <a class="btn btn--outline" href="mailto:2008brightsmiles@gmail.com">Email the clinic</a>
+        </div>
+      </div>
+      <div class="hero__art">
+        <img class="mark" src="brand/logo-1-img-marked-logo.png" alt="Bright Smiles Oral Care Center logo">
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--bone">
+    <div class="wrap">
+      <p class="eyebrow">What is live right now</p>
+      <div class="rule"></div>
+      <h2>Your &ldquo;Book an Appointment&rdquo; button does not book anything.</h2>
+      <p class="lede">It goes to /contact-us.html. We filled the form out on 2026-09-12 to see what it asks for. Here is every field on it.</p>
+      <div class="vs">
+        <div class="vs__col vs__col--bad">
+          <span class="vs__tag vs__tag--bad">Today</span>
+          <dl>
+          <dt>Subject</dt>
+          <dd>Pre-filled &ldquo;Miscellaneous&rdquo;<span class="vs__n">What the patient sends</span></dd>
+          <dt>Email</dt>
+          <dd>Asked for twice<span class="vs__n">Enter, then re-enter</span></dd>
+          <dt>Country</dt>
+          <dd>Required dropdown<span class="vs__n">For a Cebu City walk-in</span></dd>
+          <dt>Preferred date</dt>
+          <dd>No field<span class="vs__n">Not asked</span></dd>
+          <dt>Preferred time</dt>
+          <dd>No field<span class="vs__n">Not asked</span></dd>
+          </dl>
+        </div>
+        <div class="vs__col vs__col--good">
+          <span class="vs__tag vs__tag--good">This page</span>
+          <dl>
+          <dt>Subject</dt>
+          <dd>Not asked<span class="vs__n">You already know why they called</span></dd>
+          <dt>Email</dt>
+          <dd>Once, or not at all<span class="vs__n">Tap to call instead</span></dd>
+          <dt>Country</dt>
+          <dd>Not asked<span class="vs__n">Cebu City</span></dd>
+          <dt>Preferred date</dt>
+          <dd>Asked, in one tap<span class="vs__n">An enquiry, not a calendar</span></dd>
+          <dt>Preferred time</dt>
+          <dd>Asked, in one tap<span class="vs__n">An enquiry, not a calendar</span></dd>
+          </dl>
+        </div>
+      </div>
+      <p class="urlbox">/contact-us.html &rarr; RSForm id 1: Subject, Title, First Name, Last Name, Email, Re-Enter Email, Country, How did you hear, Remarks &middot; <b>type="date" &times; 0</b> &middot; <b>type="time" &times; 0</b> &middot; fetched 2026-09-12</p>
+      <p class="urlnote">A patient who taps &ldquo;Book an Appointment&rdquo; types their email twice, picks a country, and still has not said when they want to come in. The enquiry lands in an inbox as free text and somebody has to write back to ask.</p>
+    </div>
+  </section>
+
+  <section class="section section--tintB">
+    <div class="wrap">
+      <p class="eyebrow">Two published addresses</p>
+      <div class="rule"></div>
+      <h2>A patient on Gen. Maxilom Avenue cannot find you.</h2>
+      <p class="lede">Both of these are live right now. Neither is declared correct here &mdash; what this page does is name the source of each, and put the one your own site publishes at the top.</p>
+      <div class="conflict" style="--cols:3">
+        <div class="conflict__head">
+          <span>&nbsp;</span><span>Your own contact page</span><span>infoisinfo-ph.com &amp; phl.databasesets.com</span>
+        </div>
+        <div class="conflict__row"><span>Street</span><span class="c-a">V. Ranudo Street</span><span class="c-b">Gen. Maxilom Avenue</span></div>
+        <div class="conflict__row"><span>Building</span><span class="c-a">Velez Medical Arts Bldg., Rm. 415, 4F</span><span class="c-b">One Mango Square, Unit 6, 2F</span></div>
+        <div class="conflict__row"><span>Telephone</span><span class="c-a">+63 32 234 5633</span><span class="c-b">+63 32 412 3553</span></div>
+        <div class="conflict__row"><span>As actually printed</span><span class="c-a">+63 32 234 5633</span><span class="c-b">+63(32)412355 &mdash; 6 digits</span></div>
+        <div class="conflict__row"><span>Listed beside you</span><span class="c-a">&mdash;</span><span class="c-b">Asoy Felix Dental, same avenue</span></div>
+      </div>
+      <p class="note"><b>Neither column is presented here as the correct one</b>The two are about a kilometre apart. The directory version is also truncated to six digits, so a patient who does reach the listing cannot ring it either &mdash; and the clinic stacked next to you on that page is on the avenue it sends them to.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <p class="eyebrow">Bright Smiles</p>
+      <div class="rule"></div>
+      <h2>What Bright Smiles already publishes.</h2>
+      <p class="lede">All of this is on your own site today. The problem is not that the facts are missing &mdash; it is that two directories publish different ones.</p>
+      <div class="grid">
+      <div class="card">
+        <div class="card__ico"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg></div>
+        <h3>Velez Medical Arts Building</h3>
+        <p>Room 415, fourth floor, V. Ranudo Street, Cebu City 6000. The address on your own contact page.</p>
+      </div>
+      <div class="card">
+        <div class="card__ico"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.6"/><path d="M12 7v5.3l3.4 2"/></svg></div>
+        <h3>Hours that are actually posted</h3>
+        <p>Monday to Friday 9am&ndash;6pm, Saturday 9am&ndash;5pm. Rarer than it should be &mdash; most clinics in this niche publish none at all.</p>
+      </div>
+      <div class="card">
+        <div class="card__ico"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.6 3.5 9 3.9l1.2 3.4-1.9 1.5a12 12 0 0 0 5.9 5.9l1.5-1.9 3.4 1.2.4 2.4a2 2 0 0 1-2.1 2.3A16.5 16.5 0 0 1 4.3 5.6 2 2 0 0 1 6.6 3.5z"/></svg></div>
+        <h3>A landline and a mobile</h3>
+        <p>+63 32 234 5633 and +63 923 418 8996, both from your own site, both tappable here.</p>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <p class="eyebrow">Opening hours</p>
+      <div class="rule"></div>
+      <h2>Your hours, tappable, above the fold.</h2>
+      <p class="lede">Taken verbatim from your own contact page on 2026-09-12. No directory we checked carries them at all.</p>
+      <div class="hours">
+        <div class="hours__row hours__row--open"><span>Monday to Friday</span><span>09:00 &ndash; 18:00</span></div>
+        <div class="hours__row hours__row--open"><span>Saturday</span><span>09:00 &ndash; 17:00</span></div>
+        <div class="hours__row"><span>Sunday</span><span>Not published</span></div>
+        <div class="hours__row"><span>Public holidays</span><span>Not published</span></div>
+      </div>
+      <p class="note" style="margin-top:16px"><b>Where your site says nothing, this page says nothing</b>Sunday and public holidays are left blank because your site does not state them. We would rather show a gap than invent a schedule a patient turns up for.</p>
+    </div>
+  </section>
+
+  <section class="section section--tintA">
+    <div class="wrap">
+      <p class="eyebrow">Day one</p>
+      <div class="rule"></div>
+      <h2>Four things this page settles on day one.</h2>
+      <div class="why">
+      <div class="why__item"><div class="why__num">1</div><p>One address, from your own contact page, with the directory version shown and sourced rather than quietly dropped.</p></div>
+      <div class="why__item"><div class="why__num">2</div><p>One number that dials. The six-digit version on infoisinfo cannot be rung from any handset.</p></div>
+      <div class="why__item"><div class="why__num">3</div><p>Your hours, which you already publish and no directory carries, put where a patient looks first.</p></div>
+      <div class="why__item"><div class="why__num">4</div><p>&ldquo;Book an Appointment&rdquo; currently opens a form with no date field and no time field. Here, the first tap is a call that connects.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <p class="eyebrow">Reach Bright Smiles</p>
+      <div class="rule"></div>
+      <h2>Everything a patient needs, in one place.</h2>
+      <p class="lede">Where a fact has not been published anywhere public, this page says so rather than guessing. Those gaps are the fastest thing to fix.</p>
+      <div class="contact">
+        <div>
+        <p class="note"><b>Treatments and prices &mdash; to be confirmed</b>Your site describes the clinic but posts no fees, so this page quotes none. Tell us your cleaning and consultation rates and they go on as written.</p>
+        <p class="note"><b>Sunday and holiday hours &mdash; to be confirmed</b>Your contact page lists Monday to Saturday only. We have shown that as published and left the rest blank rather than assume you are closed.</p>
+        </div>
+        <div>
+          <div class="reach">
+            <h3>Bright Smiles Oral Care Center</h3>
+            <p>Rm. 415, 4F Velez Medical Arts Bldg., V. Ranudo St., Cebu City 6000</p>
+            <p>+63 32 234 5633 &middot; <a href="tel:+63322345633">tap to call</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <h3>Bright Smiles Oral Care Center</h3>
+        <p class="footer__p">Oral Care Center &middot; Cebu City, Philippines<br>Rm. 415, 4F Velez Medical Arts Bldg., V. Ranudo St., Cebu City 6000</p>
+      </div>
+      <div>
+        <h3>Reach us</h3>
+        <p class="footer__p"><a href="tel:+63322345633">+63 32 234 5633</a></p>
+      </div>
+      <div>
+        <h3>About this page</h3>
+        <p class="footer__p">A live preview built by CloudSpring IT Solutions from Bright Smiles&rsquo;s own public listings. Every detail on it comes from a published source; anything unpublished is labelled, not invented.</p>
+      </div>
+    </div>
+    <div class="footer__credit">
+      <span>&copy; 2026 Bright Smiles Oral Care Center &middot; Cebu City, Philippines</span>
+      <span>Preview by CloudSpring IT Solutions</span>
+    </div>
+  </div>
+</footer>
+
+<aside class="cs-bar" role="complementary" aria-label="CloudSpring IT Solutions preview notice">
+  <div class="cs-bar__in">
+    <div class="cs-bar__txt">
+      <p class="cs-bar__eyebrow">Preview &middot; CloudSpring IT Solutions</p>
+      <p class="cs-bar__line">Two directories send your patients to <b>Gen. Maxilom Ave</b> and print a phone number <b>six digits long</b>. Your own contact page says V. Ranudo St. Which one is on your door?</p>
+    </div>
+    <a class="cs-bar__btn" href="https://api.leadconnectorhq.com/widget/booking/QRPEnWRw2Kx9rBe0Mj6J" target="_blank" rel="noopener">Book a FREE Discovery Call &rarr;</a>
+  </div>
+</aside>
+
+</body>
+</html>

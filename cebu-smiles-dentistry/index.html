@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cebu Smiles Dentistry &mdash; 3F Mountain Wing, SM Seaside City, Cebu</title>
+<meta name="description" content="Cebu Smiles Dentistry, 3F Mountain Wing, SM Seaside City, Cebu City. Call +63 917 165 2352 or email dentistrycebusmiles@gmail.com.">
+<meta name="robots" content="noindex, nofollow">
+<style>
+/* Palette below is read straight out of cebu-smiles-dentistry/brand/brand.json at build
+   time (colors.source: "vision") - every hex is one that appears in the
+   business's own captured mark, logo-facebook-profile.jpg. Nothing here was chosen for looks. */
+:root{
+  --p:#672d91;
+  --s:#ed008b;
+  --a:#ed008b;
+  --p-deep:#4e226e;
+  --s-deep:#b4006a;
+  --p-soft:#f0eaf4;
+  --s-soft:#fde6f3;
+  --a-soft:#fde0f1;
+  --on-p:#ffffff;
+  --on-s:#ffffff;
+  --ink:#16181d;
+  --ink-2:#585d68;
+  --bone:#faf8fb;
+  --line:#e7dded;
+  --shadow-sm:0 1px 2px rgba(16,18,22,.07),0 3px 10px rgba(16,18,22,.06);
+  --shadow-md:0 12px 30px rgba(16,18,22,.15);
+  --r-sm:8px;--r-md:14px;--r-lg:22px;--r-pill:999px;
+  --display:system-ui,-apple-system,"Segoe UI",sans-serif;
+  --body:system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;font-family:var(--body);color:var(--ink);background:#fff;font-size:16px;line-height:1.62;padding-bottom:200px;overflow-x:hidden}
+img,svg{max-width:100%;display:block}
+h1,h2,h3{font-family:var(--display);font-weight:800;line-height:1.16;margin:0 0 12px;letter-spacing:-.01em}
+h1{font-size:34px}h2{font-size:28px}h3{font-size:19px}
+p{margin:0 0 16px}
+a{color:var(--p-deep)}
+.wrap{width:100%;max-width:1040px;margin:0 auto;padding:0 20px}
+.eyebrow{font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:var(--p-deep);margin:0 0 10px}
+.rule{width:64px;height:3px;background:var(--s);margin:0 0 18px}
+.lede{font-size:17px;color:var(--ink-2);max-width:62ch}
+.section{padding:56px 0}
+.section--bone{background:var(--bone)}
+.section--tintA{background:var(--p-soft)}
+.section--tintB{background:var(--s-soft)}
+.section--dark{background:var(--ink);color:#dfe2ea}
+.section--dark h2,.section--dark h3{color:#fff}
+:focus-visible{outline:3px solid var(--p);outline-offset:3px;border-radius:4px}
+
+.header{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.96);backdrop-filter:saturate(150%) blur(8px);border-bottom:1px solid var(--line);box-shadow:0 1px 0 rgba(103,45,145,0.35)}
+.header__in{display:flex;align-items:center;gap:12px;min-height:66px;padding:8px 20px;max-width:1040px;margin:0 auto}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none;color:var(--ink);min-height:44px}
+.brand-logo-img{width:50px;height:50px;flex:0 0 50px;object-fit:contain;background:#fff;border-radius:6px;padding:2px;}
+.brand__txt{display:flex;flex-direction:column;line-height:1.16}
+.brand__name{font-family:var(--display);font-weight:800;font-size:16.5px}
+.brand__sub{font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--ink-2);font-weight:700}
+.header__cta{margin-left:auto}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:46px;padding:12px 19px;border-radius:var(--r-sm);font-family:var(--body);font-weight:700;font-size:15px;text-decoration:none;border:2px solid transparent;cursor:pointer;transition:background-color .18s,color .18s,border-color .18s,transform .18s,box-shadow .18s}
+.btn--p{background:var(--p);color:var(--on-p);box-shadow:var(--shadow-sm)}
+.btn--p:hover{background:var(--p-deep);color:#fff;transform:translateY(-2px);box-shadow:var(--shadow-md)}
+.btn--outline{background:#fff;color:var(--ink);border-color:var(--ink)}
+.btn--outline:hover{background:var(--bone);transform:translateY(-2px);box-shadow:var(--shadow-md)}
+.btn--sm{font-size:14px;padding:9px 15px;min-height:44px}
+
+.hero{position:relative;background:linear-gradient(180deg,var(--s-soft) 0%,#fff 74%);overflow:hidden;border-bottom:1px solid var(--line)}
+.hero__in{padding:34px 20px 46px;max-width:1040px;margin:0 auto;position:relative;z-index:1}
+.hero h1{font-size:clamp(29px,6.6vw,45px);margin-bottom:14px}
+.hero h1 em{font-style:normal;color:var(--p-deep)}
+.hero__lead{font-size:17px;color:var(--ink-2);max-width:56ch;margin-bottom:22px}
+.pill{display:inline-flex;align-items:center;gap:8px;background:var(--p);color:var(--on-p);font-weight:700;font-size:12px;letter-spacing:.1em;text-transform:uppercase;padding:7px 15px;border-radius:var(--r-pill);margin-bottom:15px}
+.idcard{background:#fff;border:1px solid var(--line);border-top:4px solid var(--p);border-radius:var(--r-md);padding:20px;box-shadow:var(--shadow-md);margin-bottom:22px}
+.idcard__row{display:flex;gap:13px;padding:12px 0;align-items:flex-start;border-top:1px solid var(--line)}
+.idcard__row:first-child{border-top:0;padding-top:0}
+.idcard__ico{flex:0 0 22px;width:22px;height:22px;color:var(--p-deep);margin-top:3px}
+.idcard__k{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--ink-2);margin:0 0 3px}
+.idcard__v{font-size:15.5px;font-weight:500;margin:0}
+.idcard__v a{color:var(--ink);text-decoration:none;border-bottom:2px solid var(--p)}
+.idcard__v a:hover{color:var(--p-deep)}
+.idcard__note{display:block;font-size:12.5px;color:var(--ink-2);font-weight:600;margin-top:5px}
+.hero__btns{display:flex;flex-direction:column;gap:10px}
+.hero__art{margin-top:34px}
+.mark{width:100%;max-width:340px;margin:0 auto;background:#fff;border-radius:var(--r-md);border:1px solid var(--line);padding:18px;box-shadow:0 18px 40px rgba(16,18,22,.16)}
+
+.vs{display:grid;gap:16px;grid-template-columns:1fr;margin-top:24px}
+.vs__col{border-radius:var(--r-md);padding:22px;border:1px solid var(--line);background:#fff}
+.vs__col--good{border-color:var(--p);border-width:2px;box-shadow:var(--shadow-md)}
+.vs__tag{display:inline-flex;align-items:center;gap:7px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;padding:5px 11px;border-radius:var(--r-pill);margin-bottom:13px}
+.vs__tag--bad{background:var(--bone);color:var(--ink-2);border:1px solid var(--line)}
+.vs__tag--good{background:var(--p);color:var(--on-p)}
+.vs dl{margin:0;font-size:14.6px}
+.vs dt{font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-2);font-weight:700;margin-top:13px}
+.vs dt:first-child{margin-top:0}
+.vs dd{margin:2px 0 0;font-weight:700}
+.vs__n{display:block;font-weight:600;font-size:12.5px;color:var(--ink-2);margin-top:2px}
+.vs__col--bad dd{color:var(--ink)}
+.vs__col--bad dd::after{content:" \2717";color:#b3243c;font-weight:800}
+.vs__col--good dd::after{content:" \2713";color:#1c6b3a;font-weight:800}
+.urlbox{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:13px;background:var(--ink);color:#f89ed3;padding:12px 14px;border-radius:var(--r-sm);word-break:break-word;margin:22px 0 0;line-height:1.7}
+.urlbox b{color:#f680c5}
+.urlnote{font-size:14.5px;color:var(--ink-2);margin:14px 0 0;max-width:70ch}
+
+.grid{display:grid;gap:16px;grid-template-columns:1fr;margin-top:24px}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:22px;box-shadow:var(--shadow-sm);transition:transform .2s,box-shadow .2s,border-color .2s}
+.card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);border-color:var(--p)}
+.card__ico{width:46px;height:46px;border-radius:50%;background:var(--p-soft);color:var(--p-deep);display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+.card__ico svg{width:24px;height:24px}
+.card p{font-size:15px;color:var(--ink-2);margin:0}
+
+.why{display:grid;gap:20px;grid-template-columns:1fr;margin-top:24px}
+.why__item{display:flex;gap:15px;align-items:flex-start}
+.why__num{flex:0 0 42px;width:42px;height:42px;border-radius:50%;background:var(--p);color:var(--on-p);font-family:var(--display);font-weight:800;font-size:16px;display:flex;align-items:center;justify-content:center}
+.why__item p{font-size:15px;color:var(--ink-2);margin:0}
+
+/* --cols is set per page from the data, so two published addresses and three
+   circulating phone numbers use the same markup. */
+.conflict{background:#fff;border:1px solid var(--line);border-radius:var(--r-md);overflow:hidden;box-shadow:var(--shadow-sm);margin-top:24px}
+.conflict__head,.conflict__row{display:grid;grid-template-columns:repeat(var(--cols,3),minmax(0,1fr));gap:8px;padding:12px 16px;font-size:14.5px;align-items:start}
+.conflict__head{background:var(--ink);color:#fff;font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;font-weight:700;align-items:end}
+.conflict__row{border-top:1px solid var(--line)}
+.conflict__row span:first-child{font-weight:700}
+.c-a{color:var(--p-deep);font-weight:700}
+.c-b{color:var(--s-deep);font-weight:700}
+.c-c{color:var(--ink-2);font-weight:700}
+.conflict__row--gap{background:var(--bone)}
+
+.contact{display:grid;gap:24px;grid-template-columns:1fr;margin-top:24px}
+.hours{background:#fff;border:1px solid var(--line);border-radius:var(--r-md);overflow:hidden;box-shadow:var(--shadow-sm);margin-top:24px}
+.hours__row{display:flex;justify-content:space-between;gap:14px;padding:13px 18px;border-top:1px solid var(--line);font-size:15px}
+.hours__row:first-child{border-top:0}
+.hours__row span:first-child{font-weight:700}
+.hours__row span:last-child{color:var(--ink-2);font-weight:600;text-align:right;font-style:italic}
+.hours__row--open{background:var(--p-soft)}
+.hours__row--open span:last-child{color:var(--p-deep);font-weight:700;font-style:normal}
+.note{background:var(--bone);border-left:4px solid var(--a);border-radius:0 var(--r-sm) var(--r-sm) 0;padding:17px;font-size:14.5px;color:var(--ink-2);margin:0}
+.note b{display:block;color:var(--ink);margin-bottom:5px;font-size:15px}
+.note + .note{margin-top:14px}
+.reach{background:var(--ink);color:#fff;border-radius:var(--r-md);padding:22px;box-shadow:var(--shadow-md);display:flex;flex-direction:column;gap:8px;margin-top:14px}
+.reach h3{color:#fff}
+.reach p{margin:0;font-size:15px;color:#c9ccd4}
+.reach a{color:#f680c5;font-weight:700}
+
+.footer{background:#fff;border-top:4px solid var(--p);color:var(--ink-2);padding:44px 0 34px}
+.footer h3{color:var(--ink);font-size:16px;margin-bottom:9px}
+.footer__grid{display:grid;gap:26px;grid-template-columns:1fr}
+.footer__p{font-size:14.5px;margin:0;line-height:1.75}
+.footer a{color:var(--p-deep);text-decoration:none}
+.footer a:hover{text-decoration:underline}
+.footer__credit{border-top:1px solid var(--line);margin-top:28px;padding-top:18px;display:flex;flex-wrap:wrap;gap:8px 18px;justify-content:space-between;font-size:13px}
+
+.cs-bar{position:fixed;left:0;right:0;bottom:0;z-index:200;background:rgba(16,18,22,.97);backdrop-filter:saturate(150%) blur(10px);border-top:3px solid var(--p);box-shadow:0 -8px 32px rgba(16,18,22,.38);color:#fff;padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px))}
+.cs-bar__in{max-width:1040px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:10px 18px;text-align:center}
+.cs-bar__eyebrow{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:#f573bf;margin:0 0 3px}
+.cs-bar__line{font-size:15px;font-weight:600;line-height:1.35;margin:0;color:#fff}
+.cs-bar__line b{color:#f56bbc}
+.cs-bar__btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 23px;border-radius:var(--r-sm);background:var(--p);color:var(--on-p);font-weight:700;font-size:15px;text-decoration:none;white-space:nowrap;box-shadow:0 4px 18px rgba(103,45,145,0.45);animation:csPulse 2.4s ease-in-out infinite;transition:transform .18s,box-shadow .18s}
+.cs-bar__btn:hover{transform:translateY(-2px);box-shadow:0 8px 26px rgba(103,45,145,0.66);animation-play-state:paused}
+.cs-bar__btn:focus-visible{outline:3px solid #fff;outline-offset:3px}
+@keyframes csPulse{0%,100%{box-shadow:0 4px 18px rgba(103,45,145,0.36)}50%{box-shadow:0 4px 27px rgba(103,45,145,0.68)}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition-duration:.01ms!important}}
+
+@media (max-width:599px){
+  .conflict__head,.conflict__row{grid-template-columns:1fr;gap:2px}
+  .conflict__head span:first-child{display:none}
+  .conflict__head{font-size:10px}
+  .conflict__row{padding:14px 16px}
+}
+@media (min-width:600px){
+  .hero__btns{flex-direction:row;flex-wrap:wrap}
+  .hero__btns .btn{flex:1 1 auto;min-width:200px}
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .why{grid-template-columns:repeat(2,1fr)}
+  .vs{grid-template-columns:repeat(2,1fr)}
+}
+@media (min-width:900px){
+  .hero__in{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center;padding:52px 20px 62px}
+  .hero__art{margin-top:0}
+  .grid{grid-template-columns:repeat(3,1fr)}
+  .contact{grid-template-columns:1.05fr .95fr}
+  .footer__grid{grid-template-columns:1.3fr 1fr 1fr}
+  .cs-bar__in{flex-wrap:nowrap;justify-content:space-between;text-align:left}
+  .cs-bar__line{font-size:16.5px}
+}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="header__in">
+    <a class="brand" href="#top">
+      <img class="brand-logo-img" src="brand/logo-facebook-profile.jpg" alt="Cebu Smiles Dentistry logo" width="50" height="50">
+      <span class="brand__txt">
+        <span class="brand__name">Cebu Smiles Dentistry</span>
+        <span class="brand__sub">SM Seaside City, Cebu</span>
+      </span>
+    </a>
+    <a class="btn btn--p btn--sm header__cta" href="tel:+639171652352">Call +63 917 165 2352</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="hero__in">
+      <div>
+        <p class="pill">One name &middot; one number &middot; a page you own</p>
+        <h1>Search your name and <em>a directory&rsquo;s homepage</em> is listed as your website.</h1>
+        <p class="hero__lead">The page that ranks for &ldquo;Cebu Smiles Dentistry&rdquo; is not yours. It prints <b>cebudentalimplants.com</b> in your Website field &mdash; the directory&rsquo;s own front page &mdash; and stacks six rival clinics underneath you. This page is the record that answers instead.</p>
+        <div class="idcard">
+        <div class="idcard__row">
+          <svg class="idcard__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>
+          <div>
+            <p class="idcard__k">Address</p>
+            <p class="idcard__v">3F Mountain Wing, SM Seaside City, Cebu City</p>
+          </div>
+        </div>
+        <div class="idcard__row">
+          <svg class="idcard__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.6 3.5 9 3.9l1.2 3.4-1.9 1.5a12 12 0 0 0 5.9 5.9l1.5-1.9 3.4 1.2.4 2.4a2 2 0 0 1-2.1 2.3A16.5 16.5 0 0 1 4.3 5.6 2 2 0 0 1 6.6 3.5z"/></svg>
+          <div>
+            <p class="idcard__k">Telephone</p>
+            <p class="idcard__v"><a href="tel:+639171652352">+63 917 165 2352</a><span class="idcard__note">Three numbers are in circulation for this clinic. This is the one on your own record.</span></p>
+          </div>
+        </div>
+        <div class="idcard__row">
+          <svg class="idcard__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="2"/><path d="m3.6 6.8 8.4 6 8.4-6"/></svg>
+          <div>
+            <p class="idcard__k">Email</p>
+            <p class="idcard__v"><a href="mailto:dentistrycebusmiles@gmail.com">dentistrycebusmiles@gmail.com</a></p>
+          </div>
+        </div>
+        <div class="idcard__row">
+          <svg class="idcard__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 12c0 4-3.8 7.2-8.5 7.2a10 10 0 0 1-2.6-.33L4.4 20.4l1.2-3.2A6.8 6.8 0 0 1 3.5 12c0-4 3.8-7.2 8.5-7.2s8.5 3.2 8.5 7.2z"/></svg>
+          <div>
+            <p class="idcard__k">Facebook</p>
+            <p class="idcard__v"><a href="https://www.facebook.com/cebusmilesdentistry" target="_blank" rel="noopener">facebook.com/cebusmilesdentistry</a><span class="idcard__note">Your front door today. This page gives that link somewhere to land.</span></p>
+          </div>
+        </div>
+        </div>
+        <div class="hero__btns">
+        <a class="btn btn--p" href="tel:+639171652352">Call +63 917 165 2352</a>
+        <a class="btn btn--outline" href="mailto:dentistrycebusmiles@gmail.com">Email the clinic</a>
+        </div>
+      </div>
+      <div class="hero__art">
+        <img class="mark" src="brand/logo-facebook-profile.jpg" alt="Cebu Smiles Dentistry logo">
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--bone">
+    <div class="wrap">
+      <p class="eyebrow">What is live right now</p>
+      <div class="rule"></div>
+      <h2>The page ranking for your name belongs to somebody else.</h2>
+      <p class="lede">This is what a Cebu patient actually lands on when they search you, and what it tells them.</p>
+      <div class="vs">
+        <div class="vs__col vs__col--bad">
+          <span class="vs__tag vs__tag--bad">Today</span>
+          <dl>
+          <dt>Top result for your name</dt>
+          <dd>cebudentalimplants.com<span class="vs__n">A directory, not you</span></dd>
+          <dt>Website field on that page</dt>
+          <dd>cebudentalimplants.com<span class="vs__n">Their own homepage</span></dd>
+          <dt>Listed underneath you</dt>
+          <dd>6 rival clinics<span class="vs__n">Same page, same search</span></dd>
+          <dt>Telephone</dt>
+          <dd>Three different numbers<span class="vs__n">A patient picks one</span></dd>
+          <dt>Your own domain</dt>
+          <dd>Never registered<span class="vs__n">Nothing to point at</span></dd>
+          </dl>
+        </div>
+        <div class="vs__col vs__col--good">
+          <span class="vs__tag vs__tag--good">This page</span>
+          <dl>
+          <dt>Top result for your name</dt>
+          <dd>This page<span class="vs__n">Yours</span></dd>
+          <dt>Website field on that page</dt>
+          <dd>This page<span class="vs__n">Answers</span></dd>
+          <dt>Listed underneath you</dt>
+          <dd>Nobody<span class="vs__n">Your page, your patients</span></dd>
+          <dt>Telephone</dt>
+          <dd>+63 917 165 2352<span class="vs__n">One number</span></dd>
+          <dt>Your own domain</dt>
+          <dd>Still available<span class="vs__n">Your call, your registrar</span></dd>
+          </dl>
+        </div>
+      </div>
+      <p class="urlbox">cebusmilesdentistry.com <b>&rarr; NXDOMAIN</b> on A and MX &middot; Verisign RDAP <b>404, never registered</b> &middot; cebusmiles.com identical &middot; the .ph that appears to resolve is the registry wildcard <b>45.79.222.138</b> &mdash; control zzqqxxnotarealclinic9182.ph returns the same IP &middot; checked 2026-09-12</p>
+      <p class="urlnote">You own no domain, so there is nothing for a directory to link to &mdash; which is exactly why one of them filled the gap with its own address. Registering a name is a decision for you and your registrar; this page does not need one to start working.</p>
+    </div>
+  </section>
+
+  <section class="section section--tintB">
+    <div class="wrap">
+      <p class="eyebrow">Three sources, three numbers</p>
+      <div class="rule"></div>
+      <h2>Which of these should a patient ring?</h2>
+      <p class="lede">All three are live right now. None of them is presented here as the wrong one &mdash; the point is that a patient cannot tell, and two of them do not reach your desk.</p>
+      <div class="conflict" style="--cols:4">
+        <div class="conflict__head">
+          <span>&nbsp;</span><span>Your own record</span><span>SM mall directory</span><span>Aggregator listing</span>
+        </div>
+        <div class="conflict__row"><span>Telephone</span><span class="c-a">+63 917 165 2352</span><span class="c-b">(032) 412-7023</span><span class="c-c">0933 325 7820</span></div>
+        <div class="conflict__row"><span>Website shown</span><span class="c-a">None owned</span><span class="c-b">Not listed</span><span class="c-c">cebudentalimplants.com</span></div>
+        <div class="conflict__row"><span>Listed beside you</span><span class="c-a">&mdash;</span><span class="c-b">Mall tenants</span><span class="c-c">6 rival clinics</span></div>
+      </div>
+      <p class="note"><b>Neither column is presented here as the correct one</b>A first-time patient searching at 9pm reads whichever of these Google put in front of them. Two of the three send them somewhere you do not answer.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <p class="eyebrow">Cebu Smiles</p>
+      <div class="rule"></div>
+      <h2>What we can say about Cebu Smiles Dentistry.</h2>
+      <p class="lede">Taken from your Facebook page, your own mark and the SM Seaside directory. Nothing here is invented &mdash; where a fact has not been published, this page says so further down.</p>
+      <div class="grid">
+      <div class="card">
+        <div class="card__ico"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg></div>
+        <h3>Inside SM Seaside City</h3>
+        <p>Third floor of the Mountain Wing. A patient who already knows the mall can find you from this page in one line.</p>
+      </div>
+      <div class="card">
+        <div class="card__ico"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.6 3.5 9 3.9l1.2 3.4-1.9 1.5a12 12 0 0 0 5.9 5.9l1.5-1.9 3.4 1.2.4 2.4a2 2 0 0 1-2.1 2.3A16.5 16.5 0 0 1 4.3 5.6 2 2 0 0 1 6.6 3.5z"/></svg></div>
+        <h3>One number that reaches you</h3>
+        <p>+63 917 165 2352. The mall directory prints (032) 412-7023 and an aggregator prints 0933 325 7820. This page publishes one.</p>
+      </div>
+      <div class="card">
+        <div class="card__ico"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 12c0 4-3.8 7.2-8.5 7.2a10 10 0 0 1-2.6-.33L4.4 20.4l1.2-3.2A6.8 6.8 0 0 1 3.5 12c0-4 3.8-7.2 8.5-7.2s8.5 3.2 8.5 7.2z"/></svg></div>
+        <h3>Facebook, given somewhere to land</h3>
+        <p>facebook.com/cebusmilesdentistry is where patients find you now. A page you own turns that from the whole shopfront into one door of several.</p>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tintA">
+    <div class="wrap">
+      <p class="eyebrow">Day one</p>
+      <div class="rule"></div>
+      <h2>Four things this page settles on day one.</h2>
+      <div class="why">
+      <div class="why__item"><div class="why__num">1</div><p>The result that ranks for your name currently prints a directory&rsquo;s homepage as your website. From here, your name resolves to you.</p></div>
+      <div class="why__item"><div class="why__num">2</div><p>Three phone numbers become one, on a page you control &mdash; and it is tappable, so a patient on a phone does not have to copy it out.</p></div>
+      <div class="why__item"><div class="why__num">3</div><p>Six competing clinics sit directly beneath you on the page that ranks today. On this one there are none.</p></div>
+      <div class="why__item"><div class="why__num">4</div><p>You own no domain, so nothing currently anchors your name online. This page is a working anchor while you decide about a domain, not after.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <p class="eyebrow">Reach Cebu Smiles</p>
+      <div class="rule"></div>
+      <h2>Everything a patient needs, in one place.</h2>
+      <p class="lede">Where a fact has not been published anywhere public, this page says so rather than guessing. Those gaps are the fastest thing to fix.</p>
+      <div class="contact">
+        <div>
+        <p class="note"><b>Clinic hours &mdash; to be confirmed</b>No opening hours are published on your Facebook page, in the SM Seaside directory or on the aggregator listing. Mall hours are not clinic hours, so we have not assumed them. Send them and they go on the page as written.</p>
+        <p class="note"><b>Treatments and prices &mdash; to be confirmed</b>Nothing public states what you charge for a cleaning or a consultation, so this page quotes nothing. A published starting price is usually the single fastest thing to add.</p>
+        </div>
+        <div>
+          <div class="reach">
+            <h3>Cebu Smiles Dentistry</h3>
+            <p>3F Mountain Wing, SM Seaside City, Cebu City</p>
+            <p>+63 917 165 2352 &middot; <a href="tel:+639171652352">tap to call</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <h3>Cebu Smiles Dentistry</h3>
+        <p class="footer__p">Dentistry &middot; SM Seaside City<br>3F Mountain Wing, SM Seaside City, Cebu City</p>
+      </div>
+      <div>
+        <h3>Reach us</h3>
+        <p class="footer__p"><a href="tel:+639171652352">+63 917 165 2352</a></p>
+      </div>
+      <div>
+        <h3>About this page</h3>
+        <p class="footer__p">A live preview built by CloudSpring IT Solutions from Cebu Smiles&rsquo;s own public listings. Every detail on it comes from a published source; anything unpublished is labelled, not invented.</p>
+      </div>
+    </div>
+    <div class="footer__credit">
+      <span>&copy; 2026 Cebu Smiles Dentistry &middot; SM Seaside City, Cebu</span>
+      <span>Preview by CloudSpring IT Solutions</span>
+    </div>
+  </div>
+</footer>
+
+<aside class="cs-bar" role="complementary" aria-label="CloudSpring IT Solutions preview notice">
+  <div class="cs-bar__in">
+    <div class="cs-bar__txt">
+      <p class="cs-bar__eyebrow">Preview &middot; CloudSpring IT Solutions</p>
+      <p class="cs-bar__line">The page ranking for <b>Cebu Smiles Dentistry</b> lists <b>cebudentalimplants.com</b> as your website &mdash; the directory&rsquo;s own homepage &mdash; above six rival clinics. Shall we put your name on a page you own?</p>
+    </div>
+    <a class="cs-bar__btn" href="https://api.leadconnectorhq.com/widget/booking/QRPEnWRw2Kx9rBe0Mj6J" target="_blank" rel="noopener">Book a FREE Discovery Call &rarr;</a>
+  </div>
+</aside>
+
+</body>
+</html>

@@ -4,7 +4,8 @@
   "facebook": null,
   "capturedAt": "2026-09-12T12:06:04.356Z",
   "source": "headless-http",
-  "name": "Dental Clinic Cebu City, Philippines - Bright Smiles Oral Care Center",
+  "name": "Bright Smiles Oral Care Center",
+  "siteTitle": "Dental Clinic Cebu City, Philippines - Bright Smiles Oral Care Center",
   "logo": {
     "file": "logo-1-img-marked-logo.png",
     "score": 90,
@@ -40,16 +41,20 @@
         "weight": 38
       },
       {
-        "hex": "#0db54c",
-        "weight": 28
-      },
-      {
         "hex": "#f9a124",
         "weight": 20
       },
       {
         "hex": "#2d7091",
         "weight": 19
+      },
+      {
+        "hex": "#fff200",
+        "weight": 18
+      },
+      {
+        "hex": "#0db54c",
+        "weight": 28
       },
       {
         "hex": "#ff7e00",
@@ -82,12 +87,17 @@
     "source": "site-css"
   },
   "fonts": [
-    "Consolas"
+    "Istok Web",
+    "Open Sans"
   ],
   "ready": true,
   "blockedBy": null,
   "confidence": 100,
   "notes": [
-    "4 stylesheet(s) fetched, 384781 bytes of CSS"
+    "4 stylesheet(s) fetched, 384781 bytes of CSS",
+    "CORRECTED 2026-09-12 (step 4) name: was the raw <title> \"Dental Clinic Cebu City, Philippines - Bright Smiles Oral Care Center\", moved to siteTitle. Gate check 5 splits on \" - \" and takes the FIRST part, so it was demanding the SEO prefix and never once checked that the actual business name reached the page. name is now the business name, which is what the check is for.",
+    "vision-verified: logo IS a mark (three stylised smiling faces in a green/yellow roundel + 'Bright Smiles Oral Care Center' lockup) — not a photograph",
+    "CORRECTED 2026-09-12 (step 4) fonts[]: capture returned only \"Consolas\", which is the theme's monospace <code> fallback — theme.css declares it beside its own comment \"Consolas has a better baseline in running text compared to Courier\". It is not the brand typeface, and the gate would have certified it. The two real families declared in yoo_nano3/styles/bsocc-2/css/theme.css are 'Istok Web' and 'Open Sans'; Consolas dropped.",
+    "CORRECTED 2026-09-12 (step 4) colors.brand[] order + one addition: slots 1 and 2 were #0db14b and #0db54c, two greens 4/255 apart, so the template's P/S pair rendered the page monochrome. Reordered to green / orange / blue so the three template slots are three distinct captured hexes. Added #fff200 (weight 18): decoded logo-1-img-marked-logo.png pixel-by-pixel (zlib inflate + PNG unfilter) — #0db14b is 35.0% of the opaque pixels, confirming the CSS hex exactly, and #fff200 is 3.8%, the yellow disc behind the faces. No hex here was invented; #fff200 is not forced into the styling."
   ]
 }
