@@ -1,0 +1,55 @@
+{
+  "slug": "cebu-smiles-dentistry",
+  "site": null,
+  "facebook": "cebusmilesdentistry",
+  "capturedAt": "2026-09-12T12:05:55.385Z",
+  "source": "headless-http",
+  "name": null,
+  "logo": {
+    "file": "logo-facebook-profile.jpg",
+    "score": 95,
+    "why": "facebook profile picture"
+  },
+  "logoFiles": [
+    {
+      "file": "logo-facebook-profile.jpg",
+      "bytes": 134573,
+      "from": "graph.facebook.com/cebusmilesdentistry/picture?width=1200&height=1200",
+      "why": "facebook profile picture",
+      "score": 95
+    }
+  ],
+  "colors": {
+    "brand": [
+      {
+        "hex": "#7030a0",
+        "weight": 45
+      },
+      {
+        "hex": "#ff1493",
+        "weight": 35
+      }
+    ],
+    "neutral": [
+      {
+        "hex": "#000000",
+        "weight": 15
+      },
+      {
+        "hex": "#cccccc",
+        "weight": 10
+      }
+    ],
+    "themeColor": null,
+    "source": "vision"
+  },
+  "fonts": [],
+  "ready": true,
+  "blockedBy": null,
+  "confidence": 95,
+  "notes": [
+    "facebook profile picture captured headlessly for \"cebusmilesdentistry\"",
+    "no website for this lead — facebook-only capture path",
+    "vision-verified: purple border #7030a0 and magenta accent #ff1493 distinctly visible in mark"
+  ]
+}

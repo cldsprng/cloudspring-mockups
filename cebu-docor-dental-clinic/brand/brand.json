@@ -1,0 +1,37 @@
+{
+  "slug": "cebu-docor-dental-clinic",
+  "site": "cebudocordental.com",
+  "facebook": "DocorDentalClinicMillerHospital",
+  "capturedAt": "2026-09-12T12:06:11.413Z",
+  "source": "headless-http",
+  "name": null,
+  "logo": {
+    "file": "logo-facebook-profile.jpg",
+    "score": 95,
+    "why": "facebook profile picture"
+  },
+  "logoFiles": [
+    {
+      "file": "logo-facebook-profile.jpg",
+      "bytes": 75859,
+      "from": "graph.facebook.com/DocorDentalClinicMillerHospital/picture?width=1200&height=1200",
+      "why": "facebook profile picture",
+      "score": 95
+    }
+  ],
+  "colors": {
+    "brand": [],
+    "neutral": [],
+    "themeColor": null,
+    "source": null
+  },
+  "fonts": [],
+  "ready": false,
+  "blockedBy": "no-assets",
+  "confidence": 85,
+  "notes": [
+    "facebook profile picture captured headlessly for \"DocorDentalClinicMillerHospital\"",
+    "site unreachable over plain HTTP(S)",
+    "vision assessment: image is a photograph of three people in the clinic (not a logo mark). No extractable brand colors. This is a logo-not-a-mark case with empty colors.brand[] → routes to BRAND BLOCKED per config routing rules."
+  ]
+}

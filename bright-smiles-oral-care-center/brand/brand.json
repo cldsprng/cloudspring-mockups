@@ -1,0 +1,93 @@
+{
+  "slug": "bright-smiles-oral-care-center",
+  "site": "https://www.dentalclinic-cebu.com/",
+  "facebook": null,
+  "capturedAt": "2026-09-12T12:06:04.356Z",
+  "source": "headless-http",
+  "name": "Dental Clinic Cebu City, Philippines - Bright Smiles Oral Care Center",
+  "logo": {
+    "file": "logo-1-img-marked-logo.png",
+    "score": 90,
+    "why": "img marked logo"
+  },
+  "logoFiles": [
+    {
+      "file": "logo-1-img-marked-logo.png",
+      "bytes": 29645,
+      "from": "https://www.dentalclinic-cebu.com/images/brightsmiles/logo.png",
+      "why": "img marked logo",
+      "score": 90
+    },
+    {
+      "file": "logo-2-img-marked-logo.png",
+      "bytes": 19059,
+      "from": "https://www.dentalclinic-cebu.com/images/brightsmiles/logo-small.png",
+      "why": "img marked logo",
+      "score": 90
+    },
+    {
+      "file": "logo-3-apple-touch-icon.png",
+      "bytes": 4280,
+      "from": "https://www.dentalclinic-cebu.com/templates/yoo_nano3/apple_touch_icon.png",
+      "why": "apple-touch-icon",
+      "score": 70
+    }
+  ],
+  "colors": {
+    "brand": [
+      {
+        "hex": "#0db14b",
+        "weight": 38
+      },
+      {
+        "hex": "#0db54c",
+        "weight": 28
+      },
+      {
+        "hex": "#f9a124",
+        "weight": 20
+      },
+      {
+        "hex": "#2d7091",
+        "weight": 19
+      },
+      {
+        "hex": "#ff7e00",
+        "weight": 16
+      },
+      {
+        "hex": "#d85030",
+        "weight": 16
+      }
+    ],
+    "neutral": [
+      {
+        "hex": "#000000",
+        "weight": 323
+      },
+      {
+        "hex": "#ffffff",
+        "weight": 292
+      },
+      {
+        "hex": "#dddddd",
+        "weight": 166
+      },
+      {
+        "hex": "#444444",
+        "weight": 112
+      }
+    ],
+    "themeColor": null,
+    "source": "site-css"
+  },
+  "fonts": [
+    "Consolas"
+  ],
+  "ready": true,
+  "blockedBy": null,
+  "confidence": 100,
+  "notes": [
+    "4 stylesheet(s) fetched, 384781 bytes of CSS"
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "slug": "rural-view-dental",
+  "site": "https://ruralviewdental.com.au/",
+  "facebook": "Rural.View.Dental",
+  "capturedAt": "2026-09-12T12:06:13.374Z",
+  "source": "headless-http",
+  "name": "Rural View Dental &#8211; Great dental health starts here",
+  "logo": {
+    "file": "logo-facebook-profile.jpg",
+    "score": 95,
+    "why": "facebook profile picture"
+  },
+  "logoFiles": [
+    {
+      "file": "logo-facebook-profile.jpg",
+      "bytes": 104768,
+      "from": "graph.facebook.com/Rural.View.Dental/picture?width=1200&height=1200",
+      "why": "facebook profile picture",
+      "score": 95
+    },
+    {
+      "file": "logo-2-img-marked-logo.png",
+      "bytes": 31134,
+      "from": "https://ruralviewdental.com.au/wp-content/uploads/2026/08/imgi_1_logo.png",
+      "why": "img marked logo",
+      "score": 90
+    },
+    {
+      "file": "logo-3-img-marked-logo.png",
+      "bytes": 18751,
+      "from": "https://ruralviewdental.com.au/wp-content/uploads/2026/08/DR-naegsh-logo.png",
+      "why": "img marked logo",
+      "score": 90
+    }
+  ],
+  "colors": {
+    "brand": [
+      {
+        "hex": "#6abd44",
+        "weight": 41
+      },
+      {
+        "hex": "#69727d",
+        "weight": 7
+      },
+      {
+        "hex": "#d9534f",
+        "weight": 5
+      },
+      {
+        "hex": "#cc3366",
+        "weight": 4
+      },
+      {
+        "hex": "#ff6900",
+        "weight": 3
+      },
+      {
+        "hex": "#5cb85c",
+        "weight": 3
+      }
+    ],
+    "neutral": [
+      {
+        "hex": "#222222",
+        "weight": 41
+      },
+      {
+        "hex": "#54595f",
+        "weight": 41
+      },
+      {
+        "hex": "#ffffff",
+        "weight": 19
+      },
+      {
+        "hex": "#000000",
+        "weight": 15
+      }
+    ],
+    "themeColor": null,
+    "source": "site-css"
+  },
+  "fonts": [
+    "Lato",
+    "Open Sans",
+    "Plus Jakarta Sans"
+  ],
+  "ready": true,
+  "blockedBy": null,
+  "confidence": 100,
+  "notes": [
+    "facebook profile picture captured headlessly for \"Rural.View.Dental\"",
+    "6 stylesheet(s) fetched, 97753 bytes of CSS"
+  ]
+}
